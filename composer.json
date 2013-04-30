@@ -1,0 +1,22 @@
+{
+    "name": "mpratt/embera",
+    "type": "library",
+    "description": "A library that replaces common media links to an embed html.",
+    "keywords": ["Embed", "Youtube", "Oembed"],
+    "homepage": "https://github.com/mpratt/Embera",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Michael Pratt",
+            "email": "pratt@hablarmierda.net",
+            "homepage": "http://www.michael-pratt.com",
+            "role": "Author/Developer"
+        }
+    ],
+    "require": {
+        "php": ">=5.4",
+    },
+    "autoload": {
+        "psr-0": {"Embera": "Lib/"}
+    }
+}
