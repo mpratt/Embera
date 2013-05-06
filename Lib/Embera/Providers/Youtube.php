@@ -1,9 +1,10 @@
 <?php
 /**
  * Yotube.php
+ * Youtube Oembed Service
  *
- * @author  Michael Pratt <pratt@hablarmierda.net>
- * @link    http://www.michael-pratt.com/
+ * @author Michael Pratt <pratt@hablarmierda.net>
+ * @link   http://www.michael-pratt.com/
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
@@ -46,10 +47,11 @@ class Youtube extends \Embera\Adapters\Service
     public function fakeOembedResponse()
     {
         $url = 'http://www.youtube.com/embed/' . str_replace(array('v=', '&list='), array('', '?list='), $this->url->query);
+        $html = '<iframe width="{width}" height="{height}" src="' . $url . '?feature=oembed" frameborder="0" allowfullscreen></iframe>';
         return array('type' => 'video',
                      'provider_name' => 'Youtube',
                      'provider_url' => 'http://www.youtube.com',
-                     'html'   => '<iframe src="' . $url . '" frameborder="0" height="{height}" width="{width}"></iframe>' );
+                     'html' => $html);
     }
 }
 

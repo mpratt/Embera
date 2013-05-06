@@ -14,7 +14,10 @@ namespace Embera;
 
 class Embera
 {
+    const VERSION = '0.1';
     protected $config = array();
+    protected $http;
+    protected $urlRegex = '#\bhttps?://[^\s()<>]+(?:\([\w\d]+\)|([^[:punct:]\s]|/))#';
 
     /**
      * Construct
@@ -24,6 +27,7 @@ class Embera
      */
     public function __construct(array $config = array())
     {
+        $this->http = new \Embera\HttpRequest();
         $this->config = array_merge(array('oembed' => true, 'width'  => 420, 'height' => 315), $config);
     }
 
@@ -44,7 +48,10 @@ class Embera
 
             $table = array();
             foreach ($data as $url => $service)
-                $table[$url] = $service['html'];
+            {
+                if (!empty($service['html']))
+                    $table[$url] = $service['html'];
+            }
 
             return str_replace(array_keys($table), array_values($table), $body);
         }
@@ -83,7 +90,7 @@ class Embera
     {
         if (is_array($body))
             $providers = new \Embera\Providers($body);
-        else if (preg_match_all('#\bhttps?://[^\s()<>]+(?:\([\w\d]+\)|([^[:punct:]\s]|/))#', $body, $matches))
+        else if (preg_match_all($this->urlRegex, $body, $matches))
             $providers = new \Embera\Providers($matches['0']);
         else
             return array();
@@ -100,7 +107,7 @@ class Embera
      */
     protected function requestOembedData(\Embera\Adapters\Service $service)
     {
-        return (new \Embera\Oembed($service, $this->config))->getResourceInfo();
+        return (new \Embera\Oembed($this->http, $this->config))->setService($service)->getResourceInfo();
     }
 }
 

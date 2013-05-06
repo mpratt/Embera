@@ -2,17 +2,18 @@
 /**
  * Oembed.php
  *
- * @link    http://www.michael-pratt.com/
+ * @author Michael Pratt <pratt@hablarmierda.net>
+ * @link   http://www.michael-pratt.com/
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
- *
  */
 
 namespace Embera;
 
 class Oembed
 {
+    protected $http;
     protected $service;
     protected $config;
 
@@ -22,11 +23,19 @@ class Oembed
      * @param array $urls
      * @return void
      */
-    public function __construct(\Embera\Adapters\Service $service, array $config = array())
+    public function __construct(\Embera\HttpRequest $http, array $config = array())
     {
-        $this->service = $service;
-        $this->config  = array_merge(array('oembed' => true, 'width' => 420, 'height' => 315), $config);
+        $this->http = $http;
+        $this->config = array_merge(array('oembed' => true, 'width' => 420, 'height' => 315), $config);
     }
+
+    /**
+     * Sets the Service
+     *
+     * @param object $service Instance of \Embera\Adapters\Service
+     * @return objetc Instance of this same object (used for method chaining);
+     */
+    public function setService(\Embera\Adapters\Service $service) { $this->service = $service; return $this; }
 
     /**
      * This method returns an associative array that mocks
@@ -54,7 +63,7 @@ class Oembed
                                   'author_name' => '',
                                   'author_url' => '',
                                   'cache_age' => 0,
-                                  'offline_mode' => 1,
+                                  'embera_offline_mode' => 1,
                                   'width'  => $this->config['width'],
                                   'height' => $this->config['height']);
 
@@ -81,9 +90,13 @@ class Oembed
         if (empty($this->service->oEmbedUrl))
             throw new \Exception('Unknown oEmbedUrl given');
 
-        $data = $this->http($this->translate($this->service->oEmbedUrl));
+        $data = $this->http->fetch($this->translate($this->service->oEmbedUrl));
         if ($this->service->oEmbedFormat == 'json')
-            return array_merge(json_decode($data, true), array('offline_mode' => 0));
+        {
+            $json = json_decode($data, true);
+            if ($json)
+                return array_merge($json, array('embera_offline_mode' => 0));
+        }
 
         throw new \InvalidArgumentException('This library only supports json data.');
     }
@@ -102,38 +115,6 @@ class Oembed
                        '{width}'  => $this->config['width']);
 
         return str_replace(array_keys($table), array_values($table), $body);
-    }
-
-    /**
-     * Executes http requests
-     *
-     * @param string $url
-     * @return string
-     *
-     * @throws RuntimeException when curls is not installed
-     * @throws Exception when the returned status code is not 200 or no data was found
-     */
-    protected function http($url = '')
-    {
-        if (!function_exists('curl_init'))
-            throw new \RuntimeException('Curl must be installed on your server!.');
-
-        $ch = curl_init();
-        curl_setopt($ch, CURLOPT_URL, $url);
-        curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
-        curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, 10);
-        curl_setopt($ch, CURLOPT_ENCODING, 'UTF-8');
-        curl_setopt($ch, CURLOPT_USERAGENT, 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:2.0.1) Gecko/20110606 Firefox/4.0.1');
-        curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-
-        $data = curl_exec($ch);
-        $status = curl_getinfo($ch, CURLINFO_HTTP_CODE);
-        curl_close($ch);
-
-        if (empty($data) || $status != 200)
-            throw new \Exception('Invalid response or status code');
-
-        return $data;
     }
 }
 

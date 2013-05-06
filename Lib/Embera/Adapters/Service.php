@@ -3,12 +3,11 @@
  * Service.php
  * An abstract class that every provider should extend
  *
- * @author  Michael Pratt <pratt@hablarmierda.net>
- * @link    http://www.michael-pratt.com/
+ * @author Michael Pratt <pratt@hablarmierda.net>
+ * @link   http://www.michael-pratt.com/
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
- *
  */
 
 namespace Embera\Adapters;
@@ -48,7 +47,7 @@ abstract class Service
      * It should be overwritten by the service
      * itself.
      *
-     * @return array
+     * @return array|bool
      */
      public function fakeOembedResponse() { return array(); }
 
