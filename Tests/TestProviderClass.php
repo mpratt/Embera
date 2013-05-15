@@ -59,5 +59,32 @@ class TestProviderClass extends PHPUnit_Framework_TestCase
         $p = new \Embera\Providers($validUrls[mt_rand(0, (count($validUrls) - 1))], array(), $oembed);
         $this->assertCount(1, $p->getAll());
     }
+
+    public function testFlickrDetection()
+    {
+        $validUrls = array('http://www.flickr.com/photos/22134962@N03/8738306577/in/explore-2013-05-14',
+                           'http://flic.kr/p/9gAMbM',
+                           'http://www.flickr.com/photos/reddragonflydmc/5427387397/',
+                           'http://www.flickr.com/photos/bees/8597283706/in/photostream',
+                           'http://www.flickr.com/photos/bees/8537962055/?noise=noise',
+                           'http://flic.kr/p/9gAMbM/',
+                           'http://www.flickr.com/photos/bees/8429256478');
+
+        $invalidUrls = array('http://www.flickr.com/22134962@N03/8738306577/',
+                             'http://www.flickr.com',
+                             'http://www.flickr.com/stuff/8429256478/',
+                             'http://www.flickr.com/noise/8429256478/',
+                             'http://www.flickr.com//8429256478/');
+
+        $oembed = new MockOembed(new MockHttpRequest());
+        $p = new \Embera\Providers($validUrls, array(), $oembed);
+        $this->assertCount(count($validUrls), $p->getAll());
+
+        $p = new \Embera\Providers(array_merge($validUrls, $invalidUrls), array(), $oembed);
+        $this->assertCount(count($validUrls), $p->getAll());
+
+        $p = new \Embera\Providers($validUrls[mt_rand(0, (count($validUrls) - 1))], array(), $oembed);
+        $this->assertCount(1, $p->getAll());
+    }
 }
 ?>

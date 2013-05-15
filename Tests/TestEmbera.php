@@ -86,13 +86,14 @@ class TestEmbera extends PHPUnit_Framework_TestCase
     {
         $validUrls = array('http://www.youtube.com/watch?v=MpVHQnIvTXo',
                            'http://youtu.be/fSUK4WgQ3vk',
+                           'http://www.flickr.com/photos/reddragonflydmc/5427387397/',
                            'http://www.youtube.com/watch?v=T3O1nffTG-k');
 
-        $embera = new \Embera\Embera(array('oembed' => false, 'allow' => array('UnknownService')));
+        $embera = new \Embera\Embera(array('oembed' => false, 'allow' => array('UnknownService', 'FlickR')));
         $result = $embera->getUrlInfo($validUrls);
-        $this->assertCount(0, $result);
+        $this->assertCount(1, $result);
 
-        $embera = new \Embera\Embera(array('oembed' => false, 'allow' => array('Youtube')));
+        $embera = new \Embera\Embera(array('oembed' => false, 'allow' => array('Youtube', 'Flickr')));
         $result = $embera->getUrlInfo($validUrls);
         $this->assertCount(count($validUrls), $result);
     }

@@ -16,7 +16,9 @@ class Providers
     protected $urls = array();
     protected $config = array();
     protected $services = array('youtube.com' => 'Youtube',
-                                'youtu.be' => 'Youtube');
+                                'youtu.be' => 'Youtube',
+                                'flickr.com' => 'Flickr',
+                                'flic.kr' => 'Flickr');
 
     /**
      * Construct
