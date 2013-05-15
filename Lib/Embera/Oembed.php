@@ -14,107 +14,97 @@ namespace Embera;
 class Oembed
 {
     protected $http;
-    protected $service;
-    protected $config;
 
     /**
      * Construct
      *
-     * @param array $urls
+     * @param object $http Instance of \Embera\HttpRequest
      * @return void
      */
-    public function __construct(\Embera\HttpRequest $http, array $config = array())
+    public function __construct(\Embera\HttpRequest $http) { $this->http = $http; }
+
+    /**
+     * Gets information about a resource
+     *
+     * @param string $apiUrl The Url to the Oembed provider
+     * @param string $url    The original url, we want information from
+     * @param array $params  An associative array with parameters to be sent to the
+     *                       Oembed provider.
+     * @return array
+     */
+    public function getResourceInfo($apiUrl, $url, array $params = array())
     {
-        $this->http = $http;
-        $this->config = array_merge(array('oembed' => true, 'width' => 420, 'height' => 315), $config);
+        if (empty($params['oembed']))
+            return array();
+
+        $params = array_merge($params, array('url' => $url));
+        return $this->lookup($this->constructUrl($apiUrl, $params));
     }
 
     /**
-     * Sets the Service
+     * Mocks a response from an Oembed provider
      *
-     * @param object $service Instance of \Embera\Adapters\Service
-     * @return objetc Instance of this same object (used for method chaining);
+     * @param array $fakeResponse Additional Parameters to be included on the fake response
+     * @return array
      */
-    public function setService(\Embera\Adapters\Service $service) { $this->service = $service; return $this; }
+    public function buildFakeResponse(array $fakeResponse = array())
+    {
+        $defaults = array('version' => '1.0',
+                          'url' => '',
+                          'title' => '',
+                          'author_name' => '',
+                          'author_url' => '',
+                          'cache_age' => 0,
+                          'embera_using_fake' => 1);
+
+        return array_merge($defaults, $fakeResponse);
+    }
 
     /**
-     * This method returns an associative array that mocks
-     * a response from an Oembed service.
+     ** Executes a http request to the given url and
+     * returns an associative array with the fetched data.
      *
-     * @return array|bool False when no information was found
+     * @param string $url
+     * @return array
+     *
+     * @throws Exception From the Http object only if there is no way
+     *                   to perform the request or if the response from
+     *                   the server is empty/invalid.
      */
-    public function getResourceInfo($lookup = true)
+    protected function lookup($url)
     {
-        if ($this->config['oembed'] && $lookup)
-        {
-            try {
-                return $this->executeLookup();
-            } catch(\Exception $e) {
-                return $this->getResourceInfo(false);
-            }
-        }
-        else if ($fakeResponse = $this->service->fakeOembedResponse())
-        {
-            if (!empty($fakeResponse['html']))
-            {
-                $defaults = array('version' => '1.0',
-                                  'url' => $this->service->getOriginalUrl(),
-                                  'title' => $this->service->getOriginalUrl(),
-                                  'author_name' => '',
-                                  'author_url' => '',
-                                  'cache_age' => 0,
-                                  'embera_offline_mode' => 1,
-                                  'width'  => $this->config['width'],
-                                  'height' => $this->config['height']);
-
-                $fakeResponse['html'] = $this->translate($fakeResponse['html']);
-                return array_merge($defaults, $fakeResponse);
-            }
-        }
+        $response = $this->http->fetch($url);
+        $json = json_decode($response, true);
+        if ($json)
+            return array_merge($json, array('embera_using_fake' => 0));
 
         return array();
     }
 
     /**
-     * Executes a http request to the oembed
-     * url ands returns an associative array with
-     * the fetched data.
+     * Builds a valid Oembed query string based on the given parameters,
+     * Since this method uses the http_build_query function, there is no
+     * need to pass urlencoded parameters, http_build_query already does
+     * this for us.
      *
-     * @return array
-     *
-     * @throws Exception when the service doesnt have valid oembed settings
-     * @throws InvalidArgumentException when the oEmbedFormat is not json
-     */
-    protected function executeLookup()
-    {
-        if (empty($this->service->oEmbedUrl))
-            throw new \Exception('Unknown oEmbedUrl given');
-
-        $data = $this->http->fetch($this->translate($this->service->oEmbedUrl));
-        if ($this->service->oEmbedFormat == 'json')
-        {
-            $json = json_decode($data, true);
-            if ($json)
-                return array_merge($json, array('embera_offline_mode' => 0));
-        }
-
-        throw new \InvalidArgumentException('This library only supports json data.');
-    }
-
-    /**
-     * Converts placeholders to an actual translation.
-     *
-     * @param string $body
+     * @param string $apiUrl The Url to the Oembed Api
+     * @param array  $params Additional parameters for the query string
      * @return string
      */
-    protected function translate($body = '')
+    protected function constructUrl($apiUrl, array $params = array())
     {
-        $table = array('{url}' => urlencode($this->service->getOriginalUrl()),
-                       '{format}' => (!empty($this->service->oEmbedFormat) ? $this->service->oEmbedFormat : 'json'),
-                       '{height}' => $this->config['height'],
-                       '{width}'  => $this->config['width']);
+        $params = array_filter($params);
+        if (!empty($params['width']))
+            $params['maxwidth'] = $params['width'];
 
-        return str_replace(array_keys($table), array_values($table), $body);
+        if (!empty($params['height']))
+            $params['maxheight'] = $params['height'];
+
+        $params = array_intersect_key($params, array('url' => '', 'maxwidth' => '', 'maxheight' => '', 'format' => ''));
+        if (!empty($params))
+            return $apiUrl . ((strpos($apiUrl, '?') === false) ? '?' : '&') . http_build_query($params);
+
+        return $apiUrl;
     }
 }
 

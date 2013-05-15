@@ -11,70 +11,86 @@
 
 class TestYoutubeProvider extends PHPUnit_Framework_TestCase
 {
-    public function testYoutubeAutoEmbed()
+    protected $validUrls = array('http://www.youtube.com/watch?v=MpVHQnIvTXo',
+                                 'http://www.youtube.com/watch?v=hQh4hMnxdak',
+                                 'http://www.youtube.com/watch?v=yAtluwk9mTA',
+                                 'http://www.youtube.com/watch?v=4IFD9vuCMnc&list=PLY3wZ6zLUKd9Wt_OuUV4ZDpBb5-yPCaT3',
+                                 'http://www.youtube.com/watch?v=wdA6lQ6ymhU&index=3&list=PLY3wZ6zLUKd-R6naPvHOeaicG4bf0Wysy',
+                                 'http://youtu.be/ok6eADKQVe8',
+                                 'http://youtu.be/fSUK4WgQ3vk',
+                                 'http://www.youtube.com/watch?v=T3O1nffTG-k');
+
+    protected $invalidUrls = array('http://youtu.be.com/watch?list=hi',
+                                   'http://youtube.com /watch?video=J---aiyznGQ',
+                                   'http://www.youtube.com/watch?lol=no',
+                                   'http://www.youtube.com/watch?v=&hi=to',
+                                   'http://www.youtube.com/hi#ho',
+                                   'http://youtube.com/',
+                                   'http://www.youtube.com/?id=ho');
+
+    public function testUrlNormalize()
     {
-        $embera = new \Embera\Embera();
-        $result = $embera->autoEmbed(' http://www.youtube.com/watch?v=GP18O6gSWSw&feature=share&list=PL4EF7BAD98F9812B6 ');
-        $this->assertContains('<iframe ', $result);
-        $this->assertContains('src="http://www.youtube.com/embed/', $result);
+        $oembed = new MockOembed(new MockHttpRequest());
+        $yt = new \Embera\Providers\Youtube('http://youtu.be/9bZkp7q19f0/werwer', array(), $oembed);
+        $this->assertEquals($yt->getUrl(), 'http://www.youtube.com/watch?v=9bZkp7q19f0');
 
-        $embera = new \Embera\Embera();
-        $result = $embera->autoEmbed('Hi I would like for you to check this link
-            http://www.youtube.com/watch?v=pgTuarwFm6s
-            Its simply a great video.');
-        $this->assertContains('<iframe ', $result);
-        $this->assertContains('src="http://www.youtube.com/embed/', $result);
+        $yt = new \Embera\Providers\Youtube('http://www.youtube.com/watch?v=9bZkp7q19f0', array(), $oembed);
+        $this->assertEquals($yt->getUrl(), 'http://www.youtube.com/watch?v=9bZkp7q19f0');
 
-        $text = 'This is a text without a link!';
-        $result = $embera->autoEmbed($text);
-        $this->assertEquals($text, $result);
+        $yt = new \Embera\Providers\Youtube('http://youtube.com/watch?v=xVrJ8DxECbg&list=PLwnD0jwK0yymXOCl82nqdTdxe0ykVDcPW&index=1', array(), $oembed);
+        $this->assertEquals($yt->getUrl(), 'http://www.youtube.com/watch?v=xVrJ8DxECbg');
+
+        $yt = new \Embera\Providers\Youtube('http://youtu.be/8aGEb_yUpMs', array(), $oembed);
+        $this->assertEquals($yt->getUrl(), 'http://www.youtube.com/watch?v=8aGEb_yUpMs');
+
+        $yt = new \Embera\Providers\Youtube('http://youtube.com/watch?v=J---aiyznGQ&index=1', array(), $oembed);
+        $this->assertEquals($yt->getUrl(), 'http://www.youtube.com/watch?v=J---aiyznGQ');
+
+        $yt = new \Embera\Providers\Youtube('http://youtube.com/watch?v=mghhLqu31cQ', array(), $oembed);
+        $this->assertEquals($yt->getUrl(), 'http://www.youtube.com/watch?v=mghhLqu31cQ');
     }
 
-    public function testYoutubeUrlInspection()
+    public function testInvalidUrl()
     {
-        $embera = new \Embera\Embera();
-        $result = $embera->getUrlInfo('Hi I would like for you to check this link http://www.youtube.com/watch?v=pgTuarwFm6s.');
-        $this->assertCount(1, $result);
+        $this->setExpectedException('InvalidArgumentException');
 
-        $result = $embera->getUrlInfo('http://www.youtube.com/watch?v=pgTuarwFm6s http://www.youtube.com/watch?v=pgTuarwFm6s.');
-        $this->assertCount(1, $result);
-
-        $result = $embera->getUrlInfo('http://www.youtube.com/watch?v=pgTuarwFm6s http://www.youtube.com/watch?v=p4sd4sfGG8 ');
-        $this->assertCount(2, $result);
-
-        $result = $embera->getUrlInfo('There are no links here');
-        $this->assertCount(0, $result);
+        $oembed = new MockOembed(new MockHttpRequest());
+        $yt = new \Embera\Providers\Youtube($this->invalidUrls[mt_rand(0, (count($this->invalidUrls) - 1))], array(), $oembed);
     }
 
-    public function testYoutubeArrayInput()
+    public function testFakeResponse()
     {
-        $urls = array('www.youtube.com/watch?v=J---aiyznGQ',
-                      'http://stuff.video.com /watch?video=J---aiyznGQ',
-                      'http://www.youtube.com/watch?v=xVrJ8DxECbg&list=PLwnD0jwK0yymXOCl82nqdTdxe0ykVDcPW&index=1',
-                      'http://www.video.com/hi#ho',
-                      'http://youtu.be/8aGEb_yUpMs');
+        $oembed = new MockOembed(new MockHttpRequest());
+        foreach ($this->validUrls as $url)
+        {
+            $yt = new \Embera\Providers\Youtube($url, array(), $oembed);
+            $response = $yt->fakeResponse();
 
-        $embera = new \Embera\Embera(array('oembed' => false));
-        $result = $embera->getUrlInfo($urls);
-        $this->assertCount(2, $result);
+            $this->assertTrue((count($response) > 5));
+            $this->assertContains('<iframe', $response['html']);
+            $this->assertEquals('video', $response['type']);
+        }
     }
 
-    public function testYoutubeFakeResponse()
+    public function testFakeAndRealResponse()
     {
-        $url = 'http://www.youtube.com/watch?v=J---aiyznGQ';
+        $url = $this->validUrls[mt_rand(0, (count($this->validUrls) - 1))];
+        $oembed = new \Embera\Oembed(new \Embera\HttpRequest());
 
-        $embera = new \Embera\Embera(array('oembed' => true));
-        $result1 = $embera->getUrlInfo($url);
-        $this->assertCount(1, $result1);
-        $this->assertEquals($result1[$url]['embera_offline_mode'], 0);
+        $yt = new \Embera\Providers\Youtube($url, array('oembed' => true), $oembed);
+        $result1 = $yt->getInfo();
 
-        $embera = new \Embera\Embera(array('oembed' => false));
-        $result2 = $embera->getUrlInfo($url);
-        $this->assertCount(1, $result2);
-        $this->assertEquals($result2[$url]['embera_offline_mode'], 1);
+        $this->assertTrue($result1['embera_using_fake'] == 0);
+        $this->assertTrue(!empty($result1['html']));
 
-        similar_text($result1[$url]['html'], $result2[$url]['html'], $percent);
-        $this->assertTrue((intval($percent) >= 70));
+        $yt = new \Embera\Providers\Youtube($url, array('oembed' => false), $oembed);
+        $result2 = $yt->getInfo();
+
+        $this->assertTrue($result2['embera_using_fake'] == 1);
+        $this->assertTrue(!empty($result2['html']));
+
+        similar_text($result1['html'], $result2['html'], $percent);
+        $this->assertTrue($percent >= 50);
     }
 }
 

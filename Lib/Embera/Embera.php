@@ -15,9 +15,11 @@ namespace Embera;
 class Embera
 {
     const VERSION = '0.1';
+
+    protected $oembed;
     protected $config = array();
-    protected $http;
-    protected $urlRegex = '#\bhttps?://[^\s()<>]+(?:\([\w\d]+\)|([^[:punct:]\s]|/))#';
+    protected $errors = array();
+    protected $urlRegex = '~\bhttps?://[^\s()<>]+(?:\([\w\d]+\)|([^[:punct:]\s]|/))~';
 
     /**
      * Construct
@@ -27,25 +29,23 @@ class Embera
      */
     public function __construct(array $config = array())
     {
-        $this->http = new \Embera\HttpRequest();
-        $this->config = array_merge(array('oembed' => true, 'width'  => 420, 'height' => 315), $config);
+        $this->config = array_merge(array('oembed' => true), $config);
+        $this->oembed = new \Embera\Oembed(new \Embera\HttpRequest());
     }
 
     /**
-     * Embeds known services into the string
+     * Embeds known/available services into the
+     * given text.
      *
      * @param string $body
      * @return string
-     *
-     * @throws InvalidArgumentException when the $body is not a string
      */
     public function autoEmbed($body = null)
     {
-        if ($data = $this->getUrlInfo($body))
+        if (!is_string($body))
+            $this->errors[] = 'For autoEmbedding purposes, the input must be a string';
+        else if ($data = $this->getUrlInfo($body))
         {
-            if (!is_string($body))
-                throw new \InvalidArgumentException('Input must be of type string');
-
             $table = array();
             foreach ($data as $url => $service)
             {
@@ -60,9 +60,9 @@ class Embera
     }
 
     /**
-     * Finds all the information about a link/url
+     * Finds all the information about a url
      *
-     * @param string|array $body An array full with urls or  string
+     * @param string|array $body An array or string with urls
      * @return array
      */
     public function getUrlInfo($body = null)
@@ -72,43 +72,93 @@ class Embera
         {
             foreach ($providers as $url => $service)
             {
-                if ($response = $this->requestOembedData($service))
-                    $results[$url] = $response;
+                $results[$url] = $service->getInfo();
+                $this->errors = array_merge($this->errors, $service->getErrors());
             }
         }
 
-        return $results;
+        return array_filter($results);
     }
 
     /**
-     * Finds all the valid urls inside $body.
+     * Finds all the valid urls inside the given text,
+     * compares which are allowed and returns an array
+     * with the detected providers
      *
-     * @param string|array $body An array full with urls or  string
-     * @return array An array with all the detected providers
+     * @param string|array $body An array or string with Urls
+     * @return array
      */
-    protected function getProviders($body = null)
+    protected function getProviders($body = '')
     {
         if (is_array($body))
-            $providers = new \Embera\Providers($body);
+            $providers = new \Embera\Providers($body, $this->config, $this->oembed);
         else if (preg_match_all($this->urlRegex, $body, $matches))
-            $providers = new \Embera\Providers($matches['0']);
+            $providers = new \Embera\Providers($matches['0'], $this->config, $this->oembed);
         else
             return array();
 
-        return $providers->getAll();
+        $services = $providers->getAll();
+        return $this->clean($services);
     }
 
     /**
-     * Returns an array with the information about a
-     * service/url.
+     * Strips invalid providers from the list
      *
-     * @param object $service
+     * @param array $services
      * @return array
      */
-    protected function requestOembedData(\Embera\Adapters\Service $service)
+    protected function clean(array $services = array())
     {
-        return (new \Embera\Oembed($this->http, $this->config))->setService($service)->getResourceInfo();
+        if (empty($services))
+            return array();
+
+        if (!empty($this->config['allow']))
+        {
+            $allow = array_map('strtolower', (array) $this->config['allow']);
+            $services = array_filter($services, function($a) use ($allow) {
+                $serviceName = strtolower(basename(str_replace('\\', '/', get_class($a))));
+                return (in_array($serviceName, $allow));
+            });
+        }
+
+        if (!empty($services) && !empty($this->config['deny']))
+        {
+            $deny = array_map('strtolower', (array) $this->config['deny']);
+            $services = array_filter($services, function($a) use ($deny) {
+                $serviceName = strtolower(basename(str_replace('\\', '/', get_class($a))));
+                return (!in_array($serviceName, $deny));
+            });
+        }
+
+        return (array) $services;
     }
+
+    /**
+     * Gets the last error found
+     *
+     * @return string
+     */
+    public function getLastError()
+    {
+        if ($this->hasErrors())
+            return end($this->errors);
+
+        return '';
+    }
+
+    /**
+     * Gets found errors
+     *
+     * @return array
+     */
+    public function getErrors() { return $this->errors; }
+
+    /**
+     * Gets found errors
+     *
+     * @return bool
+     */
+    public function hasErrors() { return (!empty($this->errors)); }
 }
 
 ?>

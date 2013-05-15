@@ -15,8 +15,12 @@ namespace Embera\Adapters;
 abstract class Service
 {
     protected $url;
-    protected $oEmbedUrl = null;
-    protected $oEmbedFormat = 'json';
+    protected $config;
+    protected $oembed;
+    protected $errors = array();
+    protected $apiUrl = null;
+    protected $fakeWidth = '420';
+    protected $fakeHeight = '315';
 
     /**
      * Validates that the url belongs to this service
@@ -30,48 +34,106 @@ abstract class Service
     /**
      * Construct
      *
-     * @param object $url Instance of the \Embera\Url class
+     * @param string $url
+     * @param array  $parsed The Parsed Url
      * @return void
      *
      * @throws InvalidArgumentException when the given url doesnt match the current service
      */
-    public function __construct(\Embera\Url $url)
+    public function __construct($url, array $config = array(), \Embera\Oembed $oembed)
     {
         $this->url = $url;
+        $this->normalizeUrl();
+
         if (!$this->validateUrl())
-            throw new \InvalidArgumentException('Url ' . $this->url->original . ' seems to be invalid for this service');
+            throw new \InvalidArgumentException('Url ' . $this->url . ' seems to be invalid for this service');
+
+        $this->config = $config;
+        $this->oembed = $oembed;
     }
+
+    /**
+     * Gets the information from an Oembed provider
+     * when this fails, it tries to provide a fakeResponse.
+     * Returns an associative array with a (common) Oembed response.
+     *
+     * @return array
+     */
+    public function getInfo()
+    {
+        try {
+            if ($response = $this->oembed->getResourceInfo($this->apiUrl, $this->url, $this->config))
+                return $response;
+        } catch (\Exception $e) { $this->errors[] = $e->getMessage(); }
+
+        return $this->fakeResponse();
+    }
+
+    /**
+     * Returns the url
+     *
+     * @return string
+     */
+    public function getUrl() { return $this->url; }
+
+    /**
+     * Returns an array with found errors
+     *
+     * @return array
+     */
+    public function getErrors() { return $this->errors; }
 
     /**
      * This method fakes a Oembed response.
      * It should be overwritten by the service
-     * itself.
+     * itself if the service is capable to determine
+     * an html embed code based on the url or other methods.
      *
-     * @return array|bool
+     * @return array
+     * @codeCoverageIgnore
      */
-     public function fakeOembedResponse() { return array(); }
+     public function fakeResponse() { return array(); }
 
     /**
-     * Returns the original url
+     * Normalizes a url.
+     * This method should be overwritten by the
+     * service itself, if needed.
      *
-     * @return string
+     * Use the $this->url property to do the job
+     *
+     * @return void
+     * @codeCoverageIgnore
      */
-    public function getOriginalUrl() { return $this->url->original; }
+    protected function normalizeUrl() {}
 
     /**
-     * Magic method that allows access to properties directly
+     * A Utility method to be used in conjuction
+     * with the fakeResponse method. Returns
+     * a valid width.
      *
-     * @param string $property
-     * @param mixed
+     * @return int
      */
-    public function __get($property){ return $this->{$property}; }
+    protected function getWidth()
+    {
+        if (!empty($this->config['maxwidth']))
+            return $this->config['maxwidth'];
+
+        return (!empty($this->config['width']) ? $this->config['width'] : $this->fakeWidth);
+    }
 
     /**
-     * Checks if a property is set
+     * A Utility method to be used in conjuction
+     * with the fakeResponse method. Returns
+     * a valid height.
      *
-     * @param string $property
-     * @return bool
+     * @return int
      */
-    public function __isset($property) { return isset($this->{$property}); }
+    protected function getHeight()
+    {
+        if (!empty($this->config['maxheight']))
+            return $this->config['maxheight'];
+
+        return (!empty($this->config['height']) ? $this->config['height'] : $this->fakeHeight);
+    }
 }
 ?>

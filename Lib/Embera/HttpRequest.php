@@ -14,33 +14,37 @@ namespace Embera;
 class HttpRequest
 {
     /**
-     * Constructor
+     * Executes http requests
      *
-     * @return void
+     * @param string $url
+     * @return string
      *
-     * @throws RuntimeException when curls is not installed
+     * @throws Exception when an error ocurred or if no way to do a request exists
      */
-    public function __construct()
+    public function fetch($url = '')
     {
-        if (!function_exists('curl_init'))
-            throw new \RuntimeException('Curl must be installed on your server!.');
+        if (function_exists('curl_init'))
+            return $this->curl($url);
+
+        return $this->fileGetContents($url);
     }
 
     /**
-     * Executes http requests
+     * Uses Curl to fetch data from an url
      *
      * @param string $url
      * @return string
      *
      * @throws Exception when the returned status code is not 200 or no data was found
      */
-    public function fetch($url = '')
+    protected function curl($url)
     {
         $options = array(CURLOPT_URL => $url,
                          CURLOPT_FOLLOWLOCATION => true,
-                         CURLOPT_CONNECTTIMEOUT => 10,
+                         //CURLOPT_CONNECTTIMEOUT => 10,
                          CURLOPT_ENCODING => 'UTF-8',
                          CURLOPT_USERAGENT => 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:2.0.1) Gecko/20110606 Firefox/4.0.1',
+                         CURLOPT_HEADER => false,
                          CURLOPT_RETURNTRANSFER => 1);
 
         $ch = curl_init();
@@ -49,10 +53,30 @@ class HttpRequest
         $status = curl_getinfo($ch, CURLINFO_HTTP_CODE);
         curl_close($ch);
 
-        if (empty($data) || $status != 200)
-            throw new \Exception('Invalid response or status code');
+        if (empty($data) || !in_array($status, array('200')))
+            throw new \Exception($status . ': Invalid response for ' . $url);
 
         return $data;
     }
+
+    /**
+     * Uses file_get_contents to fetch data from an url
+     *
+     * @param string $url
+     * @return string
+     *
+     * @throws Exception when allow_url_fopen is disabled or when no data was returned
+     */
+    protected function fileGetContents($url)
+    {
+        if (!ini_get('allow_url_fopen'))
+            throw new \Exception('Could not execute lookup, allow_url_fopen is disabled');
+
+        if ($data = file_get_contents($url, false, stream_context_create(array('http' => array('method' => 'GET')))))
+            return $data;
+
+        throw new \Exception('Invalid Server Response from ' . $url);
+    }
 }
+
 ?>

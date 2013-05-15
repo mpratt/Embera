@@ -1,7 +1,6 @@
 <?php
 /**
  * Yotube.php
- * Youtube Oembed Service
  *
  * @author Michael Pratt <pratt@hablarmierda.net>
  * @link   http://www.michael-pratt.com/
@@ -14,7 +13,8 @@ namespace Embera\Providers;
 
 class Youtube extends \Embera\Adapters\Service
 {
-    protected $oEmbedUrl = 'http://www.youtube.com/oembed?url={url}&format={format}&maxheight={height}&maxwidth={width}';
+    protected $apiUrl = 'http://www.youtube.com/oembed?format=json';
+    protected $query = array();
 
     /**
      * Validates that the url belongs to this
@@ -24,34 +24,46 @@ class Youtube extends \Embera\Adapters\Service
      */
     protected function validateUrl()
     {
-        if (!empty($this->url->query))
+        $parsed = parse_url($this->url);
+        if (!empty($parsed['query']))
         {
-            $query = array();
-            parse_str($this->url->query, $query);
-            if (!isset($query['v']))
-                return false;
-
-            $this->url->query = 'v=' . $query['v'] . (isset($query['list']) ? '&list=' . $query['list'] : '');
-            return true;
+            parse_str($parsed['query'], $this->query);
+            return (!empty($this->query['v']));
         }
 
         return false;
     }
 
     /**
+     * Normalizes a url.
+     *
+     * @return void
+     */
+    protected function normalizeUrl()
+    {
+        if (preg_match('~(?:v=|youtu\.be/)([a-z0-9_-]+)~i', $this->url, $matches))
+            $this->url = 'http://www.youtube.com/watch?v=' . $matches[1];
+    }
+
+    /**
      * This method fakes an Oembed response.
-     * Is used when an Oembed request fails or disabled.
+     * Is used when an Oembed request fails or is disabled.
      *
      * @return array
      */
-    public function fakeOembedResponse()
+    public function fakeResponse()
     {
-        $url = 'http://www.youtube.com/embed/' . str_replace(array('v=', '&list='), array('', '?list='), $this->url->query);
-        $html = '<iframe width="{width}" height="{height}" src="' . $url . '?feature=oembed" frameborder="0" allowfullscreen></iframe>';
-        return array('type' => 'video',
-                     'provider_name' => 'Youtube',
-                     'provider_url' => 'http://www.youtube.com',
-                     'html' => $html);
+        $url = 'http://www.youtube.com/embed/' . $this->query['v'];
+        $html = '<iframe width="' . $this->getWidth() . '" height="' . $this->getHeight() . '" src="' . $url . '" frameborder="0" allowfullscreen>';
+        $html .= '</iframe>';
+
+        $data = array('type' => 'video',
+                      'provider_name' => 'Youtube',
+                      'provider_url' => 'http://www.youtube.com',
+                      'title' => 'Unknown title',
+                      'html' => $html);
+
+        return $this->oembed->buildFakeResponse($data);
     }
 }
 

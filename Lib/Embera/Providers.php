@@ -1,7 +1,6 @@
 <?php
 /**
  * Providers.php
- * This is class is used to map urls to services.
  *
  * @author Michael Pratt <pratt@hablarmierda.net>
  * @link   http://www.michael-pratt.com/
@@ -15,15 +14,24 @@ namespace Embera;
 class Providers
 {
     protected $urls = array();
-    protected $hosts = array('youtube.com' => 'Youtube');
+    protected $config = array();
+    protected $services = array('youtube.com' => 'Youtube',
+                                'youtu.be' => 'Youtube');
 
     /**
      * Construct
      *
-     * @param string|array $urls a string or array with urls
+     * @param array|string $urls  An array with urls or a url string
+     * @param array $config       Associative array with configuration options
+     * @param object $oembed      Instance of \Embera\Oembed
      * @return void
      */
-    public function __construct($urls = array()) { $this->findServices((array) $urls); }
+    public function __construct($urls = array(), array $config = array(), \Embera\Oembed $oembed = null)
+    {
+        $this->oembed = $oembed;
+        $this->config = $config;
+        $this->findServices((array) $urls);
+    }
 
     /**
      * Finds services for the given $urls.
@@ -35,14 +43,14 @@ class Providers
     {
         if (!empty($urls))
         {
-            foreach ($urls as $u)
+            foreach (array_unique($urls) as $u)
             {
                 try {
-                    $urlObject = new \Embera\Url($this->normalize($u));
-                    if (empty($this->urls[$u]) && isset($this->hosts[$urlObject->host]))
+                    $host = $this->getHost($u);
+                    if (isset($this->services[$host]))
                     {
-                        $provider = new \ReflectionClass('\Embera\Providers\\' . $this->hosts[$urlObject->host]);
-                        $this->urls[$u] = $provider->newInstance($urlObject);
+                        $provider = new \ReflectionClass('\Embera\Providers\\' . $this->services[$host]);
+                        $this->urls[$u] = $provider->newInstance($u, $this->config, $this->oembed);
                     }
                 } catch (\Exception $e) {}
             }
@@ -50,16 +58,20 @@ class Providers
     }
 
     /**
-     * Tries to convert shortened urls to
-     * its canonical equivalent.
+     * Gets a normalized host for the given $url
      *
      * @param string $url
      * @return string
+     *
+     * @throws InvalidArgumentException when the url seems to be invalid
      */
-    protected function normalize($url = null)
+    protected function getHost($url)
     {
-        $translation = array('youtu.be/' => 'youtube.com/watch?v=');
-        return str_ireplace(array_keys($translation), array_values($translation), $url);
+        $data = parse_url($url);
+        if (empty($data['host']))
+            throw new \InvalidArgumentException('The Url: ' . $url . ' seems to be invalid');
+
+        return preg_replace('~^www\.~', '', strtolower($data['host']));
     }
 
     /**

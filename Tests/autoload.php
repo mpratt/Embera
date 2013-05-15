@@ -1,21 +1,29 @@
 <?php
+/**
+ * Setup the environment
+ */
 date_default_timezone_set('America/Bogota');
 if (file_exists(__DIR__ . '/../vendor/autoload.php'))
     require __DIR__ . '/../vendor/autoload.php';
-
-require __DIR__ . '/../Lib/Embera/Autoload.php';
+else
+    require __DIR__ . '/../Lib/Embera/Autoload.php';
 
 /**
- * A Mock Service
+ * HttpRequest Mockup
  * @codeCoverageIgnore
  */
-class MockService extends \Embera\Adapters\Service
+class MockHttpRequest extends \Embera\HttpRequest
 {
-    protected $valid = true;
-    protected $fakeResponse = array();
-    public function validateUrl(){ return $this->valid; }
-    public function fakeOembedResponse() { return $this->fakeResponse; }
-    public function __set($k, $v) { $this->{$k} = $v; }
+    public $response;
+    public function fetch($url = '') { return $this->response; }
 }
 
+/**
+ * Oembed Mockup
+ * @codeCoverageIgnore
+ */
+class MockOembed extends \Embera\Oembed
+{
+    public function getResourceInfo($apiUrl, $url, array $params = array()) { return array(); }
+}
 ?>
