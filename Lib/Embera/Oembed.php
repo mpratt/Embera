@@ -37,8 +37,7 @@ class Oembed
         if (empty($params['oembed']))
             return array();
 
-        $params = array_merge($params, array('url' => $url));
-        return $this->lookup($this->constructUrl($apiUrl, $params));
+        return $this->lookup($this->constructUrl($apiUrl, array_merge($params, array('url' => $url))));
     }
 
     /**
@@ -94,10 +93,10 @@ class Oembed
     protected function constructUrl($apiUrl, array $params = array())
     {
         $params = array_filter($params);
-        if (!empty($params['width']))
+        if (!empty($params['width']) && empty($params['maxwidth']))
             $params['maxwidth'] = $params['width'];
 
-        if (!empty($params['height']))
+        if (!empty($params['height']) && empty($params['maxheight']))
             $params['maxheight'] = $params['height'];
 
         $params = array_intersect_key($params, array('url' => '', 'maxwidth' => '', 'maxheight' => '', 'format' => ''));

@@ -88,15 +88,14 @@ class TestEmbera extends PHPUnit_Framework_TestCase
         $validUrls = array('http://www.youtube.com/watch?v=MpVHQnIvTXo',
                            'http://youtu.be/fSUK4WgQ3vk',
                            'http://vimeo.com/groups/shortfilms/videos/63313811/',
-                           'http://www.flickr.com/photos/reddragonflydmc/5427387397/',
+                           'http://www.dailymotion.com/video/xzxtaf_red-bull-400-alic-y-stadlober-ganan-en-eslovenia_sport/',
                            'http://www.youtube.com/watch?v=T3O1nffTG-k');
 
-        // Since Flickr Doesnt support oembed false, we need to make this oembed true
-        $embera = new \Embera\Embera(array('oembed' => true, 'allow' => array('Vimeo', 'FlickR')));
+        $embera = new \Embera\Embera(array('oembed' => false, 'allow' => array('Vimeo', 'dailyMotion')));
         $result = $embera->getUrlInfo($validUrls);
         $this->assertCount(2, $result);
 
-        $embera = new \Embera\Embera(array('oembed' => true, 'allow' => array('Youtube', 'Flickr')));
+        $embera = new \Embera\Embera(array('oembed' => false, 'allow' => array('Youtube', 'Dailymotion')));
         $result = $embera->getUrlInfo($validUrls);
         $this->assertCount((count($validUrls) - 1), $result);
     }

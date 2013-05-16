@@ -1,8 +1,8 @@
 {
     "name": "mpratt/embera",
     "type": "library",
-    "description": "A library that replaces common media links to an embed html.",
-    "keywords": ["Embed", "Youtube", "Oembed"],
+    "description": "A Oembed consumer library, that gives you information about urls. It helps you replace urls to youtube or vimeo for example, with their html embed code.",
+    "keywords": ["Embed", "Youtube", "Oembed", "Auto embed", "Vimeo"],
     "homepage": "https://github.com/mpratt/Embera",
     "license": "MIT",
     "authors": [

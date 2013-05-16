@@ -24,11 +24,23 @@ class TestProviderClass extends PHPUnit_Framework_TestCase
         $p = new \Embera\Providers('http://www.unknown.com', array(), $oembed);
         $this->assertEmpty($p->getAll());
 
-        $urls = array('http://www.unknown.com/path/stuf/?hi=1',
-                      'http://www.thewalkingdead.com/stuff/');
-
+        $urls = array('http://www.unknown.com/path/stuf/?hi=1', 'http://www.thewalkingdead.com/stuff/');
         $p = new \Embera\Providers($urls, array(), $oembed);
         $this->assertEmpty($p->getAll());
+    }
+
+    // Dont repeat yourself
+    protected function validateDetection(array $validUrls, array $invalidUrls)
+    {
+        $oembed = new MockOembed(new MockHttpRequest());
+        $p = new \Embera\Providers($validUrls, array(), $oembed);
+        $this->assertCount(count($validUrls), $p->getAll());
+
+        $p = new \Embera\Providers(array_merge($validUrls, $invalidUrls), array(), $oembed);
+        $this->assertCount(count($validUrls), $p->getAll());
+
+        $p = new \Embera\Providers($validUrls[mt_rand(0, (count($validUrls) - 1))], array(), $oembed);
+        $this->assertCount(1, $p->getAll());
     }
 
     public function testYoutubeDetection()
@@ -49,15 +61,7 @@ class TestProviderClass extends PHPUnit_Framework_TestCase
                              'http://youtube.com/',
                              'http://www.youtube.com/?id=ho');
 
-        $oembed = new MockOembed(new MockHttpRequest());
-        $p = new \Embera\Providers($validUrls, array(), $oembed);
-        $this->assertCount(count($validUrls), $p->getAll());
-
-        $p = new \Embera\Providers(array_merge($validUrls, $invalidUrls), array(), $oembed);
-        $this->assertCount(count($validUrls), $p->getAll());
-
-        $p = new \Embera\Providers($validUrls[mt_rand(0, (count($validUrls) - 1))], array(), $oembed);
-        $this->assertCount(1, $p->getAll());
+        $this->validateDetection($validUrls, $invalidUrls);
     }
 
     public function testFlickrDetection()
@@ -76,15 +80,7 @@ class TestProviderClass extends PHPUnit_Framework_TestCase
                              'http://www.flickr.com/noise/8429256478/',
                              'http://www.flickr.com//8429256478/');
 
-        $oembed = new MockOembed(new MockHttpRequest());
-        $p = new \Embera\Providers($validUrls, array(), $oembed);
-        $this->assertCount(count($validUrls), $p->getAll());
-
-        $p = new \Embera\Providers(array_merge($validUrls, $invalidUrls), array(), $oembed);
-        $this->assertCount(count($validUrls), $p->getAll());
-
-        $p = new \Embera\Providers($validUrls[mt_rand(0, (count($validUrls) - 1))], array(), $oembed);
-        $this->assertCount(1, $p->getAll());
+        $this->validateDetection($validUrls, $invalidUrls);
     }
 
     public function testVimeoDetection()
@@ -102,17 +98,31 @@ class TestProviderClass extends PHPUnit_Framework_TestCase
                              'http://vimeo.com/47360546/other/stuff/',
                              'http://vimeo.com/groups/shortfilms/123',
                              'http://vimeo.com/groups/shortfilms',
+                             'http://vimeo.com/',
                              'http://vimeo.com/groups/stuff/?autoplay=1');
 
-        $oembed = new MockOembed(new MockHttpRequest());
-        $p = new \Embera\Providers($validUrls, array(), $oembed);
-        $this->assertCount(count($validUrls), $p->getAll());
+        $this->validateDetection($validUrls, $invalidUrls);
+    }
 
-        $p = new \Embera\Providers(array_merge($validUrls, $invalidUrls), array(), $oembed);
-        $this->assertCount(count($validUrls), $p->getAll());
+    public function testDailyMotionDetection()
+    {
+        $validUrls = array('http://www.dailymotion.com/video/xxwxe1_harlem-shake-de-los-simpsons_fun',
+                           'http://dailymotion.com/video/xp30q9_bmw-serie3-2012-en-mexico_auto',
+                           'http://www.dailymotion.com/video/xzxtaf_red-bull-400-alic-y-stadlober-ganan-en-eslovenia_sport/',
+                           'http://www.dailymotion.com/video/xzva95_jacob-jones-and-the-bigfoot-mystery-launch-trailer_videogames',
+                           'http://www.dailymotion.com/video/xzx9vo_marc-gasol-lleva-a-memphis-a-su-primera-final-de-conferencia_sport',
+                           'http://www.dailymotion.com/video/xzx4m4_balotelli-au-prochain-cri-raciste-je-quitte-le-terrain_sport?from=rss',
+                           'http://www.dailymotion.com/video/xzse1m_casanova-tout-reste-possible-pour-l-om_sport/stuff/here/',
+                           'http://www.dailymotion.com/embed/video/xzxfpu',
+                           'http://www.dailymotion.com/embed/video/xzv0cd/');
 
-        $p = new \Embera\Providers($validUrls[mt_rand(0, (count($validUrls) - 1))], array(), $oembed);
-        $this->assertCount(1, $p->getAll());
+        $invalidUrls = array('http://www.dailymotion.com',
+                             'http://dailymotion.com',
+                             'http://www.dailymotion.com/channel/stuff/',
+                             'http://www.dailymotion.com/stuff/',
+                             'http://www.dailymotion.com/video/');
+
+        $this->validateDetection($validUrls, $invalidUrls);
     }
 }
 ?>

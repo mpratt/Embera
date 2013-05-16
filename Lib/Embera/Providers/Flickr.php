@@ -33,7 +33,7 @@ class Flickr extends \Embera\Adapters\Service
      */
     protected function normalizeUrl()
     {
-        if (preg_match('~/photos/([^/]+)/([0-9]+)/?~i', $this->url, $matches))
+        if (preg_match('~/photos/([^/"\'<>]+)/([0-9]+)/?~i', $this->url, $matches))
             $this->url = 'http://www.flickr.com/photos/' . $matches['1'] . '/' . $matches['2']. '/';
     }
 }

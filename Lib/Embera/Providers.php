@@ -18,6 +18,7 @@ class Providers
     protected $services = array('youtube.com' => 'Youtube',
                                 'youtu.be' => 'Youtube',
                                 'vimeo.com' => 'Vimeo',
+                                'dailymotion.com' => 'DailyMotion',
                                 'flickr.com' => 'Flickr',
                                 'flic.kr' => 'Flickr');
 
