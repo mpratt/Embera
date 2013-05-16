@@ -71,31 +71,34 @@ class TestEmbera extends PHPUnit_Framework_TestCase
     {
         $validUrls = array('http://www.youtube.com/watch?v=MpVHQnIvTXo',
                            'http://youtu.be/fSUK4WgQ3vk',
+                           'http://vimeo.com/groups/shortfilms/videos/63313811/',
                            'http://www.youtube.com/watch?v=T3O1nffTG-k');
 
         $embera = new \Embera\Embera(array('oembed' => false, 'deny' => array('Youtube')));
         $result = $embera->getUrlInfo($validUrls);
-        $this->assertCount(0, $result);
+        $this->assertCount(1, $result);
 
         $embera = new \Embera\Embera(array('oembed' => false, 'deny' => array('youTube')));
         $result = $embera->getUrlInfo($validUrls);
-        $this->assertCount(0, $result);
+        $this->assertCount(1, $result);
     }
 
     public function testAllowService()
     {
         $validUrls = array('http://www.youtube.com/watch?v=MpVHQnIvTXo',
                            'http://youtu.be/fSUK4WgQ3vk',
+                           'http://vimeo.com/groups/shortfilms/videos/63313811/',
                            'http://www.flickr.com/photos/reddragonflydmc/5427387397/',
                            'http://www.youtube.com/watch?v=T3O1nffTG-k');
 
-        $embera = new \Embera\Embera(array('oembed' => false, 'allow' => array('UnknownService', 'FlickR')));
+        // Since Flickr Doesnt support oembed false, we need to make this oembed true
+        $embera = new \Embera\Embera(array('oembed' => true, 'allow' => array('Vimeo', 'FlickR')));
         $result = $embera->getUrlInfo($validUrls);
-        $this->assertCount(1, $result);
+        $this->assertCount(2, $result);
 
-        $embera = new \Embera\Embera(array('oembed' => false, 'allow' => array('Youtube', 'Flickr')));
+        $embera = new \Embera\Embera(array('oembed' => true, 'allow' => array('Youtube', 'Flickr')));
         $result = $embera->getUrlInfo($validUrls);
-        $this->assertCount(count($validUrls), $result);
+        $this->assertCount((count($validUrls) - 1), $result);
     }
 }
 

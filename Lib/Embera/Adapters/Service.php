@@ -46,7 +46,7 @@ abstract class Service
         $this->normalizeUrl();
 
         if (!$this->validateUrl())
-            throw new \InvalidArgumentException('Url ' . $this->url . ' seems to be invalid for this service');
+            throw new \InvalidArgumentException('Url ' . $this->url . ' seems to be invalid for the ' . get_class($this) . ' service');
 
         $this->config = $config;
         $this->oembed = $oembed;

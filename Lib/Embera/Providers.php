@@ -17,6 +17,7 @@ class Providers
     protected $config = array();
     protected $services = array('youtube.com' => 'Youtube',
                                 'youtu.be' => 'Youtube',
+                                'vimeo.com' => 'Vimeo',
                                 'flickr.com' => 'Flickr',
                                 'flic.kr' => 'Flickr');
 
@@ -73,7 +74,7 @@ class Providers
         if (empty($data['host']))
             throw new \InvalidArgumentException('The Url: ' . $url . ' seems to be invalid');
 
-        return preg_replace('~^www\.~', '', strtolower($data['host']));
+        return preg_replace('~^(?:www|player)\.~', '', strtolower($data['host']));
     }
 
     /**

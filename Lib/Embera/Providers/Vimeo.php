@@ -1,6 +1,6 @@
 <?php
 /**
- * Yotube.php
+ * Vimeo.php
  *
  * @author Michael Pratt <pratt@hablarmierda.net>
  * @link   http://www.michael-pratt.com/
@@ -11,10 +11,10 @@
 
 namespace Embera\Providers;
 
-class Youtube extends \Embera\Adapters\Service
+class Vimeo extends \Embera\Adapters\Service
 {
-    protected $apiUrl = 'http://www.youtube.com/oembed?format=json';
-    protected $query = array();
+    protected $apiUrl = 'http://vimeo.com/api/oembed.json';
+    protected $videoId = null;
 
     /**
      * Validates that the url belongs to this
@@ -24,14 +24,7 @@ class Youtube extends \Embera\Adapters\Service
      */
     protected function validateUrl()
     {
-        $parsed = parse_url($this->url);
-        if (!empty($parsed['query']))
-        {
-            parse_str($parsed['query'], $this->query);
-            return (!empty($this->query['v']));
-        }
-
-        return false;
+        return (preg_match('~vimeo\.com/(?:[\d]{5,12})$~i', $this->url));
     }
 
     /**
@@ -41,8 +34,11 @@ class Youtube extends \Embera\Adapters\Service
      */
     protected function normalizeUrl()
     {
-        if (preg_match('~(?:v=|youtu\.be/)([a-z0-9_-]+)~i', $this->url, $matches))
-            $this->url = 'http://www.youtube.com/watch?v=' . $matches[1];
+        if (preg_match('~/([\d]{5,12})/?$~i', $this->url, $matches))
+        {
+            $this->videoId = $matches[1];
+            $this->url = 'http://vimeo.com/' . $this->videoId;
+        }
     }
 
     /**
@@ -53,14 +49,17 @@ class Youtube extends \Embera\Adapters\Service
      */
     public function fakeResponse()
     {
-        $html = '<iframe width="{width}" height="{height}" src="{video}" frameborder="0" allowfullscreen>';
-        $t = array('{video}' => 'http://www.youtube.com/embed/' . $this->query['v'],
+        if (is_null($this->videoId))
+            return array();
+
+        $html = '<iframe src="{video}" width="{width}" height="{height}" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>';
+        $t = array('{video}' => 'http://player.vimeo.com/' . $this->videoId,
                    '{width}' => $this->getWidth(),
                    '{height}' => $this->getHeight());
 
         $data = array('type' => 'video',
-                      'provider_name' => 'Youtube',
-                      'provider_url' => 'http://www.youtube.com',
+                      'provider_name' => 'Vimeo',
+                      'provider_url' => 'http://www.vimeo.com',
                       'title' => 'Unknown title',
                       'html' => str_replace(array_keys($t), array_values($t), $html));
 
