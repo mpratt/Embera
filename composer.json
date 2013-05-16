@@ -14,7 +14,8 @@
         }
     ],
     "require": {
-        "php": ">=5.4",
+        "php": ">=5.3",
+        "Curl": "Or allow_url_fopen enabled"
     },
     "autoload": {
         "psr-0": {"Embera": "Lib/"}

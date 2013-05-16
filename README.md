@@ -21,7 +21,7 @@ Sites marked with an `*` allow offline html embedding
 
 Requirements
 ============
-- PHP >= 5.4
+- PHP >= 5.3
 - Curl or `allow_url_fopen` must be enabled
 
 Installation
@@ -84,7 +84,7 @@ Disable online support.
     /* Since I dont have Flickr offline support, the url stays the same. */
 ```
 
-Do you want to only allow embedding only from a few Sites?
+Do you want to allow embedding only from a few Sites?
 ```php
     $config = array('allow' => array('Youtube', 'Vimeo'));
     $text = 'http://vimeo.com/groups/shortfilms/videos/66185763 http://www.flickr.com/photos/bees/8597283706/in/photostream http://youtube.com/watch?v=J---aiyznGQ';
@@ -92,7 +92,7 @@ Do you want to only allow embedding only from a few Sites?
     echo $embera->autoEmbed($text);
 ```
 
-Or perhaps you want to deny embedding from a couple sites?
+Or perhaps you want to deny embedding from a couple of sites?
 ```php
     $config = array('deny' => array('Youtube', 'Vimeo'));
     $text = 'http://dailymotion.com/video/xp30q9_bmw-serie3-2012-en-mexico_auto http://vimeo.com/groups/shortfilms/videos/66185763  http://youtube.com/watch?v=J---aiyznGQ';
@@ -104,7 +104,7 @@ Maybe you are interested on seeing the full oembed response from the urls.
 Use the `getUrlInfo()` method
 ```php
     $url = 'http://dailymotion.com/video/xp30q9_bmw-serie3-2012-en-mexico_auto';
-    $embera = new \Embera\Embera($config);
+    $embera = new \Embera\Embera();
     print_r($embera->getUrlInfo($url));
 
 // Sample Output:
@@ -137,12 +137,24 @@ each one them
                   'http://www.flickr.com/photos/bees/8597283706/in/photostream',
                   'http://youtube.com/watch?v=J---aiyznGQ');
 
-    $embera = new \Embera\Embera($config);
+    $embera = new \Embera\Embera();
     print_r($embera->getUrlInfo($urls));
 ```
 
+Checking for errors?
+```php
+    $embera = new \Embera\Embera();
+    $result = $embera->autoEmbed($text);
+
+    if ($embera->hasErrors())
+        echo $embera->getLastError();
+
+    // Or you can get an array with all the errors
+    print_r($embera->getErrors());
+```
+
 On a quick note, if you see in the response, the key `embera_using_fake` equal 0, means that the library
-got the results from the Oembed provideer. When it equals 1, it means that the html embed code is constructed
+got the results from the Oembed provider. When it equals 1, it means that the html embed code is constructed
 from the original url given - It also means that most of the other information is going to be missing.
 
 Take a peak inside the Tests directory if you want to learn more.
