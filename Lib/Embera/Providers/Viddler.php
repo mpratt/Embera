@@ -1,6 +1,6 @@
 <?php
 /**
- * DailyMotion.php
+ * Viddler.php
  *
  * @author Michael Pratt <pratt@hablarmierda.net>
  * @link   http://www.michael-pratt.com/
@@ -11,11 +11,10 @@
 
 namespace Embera\Providers;
 
-class DailyMotion extends \Embera\Adapters\Service
+class Viddler extends \Embera\Adapters\Service
 {
-    protected $apiUrl = 'http://www.dailymotion.com/services/oembed?format=json';
+    protected $apiUrl = 'http://www.viddler.com/oembed/?format=json';
     protected $videoId = null;
-    protected $videoTitle = null;
 
     /**
      * Validates that the url belongs to this
@@ -25,7 +24,7 @@ class DailyMotion extends \Embera\Adapters\Service
      */
     protected function validateUrl()
     {
-        return (preg_match('~dailymotion\.com/video/(?:[^/"\'<>]+)/?~i', $this->url));
+        return (preg_match('~viddler\.com/v/(?:[0-9a-f]{7,12})/?$~i', $this->url));
     }
 
     /**
@@ -35,11 +34,10 @@ class DailyMotion extends \Embera\Adapters\Service
      */
     protected function normalizeUrl()
     {
-        if (preg_match('~/video/([^/\? ]+)~i', $this->url, $matches))
+        if (preg_match('~/(?:v|embed)/([0-9a-f]{7,12})/?~i', $this->url, $matches))
         {
-            $full = $matches['1'];
-            @list($this->videoId, $this->videoTitle) = explode('_', $full, 2);
-            $this->url = 'http://www.dailymotion.com/video/' . $full;
+            $this->videoId = $matches[1];
+            $this->url = 'http://www.viddler.com/v/' . $this->videoId;
         }
     }
 
@@ -51,21 +49,21 @@ class DailyMotion extends \Embera\Adapters\Service
      */
     public function fakeResponse()
     {
-        if (empty($this->videoId))
+        if (is_null($this->videoId))
             return array();
 
-        $html = '<iframe src="{video}" width="{width}" height="{height}" frameborder="0"></iframe>';
+        $html = '<iframe width="{width}" height="{height}" src="{video}" frameborder="0" allowfullscreen></iframe>';
         $t = array(
-            '{video}' => 'http://www.dailymotion.com/embed/video/' . $this->videoId,
+            '{video}' => 'http://viddler.com/embed/890702a2',
             '{width}' => $this->getWidth(),
             '{height}' => $this->getHeight()
         );
 
         $data = array(
             'type' => 'video',
-            'provider_name' => 'Dailymotion',
-            'provider_url' => 'http://www.dailymotion.com',
-            'title' => (!empty($this->videoTitle) ? str_replace(array('-', '_'), ' ', $this->videoTitle) : 'Unknown Title'),
+            'provider_name' => 'Viddler',
+            'provider_url' => 'http://www.viddler.com',
+            'title' => 'Unknown title',
             'html' => str_replace(array_keys($t), array_values($t), $html)
         );
 

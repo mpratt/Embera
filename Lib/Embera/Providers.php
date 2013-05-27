@@ -15,12 +15,16 @@ class Providers
 {
     protected $urls = array();
     protected $config = array();
-    protected $services = array('youtube.com' => 'Youtube',
-                                'youtu.be' => 'Youtube',
-                                'vimeo.com' => 'Vimeo',
-                                'dailymotion.com' => 'DailyMotion',
-                                'flickr.com' => 'Flickr',
-                                'flic.kr' => 'Flickr');
+    protected $services = array(
+        'youtube.com' => 'Youtube',
+        'youtu.be' => 'Youtube',
+        'vimeo.com' => 'Vimeo',
+        'qik.com' => 'Qik',
+        'dailymotion.com' => 'DailyMotion',
+        'viddler.com' => 'Viddler',
+        'flickr.com' => 'Flickr',
+        'flic.kr' => 'Flickr'
+    );
 
     /**
      * Construct

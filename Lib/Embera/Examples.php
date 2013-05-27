@@ -48,10 +48,12 @@ $embera = new \Embera\Embera();
 print_r($embera->getUrlInfo($url)) . "\n";
 echo "================================ \n";
 
-$urls = array('http://vimeo.com/groups/shortfilms/videos/66185763',
+$urls = array(
+    'http://vimeo.com/groups/shortfilms/videos/66185763',
     'http://vimeo.com/47360546',
     'http://www.flickr.com/photos/bees/8597283706/in/photostream',
-    'http://youtube.com/watch?v=J---aiyznGQ');
+    'http://youtube.com/watch?v=J---aiyznGQ'
+);
 
 $embera = new \Embera\Embera();
 print_r($embera->getUrlInfo($urls)) . "\n";

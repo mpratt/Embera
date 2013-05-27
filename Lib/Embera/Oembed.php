@@ -48,13 +48,15 @@ class Oembed
      */
     public function buildFakeResponse(array $fakeResponse = array())
     {
-        $defaults = array('version' => '1.0',
-                          'url' => '',
-                          'title' => '',
-                          'author_name' => '',
-                          'author_url' => '',
-                          'cache_age' => 0,
-                          'embera_using_fake' => 1);
+        $defaults = array(
+            'version' => '1.0',
+            'url' => '',
+            'title' => '',
+            'author_name' => '',
+            'author_url' => '',
+            'cache_age' => 0,
+            'embera_using_fake' => 1
+        );
 
         return array_merge($defaults, $fakeResponse);
     }

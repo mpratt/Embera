@@ -39,19 +39,21 @@ class HttpRequest
      */
     protected function curl($url)
     {
-        $options = array(CURLOPT_URL => $url,
-                         CURLOPT_FOLLOWLOCATION => true,
-                         //CURLOPT_CONNECTTIMEOUT => 10,
-                         CURLOPT_ENCODING => 'UTF-8',
-                         CURLOPT_USERAGENT => 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:2.0.1) Gecko/20110606 Firefox/4.0.1',
-                         CURLOPT_HEADER => false,
-                         CURLOPT_RETURNTRANSFER => 1);
+        $options = array(
+            CURLOPT_URL => $url,
+            CURLOPT_FOLLOWLOCATION => true,
+            //CURLOPT_CONNECTTIMEOUT => 10,
+            CURLOPT_ENCODING => 'UTF-8',
+            CURLOPT_USERAGENT => 'Mozilla/5.0 PHP/Embera',
+            CURLOPT_HEADER => false,
+            CURLOPT_RETURNTRANSFER => 1
+        );
 
-        $ch = curl_init();
-        curl_setopt_array($ch, $options);
-        $data = curl_exec($ch);
-        $status = curl_getinfo($ch, CURLINFO_HTTP_CODE);
-        curl_close($ch);
+        $handler = curl_init();
+        curl_setopt_array($handler, $options);
+        $data = curl_exec($handler);
+        $status = curl_getinfo($handler, CURLINFO_HTTP_CODE);
+        curl_close($handler);
 
         if (empty($data) || !in_array($status, array('200')))
             throw new \Exception($status . ': Invalid response for ' . $url);
@@ -72,7 +74,12 @@ class HttpRequest
         if (!ini_get('allow_url_fopen'))
             throw new \Exception('Could not execute lookup, allow_url_fopen is disabled');
 
-        if ($data = file_get_contents($url, false, stream_context_create(array('http' => array('method' => 'GET')))))
+        $context = array('http' => array(
+            'method' => 'GET',
+            'user_agent' => 'Mozilla/5.0 PHP/Embera'
+        ));
+
+        if ($data = file_get_contents($url, false, stream_context_create($context)))
             return $data;
 
         throw new \Exception('Invalid Server Response from ' . $url);

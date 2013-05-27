@@ -54,15 +54,19 @@ class Youtube extends \Embera\Adapters\Service
     public function fakeResponse()
     {
         $html = '<iframe width="{width}" height="{height}" src="{video}" frameborder="0" allowfullscreen>';
-        $t = array('{video}' => 'http://www.youtube.com/embed/' . $this->query['v'],
-                   '{width}' => $this->getWidth(),
-                   '{height}' => $this->getHeight());
+        $t = array(
+            '{video}' => 'http://www.youtube.com/embed/' . $this->query['v'],
+            '{width}' => $this->getWidth(),
+            '{height}' => $this->getHeight()
+        );
 
-        $data = array('type' => 'video',
-                      'provider_name' => 'Youtube',
-                      'provider_url' => 'http://www.youtube.com',
-                      'title' => 'Unknown title',
-                      'html' => str_replace(array_keys($t), array_values($t), $html));
+        $data = array(
+            'type' => 'video',
+            'provider_name' => 'Youtube',
+            'provider_url' => 'http://www.youtube.com',
+            'title' => 'Unknown title',
+            'html' => str_replace(array_keys($t), array_values($t), $html)
+        );
 
         return $this->oembed->buildFakeResponse($data);
     }

@@ -17,6 +17,8 @@ Sites marked with an `*` allow offline html embedding
 - Youtube *
 - Vimeo *
 - DailyMotion *
+- Viddler *
+- Qik
 - Flickr
 
 Requirements
@@ -32,7 +34,9 @@ If you're using [Composer](https://github.com/composer/composer) to manage
 dependencies, you can use this library by creating a composer.json file like:
 
     {
-        "require": { "mpratt/embera": ">=1.0" },
+        "require": {
+            "mpratt/embera": "dev-master"
+        },
         "autoload": {
             "psr-0": {"Embera": "Lib/"}
         }
