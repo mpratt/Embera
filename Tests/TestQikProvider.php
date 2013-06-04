@@ -11,26 +11,21 @@
 
 class TestQikProvider extends PHPUnit_Framework_TestCase
 {
-    protected $validUrls = array(
-        'http://www.qik.com/video/26383698',
-        'http://qik.com/video/4226370',
-        'http://qik.com/video/3698881',
-        'http://qik.com/video/2130131'
-    );
 
-    protected $invalidUrls = array(
-        'http://qik.com/stuff/26383698',
-        'http://qik.com/video/a452342b',
-        'http://qik.com/video/3698881/other-stuff-here/',
-        'http://qik.com/noidea/video/2130131'
-    );
+    protected $validUrls, $invalidUrls;
+
+    public function setUp()
+    {
+        $this->validUrls   = UrlList::get('Qik');
+        $this->invalidUrls = UrlList::get('Qik', true);
+    }
 
     public function testInvalidUrl()
     {
         $this->setExpectedException('InvalidArgumentException');
 
         $oembed = new MockOembed(new MockHttpRequest());
-        $yt = new \Embera\Providers\Qik($this->invalidUrls[mt_rand(0, (count($this->invalidUrls) - 1))], array(), $oembed);
+        new \Embera\Providers\Qik($this->invalidUrls[mt_rand(0, (count($this->invalidUrls) - 1))], array(), $oembed);
     }
 
     public function testRealResponse()

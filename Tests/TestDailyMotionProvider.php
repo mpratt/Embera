@@ -11,21 +11,13 @@
 
 class TestDailyMotionProvider extends PHPUnit_Framework_TestCase
 {
-    protected $validUrls = array('http://www.dailymotion.com/video/xxwxe1_harlem-shake-de-los-simpsons_fun',
-                                 'http://dailymotion.com/video/xp30q9_bmw-serie3-2012-en-mexico_auto',
-                                 'http://www.dailymotion.com/video/xzxtaf_red-bull-400-alic-y-stadlober-ganan-en-eslovenia_sport/',
-                                 'http://www.dailymotion.com/video/xzva95_jacob-jones-and-the-bigfoot-mystery-launch-trailer_videogames',
-                                 'http://www.dailymotion.com/video/xzx9vo_marc-gasol-lleva-a-memphis-a-su-primera-final-de-conferencia_sport',
-                                 'http://www.dailymotion.com/video/xzx4m4_balotelli-au-prochain-cri-raciste-je-quitte-le-terrain_sport?from=rss',
-                                 'http://www.dailymotion.com/video/xzse1m_casanova-tout-reste-possible-pour-l-om_sport/stuff/here/',
-                                 'http://www.dailymotion.com/embed/video/xzxfpu',
-                                 'http://www.dailymotion.com/embed/video/xzv0cd/');
+    protected $validUrls, $invalidUrls;
 
-    protected $invalidUrls = array('http://www.dailymotion.com',
-                                   'http://dailymotion.com',
-                                   'http://www.dailymotion.com/channel/stuff/',
-                                   'http://www.dailymotion.com/stuff/',
-                                   'http://www.dailymotion.com/video/');
+    public function setUp()
+    {
+        $this->validUrls   = UrlList::get('DailyMotion');
+        $this->invalidUrls = UrlList::get('DailyMotion', true);
+    }
 
     public function testUrlNormalize()
     {
@@ -54,7 +46,7 @@ class TestDailyMotionProvider extends PHPUnit_Framework_TestCase
         $this->setExpectedException('InvalidArgumentException');
 
         $oembed = new MockOembed(new MockHttpRequest());
-        $yt = new \Embera\Providers\DailyMotion($this->invalidUrls[mt_rand(0, (count($this->invalidUrls) - 1))], array(), $oembed);
+        new \Embera\Providers\DailyMotion($this->invalidUrls[mt_rand(0, (count($this->invalidUrls) - 1))], array(), $oembed);
     }
 
     public function testFakeResponse()

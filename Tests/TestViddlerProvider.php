@@ -11,21 +11,13 @@
 
 class TestViddlerProvider extends PHPUnit_Framework_TestCase
 {
-    protected $validUrls = array(
-        'http://www.viddler.com/v/a695c468',
-        'http://www.viddler.com/v/a695c468/lightbox?autoplay=1',
-        'http://www.viddler.com/v/528b194c/otherStuff/lightbox',
-        'http://viddler.com/embed/4c57d97a/lightbox',
-        'http://viddler.com/v/4c57d97a/lightbox',
-        'http://viddler.com/v/c83cacd4'
-    );
+    protected $validUrls, $invalidUrls;
 
-    protected $invalidUrls = array(
-        'http://viddler.com/invalidstuff/a695c468',
-        'http://www.viddler.com/v/zxsdg9',
-        'http://www.viddler.com/player/528b194c/otherStuff/lightbox',
-        'http://viddler.com/v/',
-    );
+    public function setUp()
+    {
+        $this->validUrls   = UrlList::get('Viddler');
+        $this->invalidUrls = UrlList::get('Viddler', true);
+    }
 
     public function testUrlNormalize()
     {
@@ -51,7 +43,7 @@ class TestViddlerProvider extends PHPUnit_Framework_TestCase
         $this->setExpectedException('InvalidArgumentException');
 
         $oembed = new MockOembed(new MockHttpRequest());
-        $vdd = new \Embera\Providers\Viddler($this->invalidUrls[mt_rand(0, (count($this->invalidUrls) - 1))], array(), $oembed);
+        new \Embera\Providers\Viddler($this->invalidUrls[mt_rand(0, (count($this->invalidUrls) - 1))], array(), $oembed);
     }
 
     public function testFakeResponse()

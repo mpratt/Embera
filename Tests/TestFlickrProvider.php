@@ -11,19 +11,14 @@
 
 class TestFlickrProvider extends PHPUnit_Framework_TestCase
 {
-    protected $validUrls = array('http://www.flickr.com/photos/22134962@N03/8738306577/in/explore-2013-05-14',
-                                 'http://flic.kr/p/9gAMbM',
-                                 'http://www.flickr.com/photos/reddragonflydmc/5427387397/',
-                                 'http://www.flickr.com/photos/bees/8597283706/in/photostream',
-                                 'http://www.flickr.com/photos/bees/8537962055/?noise=noise',
-                                 'http://flic.kr/p/9gAMbM/',
-                                 'http://www.flickr.com/photos/bees/8429256478');
 
-    protected $invalidUrls = array('http://www.flickr.com/22134962@N03/8738306577/',
-                                   'http://www.flickr.com',
-                                   'http://www.flickr.com/stuff/8429256478/',
-                                   'http://www.flickr.com/noise/8429256478/',
-                                   'http://www.flickr.com//8429256478/');
+    protected $validUrls, $invalidUrls;
+
+    public function setUp()
+    {
+        $this->validUrls   = UrlList::get('Flickr');
+        $this->invalidUrls = UrlList::get('Flickr', true);
+    }
 
     public function testUrlNormalize()
     {
@@ -55,7 +50,7 @@ class TestFlickrProvider extends PHPUnit_Framework_TestCase
         $this->setExpectedException('InvalidArgumentException');
 
         $oembed = new MockOembed(new MockHttpRequest());
-        $yt = new \Embera\Providers\Flickr($this->invalidUrls[mt_rand(0, (count($this->invalidUrls) - 1))], array(), $oembed);
+        new \Embera\Providers\Flickr($this->invalidUrls[mt_rand(0, (count($this->invalidUrls) - 1))], array(), $oembed);
     }
 
     public function testRealResponse()
