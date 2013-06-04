@@ -14,12 +14,13 @@ Check out the `Basic Usage` instructions for more information.
 Supported Sites
 ===============
 Sites marked with an `*` allow offline html embedding
-- Youtube *
-- Vimeo *
-- DailyMotion *
-- Viddler *
-- Qik
-- Flickr
+- [Youtube](http://www.youtube.com/) *
+- [Vimeo](http://vimeo.com/) *
+- [DailyMotion](http://www.dailymotion.com/) *
+- [Viddler](http://www.viddler.com) *
+- [Qik](http://qik.com)
+- [Flickr](http://flickr.com)
+- [Revision3](http://revision3.com)
 
 Requirements
 ============
@@ -132,6 +133,9 @@ Array
         )
 )
 ```
+On a quick note, if you see in the response, the key `embera_using_fake` equal 0, means that the library
+got the results from the Oembed provider. When it equals 1, it means that the html embed code is constructed
+from the original url given - It also means that most of the other information is going to be missing.
 
 You can even feed an array full with urls and inspect the oembed response for
 each one them
@@ -156,10 +160,6 @@ Checking for errors?
     // Or you can get an array with all the errors
     print_r($embera->getErrors());
 ```
-
-On a quick note, if you see in the response, the key `embera_using_fake` equal 0, means that the library
-got the results from the Oembed provider. When it equals 1, it means that the html embed code is constructed
-from the original url given - It also means that most of the other information is going to be missing.
 
 Take a peak inside the Tests directory if you want to learn more.
 

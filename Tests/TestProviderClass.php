@@ -29,66 +29,40 @@ class TestProviderClass extends PHPUnit_Framework_TestCase
         $this->assertEmpty($p->getAll());
     }
 
-    // Dont repeat yourself
-    protected function validateDetection(array $validUrls, array $invalidUrls)
+    public function testProviderDetection()
+    {
+        $services = array(
+            'Youtube',
+            'Flickr',
+            'Vimeo',
+            'DailyMotion',
+            'Viddler',
+            'Qik',
+            'Revision3'
+        );
+
+        foreach ($services as $s)
+        {
+            $validUrls   = UrlList::get($s);
+            $invalidUrls = UrlList::get($s, true);
+
+            $this->validateDetection($s, $validUrls, $invalidUrls);
+        }
+    }
+
+    protected function validateDetection($s, array $validUrls, array $invalidUrls)
     {
         $oembed = new MockOembed(new MockHttpRequest());
+
         $p = new \Embera\Providers($validUrls, array(), $oembed);
-        $this->assertCount(count($validUrls), $p->getAll(), 'The valid Urls dont seem to be detected correctly');
+        $this->assertCount(count($validUrls), $p->getAll(), $s . ' The valid Urls dont seem to be detected correctly');
 
         $p = new \Embera\Providers(array_merge($validUrls, $invalidUrls), array(), $oembed);
-        $this->assertCount(count($validUrls), $p->getAll(), 'There is one invalid url recognized as valid');
+        $this->assertCount(count($validUrls), $p->getAll(), $s . ' There is one invalid url recognized as valid');
 
         $p = new \Embera\Providers($validUrls[mt_rand(0, (count($validUrls) - 1))], array(), $oembed);
-        $this->assertCount(1, $p->getAll());
+        $this->assertCount(1, $p->getAll(), $s . ' One Correct url seems to be invalid');
     }
 
-    public function testYoutubeDetection()
-    {
-        $validUrls   = UrlList::get('Youtube');
-        $invalidUrls = UrlList::get('Youtube', true);
-
-        $this->validateDetection($validUrls, $invalidUrls);
-    }
-
-    public function testFlickrDetection()
-    {
-        $validUrls   = UrlList::get('Flickr');
-        $invalidUrls = UrlList::get('Flickr', true);
-
-        $this->validateDetection($validUrls, $invalidUrls);
-    }
-
-    public function testVimeoDetection()
-    {
-        $validUrls   = UrlList::get('Vimeo');
-        $invalidUrls = UrlList::get('Vimeo', true);
-
-        $this->validateDetection($validUrls, $invalidUrls);
-    }
-
-    public function testDailyMotionDetection()
-    {
-        $validUrls   = UrlList::get('DailyMotion');
-        $invalidUrls = UrlList::get('DailyMotion', true);
-
-        $this->validateDetection($validUrls, $invalidUrls);
-    }
-
-    public function testViddlerDetection()
-    {
-        $validUrls   = UrlList::get('Viddler');
-        $invalidUrls = UrlList::get('Viddler', true);
-
-        $this->validateDetection($validUrls, $invalidUrls);
-    }
-
-    public function testQikDetection()
-    {
-        $validUrls   = UrlList::get('Qik');
-        $invalidUrls = UrlList::get('Qik', true);
-
-        $this->validateDetection($validUrls, $invalidUrls);
-    }
 }
 ?>

@@ -20,6 +20,7 @@ class Providers
         'youtu.be' => 'Youtube',
         'vimeo.com' => 'Vimeo',
         'qik.com' => 'Qik',
+        'revision3.com' => 'Revision3',
         'dailymotion.com' => 'DailyMotion',
         'viddler.com' => 'Viddler',
         'flickr.com' => 'Flickr',
