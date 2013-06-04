@@ -101,7 +101,13 @@ class Oembed
         if (!empty($params['height']) && empty($params['maxheight']))
             $params['maxheight'] = $params['height'];
 
-        $params = array_intersect_key($params, array('url' => '', 'maxwidth' => '', 'maxheight' => '', 'format' => ''));
+        $params = array_intersect_key($params, array_flip(array(
+            'url',
+            'maxwidth',
+            'maxheight',
+            'format'
+        )));
+
         if (!empty($params))
             return $apiUrl . ((strpos($apiUrl, '?') === false) ? '?' : '&') . http_build_query($params);
 

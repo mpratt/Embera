@@ -54,7 +54,7 @@ class Viddler extends \Embera\Adapters\Service
 
         $html = '<iframe width="{width}" height="{height}" src="{video}" frameborder="0" allowfullscreen></iframe>';
         $t = array(
-            '{video}' => 'http://viddler.com/embed/890702a2',
+            '{video}' => 'http://viddler.com/embed/' . $this->videoId,
             '{width}' => $this->getWidth(),
             '{height}' => $this->getHeight()
         );
