@@ -2,6 +2,7 @@
 /**
  * TestOembed.php
  *
+ * @package Tests
  * @author Michael Pratt <pratt@hablarmierda.net>
  * @link   http://www.michael-pratt.com/
  *

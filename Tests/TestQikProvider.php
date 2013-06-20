@@ -2,6 +2,7 @@
 /**
  * TestQikProvider.php
  *
+ * @package Tests
  * @author Michael Pratt <pratt@hablarmierda.net>
  * @link   http://www.michael-pratt.com/
  *
@@ -32,19 +33,22 @@ class TestQikProvider extends PHPUnit_Framework_TestCase
     {
         $oembed = new \Embera\Oembed(new \Embera\HttpRequest());
         $url = $this->validUrls[mt_rand(0, (count($this->validUrls) - 1))];
-        $yt = new \Embera\Providers\Qik($url, array('oembed' => true), $oembed);
-        $result = $yt->getInfo();
-        $this->assertTrue($result['embera_using_fake'] == 0);
+        $test = new \Embera\Providers\Qik($url, array('oembed' => true), $oembed);
+        $result = $test->getInfo();
+
+        $this->assertTrue($result['embera_using_fake'] == 0, 'Using fake on ' . $url);
 
         $url = $this->validUrls[mt_rand(0, (count($this->validUrls) - 1))];
-        $yt = new \Embera\Providers\Qik($url, array('oembed' => true), $oembed);
-        $result = $yt->getInfo();
-        $this->assertTrue($result['embera_using_fake'] == 0);
+        $test = new \Embera\Providers\Qik($url, array('oembed' => true), $oembed);
+        $result = $test->getInfo();
+
+        $this->assertTrue($result['embera_using_fake'] == 0, 'Using fake on ' . $url);
 
         $url = $this->validUrls[mt_rand(0, (count($this->validUrls) - 1))];
-        $yt = new \Embera\Providers\Qik($url, array('oembed' => true), $oembed);
-        $result = $yt->getInfo();
-        $this->assertTrue($result['embera_using_fake'] == 0);
+        $test = new \Embera\Providers\Qik($url, array('oembed' => true), $oembed);
+        $result = $test->getInfo();
+
+        $this->assertTrue($result['embera_using_fake'] == 0, 'Using fake on ' . $url);
     }
 }
 

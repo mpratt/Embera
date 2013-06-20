@@ -2,6 +2,7 @@
 /**
  * TestRevision3Provider.php
  *
+ * @package Tests
  * @author Michael Pratt <pratt@hablarmierda.net>
  * @link   http://www.michael-pratt.com/
  *
@@ -22,11 +23,11 @@ class TestRevision3Provider extends PHPUnit_Framework_TestCase
     public function testUrlNormalize()
     {
         $oembed = new MockOembed(new MockHttpRequest());
-        $vdd = new \Embera\Providers\Revision3('http://revision3.com/sesslerssomething/e3-2013-preview', array(), $oembed);
-        $this->assertEquals($vdd->getUrl(), 'http://revision3.com/sesslerssomething/e3-2013-preview');
+        $test = new \Embera\Providers\Revision3('http://revision3.com/sesslerssomething/e3-2013-preview', array(), $oembed);
+        $this->assertEquals($test->getUrl(), 'http://revision3.com/sesslerssomething/e3-2013-preview');
 
-        $vdd = new \Embera\Providers\Revision3('http://www.revision3.com/technobuffalo/ask-the-buffalo-380-nokia-lumia-running-android', array(), $oembed);
-        $this->assertEquals($vdd->getUrl(), 'http://www.revision3.com/technobuffalo/ask-the-buffalo-380-nokia-lumia-running-android');
+        $test = new \Embera\Providers\Revision3('http://www.revision3.com/technobuffalo/ask-the-buffalo-380-nokia-lumia-running-android', array(), $oembed);
+        $this->assertEquals($test->getUrl(), 'http://www.revision3.com/technobuffalo/ask-the-buffalo-380-nokia-lumia-running-android');
     }
 
     public function testInvalidUrl()
@@ -41,19 +42,22 @@ class TestRevision3Provider extends PHPUnit_Framework_TestCase
     {
         $oembed = new \Embera\Oembed(new \Embera\HttpRequest());
         $url = $this->validUrls[mt_rand(0, (count($this->validUrls) - 1))];
-        $yt = new \Embera\Providers\Revision3($url, array('oembed' => true), $oembed);
-        $result = $yt->getInfo();
-        $this->assertTrue($result['embera_using_fake'] == 0);
+        $test = new \Embera\Providers\Revision3($url, array('oembed' => true), $oembed);
+        $result = $test->getInfo();
+
+        $this->assertTrue($result['embera_using_fake'] == 0, 'Using fake on ' . $url);
 
         $url = $this->validUrls[mt_rand(0, (count($this->validUrls) - 1))];
-        $yt = new \Embera\Providers\Revision3($url, array('oembed' => true), $oembed);
-        $result = $yt->getInfo();
-        $this->assertTrue($result['embera_using_fake'] == 0);
+        $test = new \Embera\Providers\Revision3($url, array('oembed' => true), $oembed);
+        $result = $test->getInfo();
+
+        $this->assertTrue($result['embera_using_fake'] == 0, 'Using fake on ' . $url);
 
         $url = $this->validUrls[mt_rand(0, (count($this->validUrls) - 1))];
-        $yt = new \Embera\Providers\Revision3($url, array('oembed' => true), $oembed);
-        $result = $yt->getInfo();
-        $this->assertTrue($result['embera_using_fake'] == 0);
+        $test = new \Embera\Providers\Revision3($url, array('oembed' => true), $oembed);
+        $result = $test->getInfo();
+
+        $this->assertTrue($result['embera_using_fake'] == 0, 'Using fake on ' . $url);
     }
 }
 

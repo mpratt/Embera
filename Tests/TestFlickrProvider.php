@@ -2,6 +2,7 @@
 /**
  * TestFlickrProvider.php
  *
+ * @package Tests
  * @author Michael Pratt <pratt@hablarmierda.net>
  * @link   http://www.michael-pratt.com/
  *
@@ -23,26 +24,26 @@ class TestFlickrProvider extends PHPUnit_Framework_TestCase
     public function testUrlNormalize()
     {
         $oembed = new MockOembed(new MockHttpRequest());
-        $yt = new \Embera\Providers\Flickr('http://www.flickr.com/photos/22134962@N03/8738306577/in/explore-2013-05-14', array(), $oembed);
-        $this->assertEquals($yt->getUrl(), 'http://www.flickr.com/photos/22134962@N03/8738306577/');
+        $test = new \Embera\Providers\Flickr('http://www.flickr.com/photos/22134962@N03/8738306577/in/explore-2013-05-14', array(), $oembed);
+        $this->assertEquals($test->getUrl(), 'http://www.flickr.com/photos/22134962@N03/8738306577/');
 
-        $yt = new \Embera\Providers\Flickr('http://flic.kr/p/9gAMbM', array(), $oembed);
-        $this->assertEquals($yt->getUrl(), 'http://flic.kr/p/9gAMbM');
+        $test = new \Embera\Providers\Flickr('http://flic.kr/p/9gAMbM', array(), $oembed);
+        $this->assertEquals($test->getUrl(), 'http://flic.kr/p/9gAMbM');
 
-        $yt = new \Embera\Providers\Flickr('http://www.flickr.com/photos/reddragonflydmc/5427387397/?noise=noise', array(), $oembed);
-        $this->assertEquals($yt->getUrl(), 'http://www.flickr.com/photos/reddragonflydmc/5427387397/');
+        $test = new \Embera\Providers\Flickr('http://www.flickr.com/photos/reddragonflydmc/5427387397/?noise=noise', array(), $oembed);
+        $this->assertEquals($test->getUrl(), 'http://www.flickr.com/photos/reddragonflydmc/5427387397/');
 
-        $yt = new \Embera\Providers\Flickr('http://www.flickr.com/photos/bees/8597283706/in/photostream', array(), $oembed);
-        $this->assertEquals($yt->getUrl(), 'http://www.flickr.com/photos/bees/8597283706/');
+        $test = new \Embera\Providers\Flickr('http://www.flickr.com/photos/bees/8597283706/in/photostream', array(), $oembed);
+        $this->assertEquals($test->getUrl(), 'http://www.flickr.com/photos/bees/8597283706/');
 
-        $yt = new \Embera\Providers\Flickr('http://flic.kr/p/9gAMbM/', array(), $oembed);
-        $this->assertEquals($yt->getUrl(), 'http://flic.kr/p/9gAMbM/');
+        $test = new \Embera\Providers\Flickr('http://flic.kr/p/9gAMbM/', array(), $oembed);
+        $this->assertEquals($test->getUrl(), 'http://flic.kr/p/9gAMbM/');
 
-        $yt = new \Embera\Providers\Flickr('http://www.flickr.com/photos/bees/8429256478', array(), $oembed);
-        $this->assertEquals($yt->getUrl(), 'http://www.flickr.com/photos/bees/8429256478/');
+        $test = new \Embera\Providers\Flickr('http://www.flickr.com/photos/bees/8429256478', array(), $oembed);
+        $this->assertEquals($test->getUrl(), 'http://www.flickr.com/photos/bees/8429256478/');
 
-        $yt = new \Embera\Providers\Flickr('http://www.flickr.com/photos/bees/8429256478/', array(), $oembed);
-        $this->assertEquals($yt->getUrl(), 'http://www.flickr.com/photos/bees/8429256478/');
+        $test = new \Embera\Providers\Flickr('http://www.flickr.com/photos/bees/8429256478/', array(), $oembed);
+        $this->assertEquals($test->getUrl(), 'http://www.flickr.com/photos/bees/8429256478/');
     }
 
     public function testInvalidUrl()
@@ -57,19 +58,22 @@ class TestFlickrProvider extends PHPUnit_Framework_TestCase
     {
         $oembed = new \Embera\Oembed(new \Embera\HttpRequest());
         $url = $this->validUrls[mt_rand(0, (count($this->validUrls) - 1))];
-        $yt = new \Embera\Providers\Flickr($url, array('oembed' => true), $oembed);
-        $result = $yt->getInfo();
-        $this->assertTrue($result['embera_using_fake'] == 0);
+        $test = new \Embera\Providers\Flickr($url, array('oembed' => true), $oembed);
+        $result = $test->getInfo();
+
+        $this->assertTrue($result['embera_using_fake'] == 0, 'Using fake on ' . $url);
 
         $url = $this->validUrls[mt_rand(0, (count($this->validUrls) - 1))];
-        $yt = new \Embera\Providers\Flickr($url, array('oembed' => true), $oembed);
-        $result = $yt->getInfo();
-        $this->assertTrue($result['embera_using_fake'] == 0);
+        $test = new \Embera\Providers\Flickr($url, array('oembed' => true), $oembed);
+        $result = $test->getInfo();
+
+        $this->assertTrue($result['embera_using_fake'] == 0, 'Using fake on ' . $url);
 
         $url = $this->validUrls[mt_rand(0, (count($this->validUrls) - 1))];
-        $yt = new \Embera\Providers\Flickr($url, array('oembed' => true), $oembed);
-        $result = $yt->getInfo();
-        $this->assertTrue($result['embera_using_fake'] == 0);
+        $test = new \Embera\Providers\Flickr($url, array('oembed' => true), $oembed);
+        $result = $test->getInfo();
+
+        $this->assertTrue($result['embera_using_fake'] == 0, 'Using fake on ' . $url);
     }
 }
 

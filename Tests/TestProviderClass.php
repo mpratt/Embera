@@ -2,6 +2,7 @@
 /**
  * TestProviderClass.php
  *
+ * @package Tests
  * @author Michael Pratt <pratt@hablarmierda.net>
  * @link   http://www.michael-pratt.com/
  *
@@ -38,7 +39,8 @@ class TestProviderClass extends PHPUnit_Framework_TestCase
             'DailyMotion',
             'Viddler',
             'Qik',
-            'Revision3'
+            'Revision3',
+            'Hulu'
         );
 
         foreach ($services as $s)
@@ -58,11 +60,10 @@ class TestProviderClass extends PHPUnit_Framework_TestCase
         $this->assertCount(count($validUrls), $p->getAll(), $s . ' The valid Urls dont seem to be detected correctly');
 
         $p = new \Embera\Providers(array_merge($validUrls, $invalidUrls), array(), $oembed);
-        $this->assertCount(count($validUrls), $p->getAll(), $s . ' There is one invalid url recognized as valid');
+        $this->assertCount(count($validUrls), $p->getAll(), $s . ' There is at least one invalid url recognized as valid');
 
         $p = new \Embera\Providers($validUrls[mt_rand(0, (count($validUrls) - 1))], array(), $oembed);
         $this->assertCount(1, $p->getAll(), $s . ' One Correct url seems to be invalid');
     }
-
 }
 ?>

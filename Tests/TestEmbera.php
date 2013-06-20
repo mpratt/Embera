@@ -2,6 +2,7 @@
 /**
  * TestEmbera.php
  *
+ * @package Tests
  * @author Michael Pratt <pratt@hablarmierda.net>
  * @link   http://www.michael-pratt.com/
  *
@@ -15,6 +16,7 @@ class TestEmbera extends PHPUnit_Framework_TestCase
     {
         $input = array('http://www.youtube.com/watch?v=GP18O6gSWSw&feature=share&list=PL4EF7BAD98F9812B6');
         $embera = new \Embera\Embera();
+
         $this->assertEquals($input, $embera->autoEmbed($input));
         $this->assertTrue($embera->hasErrors());
         $this->assertTrue(is_string($embera->getLastError()));
@@ -25,6 +27,7 @@ class TestEmbera extends PHPUnit_Framework_TestCase
     {
         $input = null;
         $embera = new \Embera\Embera();
+
         $this->assertEquals($input, $embera->autoEmbed($input));
         $this->assertTrue(is_string($embera->getLastError()));
         $this->assertTrue($embera->hasErrors());
@@ -35,6 +38,7 @@ class TestEmbera extends PHPUnit_Framework_TestCase
     {
         $input = 'hola este texto debería seguir igual.';
         $embera = new \Embera\Embera();
+
         $this->assertEquals($input, $embera->autoEmbed($input));
     }
 
@@ -42,6 +46,7 @@ class TestEmbera extends PHPUnit_Framework_TestCase
     {
         $input = 'hola este texto debería seguir igual. http://www.google.com ';
         $embera = new \Embera\Embera();
+
         $this->assertEquals($input, $embera->autoEmbed($input));
     }
 
