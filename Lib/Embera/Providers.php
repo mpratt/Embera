@@ -24,7 +24,8 @@ class Providers
         'dailymotion.com' => 'DailyMotion',
         'viddler.com' => 'Viddler',
         'flickr.com' => 'Flickr',
-        'flic.kr' => 'Flickr'
+        'flic.kr' => 'Flickr',
+        'hulu.com' => 'Hulu'
     );
 
     /**

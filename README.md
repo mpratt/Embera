@@ -21,6 +21,7 @@ Sites marked with an `*` allow offline html embedding
 - [Qik](http://qik.com)
 - [Flickr](http://flickr.com)
 - [Revision3](http://revision3.com)
+- [Hulu](http://www.hulu.com)
 
 Requirements
 ============

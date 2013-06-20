@@ -21,7 +21,7 @@ class UrlList
                 'http://youtube.com/watch?v=J---aiyznGQ',
                 'http://www.youtube.com/watch?v=xVrJ8DxECbg&list=PLwnD0jwK0yymXOCl82nqdTdxe0ykVDcPW&index=1',
                 'http://youtube.com/watch?v=xVrJ8DxECbg&list=PLwnD0jwK0yymXOCl82nqdTdxe0ykVDcPW',
-                'http://www.youtube.com/watch?v=9VrJ8D6ECbg&index=1',
+                'http://www.youtube.com/watch?v=WtPiGYsllos&index=1',
                 'http://youtube.com/watch?v=mghhLqu31cQ',
                 'http://youtu.be/8aGEb_yUpMs'
             ),
@@ -142,6 +142,23 @@ class UrlList
                 'http://revision3.com/anniesbits',
                 'http://revision3.com/where',
                 'http://revision3.com/advertise/contact/'
+            )
+        ),
+        'hulu' => array(
+            'valid' => array(
+                'http://www.hulu.com/watch/20807/late-night-with-conan-obrien-wed-may-21-2008',
+                'http://hulu.com/watch/501126',
+                'http://www.hulu.com/watch/440265/',
+                'http://hulu.com/watch/476621',
+                'http://www.hulu.com/watch/331822/stuff/here',
+                'http://www.hulu.com/watch/416223?playlist_id=1787&asset_scope=movies',
+                'http://hulu.com/watch/493032/'
+            ),
+            'invalid' => array(
+                'http://www.hulu.com/stuff/440265',
+                'http://www.hulu.com/watch/abduej/2344657', // Not numeric
+                'http://hulu.com/450265',
+                'http://www.hulu.com/watch/44ui65/'
             )
         ),
     );
