@@ -2,6 +2,7 @@
 /**
  * Providers.php
  *
+ * @package Embera
  * @author Michael Pratt <pratt@hablarmierda.net>
  * @link   http://www.michael-pratt.com/
  *
@@ -11,10 +12,19 @@
 
 namespace Embera;
 
+/**
+ * Finds and loads Services/Providers based on the
+ * host of a url.
+ */
 class Providers
 {
+    /** @var array An array with loaded services */
     protected $urls = array();
+
+    /** @var array Configuration Settings */
     protected $config = array();
+
+    /** @var array The mapping of host -> provider relation. */
     protected $services = array(
         'youtube.com' => 'Youtube',
         'youtu.be' => 'Youtube',

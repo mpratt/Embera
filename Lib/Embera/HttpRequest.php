@@ -2,6 +2,7 @@
 /**
  * HttpRequest.php
  *
+ * @package Embera
  * @author Michael Pratt <pratt@hablarmierda.net>
  * @link   http://www.michael-pratt.com/
  *
@@ -11,6 +12,9 @@
 
 namespace Embera;
 
+/**
+ * This class is in charge of doing http requests.
+ */
 class HttpRequest
 {
     /**

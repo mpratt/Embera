@@ -2,6 +2,7 @@
 /**
  * Examples.php
  *
+ * @package Example
  * @author Michael Pratt <pratt@hablarmierda.net>
  * @link   http://www.michael-pratt.com/
  *

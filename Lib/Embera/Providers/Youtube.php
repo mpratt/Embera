@@ -2,6 +2,7 @@
 /**
  * Yotube.php
  *
+ * @package Providers
  * @author Michael Pratt <pratt@hablarmierda.net>
  * @link   http://www.michael-pratt.com/
  *
@@ -11,17 +12,19 @@
 
 namespace Embera\Providers;
 
+/**
+ * The youtube.com Provider
+ */
 class Youtube extends \Embera\Adapters\Service
 {
+
+    /** inline {@inheritdoc} */
     protected $apiUrl = 'http://www.youtube.com/oembed?format=json';
+
+    /** @var array An array with query string of the current url */
     protected $query = array();
 
-    /**
-     * Validates that the url belongs to this
-     * service
-     *
-     * @return bool
-     */
+    /** inline {@inheritdoc} */
     protected function validateUrl()
     {
         $parsed = parse_url($this->url);
@@ -34,23 +37,14 @@ class Youtube extends \Embera\Adapters\Service
         return false;
     }
 
-    /**
-     * Normalizes a url.
-     *
-     * @return void
-     */
+    /** inline {@inheritdoc} */
     protected function normalizeUrl()
     {
         if (preg_match('~(?:v=|youtu\.be/)([a-z0-9_-]+)~i', $this->url, $matches))
             $this->url = 'http://www.youtube.com/watch?v=' . $matches[1];
     }
 
-    /**
-     * This method fakes an Oembed response.
-     * Is used when an Oembed request fails or is disabled.
-     *
-     * @return array
-     */
+    /** inline {@inheritdoc} */
     public function fakeResponse()
     {
         $html = '<iframe width="{width}" height="{height}" src="{video}" frameborder="0" allowfullscreen>';

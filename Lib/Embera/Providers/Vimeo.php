@@ -2,6 +2,7 @@
 /**
  * Vimeo.php
  *
+ * @package Providers
  * @author Michael Pratt <pratt@hablarmierda.net>
  * @link   http://www.michael-pratt.com/
  *
@@ -11,42 +12,38 @@
 
 namespace Embera\Providers;
 
+/**
+ * The Vimeo.com Provider
+ */
 class Vimeo extends \Embera\Adapters\Service
 {
+    /** inline {@inheritdoc} */
     protected $apiUrl = 'http://vimeo.com/api/oembed.json';
+
+    /** @var int The Id of the current video, based on the url */
     protected $videoId = null;
 
-    /**
-     * Validates that the url belongs to this
-     * service
-     *
-     * @return bool
-     */
+    /** inline {@inheritdoc} */
     protected function validateUrl()
     {
-        return (preg_match('~vimeo\.com/(?:[\d]{5,12})$~i', $this->url));
+        return (preg_match('~vimeo\.com/(?:[0-9]{5,12})$~i', $this->url));
     }
 
     /**
-     * Normalizes a url.
-     *
-     * @return void
+     * inline {@inheritdoc}
+     * This method tries to extract the video Id based
+     * on the current url and stores it into $this->videoId
      */
     protected function normalizeUrl()
     {
-        if (preg_match('~/([\d]{5,12})/?$~i', $this->url, $matches))
+        if (preg_match('~/([0-9]{5,12})/?$~i', $this->url, $matches))
         {
             $this->videoId = $matches[1];
             $this->url = 'http://vimeo.com/' . $this->videoId;
         }
     }
 
-    /**
-     * This method fakes an Oembed response.
-     * Is used when an Oembed request fails or is disabled.
-     *
-     * @return array
-     */
+    /** inline {@inheritdoc} */
     public function fakeResponse()
     {
         if (is_null($this->videoId))

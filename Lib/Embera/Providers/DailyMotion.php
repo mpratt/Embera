@@ -2,6 +2,7 @@
 /**
  * DailyMotion.php
  *
+ * @package Providers
  * @author Michael Pratt <pratt@hablarmierda.net>
  * @link   http://www.michael-pratt.com/
  *
@@ -11,27 +12,31 @@
 
 namespace Embera\Providers;
 
+/**
+ * The DailyMotion.com Provider
+ */
 class DailyMotion extends \Embera\Adapters\Service
 {
+
+    /** inline {@inheritdoc} */
     protected $apiUrl = 'http://www.dailymotion.com/services/oembed?format=json';
+
+    /** @var string The id of the current video based on its url */
     protected $videoId = null;
+
+    /** @var string The title of the current video based on its url */
     protected $videoTitle = null;
 
-    /**
-     * Validates that the url belongs to this
-     * service
-     *
-     * @return bool
-     */
+    /** inline {@inheritdoc} */
     protected function validateUrl()
     {
         return (preg_match('~dailymotion\.com/video/(?:[^/"\'<>]+)/?~i', $this->url));
     }
 
     /**
-     * Normalizes a url.
-     *
-     * @return void
+     * {@inheritdoc}
+     * This method also tries to extract the video title and id, and
+     * stores them into properties
      */
     protected function normalizeUrl()
     {
@@ -43,12 +48,7 @@ class DailyMotion extends \Embera\Adapters\Service
         }
     }
 
-    /**
-     * This method fakes an Oembed response.
-     * Is used when an Oembed request fails or is disabled.
-     *
-     * @return array
-     */
+    /** inline {@inheritdoc} */
     public function fakeResponse()
     {
         if (empty($this->videoId))

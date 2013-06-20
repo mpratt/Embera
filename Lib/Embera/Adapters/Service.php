@@ -1,8 +1,8 @@
 <?php
 /**
  * Service.php
- * An abstract class that every provider should extend
  *
+ * @package Adapters
  * @author Michael Pratt <pratt@hablarmierda.net>
  * @link   http://www.michael-pratt.com/
  *
@@ -12,20 +12,38 @@
 
 namespace Embera\Adapters;
 
+/**
+ * This is an abstract class and all Service/Providers should extend it.
+ */
 abstract class Service
 {
+    /** @var string The current Url */
     protected $url;
+
+    /** @var array Associative array with config options */
     protected $config;
+
+    /** @var object Instance of \Embera\Oembed */
     protected $oembed;
+
+    /** @var array Array with all the errors */
     protected $errors = array();
+
+    /** @var string The api url for the current service */
     protected $apiUrl = null;
+
+    /** @var int Default With for fake responses */
     protected $fakeWidth = '420';
+
+    /** @var int Default Height for fake responses */
     protected $fakeHeight = '315';
 
     /**
-     * Validates that the url belongs to this service
+     * Validates that the url belongs to this service.
      * Should be implemented on all children and must
      * return a boolean.
+     *
+     * The current url is made available via $this->url
      *
      * @return bool
      */
@@ -35,7 +53,8 @@ abstract class Service
      * Construct
      *
      * @param string $url
-     * @param array  $parsed The Parsed Url
+     * @param array  $config
+     * @param object $oembed
      * @return void
      *
      * @throws InvalidArgumentException when the given url doesnt match the current service
@@ -85,12 +104,12 @@ abstract class Service
 
     /**
      * This method fakes a Oembed response.
+     *
      * It should be overwritten by the service
      * itself if the service is capable to determine
      * an html embed code based on the url or other methods.
      *
      * @return array
-     * @codeCoverageIgnore
      */
      public function fakeResponse() { return array(); }
 
@@ -102,7 +121,6 @@ abstract class Service
      * Use the $this->url property to do the job
      *
      * @return void
-     * @codeCoverageIgnore
      */
     protected function normalizeUrl() {}
 

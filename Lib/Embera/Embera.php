@@ -1,8 +1,8 @@
 <?php
 /**
  * Embera.php
- * The main class of this library.
  *
+ * @package Embera
  * @author Michael Pratt <pratt@hablarmierda.net>
  * @link   http://www.michael-pratt.com/
  *
@@ -12,17 +12,29 @@
 
 namespace Embera;
 
+/**
+ * The Main Class of this library
+ */
 class Embera
 {
+    /** @var int Class constant with the current Version of this library */
     const VERSION = '0.1';
 
+    /** @var object Instance of \Embera\Oembed */
     protected $oembed;
+
+    /** @var array Configuration Settings */
     protected $config = array();
+
+    /** @var array Fetched errors */
     protected $errors = array();
+
+    /** @var string The pattern used to extract urls from a text */
     protected $urlRegex = '~\bhttps?://[^\s()<>]+(?:\([\w\d]+\)|([^[:punct:]\s]|/))~';
 
     /**
-     * Construct
+     * Constructs the object and also instantiates the \Embera\Oembed Object
+     * and stores it into the $oembed properoty
      *
      * @param array $config
      * @return void
@@ -60,7 +72,7 @@ class Embera
     }
 
     /**
-     * Finds all the information about a url
+     * Finds all the information about a url (or a collection of urls)
      *
      * @param string|array $body An array or string with urls
      * @return array
@@ -143,18 +155,18 @@ class Embera
         if ($this->hasErrors())
             return end($this->errors);
 
-        return '';
+        return ;
     }
 
     /**
-     * Gets found errors
+     * Returns an array with all the errors
      *
      * @return array
      */
     public function getErrors() { return $this->errors; }
 
     /**
-     * Gets found errors
+     * Checks if there were errors
      *
      * @return bool
      */

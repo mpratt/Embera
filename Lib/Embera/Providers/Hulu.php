@@ -2,6 +2,7 @@
 /**
  * Hulu.php
  *
+ * @package Providers
  * @author Michael Pratt <pratt@hablarmierda.net>
  * @link   http://www.michael-pratt.com/
  *
@@ -11,26 +12,21 @@
 
 namespace Embera\Providers;
 
+/**
+ * The Hulu.com Provider
+ */
 class Hulu extends \Embera\Adapters\Service
 {
+    /** inline {@inheritdoc} */
     protected $apiUrl = 'http://www.hulu.com/api/oembed.json';
 
-    /**
-     * Validates that the url belongs to this
-     * service
-     *
-     * @return bool
-     */
+    /** inline {@inheritdoc} */
     protected function validateUrl()
     {
         return (preg_match('~hulu\.com/watch/([0-9]{4,10})/?~i', $this->url));
     }
 
-    /**
-     * Normalizes a url.
-     *
-     * @return void
-     */
+    /** inline {@inheritdoc} */
     protected function normalizeUrl()
     {
         if (preg_match('~hulu\.com/watch/([0-9]{4,10})/?~i', $this->url, $m))

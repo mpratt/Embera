@@ -2,6 +2,7 @@
 /**
  * Viddler.php
  *
+ * @package Providers
  * @author Michael Pratt <pratt@hablarmierda.net>
  * @link   http://www.michael-pratt.com/
  *
@@ -11,26 +12,27 @@
 
 namespace Embera\Providers;
 
+/**
+ * The Viddler.com Provider
+ */
 class Viddler extends \Embera\Adapters\Service
 {
+    /** inline {@inheritdoc} */
     protected $apiUrl = 'http://www.viddler.com/oembed/?format=json';
+
+    /** @var string The Id of the current video, based on the url */
     protected $videoId = null;
 
-    /**
-     * Validates that the url belongs to this
-     * service
-     *
-     * @return bool
-     */
+    /** inline {@inheritdoc} */
     protected function validateUrl()
     {
         return (preg_match('~viddler\.com/v/(?:[0-9a-f]{7,12})/?$~i', $this->url));
     }
 
     /**
-     * Normalizes a url.
-     *
-     * @return void
+     * inline {@inheritdoc}
+     * This method tries to extract the video Id based
+     * on the current url and stores it into $this->videoId
      */
     protected function normalizeUrl()
     {
@@ -41,12 +43,7 @@ class Viddler extends \Embera\Adapters\Service
         }
     }
 
-    /**
-     * This method fakes an Oembed response.
-     * Is used when an Oembed request fails or is disabled.
-     *
-     * @return array
-     */
+    /** inline {@inheritdoc} */
     public function fakeResponse()
     {
         if (is_null($this->videoId))

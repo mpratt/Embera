@@ -1,4 +1,5 @@
 vendor/*
+Docs/*
 Tests/Coverage
 composer.lock
 composer.phar

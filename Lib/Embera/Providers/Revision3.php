@@ -2,6 +2,7 @@
 /**
  * Revision3.php
  *
+ * @package Providers
  * @author Michael Pratt <pratt@hablarmierda.net>
  * @link   http://www.michael-pratt.com/
  *
@@ -11,26 +12,22 @@
 
 namespace Embera\Providers;
 
+/**
+ * The Revision3.com Provider
+ */
 class Revision3 extends \Embera\Adapters\Service
 {
+
+    /** inline {@inheritdoc} */
     protected $apiUrl = 'http://revision3.com/api/oembed/?format=json';
 
-    /**
-     * Validates that the url belongs to this
-     * service
-     *
-     * @return bool
-     */
+    /** inline {@inheritdoc} */
     protected function validateUrl()
     {
         return (preg_match('~revision3\.com/([^/]+)/([^/]+)/?~i', $this->url));
     }
 
-    /**
-     * Normalizes a url.
-     *
-     * @return void
-     */
+    /** inline {@inheritdoc} */
     protected function normalizeUrl()
     {
         // urls with network/host are not valid, strip that out for validation

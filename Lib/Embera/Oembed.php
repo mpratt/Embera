@@ -2,6 +2,7 @@
 /**
  * Oembed.php
  *
+ * @package Embera
  * @author Michael Pratt <pratt@hablarmierda.net>
  * @link   http://www.michael-pratt.com/
  *
@@ -11,8 +12,13 @@
 
 namespace Embera;
 
+/**
+ * This class manages requests and responses
+ * from an Oembed Endpoint.
+ */
 class Oembed
 {
+    /** @var object Instance of \Embera\HttpRequest */
     protected $http;
 
     /**
@@ -62,7 +68,7 @@ class Oembed
     }
 
     /**
-     ** Executes a http request to the given url and
+     * Executes a http request to the given url and
      * returns an associative array with the fetched data.
      *
      * @param string $url
