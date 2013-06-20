@@ -22,6 +22,7 @@ Sites marked with an `*` allow offline html embedding
 - [Flickr](http://flickr.com)
 - [Revision3](http://revision3.com)
 - [Hulu](http://www.hulu.com)
+- [CollegeHumor](http://www.collegehumor.com)
 
 Requirements
 ============
@@ -33,14 +34,11 @@ Installation
 
 ### Install with Composer
 If you're using [Composer](https://github.com/composer/composer) to manage
-dependencies, you can use this library by creating a composer.json file like:
+dependencies, you can use this library by creating a composer.json and add this:
 
     {
         "require": {
             "mpratt/embera": "dev-master"
-        },
-        "autoload": {
-            "psr-0": {"Embera": "Lib/"}
         }
     }
 
@@ -134,8 +132,8 @@ Array
         )
 )
 ```
-On a quick note, if you see in the response, the key `embera_using_fake` equal 0, means that the library
-got the results from the Oembed provider. When it equals 1, it means that the html embed code is constructed
+On a quick note, if you see in the response, the key `embera_using_fake` equal `0`, means that the library
+got the results from the Oembed provider. When it equals `1`, it means that the html embed code is constructed
 from the original url given - It also means that most of the other information is going to be missing.
 
 You can even feed an array full with urls and inspect the oembed response for

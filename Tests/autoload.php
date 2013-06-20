@@ -161,6 +161,24 @@ class UrlList
                 'http://www.hulu.com/watch/44ui65/'
             )
         ),
+        'collegehumor' => array(
+            'valid' => array(
+                'http://www.collegehumor.com/video/6830834/mitt-romney-style-gangnam-style-parody',
+                'http://www.collegehumor.com/embed/6897735/dogs-come-1-by-1-for-treats-theres-a-cat-and-oh-also-a-duck/',
+                'http://www.collegehumor.com/video/6897575/',
+                'http://www.collegehumor.com/embed/6897394',
+                'http://www.collegehumor.com/video/6182447/kid-farm',
+                'http://collegehumor.com/video/6643191/batman-chooses-his-voice',
+                'http://collegehumor.com/video/6621074',
+                'http://www.collegehumor.com/video/6817857/the-dark-knight-meets-the-avengers',
+            ),
+            'invalid' => array(
+                'http://www.collegehumor.com/embedVideo/6897394', // wrong path
+                'http://www.collegehumor.com/embed/6buaksui4', // Not numeric
+                'http://www.collegehumor.com/videos/6897394',
+                'http://www.collegehumor.com/6897394'
+            )
+        ),
     );
 
     /**

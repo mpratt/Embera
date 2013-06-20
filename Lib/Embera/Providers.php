@@ -35,7 +35,8 @@ class Providers
         'viddler.com' => 'Viddler',
         'flickr.com' => 'Flickr',
         'flic.kr' => 'Flickr',
-        'hulu.com' => 'Hulu'
+        'hulu.com' => 'Hulu',
+        'collegehumor.com' => 'CollegeHumor'
     );
 
     /**

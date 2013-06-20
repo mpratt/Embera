@@ -40,7 +40,8 @@ class TestProviderClass extends PHPUnit_Framework_TestCase
             'Viddler',
             'Qik',
             'Revision3',
-            'Hulu'
+            'Hulu',
+            'CollegeHumor'
         );
 
         foreach ($services as $s)
