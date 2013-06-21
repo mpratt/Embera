@@ -38,6 +38,9 @@ class Providers
         'hulu.com' => 'Hulu',
         'jest.com' => 'Jest',
         'my.opera.com' => 'MyOpera',
+        'deviantart.com' => 'Deviantart',
+        'fav.me' => 'Deviantart',
+        'sta.sh' => 'Deviantart',
         'collegehumor.com' => 'CollegeHumor'
     );
 
@@ -94,7 +97,10 @@ class Providers
         if (empty($data['host']))
             throw new \InvalidArgumentException('The Url: ' . $url . ' seems to be invalid');
 
-        return preg_replace('~^(?:www|player)\.~', '', strtolower($data['host']));
+        if (preg_match('~^(?:.*)\.(deviantart)\.(com)$~i', $data['host'], $m))
+            return strtolower($m['1'] . '.' . $m['2']);
+
+        return preg_replace('~^(?:www|player)\.~i', '', strtolower($data['host']));
     }
 
     /**

@@ -27,7 +27,6 @@ class UrlList
             ),
             'invalid' => array(
                 'http://youtube.com/watch?list=hi',
-                'www.youtube.com/watch?v=J---aiyznGQ', // No Http at the beginning of the url
                 'http://youtube.com /watch?video=J---aiyznGQ',
                 'http://www.youtu.be.com/watch?lol=no',
                 'http://www.youtube.com/hi#ho',
@@ -217,7 +216,26 @@ class UrlList
                 'http://my.opera.com/Aleksander/avatar/',
             )
         ),
-
+        'deviantart' => array(
+            'valid' => array(
+                'http://lieveheersbeestje.deviantart.com/art/Heart-of-gold-378848984',
+                'http://wordofchen.deviantart.com/art/Pressure-379617958/',
+                'http://sarahharas1.deviantart.com/art/Purple-haze-379565213/',
+                'http://m-eralp.deviantart.com/art/After-rain-bomb-379561772',
+                'http://fav.me/d69yyh3/',
+                'http://fav.me/d69yh7m',
+                'http://fav.me/d67maku/',
+            ),
+            'invalid' => array(
+                'http://lieveheersbeestje.deviantart.com/art/house/Heart-of-gold-378848984',
+                'http://wordofchen.deviantart.com/soup/Pressure-379617958',
+                'http://sarahharas1.deviantart.com/class/379565213',
+                'http://m-eralp.deviantart.com/art/After-rain-bomb-379561772',
+                'http://fav.me/d69yyh3/stuff/',
+                'http://sta.sh/',
+                'http://fav.me/',
+            )
+        ),
     );
 
     /**

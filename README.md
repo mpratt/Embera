@@ -25,6 +25,7 @@ Sites marked with an `*` allow offline html embedding
 - [CollegeHumor](http://www.collegehumor.com)
 - [Jest](http://www.jest.com)
 - [MyOpera](http://my.opera.com)
+- [Deviantart](http://deviantart.com)
 
 Requirements
 ============
