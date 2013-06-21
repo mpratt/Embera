@@ -26,7 +26,11 @@ class TestJestProvider extends PHPUnit_Framework_TestCase
         $this->setExpectedException('InvalidArgumentException');
 
         $oembed = new MockOembed(new MockHttpRequest());
-        new \Embera\Providers\Jest($this->invalidUrls[mt_rand(0, (count($this->invalidUrls) - 1))], array(), $oembed);
+        $url = $this->invalidUrls[mt_rand(0, (count($this->invalidUrls) - 1))];
+
+        new \Embera\Providers\Jest($url, array(), $oembed);
+
+        echo 'This url seems to be valid ' . $url;
     }
 
     public function testRealResponse()

@@ -35,7 +35,11 @@ class TestRevision3Provider extends PHPUnit_Framework_TestCase
         $this->setExpectedException('InvalidArgumentException');
 
         $oembed = new MockOembed(new MockHttpRequest());
-        new \Embera\Providers\Revision3($this->invalidUrls[mt_rand(0, (count($this->invalidUrls) - 1))], array(), $oembed);
+        $url = $this->invalidUrls[mt_rand(0, (count($this->invalidUrls) - 1))];
+
+        new \Embera\Providers\Revision3($url, array(), $oembed);
+
+        echo 'This url seems to be valid ' . $url;
     }
 
     public function testRealResponse()
