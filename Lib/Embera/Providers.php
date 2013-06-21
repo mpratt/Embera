@@ -36,6 +36,7 @@ class Providers
         'flickr.com' => 'Flickr',
         'flic.kr' => 'Flickr',
         'hulu.com' => 'Hulu',
+        'jest.com' => 'Jest',
         'collegehumor.com' => 'CollegeHumor'
     );
 

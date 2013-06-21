@@ -23,6 +23,7 @@ Sites marked with an `*` allow offline html embedding
 - [Revision3](http://revision3.com)
 - [Hulu](http://www.hulu.com)
 - [CollegeHumor](http://www.collegehumor.com)
+- [Jest](http://www.jest.com)
 
 Requirements
 ============
