@@ -24,7 +24,7 @@ class MyOpera extends \Embera\Adapters\Service
     protected function validateUrl()
     {
         // TODO: Strip noise from the querystring
-        return (preg_match('~my\.opera\.com/([^/]+)/(avatar\.pl|(albums/(show|showpic)\.dml\?(id|picture|album)=))~i', $this->url));
+        return (preg_match('~my\.opera\.com/([^/]+)/(avatar\.pl|(albums/(show|showpic)\.dml\?(id|album)=))~i', $this->url));
     }
 }
 
