@@ -24,6 +24,7 @@ Sites marked with an `*` allow offline html embedding
 - [Hulu](http://www.hulu.com)
 - [CollegeHumor](http://www.collegehumor.com)
 - [Jest](http://www.jest.com)
+- [MyOpera](http://my.opera.com)
 
 Requirements
 ============

@@ -37,6 +37,7 @@ class Providers
         'flic.kr' => 'Flickr',
         'hulu.com' => 'Hulu',
         'jest.com' => 'Jest',
+        'my.opera.com' => 'MyOpera',
         'collegehumor.com' => 'CollegeHumor'
     );
 
