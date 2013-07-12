@@ -43,18 +43,18 @@ class HttpRequest
      */
     protected function curl($url)
     {
-        $options = array(
+        $defaultOptions = array(
             CURLOPT_URL => $url,
             CURLOPT_FOLLOWLOCATION => true,
-            //CURLOPT_CONNECTTIMEOUT => 10,
-            CURLOPT_ENCODING => 'UTF-8',
+            CURLOPT_ENCODING => '',
             CURLOPT_USERAGENT => 'Mozilla/5.0 PHP/Embera',
             CURLOPT_HEADER => false,
-            CURLOPT_RETURNTRANSFER => 1
+            CURLOPT_RETURNTRANSFER => 1,
+            //CURLOPT_CONNECTTIMEOUT => 10,
         );
 
         $handler = curl_init();
-        curl_setopt_array($handler, $options);
+        curl_setopt_array($handler, $defaultOptions);
         $data = curl_exec($handler);
         $status = curl_getinfo($handler, CURLINFO_HTTP_CODE);
         curl_close($handler);
