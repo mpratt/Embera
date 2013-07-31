@@ -13,7 +13,7 @@
 if (php_sapi_name() != 'cli')
     die('The examples page must be runned from the commandline only');
 
-require 'Autoload.php';
+require './Lib/Embera/Autoload.php';
 
 $text = 'Hi, i just saw this video http://www.dailymotion.com/video/xxwxe1_harlem-shake-de-los-simpsons_fun';
 $embera = new \Embera\Embera();
