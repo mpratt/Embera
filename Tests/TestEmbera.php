@@ -104,6 +104,23 @@ class TestEmbera extends PHPUnit_Framework_TestCase
         $result = $embera->getUrlInfo($validUrls);
         $this->assertCount((count($validUrls) - 1), $result);
     }
+
+    public function testEmbedPrefixService()
+    {
+        $validUrls = array('embed://www.youtube.com/watch?v=MpVHQnIvTXo',
+                           'http://youtu.be/fSUK4WgQ3vk',
+                           'http://vimeo.com/groups/shortfilms/videos/63313811/',
+                           'embed://www.dailymotion.com/video/xzxtaf_red-bull-400-alic-y-stadlober-ganan-en-eslovenia_sport/',
+                           'embed://www.youtube.com/watch?v=T3O1nffTG-k');
+
+        $embera = new \Embera\Embera(array('oembed' => false, 'use_embed_prefix' => false));
+        $result = $embera->getUrlInfo($validUrls);
+        $this->assertCount(2, $result);
+
+        $embera = new \Embera\Embera(array('oembed' => false, 'use_embed_prefix' => true));
+        $result = $embera->getUrlInfo($validUrls);
+        $this->assertCount(3, $result);
+    }
 }
 
 ?>

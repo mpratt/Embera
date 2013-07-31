@@ -10,10 +10,7 @@
  * file that was distributed with this source code.
  */
 
-if (php_sapi_name() != 'cli')
-    die('The examples page must be runned from the commandline only');
-
-require 'Autoload.php';
+require './Lib/Embera/Autoload.php';
 
 $text = 'Hi, i just saw this video http://www.dailymotion.com/video/xxwxe1_harlem-shake-de-los-simpsons_fun';
 $embera = new \Embera\Embera();
@@ -40,6 +37,12 @@ echo "================================ \n";
 
 $config = array('deny' => array('Youtube', 'Vimeo'));
 $text = 'http://dailymotion.com/video/xp30q9_bmw-serie3-2012-en-mexico_auto http://vimeo.com/groups/shortfilms/videos/66185763  http://youtube.com/watch?v=J---aiyznGQ';
+$embera = new \Embera\Embera($config);
+echo $embera->autoEmbed($text) . "\n";
+echo "================================ \n";
+
+$config = array('use_embed_prefix' => true);
+$text = 'http://dailymotion.com/video/xp30q9_bmw-serie3-2012-en-mexico_auto embed://vimeo.com/groups/shortfilms/videos/66185763  http://youtube.com/watch?v=J---aiyznGQ';
 $embera = new \Embera\Embera($config);
 echo $embera->autoEmbed($text) . "\n";
 echo "================================ \n";
