@@ -61,7 +61,7 @@ abstract class Service
      */
     public function __construct($url, array $config = array(), \Embera\Oembed $oembed)
     {
-        $this->url = $url;
+        $this->url = preg_replace('~^embed:~i', 'http:', $url);
         $this->normalizeUrl();
 
         if (!$this->validateUrl())

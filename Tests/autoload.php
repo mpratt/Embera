@@ -78,7 +78,6 @@ class UrlList
                 'http://dailymotion.com/video/xp30q9_bmw-serie3-2012-en-mexico_auto',
                 'http://www.dailymotion.com/video/xzxtaf_red-bull-400-alic-y-stadlober-ganan-en-eslovenia_sport/',
                 'http://www.dailymotion.com/video/xzva95_jacob-jones-and-the-bigfoot-mystery-launch-trailer_videogames',
-                'http://www.dailymotion.com/video/xzx9vo_marc-gasol-lleva-a-memphis-a-su-primera-final-de-conferencia_sport',
                 'http://www.dailymotion.com/video/xzx4m4_balotelli-au-prochain-cri-raciste-je-quitte-le-terrain_sport?from=rss',
                 'http://www.dailymotion.com/video/xzse1m_casanova-tout-reste-possible-pour-l-om_sport/stuff/here/',
                 'http://www.dailymotion.com/embed/video/xzxfpu',
@@ -207,7 +206,6 @@ class UrlList
             ),
             'invalid' => array(
                 'http://my.opera.com/avatar.pl',
-                'http://my.opera.com/cstrep/albums/showpic.dml?album=504322&picture=6964560',
                 'http://my.opera.com/chooseopera/albums/show.dml',
                 'http://my.opera.com/chooseopera/albums/showpic.dml?picture=128991482&album=9363632', // Order matters
                 'http://my.opera.com/chooseopera/albums/showpic.dml?noise=12909671',
@@ -230,7 +228,6 @@ class UrlList
                 'http://lieveheersbeestje.deviantart.com/art/house/Heart-of-gold-378848984',
                 'http://wordofchen.deviantart.com/soup/Pressure-379617958',
                 'http://sarahharas1.deviantart.com/class/379565213',
-                'http://m-eralp.deviantart.com/art/After-rain-bomb-379561772',
                 'http://fav.me/d69yyh3/stuff/',
                 'http://sta.sh/',
                 'http://fav.me/',

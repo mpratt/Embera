@@ -107,6 +107,14 @@ Or perhaps you want to deny embedding from a couple of sites?
     echo $embera->autoEmbed($text);
 ```
 
+As an alternative you can embed urls only if they start with the embed:// prefix.
+```php
+    $config = array('use_embed_prefix' => true);
+    $text = 'embed://dailymotion.com/video/xp30q9_bmw-serie3-2012-en-mexico_auto (this url will not be embeded http://youtube.com/watch?v=J---aiyznGQ)';
+    $embera = new \Embera\Embera($config);
+    echo $embera->autoEmbed($text);
+```
+
 Maybe you are interested on seeing the full oembed response from the urls.
 Use the `getUrlInfo()` method
 ```php

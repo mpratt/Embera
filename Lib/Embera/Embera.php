@@ -30,7 +30,10 @@ class Embera
     protected $errors = array();
 
     /** @var string The pattern used to extract urls from a text */
-    protected $urlRegex = '~\bhttps?://[^\s()<>]+(?:\([\w\d]+\)|([^[:punct:]\s]|/))~';
+    protected $urlRegex = '~\bhttps?://[^\s()<>]+(?:\([\w\d]+\)|([^[:punct:]\s]|/))~i';
+
+    /** @var string The pattern used to extract urls from a text when the embed:// prefix option is enabled */
+    protected $urlEmbedRegex = '~\bembed://[^\s()<>]+(?:\([\w\d]+\)|([^[:punct:]\s]|/))~i';
 
     /**
      * Constructs the object and also instantiates the \Embera\Oembed Object
@@ -41,7 +44,10 @@ class Embera
      */
     public function __construct(array $config = array())
     {
-        $this->config = array_merge(array('oembed' => true), $config);
+        $this->config = array_merge(array(
+            'oembed' => true,
+            'use_embed_prefix' => false,
+        ), $config);
         $this->oembed = new \Embera\Oembed(new \Embera\HttpRequest());
     }
 
@@ -102,9 +108,16 @@ class Embera
      */
     protected function getProviders($body = '')
     {
+        $regex = ($this->config['use_embed_prefix'] === true ? $this->urlEmbedRegex : $this->urlRegex);
         if (is_array($body))
+        {
+            $body = array_filter($body, function ($a) use ($regex){
+                return preg_match($regex, $a);
+            });
+
             $providers = new \Embera\Providers($body, $this->config, $this->oembed);
-        else if (preg_match_all($this->urlRegex, $body, $matches))
+        }
+        else if (preg_match_all($regex, $body, $matches))
             $providers = new \Embera\Providers($matches['0'], $this->config, $this->oembed);
         else
             return array();
