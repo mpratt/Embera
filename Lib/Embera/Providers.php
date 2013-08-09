@@ -29,6 +29,7 @@ class Providers
         'youtube.com' => 'Youtube',
         'youtu.be' => 'Youtube',
         'vimeo.com' => 'Vimeo',
+        'twitter.com' => 'Twitter',
         'qik.com' => 'Qik',
         'revision3.com' => 'Revision3',
         'dailymotion.com' => 'DailyMotion',

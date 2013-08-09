@@ -18,6 +18,7 @@ Sites marked with an `*` allow offline html embedding
 - [Vimeo](http://vimeo.com/) *
 - [DailyMotion](http://www.dailymotion.com/) *
 - [Viddler](http://www.viddler.com) *
+- [Twitter](https://twitter.com)
 - [Qik](http://qik.com)
 - [Flickr](http://flickr.com)
 - [Revision3](http://revision3.com)
@@ -37,7 +38,7 @@ Installation
 
 ### Install with Composer
 If you're using [Composer](https://github.com/composer/composer) to manage
-dependencies, you can use this library by creating a composer.json and add this:
+dependencies, you can use this library by creating a composer.json and adding this:
 
     {
         "require": {
