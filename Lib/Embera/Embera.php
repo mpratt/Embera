@@ -48,6 +48,7 @@ class Embera
             'oembed' => true,
             'use_embed_prefix' => false,
         ), $config);
+
         $this->oembed = new \Embera\Oembed(new \Embera\HttpRequest());
     }
 

@@ -107,7 +107,7 @@ abstract class Service
      *
      * It should be overwritten by the service
      * itself if the service is capable to determine
-     * an html embed code based on the url or other methods.
+     * an html embed code based on the url or by other methods.
      *
      * @return array
      */

@@ -32,6 +32,18 @@ class UrlList
                 'http://www.youtube.com/hi#ho',
                 'http://youtube.com/',
                 'http://www.youtube.com/?id=ho'
+            ),
+            'normalize' => array(
+                'http://youtu.be/9bZkp7q19f0/werwer' => 'http://www.youtube.com/watch?v=9bZkp7q19f0',
+                'http://www.youtube.com/watch?v=9bZkp7q19f0' => 'http://www.youtube.com/watch?v=9bZkp7q19f0',
+                'http://youtube.com/watch?v=xVrJ8DxECbg&list=PLwnD0jwK0yymXOCl82nqdTdxe0ykVDcPW&index=1' => 'http://www.youtube.com/watch?v=xVrJ8DxECbg',
+                'http://youtu.be/8aGEb_yUpMs' => 'http://www.youtube.com/watch?v=8aGEb_yUpMs',
+                'http://youtube.com/watch?v=J---aiyznGQ&index=1' => 'http://www.youtube.com/watch?v=J---aiyznGQ',
+                'http://youtube.com/watch?v=mghhLqu31cQ' => 'http://www.youtube.com/watch?v=mghhLqu31cQ',
+            ),
+            'fake' => array(
+                'type' => 'video',
+                'html' => '<iframe'
             )
         ),
         'flickr' => array(
@@ -50,6 +62,15 @@ class UrlList
                 'http://www.flickr.com/stuff/8429256478/',
                 'http://www.flickr.com/noise/8429256478/',
                 'http://www.flickr.com//8429256478/'
+            ),
+            'normalize' => array(
+                'http://www.flickr.com/photos/22134962@N03/8738306577/in/explore-2013-05-14' => 'http://www.flickr.com/photos/22134962@N03/8738306577/',
+                'http://flic.kr/p/9gAMbM' => 'http://flic.kr/p/9gAMbM',
+                'http://www.flickr.com/photos/reddragonflydmc/5427387397/?noise=noise' => 'http://www.flickr.com/photos/reddragonflydmc/5427387397/',
+                'http://www.flickr.com/photos/bees/8597283706/in/photostream' => 'http://www.flickr.com/photos/bees/8597283706/',
+                'http://flic.kr/p/9gAMbM/' => 'http://flic.kr/p/9gAMbM/',
+                'http://www.flickr.com/photos/bees/8429256478' => 'http://www.flickr.com/photos/bees/8429256478/',
+                'http://www.flickr.com/photos/bees/8429256478/' => 'http://www.flickr.com/photos/bees/8429256478/',
             )
         ),
         'vimeo' => array(
@@ -70,6 +91,18 @@ class UrlList
                 'http://vimeo.com/groups/shortfilms',
                 'http://vimeo.com/',
                 'http://vimeo.com/groups/stuff/?autoplay=1'
+            ),
+            'normalize' => array(
+                'http://vimeo.com/channels/staffpicks/66252440' => 'http://vimeo.com/66252440',
+                'http://vimeo.com/channels/staffpicks/65535198/' => 'http://vimeo.com/65535198',
+                'https://player.vimeo.com/video/65297606' => 'http://vimeo.com/65297606',
+                'http://vimeo.com/groups/shortfilms/videos/63313811/' => 'http://vimeo.com/63313811',
+                'http://vimeo.com/47360546' => 'http://vimeo.com/47360546',
+                'http://vimeo.com/39892335/' => 'http://vimeo.com/39892335',
+            ),
+            'fake' => array(
+                'type' => 'video',
+                'html' => '<iframe'
             )
         ),
         'dailymotion' => array(
@@ -89,6 +122,14 @@ class UrlList
                 'http://www.dailymotion.com/channel/stuff/',
                 'http://www.dailymotion.com/stuff/',
                 'http://www.dailymotion.com/video/'
+            ),
+            'normalize' =>  array(
+                'http://www.dailymotion.com/video/xxwxe1_harlem-shake-de-los-simpsons_fun' => 'http://www.dailymotion.com/video/xxwxe1_harlem-shake-de-los-simpsons_fun',
+                'http://dailymotion.com/video/xp30q9_bmw-serie3-2012-en-mexico_auto' => 'http://www.dailymotion.com/video/xp30q9_bmw-serie3-2012-en-mexico_auto',
+                'http://www.dailymotion.com/video/xzxtaf_red-bull-400-alic-y-stadlober-ganan-en-eslovenia_sport/' => 'http://www.dailymotion.com/video/xzxtaf_red-bull-400-alic-y-stadlober-ganan-en-eslovenia_sport',
+                'http://www.dailymotion.com/embed/video/xzxfpu' => 'http://www.dailymotion.com/video/xzxfpu',
+                'http://www.dailymotion.com/video/xzx4m4_balotelli-au-prochain-cri-raciste-je-quitte-le-terrain_sport?from=rss' => 'http://www.dailymotion.com/video/xzx4m4_balotelli-au-prochain-cri-raciste-je-quitte-le-terrain_sport',
+                'http://www.dailymotion.com/embed/video/xzv0cd/' => 'http://www.dailymotion.com/video/xzv0cd',
             )
         ),
         'viddler' => array(
@@ -105,6 +146,17 @@ class UrlList
                 'http://www.viddler.com/v/zxsdg9',
                 'http://www.viddler.com/player/528b194c/otherStuff/lightbox',
                 'http://viddler.com/v/',
+            ),
+            'normalize' => array(
+                'http://www.viddler.com/v/a695c468' => 'http://www.viddler.com/v/a695c468',
+                'http://www.viddler.com/v/a695c468/' => 'http://www.viddler.com/v/a695c468',
+                'http://www.viddler.com/v/528b194c/otherStuff/lightbox' => 'http://www.viddler.com/v/528b194c',
+                'http://viddler.com/embed/4c57d97a/lightbox' => 'http://www.viddler.com/v/4c57d97a',
+                'http://viddler.com/embed/4c57d97a/' => 'http://www.viddler.com/v/4c57d97a',
+            ),
+            'fake' => array(
+                'type' => 'video',
+                'html' => '<iframe'
             )
         ),
         'qik' => array(
@@ -140,6 +192,10 @@ class UrlList
                 'http://revision3.com/anniesbits',
                 'http://revision3.com/where',
                 'http://revision3.com/advertise/contact/'
+            ),
+            'normalize' => array(
+                'http://revision3.com/sesslerssomething/e3-2013-preview' => 'http://revision3.com/sesslerssomething/e3-2013-preview',
+                'http://www.revision3.com/technobuffalo/ask-the-buffalo-380-nokia-lumia-running-android' => 'http://www.revision3.com/technobuffalo/ask-the-buffalo-380-nokia-lumia-running-android',
             )
         ),
         'hulu' => array(
@@ -157,6 +213,13 @@ class UrlList
                 'http://www.hulu.com/watch/abduej/2344657', // Not numeric
                 'http://hulu.com/450265',
                 'http://www.hulu.com/watch/44ui65/'
+            ),
+            'normalize' => array(
+                'http://www.hulu.com/watch/20807/late-night-with-conan-obrien-wed-may-21-2008' => 'http://www.hulu.com/watch/20807',
+                'http://www.hulu.com/watch/440265/' => 'http://www.hulu.com/watch/440265',
+                'http://www.hulu.com/watch/416223?playlist_id=1787&asset_scope=movies' => 'http://www.hulu.com/watch/416223',
+                'http://hulu.com/watch/331822/stuff/here' => 'http://www.hulu.com/watch/331822',
+                'http://hulu.com/watch/501126' => 'http://www.hulu.com/watch/501126',
             )
         ),
         'twitter' => array(
@@ -250,6 +313,9 @@ class UrlList
                 'http://fav.me/d69yyh3/stuff/',
                 'http://sta.sh/',
                 'http://fav.me/',
+            ),
+            'private' => array(
+                'http://sooper-deviant.deviantart.com/art/Brand-New-Day-1769-376513535'
             )
         ),
     );
@@ -263,17 +329,19 @@ class UrlList
      *
      * @throws Exception When the service seems invalid
      */
-    public static function get($service, $invalid = false)
+    public static function get($service, $key = 'valid')
     {
-        if (!isset(self::$url[strtolower($service)]))
+        $service = strtolower($service);
+        $key = strtolower($key);
+
+        if (!isset(self::$url[$service]))
             throw new Exception('Bad Service Name ' . $service);
 
-        if ($invalid)
-            return self::$url[strtolower($service)]['invalid'];
+        if (isset(self::$url[$service][$key]))
+            return self::$url[$service][$key];
 
-        return self::$url[strtolower($service)]['valid'];
+        return false;
     }
-
 }
 
 /**
