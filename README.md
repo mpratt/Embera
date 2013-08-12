@@ -82,14 +82,15 @@ Want to specify width or height
     /*Check this video out <iframe src="http://player.vimeo.com/video/66185763" width="300" height="126" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>*/
 ```
 
-Disable online support.
+Disable online support. This allows you to get at least the html embed code for some services, without having
+to make a real http request to a oembed provider.
 ```php
     $config = array('oembed' => false);
     $text = 'http://vimeo.com/groups/shortfilms/videos/66185763 http://www.flickr.com/photos/bees/8597283706/in/photostream';
     $embera = new \Embera\Embera($config);
     echo $embera->autoEmbed($text);
     /* <iframe src="http://player.vimeo.com/66185763" width="420" height="315" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe> http://www.flickr.com/photos/bees/8597283706/in/photostream */
-    /* Since I dont have Flickr offline support, the url stays the same. */
+    /* Since Embera doesnt have Flickr offline support, the url stays the same. */
 ```
 
 Do you want to allow embedding only from a few Sites?
@@ -144,6 +145,9 @@ Array
         )
 )
 ```
+Remember that some Oembed Providers append more information (and others less) this depends heavily from each provider and
+the type of media you are requesting.
+
 On a quick note, if you see in the response, the key `embera_using_fake` equal `0`, means that the library
 got the results from the Oembed provider. When it equals `1`, it means that the html embed code is constructed
 from the original url given - It also means that most of the other information is going to be missing.
@@ -173,6 +177,48 @@ Checking for errors?
 ```
 
 Take a peak inside the Tests directory if you want to learn more.
+
+Advanced Usage
+==============
+
+### Output Formatting
+Using the `\Embera\Formatter` object and the decorator pattern you are able to create templates with placeholders and
+Embera will fill them with the relevant information from the oembed response.
+
+A placeholder, in this case, is a word enclosed by `{}`, for example `{title}` which should give
+you the title of the media. You can use any word from the oembed response ({provider_name}, {thumbnail}, {html}, {type}, etc).
+
+Two new methods are available, the `setTemplate` and `transform`
+```php
+    $embera = new \Embera\Embera();
+    $embera = new \Embera\Formatter($embera);
+
+    $embera->setTemplate('<div class="myclass">{provider_name}: {title} <p>{html}</p></div>');
+
+    echo $embera->transform(array('url1', 'url2', 'url3'));
+    // <div class="myclass">provider for url1: the title of url1 <p>embed code for url 1</p></div>
+    // <div class="myclass">provider for url2: the title of url2 <p>embed code for url 2</p></div>
+    // <div class="myclass">provider for url3: the title of url3 <p>embed code for url 3</p></div>
+```
+
+You can also give a string with urls and they will be replaced by the given template
+```php
+    $embera = new \Embera\Embera();
+    $embera = new \Embera\Formatter($embera);
+
+    $embera->setTemplate('<div class="oembed">{html}</div>');
+
+    echo $embera->transform('Hey checkout this video http://url.com/video/id');
+    // hey checkout this video <div class="oembed">embed code for url.com/video/id</div>
+```
+
+If you like you can use a shorter syntax, just by passing a string or array as a second parameter to the
+`setTemplate` method
+```php
+    $embera = new \Embera\Formatter(new \Embera\Embera());
+    echo $embera->setTemplate('<div class="oembed">{html}</div>', array('url1.com', 'url2.com', 'url3.com'));
+```
+
 
 License
 =======
