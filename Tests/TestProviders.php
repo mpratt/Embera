@@ -33,18 +33,18 @@ class TestProviders extends PHPUnit_Framework_TestCase
     {
         $oembed = new MockOembed(new MockHttpRequest());
 
-        $p = new \Embera\Providers(array(), array(), $oembed);
-        $this->assertEmpty($p->getAll());
+        $p = new \Embera\Providers(array(), $oembed);
+        $this->assertEmpty($p->getAll(array()));
 
-        $p = new \Embera\Providers(null, array(), $oembed);
-        $this->assertEmpty($p->getAll());
+        $p = new \Embera\Providers(array(), $oembed);
+        $this->assertEmpty($p->getAll(null));
 
-        $p = new \Embera\Providers('http://www.unknown.com', array(), $oembed);
-        $this->assertEmpty($p->getAll());
+        $p = new \Embera\Providers(array(), $oembed);
+        $this->assertEmpty($p->getAll('http://www.unknown.com'));
 
         $urls = array('http://www.unknown.com/path/stuf/?hi=1', 'http://www.thewalkingdead.com/stuff/');
-        $p = new \Embera\Providers($urls, array(), $oembed);
-        $this->assertEmpty($p->getAll());
+        $p = new \Embera\Providers(array(), $oembed);
+        $this->assertEmpty($p->getAll($urls));
     }
 
     public function testAllProviders()
@@ -127,21 +127,20 @@ class TestProviders extends PHPUnit_Framework_TestCase
     {
         $oembed = new MockOembed(new MockHttpRequest());
 
-        $p = new \Embera\Providers($validUrls, array(), $oembed);
-        $this->assertCount(count($validUrls), $p->getAll(), $s . ' The valid Urls dont seem to be detected correctly');
+        $p = new \Embera\Providers(array(), $oembed);
+        $this->assertCount(count($validUrls), $p->getAll($validUrls), $s . ' The valid Urls dont seem to be detected correctly');
 
-        $p = new \Embera\Providers(array_merge($validUrls, $invalidUrls), array(), $oembed);
-        $this->assertCount(count($validUrls), $p->getAll(), $s . ' There is at least one invalid url recognized as valid');
+        $p = new \Embera\Providers(array(), $oembed);
+        $this->assertCount(count($validUrls), $p->getAll(array_merge($validUrls, $invalidUrls)), $s . ' There is at least one invalid url recognized as valid');
 
-        $p = new \Embera\Providers($validUrls[mt_rand(0, (count($validUrls) - 1))], array(), $oembed);
-        $this->assertCount(1, $p->getAll(), $s . ' One Correct url seems to be invalid');
+        $p = new \Embera\Providers(array(), $oembed);
+        $this->assertCount(1, $p->getAll($validUrls[mt_rand(0, (count($validUrls) - 1))]), $s . ' One Correct url seems to be invalid');
     }
 
     protected function validateWrongUrlResponse($service, $url)
     {
         try {
             $oembed = new MockOembed(new MockHttpRequest());
-
             $service = '\Embera\Providers\\' . $service;
 
             new $service($url, array(), $oembed);

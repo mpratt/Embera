@@ -23,6 +23,9 @@ class Embera
     /** @var object Instance of \Embera\Oembed */
     protected $oembed;
 
+    /** @var object Instance of \Embera\Providers */
+    protected $providers;
+
     /** @var array Configuration Settings */
     protected $config = array();
 
@@ -50,6 +53,7 @@ class Embera
         ), $config);
 
         $this->oembed = new \Embera\Oembed(new \Embera\HttpRequest());
+        $this->providers = new \Embera\Providers($this->config, $this->oembed);
     }
 
     /**
@@ -62,7 +66,7 @@ class Embera
     public function autoEmbed($body = null)
     {
         if (!is_string($body))
-            $this->errors[] = 'For autoEmbedding purposes, the input must be a string';
+            $this->errors[] = 'For auto-embedding purposes, the input must be a string';
         else if ($data = $this->getUrlInfo($body))
         {
             $table = array();
@@ -116,14 +120,13 @@ class Embera
                 return preg_match($regex, $a);
             });
 
-            $providers = new \Embera\Providers($body, $this->config, $this->oembed);
+            $services = $this->providers->getAll($body);
         }
         else if (preg_match_all($regex, $body, $matches))
-            $providers = new \Embera\Providers($matches['0'], $this->config, $this->oembed);
+            $services = $this->providers->getAll($matches['0']);
         else
             return array();
 
-        $services = $providers->getAll();
         return $this->clean($services);
     }
 
@@ -164,13 +167,7 @@ class Embera
      *
      * @return string
      */
-    public function getLastError()
-    {
-        if ($this->hasErrors())
-            return end($this->errors);
-
-        return ;
-    }
+    public function getLastError() { return end($this->errors); }
 
     /**
      * Returns an array with all the errors

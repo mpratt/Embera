@@ -78,7 +78,6 @@ class Formatter
                     return '{' . $name . '}';
                 }, array_keys($data)), array_values($data), $this->template);
             }
-
         }
 
         if (is_array($body))
@@ -94,10 +93,8 @@ class Formatter
      */
     public function getLastError()
     {
-        if ($this->hasErrors())
-            return end($this->getErrors());
-
-        return ;
+        $errors = $this->getErrors();
+        return end($errors);
     }
 
     /**

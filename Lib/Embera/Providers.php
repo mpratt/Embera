@@ -18,56 +18,52 @@ namespace Embera;
  */
 class Providers
 {
-    /** @var array An array with loaded services */
-    protected $urls = array();
-
     /** @var array Configuration Settings */
     protected $config = array();
 
     /** @var array The mapping of host -> provider relation. */
     protected $services = array(
-        'youtube.com' => 'Youtube',
-        'youtu.be' => 'Youtube',
-        'vimeo.com' => 'Vimeo',
-        'twitter.com' => 'Twitter',
-        'qik.com' => 'Qik',
-        'revision3.com' => 'Revision3',
-        'dailymotion.com' => 'DailyMotion',
-        'viddler.com' => 'Viddler',
-        'flickr.com' => 'Flickr',
-        'flic.kr' => 'Flickr',
-        'hulu.com' => 'Hulu',
-        'jest.com' => 'Jest',
-        'my.opera.com' => 'MyOpera',
-        'deviantart.com' => 'Deviantart',
-        'fav.me' => 'Deviantart',
-        'sta.sh' => 'Deviantart',
-        'collegehumor.com' => 'CollegeHumor'
+        'youtube.com' => '\Embera\Providers\Youtube',
+        'youtu.be' => '\Embera\Providers\Youtube',
+        'vimeo.com' => '\Embera\Providers\Vimeo',
+        'twitter.com' => '\Embera\Providers\Twitter',
+        'qik.com' => '\Embera\Providers\Qik',
+        'revision3.com' => '\Embera\Providers\Revision3',
+        'dailymotion.com' => '\Embera\Providers\DailyMotion',
+        'viddler.com' => '\Embera\Providers\Viddler',
+        'flickr.com' => '\Embera\Providers\Flickr',
+        'flic.kr' => '\Embera\Providers\Flickr',
+        'hulu.com' => '\Embera\Providers\Hulu',
+        'jest.com' => '\Embera\Providers\Jest',
+        'my.opera.com' => '\Embera\Providers\MyOpera',
+        'deviantart.com' => '\Embera\Providers\Deviantart',
+        'fav.me' => '\Embera\Providers\Deviantart',
+        'sta.sh' => '\Embera\Providers\Deviantart',
+        'collegehumor.com' => '\Embera\Providers\CollegeHumor'
     );
 
     /**
      * Construct
      *
-     * @param array|string $urls  An array with urls or a url string
      * @param array $config       Associative array with configuration options
      * @param object $oembed      Instance of \Embera\Oembed
      * @return void
      */
-    public function __construct($urls = array(), array $config = array(), \Embera\Oembed $oembed = null)
+    public function __construct(array $config = array(), \Embera\Oembed $oembed = null)
     {
         $this->oembed = $oembed;
         $this->config = $config;
-        $this->findServices((array) $urls);
     }
 
     /**
      * Finds services for the given $urls.
      *
      * @param array $urls An array with all the available urls
-     * @return void
+     * @return array An Array with loaded services
      */
     protected function findServices(array $urls = array())
     {
+        $return = array();
         if (!empty($urls))
         {
             foreach (array_unique($urls) as $u)
@@ -76,12 +72,14 @@ class Providers
                     $host = $this->getHost($u);
                     if (isset($this->services[$host]))
                     {
-                        $provider = new \ReflectionClass('\Embera\Providers\\' . $this->services[$host]);
-                        $this->urls[$u] = $provider->newInstance($u, $this->config, $this->oembed);
+                        $provider = new \ReflectionClass($this->services[$host]);
+                        $return[$u] = $provider->newInstance($u, $this->config, $this->oembed);
                     }
                 } catch (\Exception $e) {}
             }
         }
+
+        return $return;
     }
 
     /**
@@ -107,9 +105,10 @@ class Providers
     /**
      * Returns an array with all valid services found.
      *
+     * @param array|string $urls  An array with urls or a url string
      * @return array
      */
-    public function getAll() { return $this->urls; }
+    public function getAll($urls) { return $this->findServices((array) $urls); }
 }
 
 ?>
