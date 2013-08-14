@@ -21,7 +21,7 @@ class Providers
     /** @var array Configuration Settings */
     protected $config = array();
 
-    /** @var array The mapping of host -> provider relation. */
+    /** @var array The mapping of host -> provider class relation. */
     protected $services = array(
         'youtube.com' => '\Embera\Providers\Youtube',
         'youtu.be' => '\Embera\Providers\Youtube',
@@ -80,6 +80,20 @@ class Providers
         }
 
         return $return;
+    }
+
+    /**
+     * Adds a new Provider into the service map
+     *
+     * @param string $host The host for the map
+     * @param string|object $class The class or object that should manage the provider
+     * @param array $params Custom parameters that should be sent in the url for this Provider
+     * @return void
+     */
+    public function addProvider($host, $class, array $params = array())
+    {
+        $host = strtolower($host);
+        $this->services[$host] = $class;
     }
 
     /**

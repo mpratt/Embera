@@ -17,6 +17,23 @@ namespace Embera;
  */
 class HttpRequest
 {
+    /** @var array Array with curl/fopen options */
+    protected $config = array();
+
+    /**
+     * Constructor
+     *
+     * @param array $config
+     * @return void
+     */
+    public function __construct(array $config = array())
+    {
+        $this->config = array_merge(array(
+                'curl' => array(),
+                'fopen' => array()
+        ), $config);
+    }
+
     /**
      * Executes http requests
      *
@@ -54,7 +71,7 @@ class HttpRequest
         );
 
         $handler = curl_init();
-        curl_setopt_array($handler, $defaultOptions);
+        curl_setopt_array($handler, array_merge($this->config['curl'], $defaultOptions));
         $data = curl_exec($handler);
         $status = curl_getinfo($handler, CURLINFO_HTTP_CODE);
         curl_close($handler);
@@ -78,11 +95,12 @@ class HttpRequest
         if (!ini_get('allow_url_fopen'))
             throw new \Exception('Could not execute lookup, allow_url_fopen is disabled');
 
-        $context = array('http' => array(
+        $defaultOptions = array(
             'method' => 'GET',
             'user_agent' => 'Mozilla/5.0 PHP/Embera'
-        ));
+        );
 
+        $context = array('http' => array_merge($this->config['fopen'], $defaultOptions));
         if ($data = file_get_contents($url, false, stream_context_create($context)))
             return $data;
 

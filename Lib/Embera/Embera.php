@@ -50,9 +50,10 @@ class Embera
         $this->config = array_merge(array(
             'oembed' => true,
             'use_embed_prefix' => false,
+            'http' => array(),
         ), $config);
 
-        $this->oembed = new \Embera\Oembed(new \Embera\HttpRequest());
+        $this->oembed = new \Embera\Oembed(new \Embera\HttpRequest($this->config['http']));
         $this->providers = new \Embera\Providers($this->config, $this->oembed);
     }
 
@@ -128,6 +129,19 @@ class Embera
             return array();
 
         return $this->clean($services);
+    }
+
+    /**
+     * Adds a new Provider into the service map
+     *
+     * @param string $host The host for the map
+     * @param string|object $class The class or object that should manage the provider
+     * @param array $params Custom parameters that should be sent in the url for this Provider
+     * @return void
+     */
+    public function addProvider($host, $class, array $params = array())
+    {
+        $this->providers->addProvider($host, $class, $params);
     }
 
     /**
