@@ -38,6 +38,8 @@ class Providers
         'flickr.com' => '\Embera\Providers\Flickr',
         'flic.kr' => '\Embera\Providers\Flickr',
         'hulu.com' => '\Embera\Providers\Hulu',
+        'blip.tv' => '\Embera\Providers\BlipTV',
+        'nfb.ca' => '\Embera\Providers\NFB',
         'jest.com' => '\Embera\Providers\Jest',
         'alpha.app.net' => '\Embera\Providers\AppNet',
         'photos.app.net' => '\Embera\Providers\AppNet',
@@ -125,8 +127,8 @@ class Providers
         if (empty($data['host']))
             throw new \InvalidArgumentException('The Url: ' . $url . ' seems to be invalid');
 
-        if (preg_match('~^(?:.*)\.(deviantart)\.(com)$~i', $data['host'], $m))
-            return strtolower($m['1'] . '.' . $m['2']);
+        if (preg_match('~^(?:.*)\.(deviantart\.com|blip\.tv)$~i', $data['host'], $m))
+            return strtolower($m['1']);
 
         return preg_replace('~^(?:www|player)\.~i', '', strtolower($data['host']));
     }
