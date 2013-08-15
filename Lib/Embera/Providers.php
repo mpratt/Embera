@@ -40,6 +40,7 @@ class Providers
         'hulu.com' => '\Embera\Providers\Hulu',
         'blip.tv' => '\Embera\Providers\BlipTV',
         'nfb.ca' => '\Embera\Providers\NFB',
+        'scribd.com' => '\Embera\Providers\Scribd',
         'jest.com' => '\Embera\Providers\Jest',
         'alpha.app.net' => '\Embera\Providers\AppNet',
         'photos.app.net' => '\Embera\Providers\AppNet',

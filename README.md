@@ -27,6 +27,12 @@ Sites marked with an `*` allow offline html embedding
 - [Jest](http://www.jest.com)
 - [MyOpera](http://my.opera.com)
 - [Deviantart](http://deviantart.com)
+- [Twitter](https://twitter.com)
+- [SpeakerDeck](https://speackerdeck.com)
+- [Alpha App.NET](https://alpha.app.net)
+- [BlipTV](http://blip.tv)
+- [NFB](http://www.nfb.ca)
+- [Scribd](http://www.scribd.com)
 
 Requirements
 ============
