@@ -132,6 +132,23 @@ class UrlList
                 'http://www.dailymotion.com/embed/video/xzv0cd/' => 'http://www.dailymotion.com/video/xzv0cd',
             )
         ),
+        'speakerdeck' => array(
+            'valid' => array(
+                'https://speakerdeck.com/sva_1981/zhi-zhi-ju-tesuto',
+                'http://speakerdeck.com/globalmanagergroup/iso-9001-2008-qms-standard-certification-documents',
+                'https://speakerdeck.com/oklahomaok/the-university-at-hiyoshi-they-are-crazy/',
+                'http://www.speakerdeck.com/librarianavenger/librarian-avengers-film-rating-system',
+                'http://speakerdeck.com/vinull/quest-for-fun',
+            ),
+            'invalid' => array(
+                'https://speakerdeck.com/p/featured',
+                'https://speakerdeck.com/c/programming',
+                'https://speakerdeck.com/signup',
+                'https://speakerdeck.com/',
+                'https://speakerdeck.com/search?q=what+up',
+                'https://speakerdeck.com/jamesclay/what-do-you-mean-someone-made-them-up/other-stuff',
+            ),
+        ),
         'viddler' => array(
             'valid' => array(
                 'http://www.viddler.com/v/a695c468',

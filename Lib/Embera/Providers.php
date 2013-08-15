@@ -32,6 +32,7 @@ class Providers
         'twitter.com' => '\Embera\Providers\Twitter',
         'qik.com' => '\Embera\Providers\Qik',
         'revision3.com' => '\Embera\Providers\Revision3',
+        'speakerdeck.com' => '\Embera\Providers\Speakerdeck',
         'dailymotion.com' => '\Embera\Providers\DailyMotion',
         'viddler.com' => '\Embera\Providers\Viddler',
         'flickr.com' => '\Embera\Providers\Flickr',
