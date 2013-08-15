@@ -21,6 +21,9 @@ class Providers
     /** @var array Configuration Settings */
     protected $config = array();
 
+    /** @var array Custom parameters for each host/provider */
+    protected $customParams = array();
+
     /** @var array The mapping of host -> provider class relation. */
     protected $services = array(
         'youtube.com' => '\Embera\Providers\Youtube',
@@ -45,14 +48,19 @@ class Providers
     /**
      * Construct
      *
-     * @param array $config       Associative array with configuration options
-     * @param object $oembed      Instance of \Embera\Oembed
+     * @param array $config  Associative array with configuration options
+     * @param object $oembed Instance of \Embera\Oembed
      * @return void
      */
-    public function __construct(array $config = array(), \Embera\Oembed $oembed = null)
+    public function __construct(array $config = array(), \Embera\Oembed $oembed)
     {
+        $this->config = array_merge(array(
+            'params' => array(),
+            'custom_params' => array(),
+        ), $config);
+
+        $this->extractCustomParams($this->config['custom_params']);
         $this->oembed = $oembed;
-        $this->config = $config;
     }
 
     /**
@@ -74,6 +82,9 @@ class Providers
                     {
                         $provider = new \ReflectionClass($this->services[$host]);
                         $return[$u] = $provider->newInstance($u, $this->config, $this->oembed);
+
+                        if (isset($this->customParams[$host]))
+                            $return[$u]->appendParams($this->customParams[$host]);
                     }
                 } catch (\Exception $e) {}
             }
@@ -92,8 +103,9 @@ class Providers
      */
     public function addProvider($host, $class, array $params = array())
     {
-        $host = strtolower($host);
+        $host = preg_replace('~^(?:www)\.~i', '', strtolower($host));
         $this->services[$host] = $class;
+        $this->customParams[$host] = $params;
     }
 
     /**
@@ -114,6 +126,27 @@ class Providers
             return strtolower($m['1'] . '.' . $m['2']);
 
         return preg_replace('~^(?:www|player)\.~i', '', strtolower($data['host']));
+    }
+
+    /**
+     * Extracts custom parameters for a Provider
+     *
+     * @param array $params
+     * @return array
+     */
+    protected function extractCustomParams(array $params = array())
+    {
+        if (!empty($params))
+        {
+            foreach ($params as $name => $values)
+            {
+                foreach ($this->services as $host => $service)
+                {
+                    if (preg_match('~' . $name . '~i', $service))
+                        $this->customParams[$host] = (array) $values;
+                }
+            }
+        }
     }
 
     /**

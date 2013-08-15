@@ -15,7 +15,6 @@ class TestFormatter extends PHPUnit_Framework_TestCase
     public function testTemplateArray()
     {
         $urls = array(
-            'http://www.youtube.com/watch?v=MpVHQnIvTXo',
             'http://youtu.be/fSUK4WgQ3vk',
             'http://www.youtube.com/watch?v=T3O1nffTG-k'
         );
@@ -25,7 +24,6 @@ class TestFormatter extends PHPUnit_Framework_TestCase
         $embera->setTemplate('{html}|');
 
         $result = $embera->transform($urls);
-
         $this->assertCount(count($urls), explode('|', trim($result, '|')));
     }
 
@@ -44,7 +42,6 @@ class TestFormatter extends PHPUnit_Framework_TestCase
         $urls = array(
             'http://www.youtube.com/watch?v=MpVHQnIvTXo',
             'http://youtu.be/fSUK4WgQ3vk',
-            'http://www.youtube.com/watch?v=T3O1nffTG-k'
         );
 
         $embera = new \Embera\Embera(array('oembed' => false));
@@ -66,7 +63,6 @@ class TestFormatter extends PHPUnit_Framework_TestCase
         $urls = array(
             'http://www.youtube.com/watch?v=MpVHQnIvTXo',
             'http://youtu.be/fSUK4WgQ3vk',
-            'http://www.youtube.com/watch?v=T3O1nffTG-k'
         );
 
         $embera = new \Embera\Embera(array('oembed' => false));

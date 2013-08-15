@@ -14,8 +14,8 @@ class TestOembed extends PHPUnit_Framework_TestCase
 {
     public function testResourceInfoOembedDisabled()
     {
-        $oembed = new \Embera\Oembed(new MockHttpRequest());
-        $return = $oembed->getResourceInfo('dummyurl1', 'dummyurl2', array('oembed' => false));
+        $oembed = new \Embera\Oembed(true, new MockHttpRequest());
+        $return = $oembed->getResourceInfo('dummyurl1', 'dummyurl2');
         $this->assertEquals($return, array());
     }
 
@@ -26,8 +26,8 @@ class TestOembed extends PHPUnit_Framework_TestCase
         $http = new MockHttpRequest();
         $http->response = json_encode($value);
 
-        $oembed = new \Embera\Oembed($http);
-        $return = $oembed->getResourceInfo('dummyurl', 'dummy_url2', array('oembed' => true));
+        $oembed = new \Embera\Oembed(true, $http);
+        $return = $oembed->getResourceInfo('dummyurl', 'dummy_url2');
         unset($return['embera_using_fake']);
 
         $this->assertEquals($return, $value);
@@ -40,14 +40,14 @@ class TestOembed extends PHPUnit_Framework_TestCase
         $http = new MockHttpRequest();
         $http->response = $value;
 
-        $oembed = new \Embera\Oembed($http);
-        $return = $oembed->getResourceInfo('dummyurl', 'dummy_url2', array('oembed' => true));
+        $oembed = new \Embera\Oembed(true, $http);
+        $return = $oembed->getResourceInfo('dummyurl', 'dummy_url2');
         $this->assertEquals($return, array());
     }
 
     public function testFakeResponseBuilder()
     {
-        $oembed = new \Embera\Oembed(new MockHttpRequest());
+        $oembed = new \Embera\Oembed(false, new MockHttpRequest());
         $return = $oembed->buildFakeResponse();
 
         $this->assertTrue(is_array($return));
@@ -56,7 +56,7 @@ class TestOembed extends PHPUnit_Framework_TestCase
 
     public function testFakeResponseBuilder2()
     {
-        $oembed = new \Embera\Oembed(new MockHttpRequest());
+        $oembed = new \Embera\Oembed(true, new MockHttpRequest());
         $return = $oembed->buildFakeResponse(array('value1' => 10, 'value2' => 30, 'title' => 'Yay'));
 
         $this->assertTrue(is_array($return));
@@ -68,16 +68,16 @@ class TestOembed extends PHPUnit_Framework_TestCase
 
     public function testUrlConstruction()
     {
-        $oembed = new \Embera\Oembed(new MockHttpRequest());
+        $oembed = new \Embera\Oembed(true, new MockHttpRequest());
         $reflection = new ReflectionClass('\Embera\Oembed');
         $method = $reflection->getMethod('constructUrl');
         $method->setAccessible(true);
 
         $this->assertEquals($method->invoke($oembed, 'http://www.apiurl.com/', array('house' => '1', 'value2' => '3', 'format' => 'json')),
-                            'http://www.apiurl.com/?format=json');
+                            'http://www.apiurl.com/?house=1&value2=3&format=json');
 
         $this->assertEquals($method->invoke($oembed, 'http://www.apiurl.com', array('width' => '100', 'format' => 'xml')),
-                            'http://www.apiurl.com?format=xml&maxwidth=100');
+                            'http://www.apiurl.com?width=100&format=xml');
 
         $this->assertEquals($method->invoke($oembed, 'http://www.apiurl.com/?url=100', array('maxheight' => 400, 'format' => 'json')),
                             'http://www.apiurl.com/?url=100&maxheight=400&format=json');
@@ -86,10 +86,10 @@ class TestOembed extends PHPUnit_Framework_TestCase
                             'http://www.apiurl.com/hellow/?format=json');
 
         $this->assertEquals($method->invoke($oembed, 'http://www.apiurl.com/', array('height' => '2000')),
-                            'http://www.apiurl.com/?maxheight=2000');
+                            'http://www.apiurl.com/?height=2000');
 
         $this->assertEquals($method->invoke($oembed, 'http://www.apiurl.com/', array()),
-                            'http://www.apiurl.com/');
+                            'http://www.apiurl.com/?');
     }
 }
 

@@ -15,19 +15,29 @@ namespace Embera;
 /**
  * This class manages requests and responses
  * from an Oembed Endpoint.
+ *
+ * TODO: Support xml responses
  */
 class Oembed
 {
     /** @var object Instance of \Embera\HttpRequest */
     protected $http;
 
+    /** @var bool Wether or not to use fake responses only */
+    protected $fakeResponseOnly;
+
     /**
      * Construct
      *
+     * @param bool $disableFakeResponse Wether or not to use fake responses only
      * @param object $http Instance of \Embera\HttpRequest
      * @return void
      */
-    public function __construct(\Embera\HttpRequest $http) { $this->http = $http; }
+    public function __construct($disableFakeResponse = true, \Embera\HttpRequest $http)
+    {
+        $this->fakeResponseOnly = !$disableFakeResponse;
+        $this->http = $http;
+    }
 
     /**
      * Gets information about a resource
@@ -40,7 +50,7 @@ class Oembed
      */
     public function getResourceInfo($apiUrl, $url, array $params = array())
     {
-        if (empty($params['oembed']))
+        if ($this->fakeResponseOnly)
             return array();
 
         return $this->lookup($this->constructUrl($apiUrl, array_merge($params, array('url' => $url))));
@@ -95,29 +105,13 @@ class Oembed
      * this for us.
      *
      * @param string $apiUrl The Url to the Oembed Api
-     * @param array  $params Additional parameters for the query string
+     * @param array  $params Parameters for the query string
      * @return string
      */
     protected function constructUrl($apiUrl, array $params = array())
     {
         $params = array_filter($params);
-        if (!empty($params['width']) && empty($params['maxwidth']))
-            $params['maxwidth'] = $params['width'];
-
-        if (!empty($params['height']) && empty($params['maxheight']))
-            $params['maxheight'] = $params['height'];
-
-        $params = array_intersect_key($params, array_flip(array(
-            'url',
-            'maxwidth',
-            'maxheight',
-            'format'
-        )));
-
-        if (!empty($params))
-            return $apiUrl . ((strpos($apiUrl, '?') === false) ? '?' : '&') . http_build_query($params);
-
-        return $apiUrl;
+        return $apiUrl . ((strpos($apiUrl, '?') === false) ? '?' : '&') . http_build_query($params);
     }
 }
 

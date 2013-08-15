@@ -355,6 +355,15 @@ class MockHttpRequest extends \Embera\HttpRequest
 }
 
 /**
+ * A custom Service
+ */
+class CustomService extends \Embera\Adapters\Service
+{
+    protected $apiUrl = 'http://my-custom-service.com/oembed.json';
+    public function validateUrl(){ return preg_match('~customservice\.com/([0-9]+)~i', $this->url); }
+}
+
+/**
  * Oembed Mockup
  * @codeCoverageIgnore
  */

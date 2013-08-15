@@ -20,11 +20,11 @@ abstract class Service
     /** @var string The current Url */
     protected $url;
 
-    /** @var array Associative array with config options */
-    protected $config;
-
     /** @var object Instance of \Embera\Oembed */
-    protected $oembed;
+    protected $oembed = null;
+
+    /** @var array Associative array with parameters to be sent to the oembed provider */
+    protected $params = array();
 
     /** @var array Array with all the errors */
     protected $errors = array();
@@ -32,11 +32,8 @@ abstract class Service
     /** @var string The api url for the current service */
     protected $apiUrl = null;
 
-    /** @var int Default With for fake responses */
-    protected $fakeWidth = '420';
-
-    /** @var int Default Height for fake responses */
-    protected $fakeHeight = '315';
+    /** @var array Associative array with fake information for a fake response */
+    protected $fake = array();
 
     /**
      * Validates that the url belongs to this service.
@@ -67,7 +64,21 @@ abstract class Service
         if (!$this->validateUrl())
             throw new \InvalidArgumentException('Url ' . $this->url . ' seems to be invalid for the ' . get_class($this) . ' service');
 
-        $this->config = $config;
+        $config = array_merge(array(
+            'fake' => array(),
+            'params' => array()
+        ), $config);
+
+        $this->fake = array_merge(array(
+            'width' => 420,
+            'height' => 315
+        ), $config['fake']);
+
+        $this->params = array_merge(array(
+            'maxwidth' => 0,
+            'maxheight' => 0,
+        ), $config['params']);
+
         $this->oembed = $oembed;
     }
 
@@ -81,7 +92,7 @@ abstract class Service
     public function getInfo()
     {
         try {
-            if ($response = $this->oembed->getResourceInfo($this->apiUrl, $this->url, $this->config))
+            if ($response = $this->oembed->getResourceInfo($this->apiUrl, $this->url, $this->params))
                 return $response;
         } catch (\Exception $e) { $this->errors[] = $e->getMessage(); }
 
@@ -89,11 +100,26 @@ abstract class Service
     }
 
     /**
+     * Appends custom parameters for the oembed request
+     *
+     * @param array $params
+     * @return void
+     */
+    public function appendParams(array $params = array()) { $this->params = array_merge($this->params, $params); }
+
+    /**
      * Returns the url
      *
      * @return string
      */
     public function getUrl() { return $this->url; }
+
+    /**
+     * Returns an array with all the parameters for the oembed request
+     *
+     * @return array
+     */
+    public function getParams() { return $this->params; }
 
     /**
      * Returns an array with found errors
@@ -131,13 +157,7 @@ abstract class Service
      *
      * @return int
      */
-    protected function getWidth()
-    {
-        if (!empty($this->config['maxwidth']))
-            return $this->config['maxwidth'];
-
-        return (!empty($this->config['width']) ? $this->config['width'] : $this->fakeWidth);
-    }
+    protected function getWidth() { return max($this->fake['width'], $this->params['maxwidth']); }
 
     /**
      * A Utility method to be used in conjuction
@@ -146,12 +166,6 @@ abstract class Service
      *
      * @return int
      */
-    protected function getHeight()
-    {
-        if (!empty($this->config['maxheight']))
-            return $this->config['maxheight'];
-
-        return (!empty($this->config['height']) ? $this->config['height'] : $this->fakeHeight);
-    }
+    protected function getHeight() { return max($this->fake['height'], $this->params['maxheight']); }
 }
 ?>

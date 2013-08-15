@@ -17,7 +17,7 @@ namespace Embera;
  */
 class HttpRequest
 {
-    /** @var array Array with curl/fopen options */
+    /** @var array Array with custom curl/fopen options */
     protected $config = array();
 
     /**
@@ -29,8 +29,8 @@ class HttpRequest
     public function __construct(array $config = array())
     {
         $this->config = array_merge(array(
-                'curl' => array(),
-                'fopen' => array()
+            'curl' => array(),
+            'fopen' => array()
         ), $config);
     }
 
@@ -67,11 +67,17 @@ class HttpRequest
             CURLOPT_USERAGENT => 'Mozilla/5.0 PHP/Embera',
             CURLOPT_HEADER => false,
             CURLOPT_RETURNTRANSFER => 1,
-            //CURLOPT_CONNECTTIMEOUT => 10,
         );
 
         $handler = curl_init();
-        curl_setopt_array($handler, array_merge($this->config['curl'], $defaultOptions));
+        curl_setopt_array($handler, $defaultOptions);
+
+        if (!empty($this->config['curl']))
+        {
+            foreach ($this->config['curl'] as $key => $value)
+                curl_setopt($handler, $key, $value);
+        }
+
         $data = curl_exec($handler);
         $status = curl_getinfo($handler, CURLINFO_HTTP_CODE);
         curl_close($handler);

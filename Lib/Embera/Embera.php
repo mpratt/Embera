@@ -50,10 +50,22 @@ class Embera
         $this->config = array_merge(array(
             'oembed' => true,
             'use_embed_prefix' => false,
+            'params' => array(
+                'width' => 0,
+                'maxwidth' => 0,
+                'height' => 0,
+                'maxheight' => 0,
+            ),
+            'custom_params' => array(),
             'http' => array(),
+            'fake' => array(),
         ), $config);
 
-        $this->oembed = new \Embera\Oembed(new \Embera\HttpRequest($this->config['http']));
+        $this->config['params']['maxwidth'] = max($this->config['params']['width'], $this->config['params']['maxwidth']);
+        $this->config['params']['maxheight'] = max($this->config['params']['height'], $this->config['params']['maxheight']);
+        unset($this->config['params']['height'], $this->config['params']['width']);
+
+        $this->oembed = new \Embera\Oembed($this->config['oembed'], new \Embera\HttpRequest($this->config['http']));
         $this->providers = new \Embera\Providers($this->config, $this->oembed);
     }
 
@@ -139,10 +151,7 @@ class Embera
      * @param array $params Custom parameters that should be sent in the url for this Provider
      * @return void
      */
-    public function addProvider($host, $class, array $params = array())
-    {
-        $this->providers->addProvider($host, $class, $params);
-    }
+    public function addProvider($host, $class, array $params = array()) { $this->providers->addProvider($host, $class, $params); }
 
     /**
      * Strips invalid providers from the list
