@@ -39,6 +39,8 @@ class Providers
         'flic.kr' => '\Embera\Providers\Flickr',
         'hulu.com' => '\Embera\Providers\Hulu',
         'jest.com' => '\Embera\Providers\Jest',
+        'alpha.app.net' => '\Embera\Providers\AppNet',
+        'photos.app.net' => '\Embera\Providers\AppNet',
         'my.opera.com' => '\Embera\Providers\MyOpera',
         'deviantart.com' => '\Embera\Providers\Deviantart',
         'fav.me' => '\Embera\Providers\Deviantart',

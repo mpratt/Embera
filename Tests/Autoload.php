@@ -149,6 +149,22 @@ class UrlList
                 'https://speakerdeck.com/jamesclay/what-do-you-mean-someone-made-them-up/other-stuff',
             ),
         ),
+        'appnet' => array(
+            'valid' => array(
+                'https://alpha.app.net/lesechos/post/9152136',
+                'https://alpha.app.net/vowels/post/8244279/photo/1',
+                'https://alpha.app.net/breakingnews/post/9141658/',
+                'http://alpha.app.net/popsugar/post/9145139',
+                'https://photos.app.net/8244279/1',
+            ),
+            'invalid' => array(
+                'https://unknown.app.net/breakingnews/post/9141658/',
+                'https://aplpha.app.net/breakingnews/post/string/',
+                'https://aplpha.app.net/post/9141658/',
+                'https://aplpha.app.net/breakingnews/9141658/',
+                'https://aplpha.app.net',
+            ),
+        ),
         'viddler' => array(
             'valid' => array(
                 'http://www.viddler.com/v/a695c468',
