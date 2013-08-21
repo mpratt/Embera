@@ -49,7 +49,10 @@ class Providers
         'deviantart.com' => '\Embera\Providers\Deviantart',
         'fav.me' => '\Embera\Providers\Deviantart',
         'sta.sh' => '\Embera\Providers\Deviantart',
-        'collegehumor.com' => '\Embera\Providers\CollegeHumor'
+        'collegehumor.com' => '\Embera\Providers\CollegeHumor',
+        'yfrog.com' => '\Embera\Providers\YFrog',
+        'yfrog.us' => '\Embera\Providers\YFrog',
+        'twitter.yfrog.com' => '\Embera\Providers\YFrog',
     );
 
     /**

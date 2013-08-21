@@ -132,6 +132,49 @@ class UrlList
                 'http://www.dailymotion.com/embed/video/xzv0cd/' => 'http://www.dailymotion.com/video/xzv0cd',
             )
         ),
+        'yfrog' => array(
+            'valid' => array(
+                'http://yfrog.us/jukynnj',
+                'http://twitter.yfrog.com/es3r8kzj',
+                'http://twitter.yfrog.com/hws60ilj?sa=0',
+                'http://yfrog.com/odxklwraj',
+                'http://yfrog.com/odxklwraj?sa=0',
+                'http://www.yfrog.com/h835endj',
+                'http://yfrog.us/mryll1j',
+                'http://twitter.yfrog.com/kex9kulj?sa=0',
+            ),
+            'invalid' => array(
+                'http://twitter.yfrog.com/user/IsabelVRuys/profile',
+                'http://yfrog.com/about',
+                'http://twitter.yfrog.com/',
+                'http://yfrog.com/',
+                'http://twitter.yfrog.com/page/faq',
+                'http://blog.yfrog.com/jobs/',
+                'http://twitter.yfrog.com/page/api',
+            ),
+            'normalize' => array(
+                'http://twitter.yfrog.com/hws60ilj?sa=0' => 'http://twitter.yfrog.com/hws60ilj',
+                'http://twitter.yfrog.com/hws60ilj?sa=1' => 'http://twitter.yfrog.com/hws60ilj',
+                'http://twitter.yfrog.com/hws60ilj?sa=0&stuff=stuff' => 'http://twitter.yfrog.com/hws60ilj',
+            )
+        ),
+        'clikthrough' => array(
+            'valid' => array(
+                'http://www.clikthrough.com/theater/video/23//en-US',
+                'http://clikthrough.com/theater/video/19/',
+                'http://www.clikthrough.com/theater/video/49',
+                'http://clikthrough.com/theater/video/39',
+                'http://www.clikthrough.com/theater/video/30',
+            ),
+            'invalid' => array(
+                'http://www.clikthrough.com/theater/video/letters',
+                'http://www.clikthrough.com/theater/video',
+                'http://www.clikthrough.com/theater/',
+                'http://www.clikthrough.com/products/',
+                'http://www.clikthrough.com/videos/',
+                'http://www.clikthrough.com/artists/',
+            ),
+        ),
         'speakerdeck' => array(
             'valid' => array(
                 'https://speakerdeck.com/sva_1981/zhi-zhi-ju-tesuto',
@@ -290,6 +333,10 @@ class UrlList
                 'https://twitter.com/#!363749205367472129/',
                 'https://twitter.com/363749205367472129/',
                 'https://twitter.com/',
+            ),
+            'normalize' => array(
+                'https://twitter.com/#!RalphGarman/status/362589356495605762/' => 'https://twitter.com/RalphGarman/status/362589356495605762',
+                'https://twitter.com/#!RalphGarman/status/362589356495605762' => 'https://twitter.com/RalphGarman/status/362589356495605762'
             )
         ),
         'dotsub' => array(
