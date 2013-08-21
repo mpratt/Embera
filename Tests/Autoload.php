@@ -292,6 +292,29 @@ class UrlList
                 'https://twitter.com/',
             )
         ),
+        'dotsub' => array(
+            'valid' => array(
+                'http://dotsub.com/view/f2a85663-d9eb-4d92-bb61-fd960c401b23',
+                'http://dotsub.com/view/0ebc725c-a805-4486-a1df-c1e7dccf8c6e/',
+                'http://www.dotsub.com/view/dcef6c2a-3fb7-4ab1-9bc8-fd621b2c3972',
+                'http://dotsub.com/media/b7a2859d-69a3-45f2-8e4e-88f2f15b3f97',
+                'http://dotsub.com/view/85897135-c6ee-4c93-acdd-d7e7f4d08b6e',
+                'http://dotsub.com/view/99eaba09-787a-40a9-9125-27a729de71db',
+            ),
+            'invalid' => array(
+                'http://dotsub.com/view/xxx-xxx-xxxx-xxxx-xxxxx', // It seems that dotsub uses base 64 only as id
+                'http://dotsub.com/view/',
+                'http://dotsub.com/view/?',
+                'http://dotsub.com/view/mostviewed',
+                'http://dotsub.com/view/language/both/dug',
+                'http://dotsub.com/view/99eaba09-787a-40a9-9125-27a729de71db/other/stuff',
+                'http://dotsub.com',
+            ),
+            'normalize' => array(
+                'http://www.dotsub.com/media/396b2b58-9a9c-42f3-b7cb-4a282964b11c/embed/' => 'http://dotsub.com/view/396b2b58-9a9c-42f3-b7cb-4a282964b11c',
+                'http://dotsub.com/media/5af2ea32-1aa1-4fa7-9d36-b3a01e841ca2/embed/' => 'http://dotsub.com/view/5af2ea32-1aa1-4fa7-9d36-b3a01e841ca2',
+            )
+        ),
         'scribd' => array(
             'valid' => array(
                 'http://www.scribd.com/doc/155739836/The-Time-Travel-Megapack-26-Modern-and-Classic-Science-Fiction-Stories',

@@ -33,6 +33,7 @@ Sites marked with an `*` allow offline html embedding
 - [BlipTV](http://blip.tv)
 - [NFB](http://www.nfb.ca)
 - [Scribd](http://www.scribd.com)
+- [Dotsub](http://dotsub.com)
 
 Requirements
 ============
