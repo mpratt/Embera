@@ -53,6 +53,7 @@ class Providers
         'yfrog.com' => '\Embera\Providers\YFrog',
         'yfrog.us' => '\Embera\Providers\YFrog',
         'twitter.yfrog.com' => '\Embera\Providers\YFrog',
+        'clikthrough.com' => '\Embera\Providers\ClikThrough',
     );
 
     /**
