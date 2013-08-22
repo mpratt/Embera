@@ -30,6 +30,8 @@ class Providers
         'youtu.be' => '\Embera\Providers\Youtube',
         'vimeo.com' => '\Embera\Providers\Vimeo',
         'twitter.com' => '\Embera\Providers\Twitter',
+        'instagram.com' => '\Embera\Providers\Instagram',
+        'instagr.am' => '\Embera\Providers\Instagram',
         'qik.com' => '\Embera\Providers\Qik',
         'revision3.com' => '\Embera\Providers\Revision3',
         'speakerdeck.com' => '\Embera\Providers\Speakerdeck',

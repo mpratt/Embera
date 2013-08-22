@@ -17,6 +17,7 @@ Sites marked with an `*` allow offline html embedding
 - [Youtube](http://www.youtube.com/) *
 - [Vimeo](http://vimeo.com/) *
 - [DailyMotion](http://www.dailymotion.com/) *
+- [Instagram](http://instagram.com)
 - [Viddler](http://www.viddler.com) *
 - [Twitter](https://twitter.com)
 - [Qik](http://qik.com)

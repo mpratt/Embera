@@ -158,6 +158,21 @@ class UrlList
                 'http://twitter.yfrog.com/hws60ilj?sa=0&stuff=stuff' => 'http://twitter.yfrog.com/hws60ilj',
             )
         ),
+        'instagram' => array(
+            'valid' => array(
+                'http://instagram.com/p/TCg0AoLjoH/#',
+                'http://instagram.com/p/Q8fPYGLjtB',
+                'http://instagram.com/p/Rqlny2Ljk7/',
+                'http://instagr.am/p/TCg0AoLjoH/#',
+                'http://instagr.am/p/V8UMy0LjpX',
+            ),
+            'invalid' => array(
+                'http://instagram.com/stuff/Rqlny2Ljk7/',
+                'http://instagram.com/p/Rqlny2Ljk7/other/stuff',
+                'http://instagram.com',
+                'http://instagr.am',
+            ),
+        ),
         'clikthrough' => array(
             'valid' => array(
                 'http://www.clikthrough.com/theater/video/23//en-US',
