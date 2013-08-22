@@ -34,6 +34,7 @@ Sites marked with an `*` allow offline html embedding
 - [SpeakerDeck](https://speackerdeck.com)
 - [Alpha App.NET](https://alpha.app.net)
 - [BlipTV](http://blip.tv)
+- [Animoto](http://animoto.com)
 - [NFB](http://www.nfb.ca)
 - [Scribd](http://www.scribd.com)
 - [Dotsub](http://dotsub.com)

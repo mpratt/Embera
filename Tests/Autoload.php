@@ -196,6 +196,19 @@ class UrlList
                 'https://gist.github.com/LJPH/6308712#file-comet_-idea_description-html' => 'https://gist.github.com/6308712',
             ),
         ),
+        'animoto' => array(
+            'valid' => array(
+                'http://animoto.com/play/JzwsBn5FRVxS0qoqcBP5zA',
+                'http://animoto.com/play/JzwsBn5FRVxS0qoqcBP5zA/',
+                'http://www.animoto.com/play/JzwsBn5FRVxS0qoqcBP5zA/',
+            ),
+            'invalid' => array(
+                'http://animoto.com/features',
+                'http://animoto.com/#examples',
+                'http://www.animoto.com/play/JzwsBn5FRVxS0qoqcBP5zA/other-stuff',
+                'http://animoto.com/',
+            ),
+        ),
         'instagram' => array(
             'valid' => array(
                 'http://instagram.com/p/TCg0AoLjoH/#',

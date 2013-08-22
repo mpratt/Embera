@@ -54,6 +54,7 @@ class Providers
         'fav.me' => '\Embera\Providers\Deviantart',
         'sta.sh' => '\Embera\Providers\Deviantart',
         'collegehumor.com' => '\Embera\Providers\CollegeHumor',
+        'animoto.com' => '\Embera\Providers\Animoto',
         'yfrog.com' => '\Embera\Providers\YFrog',
         'yfrog.us' => '\Embera\Providers\YFrog',
         'twitter.yfrog.com' => '\Embera\Providers\YFrog',
