@@ -63,6 +63,8 @@ class Providers
         'slideshare.net' => '\Embera\Providers\SlideShare',
         'clikthrough.com' => '\Embera\Providers\ClikThrough',
         'polleverywhere.com' => '\Embera\Providers\PollEveryWhere',
+        'on.aol.com' => '\Embera\Providers\AolOn',
+        '5min.com' => '\Embera\Providers\AolOn',
         'ifixit.com' => '\Embera\Providers\IFixIt',
     );
 

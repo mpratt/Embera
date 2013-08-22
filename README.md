@@ -36,6 +36,7 @@ Sites marked with an `*` allow offline html embedding
 - [BlipTV](http://blip.tv)
 - [Animoto](http://animoto.com)
 - [Rdio](http://rdio.com)
+- [Aol On](http://on.aol.com) ([5min.com](http://5min.com))
 - [NFB](http://www.nfb.ca)
 - [Scribd](http://www.scribd.com)
 - [Dotsub](http://dotsub.com)
