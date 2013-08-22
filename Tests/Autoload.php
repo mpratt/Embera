@@ -176,6 +176,26 @@ class UrlList
                 'http://www.ifixit.com/Guide/login',
             ),
         ),
+        'githubgist' => array(
+            'valid' => array(
+                'https://gist.github.com/mpratt/3177700',
+                'https://gist.github.com/mpratt/5671743/',
+                'https://gist.github.com/733951',
+                'https://gist.github.com/LJPH/6308712#file-comet_-idea_description-html',
+                'https://gist.github.com/ashaw/6308796',
+            ),
+            'invalid' => array(
+                'https://github.com/ashaw/6308796', // Not gist.github.com
+                'https://gist.github.com/mpratt',
+                'https://gist.github.com/',
+                'https://gist.github.com/discover/',
+            ),
+            'normalize' => array(
+                'https://gist.github.com/mpratt/3177700' => 'https://gist.github.com/3177700',
+                'https://gist.github.com/733951' => 'https://gist.github.com/733951',
+                'https://gist.github.com/LJPH/6308712#file-comet_-idea_description-html' => 'https://gist.github.com/6308712',
+            ),
+        ),
         'instagram' => array(
             'valid' => array(
                 'http://instagram.com/p/TCg0AoLjoH/#',

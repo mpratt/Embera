@@ -25,6 +25,7 @@ Sites marked with an `*` allow offline html embedding
 - [Flickr](http://flickr.com)
 - [Revision3](http://revision3.com)
 - [Hulu](http://www.hulu.com)
+- [Github Gist](https://gist.github.com)
 - [CollegeHumor](http://www.collegehumor.com)
 - [Jest](http://www.jest.com)
 - [MyOpera](http://my.opera.com)

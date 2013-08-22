@@ -33,6 +33,7 @@ class Providers
         'instagram.com' => '\Embera\Providers\Instagram',
         'instagr.am' => '\Embera\Providers\Instagram',
         'soundcloud.com' => '\Embera\Providers\SoundCloud',
+        'gist.github.com' => '\Embera\Providers\GithubGist',
         'qik.com' => '\Embera\Providers\Qik',
         'revision3.com' => '\Embera\Providers\Revision3',
         'speakerdeck.com' => '\Embera\Providers\Speakerdeck',
