@@ -37,6 +37,7 @@ Sites marked with an `*` allow offline html embedding
 - [Scribd](http://www.scribd.com)
 - [Dotsub](http://dotsub.com)
 - [yfrog.com](http://yfrog.com)
+- [PollEveryWhere](http://www.polleverywhere.com)
 - [ClikThrough](http://www.clikthrough.com)
 - [SlideShare](http://www.slideshare.net)
 

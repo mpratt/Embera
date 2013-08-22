@@ -58,6 +58,7 @@ class Providers
         'twitter.yfrog.com' => '\Embera\Providers\YFrog',
         'slideshare.net' => '\Embera\Providers\SlideShare',
         'clikthrough.com' => '\Embera\Providers\ClikThrough',
+        'polleverywhere.com' => '\Embera\Providers\PollEveryWhere',
     );
 
     /**
