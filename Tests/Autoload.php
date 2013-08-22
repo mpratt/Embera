@@ -109,11 +109,9 @@ class UrlList
             'valid' => array(
                 'http://www.dailymotion.com/video/xxwxe1_harlem-shake-de-los-simpsons_fun',
                 'http://dailymotion.com/video/xp30q9_bmw-serie3-2012-en-mexico_auto',
-                'http://www.dailymotion.com/video/xzxtaf_red-bull-400-alic-y-stadlober-ganan-en-eslovenia_sport/',
                 'http://www.dailymotion.com/video/xzva95_jacob-jones-and-the-bigfoot-mystery-launch-trailer_videogames',
                 'http://www.dailymotion.com/video/xzx4m4_balotelli-au-prochain-cri-raciste-je-quitte-le-terrain_sport?from=rss',
                 'http://www.dailymotion.com/video/xzse1m_casanova-tout-reste-possible-pour-l-om_sport/stuff/here/',
-                'http://www.dailymotion.com/embed/video/xzxfpu',
                 'http://www.dailymotion.com/embed/video/xzv0cd/'
             ),
             'invalid' => array(
