@@ -232,6 +232,30 @@ class UrlList
                 'http://animoto.com/',
             ),
         ),
+        'coub' => array(
+            'valid' => array(
+                'http://coub.com/view/2gik7tu6',
+                'http://coub.com/view/1i2na5tm',
+                'http://www.coub.com/view/2oa3zbsr',
+                'http://coub.com/embed/20v82p5j',
+                'http://coub.com/embed/omwe0oe/',
+                'http://coub.com/view/2m7mett8/',
+                'http://coub.com/embed/29zkqoco',
+            ),
+            'invalid' => array(
+                'http://coub.com/view/2m7mett8/other-stuff/',
+                'http://coub.com/explore/art-design',
+                'http://coub.com/explore/girls',
+                'http://coub.com/embed/',
+                'http://coub.com/view/',
+                'http://coub.com/',
+            ),
+            'normalize' => array(
+                'http://coub.com/view/231nevc?small_suggest_place=3' => 'http://coub.com/view/231nevc',
+                'http://coub.com/view/231nevc?small_suggest_place=3&stuff=hihi-hi' => 'http://coub.com/view/231nevc',
+                'http://www.coub.com/view/231nevc?small_suggest_place=3&stuff=hihi-hi' => 'http://coub.com/view/231nevc',
+            )
+        ),
         'kickstarter' => array(
             'valid' => array(
                 'http://www.kickstarter.com/projects/1330686256/americas-candy-all-natural-vegan-and-allergy-frien?ref=home_popular',
