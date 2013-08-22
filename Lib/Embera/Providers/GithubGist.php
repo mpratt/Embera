@@ -30,7 +30,7 @@ class GithubGist extends \Embera\Adapters\Service
     protected function normalizeUrl()
     {
         $this->url = preg_replace('~\#(.*)$~i', '', $this->url);
-        if (preg_match('~github\.com/(?:[\w\d_\-\.]+)/([\d]+)/?$~i', $this->url, $matches))
+        if (preg_match('~gist\.github\.com/(?:[\w\d_\-\.]+)/([\d]+)/?$~i', $this->url, $matches))
             $this->url = 'https://gist.github.com/' . $matches['1'];
     }
 }

@@ -185,7 +185,7 @@ class UrlList
                 'https://gist.github.com/ashaw/6308796',
             ),
             'invalid' => array(
-                'https://github.com/ashaw/6308796', // Not gist.github.com
+                // 'https://github.com/ashaw/6308796',
                 'https://gist.github.com/mpratt',
                 'https://gist.github.com/',
                 'https://gist.github.com/discover/',
