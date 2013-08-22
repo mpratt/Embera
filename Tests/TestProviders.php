@@ -32,8 +32,6 @@ class TestProviders extends PHPUnit_Framework_TestCase
         $this->assertEmpty($p->getAll($urls));
     }
 
-    public function setUp() { $this->rounds = (getenv('TRAVIS') ? 1 : 2); }
-
     /**
      * This is where it gets nasty.
      *
@@ -46,8 +44,10 @@ class TestProviders extends PHPUnit_Framework_TestCase
      *
      * Why? I had so much duplicated code...
      */
-    protected function validateProvider($s)
+    protected function validateProvider($s, $rounds = 2)
     {
+        $this->rounds = (getenv('TRAVIS') ? 1 : $rounds);
+
         $validUrls   = UrlList::get($s);
         $invalidUrls = UrlList::get($s, 'invalid');
 
