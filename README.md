@@ -37,6 +37,7 @@ Sites marked with an `*` allow offline html embedding
 - [Dotsub](http://dotsub.com)
 - [yfrog.com](http://yfrog.com)
 - [ClikThrough](http://www.clikthrough.com)
+- [SlideShare](http://www.slideshare.net)
 
 Requirements
 ============

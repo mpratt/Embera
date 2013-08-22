@@ -31,7 +31,7 @@ class Revision3 extends \Embera\Adapters\Service
     protected function normalizeUrl()
     {
         // urls with network/host are not valid, strip that out for validation
-        if (preg_match('~revision3\.com/(network|host|advertise)/~i', $this->url))
+        if (preg_match('~revision3\.com/(?:network|host|advertise)/~i', $this->url))
             $this->url = 'http://revision3.com/';
     }
 }

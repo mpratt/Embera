@@ -55,6 +55,7 @@ class Providers
         'yfrog.com' => '\Embera\Providers\YFrog',
         'yfrog.us' => '\Embera\Providers\YFrog',
         'twitter.yfrog.com' => '\Embera\Providers\YFrog',
+        'slideshare.net' => '\Embera\Providers\SlideShare',
         'clikthrough.com' => '\Embera\Providers\ClikThrough',
     );
 
