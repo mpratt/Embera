@@ -232,6 +232,51 @@ class UrlList
                 'http://animoto.com/',
             ),
         ),
+        'kickstarter' => array(
+            'valid' => array(
+                'http://www.kickstarter.com/projects/1330686256/americas-candy-all-natural-vegan-and-allergy-frien?ref=home_popular',
+                'http://www.kickstarter.com/projects/yonder/dino-pet-a-living-bioluminescent-night-light-pet?ref=home_popular',
+                'http://www.kickstarter.com/projects/762504755/apparitions-from-the-inferno?ref=home_location',
+                'http://kickstarter.com/projects/1093644807/and-the-meek-shall-inherit',
+                'http://www.kickstarter.com/projects/940737263/a-very-special-new-stripped-down-sea-wolf-album',
+                'http://www.kickstarter.com/projects/DaveRyan/owlgirls',
+                'http://www.kickstarter.com/projects/lenswithaview/standing-in-the-stars-the-peter-mayhew-story',
+            ),
+            'invalid' => array(
+                'http://www.kickstarter.com/discover',
+                'http://www.kickstarter.com/start',
+                'http://www.kickstarter.com/',
+                'http://www.kickstarter.com/DaveRyan/owlgirls',
+                'http://www.kickstarter.com/projects/DaveRyan',
+            ),
+            'normalize' => array(
+                'http://www.kickstarter.com/projects/1330686256/americas-candy-all-natural-vegan-and-allergy-frien?ref=home_popular' => 'http://www.kickstarter.com/projects/1330686256/americas-candy-all-natural-vegan-and-allergy-frien',
+                'http://www.kickstarter.com/projects/1330686256/americas-candy-all-natural-vegan-and-allergy-frien?ref=home_popular&other=stuff-yeah' => 'http://www.kickstarter.com/projects/1330686256/americas-candy-all-natural-vegan-and-allergy-frien',
+                'http://www.kickstarter.com/projects/1330686256/americas-candy-all-natural-vegan-and-allergy-frien' => 'http://www.kickstarter.com/projects/1330686256/americas-candy-all-natural-vegan-and-allergy-frien',
+                'http://kickstarter.com/projects/1330686256/americas-candy-all-natural-vegan-and-allergy-frien' => 'http://www.kickstarter.com/projects/1330686256/americas-candy-all-natural-vegan-and-allergy-frien',
+                'https://kickstarter.com/projects/1330686256/americas-candy-all-natural-vegan-and-allergy-frien' => 'https://www.kickstarter.com/projects/1330686256/americas-candy-all-natural-vegan-and-allergy-frien',
+            )
+        ),
+        'mixcloud' => array(
+            'valid' => array(
+                'http://www.mixcloud.com/quietmusic/quietmusic-august-18-hour-1-excerpt/',
+                'http://www.mixcloud.com/sub88/mental-place-25/',
+                'http://www.mixcloud.com/FluidRadio/casual-curses-a-mixtape-by-cooper-cult/',
+                'http://mixcloud.com/aboveandbeyond/above-beyond-abgt-041/',
+                'http://www.mixcloud.com/CarlCox/carl-cox-ibiza-the-revolution-unites-week-6',
+                'http://www.mixcloud.com/TechnoLiveSets/josephcapriati-live-aquasella-festival-2013-spain-02-08-2013/',
+                'http://www.mixcloud.com/truthoughts/tru-thoughts-presents-unfold-180813/',
+            ),
+            'invalid' => array(
+                'http://www.mixcloud.com/truthoughts/',
+                'http://www.mixcloud.com/categories/ambient-chillout/',
+                'http://www.mixcloud.com/categories/comedy/',
+                'http://www.mixcloud.com/about/',
+                'http://www.mixcloud.com/upload/',
+                'http://www.mixcloud.com/advertise/create/',
+                'http://www.mixcloud.com/developers/documentation/',
+            ),
+        ),
         'rdio' => array(
             'valid' => array(
                 'http://rd.io/x/Q1IjXC8s',
