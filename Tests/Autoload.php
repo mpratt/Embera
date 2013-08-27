@@ -163,11 +163,11 @@ class UrlList
         'polldaddy' => array(
             'valid' => array(
                 'http://polldaddy.com/poll/7012505/',
-                'http://www.polldaddy.com/poll/7012505',
                 'http://polldaddy.com/s/ADF2AB9E60258D2A/',
                 'http://polldaddy.com/ratings/39/',
                 'http://polldaddy.com/poll/6976912/',
                 'https://polldaddy.com/poll/7205026/',
+                'http://www.polldaddy.com/poll/7012505',
                 'http://mpcimageartist.polldaddy.com/s/emotions',
                 'http://theguy1979.polldaddy.com/s/growing-up-biracial-in-america-being-of-mixed-race-descent-in-2013',
             ),
@@ -276,8 +276,8 @@ class UrlList
                 'https://gist.github.com/mpratt/3177700',
                 'https://gist.github.com/mpratt/5671743/',
                 'https://gist.github.com/733951',
-                'https://gist.github.com/LJPH/6308712#file-comet_-idea_description-html',
                 'https://gist.github.com/ashaw/6308796',
+                'https://gist.github.com/mpratt/3177700#file-database-txt'
             ),
             'invalid' => array(
                 // 'https://github.com/ashaw/6308796',

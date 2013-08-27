@@ -48,7 +48,6 @@ class Providers
         'coub.com' => '\Embera\Providers\Coub',
         'screenr.com' => '\Embera\Providers\Screenr',
         'kickstarter.com' => '\Embera\Providers\Kickstarter',
-        'blip.tv' => '\Embera\Providers\BlipTV',
         'nfb.ca' => '\Embera\Providers\NFB',
         'dotsub.com' => '\Embera\Providers\DotSub',
         'scribd.com' => '\Embera\Providers\Scribd',
@@ -56,7 +55,6 @@ class Providers
         'alpha.app.net' => '\Embera\Providers\AppNet',
         'photos.app.net' => '\Embera\Providers\AppNet',
         'my.opera.com' => '\Embera\Providers\MyOpera',
-        'deviantart.com' => '\Embera\Providers\Deviantart',
         'fav.me' => '\Embera\Providers\Deviantart',
         'sta.sh' => '\Embera\Providers\Deviantart',
         'collegehumor.com' => '\Embera\Providers\CollegeHumor',
@@ -73,9 +71,11 @@ class Providers
         'on.aol.com' => '\Embera\Providers\AolOn',
         '5min.com' => '\Embera\Providers\AolOn',
         'ifixit.com' => '\Embera\Providers\IFixIt',
-        'polldaddy.com' => '\Embera\Providers\PollDaddy',
         'wordpress.tv' => '\Embera\Providers\WordpressTV',
         'blog.wordpress.tv' => '\Embera\Providers\WordpressTV',
+        '*.deviantart.com' => '\Embera\Providers\Deviantart',
+        '*.polldaddy.com' => '\Embera\Providers\PollDaddy',
+        '*.blip.tv' => '\Embera\Providers\BlipTV',
     );
 
     /**
@@ -120,7 +120,7 @@ class Providers
                             $return[$u]->appendParams($this->customParams[$host]);
                     }
                 } catch (\Exception $e) {
-                    //echo $e->getMessage();
+                    //echo $e->getMessage() . PHP_EOL;
                 }
             }
         }
@@ -157,10 +157,30 @@ class Providers
         if (empty($data['host']))
             throw new \InvalidArgumentException('The Url: ' . $url . ' seems to be invalid');
 
-        if (preg_match('~^(?:.*)\.(deviantart\.com|blip\.tv|polldaddy\.com)$~i', $data['host'], $m))
-            return strtolower($m['1']);
+        $host = preg_replace('~^(?:www|player)\.~i', '', strtolower($data['host']));
+        if (isset($this->services[$host]))
+            return $host;
+        else if (isset($this->services['*.' . $host]))
+            return '*.' . $host;
+        else
+        {
+            $wildcards = array_filter(array_keys($this->services), function($key){
+                return (strpos($key, '*') !== false);
+            });
 
-        return preg_replace('~^(?:www|player)\.~i', '', strtolower($data['host']));
+            if (!empty($wildcards))
+            {
+                $trans = array('\*' => '(?:.*)');
+                foreach ($wildcards as $value)
+                {
+                    $regex = strtr(preg_quote($value, '~'), $trans);
+                    if (preg_match('~' . $regex . '~i', $host))
+                        return $value;
+                }
+            }
+        }
+
+        return $host;
     }
 
     /**
