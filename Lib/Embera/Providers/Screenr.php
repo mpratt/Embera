@@ -1,6 +1,6 @@
 <?php
 /**
- * Coub.php
+ * Screenr.php
  *
  * @package Providers
  * @author Michael Pratt <pratt@hablarmierda.net>
@@ -13,25 +13,25 @@
 namespace Embera\Providers;
 
 /**
- * The coub.com Provider
+ * The screenr.com Provider
  */
-class Coub extends \Embera\Adapters\Service
+class Screenr extends \Embera\Adapters\Service
 {
     /** inline {@inheritdoc} */
-    protected $apiUrl = 'http://coub.com/api/oembed.json';
+    protected $apiUrl = 'http://www.screenr.com/api/oembed.json';
 
     /** inline {@inheritdoc} */
     protected function validateUrl()
     {
-        return (preg_match('~coub\.com/(?:view|embed)/(?:[\w\d]+)/?$~i', $this->url));
+        return (preg_match('~screenr\.com/(?:[\w\d]+)/?$~i', $this->url));
     }
 
     /** inline {@inheritdoc} */
     protected function normalizeUrl()
     {
-        $this->url = preg_replace('~\?(.*)$~i', '', $this->url);
-        if (preg_match('~//www\.coub.com~i', $this->url))
-            $this->url = str_ireplace('//www.coub.com', '//coub.com', $this->url);
+        $this->url = rtrim($this->url, '/');
+        if (preg_match('~screenr\.com/(?:record|stream|terms|privacy|help)/?$~i', $this->url))
+            $this->url = 'http://www.screenr.com';
     }
 }
 

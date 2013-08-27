@@ -46,6 +46,7 @@ Sites marked with an `*` allow offline html embedding
 - [PollEveryWhere](http://www.polleverywhere.com)
 - [ClikThrough](http://www.clikthrough.com)
 - [SlideShare](http://www.slideshare.net)
+- [Screenr](http://www.screenr.com)
 
 Requirements
 ============

@@ -46,6 +46,7 @@ class Providers
         'flic.kr' => '\Embera\Providers\Flickr',
         'hulu.com' => '\Embera\Providers\Hulu',
         'coub.com' => '\Embera\Providers\Coub',
+        'screenr.com' => '\Embera\Providers\Screenr',
         'kickstarter.com' => '\Embera\Providers\Kickstarter',
         'blip.tv' => '\Embera\Providers\BlipTV',
         'nfb.ca' => '\Embera\Providers\NFB',

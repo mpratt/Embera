@@ -160,6 +160,23 @@ class UrlList
                 'http://twitter.yfrog.com/hws60ilj?sa=0&stuff=stuff' => 'http://twitter.yfrog.com/hws60ilj',
             )
         ),
+        'screenr' => array(
+            'valid' => array(
+                'http://www.screenr.com/eJvs',
+                'http://www.screenr.com/5xfs/',
+                'http://screenr.com/mkus',
+                'http://www.screenr.com/js0H',
+            ),
+            'invalid' => array(
+                'http://www.screenr.com/',
+                'http://www.screenr.com/record',
+                'http://www.screenr.com/stream',
+                'http://www.screenr.com/help',
+                'http://www.screenr.com/T80H/other/stuff',
+                'http://www.screenr.com/T80H/other',
+                '',
+            ),
+        ),
         'ifixit' => array(
             'valid' => array(
                 'http://www.ifixit.com/Guide/Replacing+iPad+4+CDMA+Logic+Board/16458',
