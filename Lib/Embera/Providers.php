@@ -48,6 +48,7 @@ class Providers
         'coub.com' => '\Embera\Providers\Coub',
         'screenr.com' => '\Embera\Providers\Screenr',
         'kickstarter.com' => '\Embera\Providers\Kickstarter',
+        'circuitlab.com' => '\Embera\Providers\CircuitLab',
         'nfb.ca' => '\Embera\Providers\NFB',
         'dotsub.com' => '\Embera\Providers\DotSub',
         'scribd.com' => '\Embera\Providers\Scribd',

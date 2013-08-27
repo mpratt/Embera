@@ -255,6 +255,24 @@ class UrlList
                 'http://www.screenr.com/T80H/other',
             ),
         ),
+        'circuitlab' => array(
+            'valid' => array(
+                'https://www.circuitlab.com/circuit/e38756/555-timer-as-astable-multivibrator-oscillator/',
+                'https://www.circuitlab.com/circuit/fby849/bjt-cascoded-active-load-differential-amplifier-with-cmfb',
+                'https://circuitlab.com/circuit/4da864/diode-half-wave-rectifier/',
+                'https://circuitlab.com/circuit/z79rqm/leds-with-resistor-biasing',
+                'https://www.circuitlab.com/circuit/42475b/mosfet-and-resistor-nand-gate/',
+            ),
+            'invalid' => array(
+                'https://www.circuitlab.com/',
+                'https://www.circuitlab.com/forums/',
+                'https://www.circuitlab.com/circuit/z79rqm/leds-with-resistor-biasing/other/stuff',
+            ),
+            'normalize' => array(
+                'https://circuitlab.com/circuit/4da864/diode-half-wave-rectifier/' => 'https://www.circuitlab.com/circuit/4da864/diode-half-wave-rectifier/',
+                'https://circuitlab.com/circuit/z79rqm/leds-with-resistor-biasing' => 'https://www.circuitlab.com/circuit/z79rqm/leds-with-resistor-biasing',
+            )
+        ),
         'chirbit' => array(
             'valid' => array(
                 'http://chirb.it/w3gGKr',

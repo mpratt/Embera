@@ -36,6 +36,7 @@ Sites marked with an `*` allow offline html embedding
 - [Twitter](https://twitter.com)
 - [SpeakerDeck](https://speackerdeck.com)
 - [Chirbit](http://chirb.it)
+- [CircuitLab](http://www.circuitlab.com)
 - [Alpha App.NET](https://alpha.app.net)
 - [BlipTV](http://blip.tv)
 - [Animoto](http://animoto.com)
