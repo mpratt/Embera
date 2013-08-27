@@ -73,6 +73,9 @@ class Providers
         'on.aol.com' => '\Embera\Providers\AolOn',
         '5min.com' => '\Embera\Providers\AolOn',
         'ifixit.com' => '\Embera\Providers\IFixIt',
+        'polldaddy.com' => '\Embera\Providers\PollDaddy',
+        'wordpress.tv' => '\Embera\Providers\WordpressTV',
+        'blog.wordpress.tv' => '\Embera\Providers\WordpressTV',
     );
 
     /**
@@ -154,7 +157,7 @@ class Providers
         if (empty($data['host']))
             throw new \InvalidArgumentException('The Url: ' . $url . ' seems to be invalid');
 
-        if (preg_match('~^(?:.*)\.(deviantart\.com|blip\.tv)$~i', $data['host'], $m))
+        if (preg_match('~^(?:.*)\.(deviantart\.com|blip\.tv|polldaddy\.com)$~i', $data['host'], $m))
             return strtolower($m['1']);
 
         return preg_replace('~^(?:www|player)\.~i', '', strtolower($data['host']));

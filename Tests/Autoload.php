@@ -160,6 +160,45 @@ class UrlList
                 'http://twitter.yfrog.com/hws60ilj?sa=0&stuff=stuff' => 'http://twitter.yfrog.com/hws60ilj',
             )
         ),
+        'polldaddy' => array(
+            'valid' => array(
+                'http://polldaddy.com/poll/7012505/',
+                'http://www.polldaddy.com/poll/7012505',
+                'http://polldaddy.com/s/ADF2AB9E60258D2A/',
+                'http://polldaddy.com/ratings/39/',
+                'http://polldaddy.com/poll/6976912/',
+                'https://polldaddy.com/poll/7205026/',
+                'http://mpcimageartist.polldaddy.com/s/emotions',
+                'http://theguy1979.polldaddy.com/s/growing-up-biracial-in-america-being-of-mixed-race-descent-in-2013',
+            ),
+            'invalid' => array(
+                'https://polldaddy.com/features/',
+                'http://polldaddy.com',
+                'https://polldaddy.com/pricing/',
+                'https://polldaddy.com/poll/7205026/other-stuff',
+            ),
+            'normalize' => array(
+                'https://www.polldaddy.com/poll/6976912/' => 'http://polldaddy.com/poll/6976912/',
+                'http://www.polldaddy.com/poll/6976912/' => 'http://polldaddy.com/poll/6976912/',
+                'http://polldaddy.com/poll/6976912/' => 'http://polldaddy.com/poll/6976912/',
+                'https://polldaddy.com/poll/7205026/' => 'http://polldaddy.com/poll/7205026/',
+            )
+        ),
+        'wordpresstv' => array(
+            'valid' => array(
+                'http://wordpress.tv/2013/08/25/andy-hayes-website-critiques-how-to-decide-what-works-and-what-to-ditch/',
+                'http://wordpress.tv/2013/05/09/understanding-the-add-new-link-screen-and-xfn-link-relationships/',
+                'http://wordpress.tv/2013/04/20/kimanzi-constable-the-power-of-your-story-through-wordpress/',
+                'http://wordpress.tv/2013/04/12/jayvie-canono-designing-for-development',
+                'http://blog.wordpress.tv/2013/08/08/state-of-the-word-retrospective/',
+                'http://blog.wordpress.tv/2010/06/21/wordpress-3-0-videos/'
+            ),
+            'invalid' => array(
+                'http://wordpress.tv/tag/plugins/',
+                'http://wordpress.tv/get-involved/',
+                'http://wordpress.tv/category/how-to/',
+            ),
+        ),
         'ustream' => array(
             'valid' => array(
                 'http://www.ustream.tv/channel/americatv2oficial',

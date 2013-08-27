@@ -41,6 +41,7 @@ Sites marked with an `*` allow offline html embedding
 - [Aol On](http://on.aol.com) ([5min.com](http://5min.com))
 - [NFB](http://www.nfb.ca)
 - [Scribd](http://www.scribd.com)
+- [PollDaddy](http://polldaddy.com)
 - [Dotsub](http://dotsub.com)
 - [yfrog.com](http://yfrog.com)
 - [PollEveryWhere](http://www.polleverywhere.com)
@@ -49,6 +50,7 @@ Sites marked with an `*` allow offline html embedding
 - [Screenr](http://www.screenr.com)
 - [Funny Or Die](http://www.funnyordie.com)
 - [Ustream](http://ustream.tv)
+- [WordpressTV](http://wordpress.tv)
 
 Requirements
 ============
