@@ -61,6 +61,9 @@ class Providers
         'sta.sh' => '\Embera\Providers\Deviantart',
         'collegehumor.com' => '\Embera\Providers\CollegeHumor',
         'animoto.com' => '\Embera\Providers\Animoto',
+        'funnyordie.com' => '\Embera\Providers\FunnyOrDie',
+        'ustream.tv' => '\Embera\Providers\Ustream',
+        'ustream.com' => '\Embera\Providers\Ustream',
         'yfrog.com' => '\Embera\Providers\YFrog',
         'yfrog.us' => '\Embera\Providers\YFrog',
         'twitter.yfrog.com' => '\Embera\Providers\YFrog',
@@ -113,7 +116,9 @@ class Providers
                         if (isset($this->customParams[$host]))
                             $return[$u]->appendParams($this->customParams[$host]);
                     }
-                } catch (\Exception $e) {}
+                } catch (\Exception $e) {
+                    //echo $e->getMessage();
+                }
             }
         }
 

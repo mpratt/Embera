@@ -160,6 +160,46 @@ class UrlList
                 'http://twitter.yfrog.com/hws60ilj?sa=0&stuff=stuff' => 'http://twitter.yfrog.com/hws60ilj',
             )
         ),
+        'ustream' => array(
+            'valid' => array(
+                'http://www.ustream.tv/channel/americatv2oficial',
+                'http://www.ustream.tv/usbc',
+                'http://www.ustream.tv/creativelive-3',
+                'http://www.ustream.com/channel/nyarukore99/',
+                'http://www.ustream.tv/creativeLIVE-rebroadcast',
+                'https://www.ustream.tv/creativeLIVE-rebroadcast',
+                'http://www.ustream.tv/channel/cbc-tv',
+                'http://ustream.com/KTNKENYALIVE',
+                'http://www.ustream.tv/channel/radio-unilatina-en-vivo',
+            ),
+            'invalid' => array(
+                'http://ustre.am/142lz',
+                'http://www.ustream.tv',
+                'http://www.ustream.tv/channel/radio-unilatina-en-vivo/other-stuff',
+                'https://www.ustream.tv/platform/pro#itm_source=footer&itm_medium=pro_link&itm_content=Pro Broadcasting&itm_campaign=footer',
+                'https://www.ustream.tv/platform/plans',
+                'http://www.ustream.tv/howto',
+                'http://www.ustream.com/howto',
+            ),
+        ),
+        'funnyordie' => array(
+            'valid' => array(
+                'http://www.funnyordie.com/videos/a1738b0a3f/i-hate-california-lake-tahoe',
+                'http://funnyordie.com/videos/8b2b588243/tom-brady-s-best-friend',
+                'http://www.funnyordie.com/videos/6b0b308f41/coming-soon-from-funny-or-die-with-will-ferrell/',
+                'http://funnyordie.com/videos/c4d450418e/magician-vs-wild',
+                'http://www.funnyordie.com/videos/bc5f676260/tony-hale-s-acting-process',
+            ),
+            'invalid' => array(
+                'http://www.funnyordie.com/#search-menu',
+                'http://www.funnyordie.com/videos/bc5f676260/tony-hale-s-acting-process/other/stuff',
+                'http://www.funnyordie.com/pictures/2d8a7b4876/get-the-look-miley-cyrus', // Pictures dont allow oembed
+                'http://www.funnyordie.com/drunkhistory',
+                'http://www.funnyordie.com/browse/videos/all/all/most_viewed/this_week',
+                'http://www.funnyordie.com/support/widget',
+                'http://www.funnyordie.com/marion_cotillard',
+            ),
+        ),
         'screenr' => array(
             'valid' => array(
                 'http://www.screenr.com/eJvs',
@@ -174,7 +214,6 @@ class UrlList
                 'http://www.screenr.com/help',
                 'http://www.screenr.com/T80H/other/stuff',
                 'http://www.screenr.com/T80H/other',
-                '',
             ),
         ),
         'ifixit' => array(
