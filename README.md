@@ -35,6 +35,7 @@ Sites marked with an `*` allow offline html embedding
 - [Deviantart](http://deviantart.com)
 - [Twitter](https://twitter.com)
 - [SpeakerDeck](https://speackerdeck.com)
+- [Chirbit](http://chirb.it)
 - [Alpha App.NET](https://alpha.app.net)
 - [BlipTV](http://blip.tv)
 - [Animoto](http://animoto.com)

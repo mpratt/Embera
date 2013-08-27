@@ -255,6 +255,22 @@ class UrlList
                 'http://www.screenr.com/T80H/other',
             ),
         ),
+        'chirbit' => array(
+            'valid' => array(
+                'http://chirb.it/w3gGKr',
+                'http://chirb.it/gJDBHO',
+                'http://chirb.it/wtJs5e/',
+                'http://www.chirb.it/185err',
+                'http://chirb.it/x0sw0k',
+                'http://chirb.it/zGt9tG',
+            ),
+            'invalid' => array(
+                'http://chirbit.it/top-50-chirbits-this-week.php',
+                'http://www.chirbit.com/top-50-chirbits-this-week.php',
+                'http://www.chirbit.com/',
+                'http://chirb.it',
+            ),
+        ),
         'ted' => array(
             'valid' => array(
                 'http://www.ted.com/talks/david_gallo_shows_underwater_astonishments.html',

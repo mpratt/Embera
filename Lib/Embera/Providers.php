@@ -73,6 +73,7 @@ class Providers
         '5min.com' => '\Embera\Providers\AolOn',
         'ifixit.com' => '\Embera\Providers\IFixIt',
         'ted.com' => '\Embera\Providers\Ted',
+        'chirb.it' => '\Embera\Providers\Chirbit',
         'wordpress.tv' => '\Embera\Providers\WordpressTV',
         'blog.wordpress.tv' => '\Embera\Providers\WordpressTV',
         '*.deviantart.com' => '\Embera\Providers\Deviantart',
