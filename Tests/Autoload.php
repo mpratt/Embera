@@ -255,6 +255,21 @@ class UrlList
                 'http://www.screenr.com/T80H/other',
             ),
         ),
+        'ted' => array(
+            'valid' => array(
+                'http://www.ted.com/talks/david_gallo_shows_underwater_astonishments.html',
+                'http://www.ted.com/talks/michael_dickinson_how_a_fly_flies.html',
+                'http://www.ted.com/talks/jon_ronson_strange_answers_to_the_psychopath_test.html',
+                'http://www.ted.com/talks/lang/da/jill_bolte_taylor_s_powerful_stroke_of_insight.html',
+                'http://www.ted.com/talks/lang/fa/jill_bolte_taylor_s_powerful_stroke_of_insight.html',
+            ),
+            'invalid' => array(
+                'http://www.ted.com/',
+                'http://www.ted.com/playlists/5/insects_are_awesome.html',
+                'http://www.ted.com/tedx',
+                'http://www.ted.com/talks',
+            ),
+        ),
         'ifixit' => array(
             'valid' => array(
                 'http://www.ifixit.com/Guide/Replacing+iPad+4+CDMA+Logic+Board/16458',
@@ -269,6 +284,25 @@ class UrlList
                 'http://www.ifixit.com/',
                 'http://www.ifixit.com/Guide/login/register',
                 'http://www.ifixit.com/Guide/login',
+            ),
+        ),
+        'bambuser' => array(
+            'valid' => array(
+                'http://bambuser.com/v/3853413',
+                'http://bambuser.com/v/3828591/',
+                'http://bambuser.com/channel/peterpstuttgart',
+                'http://www.bambuser.com/v/3828416',
+                'http://bambuser.com/v/3847370',
+            ),
+            'invalid' => array(
+                'http://bambuser.com/broadcasts',
+                'http://bambuser.com/premium',
+                'http://bambuser.com/tag/Business',
+                'http://bambuser.com/tag/TMSO',
+                'http://bambuser.com/',
+            ),
+            'normalize' => array(
+                'http://www.bambuser.com/v/3847370/' => 'http://bambuser.com/v/3847370',
             ),
         ),
         'githubgist' => array(

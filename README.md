@@ -22,6 +22,7 @@ Sites marked with an `*` allow offline html embedding
 - [SoundCloud](http://soundcloud.com)
 - [Twitter](https://twitter.com)
 - [Qik](http://qik.com)
+- [Ted](http://ted.com)
 - [Flickr](http://flickr.com)
 - [Revision3](http://revision3.com)
 - [Hulu](http://www.hulu.com)
@@ -41,9 +42,9 @@ Sites marked with an `*` allow offline html embedding
 - [Aol On](http://on.aol.com) ([5min.com](http://5min.com))
 - [NFB](http://www.nfb.ca)
 - [Scribd](http://www.scribd.com)
-- [PollDaddy](http://polldaddy.com)
 - [Dotsub](http://dotsub.com)
 - [yfrog.com](http://yfrog.com)
+- [PollDaddy](http://polldaddy.com)
 - [PollEveryWhere](http://www.polleverywhere.com)
 - [ClikThrough](http://www.clikthrough.com)
 - [SlideShare](http://www.slideshare.net)
@@ -51,6 +52,8 @@ Sites marked with an `*` allow offline html embedding
 - [Funny Or Die](http://www.funnyordie.com)
 - [Ustream](http://ustream.tv)
 - [WordpressTV](http://wordpress.tv)
+- [Coub](http://coub.com)
+- [Bambuser](http://bambuser.com)
 
 Requirements
 ============
