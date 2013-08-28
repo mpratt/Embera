@@ -255,6 +255,25 @@ class UrlList
                 'http://www.videojug.com',
             ),
         ),
+        'sapo' => array(
+            'valid' => array(
+                'http://videos.sapo.pt/1z2ieEQvWVZ6af0nQZFN',
+                'http://videos.sapo.pt/ZpO1SNwJwjjjmuOlDqGN/',
+                'http://videos.sapo.pt/2VA8L9zp3eSUn0HTsG3G',
+                'http://videos.sapo.pt/R3wmOAGyjZFRkwdRbmHs',
+                'http://videos.sapo.pt/R5Y9lJteSAzyf5V5uAhD',
+                'http://videos.sapo.pt/sk9LmQAH0PQ4Pz1iupkV',
+                'http://videos.sapo.pt/HAUithzZK3SShqIRGQBA',
+                'http://videos.sapo.pt/eFdSRwoVzYQQ4NVEtGF6',
+            ),
+            'invalid' => array(
+                'http://videos.sapo.pt/top.html',
+                'http://www.sapo.pt/',
+                'http://videos.sapo.pt/tag.html?insanospt',
+                'http://videos.sapo.pt/categorias.html',
+                'http://videos.sapo.pt/sapotv.html',
+            ),
+        ),
         'screenr' => array(
             'valid' => array(
                 'http://www.screenr.com/eJvs',

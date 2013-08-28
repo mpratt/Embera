@@ -46,6 +46,7 @@ Sites marked with an `*` allow offline html embedding
 - [NFB](http://www.nfb.ca)
 - [Scribd](http://www.scribd.com)
 - [Dotsub](http://dotsub.com)
+- [Sapo Videos](http://videos.sapo.pt)
 - [yfrog.com](http://yfrog.com)
 - [PollDaddy](http://polldaddy.com)
 - [PollEveryWhere](http://www.polleverywhere.com)
