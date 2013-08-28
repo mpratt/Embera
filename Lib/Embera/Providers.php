@@ -24,7 +24,7 @@ class Providers
     /** @var array Custom parameters for each host/provider */
     protected $customParams = array();
 
-    /** @var array The mapping of host -> provider class relation. */
+    /** @var array Massive array with the mapping of host -> provider class relation. */
     protected $services = array(
         'youtube.com' => '\Embera\Providers\Youtube',
         'youtu.be' => '\Embera\Providers\Youtube',
@@ -55,6 +55,7 @@ class Providers
         'jest.com' => '\Embera\Providers\Jest',
         'alpha.app.net' => '\Embera\Providers\AppNet',
         'bambuser.com' => '\Embera\Providers\Bambuser',
+        'videojug.com' => '\Embera\Providers\VideoJug',
         'photos.app.net' => '\Embera\Providers\AppNet',
         'my.opera.com' => '\Embera\Providers\MyOpera',
         'fav.me' => '\Embera\Providers\Deviantart',

@@ -31,6 +31,7 @@ Sites marked with an `*` allow offline html embedding
 - [Github Gist](https://gist.github.com)
 - [CollegeHumor](http://www.collegehumor.com)
 - [Jest](http://www.jest.com)
+- [VideoJug](http://www.videojug.com)
 - [MyOpera](http://my.opera.com)
 - [Deviantart](http://deviantart.com)
 - [Twitter](https://twitter.com)
