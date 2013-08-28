@@ -47,6 +47,7 @@ class Providers
         'hulu.com' => '\Embera\Providers\Hulu',
         'coub.com' => '\Embera\Providers\Coub',
         'screenr.com' => '\Embera\Providers\Screenr',
+        'justin.tv' => '\Embera\Providers\JustinTV',
         'kickstarter.com' => '\Embera\Providers\Kickstarter',
         'circuitlab.com' => '\Embera\Providers\CircuitLab',
         'nfb.ca' => '\Embera\Providers\NFB',

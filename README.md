@@ -55,6 +55,7 @@ Sites marked with an `*` allow offline html embedding
 - [Screenr](http://www.screenr.com)
 - [Funny Or Die](http://www.funnyordie.com)
 - [Ustream](http://ustream.tv)
+- [JustinTV](http://www.justin.tv)
 - [WordpressTV](http://wordpress.tv)
 - [Coub](http://coub.com)
 - [Bambuser](http://bambuser.com)
