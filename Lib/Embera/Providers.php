@@ -35,6 +35,7 @@ class Providers
         'soundcloud.com' => '\Embera\Providers\SoundCloud',
         'gist.github.com' => '\Embera\Providers\GithubGist',
         'qik.com' => '\Embera\Providers\Qik',
+        'official.fm' => '\Embera\Providers\OfficialFM',
         'rdio.com' => '\Embera\Providers\Rdio',
         'rd.io' => '\Embera\Providers\Rdio',
         'revision3.com' => '\Embera\Providers\Revision3',

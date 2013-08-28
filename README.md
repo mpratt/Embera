@@ -28,6 +28,7 @@ Sites marked with an `*` allow offline html embedding
 - [Hulu](http://www.hulu.com)
 - [Kickstarter](http://www.kickstarter.com)
 - [MixCloud](http://mixcloud.com)
+- [OfficialFM](http://official.fm)
 - [Github Gist](https://gist.github.com)
 - [CollegeHumor](http://www.collegehumor.com)
 - [Jest](http://www.jest.com)

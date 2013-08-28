@@ -1,6 +1,6 @@
 <?php
 /**
- * JustinTV.php
+ * OfficialFM.php
  *
  * @package Providers
  * @author Michael Pratt <pratt@hablarmierda.net>
@@ -13,23 +13,24 @@
 namespace Embera\Providers;
 
 /**
- * The Justin.tv Provider
+ * The official.fm Provider
  */
-class JustinTV extends \Embera\Adapters\Service
+class OfficialFM extends \Embera\Adapters\Service
 {
     /** inline {@inheritdoc} */
-    protected $apiUrl = 'http://api.justin.tv/api/embed/from_url.json';
+    protected $apiUrl = 'http://official.fm/services/oembed.json';
 
     /** inline {@inheritdoc} */
     protected function validateUrl()
     {
-        return (preg_match('~justin\.tv/(?:[\w\d_\-]+)$~i', $this->url));
+        return (preg_match('~official\.fm/(?:tracks|playlists)/(?:[^/]+)$~i', $this->url));
     }
 
     /** inline {@inheritdoc} */
     protected function normalizeUrl()
     {
-        $this->url = str_ireplace('//justin.tv', '//www.justin.tv', rtrim($this->url, '/'));
+        $this->url = preg_replace('~\?(.*)$~i', '', $this->url);
+        $this->url = str_ireplace('//www.official.fm', '//official.fm', rtrim($this->url, '/'));
     }
 }
 

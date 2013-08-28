@@ -255,6 +255,29 @@ class UrlList
                 'http://www.videojug.com',
             ),
         ),
+        'officialfm' => array(
+            'valid' => array(
+                'http://official.fm/playlists/cxBp?from=homepage&track_id=5dtD',
+                'http://official.fm/playlists/Dztx',
+                'http://official.fm/tracks/CLZo',
+                'http://official.fm/tracks/1Z1u',
+                'http://official.fm/tracks/2u3X',
+                'http://official.fm/tracks/2eUw',
+            ),
+            'invalid' => array(
+                'http://official.fm/login',
+                'http://official.fm/join',
+                'http://official.fm/',
+                'http://official.fm/developers',
+                'http://official.fm/privacy',
+            ),
+            'normalize' => array(
+                'http://official.fm/playlists/Dztx?from=homepage&track_id=9rk1' => 'http://official.fm/playlists/Dztx',
+                'http://www.official.fm/playlists/Dztx?from=homepage&track_id=9rk1' => 'http://official.fm/playlists/Dztx',
+                'http://www.official.fm/playlists/Dztx' => 'http://official.fm/playlists/Dztx',
+                'http://official.fm/tracks/Dztx?from=homepage&track_id=9rk1' => 'http://official.fm/tracks/Dztx',
+            )
+        ),
         'justintv' => array(
             'valid' => array(
                 'http://www.justin.tv/skyfire_trains_tv',
