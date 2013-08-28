@@ -42,6 +42,7 @@ Sites marked with an `*` allow offline html embedding
 - [Alpha App.NET](https://alpha.app.net)
 - [BlipTV](http://blip.tv)
 - [Animoto](http://animoto.com)
+- [HuffDuffer](http://huffduffer.com)
 - [Rdio](http://rdio.com)
 - [Aol On](http://on.aol.com) ([5min.com](http://5min.com))
 - [NFB](http://www.nfb.ca)

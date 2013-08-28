@@ -239,6 +239,23 @@ class UrlList
                 'http://www.funnyordie.com/marion_cotillard',
             ),
         ),
+        'huffduffer' => array(
+            'valid' => array(
+                'http://huffduffer.com/jxpx777/125342',
+                'http://huffduffer.com/Jozh/124683/',
+                'http://huffduffer.com/shawnpwalsh/124687',
+                'http://www.huffduffer.com/erichaberkorn/124686',
+                'http://huffduffer.com/bulkorder/124688',
+                'http://huffduffer.com/tfehr/124690',
+                'http://huffduffer.com/jasonmklug/124719',
+            ),
+            'invalid' => array(
+                'http://huffduffer.com/tags/productivity',
+                'http://huffduffer.com/tags/weekly+security+audio+column',
+                'http://huffduffer.com/signup/',
+                'http://huffduffer.com/',
+            ),
+        ),
         'videojug' => array(
             'valid' => array(
                 'http://www.videojug.com/film/how-to-use-your-ipod-click-wheel',
