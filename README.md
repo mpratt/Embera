@@ -56,6 +56,9 @@ Sites marked with an `*` allow offline html embedding
 - [WordpressTV](http://wordpress.tv)
 - [Coub](http://coub.com)
 - [Bambuser](http://bambuser.com)
+- [Geograph UK](http://geograph.org.uk)
+- [Geograph DE](http://geo-en.hlipp.de)
+- [Geograph Channel Islands](http://channel-islands.geographs.org)
 
 Requirements
 ============

@@ -273,6 +273,55 @@ class UrlList
                 'https://circuitlab.com/circuit/z79rqm/leds-with-resistor-biasing' => 'https://www.circuitlab.com/circuit/z79rqm/leds-with-resistor-biasing',
             )
         ),
+        'geographci' => array(
+            'valid' => array(
+                'http://channel-islands.geographs.org/photo/1166',
+                'http://channel-islands.geographs.org/photo/952',
+                'http://channel-islands.geographs.org/photo/1231',
+                'http://channel-islands.geographs.org.je/photo/961',
+                'http://channel-islands.geographs.org.gg/photo/984',
+                'http://channel-islands.geographs.org/photo/656',
+            ),
+            'invalid' => array(
+                'http://channel-islands.geographs.org/discuss/',
+                'http://channel-islands.geographs.org/submit.php',
+                'http://channel-islands.geographs.org/submit.php',
+                'http://channel-islands.geographs.org/list.php',
+            ),
+        ),
+        'geographde' => array(
+            'valid' => array(
+                'http://geo-en.hlipp.de/photo/36058',
+                'http://geo-en.hlipp.de/photo/22092/',
+                'http://geo.hlipp.de/photo/35233',
+                'http://geo.hlipp.de/photo/30213',
+                'http://germany.geograph.org/photo/40426',
+                'http://germany.geograph.org/photo/36058',
+            ),
+            'invalid' => array(
+                'http://geo-en.hlipp.de/discuss/',
+                'http://geo-en.hlipp.de/latlong.php',
+                'http://geo-en.hlipp.de/gallery/historische_bauten_historic_buildings_127',
+                'http://geo.hlipp.de/photo/35233/more-stuff',
+            ),
+        ),
+        'geographuk' => array(
+            'valid' => array(
+                'http://www.geograph.org.uk/photo/3619867',
+                'http://www.geograph.org.uk/photo/2308394/',
+                'http://www.geograph.org.uk/photo/1449749',
+                'http://www.geograph.co.uk/photo/292839',
+                'http://www.geograph.ie/photo/353656',
+                'http://www.geograph.org.uk/photo/1146430',
+                'http://www.geograph.ie/photo/973235',
+            ),
+            'invalid' => array(
+                'http://www.geograph.ie/gallery.php',
+                'http://www.geograph.org/gallery.php?tab=highest',
+                'http://www.geograph.org.uk/photo/2000063/other/stuff',
+                'http://www.geograph.org.uk/photo/words',
+            ),
+        ),
         'chirbit' => array(
             'valid' => array(
                 'http://chirb.it/w3gGKr',
