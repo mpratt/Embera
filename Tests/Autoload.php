@@ -239,6 +239,20 @@ class UrlList
                 'http://www.funnyordie.com/marion_cotillard',
             ),
         ),
+        'ifttt' => array(
+            'valid' => array(
+                'https://ifttt.com/recipes/112989',
+                'https://www.ifttt.com/recipes/111063',
+                'https://ifttt.com/recipes/113633/',
+                'https://www.ifttt.com/recipes/109983/',
+            ),
+            'invalid' => array(
+                'https://ifttt.com/recipes',
+                'https://ifttt.com/',
+                'https://ifttt.com/recipes/search?q=gmail',
+                'https://ifttt.com/recipes/search',
+            ),
+        ),
         'huffduffer' => array(
             'valid' => array(
                 'http://huffduffer.com/jxpx777/125342',

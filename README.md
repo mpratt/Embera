@@ -55,6 +55,7 @@ Sites marked with an `*` allow offline html embedding
 - [ClikThrough](http://www.clikthrough.com)
 - [SlideShare](http://www.slideshare.net)
 - [Screenr](http://www.screenr.com)
+- [IFTTT](http://ifttt.com)
 - [Funny Or Die](http://www.funnyordie.com)
 - [Ustream](http://ustream.tv)
 - [JustinTV](http://www.justin.tv)
