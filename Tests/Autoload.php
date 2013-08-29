@@ -221,6 +221,21 @@ class UrlList
                 'http://www.ustream.com/howto',
             ),
         ),
+        'hq23' => array(
+            'valid' => array(
+                'http://www.23hq.com/brinjal/photo/13305971',
+                'http://www.23hq.com/Dan-Tuyet/photo/13301964/',
+                'http://23hq.com/gap_mike/photo/13287796',
+                'http://www.23hq.com/Bo-Tina/photo/13259658',
+                'http://www.23hq.com/euzmar/photo/13254262',
+            ),
+            'invalid' => array(
+                'http://www.23hq.com/23/just-in?world=1&limit=70',
+                'http://www.23hq.com/photogroup',
+                'http://www.23hq.com/23/signup',
+                'http://www.23hq.com/',
+            ),
+        ),
         'mobypicture' => array(
             'valid' => array(
                 'http://www.mobypicture.com/user/Henk_Voermans/view/15880044',
