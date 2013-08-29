@@ -84,6 +84,8 @@ class Providers
         'ted.com' => '\Embera\Providers\Ted',
         'chirb.it' => '\Embera\Providers\Chirbit',
         'wordpress.tv' => '\Embera\Providers\WordpressTV',
+        'mobypicture.com' => '\Embera\Providers\MobyPicture',
+        'moby.to' => '\Embera\Providers\MobyPicture',
         'blog.wordpress.tv' => '\Embera\Providers\WordpressTV',
         'geograph.org.uk' => '\Embera\Providers\GeographUk',
         'geograph.co.uk' => '\Embera\Providers\GeographUk',

@@ -221,6 +221,25 @@ class UrlList
                 'http://www.ustream.com/howto',
             ),
         ),
+        'mobypicture' => array(
+            'valid' => array(
+                'http://www.mobypicture.com/user/Henk_Voermans/view/15880044',
+                'http://moby.to/89cw01',
+                'http://www.mobypicture.com/user/mjjeje_cojjee/view/15880072',
+                'http://www.mobypicture.com/user/Chino_Sanchez/view/15880070/',
+                'http://mobypicture.com/user/oskrsal71/view/15880066',
+                'http://www.mobypicture.com/user/4/view/15877052',
+                'http://moby.to/be1e30',
+            ),
+            'invalid' => array(
+                'http://www.mobypicture.com/user/kakhiel2',
+                'http://www.mobypicture.com/groups',
+                'http://www.mobypicture.com/',
+                'http://moby.to/',
+                'http://moby.to/other/stuff/',
+                'http://mobypicture.com/user/oskrsal71/view/15880066/other/stuff',
+            ),
+        ),
         'funnyordie' => array(
             'valid' => array(
                 'http://www.funnyordie.com/videos/a1738b0a3f/i-hate-california-lake-tahoe',

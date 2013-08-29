@@ -45,6 +45,7 @@ Sites marked with an `*` allow offline html embedding
 - [HuffDuffer](http://huffduffer.com)
 - [Rdio](http://rdio.com)
 - [Shoudio](http://shoudio.com)
+- [MobyPicture](http://mobypicture.com)
 - [Aol On](http://on.aol.com) ([5min.com](http://5min.com))
 - [NFB](http://www.nfb.ca)
 - [Scribd](http://www.scribd.com)
