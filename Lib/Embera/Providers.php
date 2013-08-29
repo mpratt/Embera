@@ -89,6 +89,7 @@ class Providers
         'moby.to' => '\Embera\Providers\MobyPicture',
         '23hq.com' => '\Embera\Providers\Hq23',
         'gmep.org' => '\Embera\Providers\Gmep',
+        'urtak.com' => '\Embera\Providers\Urtak',
         'geograph.org.uk' => '\Embera\Providers\GeographUk',
         'geograph.co.uk' => '\Embera\Providers\GeographUk',
         'geograph.ie' => '\Embera\Providers\GeographUk',
