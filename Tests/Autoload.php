@@ -221,6 +221,31 @@ class UrlList
                 'http://www.ustream.com/howto',
             ),
         ),
+        'cacoo' => array(
+            'valid' => array(
+                'https://cacoo.com/diagrams/m9uZtizE5I2GkFR6',
+                'https://cacoo.com/diagrams/eQe99LVxlYdVCvHA/',
+                'https://www.cacoo.com/diagrams/9mG2aVxsBqoH69Qh',
+                'https://cacoo.com/diagrams/z4IixDJR44iCqIYw/',
+                'http://cacoo.com/diagrams/6NbKDcInDTisv2vU',
+                'https://www.cacoo.com/diagrams/ZQ4rgdwXvTZFGQX8',
+                'https://cacoo.com/diagrams/zN0Uen7DE0OyCuBC',
+                'https://www.cacoo.com/diagrams/dbIT1zRnPJw8lCfj',
+            ),
+            'invalid' => array(
+                'https://cacoo.com/lang/en/?ref=logo',
+                'https://cacoo.com/diagrams/6NbKDcInDTisv2vU/other/stuff',
+                'https://cacoo.com/lang/en/tour?ref=header',
+                'https://cacoo.com/lang/en/faq',
+                'https://cacoo.com/signup',
+                'https://cacoo.com/',
+            ),
+            'normalize' => array(
+                'https://www.cacoo.com/diagrams/9mG2aVxsBqoH69Qh' => 'https://cacoo.com/diagrams/9mG2aVxsBqoH69Qh',
+                'https://www.cacoo.com/diagrams/9mG2aVxsBqoH69Qh/' => 'https://cacoo.com/diagrams/9mG2aVxsBqoH69Qh',
+                'https://cacoo.com/diagrams/9mG2aVxsBqoH69Qh/' => 'https://cacoo.com/diagrams/9mG2aVxsBqoH69Qh',
+            )
+        ),
         'urtak' => array(
             'valid' => array(
                 'https://urtak.com/u/9387',

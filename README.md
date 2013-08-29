@@ -44,6 +44,7 @@ Sites marked with an `*` allow offline html embedding
 - [Alpha App.NET](https://alpha.app.net)
 - [BlipTV](http://blip.tv)
 - [Animoto](http://animoto.com)
+- [Cacoo](http://cacoo.com)
 - [HuffDuffer](http://huffduffer.com)
 - [Rdio](http://rdio.com)
 - [Shoudio](http://shoudio.com)
