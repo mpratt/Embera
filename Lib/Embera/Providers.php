@@ -41,6 +41,7 @@ class Providers
         'rd.io' => '\Embera\Providers\Rdio',
         'revision3.com' => '\Embera\Providers\Revision3',
         'cacoo.com' => '\Embera\Providers\Cacoo',
+        'dailymile.com' => '\Embera\Providers\DailyMile',
         'speakerdeck.com' => '\Embera\Providers\Speakerdeck',
         'dailymotion.com' => '\Embera\Providers\DailyMotion',
         'viddler.com' => '\Embera\Providers\Viddler',

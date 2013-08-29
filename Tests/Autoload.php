@@ -199,6 +199,23 @@ class UrlList
                 'http://wordpress.tv/category/how-to/',
             ),
         ),
+        'dailymile' => array(
+            'valid' => array(
+                'http://www.dailymile.com/people/EddieJ3/entries/24776213',
+                'http://www.dailymile.com/people/JessicaP30/entries/24791047',
+                'http://www.dailymile.com/people/JimF3/entries/24684863',
+                'http://www.dailymile.com/people/JimF3/entries/24623801/',
+                'http://dailymile.com/people/JimF3/entries/24447986',
+                'http://dailymile.com/people/IANH17/entries/24533363/',
+                'http://www.dailymile.com/people/IANH17/entries/24444266',
+            ),
+            'invalid' => array(
+                'http://www.dailymile.com/people/EddieJ3',
+                'http://www.dailymile.com/',
+                'http://www.dailymile.com/signup',
+                'http://www.dailymile.com/people/K_P_S',
+            ),
+        ),
         'ustream' => array(
             'valid' => array(
                 'http://www.ustream.tv/channel/americatv2oficial',
