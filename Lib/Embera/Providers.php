@@ -61,6 +61,8 @@ class Providers
         'videojug.com' => '\Embera\Providers\VideoJug',
         'photos.app.net' => '\Embera\Providers\AppNet',
         'my.opera.com' => '\Embera\Providers\MyOpera',
+        'open.spotify.com' => '\Embera\Providers\Spotify',
+        'spoti.fi' => '\Embera\Providers\Spotify',
         'fav.me' => '\Embera\Providers\Deviantart',
         'sta.sh' => '\Embera\Providers\Deviantart',
         'collegehumor.com' => '\Embera\Providers\CollegeHumor',

@@ -60,6 +60,7 @@ Sites marked with an `*` allow offline html embedding
 - [JustinTV](http://www.justin.tv)
 - [WordpressTV](http://wordpress.tv)
 - [Coub](http://coub.com)
+- [Spotify](http://spotify.com)
 - [Bambuser](http://bambuser.com)
 - [Geograph UK](http://geograph.org.uk)
 - [Geograph DE](http://geo-en.hlipp.de)
