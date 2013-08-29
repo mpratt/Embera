@@ -199,6 +199,48 @@ class UrlList
                 'http://wordpress.tv/category/how-to/',
             ),
         ),
+        'sketchfab' => array(
+            'valid' => array(
+                'https://sketchfab.com/show/lRyoY4ZsPRUMPlSiz03ORxTIXXK',
+                'https://sketchfab.com/show/4e6urv5wnV8hxfhD2xUnSrvLNss',
+                'https://sketchfab.com/show/7irY67vcquhR4DCmPAUsSyxZWoC/',
+                'https://www.sketchfab.com/show/7w7pAfrCfjovwykkEeRFLGw5SXS',
+                'https://sketchfab.com/show/s0eX1riDqEY6bT0uBtCjxC4V7OA',
+                'https://sketchfab.com/show/lwVPifecIahu0rtGqlzZosBPFOC',
+                'https://sketchfab.com/show/9lVs96AuFUAjKjwvsMG0Uf7Yy7b',
+            ),
+            'invalid' => array(
+                'https://sketchfab.com/browse/',
+                'https://sketchfab.com/browse/faved',
+                'https://sketchfab.com/show/9lVs96AuFUAjKjwvsMG0Uf7Yy7b/other/crap',
+                'https://sketchfab.com/order',
+                'https://sketchfab.com/show/',
+                'https://sketchfab.com/dashboard/upload',
+                'https://sketchfab.com/'
+            ),
+            'normalize' => array(
+                'https://www.sketchfab.com/show/9lVs96AuFUAjKjwvsMG0Uf7Yy7b' => 'https://sketchfab.com/show/9lVs96AuFUAjKjwvsMG0Uf7Yy7b',
+                'https://sketchfab.com/show/9lVs96AuFUAjKjwvsMG0Uf7Yy7b' => 'https://sketchfab.com/show/9lVs96AuFUAjKjwvsMG0Uf7Yy7b',
+                'https://www.sketchfab.com/show/9lVs96AuFUAjKjwvsMG0Uf7Yy7b/' => 'https://sketchfab.com/show/9lVs96AuFUAjKjwvsMG0Uf7Yy7b',
+            )
+        ),
+        'dipity' => array(
+            'valid' => array(
+                'http://www.dipity.com/BIRN/Albania-Local-Elections-2011/',
+                'http://www.dipity.com/StevePro/Skype-from-startup-to-8-5-billion-sale',
+                'http://www.dipity.com/ibmzrl/Nanotechnology-at-IBM-Research/',
+                'http://dipity.com/StevePro/2010-in-Review/',
+                'http://www.dipity.com/timeline/Bryson/',
+                'http://www.dipity.com/timeline/Nba-Finals/',
+            ),
+            'invalid' => array(
+                'http://www.dipity.com/timeline/Nba-Finals/other/stuff',
+                'http://www.dipity.com/',
+                'http://www.dipity.com/premium',
+                'http://www.dipity.com/timetube',
+                'http://www.dipity.com/join',
+            ),
+        ),
         'dailymile' => array(
             'valid' => array(
                 'http://www.dailymile.com/people/EddieJ3/entries/24776213',

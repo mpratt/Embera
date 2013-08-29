@@ -42,6 +42,8 @@ class Providers
         'revision3.com' => '\Embera\Providers\Revision3',
         'cacoo.com' => '\Embera\Providers\Cacoo',
         'dailymile.com' => '\Embera\Providers\DailyMile',
+        'dipity.com' => '\Embera\Providers\Dipity',
+        'sketchfab.com' => '\Embera\Providers\Sketchfab',
         'speakerdeck.com' => '\Embera\Providers\Speakerdeck',
         'dailymotion.com' => '\Embera\Providers\DailyMotion',
         'viddler.com' => '\Embera\Providers\Viddler',

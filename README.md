@@ -45,6 +45,8 @@ Sites marked with an `*` allow offline html embedding
 - [BlipTV](http://blip.tv)
 - [Animoto](http://animoto.com)
 - [Cacoo](http://cacoo.com)
+- [Dipity](http://dipity.com)
+- [Sketchfab](http://sketchfab.com)
 - [HuffDuffer](http://huffduffer.com)
 - [Rdio](http://rdio.com)
 - [Shoudio](http://shoudio.com)
