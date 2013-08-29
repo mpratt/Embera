@@ -98,6 +98,8 @@ class Providers
         '*.deviantart.com' => '\Embera\Providers\Deviantart',
         '*.polldaddy.com' => '\Embera\Providers\PollDaddy',
         '*.blip.tv' => '\Embera\Providers\BlipTV',
+        '*.shoudio.com' => '\Embera\Providers\Shoudio',
+        '*.shoud.io' => '\Embera\Providers\Shoudio',
     );
 
     /**

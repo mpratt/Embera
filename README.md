@@ -44,6 +44,7 @@ Sites marked with an `*` allow offline html embedding
 - [Animoto](http://animoto.com)
 - [HuffDuffer](http://huffduffer.com)
 - [Rdio](http://rdio.com)
+- [Shoudio](http://shoudio.com)
 - [Aol On](http://on.aol.com) ([5min.com](http://5min.com))
 - [NFB](http://www.nfb.ca)
 - [Scribd](http://www.scribd.com)
