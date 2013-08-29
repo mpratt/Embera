@@ -39,6 +39,8 @@ class Providers
         'huffduffer.com' => '\Embera\Providers\Huffduffer',
         'rdio.com' => '\Embera\Providers\Rdio',
         'rd.io' => '\Embera\Providers\Rdio',
+        'meetup.com' => '\Embera\Providers\Meetup',
+        'meetu.ps' => '\Embera\Providers\Meetup',
         'revision3.com' => '\Embera\Providers\Revision3',
         'cacoo.com' => '\Embera\Providers\Cacoo',
         'dailymile.com' => '\Embera\Providers\DailyMile',
