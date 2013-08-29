@@ -38,6 +38,7 @@ Sites marked with an `*` allow offline html embedding
 - [Twitter](https://twitter.com)
 - [SpeakerDeck](https://speackerdeck.com)
 - [23hq](http://23hq.com)
+- [Gmep](http://gmep.org)
 - [Chirbit](http://chirb.it)
 - [CircuitLab](http://www.circuitlab.com)
 - [Alpha App.NET](https://alpha.app.net)
