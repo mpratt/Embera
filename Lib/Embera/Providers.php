@@ -87,6 +87,7 @@ class Providers
         'ifixit.com' => '\Embera\Providers\IFixIt',
         'ted.com' => '\Embera\Providers\Ted',
         'chirb.it' => '\Embera\Providers\Chirbit',
+        'roomshare.jp' => '\Embera\Providers\Roomshare',
         'wordpress.tv' => '\Embera\Providers\WordpressTV',
         'blog.wordpress.tv' => '\Embera\Providers\WordpressTV',
         'mobypicture.com' => '\Embera\Providers\MobyPicture',

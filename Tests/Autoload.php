@@ -184,6 +184,20 @@ class UrlList
                 'https://polldaddy.com/poll/7205026/' => 'http://polldaddy.com/poll/7205026/',
             )
         ),
+        'roomshare' => array(
+            'valid' => array(
+                'http://roomshare.jp/en/post/137453',
+                'http://roomshare.jp/post/137453',
+                'http://roomshare.jp/en/post/137393/',
+                'http://www.roomshare.jp/post/137393',
+            ),
+            'invalid' => array(
+                'http://roomshare.jp/en/post?region=1',
+                'http://roomshare.jp/en/',
+                'http://roomshare.jp/keywords',
+                'http://roomshare.jp',
+            ),
+        ),
         'wordpresstv' => array(
             'valid' => array(
                 'http://wordpress.tv/2013/08/25/andy-hayes-website-critiques-how-to-decide-what-works-and-what-to-ditch/',
