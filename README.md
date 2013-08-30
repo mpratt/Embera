@@ -13,68 +13,28 @@ Check out the `Basic Usage` instructions for more information.
 
 Supported Sites
 ===============
-Sites marked with an `*` allow offline html embedding
-- [Youtube](http://www.youtube.com/) *
-- [Vimeo](http://vimeo.com/) *
-- [DailyMotion](http://www.dailymotion.com/) *
-- [Viddler](http://www.viddler.com) *
+Embera supports **60+** sites. Sites marked with an `*` allow offline html embedding
+
+- * [Youtube](http://www.youtube.com/)
+- * [Vimeo](http://vimeo.com/)
+- * [DailyMotion](http://www.dailymotion.com/)
 - [Instagram](http://instagram.com)
 - [SoundCloud](http://soundcloud.com)
 - [Twitter](https://twitter.com)
-- [Qik](http://qik.com)
 - [Ted](http://ted.com)
 - [Flickr](http://flickr.com)
 - [Revision3](http://revision3.com)
 - [Hulu](http://www.hulu.com)
 - [Kickstarter](http://www.kickstarter.com)
-- [MixCloud](http://mixcloud.com)
-- [OfficialFM](http://official.fm)
-- [Github Gist](https://gist.github.com)
-- [CollegeHumor](http://www.collegehumor.com)
-- [Jest](http://www.jest.com)
-- [Roomshare](http://roomshare.jp)
-- [VideoJug](http://www.videojug.com)
-- [MyOpera](http://my.opera.com)
 - [Deviantart](http://deviantart.com)
-- [Twitter](https://twitter.com)
 - [SpeakerDeck](https://speackerdeck.com)
-- [23hq](http://23hq.com)
-- [Gmep](http://gmep.org)
-- [Chirbit](http://chirb.it)
-- [CircuitLab](http://www.circuitlab.com)
-- [Alpha App.NET](https://alpha.app.net)
-- [BlipTV](http://blip.tv)
-- [Animoto](http://animoto.com)
-- [Cacoo](http://cacoo.com)
-- [Dipity](http://dipity.com)
-- [Sketchfab](http://sketchfab.com)
-- [HuffDuffer](http://huffduffer.com)
-- [Rdio](http://rdio.com)
-- [Crowd Ranking](http://crowdranking.com)
-- [Shoudio](http://shoudio.com)
-- [MobyPicture](http://mobypicture.com)
-- [Aol On](http://on.aol.com) ([5min.com](http://5min.com))
-- [NFB](http://www.nfb.ca)
 - [Scribd](http://www.scribd.com)
-- [Dotsub](http://dotsub.com)
-- [Sapo Videos](http://videos.sapo.pt)
-- [yfrog.com](http://yfrog.com)
-- [PollDaddy](http://polldaddy.com)
-- [PollEveryWhere](http://www.polleverywhere.com)
-- [ClikThrough](http://www.clikthrough.com)
 - [SlideShare](http://www.slideshare.net)
-- [Screenr](http://www.screenr.com)
-- [IFTTT](http://ifttt.com)
 - [Funny Or Die](http://www.funnyordie.com)
 - [Ustream](http://ustream.tv)
 - [JustinTV](http://www.justin.tv)
-- [WordpressTV](http://wordpress.tv)
-- [Coub](http://coub.com)
-- [Spotify](http://spotify.com)
-- [Bambuser](http://bambuser.com)
-- [Geograph UK](http://geograph.org.uk)
-- [Geograph DE](http://geo-en.hlipp.de)
-- [Geograph Channel Islands](http://channel-islands.geographs.org)
+
+And more! for the full list checkout the [PROVIDERS.md](https://github.com/mpratt/Embera/blob/master/PROVIDERS.md) file.
 
 Requirements
 ============
