@@ -50,6 +50,7 @@ Sites marked with an `*` allow offline html embedding
 - [Sketchfab](http://sketchfab.com)
 - [HuffDuffer](http://huffduffer.com)
 - [Rdio](http://rdio.com)
+- [Crowd Ranking](http://crowdranking.com)
 - [Shoudio](http://shoudio.com)
 - [MobyPicture](http://mobypicture.com)
 - [Aol On](http://on.aol.com) ([5min.com](http://5min.com))
