@@ -64,11 +64,6 @@ abstract class Service
         if (!$this->validateUrl())
             throw new \InvalidArgumentException('Url ' . $this->url . ' seems to be invalid for the ' . get_class($this) . ' service');
 
-        $config = array_merge(array(
-            'fake' => array(),
-            'params' => array()
-        ), $config);
-
         $this->fake = array_merge(array(
             'width' => 420,
             'height' => 315

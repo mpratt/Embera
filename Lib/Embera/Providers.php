@@ -124,9 +124,10 @@ class Providers
      */
     public function __construct(array $config = array(), \Embera\Oembed $oembed)
     {
-        $this->config = array_merge(array(
+        $this->config = array_replace_recursive(array(
             'params' => array(),
             'custom_params' => array(),
+            'fake' => array()
         ), $config);
 
         $this->extractCustomParams($this->config['custom_params']);

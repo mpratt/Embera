@@ -29,6 +29,7 @@ class Bambuser extends \Embera\Adapters\Service
                 preg_match('~bambuser\.com/v/(?:[0-9]+)$~i', $this->url)  );
     }
 
+    /** inline {@inheritdoc} */
     protected function normalizeUrl()
     {
         $this->url = preg_replace('~(?://www\.)~i', '//', rtrim($this->url, '/'));

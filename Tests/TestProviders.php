@@ -74,7 +74,7 @@ class TestProviders extends PHPUnit_Framework_TestCase
 
         foreach ($validUrls as $url)
         {
-            $test = new $service($url, array(), $fakeOembed);
+            $test = new $service($url, array('fake' => array(), 'params' => array()), $fakeOembed);
             $response = $test->fakeResponse();
 
             $this->assertTrue((count($response) > 5), 'Invalid Response for ' . $url);
@@ -87,7 +87,7 @@ class TestProviders extends PHPUnit_Framework_TestCase
             $url = $validUrls[mt_rand(0, (count($validUrls) - 1))];
             $oembed = new \Embera\Oembed(true, new \Embera\HttpRequest());
 
-            $test = new $service($url, array('oembed' => true), $oembed);
+            $test = new $service($url, array('oembed' => true, 'fake' => array(), 'params' => array()), $oembed);
             $result1 = $test->getInfo();
 
             if (!isset($result1['embera_using_fake']))
@@ -101,7 +101,7 @@ class TestProviders extends PHPUnit_Framework_TestCase
             $this->assertTrue(!empty($result1['html']), 'Empty Html on ' . $url);
 
             $oembed = new \Embera\Oembed(false, new \Embera\HttpRequest());
-            $test = new $service($url, array('oembed' => false), $oembed);
+            $test = new $service($url, array('oembed' => false, 'fake' => array(), 'params' => array()), $oembed);
             $result2 = $test->getInfo();
 
             $this->assertTrue($result2['embera_using_fake'] == 1, 'Not Using fake on ' . $url);
@@ -119,7 +119,7 @@ class TestProviders extends PHPUnit_Framework_TestCase
 
         foreach ($privateUrls as $url)
         {
-            $test = new $service($url, array(), $oembed);
+            $test = new $service($url, array('fake' => array(), 'params' => array()), $oembed);
             $this->assertEmpty($test->getInfo(), $service . ': Invalid response from a private url ' . print_r($test->getInfo(), true));
         }
     }
@@ -144,7 +144,7 @@ class TestProviders extends PHPUnit_Framework_TestCase
             $oembed = new MockOembed(true, new MockHttpRequest());
             $service = '\Embera\Providers\\' . $service;
 
-            new $service($url, array(), $oembed);
+            new $service($url, array('fake' => array(), 'params' => array()), $oembed);
         } catch (InvalidArgumentException $e) { return true; }
 
         return false;
@@ -159,7 +159,7 @@ class TestProviders extends PHPUnit_Framework_TestCase
         {
             $url = $validUrls[mt_rand(0, (count($validUrls) - 1))];
 
-            $test = new $service($url, array('oembed' => true), $oembed);
+            $test = new $service($url, array('oembed' => true, 'fake' => array(), 'params' => array()), $oembed);
             $result = $test->getInfo();
 
             if (!isset($result['embera_using_fake']))
@@ -179,7 +179,7 @@ class TestProviders extends PHPUnit_Framework_TestCase
 
         foreach ($normalizeUrls as $given => $expected)
         {
-            $test = new $service($given, array(), $oembed);
+            $test = new $service($given, array('fake' => array(), 'params' => array()), $oembed);
             $this->assertEquals($test->getUrl(), $expected);
         }
     }

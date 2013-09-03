@@ -47,7 +47,7 @@ class Embera
      */
     public function __construct(array $config = array())
     {
-        $this->config = array_merge(array(
+        $this->config = array_replace_recursive(array(
             'oembed' => true,
             'use_embed_prefix' => false,
             'params' => array(

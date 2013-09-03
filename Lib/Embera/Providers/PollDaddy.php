@@ -27,6 +27,7 @@ class PollDaddy extends \Embera\Adapters\Service
         return (preg_match('~polldaddy\.com/(?:poll|s|ratings)/(?:[^/]+)/?$~i', $this->url));
     }
 
+    /** inline {@inheritdoc} */
     protected function normalizeUrl()
     {
         $this->url = str_ireplace(array('https://', '//www.'), array('http://', '//'), $this->url);
