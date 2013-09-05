@@ -47,7 +47,7 @@ class Embera
      */
     public function __construct(array $config = array())
     {
-        $this->config = array_merge(array(
+        $this->config = self::_recursiveMergeOverwrite(array(
             'oembed' => true,
             'use_embed_prefix' => false,
             'params' => array(
@@ -67,6 +67,32 @@ class Embera
 
         $this->oembed = new \Embera\Oembed($this->config['oembed'], new \Embera\HttpRequest($this->config['http']));
         $this->providers = new \Embera\Providers($this->config, $this->oembed);
+    }
+    
+    /**
+     * Merges deep associative arrays.
+     *
+     * @access protected
+     * @author Oliver Lillie
+     * @param array $array1 
+     * @param array $array2 
+     * @return array
+     */
+    protected static function _recursiveMergeOverwrite($array1, $array2)
+    {
+        foreach($array2 as $key => $val)
+        {
+            if(array_key_exists($key, $array1) === true && is_array($val) === true)
+            {
+                $array1[$key] = self::_recursiveMergeOverwrite($array1[$key], $val);
+            }
+            else
+            {
+                $array1[$key] = $val;
+            }
+        }
+        
+        return $array1;
     }
 
     /**
