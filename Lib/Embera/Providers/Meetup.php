@@ -28,6 +28,7 @@ class Meetup extends \Embera\Adapters\Service
                 preg_match('~meetu\.ps/(?:[\w\d]+)/?$~i', $this->url)  );
     }
 
+    /** inline {@inheritdoc} */
     protected function normalizeUrl()
     {
         $this->url = preg_replace('~\?(.*)~i', '', $this->url);

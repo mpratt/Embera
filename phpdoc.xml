@@ -16,6 +16,7 @@
     <files>
         <directory>.</directory>
         <ignore>Tests/*</ignore>
+        <ignore>Toolkit/*</ignore>
         <ignore>vendor/*</ignore>
     </files>
 </phpdoc>

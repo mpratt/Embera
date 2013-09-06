@@ -156,6 +156,44 @@ class TestEmbera extends PHPUnit_Framework_TestCase
         }
     }
 
+    public function testCustomFakeParams2()
+    {
+        $config = array(
+            'oembed' => false,
+            'fake' => array(
+                'height' => 500,
+            )
+        );
+
+        $embera = new \Embera\Embera($config);
+
+        $reflection = new ReflectionClass('\Embera\Embera');
+        $method = $reflection->getMethod('getProviders');
+        $method->setAccessible(true);
+
+        $providers = $method->invoke($embera, array(
+            'http://www.flickr.com/photos/reddragonflydmc/5427387397/',
+        ));
+
+        $this->assertCount(1, $providers);
+
+        foreach($providers as $p)
+        {
+            $reflection = new ReflectionClass($p);
+            $method = $reflection->getMethod('getWidth');
+            $method->setAccessible(true);
+
+            // 420 is the default fake width
+            $this->assertEquals($method->invoke($p), 420);
+
+            $reflection = new ReflectionClass($p);
+            $method = $reflection->getMethod('getHeight');
+            $method->setAccessible(true);
+
+            $this->assertEquals($method->invoke($p), 500);
+        }
+    }
+
     public function testUrlString()
     {
         $validUrls = 'Hey what up! http://www.youtube.com/watch?v=MpVHQnIvTXo this is great http://youtu.be/fSUK4WgQ3vk';

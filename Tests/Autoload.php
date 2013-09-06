@@ -23,6 +23,8 @@ class UrlList
                 'http://youtube.com/watch?v=xVrJ8DxECbg&list=PLwnD0jwK0yymXOCl82nqdTdxe0ykVDcPW',
                 'http://www.youtube.com/watch?v=WtPiGYsllos&index=1',
                 'http://youtube.com/watch?v=mghhLqu31cQ',
+                'http://youtube.com/embed/mghhLqu31cQ',
+                'http://www.youtube.com/embed/mghhLqu31cQ',
                 'http://youtu.be/8aGEb_yUpMs'
             ),
             'invalid' => array(
@@ -40,6 +42,7 @@ class UrlList
                 'http://youtu.be/8aGEb_yUpMs' => 'http://www.youtube.com/watch?v=8aGEb_yUpMs',
                 'http://youtube.com/watch?v=J---aiyznGQ&index=1' => 'http://www.youtube.com/watch?v=J---aiyznGQ',
                 'http://youtube.com/watch?v=mghhLqu31cQ' => 'http://www.youtube.com/watch?v=mghhLqu31cQ',
+                'http://youtube.com/embed/mghhLqu31cQ' => 'http://www.youtube.com/watch?v=mghhLqu31cQ',
             ),
             'fake' => array(
                 'type' => 'video',
