@@ -24,7 +24,7 @@ class Ustream extends \Embera\Adapters\Service
     protected function validateUrl()
     {
         $this->url->stripLastSlash();
-        $this->url->discard('ustream\.(?:com|tv)/(?:explore|howto|upcomming|our-company|services|premium-membership|search)$');
+        $this->url->invalidPattern('ustream\.(?:com|tv)/(?:explore|howto|upcomming|our-company|services|premium-membership|search)$');
 
         return (preg_match('~ustream\.(?:com|tv)/channel/(?:[\w\d\-_]+)$~i', $this->url) ||
                 preg_match('~ustream\.(?:com|tv)/(?:[\w\d\-_]+)$~i', $this->url));

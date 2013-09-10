@@ -12,16 +12,14 @@
 
 class TestUrl extends PHPUnit_Framework_TestCase
 {
-    public function testDiscard()
+    public function testInvalidPattern()
     {
         $url = new \Embera\Url('http://www.hablarmierda.net/path/stuff/');
-        $this->assertEmpty($url->discard('\.net/path/(?:[^/]+)/'));
-
-        $url = new \Embera\Url('http://www.hablarmierda.net/path/stuff/');
-        $this->assertEmpty($url->discard());
+        $url->invalidPattern('\.net/path/(?:[^/]+)/');
+        $this->assertEmpty((string) $url);
 
         $url = new \Embera\Url('http://www.hablarmierda.net');
-        $url->discard('\.net/hi/');
+        $url->invalidPattern('\.net/hi/');
         $this->assertEquals('http://www.hablarmierda.net', (string) $url);
     }
 
@@ -31,13 +29,32 @@ class TestUrl extends PHPUnit_Framework_TestCase
         $url->stripQueryString();
         $this->assertEquals('http://www.hablarmierda.net/path/', (string) $url);
 
+        $url = new \Embera\Url('http://www.hablarmierda.net/path?hi=why&id=8');
+        $url->stripQueryString();
+        $this->assertEquals('http://www.hablarmierda.net/path', (string) $url);
+
         $url = new \Embera\Url('http://www.hablarmierda.net/path/#hi');
+        $url->stripQueryString();
+        $this->assertEquals('http://www.hablarmierda.net/path/', (string) $url);
+
+        $url = new \Embera\Url('http://www.hablarmierda.net/path/#hi&ho=80');
         $url->stripQueryString();
         $this->assertEquals('http://www.hablarmierda.net/path/', (string) $url);
 
         $url = new \Embera\Url('http://www.hablarmierda.net/path/');
         $url->stripQueryString();
         $this->assertEquals('http://www.hablarmierda.net/path/', (string) $url);
+    }
+
+    public function testDiscardChanges()
+    {
+        $url = new \Embera\Url('http://www.hablarmierda.net/path/?hi=why&id=8');
+        $url->stripQueryString();
+        $url->stripLastSlash();
+        $this->assertEquals('http://www.hablarmierda.net/path', (string) $url);
+
+        $url->discardChanges();
+        $this->assertEquals('http://www.hablarmierda.net/path/?hi=why&id=8', (string) $url);
     }
 
     public function testStripLastSlash()

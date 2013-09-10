@@ -24,7 +24,7 @@ class Revision3 extends \Embera\Adapters\Service
     /** inline {@inheritdoc} */
     protected function validateUrl()
     {
-        $this->url->discard('revision3\.com/(?:network|host|advertise)/');
+        $this->url->invalidPattern('revision3\.com/(?:network|host|advertise)/');
 
         return (preg_match('~revision3\.com/([^/]+)/([^/]+)/?~i', $this->url));
     }

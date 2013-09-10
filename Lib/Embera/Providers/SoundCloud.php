@@ -24,7 +24,7 @@ class SoundCloud extends \Embera\Adapters\Service
     protected function validateUrl()
     {
         $this->url->stripLastSlash();
-        $this->url->discard('soundcloud\.com/(explore|creators|groups)/?$');
+        $this->url->invalidPattern('soundcloud\.com/(explore|creators|groups)/?$');
 
         return (preg_match('~soundcloud\.com/(?:[\w\d\-_]+)~i', $this->url));
     }

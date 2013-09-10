@@ -24,7 +24,7 @@ class Screenr extends \Embera\Adapters\Service
     protected function validateUrl()
     {
         $this->url->stripLastSlash();
-        $this->url->discard('screenr\.com/(?:record|stream|terms|privacy|help)$');
+        $this->url->invalidPattern('screenr\.com/(?:record|stream|terms|privacy|help)$');
 
         return (preg_match('~screenr\.com/(?:[\w\d]+)$~i', $this->url));
     }

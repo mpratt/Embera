@@ -18,8 +18,11 @@ namespace Embera;
  */
 class Url
 {
-    /** @var string $url The full url*/
+    /** @var string The url */
     protected $url;
+
+    /** @var string Placeholder for the original url */
+    protected $original;
 
     /**
      * Construct
@@ -27,7 +30,7 @@ class Url
      * @param string $url A valid url string
      * @return void
      */
-    public function __construct($url) { $this->url = preg_replace('~^embed:~i', 'http:', $url); }
+    public function __construct($url) { $this->url = $this->original = preg_replace('~^embed:~i', 'http:', $url); }
 
     /**
      * Returns the full url when
@@ -38,15 +41,25 @@ class Url
     public function __toString() { return $this->url; }
 
     /**
-     * Discards the url
+     * Searches the url for a pattern $pattern.
+     * If the pattern matches, the url is marked as invalid
+     * and is emptied.
      *
      * @return void
      */
-    public function discard($pattern = null)
+    public function invalidPattern($pattern)
     {
-        if (is_null($pattern) || preg_match('~' . $pattern . '~i', $this->url))
+        if (preg_match('~' . $pattern . '~i', $this->url))
             $this->url = '';
     }
+
+    /**
+     * Discards changes made to a url, and goes back to the original
+     * url.
+     *
+     * @return void
+     */
+    public function discardChanges() { $this->url = $this->original; }
 
     /**
      * Strips the query string from the url

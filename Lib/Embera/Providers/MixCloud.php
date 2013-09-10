@@ -25,7 +25,7 @@ class MixCloud extends \Embera\Adapters\Service
     protected function validateUrl()
     {
         // Urls with this words/pattern dont work
-        $this->url->discard('mixcloud\.com/(?:categories|advertise|developers)/(?:[^/]+)/?$');
+        $this->url->invalidPattern('mixcloud\.com/(?:categories|advertise|developers)/(?:[^/]+)/?$');
 
         return (preg_match('~mixcloud\.com/(?:[^/]+)/(?:[^/]+)/?$~i', $this->url));
     }
