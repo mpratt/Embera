@@ -23,13 +23,9 @@ class CircuitLab extends \Embera\Adapters\Service
     /** inline {@inheritdoc} */
     protected function validateUrl()
     {
-        return (preg_match('~circuitlab\.com/circuit/(?:[\w\d]+)/([^/]+)/?$~i', $this->url));
-    }
+        $this->url->addWWW();
 
-    /** inline {@inheritdoc} */
-    protected function normalizeUrl()
-    {
-        $this->url = str_ireplace('//circuitlab.com', '//www.circuitlab.com', $this->url);
+        return (preg_match('~circuitlab\.com/circuit/(?:[\w\d]+)/([^/]+)/?$~i', $this->url));
     }
 }
 

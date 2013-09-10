@@ -23,13 +23,10 @@ class Sketchfab extends \Embera\Adapters\Service
     /** inline {@inheritdoc} */
     protected function validateUrl()
     {
-        return (preg_match('~sketchfab\.com/show/(?:[\w\d]+)$~i', $this->url));
-    }
+        $this->url->stripWWW();
+        $this->url->stripLastSlash();
 
-    /** inline {@inheritdoc} */
-    protected function normalizeUrl()
-    {
-        $this->url = str_ireplace('//www.', '//', rtrim($this->url, '/'));
+        return (preg_match('~sketchfab\.com/show/(?:[\w\d]+)$~i', $this->url));
     }
 }
 

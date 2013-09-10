@@ -23,14 +23,17 @@ class Hulu extends \Embera\Adapters\Service
     /** inline {@inheritdoc} */
     protected function validateUrl()
     {
-        return (preg_match('~hulu\.com/watch/([0-9]{4,10})/?~i', $this->url));
+        $this->url->stripLastSlash();
+        $this->url->addWWW();
+
+        return (preg_match('~hulu\.com/watch/([0-9]{4,10})~i', $this->url));
     }
 
     /** inline {@inheritdoc} */
     protected function normalizeUrl()
     {
-        if (preg_match('~hulu\.com/watch/([0-9]{4,10})/?~i', $this->url, $m))
-            $this->url = 'http://www.hulu.com/watch/' . $m['1'];
+        if (preg_match('~/watch/([0-9]{4,10})~i', $this->url, $matches))
+            $this->url = new \Embera\Url('http://www.hulu.com/watch/' . $matches['1']);
     }
 }
 

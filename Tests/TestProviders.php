@@ -164,7 +164,7 @@ class TestProviders extends PHPUnit_Framework_TestCase
 
             if (!isset($result['embera_using_fake']))
             {
-                $this->markTestIncomplete($service . ': Embera_using_fake index not defined on ' . $url . ' - Probably the response took too long');
+                $this->markTestIncomplete($service . ': Embera_using_fake index not defined on ' . $url . ' - Probably the response took too long - Using url ' . $test->getUrl());
                 return ;
             }
 

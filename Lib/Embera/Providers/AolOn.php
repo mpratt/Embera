@@ -23,15 +23,17 @@ class AolOn extends \Embera\Adapters\Service
     /** inline {@inheritdoc} */
     protected function validateUrl()
     {
+        $this->url->convertToHttp();
+        $this->url->stripQueryString();
+
         return (preg_match('~aol\.com/video/(?:[^/]+)-(?:[\d]+)$~i', $this->url));
     }
 
     /** inline {@inheritdoc} */
     protected function normalizeUrl()
     {
-        $this->url = preg_replace('~\?(.*)$~i', '', $this->url);
         if (preg_match('~5min\.com/video/([^/]+)$~i', $this->url, $matches))
-            $this->url = 'http://on.aol.com/video/' . $matches['1'];
+            $this->url = new \Embera\Url('http://on.aol.com/video/' . $matches['1']);
     }
 }
 

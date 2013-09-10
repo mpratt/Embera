@@ -41,7 +41,7 @@ class Youtube extends \Embera\Adapters\Service
     protected function normalizeUrl()
     {
         if (preg_match('~(?:v=|youtu\.be/)([a-z0-9_-]+)~i', $this->url, $matches))
-            $this->url = 'http://www.youtube.com/watch?v=' . $matches[1];
+            $this->url = new \Embera\Url('http://www.youtube.com/watch?v=' . $matches[1]);
     }
 
     /** inline {@inheritdoc} */

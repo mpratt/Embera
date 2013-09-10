@@ -24,15 +24,12 @@ class Bambuser extends \Embera\Adapters\Service
     /** inline {@inheritdoc} */
     protected function validateUrl()
     {
+        $this->url->stripLastSlash();
+        $this->url->stripWWW();
+
         return (preg_match('~bambuser\.com/channel/(?:[^/]+)/broadcast/(?:[^/]+)$~i', $this->url) ||
                 preg_match('~bambuser\.com/channel/(?:[^/]+)$~i', $this->url) ||
                 preg_match('~bambuser\.com/v/(?:[0-9]+)$~i', $this->url)  );
-    }
-
-    /** inline {@inheritdoc} */
-    protected function normalizeUrl()
-    {
-        $this->url = preg_replace('~(?://www\.)~i', '//', rtrim($this->url, '/'));
     }
 }
 

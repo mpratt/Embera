@@ -24,15 +24,10 @@ class MixCloud extends \Embera\Adapters\Service
     /** inline {@inheritdoc} */
     protected function validateUrl()
     {
-        return (preg_match('~mixcloud\.com/(?:[^/]+)/(?:[^/]+)/?$~i', $this->url));
-    }
+        // Urls with this words/pattern dont work
+        $this->url->discard('mixcloud\.com/(?:categories|advertise|developers)/(?:[^/]+)/?$');
 
-    /** inline {@inheritdoc} */
-    protected function normalizeUrl()
-    {
-        // Urls with this words are not allowd
-        if (preg_match('~mixcloud\.com/(?:categories|advertise|developers)/(?:[^/]+)/?$~i', $this->url))
-            $this->url = 'http://www.mixcloud.com/';
+        return (preg_match('~mixcloud\.com/(?:[^/]+)/(?:[^/]+)/?$~i', $this->url));
     }
 }
 

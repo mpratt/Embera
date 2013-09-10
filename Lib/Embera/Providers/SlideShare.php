@@ -14,7 +14,7 @@ namespace Embera\Providers;
 
 /**
  * The slideshare.net Provider
- * @link http://www.slideshare.net/developers/oembed 
+ * @link http://www.slideshare.net/developers/oembed
  */
 class SlideShare extends \Embera\Adapters\Service
 {
@@ -24,15 +24,10 @@ class SlideShare extends \Embera\Adapters\Service
     /** inline {@inheritdoc} */
     protected function validateUrl()
     {
-        return (preg_match('~slideshare\.net/(?:[\w\d_-]+)/(?:[\w\d_-]+)/?$~i', $this->url));
-    }
-
-    /** inline {@inheritdoc} */
-    protected function normalizeUrl()
-    {
         // urls with the about|newlist stuff in the middle dont work
-        if (preg_match('~slideshare\.net/(?:about|newlist)/(?:[\w\d_-]+)/?$~i', $this->url))
-            $this->url = 'http://slideshare.net';
+        $this->url->discard('slideshare\.net/(?:about|newlist)/(?:[\w\d_-]+)/?$');
+
+        return (preg_match('~slideshare\.net/(?:[\w\d_-]+)/(?:[\w\d_-]+)/?$~i', $this->url));
     }
 }
 

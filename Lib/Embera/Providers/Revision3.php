@@ -24,15 +24,9 @@ class Revision3 extends \Embera\Adapters\Service
     /** inline {@inheritdoc} */
     protected function validateUrl()
     {
-        return (preg_match('~revision3\.com/([^/]+)/([^/]+)/?~i', $this->url));
-    }
+        $this->url->discard('revision3\.com/(?:network|host|advertise)/');
 
-    /** inline {@inheritdoc} */
-    protected function normalizeUrl()
-    {
-        // urls with network/host are not valid, strip that out for validation
-        if (preg_match('~revision3\.com/(?:network|host|advertise)/~i', $this->url))
-            $this->url = 'http://revision3.com/';
+        return (preg_match('~revision3\.com/([^/]+)/([^/]+)/?~i', $this->url));
     }
 }
 

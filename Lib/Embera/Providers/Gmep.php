@@ -23,13 +23,9 @@ class Gmep extends \Embera\Adapters\Service
     /** inline {@inheritdoc} */
     protected function validateUrl()
     {
-        return (preg_match('~gmep\.org/media/(?:[0-9]+)$~i', $this->url));
-    }
+        $this->url->stripLastSlash();
 
-    /** inline {@inheritdoc} */
-    protected function normalizeUrl()
-    {
-        $this->url = rtrim($this->url, '/');
+        return (preg_match('~gmep\.org/media/(?:[0-9]+)$~i', $this->url));
     }
 }
 

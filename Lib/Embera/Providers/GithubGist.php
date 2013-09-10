@@ -23,16 +23,18 @@ class GithubGist extends \Embera\Adapters\Service
     /** inline {@inheritdoc} */
     protected function validateUrl()
     {
+        $this->url->stripQueryString();
+
         return (preg_match('~(?:[\d]+)/?$~i', $this->url));
     }
 
     /** inline {@inheritdoc} */
     protected function normalizeUrl()
     {
-        $this->url = preg_replace('~\#(.*)$~i', '', $this->url);
-        if (preg_match('~gist\.github\.com/(?:[\w\d_\-\.]+)/([\d]+)/?$~i', $this->url, $matches))
-            $this->url = 'https://gist.github.com/' . $matches['1'];
+        if (preg_match('~github\.com/(?:[\w\d_\-\.]+)/([\d]+)/?~i', $this->url, $matches))
+            $this->url = new \Embera\Url('https://gist.github.com/' . $matches['1']);
     }
+
 }
 
 ?>

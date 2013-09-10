@@ -23,11 +23,10 @@ class Instagram extends \Embera\Adapters\Service
     /** inline {@inheritdoc} */
     protected function validateUrl()
     {
+        $this->url->stripQueryString();
+
         return (preg_match('~/p/([\w\d]+)/?$~i', $this->url));
     }
-
-    /** inline {@inheritdoc} */
-    protected function normalizeUrl() { $this->url = rtrim($this->url, '#'); }
 }
 
 ?>

@@ -23,16 +23,11 @@ class Ustream extends \Embera\Adapters\Service
     /** inline {@inheritdoc} */
     protected function validateUrl()
     {
+        $this->url->stripLastSlash();
+        $this->url->discard('ustream\.(?:com|tv)/(?:explore|howto|upcomming|our-company|services|premium-membership|search)$');
+
         return (preg_match('~ustream\.(?:com|tv)/channel/(?:[\w\d\-_]+)$~i', $this->url) ||
                 preg_match('~ustream\.(?:com|tv)/(?:[\w\d\-_]+)$~i', $this->url));
-    }
-
-    /** inline {@inheritdoc} */
-    protected function normalizeUrl()
-    {
-        $this->url = rtrim($this->url, '/');
-        if (preg_match('~ustream\.(?:com|tv)/(?:explore|howto|upcomming|our-company|services|premium-membership|search)$~i', $this->url))
-            $this->url = 'http://www.ustream.tv';
     }
 }
 

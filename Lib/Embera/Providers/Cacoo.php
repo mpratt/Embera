@@ -24,13 +24,10 @@ class Cacoo extends \Embera\Adapters\Service
     /** inline {@inheritdoc} */
     protected function validateUrl()
     {
-        return (preg_match('~cacoo\.com/diagrams/(?:[\w\d]+)/?$~i', $this->url));
-    }
+        $this->url->stripLastSlash();
+        $this->url->stripWWW();
 
-    /** inline {@inheritdoc} */
-    protected function normalizeUrl()
-    {
-        $this->url = str_ireplace('//www.', '//', rtrim($this->url, '/'));
+        return (preg_match('~cacoo\.com/diagrams/(?:[\w\d]+)/?$~i', $this->url));
     }
 }
 

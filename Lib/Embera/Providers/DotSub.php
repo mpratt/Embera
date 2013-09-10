@@ -25,16 +25,16 @@ class DotSub extends \Embera\Adapters\Service
     /** inline {@inheritdoc} */
     protected function validateUrl()
     {
-        return (preg_match('~dotsub\.com/view/(?:[a-f0-9]+)-(?:[a-f0-9]+)-(?:[a-f0-9]+)-(?:[a-f0-9]+)-(?:[a-f0-9]+)/?$~i', $this->url));
+        $this->url->stripLastSlash();
+
+        return (preg_match('~dotsub\.com/view/(?:[a-f0-9]+)-(?:[a-f0-9]+)-(?:[a-f0-9]+)-(?:[a-f0-9]+)-(?:[a-f0-9]+)$~i', $this->url));
     }
 
     /** inline {@inheritdoc} */
     protected function normalizeUrl()
     {
-        if (preg_match('~dotsub\.com/media/([0-9a-f\-]+)~i', $this->url, $matches))
-            $this->url = 'http://dotsub.com/view/' . $matches['1'];
-
-        $this->url = trim($this->url, '/');
+        if (preg_match('~/media/([0-9a-f\-]+)~i', $this->url, $matches))
+            $this->url = new \Embera\Url('http://dotsub.com/view/' . $matches['1']);
     }
 }
 

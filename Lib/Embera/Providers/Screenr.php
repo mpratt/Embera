@@ -23,15 +23,10 @@ class Screenr extends \Embera\Adapters\Service
     /** inline {@inheritdoc} */
     protected function validateUrl()
     {
-        return (preg_match('~screenr\.com/(?:[\w\d]+)/?$~i', $this->url));
-    }
+        $this->url->stripLastSlash();
+        $this->url->discard('screenr\.com/(?:record|stream|terms|privacy|help)$');
 
-    /** inline {@inheritdoc} */
-    protected function normalizeUrl()
-    {
-        $this->url = rtrim($this->url, '/');
-        if (preg_match('~screenr\.com/(?:record|stream|terms|privacy|help)/?$~i', $this->url))
-            $this->url = 'http://www.screenr.com';
+        return (preg_match('~screenr\.com/(?:[\w\d]+)$~i', $this->url));
     }
 }
 

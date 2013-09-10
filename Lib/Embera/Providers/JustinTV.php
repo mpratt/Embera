@@ -23,13 +23,10 @@ class JustinTV extends \Embera\Adapters\Service
     /** inline {@inheritdoc} */
     protected function validateUrl()
     {
-        return (preg_match('~justin\.tv/(?:[\w\d_\-]+)$~i', $this->url));
-    }
+        $this->url->stripLastSlash();
+        $this->url->addWWW();
 
-    /** inline {@inheritdoc} */
-    protected function normalizeUrl()
-    {
-        $this->url = str_ireplace('//justin.tv', '//www.justin.tv', rtrim($this->url, '/'));
+        return (preg_match('~justin\.tv/(?:[\w\d_\-]+)$~i', $this->url));
     }
 }
 

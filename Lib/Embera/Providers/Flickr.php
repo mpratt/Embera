@@ -17,7 +17,6 @@ namespace Embera\Providers;
  */
 class Flickr extends \Embera\Adapters\Service
 {
-
     /** inline {@inheritdoc} */
     protected $apiUrl = 'http://www.flickr.com/services/oembed?format=json';
 
@@ -31,7 +30,7 @@ class Flickr extends \Embera\Adapters\Service
     protected function normalizeUrl()
     {
         if (preg_match('~/photos/([^/"\'<>]+)/([0-9]+)/?~i', $this->url, $matches))
-            $this->url = 'http://www.flickr.com/photos/' . $matches['1'] . '/' . $matches['2']. '/';
+            $this->url = new \Embera\Url('http://www.flickr.com/photos/' . $matches['1'] . '/' . $matches['2'] . '/');
     }
 }
 

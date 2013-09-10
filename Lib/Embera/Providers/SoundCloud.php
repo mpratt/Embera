@@ -23,17 +23,10 @@ class SoundCloud extends \Embera\Adapters\Service
     /** inline {@inheritdoc} */
     protected function validateUrl()
     {
-        return (preg_match('~soundcloud\.com/(?:[\w\d\-_]+)/?~i', $this->url));
-    }
+        $this->url->stripLastSlash();
+        $this->url->discard('soundcloud\.com/(explore|creators|groups)/?$');
 
-    /** inline {@inheritdoc} */
-    protected function normalizeUrl()
-    {
-        // Ignore this urls, since they are just listing pages
-        if (preg_match('~soundcloud\.com/(explore|creators|groups)/?$~i', $this->url))
-            $this->url = 'https://soundcloud.com';
-
-        $this->url = trim($this->url, '/');
+        return (preg_match('~soundcloud\.com/(?:[\w\d\-_]+)~i', $this->url));
     }
 }
 
