@@ -23,14 +23,10 @@ class Roomshare extends \Embera\Adapters\Service
     /** inline {@inheritdoc} */
     protected function validateUrl()
     {
+        $this->url->stripQueryString();
+
         return (preg_match('~roomshare\.jp/post/(?:[0-9]+)/?$~i', $this->url) ||
                 preg_match('~roomshare\.jp/(?:[^/]+)/post/(?:[0-9]+)/?$~i', $this->url)  );
-    }
-
-    /** inline {@inheritdoc} */
-    protected function normalizeUrl()
-    {
-        $this->url = preg_replace('~\?(.*)~i', '', $this->url);
     }
 }
 

@@ -23,14 +23,10 @@ class OfficialFM extends \Embera\Adapters\Service
     /** inline {@inheritdoc} */
     protected function validateUrl()
     {
-        return (preg_match('~official\.fm/(?:tracks|playlists)/(?:[^/]+)$~i', $this->url));
-    }
+        $this->url->stripQueryString();
+        $this->url->stripWWW();
 
-    /** inline {@inheritdoc} */
-    protected function normalizeUrl()
-    {
-        $this->url = preg_replace('~\?(.*)$~i', '', $this->url);
-        $this->url = str_ireplace('//www.official.fm', '//official.fm', rtrim($this->url, '/'));
+        return (preg_match('~official\.fm/(?:tracks|playlists)/(?:[^/]+)$~i', $this->url));
     }
 }
 

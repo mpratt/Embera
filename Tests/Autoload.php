@@ -203,6 +203,10 @@ class UrlList
                 'http://crowdranking.com',
                 'http://crowdranking.com/login',
             ),
+            'normalize' => array(
+                'http://crowdranking.com/crowdrankings/t573g0--top-tourismusregionen-in-oesterreich' => 'http://crowdranking.com/crowdrankings/t573g0--top-tourismusregionen-in-oesterreich',
+                'http://www.crowdranking.com/crowdrankings/t537g0--die-besten-premium-kompaktkameras-2013' => 'http://crowdranking.com/crowdrankings/t537g0--die-besten-premium-kompaktkameras-2013',
+            )
         ),
         'roomshare' => array(
             'valid' => array(
@@ -272,6 +276,7 @@ class UrlList
             'normalize' => array(
                 'https://www.sketchfab.com/show/9lVs96AuFUAjKjwvsMG0Uf7Yy7b' => 'https://sketchfab.com/show/9lVs96AuFUAjKjwvsMG0Uf7Yy7b',
                 'https://sketchfab.com/show/9lVs96AuFUAjKjwvsMG0Uf7Yy7b' => 'https://sketchfab.com/show/9lVs96AuFUAjKjwvsMG0Uf7Yy7b',
+                'https://sketchfab.com/show/9lVs96AuFUAjKjwvsMG0Uf7Yy7b/' => 'https://sketchfab.com/show/9lVs96AuFUAjKjwvsMG0Uf7Yy7b',
                 'https://www.sketchfab.com/show/9lVs96AuFUAjKjwvsMG0Uf7Yy7b/' => 'https://sketchfab.com/show/9lVs96AuFUAjKjwvsMG0Uf7Yy7b',
             )
         ),
@@ -750,7 +755,7 @@ class UrlList
             'valid' => array(
                 'http://on.aol.com/video/plans-to-clone-john-lennon-using-one-of-his-teeth-517906689?icid=OnHomepageL1_Tag',
                 'http://on.aol.com/video/three-good-news-stories-to-brighten-your-day-517906768',
-                'http://on.aol.com/video/kid-president-meets-beyonc--517906781',
+                'https://on.aol.com/video/kid-president-meets-beyonc--517906781',
                 'http://on.aol.com/video/obama-comes-out-against-dog-breed-specific-legislation-517905316',
                 'http://www.5min.com/video/obama-comes-out-against-dog-breed-specific-legislation-517905316',
                 'http://5min.com/video/obama-comes-out-against-dog-breed-specific-legislation-517905316',
@@ -766,6 +771,7 @@ class UrlList
             ),
             'normalize' => array(
                 'http://5min.com/video/obama-comes-out-against-dog-breed-specific-legislation-517905316' => 'http://on.aol.com/video/obama-comes-out-against-dog-breed-specific-legislation-517905316',
+                'https://5min.com/video/obama-comes-out-against-dog-breed-specific-legislation-517905316' => 'http://on.aol.com/video/obama-comes-out-against-dog-breed-specific-legislation-517905316',
                 'http://on.aol.com/video/plans-to-clone-john-lennon-using-one-of-his-teeth-517906689?icid=OnHomepageL1_Tag' => 'http://on.aol.com/video/plans-to-clone-john-lennon-using-one-of-his-teeth-517906689',
             ),
         ),
@@ -883,6 +889,10 @@ class UrlList
                 'http://instagram.com',
                 'http://instagr.am',
             ),
+            'normalize' => array(
+                'http://instagram.com/p/TCg0AoLjoH/#' => 'http://instagram.com/p/TCg0AoLjoH/',
+                'http://instagram.com/p/TCg0AoLjoH#' => 'http://instagram.com/p/TCg0AoLjoH',
+            )
         ),
         'soundcloud' => array(
             'valid' => array(

@@ -23,13 +23,9 @@ class CrowdRanking extends \Embera\Adapters\Service
     /** inline {@inheritdoc} */
     protected function validateUrl()
     {
-        return (preg_match('~crowdranking\.com/(?:crowdrankings|rankings|topics|widgets|r)/(?:[^/]+)/?$~i', $this->url));
-    }
+        $this->url->stripWWW();
 
-    /** inline {@inheritdoc} */
-    protected function normalizeUrl()
-    {
-        $this->url = str_ireplace('//www.', '//', $this->url);
+        return (preg_match('~crowdranking\.com/(?:crowdrankings|rankings|topics|widgets|r)/(?:[^/]+)/?$~i', $this->url));
     }
 
 }

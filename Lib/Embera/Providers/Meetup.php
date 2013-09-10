@@ -24,14 +24,10 @@ class Meetup extends \Embera\Adapters\Service
     /** inline {@inheritdoc} */
     protected function validateUrl()
     {
+        $this->url->stripQueryString();
+
         return (preg_match('~meetup\.com/(?:.+)~i', $this->url) ||
                 preg_match('~meetu\.ps/(?:[\w\d]+)/?$~i', $this->url)  );
-    }
-
-    /** inline {@inheritdoc} */
-    protected function normalizeUrl()
-    {
-        $this->url = preg_replace('~\?(.*)~i', '', $this->url);
     }
 }
 

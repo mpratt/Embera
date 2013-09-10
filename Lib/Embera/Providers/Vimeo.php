@@ -39,7 +39,7 @@ class Vimeo extends \Embera\Adapters\Service
         if (preg_match('~/([0-9]{5,12})/?$~i', $this->url, $matches))
         {
             $this->videoId = $matches[1];
-            $this->url = 'http://vimeo.com/' . $this->videoId;
+            $this->url = new \Embera\Url('http://vimeo.com/' . $this->videoId);
         }
     }
 

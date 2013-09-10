@@ -23,19 +23,16 @@ class Twitter extends \Embera\Adapters\Service
     /** inline {@inheritdoc} */
     protected function validateUrl()
     {
+        $this->url->stripLastSlash();
+
         return (preg_match('~twitter\.com/(?:[\w\d-_]+)/status/(?:[0-9]+)~i', $this->url));
     }
 
-    /**
-     * inline {@inheritdoc}
-     *
-     * Try to convert twitter.com/#!name/status/00000 urls
-     * to a common one.
-     */
+    /** inline {@inheritdoc} */
     protected function normalizeUrl()
     {
         if (preg_match('~twitter\.com/(?:\#\!|/)?([\w\d-_]+)/status/([0-9]+)~i', $this->url, $matches))
-            $this->url = 'https://twitter.com/' . $matches[1] . '/status/' . $matches[2];
+            $this->url = new \Embera\Url('https://twitter.com/' . $matches['1'] . '/status/' . $matches['2']);
     }
 }
 

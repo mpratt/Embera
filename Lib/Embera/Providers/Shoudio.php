@@ -23,14 +23,11 @@ class Shoudio extends \Embera\Adapters\Service
     /** inline {@inheritdoc} */
     protected function validateUrl()
     {
+        $this->url->stripLastSlash();
+        $this->url->stripWWW();
+
         return (preg_match('~shoudio\.com/(?:user|channel|venue|collection)/(?:.+)~i', $this->url) ||
                 preg_match('~shoud\.io/(?:[0-9]+)$~i', $this->url));
-    }
-
-    /** inline {@inheritdoc} */
-    protected function normalizeUrl()
-    {
-        $this->url = str_ireplace('//www.', '//', rtrim($this->url, '/'));
     }
 }
 

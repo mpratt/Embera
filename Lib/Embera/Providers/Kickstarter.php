@@ -23,15 +23,10 @@ class Kickstarter extends \Embera\Adapters\Service
     /** inline {@inheritdoc} */
     protected function validateUrl()
     {
-        return (preg_match('~/projects/(?:[^/]+)/(?:[^/]+)/?$~i', $this->url));
-    }
+        $this->url->stripQueryString();
+        $this->url->addWWW();
 
-    /** inline {@inheritdoc} */
-    protected function normalizeUrl()
-    {
-        $this->url = preg_replace('~\?(.*)$~i', '', $this->url);
-        if (!preg_match('~https?://www\.~i', $this->url))
-            $this->url = str_ireplace('//kickstarter.com', '//www.kickstarter.com', $this->url);
+        return (preg_match('~/projects/(?:[^/]+)/(?:[^/]+)/?$~i', $this->url));
     }
 }
 

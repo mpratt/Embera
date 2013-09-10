@@ -44,7 +44,7 @@ class DailyMotion extends \Embera\Adapters\Service
         {
             $full = $matches['1'];
             @list($this->videoId, $this->videoTitle) = explode('_', $full, 2);
-            $this->url = 'http://www.dailymotion.com/video/' . $full;
+            $this->url = new \Embera\Url('http://www.dailymotion.com/video/' . $full);
         }
     }
 

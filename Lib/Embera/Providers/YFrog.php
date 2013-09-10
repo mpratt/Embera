@@ -23,11 +23,10 @@ class YFrog extends \Embera\Adapters\Service
     /** inline {@inheritdoc} */
     protected function validateUrl()
     {
+        $this->url->stripQueryString();
+
         return (preg_match('~yfrog\.(?:com|us)/([\w\d]{7,})$~i', $this->url));
     }
-
-    /** inline {@inheritdoc} */
-    protected function normalizeUrl() { $this->url = preg_replace('~\?(.*)$~i', '', $this->url); }
 }
 
 ?>

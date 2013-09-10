@@ -23,11 +23,10 @@ class Sapo extends \Embera\Adapters\Service
     /** inline {@inheritdoc} */
     protected function validateUrl()
     {
-        return (preg_match('~sapo\.pt/(?:[\w\d]+)/?$~i', $this->url));
-    }
+        $this->url->stripLastSlash();
 
-    /** inline {@inheritdoc} */
-    protected function normalizeUrl() { $this->url = rtrim($this->url, '/'); }
+        return (preg_match('~sapo\.pt/(?:[\w\d]+)$~i', $this->url));
+    }
 }
 
 ?>

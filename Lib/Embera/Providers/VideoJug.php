@@ -23,11 +23,10 @@ class VideoJug extends \Embera\Adapters\Service
     /** inline {@inheritdoc} */
     protected function validateUrl()
     {
+        $this->url->stripLastSlash();
+
         return (preg_match('~videojug\.com/(?:interview|film)/(?:[^/]+)$~i', $this->url));
     }
-
-    /** inline {@inheritdoc} */
-    protected function normalizeUrl() { $this->url = rtrim($this->url, '/'); }
 }
 
 ?>

@@ -26,7 +26,7 @@ class Viddler extends \Embera\Adapters\Service
     /** inline {@inheritdoc} */
     protected function validateUrl()
     {
-        return (preg_match('~viddler\.com/v/(?:[0-9a-f]{7,12})/?$~i', $this->url));
+        return (preg_match('~viddler\.com/(?:v|embed)/(?:[0-9a-f]{7,12})/?$~i', $this->url));
     }
 
     /**
@@ -39,7 +39,7 @@ class Viddler extends \Embera\Adapters\Service
         if (preg_match('~/(?:v|embed)/([0-9a-f]{7,12})/?~i', $this->url, $matches))
         {
             $this->videoId = $matches[1];
-            $this->url = 'http://www.viddler.com/v/' . $this->videoId;
+            $this->url = new \Embera\Url('http://www.viddler.com/v/' . $this->videoId);
         }
     }
 

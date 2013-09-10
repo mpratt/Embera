@@ -17,7 +17,7 @@ namespace Embera\Adapters;
  */
 abstract class Service
 {
-    /** @var string The current Url */
+    /** @var object Instance of \Embera\Url */
     protected $url;
 
     /** @var object Instance of \Embera\Oembed */
@@ -58,7 +58,7 @@ abstract class Service
      */
     public function __construct($url, array $config = array(), \Embera\Oembed $oembed)
     {
-        $this->url = preg_replace('~^embed:~i', 'http:', $url);
+        $this->url = new \Embera\Url($url);
         $this->normalizeUrl();
 
         if (!$this->validateUrl())
@@ -87,7 +87,7 @@ abstract class Service
     public function getInfo()
     {
         try {
-            if ($response = $this->oembed->getResourceInfo($this->apiUrl, $this->url, $this->params))
+            if ($response = $this->oembed->getResourceInfo($this->apiUrl, (string) $this->url, $this->params))
                 return $response;
         } catch (\Exception $e) { $this->errors[] = $e->getMessage(); }
 
@@ -107,7 +107,7 @@ abstract class Service
      *
      * @return string
      */
-    public function getUrl() { return $this->url; }
+    public function getUrl() { return (string) $this->url; }
 
     /**
      * Returns an array with all the parameters for the oembed request
