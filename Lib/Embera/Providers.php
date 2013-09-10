@@ -24,6 +24,9 @@ class Providers
     /** @var array Custom parameters for each host/provider */
     protected $customParams = array();
 
+    /** @var array Hosts with wildcards, calculated at runtime */
+    protected $wildCardHosts = array();
+
     /** @var array Massive array with the mapping of host -> provider class relation. */
     protected $services = array(
         'youtube.com' => '\Embera\Providers\Youtube',
@@ -200,21 +203,14 @@ class Providers
             return $host;
         else if (isset($this->services['*.' . $host]))
             return '*.' . $host;
-        else
+        else if (!empty($this->wildCardHosts))
         {
-            $wildcards = array_filter(array_keys($this->services), function($key){
-                return (strpos($key, '*') !== false);
-            });
-
-            if (!empty($wildcards))
+            $trans = array('\*' => '(?:.*)');
+            foreach ($this->wildCardHosts as $value)
             {
-                $trans = array('\*' => '(?:.*)');
-                foreach ($wildcards as $value)
-                {
-                    $regex = strtr(preg_quote($value, '~'), $trans);
-                    if (preg_match('~' . $regex . '~i', $host))
-                        return $value;
-                }
+                $regex = strtr(preg_quote($value, '~'), $trans);
+                if (preg_match('~' . $regex . '~i', $host))
+                    return $value;
             }
         }
 
@@ -248,7 +244,14 @@ class Providers
      * @param array|string $urls  An array with urls or a url string
      * @return array
      */
-    public function getAll($urls) { return $this->findServices((array) $urls); }
+    public function getAll($urls)
+    {
+        $this->wildCardHosts = array_filter(array_keys($this->services), function($key){
+            return (strpos($key, '*') !== false);
+        });
+
+        return $this->findServices((array) $urls);
+    }
 }
 
 ?>
