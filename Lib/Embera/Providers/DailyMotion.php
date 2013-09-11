@@ -17,59 +17,45 @@ namespace Embera\Providers;
  */
 class DailyMotion extends \Embera\Adapters\Service
 {
-
     /** inline {@inheritdoc} */
     protected $apiUrl = 'http://www.dailymotion.com/services/oembed?format=json';
-
-    /** @var string The id of the current video based on its url */
-    protected $videoId = null;
-
-    /** @var string The title of the current video based on its url */
-    protected $videoTitle = null;
 
     /** inline {@inheritdoc} */
     protected function validateUrl()
     {
-        return (preg_match('~dailymotion\.com/video/(?:[^/"\'<>]+)/?~i', $this->url));
+        $this->url->addWWW();
+        $this->url->stripQueryString();
+        $this->url->stripLastSlash();
+
+        return (preg_match('~dailymotion\.com/video/(?:[^/]+)/?~i', $this->url));
     }
 
-    /**
-     * {@inheritdoc}
-     * This method also tries to extract the video title and id, and
-     * stores them into properties
-     */
+    /** inline {@inheritdoc} */
     protected function normalizeUrl()
     {
-        if (preg_match('~/video/([^/\? ]+)~i', $this->url, $matches))
-        {
-            $full = $matches['1'];
-            @list($this->videoId, $this->videoTitle) = explode('_', $full, 2);
-            $this->url = new \Embera\Url('http://www.dailymotion.com/video/' . $full);
-        }
+        if (preg_match('~dailymotion\.com/embed/video/([^/]+)/?~i', $this->url, $matches))
+            $this->url = new \Embera\Url('http://www.dailymotion.com/video/' . $matches['1']);
+        else if (preg_match('~dai\.ly/([^/]+)/?~i', $this->url, $matches))
+            $this->url = new \Embera\Url('http://www.dailymotion.com/video/' . $matches['1']);
     }
 
     /** inline {@inheritdoc} */
     public function fakeResponse()
     {
-        if (empty($this->videoId))
-            return array();
+        if (preg_match('~/video/([^/]+)~i', $this->url, $matches))
+        {
+            @list($videoId, $videoTitle) = explode('_', $matches['1'], 2);
 
-        $html = '<iframe src="{video}" width="{width}" height="{height}" frameborder="0"></iframe>';
-        $t = array(
-            '{video}' => 'http://www.dailymotion.com/embed/video/' . $this->videoId,
-            '{width}' => $this->getWidth(),
-            '{height}' => $this->getHeight()
-        );
+            return array(
+                'type' => 'video',
+                'provider_name' => 'Dailymotion',
+                'provider_url' => 'http://www.dailymotion.com',
+                'title' => (!empty($videoTitle) ? str_replace(array('-', '_'), ' ', $videoTitle) : 'Unknown Title'),
+                'html' => '<iframe src="http://www.dailymotion.com/embed/video/' . $videoId . '" width="{width}" height="{height}" frameborder="0"></iframe>'
+            );
+        }
 
-        $data = array(
-            'type' => 'video',
-            'provider_name' => 'Dailymotion',
-            'provider_url' => 'http://www.dailymotion.com',
-            'title' => (!empty($this->videoTitle) ? str_replace(array('-', '_'), ' ', $this->videoTitle) : 'Unknown Title'),
-            'html' => str_replace(array_keys($t), array_values($t), $html)
-        );
-
-        return $this->oembed->buildFakeResponse($data);
+        return array();
     }
 }
 

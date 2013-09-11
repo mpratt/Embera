@@ -23,17 +23,14 @@ abstract class Service
     /** @var object Instance of \Embera\Oembed */
     protected $oembed = null;
 
-    /** @var array Associative array with parameters to be sent to the oembed provider */
-    protected $params = array();
+    /** @var array Associative array with config/parameters to be sent to the oembed provider */
+    protected $config = array();
 
     /** @var array Array with all the errors */
     protected $errors = array();
 
     /** @var string The api url for the current service */
     protected $apiUrl = null;
-
-    /** @var array Associative array with fake information for a fake response */
-    protected $fake = array();
 
     /**
      * Validates that the url belongs to this service.
@@ -64,15 +61,12 @@ abstract class Service
         if (!$this->validateUrl())
             throw new \InvalidArgumentException('Url ' . $this->url . ' seems to be invalid for the ' . get_class($this) . ' service');
 
-        $this->fake = array_merge(array(
-            'width' => 420,
-            'height' => 315
-        ), $config['fake']);
-
-        $this->params = array_merge(array(
-            'maxwidth' => 0,
-            'maxheight' => 0,
-        ), $config['params']);
+        $this->config = array_replace_recursive(array(
+            'params' => array(
+                'maxwidth' => 0,
+                'maxheight' => 0,
+            )
+        ), $config);
 
         $this->oembed = $oembed;
     }
@@ -87,11 +81,21 @@ abstract class Service
     public function getInfo()
     {
         try {
-            if ($response = $this->oembed->getResourceInfo($this->apiUrl, (string) $this->url, $this->params))
+
+            if ($response = $this->oembed->getResourceInfo($this->apiUrl, (string) $this->url, $this->config['params']))
+            {
                 return $response;
+            }
+
         } catch (\Exception $e) { $this->errors[] = $e->getMessage(); }
 
-        return $this->fakeResponse();
+        if ($response = $this->fakeResponse())
+        {
+            $fakeResponse = new \Embera\FakeResponse($this->config, $response);
+            return $fakeResponse->buildResponse();
+        }
+
+        return array();
     }
 
     /**
@@ -100,7 +104,7 @@ abstract class Service
      * @param array $params
      * @return void
      */
-    public function appendParams(array $params = array()) { $this->params = array_merge($this->params, $params); }
+    public function appendParams(array $params = array()) { $this->config['params'] = array_merge($this->config['params'], $params); }
 
     /**
      * Returns the url
@@ -114,7 +118,7 @@ abstract class Service
      *
      * @return array
      */
-    public function getParams() { return $this->params; }
+    public function getParams() { return $this->config['params']; }
 
     /**
      * Returns an array with found errors
@@ -130,7 +134,7 @@ abstract class Service
      * itself if the service is capable to determine
      * an html embed code based on the url or by other methods.
      *
-     * @return array
+     * @return array with data that the oembed response should have
      */
      public function fakeResponse() { return array(); }
 
@@ -144,23 +148,6 @@ abstract class Service
      * @return void
      */
     protected function normalizeUrl() {}
-
-    /**
-     * A Utility method to be used in conjuction
-     * with the fakeResponse method. Returns
-     * a valid width.
-     *
-     * @return int
-     */
-    protected function getWidth() { return max($this->fake['width'], $this->params['maxwidth']); }
-
-    /**
-     * A Utility method to be used in conjuction
-     * with the fakeResponse method. Returns
-     * a valid height.
-     *
-     * @return int
-     */
-    protected function getHeight() { return max($this->fake['height'], $this->params['maxheight']); }
 }
+
 ?>

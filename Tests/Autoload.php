@@ -115,7 +115,8 @@ class UrlList
                 'http://www.dailymotion.com/video/xzva95_jacob-jones-and-the-bigfoot-mystery-launch-trailer_videogames',
                 'http://www.dailymotion.com/video/xzx4m4_balotelli-au-prochain-cri-raciste-je-quitte-le-terrain_sport?from=rss',
                 'http://www.dailymotion.com/video/xzse1m_casanova-tout-reste-possible-pour-l-om_sport/stuff/here/',
-                'http://www.dailymotion.com/embed/video/xzv0cd/'
+                'http://www.dailymotion.com/embed/video/xzv0cd/',
+                'http://dai.ly/xzse1m'
             ),
             'invalid' => array(
                 'http://www.dailymotion.com',
@@ -131,6 +132,8 @@ class UrlList
                 'http://www.dailymotion.com/embed/video/xzxfpu' => 'http://www.dailymotion.com/video/xzxfpu',
                 'http://www.dailymotion.com/video/xzx4m4_balotelli-au-prochain-cri-raciste-je-quitte-le-terrain_sport?from=rss' => 'http://www.dailymotion.com/video/xzx4m4_balotelli-au-prochain-cri-raciste-je-quitte-le-terrain_sport',
                 'http://www.dailymotion.com/embed/video/xzv0cd/' => 'http://www.dailymotion.com/video/xzv0cd',
+                'http://dai.ly/xzv0cd/' => 'http://www.dailymotion.com/video/xzv0cd',
+                'http://dai.ly/xzv0cd' => 'http://www.dailymotion.com/video/xzv0cd',
             ),
             'fake' => array(
                 'type' => 'video',
@@ -953,7 +956,6 @@ class UrlList
         'speakerdeck' => array(
             'valid' => array(
                 'https://speakerdeck.com/sva_1981/zhi-zhi-ju-tesuto',
-                'http://speakerdeck.com/globalmanagergroup/iso-9001-2008-qms-standard-certification-documents',
                 'https://speakerdeck.com/oklahomaok/the-university-at-hiyoshi-they-are-crazy/',
                 'http://www.speakerdeck.com/librarianavenger/librarian-avengers-film-rating-system',
                 'http://speakerdeck.com/vinull/quest-for-fun',

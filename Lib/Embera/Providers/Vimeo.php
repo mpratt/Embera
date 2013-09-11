@@ -20,51 +20,39 @@ class Vimeo extends \Embera\Adapters\Service
     /** inline {@inheritdoc} */
     protected $apiUrl = 'http://vimeo.com/api/oembed.json';
 
-    /** @var int The Id of the current video, based on the url */
-    protected $videoId = null;
-
     /** inline {@inheritdoc} */
     protected function validateUrl()
     {
-        return (preg_match('~vimeo\.com/(?:[0-9]{5,12})$~i', $this->url));
+        $this->url->stripWWW();
+        $this->url->stripLastSlash();
+
+        return (preg_match('~/(?:[0-9]{5,12})$~i', $this->url));
     }
 
-    /**
-     * inline {@inheritdoc}
-     * This method tries to extract the video Id based
-     * on the current url and stores it into $this->videoId
-     */
+    /** inline {@inheritdoc} */
     protected function normalizeUrl()
     {
+        $this->url->stripQueryString();
+
         if (preg_match('~/([0-9]{5,12})/?$~i', $this->url, $matches))
-        {
-            $this->videoId = $matches[1];
-            $this->url = new \Embera\Url('http://vimeo.com/' . $this->videoId);
-        }
+            $this->url = new \Embera\Url('http://vimeo.com/' . $matches['1']);
     }
 
     /** inline {@inheritdoc} */
     public function fakeResponse()
     {
-        if (is_null($this->videoId))
-            return array();
+        if (preg_match('~/([0-9]{5,12})$~i', $this->url, $matches))
+        {
+            return array(
+                'type' => 'video',
+                'provider_name' => 'Vimeo',
+                'provider_url' => 'http://www.vimeo.com',
+                'title' => 'Unknown title',
+                'html' => '<iframe src="http://player.vimeo.com/' . $matches['1'] . '" width="{width}" height="{height}" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>',
+            );
+        }
 
-        $html = '<iframe src="{video}" width="{width}" height="{height}" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>';
-        $t = array(
-            '{video}' => 'http://player.vimeo.com/' . $this->videoId,
-            '{width}' => $this->getWidth(),
-            '{height}' => $this->getHeight()
-        );
-
-        $data = array(
-            'type' => 'video',
-            'provider_name' => 'Vimeo',
-            'provider_url' => 'http://www.vimeo.com',
-            'title' => 'Unknown title',
-            'html' => str_replace(array_keys($t), array_values($t), $html)
-        );
-
-        return $this->oembed->buildFakeResponse($data);
+        return array();
     }
 }
 

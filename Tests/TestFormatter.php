@@ -49,7 +49,6 @@ class TestFormatter extends PHPUnit_Framework_TestCase
         $embera->setTemplate('<div class="hi">{html}</div>');
 
         $result = $embera->transform($urls);
-
         $this->assertEmpty($result);
         $this->assertTrue($embera->hasErrors());
         $this->assertCount(count($urls), $embera->getErrors());

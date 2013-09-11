@@ -68,7 +68,7 @@ class Formatter
         {
             foreach ($urls as $url => $data)
             {
-                if ($data['embera_using_fake'] === 1)
+                if ((int) $data['embera_using_fake'] === 1)
                 {
                     $this->errors[] = 'Using fake oembed response on ' . $url;
                     continue;

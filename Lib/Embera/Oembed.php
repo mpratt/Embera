@@ -57,27 +57,6 @@ class Oembed
     }
 
     /**
-     * Mocks a response from an Oembed provider
-     *
-     * @param array $fakeResponse Additional Parameters to be included on the fake response
-     * @return array
-     */
-    public function buildFakeResponse(array $fakeResponse = array())
-    {
-        $defaults = array(
-            'version' => '1.0',
-            'url' => '',
-            'title' => '',
-            'author_name' => '',
-            'author_url' => '',
-            'cache_age' => 0,
-            'embera_using_fake' => 1
-        );
-
-        return array_merge($defaults, $fakeResponse);
-    }
-
-    /**
      * Executes a http request to the given url and
      * returns an associative array with the fetched data.
      *
@@ -93,7 +72,13 @@ class Oembed
         $response = $this->http->fetch($url);
         $json = json_decode($response, true);
         if ($json)
-            return array_merge($json, array('embera_using_fake' => 0));
+        {
+            $json = array_merge(array(
+                'embera_using_fake' => 0
+            ), $json);
+
+            return $json;
+        }
 
         return array();
     }

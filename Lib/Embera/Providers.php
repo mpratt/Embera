@@ -51,6 +51,7 @@ class Providers
         'sketchfab.com' => '\Embera\Providers\Sketchfab',
         'speakerdeck.com' => '\Embera\Providers\Speakerdeck',
         'dailymotion.com' => '\Embera\Providers\DailyMotion',
+        'dai.ly' => '\Embera\Providers\DailyMotion',
         'viddler.com' => '\Embera\Providers\Viddler',
         'mixcloud.com' => '\Embera\Providers\MixCloud',
         'flickr.com' => '\Embera\Providers\Flickr',

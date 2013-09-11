@@ -23,8 +23,10 @@ class AppNet extends \Embera\Adapters\Service
     /** inline {@inheritdoc} */
     protected function validateUrl()
     {
-        return (preg_match('~alpha\.app\.net/(?:[^/]+)/(?:post)/(?:[0-9]+)/?~i', $this->url) ||
-                preg_match('~photos\.app\.net/(?:[0-9]+)/([?:0-9]+)/?~i', $this->url));
+        $this->url->stripLastSlash();
+
+        return (preg_match('~alpha\.app\.net/(?:[^/]+)/(?:post)/(?:[0-9]+)~i', $this->url) ||
+                preg_match('~photos\.app\.net/(?:[0-9]+)/([?:0-9]+)~i', $this->url));
     }
 }
 

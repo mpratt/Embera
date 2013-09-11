@@ -24,6 +24,8 @@ class Gmep extends \Embera\Adapters\Service
     protected function validateUrl()
     {
         $this->url->stripLastSlash();
+        $this->url->convertToHttps();
+        $this->url->stripWWW();
 
         return (preg_match('~gmep\.org/media/(?:[0-9]+)$~i', $this->url));
     }

@@ -45,27 +45,6 @@ class TestOembed extends PHPUnit_Framework_TestCase
         $this->assertEquals($return, array());
     }
 
-    public function testFakeResponseBuilder()
-    {
-        $oembed = new \Embera\Oembed(false, new MockHttpRequest());
-        $return = $oembed->buildFakeResponse();
-
-        $this->assertTrue(is_array($return));
-        $this->assertTrue((count($return) > 0));
-    }
-
-    public function testFakeResponseBuilder2()
-    {
-        $oembed = new \Embera\Oembed(true, new MockHttpRequest());
-        $return = $oembed->buildFakeResponse(array('value1' => 10, 'value2' => 30, 'title' => 'Yay'));
-
-        $this->assertTrue(is_array($return));
-        $this->assertTrue((count($return) > 3));
-        $this->assertEquals(10, $return['value1']);
-        $this->assertEquals(30, $return['value2']);
-        $this->assertEquals('Yay', $return['title']);
-    }
-
     public function testUrlConstruction()
     {
         $oembed = new \Embera\Oembed(true, new MockHttpRequest());

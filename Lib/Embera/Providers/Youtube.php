@@ -17,24 +17,13 @@ namespace Embera\Providers;
  */
 class Youtube extends \Embera\Adapters\Service
 {
-
     /** inline {@inheritdoc} */
     protected $apiUrl = 'http://www.youtube.com/oembed?format=json';
-
-    /** @var array An array with query string of the current url */
-    protected $query = array();
 
     /** inline {@inheritdoc} */
     protected function validateUrl()
     {
-        $parsed = parse_url($this->url);
-        if (!empty($parsed['query']))
-        {
-            parse_str($parsed['query'], $this->query);
-            return (!empty($this->query['v']));
-        }
-
-        return false;
+        return (preg_match('~v=(?:[a-z0-9_-]+)~i', $this->url));
     }
 
     /** inline {@inheritdoc} */
@@ -47,22 +36,18 @@ class Youtube extends \Embera\Adapters\Service
     /** inline {@inheritdoc} */
     public function fakeResponse()
     {
-        $html = '<iframe width="{width}" height="{height}" src="{video}" frameborder="0" allowfullscreen>';
-        $t = array(
-            '{video}' => 'http://www.youtube.com/embed/' . $this->query['v'],
-            '{width}' => $this->getWidth(),
-            '{height}' => $this->getHeight()
-        );
+        if (preg_match('~v=([a-z0-9_-]+)~i', $this->url, $matches))
+        {
+            return array(
+                'type' => 'video',
+                'provider_name' => 'Youtube',
+                'provider_url' => 'http://www.youtube.com',
+                'title' => 'Unknown title',
+                'html' => '<iframe width="{width}" height="{height}" src="http://www.youtube.com/embed/' . $matches['1'] . '" frameborder="0" allowfullscreen>',
+            );
+        }
 
-        $data = array(
-            'type' => 'video',
-            'provider_name' => 'Youtube',
-            'provider_url' => 'http://www.youtube.com',
-            'title' => 'Unknown title',
-            'html' => str_replace(array_keys($t), array_values($t), $html)
-        );
-
-        return $this->oembed->buildFakeResponse($data);
+        return array();
     }
 }
 

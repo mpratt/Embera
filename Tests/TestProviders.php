@@ -77,7 +77,7 @@ class TestProviders extends PHPUnit_Framework_TestCase
             $test = new $service($url, array('fake' => array(), 'params' => array()), $fakeOembed);
             $response = $test->fakeResponse();
 
-            $this->assertTrue((count($response) > 5), 'Invalid Response for ' . $url);
+            $this->assertTrue((count($response) > 2), 'Invalid Fake Response for ' . $url . ' - Debug: ' . print_r($response, true));
             $this->assertContains($fakeResponseData['html'], $response['html'], 'Response is not ' . $fakeResponseData['html']. ' in ' . $url);
             $this->assertEquals($fakeResponseData['type'], $response['type'], 'Response type is not ' . $fakeResponseData['type'] . ' on ' . $url);
         }
