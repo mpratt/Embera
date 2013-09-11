@@ -83,16 +83,14 @@ abstract class Service
         try {
 
             if ($response = $this->oembed->getResourceInfo($this->apiUrl, (string) $this->url, $this->config['params']))
-            {
-                return $response;
-            }
+                return $this->modifyResponse($response);
 
         } catch (\Exception $e) { $this->errors[] = $e->getMessage(); }
 
         if ($response = $this->fakeResponse())
         {
             $fakeResponse = new \Embera\FakeResponse($this->config, $response);
-            return $fakeResponse->buildResponse();
+            return $this->modifyResponse($fakeResponse->buildResponse());
         }
 
         return array();
@@ -148,6 +146,17 @@ abstract class Service
      * @return void
      */
     protected function normalizeUrl() {}
+
+    /**
+     * Gives the hability to modify the response/fake-response array
+     * from an oembed provider.
+     *
+     * It should be overwritten by the service when needed
+     *
+     * @param array $response
+     * @return array
+     */
+    protected function modifyResponse(array $response = array()) { return $response; }
 }
 
 ?>

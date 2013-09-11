@@ -50,7 +50,7 @@ dependencies, you can use this library by creating a composer.json and adding th
 
     {
         "require": {
-            "mpratt/embera": "dev-master"
+            "mpratt/embera": ">=0.9"
         }
     }
 
