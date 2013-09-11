@@ -12,7 +12,6 @@ Sites marked with an `*` allow offline html embedding.
 - [Cacoo](http://cacoo.com)
 - [Chirbit](http://chirb.it)
 - [CircuitLab](http://www.circuitlab.com)
-- [ClikThrough](http://www.clikthrough.com)
 - [CollegeHumor](http://www.collegehumor.com)
 - [Coub](http://coub.com)
 - [Crowd Ranking](http://crowdranking.com)

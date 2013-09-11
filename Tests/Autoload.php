@@ -936,23 +936,6 @@ class UrlList
                 'http://www.slideshare.net/search/slideshow?searchfrom=header&q=start',
             ),
         ),
-        'clikthrough' => array(
-            'valid' => array(
-                'http://www.clikthrough.com/theater/video/23//en-US',
-                'http://clikthrough.com/theater/video/19/',
-                'http://www.clikthrough.com/theater/video/49',
-                'http://clikthrough.com/theater/video/39',
-                'http://www.clikthrough.com/theater/video/30',
-            ),
-            'invalid' => array(
-                'http://www.clikthrough.com/theater/video/letters',
-                'http://www.clikthrough.com/theater/video',
-                'http://www.clikthrough.com/theater/',
-                'http://www.clikthrough.com/products/',
-                'http://www.clikthrough.com/videos/',
-                'http://www.clikthrough.com/artists/',
-            ),
-        ),
         'speakerdeck' => array(
             'valid' => array(
                 'https://speakerdeck.com/sva_1981/zhi-zhi-ju-tesuto',

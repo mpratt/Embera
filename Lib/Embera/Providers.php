@@ -83,7 +83,6 @@ class Providers
         'yfrog.us' => '\Embera\Providers\YFrog',
         'twitter.yfrog.com' => '\Embera\Providers\YFrog',
         'slideshare.net' => '\Embera\Providers\SlideShare',
-        'clikthrough.com' => '\Embera\Providers\ClikThrough',
         'polleverywhere.com' => '\Embera\Providers\PollEveryWhere',
         'videos.sapo.pt' => '\Embera\Providers\Sapo',
         'on.aol.com' => '\Embera\Providers\AolOn',
