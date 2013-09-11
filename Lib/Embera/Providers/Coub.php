@@ -14,6 +14,7 @@ namespace Embera\Providers;
 
 /**
  * The coub.com Provider
+ * @link http://coub.com
  */
 class Coub extends \Embera\Adapters\Service
 {
@@ -24,9 +25,27 @@ class Coub extends \Embera\Adapters\Service
     protected function validateUrl()
     {
         $this->url->stripQueryString();
+        $this->url->stripLastSlash();
         $this->url->stripWWW();
 
         return (preg_match('~coub\.com/(?:view|embed)/(?:[\w\d]+)/?$~i', $this->url));
+    }
+
+    /** inline {@inheritdoc} */
+    public function fakeResponse()
+    {
+        if (preg_match('~/([\w\d]+)$~i', $this->url, $matches))
+        {
+            return array(
+                'type' => 'video',
+                'provider_name' => 'Coub',
+                'provider_url' => 'http://coub.com',
+                'url' => (string) $this->url,
+                'html' => '<iframe src="http://coub.com/embed/' . $matches['1'] . '" allowfullscreen="true" frameborder="0" width="{width}" height="{height}"></iframe>',
+            );
+        }
+
+        return array();
     }
 }
 

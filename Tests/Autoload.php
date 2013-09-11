@@ -15,6 +15,277 @@ else
 class UrlList
 {
     public static $url = array(
+        'animoto' => array(
+            'valid' => array(
+                'http://animoto.com/play/JzwsBn5FRVxS0qoqcBP5zA',
+                'http://animoto.com/play/JzwsBn5FRVxS0qoqcBP5zA/',
+                'http://www.animoto.com/play/JzwsBn5FRVxS0qoqcBP5zA/',
+                'http://animoto.com/play/tH6T0044UCwFiALmCxbjgA',
+                'http://www.animoto.com/play/tH6T0044UCwFiALmCxbjgA',
+                'http://animoto.com/play/WafRFTXfiG1e7FueGwgm2w/',
+                'http://www.animoto.com/play/9jR5D89nw7Cw61laPFhpsQ/'
+            ),
+            'invalid' => array(
+                'http://animoto.com/features',
+                'http://animoto.com/#examples',
+                'http://www.animoto.com/play/JzwsBn5FRVxS0qoqcBP5zA/other-stuff',
+                'http://animoto.com/',
+            ),
+        ),
+        'aolon' => array(
+            'valid' => array(
+                'http://on.aol.com/video/plans-to-clone-john-lennon-using-one-of-his-teeth-517906689?icid=OnHomepageL1_Tag',
+                'http://on.aol.com/video/three-good-news-stories-to-brighten-your-day-517906768',
+                'https://on.aol.com/video/kid-president-meets-beyonc--517906781/',
+                'http://on.aol.com/video/obama-comes-out-against-dog-breed-specific-legislation-517905316/',
+                'http://on.aol.com/video/colo--lawmakers-ousted-over-gun-control-support-517929948?icid=OnHomepageC3_New_Img',
+                'http://www.5min.com/video/obama-comes-out-against-dog-breed-specific-legislation-517905316',
+                'http://5min.com/video/obama-comes-out-against-dog-breed-specific-legislation-517905316',
+            ),
+            'invalid' => array(
+                'http://5min.com/obama-comes-out-against-dog-breed-specific-legislation-517905316',
+                'http://on.aol.com/video/',
+                'http://on.aol.com/channel/parenting',
+                'http://on.aol.com/originals',
+                'http://on.aol.com/show/CandidlyNicole-517742769',
+                'http://on.aol.com/bubble/omg/1',
+                'http://on.aol.com',
+            ),
+            'normalize' => array(
+                'http://5min.com/video/obama-comes-out-against-dog-breed-specific-legislation-517905316' => 'http://on.aol.com/video/obama-comes-out-against-dog-breed-specific-legislation-517905316',
+                'https://5min.com/video/obama-comes-out-against-dog-breed-specific-legislation-517905316' => 'http://on.aol.com/video/obama-comes-out-against-dog-breed-specific-legislation-517905316',
+                'http://on.aol.com/video/plans-to-clone-john-lennon-using-one-of-his-teeth-517906689?icid=OnHomepageL1_Tag' => 'http://on.aol.com/video/plans-to-clone-john-lennon-using-one-of-his-teeth-517906689',
+                'http://on.aol.com/video/plans-to-clone-john-lennon-using-one-of-his-teeth-517906689/' => 'http://on.aol.com/video/plans-to-clone-john-lennon-using-one-of-his-teeth-517906689',
+            ),
+            'fake' => array(
+                'type' => 'video',
+                'html' => '<iframe'
+            )
+        ),
+        'appnet' => array(
+            'valid' => array(
+                'https://alpha.app.net/lesechos/post/9152136',
+                'https://alpha.app.net/vowels/post/8244279/photo/1',
+                'https://alpha.app.net/breakingnews/post/9141658/',
+                'http://alpha.app.net/popsugar/post/9145139',
+                'https://photos.app.net/8244279/1',
+            ),
+            'invalid' => array(
+                'https://unknown.app.net/breakingnews/post/9141658/',
+                'https://aplpha.app.net/breakingnews/post/string/',
+                'https://aplpha.app.net/post/9141658/',
+                'https://aplpha.app.net/breakingnews/9141658/',
+                'https://aplpha.app.net',
+            ),
+        ),
+        'bambuser' => array(
+            'valid' => array(
+                'http://bambuser.com/v/3853413',
+                'http://bambuser.com/v/3828591/',
+                'http://bambuser.com/channel/peterpstuttgart',
+                'http://www.bambuser.com/v/3828416',
+                'http://bambuser.com/v/3847370',
+                'http://bambuser.com/v/3901540',
+            ),
+            'invalid' => array(
+                'http://bambuser.com/broadcasts',
+                'http://bambuser.com/premium',
+                'http://bambuser.com/tag/Business',
+                'http://bambuser.com/tag/TMSO',
+                'http://bambuser.com/',
+            ),
+            'normalize' => array(
+                'http://www.bambuser.com/v/3847370/' => 'http://bambuser.com/v/3847370',
+                'http://www.bambuser.com/v/3847370' => 'http://bambuser.com/v/3847370',
+                'http://bambuser.com/channel/peterpstuttgart/broadcast/3847370' => 'http://bambuser.com/v/3847370',
+                'http://bambuser.com/channel/peterpstuttgart/broadcast/3847370/other/stuff' => 'http://bambuser.com/v/3847370',
+            ),
+            'fake' => array(
+                'type' => 'video',
+                'html' => '<embed'
+            )
+        ),
+        'bliptv' => array(
+            'valid' => array(
+                'http://a.blip.tv/laurainthekitchen/veggie-burger-recipe-6615471',
+                'http://a.blip.tv/fnetwork/julien-fournie-paris-haute-couture-fall-winter-2013-fashion-network-6629497',
+                'http://blip.tv/nostalgiacritic/nostalgia-critic-sailor-moon-6625851/',
+                'http://blip.tv/phelous/deadly-friend-6617287',
+                'http://blip.tv/v8tv/muscle-car-of-the-week-video-8-34-2-mile-1970-chevelle-ss-ls6-6623905',
+                'http://blip.tv/askaninja/ask-a-ninja-question-34-the-bloodys-4441669',
+                'http://blip.tv/nostalgia-chick/nostalgia-chick-lord-of-the-rings-return-of-the-king-part-1-6513810',
+            ),
+            'invalid' => array(
+                'http://blip.tv/drama-videos',
+                'http://blip.tv/askaninja/ask-a-ninja-question-34-the-bloodys', // Doesnt end with number id
+                'http://blip.tv/muscle-car-of-the-week-video-8-34-2-mile-1970-chevelle-ss-ls6-6623905',
+                'http://blip.tv/nostalgia-chick/nostalgia-chick-lord-of-the-rings-return-of-the-king-part-1-6513810/other-stuff',
+                'http://blip.tv',
+            ),
+        ),
+        'cacoo' => array(
+            'valid' => array(
+                'https://cacoo.com/diagrams/m9uZtizE5I2GkFR6',
+                'http://cacoo.com/diagrams/eQe99LVxlYdVCvHA/',
+                'https://www.cacoo.com/diagrams/9mG2aVxsBqoH69Qh',
+                'https://cacoo.com/diagrams/z4IixDJR44iCqIYw/',
+                'http://cacoo.com/diagrams/6NbKDcInDTisv2vU',
+                'https://www.cacoo.com/diagrams/ZQ4rgdwXvTZFGQX8',
+                'https://cacoo.com/diagrams/zN0Uen7DE0OyCuBC',
+                'https://www.cacoo.com/diagrams/dbIT1zRnPJw8lCfj',
+                'https://cacoo.com/diagrams/6NbKDcInDTisv2vU/other/stuff',
+            ),
+            'invalid' => array(
+                'https://cacoo.com/lang/en/?ref=logo',
+                'https://cacoo.com/lang/en/tour?ref=header',
+                'https://cacoo.com/lang/en/faq',
+                'https://cacoo.com/signup',
+                'https://cacoo.com/',
+            ),
+            'normalize' => array(
+                'https://www.cacoo.com/diagrams/9mG2aVxsBqoH69Qh' => 'https://cacoo.com/diagrams/9mG2aVxsBqoH69Qh',
+                'http://www.cacoo.com/diagrams/9mG2aVxsBqoH69Qh/' => 'https://cacoo.com/diagrams/9mG2aVxsBqoH69Qh',
+                'https://cacoo.com/diagrams/9mG2aVxsBqoH69Qh/' => 'https://cacoo.com/diagrams/9mG2aVxsBqoH69Qh',
+                'https://cacoo.com/diagrams/9mG2aVxsBqoH69Qh/view?w=40&h=80' => 'https://cacoo.com/diagrams/9mG2aVxsBqoH69Qh',
+            ),
+            'fake' => array(
+                'type' => 'rich',
+                'html' => '<iframe'
+            )
+        ),
+        'chirbit' => array(
+            'valid' => array(
+                'http://chirb.it/w3gGKr',
+                'http://chirb.it/gJDBHO',
+                'http://chirb.it/wtJs5e/',
+                'http://www.chirb.it/185err',
+                'http://chirb.it/x0sw0k',
+                'http://chirb.it/zGt9tG',
+            ),
+            'invalid' => array(
+                'http://chirbit.it/top-50-chirbits-this-week.php',
+                'http://www.chirbit.com/top-50-chirbits-this-week.php',
+                'http://www.chirbit.com/',
+                'http://chirb.it',
+            ),
+            'normalize' => array(
+                'http://chirb.it/wp/wtJs5e/' => 'http://chirb.it/wtJs5e',
+                'http://chirb.it/wp/wtJs5e/other/stuff' => 'http://chirb.it/wtJs5e',
+                'http://chirb.it/wp/wtJs5e' => 'http://chirb.it/wtJs5e',
+            ),
+            'fake' => array(
+                'type' => 'rich',
+                'html' => '<iframe'
+            )
+        ),
+        'circuitlab' => array(
+            'valid' => array(
+                'https://www.circuitlab.com/circuit/e38756/555-timer-as-astable-multivibrator-oscillator/',
+                'https://www.circuitlab.com/circuit/fby849/bjt-cascoded-active-load-differential-amplifier-with-cmfb',
+                'https://circuitlab.com/circuit/4da864/diode-half-wave-rectifier/',
+                'https://circuitlab.com/circuit/z79rqm/leds-with-resistor-biasing',
+                'https://www.circuitlab.com/circuit/42475b/mosfet-and-resistor-nand-gate/',
+                'https://www.circuitlab.com/circuit/4da864/embed_target/?width=540',
+                'https://circuitlab.com/cz79rqm/',
+                'https://circuitlab.com/cz79rqm',
+            ),
+            'invalid' => array(
+                'https://www.circuitlab.com/',
+                'https://www.circuitlab.com/forums/',
+                'https://www.circuitlab.com/circuit/z79rqm/leds-with-resistor-biasing/other/stuff',
+            ),
+            'normalize' => array(
+                'https://circuitlab.com/circuit/4da864/diode-half-wave-rectifier/' => 'https://www.circuitlab.com/circuit/4da864/diode-half-wave-rectifier/',
+                'https://circuitlab.com/circuit/z79rqm/leds-with-resistor-biasing' => 'https://www.circuitlab.com/circuit/z79rqm/leds-with-resistor-biasing',
+                'https://circuitlab.com/cz79rqm' => 'https://www.circuitlab.com/circuit/z79rqm/',
+                'https://circuitlab.com/cz79rqm/' => 'https://www.circuitlab.com/circuit/z79rqm/',
+                'https://www.circuitlab.com/circuit/4da864/embed_target/?width=540' => 'https://www.circuitlab.com/circuit/4da864/embed_target/',
+            ),
+            'fake' => array(
+                'type' => 'rich',
+                'html' => '<iframe'
+            )
+        ),
+        'collegehumor' => array(
+            'valid' => array(
+                'http://www.collegehumor.com/video/6830834/mitt-romney-style-gangnam-style-parody',
+                'http://www.collegehumor.com/embed/6897735/dogs-come-1-by-1-for-treats-theres-a-cat-and-oh-also-a-duck/',
+                'http://www.collegehumor.com/video/6897575/',
+                'http://www.collegehumor.com/embed/6897394',
+                'http://www.collegehumor.com/video/6182447/kid-farm',
+                'http://collegehumor.com/video/6643191/batman-chooses-his-voice',
+                'http://collegehumor.com/video/6621074',
+                'http://www.collegehumor.com/video/6817857/the-dark-knight-meets-the-avengers',
+            ),
+            'invalid' => array(
+                'http://www.collegehumor.com/embedVideo/6897394', // wrong path
+                'http://www.collegehumor.com/embed/6buaksui4', // Not numeric
+                'http://www.collegehumor.com/videos/6897394',
+                'http://www.collegehumor.com/6897394'
+            ),
+            'fake' => array(
+                'type' => 'video',
+                'html' => '<embed'
+            )
+        ),
+        'coub' => array(
+            'valid' => array(
+                'http://coub.com/view/2gik7tu6',
+                'http://coub.com/view/1i2na5tm',
+                'http://www.coub.com/view/2oa3zbsr',
+                'http://coub.com/embed/20v82p5j',
+                'http://coub.com/embed/omwe0oe/',
+                'http://coub.com/view/2m7mett8/',
+                'http://coub.com/embed/29zkqoco',
+            ),
+            'invalid' => array(
+                'http://coub.com/view/2m7mett8/other-stuff/',
+                'http://coub.com/explore/art-design',
+                'http://coub.com/explore/girls',
+                'http://coub.com/embed/',
+                'http://coub.com/view/',
+                'http://coub.com/',
+            ),
+            'normalize' => array(
+                'http://coub.com/view/231nevc?small_suggest_place=3' => 'http://coub.com/view/231nevc',
+                'http://coub.com/view/231nevc?small_suggest_place=3&stuff=hihi-hi' => 'http://coub.com/view/231nevc',
+                'http://coub.com/view/231nevc/?small_suggest_place=3&stuff=hihi-hi' => 'http://coub.com/view/231nevc',
+                'http://www.coub.com/view/231nevc?small_suggest_place=3&stuff=hihi-hi' => 'http://coub.com/view/231nevc',
+            ),
+            'fake' => array(
+                'type' => 'video',
+                'html' => '<iframe'
+            )
+        ),
+        'crowdranking' => array(
+            'valid' => array(
+                'http://crowdranking.com/crowdrankings/t470g0--best-tea',
+                'http://crowdranking.com/crowdrankings/t272g0--tv-serien/',
+                'http://crowdranking.com/crowdrankings/t485g0--what-makes-you-want-to-live-longer',
+                'http://crowdranking.com/crowdrankings/t573g0--top-tourismusregionen-in-oesterreich',
+                'http://www.crowdranking.com/crowdrankings/t537g0--die-besten-premium-kompaktkameras-2013',
+                'http://crowdranking.com/crowdrankings/t564g0--was-mich-am-meisten-nervt',
+                'http://c9ng.com/r/t537g0',
+                'http://c9ng.com/r/t470g0',
+            ),
+            'invalid' => array(
+                'http://crowdranking.com/groups/0',
+                'http://crowdranking.com/groups/0?cat=creativity-diy',
+                'http://crowdranking.com/groups/0?cat=people-celebrities',
+                'http://crowdranking.com',
+                'http://crowdranking.com/login',
+            ),
+            'normalize' => array(
+                'http://c9ng.com/r/t470g0' => 'http://crowdranking.com/r/t470g0',
+                'http://c9ng.com/r/t470g0/' => 'http://crowdranking.com/r/t470g0',
+                'http://crowdranking.com/crowdrankings/t573g0--top-tourismusregionen-in-oesterreich' => 'http://crowdranking.com/crowdrankings/t573g0--top-tourismusregionen-in-oesterreich',
+                'http://www.crowdranking.com/crowdrankings/t537g0--die-besten-premium-kompaktkameras-2013' => 'http://crowdranking.com/crowdrankings/t537g0--die-besten-premium-kompaktkameras-2013',
+            ),
+            'fake' => array(
+                'type' => 'rich',
+                'html' => '<iframe'
+            )
+        ),
         'youtube' => array(
             'valid' => array(
                 'http://www.youtube.com/watch?v=9bZkp7q19f0',
@@ -191,27 +462,6 @@ class UrlList
                 'https://polldaddy.com/poll/7205026/' => 'http://polldaddy.com/poll/7205026/',
             )
         ),
-        'crowdranking' => array(
-            'valid' => array(
-                'http://crowdranking.com/crowdrankings/t470g0--best-tea',
-                'http://crowdranking.com/crowdrankings/t272g0--tv-serien/',
-                'http://crowdranking.com/crowdrankings/t485g0--what-makes-you-want-to-live-longer',
-                'http://crowdranking.com/crowdrankings/t573g0--top-tourismusregionen-in-oesterreich',
-                'http://www.crowdranking.com/crowdrankings/t537g0--die-besten-premium-kompaktkameras-2013',
-                'http://crowdranking.com/crowdrankings/t564g0--was-mich-am-meisten-nervt',
-            ),
-            'invalid' => array(
-                'http://crowdranking.com/groups/0',
-                'http://crowdranking.com/groups/0?cat=creativity-diy',
-                'http://crowdranking.com/groups/0?cat=people-celebrities',
-                'http://crowdranking.com',
-                'http://crowdranking.com/login',
-            ),
-            'normalize' => array(
-                'http://crowdranking.com/crowdrankings/t573g0--top-tourismusregionen-in-oesterreich' => 'http://crowdranking.com/crowdrankings/t573g0--top-tourismusregionen-in-oesterreich',
-                'http://www.crowdranking.com/crowdrankings/t537g0--die-besten-premium-kompaktkameras-2013' => 'http://crowdranking.com/crowdrankings/t537g0--die-besten-premium-kompaktkameras-2013',
-            )
-        ),
         'roomshare' => array(
             'valid' => array(
                 'http://roomshare.jp/en/post/137453',
@@ -339,31 +589,6 @@ class UrlList
                 'http://www.ustream.tv/howto',
                 'http://www.ustream.com/howto',
             ),
-        ),
-        'cacoo' => array(
-            'valid' => array(
-                'https://cacoo.com/diagrams/m9uZtizE5I2GkFR6',
-                'https://cacoo.com/diagrams/eQe99LVxlYdVCvHA/',
-                'https://www.cacoo.com/diagrams/9mG2aVxsBqoH69Qh',
-                'https://cacoo.com/diagrams/z4IixDJR44iCqIYw/',
-                'http://cacoo.com/diagrams/6NbKDcInDTisv2vU',
-                'https://www.cacoo.com/diagrams/ZQ4rgdwXvTZFGQX8',
-                'https://cacoo.com/diagrams/zN0Uen7DE0OyCuBC',
-                'https://www.cacoo.com/diagrams/dbIT1zRnPJw8lCfj',
-            ),
-            'invalid' => array(
-                'https://cacoo.com/lang/en/?ref=logo',
-                'https://cacoo.com/diagrams/6NbKDcInDTisv2vU/other/stuff',
-                'https://cacoo.com/lang/en/tour?ref=header',
-                'https://cacoo.com/lang/en/faq',
-                'https://cacoo.com/signup',
-                'https://cacoo.com/',
-            ),
-            'normalize' => array(
-                'https://www.cacoo.com/diagrams/9mG2aVxsBqoH69Qh' => 'https://cacoo.com/diagrams/9mG2aVxsBqoH69Qh',
-                'https://www.cacoo.com/diagrams/9mG2aVxsBqoH69Qh/' => 'https://cacoo.com/diagrams/9mG2aVxsBqoH69Qh',
-                'https://cacoo.com/diagrams/9mG2aVxsBqoH69Qh/' => 'https://cacoo.com/diagrams/9mG2aVxsBqoH69Qh',
-            )
         ),
         'urtak' => array(
             'valid' => array(
@@ -602,24 +827,6 @@ class UrlList
                 'http://www.screenr.com/T80H/other',
             ),
         ),
-        'circuitlab' => array(
-            'valid' => array(
-                'https://www.circuitlab.com/circuit/e38756/555-timer-as-astable-multivibrator-oscillator/',
-                'https://www.circuitlab.com/circuit/fby849/bjt-cascoded-active-load-differential-amplifier-with-cmfb',
-                'https://circuitlab.com/circuit/4da864/diode-half-wave-rectifier/',
-                'https://circuitlab.com/circuit/z79rqm/leds-with-resistor-biasing',
-                'https://www.circuitlab.com/circuit/42475b/mosfet-and-resistor-nand-gate/',
-            ),
-            'invalid' => array(
-                'https://www.circuitlab.com/',
-                'https://www.circuitlab.com/forums/',
-                'https://www.circuitlab.com/circuit/z79rqm/leds-with-resistor-biasing/other/stuff',
-            ),
-            'normalize' => array(
-                'https://circuitlab.com/circuit/4da864/diode-half-wave-rectifier/' => 'https://www.circuitlab.com/circuit/4da864/diode-half-wave-rectifier/',
-                'https://circuitlab.com/circuit/z79rqm/leds-with-resistor-biasing' => 'https://www.circuitlab.com/circuit/z79rqm/leds-with-resistor-biasing',
-            )
-        ),
         'geographci' => array(
             'valid' => array(
                 'http://channel-islands.geographs.org/photo/1166',
@@ -669,22 +876,6 @@ class UrlList
                 'http://www.geograph.org.uk/photo/words',
             ),
         ),
-        'chirbit' => array(
-            'valid' => array(
-                'http://chirb.it/w3gGKr',
-                'http://chirb.it/gJDBHO',
-                'http://chirb.it/wtJs5e/',
-                'http://www.chirb.it/185err',
-                'http://chirb.it/x0sw0k',
-                'http://chirb.it/zGt9tG',
-            ),
-            'invalid' => array(
-                'http://chirbit.it/top-50-chirbits-this-week.php',
-                'http://www.chirbit.com/top-50-chirbits-this-week.php',
-                'http://www.chirbit.com/',
-                'http://chirb.it',
-            ),
-        ),
         'ted' => array(
             'valid' => array(
                 'http://www.ted.com/talks/david_gallo_shows_underwater_astonishments.html',
@@ -716,25 +907,6 @@ class UrlList
                 'http://www.ifixit.com/Guide/login',
             ),
         ),
-        'bambuser' => array(
-            'valid' => array(
-                'http://bambuser.com/v/3853413',
-                'http://bambuser.com/v/3828591/',
-                'http://bambuser.com/channel/peterpstuttgart',
-                'http://www.bambuser.com/v/3828416',
-                'http://bambuser.com/v/3847370',
-            ),
-            'invalid' => array(
-                'http://bambuser.com/broadcasts',
-                'http://bambuser.com/premium',
-                'http://bambuser.com/tag/Business',
-                'http://bambuser.com/tag/TMSO',
-                'http://bambuser.com/',
-            ),
-            'normalize' => array(
-                'http://www.bambuser.com/v/3847370/' => 'http://bambuser.com/v/3847370',
-            ),
-        ),
         'githubgist' => array(
             'valid' => array(
                 'https://gist.github.com/mpratt/3177700',
@@ -754,67 +926,6 @@ class UrlList
                 'https://gist.github.com/733951' => 'https://gist.github.com/733951',
                 'https://gist.github.com/LJPH/6308712#file-comet_-idea_description-html' => 'https://gist.github.com/6308712',
             ),
-        ),
-        'aolon' => array(
-            'valid' => array(
-                'http://on.aol.com/video/plans-to-clone-john-lennon-using-one-of-his-teeth-517906689?icid=OnHomepageL1_Tag',
-                'http://on.aol.com/video/three-good-news-stories-to-brighten-your-day-517906768',
-                'https://on.aol.com/video/kid-president-meets-beyonc--517906781',
-                'http://on.aol.com/video/obama-comes-out-against-dog-breed-specific-legislation-517905316',
-                'http://www.5min.com/video/obama-comes-out-against-dog-breed-specific-legislation-517905316',
-                'http://5min.com/video/obama-comes-out-against-dog-breed-specific-legislation-517905316',
-            ),
-            'invalid' => array(
-                'http://5min.com/obama-comes-out-against-dog-breed-specific-legislation-517905316',
-                'http://on.aol.com/video/',
-                'http://on.aol.com/channel/parenting',
-                'http://on.aol.com/originals',
-                'http://on.aol.com/show/CandidlyNicole-517742769',
-                'http://on.aol.com/bubble/omg/1',
-                'http://on.aol.com',
-            ),
-            'normalize' => array(
-                'http://5min.com/video/obama-comes-out-against-dog-breed-specific-legislation-517905316' => 'http://on.aol.com/video/obama-comes-out-against-dog-breed-specific-legislation-517905316',
-                'https://5min.com/video/obama-comes-out-against-dog-breed-specific-legislation-517905316' => 'http://on.aol.com/video/obama-comes-out-against-dog-breed-specific-legislation-517905316',
-                'http://on.aol.com/video/plans-to-clone-john-lennon-using-one-of-his-teeth-517906689?icid=OnHomepageL1_Tag' => 'http://on.aol.com/video/plans-to-clone-john-lennon-using-one-of-his-teeth-517906689',
-            ),
-        ),
-        'animoto' => array(
-            'valid' => array(
-                'http://animoto.com/play/JzwsBn5FRVxS0qoqcBP5zA',
-                'http://animoto.com/play/JzwsBn5FRVxS0qoqcBP5zA/',
-                'http://www.animoto.com/play/JzwsBn5FRVxS0qoqcBP5zA/',
-            ),
-            'invalid' => array(
-                'http://animoto.com/features',
-                'http://animoto.com/#examples',
-                'http://www.animoto.com/play/JzwsBn5FRVxS0qoqcBP5zA/other-stuff',
-                'http://animoto.com/',
-            ),
-        ),
-        'coub' => array(
-            'valid' => array(
-                'http://coub.com/view/2gik7tu6',
-                'http://coub.com/view/1i2na5tm',
-                'http://www.coub.com/view/2oa3zbsr',
-                'http://coub.com/embed/20v82p5j',
-                'http://coub.com/embed/omwe0oe/',
-                'http://coub.com/view/2m7mett8/',
-                'http://coub.com/embed/29zkqoco',
-            ),
-            'invalid' => array(
-                'http://coub.com/view/2m7mett8/other-stuff/',
-                'http://coub.com/explore/art-design',
-                'http://coub.com/explore/girls',
-                'http://coub.com/embed/',
-                'http://coub.com/view/',
-                'http://coub.com/',
-            ),
-            'normalize' => array(
-                'http://coub.com/view/231nevc?small_suggest_place=3' => 'http://coub.com/view/231nevc',
-                'http://coub.com/view/231nevc?small_suggest_place=3&stuff=hihi-hi' => 'http://coub.com/view/231nevc',
-                'http://www.coub.com/view/231nevc?small_suggest_place=3&stuff=hihi-hi' => 'http://coub.com/view/231nevc',
-            )
         ),
         'kickstarter' => array(
             'valid' => array(
@@ -951,40 +1062,6 @@ class UrlList
                 'https://speakerdeck.com/',
                 'https://speakerdeck.com/search?q=what+up',
                 'https://speakerdeck.com/jamesclay/what-do-you-mean-someone-made-them-up/other-stuff',
-            ),
-        ),
-        'appnet' => array(
-            'valid' => array(
-                'https://alpha.app.net/lesechos/post/9152136',
-                'https://alpha.app.net/vowels/post/8244279/photo/1',
-                'https://alpha.app.net/breakingnews/post/9141658/',
-                'http://alpha.app.net/popsugar/post/9145139',
-                'https://photos.app.net/8244279/1',
-            ),
-            'invalid' => array(
-                'https://unknown.app.net/breakingnews/post/9141658/',
-                'https://aplpha.app.net/breakingnews/post/string/',
-                'https://aplpha.app.net/post/9141658/',
-                'https://aplpha.app.net/breakingnews/9141658/',
-                'https://aplpha.app.net',
-            ),
-        ),
-        'bliptv' => array(
-            'valid' => array(
-                'http://a.blip.tv/laurainthekitchen/veggie-burger-recipe-6615471',
-                'http://a.blip.tv/fnetwork/julien-fournie-paris-haute-couture-fall-winter-2013-fashion-network-6629497',
-                'http://blip.tv/nostalgiacritic/nostalgia-critic-sailor-moon-6625851/',
-                'http://blip.tv/phelous/deadly-friend-6617287',
-                'http://blip.tv/v8tv/muscle-car-of-the-week-video-8-34-2-mile-1970-chevelle-ss-ls6-6623905',
-                'http://blip.tv/askaninja/ask-a-ninja-question-34-the-bloodys-4441669',
-                'http://blip.tv/nostalgia-chick/nostalgia-chick-lord-of-the-rings-return-of-the-king-part-1-6513810',
-            ),
-            'invalid' => array(
-                'http://blip.tv/drama-videos',
-                'http://blip.tv/askaninja/ask-a-ninja-question-34-the-bloodys', // Doesnt end with number id
-                'http://blip.tv/muscle-car-of-the-week-video-8-34-2-mile-1970-chevelle-ss-ls6-6623905',
-                'http://blip.tv/nostalgia-chick/nostalgia-chick-lord-of-the-rings-return-of-the-king-part-1-6513810/other-stuff',
-                'http://blip.tv',
             ),
         ),
         'viddler' => array(
@@ -1186,24 +1263,6 @@ class UrlList
                 'http://www.nfb.ca/film/',
                 'http://nfb.ca/film/',
                 'http://www.nfb.ca/explore-all-films/',
-            )
-        ),
-        'collegehumor' => array(
-            'valid' => array(
-                'http://www.collegehumor.com/video/6830834/mitt-romney-style-gangnam-style-parody',
-                'http://www.collegehumor.com/embed/6897735/dogs-come-1-by-1-for-treats-theres-a-cat-and-oh-also-a-duck/',
-                'http://www.collegehumor.com/video/6897575/',
-                'http://www.collegehumor.com/embed/6897394',
-                'http://www.collegehumor.com/video/6182447/kid-farm',
-                'http://collegehumor.com/video/6643191/batman-chooses-his-voice',
-                'http://collegehumor.com/video/6621074',
-                'http://www.collegehumor.com/video/6817857/the-dark-knight-meets-the-avengers',
-            ),
-            'invalid' => array(
-                'http://www.collegehumor.com/embedVideo/6897394', // wrong path
-                'http://www.collegehumor.com/embed/6buaksui4', // Not numeric
-                'http://www.collegehumor.com/videos/6897394',
-                'http://www.collegehumor.com/6897394'
             )
         ),
         'myopera' => array(

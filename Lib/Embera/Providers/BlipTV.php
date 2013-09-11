@@ -14,6 +14,7 @@ namespace Embera\Providers;
 
 /**
  * The blip.tv Provider
+ * @link http://blip.tv
  */
 class BlipTV extends \Embera\Adapters\Service
 {

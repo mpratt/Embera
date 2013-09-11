@@ -40,9 +40,10 @@ class TestProviders extends PHPUnit_Framework_TestCase
      * parts of the service.
      *
      * Now, every service has a test file which extends this class
-     * and use this method to validate everything.
+     * and uses this method to validate everything.
      *
      * Why? I had so much duplicated code...
+     * I know it looks ugly, but, its more convenient.
      */
     protected function validateProvider($s, $rounds = 2)
     {
@@ -108,7 +109,10 @@ class TestProviders extends PHPUnit_Framework_TestCase
             $this->assertTrue(!empty($result2['html']), 'Empty Html on ' . $url);
 
             similar_text($result1['html'], $result2['html'], $percent);
-            $this->assertTrue($percent >= 70, 'The Fake/Real response for ' . $url . ' seem a little off');
+            $this->assertTrue($percent >= 70, 'The Fake/Real response for ' . $url . ' seem a little off | %' . $percent);
+
+            $this->assertTrue(isset($result1['type']), 'No type response on ' . $url);
+            $this->assertEquals(strtolower($result1['type']), strtolower($fakeResponseData['type']), 'Funky type response from ' . $url);
         }
     }
 

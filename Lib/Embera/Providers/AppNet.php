@@ -14,6 +14,9 @@ namespace Embera\Providers;
 
 /**
  * The alpha|photos.app.net Provider
+ * @link http://alpha.app.net
+ * @link http://photos.app.net
+ * @link http://developers.app.net/docs/other/oembed/
  */
 class AppNet extends \Embera\Adapters\Service
 {
