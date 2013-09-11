@@ -132,6 +132,7 @@ class UrlList
                 'http://www.dailymotion.com/embed/video/xzxfpu' => 'http://www.dailymotion.com/video/xzxfpu',
                 'http://www.dailymotion.com/video/xzx4m4_balotelli-au-prochain-cri-raciste-je-quitte-le-terrain_sport?from=rss' => 'http://www.dailymotion.com/video/xzx4m4_balotelli-au-prochain-cri-raciste-je-quitte-le-terrain_sport',
                 'http://www.dailymotion.com/embed/video/xzv0cd/' => 'http://www.dailymotion.com/video/xzv0cd',
+                'http://www.dailymotion.com/video/xzse1m_casanova-tout-reste-possible-pour-l-om_sport/stuff/here/' => 'http://www.dailymotion.com/video/xzse1m_casanova-tout-reste-possible-pour-l-om_sport',
                 'http://dai.ly/xzv0cd/' => 'http://www.dailymotion.com/video/xzv0cd',
                 'http://dai.ly/xzv0cd' => 'http://www.dailymotion.com/video/xzv0cd',
             ),
