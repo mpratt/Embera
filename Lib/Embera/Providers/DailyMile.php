@@ -14,6 +14,8 @@ namespace Embera\Providers;
 
 /**
  * The dailymile.com Provider
+ * @link http://www.dailymile.com
+ * @link http://www.dailymile.com/api/oembed
  */
 class DailyMile extends \Embera\Adapters\Service
 {

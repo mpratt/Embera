@@ -14,6 +14,8 @@ namespace Embera\Providers;
 
 /**
  * The DailyMotion.com Provider
+ * @link http://dailymotion.com
+ * @link http://www.dailymotion.com/doc/api/oembed.html
  */
 class DailyMotion extends \Embera\Adapters\Service
 {

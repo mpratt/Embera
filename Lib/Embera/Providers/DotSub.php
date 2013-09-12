@@ -14,8 +14,8 @@ namespace Embera\Providers;
 
 /**
  * The dotsub.com Provider
+ * @link http://dotsub.com/
  * @link http://dotsub.com/solutions/oEmbed
- * TODO: This service might support fake responses
  */
 class DotSub extends \Embera\Adapters\Service
 {
@@ -25,6 +25,7 @@ class DotSub extends \Embera\Adapters\Service
     /** inline {@inheritdoc} */
     protected function validateUrl()
     {
+        $this->url->stripQueryString();
         $this->url->stripLastSlash();
 
         return (preg_match('~dotsub\.com/view/(?:[a-f0-9]+)-(?:[a-f0-9]+)-(?:[a-f0-9]+)-(?:[a-f0-9]+)-(?:[a-f0-9]+)$~i', $this->url));
@@ -33,8 +34,21 @@ class DotSub extends \Embera\Adapters\Service
     /** inline {@inheritdoc} */
     protected function normalizeUrl()
     {
-        if (preg_match('~/media/([0-9a-f\-]+)~i', $this->url, $matches))
+        if (preg_match('~/(?:media|view)/([0-9a-f\-]+)~i', $this->url, $matches))
             $this->url = new \Embera\Url('http://dotsub.com/view/' . $matches['1']);
+    }
+
+    /** inline {@inheritdoc} */
+    public function fakeResponse()
+    {
+        $url = str_replace('/view/', '/media/', $this->url);
+        return array(
+            'type' => 'video',
+            'provider_name' => 'DotSUB',
+            'provider_url' => 'http://dotsub.com',
+            'thumbnail_url' => $url . '/t',
+            'html' => '<iframe src="' . $url . '/e/c?width={width}&height={height}" frameborder="0" width="{width}" height="{height}"></iframe>',
+        );
     }
 }
 

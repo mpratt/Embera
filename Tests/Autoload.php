@@ -286,6 +286,131 @@ class UrlList
                 'html' => '<iframe'
             )
         ),
+        'dailymile' => array(
+            'valid' => array(
+                'http://www.dailymile.com/people/EddieJ3/entries/24776213',
+                'http://www.dailymile.com/people/JessicaP30/entries/24791047',
+                'http://www.dailymile.com/people/JimF3/entries/24684863',
+                'http://www.dailymile.com/people/JimF3/entries/24623801/',
+                'http://dailymile.com/people/JimF3/entries/24447986',
+                'http://dailymile.com/people/IANH17/entries/24533363/',
+                'http://www.dailymile.com/people/IANH17/entries/24444266',
+            ),
+            'invalid' => array(
+                'http://www.dailymile.com/people/EddieJ3',
+                'http://www.dailymile.com/',
+                'http://www.dailymile.com/signup',
+                'http://www.dailymile.com/people/K_P_S',
+            ),
+        ),
+        'dailymotion' => array(
+            'valid' => array(
+                'http://www.dailymotion.com/video/xxwxe1_harlem-shake-de-los-simpsons_fun',
+                'http://dailymotion.com/video/xp30q9_bmw-serie3-2012-en-mexico_auto',
+                'http://www.dailymotion.com/video/xzva95_jacob-jones-and-the-bigfoot-mystery-launch-trailer_videogames',
+                'http://www.dailymotion.com/video/xzx4m4_balotelli-au-prochain-cri-raciste-je-quitte-le-terrain_sport?from=rss',
+                'http://www.dailymotion.com/video/xzse1m_casanova-tout-reste-possible-pour-l-om_sport/stuff/here/',
+                'http://www.dailymotion.com/embed/video/xzv0cd/',
+                'http://dai.ly/xzse1m'
+            ),
+            'invalid' => array(
+                'http://www.dailymotion.com',
+                'http://dailymotion.com',
+                'http://www.dailymotion.com/channel/stuff/',
+                'http://www.dailymotion.com/stuff/',
+                'http://www.dailymotion.com/video/'
+            ),
+            'normalize' =>  array(
+                'http://www.dailymotion.com/video/xxwxe1_harlem-shake-de-los-simpsons_fun' => 'http://www.dailymotion.com/video/xxwxe1_harlem-shake-de-los-simpsons_fun',
+                'http://dailymotion.com/video/xp30q9_bmw-serie3-2012-en-mexico_auto' => 'http://www.dailymotion.com/video/xp30q9_bmw-serie3-2012-en-mexico_auto',
+                'http://www.dailymotion.com/video/xzxtaf_red-bull-400-alic-y-stadlober-ganan-en-eslovenia_sport/' => 'http://www.dailymotion.com/video/xzxtaf_red-bull-400-alic-y-stadlober-ganan-en-eslovenia_sport',
+                'http://www.dailymotion.com/embed/video/xzxfpu' => 'http://www.dailymotion.com/video/xzxfpu',
+                'http://www.dailymotion.com/video/xzx4m4_balotelli-au-prochain-cri-raciste-je-quitte-le-terrain_sport?from=rss' => 'http://www.dailymotion.com/video/xzx4m4_balotelli-au-prochain-cri-raciste-je-quitte-le-terrain_sport',
+                'http://www.dailymotion.com/embed/video/xzv0cd/' => 'http://www.dailymotion.com/video/xzv0cd',
+                'http://www.dailymotion.com/video/xzse1m_casanova-tout-reste-possible-pour-l-om_sport/stuff/here/' => 'http://www.dailymotion.com/video/xzse1m_casanova-tout-reste-possible-pour-l-om_sport',
+                'http://dai.ly/xzv0cd/' => 'http://www.dailymotion.com/video/xzv0cd',
+                'http://dai.ly/xzv0cd' => 'http://www.dailymotion.com/video/xzv0cd',
+            ),
+            'fake' => array(
+                'type' => 'video',
+                'html' => '<iframe'
+            )
+        ),
+        'deviantart' => array(
+            'valid' => array(
+                'http://lieveheersbeestje.deviantart.com/art/Heart-of-gold-378848984',
+                'http://wordofchen.deviantart.com/art/Pressure-379617958/',
+                'http://sarahharas1.deviantart.com/art/Purple-haze-379565213/',
+                'http://m-eralp.deviantart.com/art/After-rain-bomb-379561772',
+                'http://fav.me/d69yyh3/',
+                'http://fav.me/d69yh7m',
+                'http://fav.me/d67maku/',
+            ),
+            'invalid' => array(
+                'http://lieveheersbeestje.deviantart.com/art/house/Heart-of-gold-378848984',
+                'http://wordofchen.deviantart.com/soup/Pressure-379617958',
+                'http://sarahharas1.deviantart.com/class/379565213',
+                'http://fav.me/d69yyh3/stuff/',
+                'http://sta.sh/',
+                'http://fav.me/',
+            ),
+            'private' => array(
+                'http://sooper-deviant.deviantart.com/art/Brand-New-Day-1769-376513535'
+            )
+        ),
+        'dipity' => array(
+            'valid' => array(
+                'http://www.dipity.com/BIRN/Albania-Local-Elections-2011/',
+                'http://www.dipity.com/StevePro/Skype-from-startup-to-8-5-billion-sale',
+                'http://www.dipity.com/ibmzrl/Nanotechnology-at-IBM-Research/',
+                'http://dipity.com/StevePro/2010-in-Review/',
+                'http://www.dipity.com/timeline/Bryson/',
+                'http://www.dipity.com/timeline/Nba-Finals/',
+            ),
+            'invalid' => array(
+                'http://www.dipity.com/timeline/Nba-Finals/other/stuff',
+                'http://www.dipity.com/',
+                'http://www.dipity.com/premium',
+                'http://www.dipity.com/timetube',
+                'http://www.dipity.com/join',
+            ),
+            'normalize' => array(
+                'http://dipity.com/StevePro/2010-in-Review/' => 'http://dipity.com/StevePro/2010-in-Review/',
+                'http://dipity.com/StevePro/2010-in-Review/?cuaccuac=cuac' => 'http://dipity.com/StevePro/2010-in-Review/',
+            ),
+            'fake' => array(
+                'type' => 'rich',
+                'html' => '<iframe'
+            )
+        ),
+        'dotsub' => array(
+            'valid' => array(
+                'http://dotsub.com/view/f2a85663-d9eb-4d92-bb61-fd960c401b23',
+                'http://dotsub.com/view/0ebc725c-a805-4486-a1df-c1e7dccf8c6e/',
+                'http://www.dotsub.com/view/dcef6c2a-3fb7-4ab1-9bc8-fd621b2c3972',
+                'http://dotsub.com/media/b7a2859d-69a3-45f2-8e4e-88f2f15b3f97',
+                'http://dotsub.com/view/85897135-c6ee-4c93-acdd-d7e7f4d08b6e',
+                'http://dotsub.com/view/99eaba09-787a-40a9-9125-27a729de71db',
+            ),
+            'invalid' => array(
+                'http://dotsub.com/view/xxx-xxx-xxxx-xxxx-xxxxx', // It seems that dotsub uses base 64 only as id
+                'http://dotsub.com/view/',
+                'http://dotsub.com/view/?',
+                'http://dotsub.com/view/mostviewed',
+                'http://dotsub.com/view/language/both/dug',
+                'http://dotsub.com/view/99eaba09-787a-40a9-9125-27a729de71db/other/stuff',
+                'http://dotsub.com',
+            ),
+            'normalize' => array(
+                'http://www.dotsub.com/media/396b2b58-9a9c-42f3-b7cb-4a282964b11c/embed/' => 'http://dotsub.com/view/396b2b58-9a9c-42f3-b7cb-4a282964b11c',
+                'http://www.dotsub.com/media/396b2b58-9a9c-42f3-b7cb-4a282964b11c/e/c?width=500&height=300' => 'http://dotsub.com/view/396b2b58-9a9c-42f3-b7cb-4a282964b11c',
+                'http://dotsub.com/media/5af2ea32-1aa1-4fa7-9d36-b3a01e841ca2/embed/' => 'http://dotsub.com/view/5af2ea32-1aa1-4fa7-9d36-b3a01e841ca2',
+            ),
+            'fake' => array(
+                'type' => 'video',
+                'html' => '<iframe'
+            )
+        ),
         'youtube' => array(
             'valid' => array(
                 'http://www.youtube.com/watch?v=9bZkp7q19f0',
@@ -373,39 +498,6 @@ class UrlList
                 'http://vimeo.com/groups/shortfilms/videos/63313811/' => 'http://vimeo.com/63313811',
                 'http://vimeo.com/47360546' => 'http://vimeo.com/47360546',
                 'http://vimeo.com/39892335/' => 'http://vimeo.com/39892335',
-            ),
-            'fake' => array(
-                'type' => 'video',
-                'html' => '<iframe'
-            )
-        ),
-        'dailymotion' => array(
-            'valid' => array(
-                'http://www.dailymotion.com/video/xxwxe1_harlem-shake-de-los-simpsons_fun',
-                'http://dailymotion.com/video/xp30q9_bmw-serie3-2012-en-mexico_auto',
-                'http://www.dailymotion.com/video/xzva95_jacob-jones-and-the-bigfoot-mystery-launch-trailer_videogames',
-                'http://www.dailymotion.com/video/xzx4m4_balotelli-au-prochain-cri-raciste-je-quitte-le-terrain_sport?from=rss',
-                'http://www.dailymotion.com/video/xzse1m_casanova-tout-reste-possible-pour-l-om_sport/stuff/here/',
-                'http://www.dailymotion.com/embed/video/xzv0cd/',
-                'http://dai.ly/xzse1m'
-            ),
-            'invalid' => array(
-                'http://www.dailymotion.com',
-                'http://dailymotion.com',
-                'http://www.dailymotion.com/channel/stuff/',
-                'http://www.dailymotion.com/stuff/',
-                'http://www.dailymotion.com/video/'
-            ),
-            'normalize' =>  array(
-                'http://www.dailymotion.com/video/xxwxe1_harlem-shake-de-los-simpsons_fun' => 'http://www.dailymotion.com/video/xxwxe1_harlem-shake-de-los-simpsons_fun',
-                'http://dailymotion.com/video/xp30q9_bmw-serie3-2012-en-mexico_auto' => 'http://www.dailymotion.com/video/xp30q9_bmw-serie3-2012-en-mexico_auto',
-                'http://www.dailymotion.com/video/xzxtaf_red-bull-400-alic-y-stadlober-ganan-en-eslovenia_sport/' => 'http://www.dailymotion.com/video/xzxtaf_red-bull-400-alic-y-stadlober-ganan-en-eslovenia_sport',
-                'http://www.dailymotion.com/embed/video/xzxfpu' => 'http://www.dailymotion.com/video/xzxfpu',
-                'http://www.dailymotion.com/video/xzx4m4_balotelli-au-prochain-cri-raciste-je-quitte-le-terrain_sport?from=rss' => 'http://www.dailymotion.com/video/xzx4m4_balotelli-au-prochain-cri-raciste-je-quitte-le-terrain_sport',
-                'http://www.dailymotion.com/embed/video/xzv0cd/' => 'http://www.dailymotion.com/video/xzv0cd',
-                'http://www.dailymotion.com/video/xzse1m_casanova-tout-reste-possible-pour-l-om_sport/stuff/here/' => 'http://www.dailymotion.com/video/xzse1m_casanova-tout-reste-possible-pour-l-om_sport',
-                'http://dai.ly/xzv0cd/' => 'http://www.dailymotion.com/video/xzv0cd',
-                'http://dai.ly/xzv0cd' => 'http://www.dailymotion.com/video/xzv0cd',
             ),
             'fake' => array(
                 'type' => 'video',
@@ -533,40 +625,6 @@ class UrlList
                 'https://sketchfab.com/show/9lVs96AuFUAjKjwvsMG0Uf7Yy7b/' => 'https://sketchfab.com/show/9lVs96AuFUAjKjwvsMG0Uf7Yy7b',
                 'https://www.sketchfab.com/show/9lVs96AuFUAjKjwvsMG0Uf7Yy7b/' => 'https://sketchfab.com/show/9lVs96AuFUAjKjwvsMG0Uf7Yy7b',
             )
-        ),
-        'dipity' => array(
-            'valid' => array(
-                'http://www.dipity.com/BIRN/Albania-Local-Elections-2011/',
-                'http://www.dipity.com/StevePro/Skype-from-startup-to-8-5-billion-sale',
-                'http://www.dipity.com/ibmzrl/Nanotechnology-at-IBM-Research/',
-                'http://dipity.com/StevePro/2010-in-Review/',
-                'http://www.dipity.com/timeline/Bryson/',
-                'http://www.dipity.com/timeline/Nba-Finals/',
-            ),
-            'invalid' => array(
-                'http://www.dipity.com/timeline/Nba-Finals/other/stuff',
-                'http://www.dipity.com/',
-                'http://www.dipity.com/premium',
-                'http://www.dipity.com/timetube',
-                'http://www.dipity.com/join',
-            ),
-        ),
-        'dailymile' => array(
-            'valid' => array(
-                'http://www.dailymile.com/people/EddieJ3/entries/24776213',
-                'http://www.dailymile.com/people/JessicaP30/entries/24791047',
-                'http://www.dailymile.com/people/JimF3/entries/24684863',
-                'http://www.dailymile.com/people/JimF3/entries/24623801/',
-                'http://dailymile.com/people/JimF3/entries/24447986',
-                'http://dailymile.com/people/IANH17/entries/24533363/',
-                'http://www.dailymile.com/people/IANH17/entries/24444266',
-            ),
-            'invalid' => array(
-                'http://www.dailymile.com/people/EddieJ3',
-                'http://www.dailymile.com/',
-                'http://www.dailymile.com/signup',
-                'http://www.dailymile.com/people/K_P_S',
-            ),
         ),
         'ustream' => array(
             'valid' => array(
@@ -1191,29 +1249,6 @@ class UrlList
                 'https://twitter.com/#!RalphGarman/status/362589356495605762' => 'https://twitter.com/RalphGarman/status/362589356495605762'
             )
         ),
-        'dotsub' => array(
-            'valid' => array(
-                'http://dotsub.com/view/f2a85663-d9eb-4d92-bb61-fd960c401b23',
-                'http://dotsub.com/view/0ebc725c-a805-4486-a1df-c1e7dccf8c6e/',
-                'http://www.dotsub.com/view/dcef6c2a-3fb7-4ab1-9bc8-fd621b2c3972',
-                'http://dotsub.com/media/b7a2859d-69a3-45f2-8e4e-88f2f15b3f97',
-                'http://dotsub.com/view/85897135-c6ee-4c93-acdd-d7e7f4d08b6e',
-                'http://dotsub.com/view/99eaba09-787a-40a9-9125-27a729de71db',
-            ),
-            'invalid' => array(
-                'http://dotsub.com/view/xxx-xxx-xxxx-xxxx-xxxxx', // It seems that dotsub uses base 64 only as id
-                'http://dotsub.com/view/',
-                'http://dotsub.com/view/?',
-                'http://dotsub.com/view/mostviewed',
-                'http://dotsub.com/view/language/both/dug',
-                'http://dotsub.com/view/99eaba09-787a-40a9-9125-27a729de71db/other/stuff',
-                'http://dotsub.com',
-            ),
-            'normalize' => array(
-                'http://www.dotsub.com/media/396b2b58-9a9c-42f3-b7cb-4a282964b11c/embed/' => 'http://dotsub.com/view/396b2b58-9a9c-42f3-b7cb-4a282964b11c',
-                'http://dotsub.com/media/5af2ea32-1aa1-4fa7-9d36-b3a01e841ca2/embed/' => 'http://dotsub.com/view/5af2ea32-1aa1-4fa7-9d36-b3a01e841ca2',
-            )
-        ),
         'scribd' => array(
             'valid' => array(
                 'http://www.scribd.com/doc/155739836/The-Time-Travel-Megapack-26-Modern-and-Classic-Science-Fiction-Stories',
@@ -1283,28 +1318,6 @@ class UrlList
                 'http://my.opera.com/chooseopera/albums/showStuff.dml?id=9363632',
                 'http://my.opera.com/chooseopera/invalid/showpic.dml?picture=128991482&album=9363632&noise=yes',
                 'http://my.opera.com/Aleksander/avatar/',
-            )
-        ),
-        'deviantart' => array(
-            'valid' => array(
-                'http://lieveheersbeestje.deviantart.com/art/Heart-of-gold-378848984',
-                'http://wordofchen.deviantart.com/art/Pressure-379617958/',
-                'http://sarahharas1.deviantart.com/art/Purple-haze-379565213/',
-                'http://m-eralp.deviantart.com/art/After-rain-bomb-379561772',
-                'http://fav.me/d69yyh3/',
-                'http://fav.me/d69yh7m',
-                'http://fav.me/d67maku/',
-            ),
-            'invalid' => array(
-                'http://lieveheersbeestje.deviantart.com/art/house/Heart-of-gold-378848984',
-                'http://wordofchen.deviantart.com/soup/Pressure-379617958',
-                'http://sarahharas1.deviantart.com/class/379565213',
-                'http://fav.me/d69yyh3/stuff/',
-                'http://sta.sh/',
-                'http://fav.me/',
-            ),
-            'private' => array(
-                'http://sooper-deviant.deviantart.com/art/Brand-New-Day-1769-376513535'
             )
         ),
     );
