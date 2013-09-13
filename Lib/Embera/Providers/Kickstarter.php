@@ -14,6 +14,7 @@ namespace Embera\Providers;
 
 /**
  * The kickstarter.com Provider
+ * @link http://www.kickstarter.com
  */
 class Kickstarter extends \Embera\Adapters\Service
 {
@@ -24,9 +25,21 @@ class Kickstarter extends \Embera\Adapters\Service
     protected function validateUrl()
     {
         $this->url->stripQueryString();
+        $this->url->stripLastSlash();
         $this->url->addWWW();
 
-        return (preg_match('~/projects/(?:[^/]+)/(?:[^/]+)/?$~i', $this->url));
+        return (preg_match('~/projects/(?:[^/]+)/(?:[^/]+)$~i', $this->url));
+    }
+
+    /** inline {@inheritdoc} */
+    public function fakeResponse()
+    {
+        return array(
+            'type' => 'rich',
+            'provider_name' => 'Kickstarter',
+            'provider_url' => 'http://www.kickstarter.com',
+            'html' => '<iframe frameborder="0" height="{height}" src="' . $this->url . '/widget/video.html" width="{width}"></iframe>',
+        );
     }
 }
 

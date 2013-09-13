@@ -15,6 +15,7 @@ namespace Embera\Providers;
 /**
  * The meetup.com Provider
  * @link http://www.meetup.com/meetup_api/docs/oembed/
+ * @link http://www.meetup.com
  */
 class Meetup extends \Embera\Adapters\Service
 {

@@ -619,6 +619,10 @@ class UrlList
                 'http://www.ifixit.com/Guide/login/register',
                 'http://www.ifixit.com/Guide/login',
             ),
+            'fake' => array(
+                'type' => 'rich',
+                'html' => '<script'
+            )
         ),
         'ifttt' => array(
             'valid' => array(
@@ -633,6 +637,10 @@ class UrlList
                 'https://ifttt.com/recipes/search?q=gmail',
                 'https://ifttt.com/recipes/search',
             ),
+            'fake' => array(
+                'type' => 'rich',
+                'html' => '<script'
+            )
         ),
         'instagram' => array(
             'valid' => array(
@@ -668,6 +676,10 @@ class UrlList
                 'http://www.jest.com/embed/6buaksui4', // Not numeric
                 'http://www.jest.com/videos/6897394',
                 'http://www.jest.com/6897394'
+            ),
+            'fake' => array(
+                'type' => 'video',
+                'html' => '<embed'
             )
         ),
         'justintv' => array(
@@ -693,6 +705,136 @@ class UrlList
                 'http://justin.tv/directory/' => 'http://www.justin.tv/directory',
                 'http://justin.tv/directory' => 'http://www.justin.tv/directory',
                 'http://www.justin.tv/directory' => 'http://www.justin.tv/directory',
+            )
+        ),
+        'kickstarter' => array(
+            'valid' => array(
+                'http://www.kickstarter.com/projects/1330686256/americas-candy-all-natural-vegan-and-allergy-frien?ref=home_popular',
+                'http://www.kickstarter.com/projects/yonder/dino-pet-a-living-bioluminescent-night-light-pet?ref=home_popular',
+                'http://www.kickstarter.com/projects/762504755/apparitions-from-the-inferno?ref=home_location',
+                'http://kickstarter.com/projects/1093644807/and-the-meek-shall-inherit',
+                'http://www.kickstarter.com/projects/940737263/a-very-special-new-stripped-down-sea-wolf-album',
+                'http://www.kickstarter.com/projects/DaveRyan/owlgirls',
+                'http://www.kickstarter.com/projects/lenswithaview/standing-in-the-stars-the-peter-mayhew-story',
+            ),
+            'invalid' => array(
+                'http://www.kickstarter.com/discover',
+                'http://www.kickstarter.com/start',
+                'http://www.kickstarter.com/',
+                'http://www.kickstarter.com/DaveRyan/owlgirls',
+                'http://www.kickstarter.com/projects/DaveRyan',
+            ),
+            'normalize' => array(
+                'http://www.kickstarter.com/projects/1330686256/americas-candy-all-natural-vegan-and-allergy-frien?ref=home_popular' => 'http://www.kickstarter.com/projects/1330686256/americas-candy-all-natural-vegan-and-allergy-frien',
+                'http://www.kickstarter.com/projects/1330686256/americas-candy-all-natural-vegan-and-allergy-frien?ref=home_popular&other=stuff-yeah' => 'http://www.kickstarter.com/projects/1330686256/americas-candy-all-natural-vegan-and-allergy-frien',
+                'http://www.kickstarter.com/projects/1330686256/americas-candy-all-natural-vegan-and-allergy-frien' => 'http://www.kickstarter.com/projects/1330686256/americas-candy-all-natural-vegan-and-allergy-frien',
+                'http://kickstarter.com/projects/1330686256/americas-candy-all-natural-vegan-and-allergy-frien' => 'http://www.kickstarter.com/projects/1330686256/americas-candy-all-natural-vegan-and-allergy-frien',
+                'https://kickstarter.com/projects/1330686256/americas-candy-all-natural-vegan-and-allergy-frien' => 'https://www.kickstarter.com/projects/1330686256/americas-candy-all-natural-vegan-and-allergy-frien',
+            ),
+            'fake' => array(
+                'type' => 'rich',
+                'html' => '<iframe'
+            )
+        ),
+        'meetup' => array(
+            'valid' => array(
+                'http://www.meetup.com/PHPColMeetup/events/126690622/',
+                'http://www.meetup.com/PHPColMeetup/photos/',
+                'http://meetup.com/PHPColMeetup/events/calendar/?scroll=true',
+                'http://www.meetup.com/PHPColMeetup/events/calendar/',
+                'http://www.meetup.com/PHPColMeetup/',
+            ),
+            'invalid' => array(
+                'http://www.meetup.com/',
+                'http://meetu.ps/17GDWn/other/stuff',
+            ),
+            'normalize' => array(
+                'http://www.meetup.com/PHPColMeetup/?scroll=true' => 'http://www.meetup.com/PHPColMeetup/',
+                'http://www.meetup.com/PHPColMeetup/' => 'http://www.meetup.com/PHPColMeetup/',
+            )
+        ),
+        'mixcloud' => array(
+            'valid' => array(
+                'http://www.mixcloud.com/quietmusic/quietmusic-august-18-hour-1-excerpt/',
+                'http://www.mixcloud.com/sub88/mental-place-25/',
+                'http://www.mixcloud.com/FluidRadio/casual-curses-a-mixtape-by-cooper-cult/',
+                'http://mixcloud.com/aboveandbeyond/above-beyond-abgt-041/',
+                'http://www.mixcloud.com/CarlCox/carl-cox-ibiza-the-revolution-unites-week-6',
+                'http://www.mixcloud.com/TechnoLiveSets/josephcapriati-live-aquasella-festival-2013-spain-02-08-2013/',
+                'http://www.mixcloud.com/truthoughts/tru-thoughts-presents-unfold-180813/',
+            ),
+            'invalid' => array(
+                'http://www.mixcloud.com/truthoughts/',
+                'http://www.mixcloud.com/categories/ambient-chillout/',
+                'http://www.mixcloud.com/categories/comedy/',
+                'http://www.mixcloud.com/about/',
+                'http://www.mixcloud.com/upload/',
+                'http://www.mixcloud.com/advertise/create/',
+                'http://www.mixcloud.com/developers/documentation/',
+            ),
+        ),
+        'mobypicture' => array(
+            'valid' => array(
+                'http://www.mobypicture.com/user/Henk_Voermans/view/15880044',
+                'http://moby.to/89cw01',
+                'http://www.mobypicture.com/user/mjjeje_cojjee/view/15880072',
+                'http://www.mobypicture.com/user/Chino_Sanchez/view/15880070/',
+                'http://mobypicture.com/user/oskrsal71/view/15880066',
+                'http://www.mobypicture.com/user/4/view/15877052',
+                'http://moby.to/be1e30',
+            ),
+            'invalid' => array(
+                'http://www.mobypicture.com/user/kakhiel2',
+                'http://www.mobypicture.com/groups',
+                'http://www.mobypicture.com/',
+                'http://moby.to/',
+                'http://moby.to/other/stuff/',
+                'http://mobypicture.com/user/oskrsal71/view/15880066/other/stuff',
+            ),
+        ),
+        'myopera' => array(
+            'valid' => array(
+                'http://my.opera.com/cstrep/avatar.pl',
+                'http://my.opera.com/cstrep/albums/showpic.dml?album=504322&picture=6964560',
+                'http://my.opera.com/chooseopera/albums/show.dml?id=12909671',
+                'http://my.opera.com/chooseopera/albums/showpic.dml?album=12909671&picture=168425501',
+                'http://my.opera.com/chooseopera/albums/show.dml?id=9363632',
+                'http://my.opera.com/chooseopera/albums/showpic.dml?album=9363632&picture=128991402',
+                'http://my.opera.com/Aleksander/avatar.pl',
+            ),
+            'invalid' => array(
+                'http://my.opera.com/avatar.pl',
+                'http://my.opera.com/chooseopera/albums/show.dml',
+                'http://my.opera.com/chooseopera/albums/showpic.dml?picture=128991482&album=9363632', // Order matters
+                'http://my.opera.com/chooseopera/albums/showpic.dml?noise=12909671',
+                'http://my.opera.com/chooseopera/albums/showStuff.dml?id=9363632',
+                'http://my.opera.com/chooseopera/invalid/showpic.dml?picture=128991482&album=9363632&noise=yes',
+                'http://my.opera.com/Aleksander/avatar/',
+            )
+        ),
+        'nfb' => array(
+            'valid' => array(
+                'http://www.nfb.ca/film/abegweit_en',
+                'http://nfb.ca/film/act_of_dishonour',
+                'http://www.nfb.ca/film/after_axe/',
+                'http://nfb.ca/film/alexis_tremblay_habitant_en',
+                'http://nfb.ca/film/the_animal_movie/',
+                'http://www.nfb.ca/film/anniversary',
+                'http://www.nfb.ca/film/anniversary/embed/player',
+            ),
+            'invalid' => array(
+                'http://www.nfb.ca/explore-all-directors/tom-jackson/',
+                'http://www.nfb.ca',
+                'http://www.nfb.ca/film/',
+                'http://nfb.ca/film/',
+                'http://www.nfb.ca/explore-all-films/',
+            ),
+            'normalize' => array(
+                'http://www.nfb.ca/film/anniversary/embed/player' => 'http://www.nfb.ca/film/anniversary',
+            ),
+            'fake' => array(
+                'type' => 'video',
+                'html' => '<iframe'
             )
         ),
         'youtube' => array(
@@ -840,23 +982,6 @@ class UrlList
                 'http://wordpress.tv/category/how-to/',
             ),
         ),
-        'meetup' => array(
-            'valid' => array(
-                'http://www.meetup.com/PHPColMeetup/events/126690622/',
-                'http://www.meetup.com/PHPColMeetup/photos/',
-                'http://meetup.com/PHPColMeetup/events/calendar/?scroll=true',
-                'http://www.meetup.com/PHPColMeetup/events/calendar/',
-                'http://www.meetup.com/PHPColMeetup/',
-            ),
-            'invalid' => array(
-                'http://www.meetup.com/',
-                'http://meetu.ps/17GDWn/other/stuff',
-            ),
-            'normalize' => array(
-                'http://www.meetup.com/PHPColMeetup/?scroll=true' => 'http://www.meetup.com/PHPColMeetup/',
-                'http://www.meetup.com/PHPColMeetup/' => 'http://www.meetup.com/PHPColMeetup/',
-            )
-        ),
         'sketchfab' => array(
             'valid' => array(
                 'https://sketchfab.com/show/lRyoY4ZsPRUMPlSiz03ORxTIXXK',
@@ -917,25 +1042,6 @@ class UrlList
                 'https://urtak.com/',
                 'https://urtak.com/u/9387/other/stuff',
                 'https://urtak.com/login',
-            ),
-        ),
-        'mobypicture' => array(
-            'valid' => array(
-                'http://www.mobypicture.com/user/Henk_Voermans/view/15880044',
-                'http://moby.to/89cw01',
-                'http://www.mobypicture.com/user/mjjeje_cojjee/view/15880072',
-                'http://www.mobypicture.com/user/Chino_Sanchez/view/15880070/',
-                'http://mobypicture.com/user/oskrsal71/view/15880066',
-                'http://www.mobypicture.com/user/4/view/15877052',
-                'http://moby.to/be1e30',
-            ),
-            'invalid' => array(
-                'http://www.mobypicture.com/user/kakhiel2',
-                'http://www.mobypicture.com/groups',
-                'http://www.mobypicture.com/',
-                'http://moby.to/',
-                'http://moby.to/other/stuff/',
-                'http://mobypicture.com/user/oskrsal71/view/15880066/other/stuff',
             ),
         ),
         'shoudio' => array(
@@ -1066,51 +1172,6 @@ class UrlList
                 'http://www.ted.com/playlists/5/insects_are_awesome.html',
                 'http://www.ted.com/tedx',
                 'http://www.ted.com/talks',
-            ),
-        ),
-        'kickstarter' => array(
-            'valid' => array(
-                'http://www.kickstarter.com/projects/1330686256/americas-candy-all-natural-vegan-and-allergy-frien?ref=home_popular',
-                'http://www.kickstarter.com/projects/yonder/dino-pet-a-living-bioluminescent-night-light-pet?ref=home_popular',
-                'http://www.kickstarter.com/projects/762504755/apparitions-from-the-inferno?ref=home_location',
-                'http://kickstarter.com/projects/1093644807/and-the-meek-shall-inherit',
-                'http://www.kickstarter.com/projects/940737263/a-very-special-new-stripped-down-sea-wolf-album',
-                'http://www.kickstarter.com/projects/DaveRyan/owlgirls',
-                'http://www.kickstarter.com/projects/lenswithaview/standing-in-the-stars-the-peter-mayhew-story',
-            ),
-            'invalid' => array(
-                'http://www.kickstarter.com/discover',
-                'http://www.kickstarter.com/start',
-                'http://www.kickstarter.com/',
-                'http://www.kickstarter.com/DaveRyan/owlgirls',
-                'http://www.kickstarter.com/projects/DaveRyan',
-            ),
-            'normalize' => array(
-                'http://www.kickstarter.com/projects/1330686256/americas-candy-all-natural-vegan-and-allergy-frien?ref=home_popular' => 'http://www.kickstarter.com/projects/1330686256/americas-candy-all-natural-vegan-and-allergy-frien',
-                'http://www.kickstarter.com/projects/1330686256/americas-candy-all-natural-vegan-and-allergy-frien?ref=home_popular&other=stuff-yeah' => 'http://www.kickstarter.com/projects/1330686256/americas-candy-all-natural-vegan-and-allergy-frien',
-                'http://www.kickstarter.com/projects/1330686256/americas-candy-all-natural-vegan-and-allergy-frien' => 'http://www.kickstarter.com/projects/1330686256/americas-candy-all-natural-vegan-and-allergy-frien',
-                'http://kickstarter.com/projects/1330686256/americas-candy-all-natural-vegan-and-allergy-frien' => 'http://www.kickstarter.com/projects/1330686256/americas-candy-all-natural-vegan-and-allergy-frien',
-                'https://kickstarter.com/projects/1330686256/americas-candy-all-natural-vegan-and-allergy-frien' => 'https://www.kickstarter.com/projects/1330686256/americas-candy-all-natural-vegan-and-allergy-frien',
-            )
-        ),
-        'mixcloud' => array(
-            'valid' => array(
-                'http://www.mixcloud.com/quietmusic/quietmusic-august-18-hour-1-excerpt/',
-                'http://www.mixcloud.com/sub88/mental-place-25/',
-                'http://www.mixcloud.com/FluidRadio/casual-curses-a-mixtape-by-cooper-cult/',
-                'http://mixcloud.com/aboveandbeyond/above-beyond-abgt-041/',
-                'http://www.mixcloud.com/CarlCox/carl-cox-ibiza-the-revolution-unites-week-6',
-                'http://www.mixcloud.com/TechnoLiveSets/josephcapriati-live-aquasella-festival-2013-spain-02-08-2013/',
-                'http://www.mixcloud.com/truthoughts/tru-thoughts-presents-unfold-180813/',
-            ),
-            'invalid' => array(
-                'http://www.mixcloud.com/truthoughts/',
-                'http://www.mixcloud.com/categories/ambient-chillout/',
-                'http://www.mixcloud.com/categories/comedy/',
-                'http://www.mixcloud.com/about/',
-                'http://www.mixcloud.com/upload/',
-                'http://www.mixcloud.com/advertise/create/',
-                'http://www.mixcloud.com/developers/documentation/',
             ),
         ),
         'rdio' => array(
@@ -1304,43 +1365,6 @@ class UrlList
                 'http://scribd.com/doc/Lessons-in-Lingerie/',
                 'http://scribd.com/119667881/Lessons-in-Lingerie/',
                 'http://scribd.com/doc/119667881/Lessons-in-Lingerie/other-stuff',
-            )
-        ),
-        'nfb' => array(
-            'valid' => array(
-                'http://www.nfb.ca/film/abegweit_en',
-                'http://nfb.ca/film/act_of_dishonour',
-                'http://www.nfb.ca/film/after_axe/',
-                'http://nfb.ca/film/alexis_tremblay_habitant_en',
-                'http://nfb.ca/film/the_animal_movie/',
-                'http://www.nfb.ca/film/anniversary',
-            ),
-            'invalid' => array(
-                'http://www.nfb.ca/explore-all-directors/tom-jackson/',
-                'http://www.nfb.ca',
-                'http://www.nfb.ca/film/',
-                'http://nfb.ca/film/',
-                'http://www.nfb.ca/explore-all-films/',
-            )
-        ),
-        'myopera' => array(
-            'valid' => array(
-                'http://my.opera.com/cstrep/avatar.pl',
-                'http://my.opera.com/cstrep/albums/showpic.dml?album=504322&picture=6964560',
-                'http://my.opera.com/chooseopera/albums/show.dml?id=12909671',
-                'http://my.opera.com/chooseopera/albums/showpic.dml?album=12909671&picture=168425501',
-                'http://my.opera.com/chooseopera/albums/show.dml?id=9363632',
-                'http://my.opera.com/chooseopera/albums/showpic.dml?album=9363632&picture=128991402',
-                'http://my.opera.com/Aleksander/avatar.pl',
-            ),
-            'invalid' => array(
-                'http://my.opera.com/avatar.pl',
-                'http://my.opera.com/chooseopera/albums/show.dml',
-                'http://my.opera.com/chooseopera/albums/showpic.dml?picture=128991482&album=9363632', // Order matters
-                'http://my.opera.com/chooseopera/albums/showpic.dml?noise=12909671',
-                'http://my.opera.com/chooseopera/albums/showStuff.dml?id=9363632',
-                'http://my.opera.com/chooseopera/invalid/showpic.dml?picture=128991482&album=9363632&noise=yes',
-                'http://my.opera.com/Aleksander/avatar/',
             )
         ),
     );

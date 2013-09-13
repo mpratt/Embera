@@ -15,6 +15,7 @@ namespace Embera\Providers;
 /**
  * The mixcloud.com Provider
  * @link http://www.mixcloud.com/developers/documentation/
+ * @link http://www.mixcloud.com
  */
 class MixCloud extends \Embera\Adapters\Service
 {
