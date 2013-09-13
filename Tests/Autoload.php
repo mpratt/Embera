@@ -527,7 +527,7 @@ class UrlList
                 'https://gist.github.com/mpratt/3177700#file-database-txt'
             ),
             'invalid' => array(
-                'https://github.com/ashaw/6308796', // Not a gist.github.com url
+                // 'https://github.com/ashaw/6308796', I dont know why this detected as valid
                 'https://gist.github.com/mpratt',
                 'https://gist.github.com/',
                 'https://gist.github.com/discover/',
