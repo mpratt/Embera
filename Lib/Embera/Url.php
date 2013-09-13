@@ -54,6 +54,15 @@ class Url
     }
 
     /**
+     * Overwrites the value of $this->url with
+     * the given parameter.
+     *
+     * @param string $url
+     * @return void
+     */
+    public function overwrite($url) { $this->url = $url; }
+
+    /**
      * Discards changes made to a url, and goes back to the original
      * url.
      *

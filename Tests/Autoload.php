@@ -239,8 +239,8 @@ class UrlList
                 'http://coub.com/embed/29zkqoco',
             ),
             'invalid' => array(
-                'http://coub.com/view/2m7mett8/other-stuff/',
                 'http://coub.com/explore/art-design',
+                'http://coub.com/view/2m7mett8/other-stuff/',
                 'http://coub.com/explore/girls',
                 'http://coub.com/embed/',
                 'http://coub.com/view/',
@@ -248,7 +248,6 @@ class UrlList
             ),
             'normalize' => array(
                 'http://coub.com/view/231nevc?small_suggest_place=3' => 'http://coub.com/view/231nevc',
-                'http://coub.com/view/231nevc?small_suggest_place=3&stuff=hihi-hi' => 'http://coub.com/view/231nevc',
                 'http://coub.com/view/231nevc/?small_suggest_place=3&stuff=hihi-hi' => 'http://coub.com/view/231nevc',
                 'http://www.coub.com/view/231nevc?small_suggest_place=3&stuff=hihi-hi' => 'http://coub.com/view/231nevc',
             ),
@@ -391,6 +390,7 @@ class UrlList
                 'http://dotsub.com/media/b7a2859d-69a3-45f2-8e4e-88f2f15b3f97',
                 'http://dotsub.com/view/85897135-c6ee-4c93-acdd-d7e7f4d08b6e',
                 'http://dotsub.com/view/99eaba09-787a-40a9-9125-27a729de71db',
+                'http://dotsub.com/view/99eaba09-787a-40a9-9125-27a729de71db/other/stuff',
             ),
             'invalid' => array(
                 'http://dotsub.com/view/xxx-xxx-xxxx-xxxx-xxxxx', // It seems that dotsub uses base 64 only as id
@@ -398,7 +398,6 @@ class UrlList
                 'http://dotsub.com/view/?',
                 'http://dotsub.com/view/mostviewed',
                 'http://dotsub.com/view/language/both/dug',
-                'http://dotsub.com/view/99eaba09-787a-40a9-9125-27a729de71db/other/stuff',
                 'http://dotsub.com',
             ),
             'normalize' => array(
@@ -409,6 +408,161 @@ class UrlList
             'fake' => array(
                 'type' => 'video',
                 'html' => '<iframe'
+            )
+        ),
+        'flickr' => array(
+            'valid' => array(
+                'http://www.flickr.com/photos/22134962@N03/8738306577/in/explore-2013-05-14',
+                'http://flic.kr/p/9gAMbM',
+                'http://www.flickr.com/photos/reddragonflydmc/5427387397/',
+                'http://www.flickr.com/photos/bees/8597283706/in/photostream',
+                'http://www.flickr.com/photos/bees/8537962055/?noise=noise',
+                'http://flic.kr/p/9gAMbM/',
+                'http://www.flickr.com/photos/bees/8429256478'
+            ),
+            'invalid' => array(
+                'http://www.flickr.com/22134962@N03/8738306577/',
+                'http://www.flickr.com',
+                'http://www.flickr.com/stuff/8429256478/',
+                'http://www.flickr.com/noise/8429256478/',
+                'http://www.flickr.com//8429256478/'
+            ),
+            'normalize' => array(
+                'http://www.flickr.com/photos/22134962@N03/8738306577/in/explore-2013-05-14' => 'http://www.flickr.com/photos/22134962@N03/8738306577/',
+                'http://flic.kr/p/9gAMbM' => 'http://flic.kr/p/9gAMbM',
+                'http://www.flickr.com/photos/reddragonflydmc/5427387397/?noise=noise' => 'http://www.flickr.com/photos/reddragonflydmc/5427387397/',
+                'http://www.flickr.com/photos/bees/8597283706/in/photostream' => 'http://www.flickr.com/photos/bees/8597283706/',
+                'http://flic.kr/p/9gAMbM/' => 'http://flic.kr/p/9gAMbM/',
+                'http://www.flickr.com/photos/bees/8429256478' => 'http://www.flickr.com/photos/bees/8429256478/',
+                'http://www.flickr.com/photos/bees/8429256478/' => 'http://www.flickr.com/photos/bees/8429256478/',
+            )
+        ),
+        'funnyordie' => array(
+            'valid' => array(
+                'http://www.funnyordie.com/videos/a1738b0a3f/i-hate-california-lake-tahoe',
+                'http://funnyordie.com/videos/8b2b588243/tom-brady-s-best-friend',
+                'http://www.funnyordie.com/videos/6b0b308f41/coming-soon-from-funny-or-die-with-will-ferrell/',
+                'http://funnyordie.com/videos/c4d450418e/magician-vs-wild',
+                'http://funnyordie.com/embed/c4d450418e/magician-vs-wild',
+                'http://funnyordie.com/embed/c4d450418e',
+                'http://www.funnyordie.com/videos/bc5f676260/tony-hale-s-acting-process',
+                'http://www.funnyordie.com/videos/bc5f676260/tony-hale-s-acting-process/other/stuff',
+            ),
+            'invalid' => array(
+                'http://www.funnyordie.com/#search-menu',
+                'http://www.funnyordie.com/pictures/2d8a7b4876/get-the-look-miley-cyrus', // Pictures dont allow oembed
+                'http://www.funnyordie.com/drunkhistory',
+                'http://www.funnyordie.com/browse/videos/all/all/most_viewed/this_week',
+                'http://www.funnyordie.com/support/widget',
+                'http://www.funnyordie.com/marion_cotillard',
+            ),
+            'normalize' => array(
+                'http://www.funnyordie.com/embed/6b0b308f41/coming-soon-from-funny-or-die-with-will-ferrell/' => 'http://www.funnyordie.com/videos/6b0b308f41/coming-soon-from-funny-or-die-with-will-ferrell',
+                'http://www.funnyordie.com/embed/6b0b308f41/' => 'http://www.funnyordie.com/videos/6b0b308f41',
+                'http://www.funnyordie.com/embed/6b0b308f41/?query=string' => 'http://www.funnyordie.com/videos/6b0b308f41',
+            ),
+            'fake' => array(
+                'type' => 'video',
+                'html' => '<iframe'
+            )
+        ),
+        'geographci' => array(
+            'valid' => array(
+                'http://channel-islands.geographs.org/photo/1166',
+                'http://channel-islands.geographs.org/photo/952',
+                'http://channel-islands.geographs.org/photo/1231',
+                'http://channel-islands.geographs.org.je/photo/961',
+                'http://channel-islands.geographs.org.gg/photo/984',
+                'http://channel-islands.geographs.org/photo/656',
+            ),
+            'invalid' => array(
+                'http://channel-islands.geographs.org/discuss/',
+                'http://channel-islands.geographs.org/submit.php',
+                'http://channel-islands.geographs.org/submit.php',
+                'http://channel-islands.geographs.org/list.php',
+            ),
+        ),
+        'geographde' => array(
+            'valid' => array(
+                'http://geo-en.hlipp.de/photo/36058',
+                'http://geo-en.hlipp.de/photo/22092/',
+                'http://geo.hlipp.de/photo/35233',
+                'http://geo.hlipp.de/photo/30213',
+                'http://germany.geograph.org/photo/40426',
+                'http://germany.geograph.org/photo/36058',
+            ),
+            'invalid' => array(
+                'http://geo-en.hlipp.de/discuss/',
+                'http://geo-en.hlipp.de/latlong.php',
+                'http://geo-en.hlipp.de/gallery/historische_bauten_historic_buildings_127',
+                'http://geo.hlipp.de/photo/35233/more-stuff',
+            ),
+        ),
+        'geographuk' => array(
+            'valid' => array(
+                'http://www.geograph.org.uk/photo/3619867',
+                'http://www.geograph.org.uk/photo/2308394/',
+                'http://www.geograph.org.uk/photo/1449749',
+                'http://www.geograph.co.uk/photo/292839',
+                'http://www.geograph.ie/photo/353656',
+                'http://www.geograph.org.uk/photo/1146430',
+                'http://www.geograph.ie/photo/973235',
+            ),
+            'invalid' => array(
+                'http://www.geograph.ie/gallery.php',
+                'http://www.geograph.org/gallery.php?tab=highest',
+                'http://www.geograph.org.uk/photo/2000063/other/stuff',
+                'http://www.geograph.org.uk/photo/words',
+            ),
+        ),
+        'githubgist' => array(
+            'valid' => array(
+                'https://gist.github.com/mpratt/3177700',
+                'https://gist.github.com/mpratt/5671743/',
+                'https://gist.github.com/nad2000/6547920',
+                'https://gist.github.com/mojavelinux/6547924#file-git-user-manual-adoc',
+                'https://gist.github.com/callaght/6547921#file-issueviewcontroller-m',
+                'https://gist.github.com/callaght/6547921#file-logonviewcontroller-h',
+                'https://gist.github.com/ashaw/6308796',
+                'https://gist.github.com/mpratt/3177700#file-database-txt'
+            ),
+            'invalid' => array(
+                'https://github.com/ashaw/6308796', // Not a gist.github.com url
+                'https://gist.github.com/mpratt',
+                'https://gist.github.com/',
+                'https://gist.github.com/discover/',
+            ),
+            'normalize' => array(
+                'https://gist.github.com/mpratt/3177700' => 'https://gist.github.com/3177700',
+                'https://gist.github.com/733951' => 'https://gist.github.com/733951',
+                'https://gist.github.com/LJPH/6308712#file-comet_-idea_description-html' => 'https://gist.github.com/6308712',
+            ),
+            'fake' => array(
+                'type' => 'rich',
+                'html' => '<script'
+            )
+        ),
+        'gmep' => array(
+            'valid' => array(
+                'https://gmep.org/media/14769',
+                'https://gmep.org/media/14767/',
+                'https://www.gmep.org/media/14763',
+                'https://gmep.org/media/14740',
+                'https://gmep.org/media/14725',
+                'https://gmep.org/media/14714/',
+            ),
+            'invalid' => array(
+                'https://gmep.org/media/14714/other/stuff',
+                'https://gmep.org/media?query=%5Bbroad+complex+tachycardia%5D',
+                'https://gmep.org/media',
+                'https://gmep.org/about',
+                'https://gmep.org/',
+            ),
+            'normalize' => array(
+                'http://www.gmep.org/media/14714/' => 'https://gmep.org/media/14714',
+                'http://gmep.org/media/14714' => 'https://gmep.org/media/14714',
+                'http://www.gmep.org/media/14714' => 'https://gmep.org/media/14714',
+                'http://gmep.org/media/14714?hi=you' => 'https://gmep.org/media/14714',
             )
         ),
         'youtube' => array(
@@ -443,33 +597,6 @@ class UrlList
             'fake' => array(
                 'type' => 'video',
                 'html' => '<iframe'
-            )
-        ),
-        'flickr' => array(
-            'valid' => array(
-                'http://www.flickr.com/photos/22134962@N03/8738306577/in/explore-2013-05-14',
-                'http://flic.kr/p/9gAMbM',
-                'http://www.flickr.com/photos/reddragonflydmc/5427387397/',
-                'http://www.flickr.com/photos/bees/8597283706/in/photostream',
-                'http://www.flickr.com/photos/bees/8537962055/?noise=noise',
-                'http://flic.kr/p/9gAMbM/',
-                'http://www.flickr.com/photos/bees/8429256478'
-            ),
-            'invalid' => array(
-                'http://www.flickr.com/22134962@N03/8738306577/',
-                'http://www.flickr.com',
-                'http://www.flickr.com/stuff/8429256478/',
-                'http://www.flickr.com/noise/8429256478/',
-                'http://www.flickr.com//8429256478/'
-            ),
-            'normalize' => array(
-                'http://www.flickr.com/photos/22134962@N03/8738306577/in/explore-2013-05-14' => 'http://www.flickr.com/photos/22134962@N03/8738306577/',
-                'http://flic.kr/p/9gAMbM' => 'http://flic.kr/p/9gAMbM',
-                'http://www.flickr.com/photos/reddragonflydmc/5427387397/?noise=noise' => 'http://www.flickr.com/photos/reddragonflydmc/5427387397/',
-                'http://www.flickr.com/photos/bees/8597283706/in/photostream' => 'http://www.flickr.com/photos/bees/8597283706/',
-                'http://flic.kr/p/9gAMbM/' => 'http://flic.kr/p/9gAMbM/',
-                'http://www.flickr.com/photos/bees/8429256478' => 'http://www.flickr.com/photos/bees/8429256478/',
-                'http://www.flickr.com/photos/bees/8429256478/' => 'http://www.flickr.com/photos/bees/8429256478/',
             )
         ),
         'vimeo' => array(
@@ -662,23 +789,6 @@ class UrlList
                 'https://urtak.com/login',
             ),
         ),
-        'gmep' => array(
-            'valid' => array(
-                'https://gmep.org/media/14769',
-                'https://gmep.org/media/14767/',
-                'https://www.gmep.org/media/14763',
-                'https://gmep.org/media/14740',
-                'https://gmep.org/media/14725',
-                'https://gmep.org/media/14714/',
-            ),
-            'invalid' => array(
-                'https://gmep.org/media/14714/other/stuff',
-                'https://gmep.org/media?query=%5Bbroad+complex+tachycardia%5D',
-                'https://gmep.org/media',
-                'https://gmep.org/about',
-                'https://gmep.org/',
-            ),
-        ),
         'hq23' => array(
             'valid' => array(
                 'http://www.23hq.com/brinjal/photo/13305971',
@@ -711,24 +821,6 @@ class UrlList
                 'http://moby.to/',
                 'http://moby.to/other/stuff/',
                 'http://mobypicture.com/user/oskrsal71/view/15880066/other/stuff',
-            ),
-        ),
-        'funnyordie' => array(
-            'valid' => array(
-                'http://www.funnyordie.com/videos/a1738b0a3f/i-hate-california-lake-tahoe',
-                'http://funnyordie.com/videos/8b2b588243/tom-brady-s-best-friend',
-                'http://www.funnyordie.com/videos/6b0b308f41/coming-soon-from-funny-or-die-with-will-ferrell/',
-                'http://funnyordie.com/videos/c4d450418e/magician-vs-wild',
-                'http://www.funnyordie.com/videos/bc5f676260/tony-hale-s-acting-process',
-            ),
-            'invalid' => array(
-                'http://www.funnyordie.com/#search-menu',
-                'http://www.funnyordie.com/videos/bc5f676260/tony-hale-s-acting-process/other/stuff',
-                'http://www.funnyordie.com/pictures/2d8a7b4876/get-the-look-miley-cyrus', // Pictures dont allow oembed
-                'http://www.funnyordie.com/drunkhistory',
-                'http://www.funnyordie.com/browse/videos/all/all/most_viewed/this_week',
-                'http://www.funnyordie.com/support/widget',
-                'http://www.funnyordie.com/marion_cotillard',
             ),
         ),
         'shoudio' => array(
@@ -885,55 +977,6 @@ class UrlList
                 'http://www.screenr.com/T80H/other',
             ),
         ),
-        'geographci' => array(
-            'valid' => array(
-                'http://channel-islands.geographs.org/photo/1166',
-                'http://channel-islands.geographs.org/photo/952',
-                'http://channel-islands.geographs.org/photo/1231',
-                'http://channel-islands.geographs.org.je/photo/961',
-                'http://channel-islands.geographs.org.gg/photo/984',
-                'http://channel-islands.geographs.org/photo/656',
-            ),
-            'invalid' => array(
-                'http://channel-islands.geographs.org/discuss/',
-                'http://channel-islands.geographs.org/submit.php',
-                'http://channel-islands.geographs.org/submit.php',
-                'http://channel-islands.geographs.org/list.php',
-            ),
-        ),
-        'geographde' => array(
-            'valid' => array(
-                'http://geo-en.hlipp.de/photo/36058',
-                'http://geo-en.hlipp.de/photo/22092/',
-                'http://geo.hlipp.de/photo/35233',
-                'http://geo.hlipp.de/photo/30213',
-                'http://germany.geograph.org/photo/40426',
-                'http://germany.geograph.org/photo/36058',
-            ),
-            'invalid' => array(
-                'http://geo-en.hlipp.de/discuss/',
-                'http://geo-en.hlipp.de/latlong.php',
-                'http://geo-en.hlipp.de/gallery/historische_bauten_historic_buildings_127',
-                'http://geo.hlipp.de/photo/35233/more-stuff',
-            ),
-        ),
-        'geographuk' => array(
-            'valid' => array(
-                'http://www.geograph.org.uk/photo/3619867',
-                'http://www.geograph.org.uk/photo/2308394/',
-                'http://www.geograph.org.uk/photo/1449749',
-                'http://www.geograph.co.uk/photo/292839',
-                'http://www.geograph.ie/photo/353656',
-                'http://www.geograph.org.uk/photo/1146430',
-                'http://www.geograph.ie/photo/973235',
-            ),
-            'invalid' => array(
-                'http://www.geograph.ie/gallery.php',
-                'http://www.geograph.org/gallery.php?tab=highest',
-                'http://www.geograph.org.uk/photo/2000063/other/stuff',
-                'http://www.geograph.org.uk/photo/words',
-            ),
-        ),
         'ted' => array(
             'valid' => array(
                 'http://www.ted.com/talks/david_gallo_shows_underwater_astonishments.html',
@@ -963,26 +1006,6 @@ class UrlList
                 'http://www.ifixit.com/',
                 'http://www.ifixit.com/Guide/login/register',
                 'http://www.ifixit.com/Guide/login',
-            ),
-        ),
-        'githubgist' => array(
-            'valid' => array(
-                'https://gist.github.com/mpratt/3177700',
-                'https://gist.github.com/mpratt/5671743/',
-                'https://gist.github.com/733951',
-                'https://gist.github.com/ashaw/6308796',
-                'https://gist.github.com/mpratt/3177700#file-database-txt'
-            ),
-            'invalid' => array(
-                // 'https://github.com/ashaw/6308796',
-                'https://gist.github.com/mpratt',
-                'https://gist.github.com/',
-                'https://gist.github.com/discover/',
-            ),
-            'normalize' => array(
-                'https://gist.github.com/mpratt/3177700' => 'https://gist.github.com/3177700',
-                'https://gist.github.com/733951' => 'https://gist.github.com/733951',
-                'https://gist.github.com/LJPH/6308712#file-comet_-idea_description-html' => 'https://gist.github.com/6308712',
             ),
         ),
         'kickstarter' => array(

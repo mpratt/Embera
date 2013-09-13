@@ -14,6 +14,9 @@ namespace Embera\Providers;
 
 /**
  * The channel-islands.geographs.org Provider
+ * @link http://channel-islands.geographs.org
+ *
+ * @todo This Service doesnt provide an html key on response its not possible to generate one from the url alone.
  */
 class GeographCI extends \Embera\Adapters\Service
 {

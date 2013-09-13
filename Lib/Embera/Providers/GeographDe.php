@@ -14,6 +14,9 @@ namespace Embera\Providers;
 
 /**
  * The hlipp.de Provider
+ * @link http://hlipp.de
+ *
+ * @todo This Service doesnt provide an html key on response its not possible to generate one from the url alone.
  */
 class GeographDe extends \Embera\Adapters\Service
 {

@@ -28,7 +28,7 @@ class Coub extends \Embera\Adapters\Service
         $this->url->stripLastSlash();
         $this->url->stripWWW();
 
-        return (preg_match('~coub\.com/(?:view|embed)/(?:[\w\d]+)/?$~i', $this->url));
+        return (preg_match('~coub\.com/(?:view|embed)/(?:[\w\d]+)$~i', $this->url));
     }
 
     /** inline {@inheritdoc} */

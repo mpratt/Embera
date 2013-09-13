@@ -28,6 +28,7 @@ class CrowdRanking extends \Embera\Adapters\Service
         return (preg_match('~crowdranking\.com/(?:crowdrankings|rankings|topics|widgets|r)/(?:[^/]+)/?$~i', $this->url));
     }
 
+    /** inline {@inheritdoc} */
     protected function normalizeUrl()
     {
         if (preg_match('~c9ng\.com/r/([^/]+)/?$~i', $this->url, $matches))

@@ -14,6 +14,7 @@ namespace Embera\Providers;
 
 /**
  * The Flickr.com Provider
+ * @link http://www.flickr.com
  */
 class Flickr extends \Embera\Adapters\Service
 {
@@ -31,6 +32,21 @@ class Flickr extends \Embera\Adapters\Service
     {
         if (preg_match('~/photos/([^/"\'<>]+)/([0-9]+)/?~i', $this->url, $matches))
             $this->url = new \Embera\Url('http://www.flickr.com/photos/' . $matches['1'] . '/' . $matches['2'] . '/');
+    }
+
+    /** inline {@inheritdoc} */
+    protected function modifyResponse(array $response = array())
+    {
+        if (empty($response['html']))
+        {
+            $html  = '<a href="' . $response['url'] . '" target="_blank">';
+            $html .= '<img class="flickr-oembed" src="' . $response['thumbnail_url'] . '" width="' . $response['thumbnail_width'] . '" height="' . $response['thumbnail_height'] . '" alt="' . htmlspecialchars($response['title'], ENT_QUOTES, 'UTF-8') . '" title="' . htmlspecialchars($response['title'], ENT_QUOTES, 'UTF-8') . '">';
+            $html .= '</a>';
+
+            $response['html'] = $html;
+        }
+
+        return $response;
     }
 }
 
