@@ -14,6 +14,7 @@ namespace Embera\Providers;
 
 /**
  * The 23hq.com Provider
+ * @link http://23hq.com
  */
 class Hq23 extends \Embera\Adapters\Service
 {
@@ -24,6 +25,21 @@ class Hq23 extends \Embera\Adapters\Service
     protected function validateUrl()
     {
         return (preg_match('~23hq\.com/(?:[^/]+)/photo/(?:[0-9]+)/?~i', $this->url));
+    }
+
+    /** inline {@inheritdoc} */
+    protected function modifyResponse(array $response = array())
+    {
+        if (empty($response['html']))
+        {
+            $html  = '<a href="' . $response['url'] . '" target="_blank">';
+            $html .= '<img class="23hq-oembed" src="' . $response['thumbnail_url'] . '" width="' . $response['thumbnail_width'] . '" height="' . $response['thumbnail_height'] . '" alt="' . htmlspecialchars($response['title'], ENT_QUOTES, 'UTF-8') . '" title="' . htmlspecialchars($response['title'], ENT_QUOTES, 'UTF-8') . '">';
+            $html .= '</a>';
+
+            $response['html'] = $html;
+        }
+
+        return $response;
     }
 }
 

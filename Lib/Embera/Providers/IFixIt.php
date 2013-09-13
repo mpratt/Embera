@@ -15,7 +15,7 @@ namespace Embera\Providers;
 /**
  * The ifixit.com Provider
  * @link http://www.ifixit.com/api/doc/embed
- * TODO: Candidate for Fake support
+ * @link http://www.ifixit.com/
  */
 class IFixIt extends \Embera\Adapters\Service
 {
@@ -26,6 +26,18 @@ class IFixIt extends \Embera\Adapters\Service
     protected function validateUrl()
     {
         return (preg_match('~ifixit\.com/(?:Guide|Teardown)/(?:[\w\d\+ %]+)/(?:[\d/]+)/?$~i', $this->url));
+    }
+
+    /** inline {@inheritdoc} */
+    public function fakeResponse()
+    {
+        preg_match('~/(\d{4,20})/?~i', $this->url, $matches);
+        return array(
+            'type' => 'rich',
+            'provider_name' => 'iFixit',
+            'provider_url' => 'http://www.ifixit.com',
+            'html' => '<script type="text/javascript" src="http://d1luk0418egahw.cloudfront.net/static/embed/ifixit-embed.3.js?id=' . $matches['1'] . '"></script>',
+        );
     }
 }
 

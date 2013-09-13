@@ -565,6 +565,136 @@ class UrlList
                 'http://gmep.org/media/14714?hi=you' => 'https://gmep.org/media/14714',
             )
         ),
+        'hq23' => array(
+            'valid' => array(
+                'http://www.23hq.com/brinjal/photo/13305971',
+                'http://www.23hq.com/Dan-Tuyet/photo/13301964/',
+                'http://23hq.com/gap_mike/photo/13287796',
+                'http://www.23hq.com/Bo-Tina/photo/13259658',
+                'http://www.23hq.com/euzmar/photo/13254262',
+            ),
+            'invalid' => array(
+                'http://www.23hq.com/23/just-in?world=1&limit=70',
+                'http://www.23hq.com/photogroup',
+                'http://www.23hq.com/23/signup',
+                'http://www.23hq.com/',
+            ),
+        ),
+        'hulu' => array(
+            'valid' => array(
+                'http://www.hulu.com/watch/20807/late-night-with-conan-obrien-wed-may-21-2008',
+                'http://hulu.com/watch/501126',
+                'http://www.hulu.com/watch/440265/',
+                'http://hulu.com/watch/476621',
+                'http://www.hulu.com/watch/331822/stuff/here',
+                'http://www.hulu.com/watch/416223?playlist_id=1787&asset_scope=movies',
+                'http://hulu.com/watch/493032/'
+            ),
+            'invalid' => array(
+                'http://www.hulu.com/stuff/440265',
+                'http://www.hulu.com/watch/abduej/2344657', // Not numeric
+                'http://hulu.com/450265',
+                'http://www.hulu.com/watch/44ui65/'
+            ),
+            'normalize' => array(
+                'http://www.hulu.com/watch/20807/late-night-with-conan-obrien-wed-may-21-2008' => 'http://www.hulu.com/watch/20807',
+                'http://www.hulu.com/watch/440265/' => 'http://www.hulu.com/watch/440265',
+                'http://www.hulu.com/watch/416223?playlist_id=1787&asset_scope=movies' => 'http://www.hulu.com/watch/416223',
+                'http://hulu.com/watch/331822/stuff/here' => 'http://www.hulu.com/watch/331822',
+                'http://hulu.com/watch/501126' => 'http://www.hulu.com/watch/501126',
+            )
+        ),
+        'ifixit' => array(
+            'valid' => array(
+                'http://www.ifixit.com/Guide/Replacing+iPad+4+CDMA+Logic+Board/16458',
+                'http://www.ifixit.com/Guide/Repairing+IBM+ThinkPad+T41+BIOS+Battery/2916/1',
+                'http://www.ifixit.com/Teardown/Plastic+Chair+Teardown/5989/1',
+                'http://ifixit.com/Teardown/iPad+2+3G+GSM+%26+CDMA+Teardown/5127/1/',
+                'http://www.ifixit.com/Teardown/AirPort+Extreme+A1521+Teardown/15044/',
+            ),
+            'invalid' => array(
+                'http://www.ifixit.com/User/18/Walter+Galan',
+                'http://www.ifixit.com/Guide',
+                'http://www.ifixit.com/',
+                'http://www.ifixit.com/Guide/login/register',
+                'http://www.ifixit.com/Guide/login',
+            ),
+        ),
+        'ifttt' => array(
+            'valid' => array(
+                'https://ifttt.com/recipes/112989',
+                'https://www.ifttt.com/recipes/111063',
+                'https://ifttt.com/recipes/113633/',
+                'https://www.ifttt.com/recipes/109983/',
+            ),
+            'invalid' => array(
+                'https://ifttt.com/recipes',
+                'https://ifttt.com/',
+                'https://ifttt.com/recipes/search?q=gmail',
+                'https://ifttt.com/recipes/search',
+            ),
+        ),
+        'instagram' => array(
+            'valid' => array(
+                'http://instagram.com/p/TCg0AoLjoH/#',
+                'http://instagram.com/p/Q8fPYGLjtB',
+                'http://instagram.com/p/Rqlny2Ljk7/',
+                'http://instagr.am/p/TCg0AoLjoH/#',
+                'http://instagr.am/p/V8UMy0LjpX',
+            ),
+            'invalid' => array(
+                'http://instagram.com/stuff/Rqlny2Ljk7/',
+                'http://instagram.com/p/Rqlny2Ljk7/other/stuff',
+                'http://instagram.com',
+                'http://instagr.am',
+            ),
+            'normalize' => array(
+                'http://instagram.com/p/TCg0AoLjoH/#' => 'http://instagram.com/p/TCg0AoLjoH/',
+                'http://instagram.com/p/TCg0AoLjoH#' => 'http://instagram.com/p/TCg0AoLjoH',
+            )
+        ),
+        'jest' => array(
+            'valid' => array(
+                'http://www.jest.com/embed/207307/music-video-resourcefully-assimilates-stock-footage',
+                'http://www.jest.com/video/201909/',
+                'http://www.jest.com/embed/202219',
+                'http://jest.com/video/201618/cnns-undecided-voters-as-played-by-babies',
+                'http://www.jest.com/video/201272/presidential-debate-2-remix',
+                'http://www.jest.com/embed/209484/awkward-birthday',
+                'http://jest.com/embed/209499/breaking/stuff',
+            ),
+            'invalid' => array(
+                'http://www.jest.com/embedVideo/6897394', // wrong path
+                'http://www.jest.com/embed/6buaksui4', // Not numeric
+                'http://www.jest.com/videos/6897394',
+                'http://www.jest.com/6897394'
+            )
+        ),
+        'justintv' => array(
+            'valid' => array(
+                'http://www.justin.tv/skyfire_trains_tv',
+                'http://www.justin.tv/notstr8',
+                'http://www.justin.tv/cpnlive/',
+                'http://justin.tv/crazy_american',
+                'http://www.justin.tv/marksr',
+                'http://www.justin.tv/thegeekgroup',
+                'http://justin.tv/clubzonefm/',
+            ),
+            'invalid' => array(
+                'http://www.justin.tv/directory/featured',
+                'http://www.justin.tv/',
+                'http://www.justin.tv/thegeekgroup/otherstuff/hey',
+                'http://www.justin.tv/user/login',
+                'http://www.justin.tv/p/about_us',
+                'http://www.justin.tv/directory/social',
+                'http://www.justin.tv/directory/sports',
+            ),
+            'normalize' => array(
+                'http://justin.tv/directory/' => 'http://www.justin.tv/directory',
+                'http://justin.tv/directory' => 'http://www.justin.tv/directory',
+                'http://www.justin.tv/directory' => 'http://www.justin.tv/directory',
+            )
+        ),
         'youtube' => array(
             'valid' => array(
                 'http://www.youtube.com/watch?v=9bZkp7q19f0',
@@ -789,21 +919,6 @@ class UrlList
                 'https://urtak.com/login',
             ),
         ),
-        'hq23' => array(
-            'valid' => array(
-                'http://www.23hq.com/brinjal/photo/13305971',
-                'http://www.23hq.com/Dan-Tuyet/photo/13301964/',
-                'http://23hq.com/gap_mike/photo/13287796',
-                'http://www.23hq.com/Bo-Tina/photo/13259658',
-                'http://www.23hq.com/euzmar/photo/13254262',
-            ),
-            'invalid' => array(
-                'http://www.23hq.com/23/just-in?world=1&limit=70',
-                'http://www.23hq.com/photogroup',
-                'http://www.23hq.com/23/signup',
-                'http://www.23hq.com/',
-            ),
-        ),
         'mobypicture' => array(
             'valid' => array(
                 'http://www.mobypicture.com/user/Henk_Voermans/view/15880044',
@@ -846,20 +961,6 @@ class UrlList
                 'http://www.shoudio.com/user/sowa/status/8169' => 'http://shoudio.com/user/sowa/status/8169',
                 'http://shoudio.com/user/sowa/status/8169/' => 'http://shoudio.com/user/sowa/status/8169',
             )
-        ),
-        'ifttt' => array(
-            'valid' => array(
-                'https://ifttt.com/recipes/112989',
-                'https://www.ifttt.com/recipes/111063',
-                'https://ifttt.com/recipes/113633/',
-                'https://www.ifttt.com/recipes/109983/',
-            ),
-            'invalid' => array(
-                'https://ifttt.com/recipes',
-                'https://ifttt.com/',
-                'https://ifttt.com/recipes/search?q=gmail',
-                'https://ifttt.com/recipes/search',
-            ),
         ),
         'huffduffer' => array(
             'valid' => array(
@@ -917,31 +1018,6 @@ class UrlList
                 'http://official.fm/tracks/Dztx?from=homepage&track_id=9rk1' => 'http://official.fm/tracks/Dztx',
             )
         ),
-        'justintv' => array(
-            'valid' => array(
-                'http://www.justin.tv/skyfire_trains_tv',
-                'http://www.justin.tv/notstr8',
-                'http://www.justin.tv/cpnlive/',
-                'http://justin.tv/crazy_american',
-                'http://www.justin.tv/marksr',
-                'http://www.justin.tv/thegeekgroup',
-                'http://justin.tv/clubzonefm/',
-            ),
-            'invalid' => array(
-                'http://www.justin.tv/directory/featured',
-                'http://www.justin.tv/',
-                'http://www.justin.tv/thegeekgroup/otherstuff/hey',
-                'http://www.justin.tv/user/login',
-                'http://www.justin.tv/p/about_us',
-                'http://www.justin.tv/directory/social',
-                'http://www.justin.tv/directory/sports',
-            ),
-            'normalize' => array(
-                'http://justin.tv/directory/' => 'http://www.justin.tv/directory',
-                'http://justin.tv/directory' => 'http://www.justin.tv/directory',
-                'http://www.justin.tv/directory' => 'http://www.justin.tv/directory',
-            )
-        ),
         'sapo' => array(
             'valid' => array(
                 'http://videos.sapo.pt/1z2ieEQvWVZ6af0nQZFN',
@@ -990,22 +1066,6 @@ class UrlList
                 'http://www.ted.com/playlists/5/insects_are_awesome.html',
                 'http://www.ted.com/tedx',
                 'http://www.ted.com/talks',
-            ),
-        ),
-        'ifixit' => array(
-            'valid' => array(
-                'http://www.ifixit.com/Guide/Replacing+iPad+4+CDMA+Logic+Board/16458',
-                'http://www.ifixit.com/Guide/Repairing+IBM+ThinkPad+T41+BIOS+Battery/2916/1',
-                'http://www.ifixit.com/Teardown/Plastic+Chair+Teardown/5989/1',
-                'http://ifixit.com/Teardown/iPad+2+3G+GSM+%26+CDMA+Teardown/5127/1/',
-                'http://www.ifixit.com/Teardown/AirPort+Extreme+A1521+Teardown/15044/',
-            ),
-            'invalid' => array(
-                'http://www.ifixit.com/User/18/Walter+Galan',
-                'http://www.ifixit.com/Guide',
-                'http://www.ifixit.com/',
-                'http://www.ifixit.com/Guide/login/register',
-                'http://www.ifixit.com/Guide/login',
             ),
         ),
         'kickstarter' => array(
@@ -1070,25 +1130,6 @@ class UrlList
                 'http://www.rdio.com/browse/new',
                 'http://www.rdio.com/browse/charts/albums',
             ),
-        ),
-        'instagram' => array(
-            'valid' => array(
-                'http://instagram.com/p/TCg0AoLjoH/#',
-                'http://instagram.com/p/Q8fPYGLjtB',
-                'http://instagram.com/p/Rqlny2Ljk7/',
-                'http://instagr.am/p/TCg0AoLjoH/#',
-                'http://instagr.am/p/V8UMy0LjpX',
-            ),
-            'invalid' => array(
-                'http://instagram.com/stuff/Rqlny2Ljk7/',
-                'http://instagram.com/p/Rqlny2Ljk7/other/stuff',
-                'http://instagram.com',
-                'http://instagr.am',
-            ),
-            'normalize' => array(
-                'http://instagram.com/p/TCg0AoLjoH/#' => 'http://instagram.com/p/TCg0AoLjoH/',
-                'http://instagram.com/p/TCg0AoLjoH#' => 'http://instagram.com/p/TCg0AoLjoH',
-            )
         ),
         'soundcloud' => array(
             'valid' => array(
@@ -1225,30 +1266,6 @@ class UrlList
                 'http://www.revision3.com/technobuffalo/ask-the-buffalo-380-nokia-lumia-running-android' => 'http://www.revision3.com/technobuffalo/ask-the-buffalo-380-nokia-lumia-running-android',
             )
         ),
-        'hulu' => array(
-            'valid' => array(
-                'http://www.hulu.com/watch/20807/late-night-with-conan-obrien-wed-may-21-2008',
-                'http://hulu.com/watch/501126',
-                'http://www.hulu.com/watch/440265/',
-                'http://hulu.com/watch/476621',
-                'http://www.hulu.com/watch/331822/stuff/here',
-                'http://www.hulu.com/watch/416223?playlist_id=1787&asset_scope=movies',
-                'http://hulu.com/watch/493032/'
-            ),
-            'invalid' => array(
-                'http://www.hulu.com/stuff/440265',
-                'http://www.hulu.com/watch/abduej/2344657', // Not numeric
-                'http://hulu.com/450265',
-                'http://www.hulu.com/watch/44ui65/'
-            ),
-            'normalize' => array(
-                'http://www.hulu.com/watch/20807/late-night-with-conan-obrien-wed-may-21-2008' => 'http://www.hulu.com/watch/20807',
-                'http://www.hulu.com/watch/440265/' => 'http://www.hulu.com/watch/440265',
-                'http://www.hulu.com/watch/416223?playlist_id=1787&asset_scope=movies' => 'http://www.hulu.com/watch/416223',
-                'http://hulu.com/watch/331822/stuff/here' => 'http://www.hulu.com/watch/331822',
-                'http://hulu.com/watch/501126' => 'http://www.hulu.com/watch/501126',
-            )
-        ),
         'twitter' => array(
             'valid' => array(
                 'https://twitter.com/ThatKevinSmith/status/361972660344856576',
@@ -1287,23 +1304,6 @@ class UrlList
                 'http://scribd.com/doc/Lessons-in-Lingerie/',
                 'http://scribd.com/119667881/Lessons-in-Lingerie/',
                 'http://scribd.com/doc/119667881/Lessons-in-Lingerie/other-stuff',
-            )
-        ),
-        'jest' => array(
-            'valid' => array(
-                'http://www.jest.com/embed/207307/music-video-resourcefully-assimilates-stock-footage',
-                'http://www.jest.com/video/201909/',
-                'http://www.jest.com/embed/202219',
-                'http://jest.com/video/201618/cnns-undecided-voters-as-played-by-babies',
-                'http://www.jest.com/video/201272/presidential-debate-2-remix',
-                'http://www.jest.com/embed/209484/awkward-birthday',
-                'http://jest.com/embed/209499/breaking/stuff',
-            ),
-            'invalid' => array(
-                'http://www.jest.com/embedVideo/6897394', // wrong path
-                'http://www.jest.com/embed/6buaksui4', // Not numeric
-                'http://www.jest.com/videos/6897394',
-                'http://www.jest.com/6897394'
             )
         ),
         'nfb' => array(

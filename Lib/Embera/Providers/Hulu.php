@@ -14,6 +14,7 @@ namespace Embera\Providers;
 
 /**
  * The Hulu.com Provider
+ * @link http://hulu.com
  */
 class Hulu extends \Embera\Adapters\Service
 {

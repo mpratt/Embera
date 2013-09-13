@@ -14,6 +14,7 @@ namespace Embera\Providers;
 
 /**
  * The Justin.tv Provider
+ * @link http://justin.tv
  */
 class JustinTV extends \Embera\Adapters\Service
 {

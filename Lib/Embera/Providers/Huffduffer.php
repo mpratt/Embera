@@ -14,6 +14,7 @@ namespace Embera\Providers;
 
 /**
  * The huffduffer.com Provider
+ * @link http://huffduffer.com
  */
 class Huffduffer extends \Embera\Adapters\Service
 {

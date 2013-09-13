@@ -14,6 +14,7 @@ namespace Embera\Providers;
 
 /**
  * The instragram.com Provider
+ * @link https://instagram.com
  */
 class Instagram extends \Embera\Adapters\Service
 {
@@ -26,6 +27,21 @@ class Instagram extends \Embera\Adapters\Service
         $this->url->stripQueryString();
 
         return (preg_match('~/p/([\w\d]+)/?$~i', $this->url));
+    }
+
+    /** inline {@inheritdoc} */
+    protected function modifyResponse(array $response = array())
+    {
+        if (empty($response['html']))
+        {
+            $html  = '<a href="' . $response['url'] . '" target="_blank">';
+            $html .= '<img class="instagram-oembed" src="' . $response['url'] . '" width="' . $response['width'] . '" height="' . $response['height'] . '" alt="' . htmlspecialchars($response['title'], ENT_QUOTES, 'UTF-8') . '" title="' . htmlspecialchars($response['title'], ENT_QUOTES, 'UTF-8') . '">';
+            $html .= '</a>';
+
+            $response['html'] = $html;
+        }
+
+        return $response;
     }
 }
 
