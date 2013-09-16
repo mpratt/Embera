@@ -49,20 +49,23 @@ class TestProviders extends PHPUnit_Framework_TestCase
     {
         $this->rounds = (getenv('TRAVIS') ? 1 : $rounds);
 
-        $validUrls   = UrlList::get($s);
-        $invalidUrls = UrlList::get($s, 'invalid');
+        if (empty($this->urls))
+            throw new Exception('No urls specified for the service ' . $s);
+
+        $validUrls   = $this->urls['valid'];
+        $invalidUrls = $this->urls['invalid'];
 
         $this->validateDetection($s, $validUrls, $invalidUrls);
         $this->validateRealResponse($s, $validUrls);
 
-        if ($normalize = UrlList::get($s, 'normalize'))
-            $this->validateUrlNormalization($s, $normalize);
+        if (!empty($this->urls['normalize']))
+            $this->validateUrlNormalization($s, $this->urls['normalize']);
 
-        if ($fake = UrlList::get($s, 'fake'))
-            $this->validateFakeResponse($s, $validUrls, $fake);
+        if (!empty($this->urls['fake']))
+            $this->validateFakeResponse($s, $validUrls, $this->urls['fake']);
 
-        if ($private = UrlList::get($s, 'private'))
-            $this->validatePrivateUrlResponse($s, $private);
+        if (!empty($this->urls['private']))
+            $this->validatePrivateUrlResponse($s, $this->urls['private']);
 
         $url = $invalidUrls[mt_rand(0, (count($invalidUrls) - 1))];
         $this->assertTrue($this->validateWrongUrlResponse($s, $url), $s . ': The url ' . $url . ' doesnt seem to be invalid');

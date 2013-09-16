@@ -12,5 +12,26 @@
 
 require_once 'TestProviders.php';
 
-class TestServiceMeetup extends TestProviders { public function testProvider() { $this->validateProvider('Meetup'); } }
+class TestServiceMeetup extends TestProviders
+{
+    protected $urls = array(
+        'valid' => array(
+            'http://www.meetup.com/PHPColMeetup/events/126690622/',
+            'http://www.meetup.com/PHPColMeetup/photos/',
+            'http://meetup.com/PHPColMeetup/events/calendar/?scroll=true',
+            'http://www.meetup.com/PHPColMeetup/events/calendar/',
+            'http://www.meetup.com/PHPColMeetup/',
+        ),
+        'invalid' => array(
+            'http://www.meetup.com/',
+            'http://meetu.ps/17GDWn/other/stuff',
+        ),
+        'normalize' => array(
+            'http://www.meetup.com/PHPColMeetup/?scroll=true' => 'http://www.meetup.com/PHPColMeetup/',
+            'http://www.meetup.com/PHPColMeetup/' => 'http://www.meetup.com/PHPColMeetup/',
+        )
+    );
+
+    public function testProvider() { $this->validateProvider('Meetup'); }
+}
 ?>

@@ -12,5 +12,34 @@
 
 require_once 'TestProviders.php';
 
-class TestServiceChirbit extends TestProviders { public function testProvider() { $this->validateProvider('Chirbit'); } }
+class TestServiceChirbit extends TestProviders
+{
+    protected $urls = array(
+        'valid' => array(
+            'http://chirb.it/w3gGKr',
+            'http://chirb.it/gJDBHO',
+            'http://chirb.it/wtJs5e/',
+            'http://www.chirb.it/185err',
+            'http://chirb.it/x0sw0k',
+            'http://chirb.it/zGt9tG',
+        ),
+        'invalid' => array(
+            'http://chirbit.it/top-50-chirbits-this-week.php',
+            'http://www.chirbit.com/top-50-chirbits-this-week.php',
+            'http://www.chirbit.com/',
+            'http://chirb.it',
+        ),
+        'normalize' => array(
+            'http://chirb.it/wp/wtJs5e/' => 'http://chirb.it/wtJs5e',
+            'http://chirb.it/wp/wtJs5e/other/stuff' => 'http://chirb.it/wtJs5e',
+            'http://chirb.it/wp/wtJs5e' => 'http://chirb.it/wtJs5e',
+        ),
+        'fake' => array(
+            'type' => 'rich',
+            'html' => '<iframe'
+        )
+    );
+
+    public function testProvider() { $this->validateProvider('Chirbit'); }
+}
 ?>

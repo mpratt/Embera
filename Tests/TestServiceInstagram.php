@@ -12,5 +12,28 @@
 
 require_once 'TestProviders.php';
 
-class TestServiceInstagram extends TestProviders { public function testProvider() { $this->validateProvider('Instagram'); } }
+class TestServiceInstagram extends TestProviders
+{
+    protected $urls = array(
+        'valid' => array(
+            'http://instagram.com/p/TCg0AoLjoH/#',
+            'http://instagram.com/p/Q8fPYGLjtB',
+            'http://instagram.com/p/Rqlny2Ljk7/',
+            'http://instagr.am/p/TCg0AoLjoH/#',
+            'http://instagr.am/p/V8UMy0LjpX',
+        ),
+        'invalid' => array(
+            'http://instagram.com/stuff/Rqlny2Ljk7/',
+            'http://instagram.com/p/Rqlny2Ljk7/other/stuff',
+            'http://instagram.com',
+            'http://instagr.am',
+        ),
+        'normalize' => array(
+            'http://instagram.com/p/TCg0AoLjoH/#' => 'http://instagram.com/p/TCg0AoLjoH/',
+            'http://instagram.com/p/TCg0AoLjoH#' => 'http://instagram.com/p/TCg0AoLjoH',
+        )
+    );
+
+    public function testProvider() { $this->validateProvider('Instagram'); }
+}
 ?>

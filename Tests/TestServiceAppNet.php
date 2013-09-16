@@ -12,5 +12,25 @@
 
 require_once 'TestProviders.php';
 
-class TestServiceAppNet extends TestProviders { public function testProvider() { $this->validateProvider('AppNet'); } }
+class TestServiceAppNet extends TestProviders
+{
+    protected $urls = array(
+        'valid' => array(
+            'https://alpha.app.net/lesechos/post/9152136',
+            'https://alpha.app.net/vowels/post/8244279/photo/1',
+            'https://alpha.app.net/breakingnews/post/9141658/',
+            'http://alpha.app.net/popsugar/post/9145139',
+            'https://photos.app.net/8244279/1',
+        ),
+        'invalid' => array(
+            'https://unknown.app.net/breakingnews/post/9141658/',
+            'https://aplpha.app.net/breakingnews/post/string/',
+            'https://aplpha.app.net/post/9141658/',
+            'https://aplpha.app.net/breakingnews/9141658/',
+            'https://aplpha.app.net',
+        ),
+    );
+
+    public function testProvider() { $this->validateProvider('AppNet'); }
+}
 ?>

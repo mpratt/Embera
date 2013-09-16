@@ -12,5 +12,23 @@
 
 require_once 'TestProviders.php';
 
-class TestServiceRoomshare extends TestProviders { public function testProvider() { $this->validateProvider('Roomshare'); } }
+class TestServiceRoomshare extends TestProviders
+{
+    protected $urls = array(
+        'valid' => array(
+            'http://roomshare.jp/en/post/137453',
+            'http://roomshare.jp/post/137453',
+            'http://roomshare.jp/en/post/137393/',
+            'http://www.roomshare.jp/post/137393',
+        ),
+        'invalid' => array(
+            'http://roomshare.jp/en/post?region=1',
+            'http://roomshare.jp/en/',
+            'http://roomshare.jp/keywords',
+            'http://roomshare.jp',
+        ),
+    );
+
+    public function testProvider() { $this->validateProvider('Roomshare'); }
+}
 ?>

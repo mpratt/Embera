@@ -12,5 +12,25 @@
 
 require_once 'TestProviders.php';
 
-class TestServiceSpeakerdeck extends TestProviders { public function testProvider() { $this->validateProvider('Speakerdeck'); } }
+class TestServiceSpeakerdeck extends TestProviders
+{
+    protected $urls = array(
+        'valid' => array(
+            'https://speakerdeck.com/sva_1981/zhi-zhi-ju-tesuto',
+            'https://speakerdeck.com/oklahomaok/the-university-at-hiyoshi-they-are-crazy/',
+            'http://www.speakerdeck.com/librarianavenger/librarian-avengers-film-rating-system',
+            'http://speakerdeck.com/vinull/quest-for-fun',
+        ),
+        'invalid' => array(
+            'https://speakerdeck.com/p/featured',
+            'https://speakerdeck.com/c/programming',
+            'https://speakerdeck.com/signup',
+            'https://speakerdeck.com/',
+            'https://speakerdeck.com/search?q=what+up',
+            'https://speakerdeck.com/jamesclay/what-do-you-mean-someone-made-them-up/other-stuff',
+        ),
+    );
+
+    public function testProvider() { $this->validateProvider('Speakerdeck'); }
+}
 ?>

@@ -12,5 +12,23 @@
 
 require_once 'TestProviders.php';
 
-class TestServicePollEverywhere extends TestProviders { public function testProvider() { $this->validateProvider('PollEveryWhere'); } }
+class TestServicePollEverywhere extends TestProviders
+{
+    protected $urls = array(
+        'valid' => array(
+            'http://www.polleverywhere.com/free_text_polls/LTk2NTg4NDI4MQ',
+            'http://www.polleverywhere.com/free_text_polls/NDk3OTE0ODgy/',
+            'http://polleverywhere.com/multiple_choice_polls/LTQxNTU4OTUx',
+            'http://www.polleverywhere.com/multiple_choice_polls/LTE5NTcwMzU0MjA/',
+            'http://www.polleverywhere.com/polls/OmAP71g5VGIVXIi'
+        ),
+        'invalid' => array(
+            'https://www.polleverywhere.com/login',
+            'http://www.polleverywhere.com/plans',
+            'http://www.polleverywhere.com',
+        )
+    );
+
+    public function testProvider() { $this->validateProvider('PollEveryWhere'); }
+}
 ?>

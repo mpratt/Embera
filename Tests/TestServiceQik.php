@@ -12,5 +12,23 @@
 
 require_once 'TestProviders.php';
 
-class TestServiceQik extends TestProviders { public function testProvider() { $this->validateProvider('Qik'); } }
+class TestServiceQik extends TestProviders
+{
+    protected $urls = array(
+        'valid' => array(
+            'http://www.qik.com/video/26383698',
+            'http://qik.com/video/4226370',
+            'http://qik.com/video/3698881',
+            'http://qik.com/video/2130131'
+        ),
+        'invalid' => array(
+            'http://qik.com/stuff/26383698',
+            'http://qik.com/video/a452342b', // Not numeric
+            'http://qik.com/video/3698881/other-stuff-here/',
+            'http://qik.com/noidea/video/2130131'
+        )
+    );
+
+    public function testProvider() { $this->validateProvider('Qik'); }
+}
 ?>
