@@ -527,7 +527,6 @@ class UrlList
                 'https://gist.github.com/mpratt/3177700#file-database-txt'
             ),
             'invalid' => array(
-                // 'https://github.com/ashaw/6308796', I dont know why this detected as valid
                 'https://gist.github.com/mpratt',
                 'https://gist.github.com/',
                 'https://gist.github.com/discover/',
@@ -837,6 +836,33 @@ class UrlList
                 'html' => '<iframe'
             )
         ),
+        'officialfm' => array(
+            'valid' => array(
+                'http://official.fm/playlists/cxBp?from=homepage&track_id=5dtD',
+                'http://official.fm/playlists/Dztx',
+                'http://official.fm/tracks/CLZo',
+                'http://official.fm/tracks/1Z1u',
+                'http://official.fm/tracks/2u3X',
+                'http://official.fm/tracks/2eUw',
+            ),
+            'invalid' => array(
+                'http://official.fm/login',
+                'http://official.fm/join',
+                'http://official.fm/',
+                'http://official.fm/developers',
+                'http://official.fm/privacy',
+            ),
+            'normalize' => array(
+                'http://official.fm/playlists/Dztx?from=homepage&track_id=9rk1' => 'http://official.fm/playlists/Dztx',
+                'http://www.official.fm/playlists/Dztx?from=homepage&track_id=9rk1' => 'http://official.fm/playlists/Dztx',
+                'http://www.official.fm/playlists/Dztx' => 'http://official.fm/playlists/Dztx',
+                'http://official.fm/tracks/Dztx?from=homepage&track_id=9rk1' => 'http://official.fm/tracks/Dztx',
+            ),
+            'fake' => array(
+                'type' => 'rich',
+                'html' => '<iframe'
+            )
+        ),
         'youtube' => array(
             'valid' => array(
                 'http://www.youtube.com/watch?v=9bZkp7q19f0',
@@ -1100,29 +1126,6 @@ class UrlList
                 'http://www.videojug.com/film/technology-and-cars/other/stuff',
                 'http://www.videojug.com',
             ),
-        ),
-        'officialfm' => array(
-            'valid' => array(
-                'http://official.fm/playlists/cxBp?from=homepage&track_id=5dtD',
-                'http://official.fm/playlists/Dztx',
-                'http://official.fm/tracks/CLZo',
-                'http://official.fm/tracks/1Z1u',
-                'http://official.fm/tracks/2u3X',
-                'http://official.fm/tracks/2eUw',
-            ),
-            'invalid' => array(
-                'http://official.fm/login',
-                'http://official.fm/join',
-                'http://official.fm/',
-                'http://official.fm/developers',
-                'http://official.fm/privacy',
-            ),
-            'normalize' => array(
-                'http://official.fm/playlists/Dztx?from=homepage&track_id=9rk1' => 'http://official.fm/playlists/Dztx',
-                'http://www.official.fm/playlists/Dztx?from=homepage&track_id=9rk1' => 'http://official.fm/playlists/Dztx',
-                'http://www.official.fm/playlists/Dztx' => 'http://official.fm/playlists/Dztx',
-                'http://official.fm/tracks/Dztx?from=homepage&track_id=9rk1' => 'http://official.fm/tracks/Dztx',
-            )
         ),
         'sapo' => array(
             'valid' => array(

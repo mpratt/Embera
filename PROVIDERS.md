@@ -40,7 +40,7 @@ Sites marked with an `*` allow offline html embedding.
 - [MobyPicture](http://mobypicture.com)
 - [MyOpera](http://my.opera.com)
 - * [NFB](http://www.nfb.ca)
-- [OfficialFM](http://official.fm)
+- * [OfficialFM](http://official.fm)
 - [PollDaddy](http://polldaddy.com)
 - [PollEveryWhere](http://www.polleverywhere.com)
 - [Qik](http://qik.com)
