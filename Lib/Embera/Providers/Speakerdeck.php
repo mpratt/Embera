@@ -14,6 +14,7 @@ namespace Embera\Providers;
 
 /**
  * The speakerdeck.com Provider
+ * @link http://speakerdeck.com
  */
 class Speakerdeck extends \Embera\Adapters\Service
 {

@@ -15,6 +15,7 @@ namespace Embera\Providers;
 /**
  * The slideshare.net Provider
  * @link http://www.slideshare.net/developers/oembed
+ * @link http://www.slideshare.net
  */
 class SlideShare extends \Embera\Adapters\Service
 {

@@ -15,6 +15,7 @@ namespace Embera\Providers;
 /**
  * The rdio.com rd.io Provider
  * @link http://developer.rdio.com/docs/oEmbed
+ * @link http://rdio.com
  */
 class Rdio extends \Embera\Adapters\Service
 {

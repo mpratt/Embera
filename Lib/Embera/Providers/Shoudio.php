@@ -14,6 +14,7 @@ namespace Embera\Providers;
 
 /**
  * The shoudio.com Provider
+ * @link http://shoudio.com
  */
 class Shoudio extends \Embera\Adapters\Service
 {

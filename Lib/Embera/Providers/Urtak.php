@@ -15,6 +15,7 @@ namespace Embera\Providers;
 /**
  * The urtak.com Provider
  * @link http://oembed.urtak.com/
+ * @link http://urtak.com
  */
 class Urtak extends \Embera\Adapters\Service
 {
@@ -25,6 +26,15 @@ class Urtak extends \Embera\Adapters\Service
     protected function validateUrl()
     {
         return (preg_match('~urtak\.com/(?:u|clr)/(?:[^/]+)/?$~i', $this->url));
+    }
+
+    /** inline {@inheritdoc} */
+    protected function modifyResponse(array $response = array())
+    {
+        if (empty($response['html']))
+            $response['html'] = '<a href="' . $response['url'] . '" target="_blank">' . htmlspecialchars($response['title'], ENT_QUOTES, 'UTF-8') . '</a>';
+
+        return $response;
     }
 }
 

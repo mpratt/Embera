@@ -14,6 +14,7 @@ namespace Embera\Providers;
 
 /**
  * The soundcloud.com Provider
+ * @link http://soundcloud.com
  */
 class SoundCloud extends \Embera\Adapters\Service
 {

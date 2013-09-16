@@ -14,7 +14,7 @@ namespace Embera\Providers;
 
 /**
  * The ted.com Provider
- * @link http://bambuser.com/api/embed_oembed
+ * @link http://ted.com
  */
 class Ted extends \Embera\Adapters\Service
 {
@@ -25,6 +25,18 @@ class Ted extends \Embera\Adapters\Service
     protected function validateUrl()
     {
         return (preg_match('~ted\.com/talks/(?:.*)\.html$~i', $this->url));
+    }
+
+    /** inline {@inheritdoc} */
+    public function fakeResponse()
+    {
+        $url = preg_replace('~http(?:.*)ted\.com/~i', 'http://embed.ted.com/$1', $this->url);
+        return array(
+            'type' => 'video',
+            'provider_name' => 'TED',
+            'provider_url' => 'http://ted.com',
+            'html' => '<iframe src="' . $url . '" width="{width}" height="{height}" frameborder="0" scrolling="no" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe',
+        );
     }
 }
 

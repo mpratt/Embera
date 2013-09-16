@@ -14,7 +14,7 @@ namespace Embera\Providers;
 
 /**
  * The polleverywhere.com Provider
- * TODO: Candidate for fake support
+ * @link http://polleverywhere.com
  */
 class PollEveryWhere extends \Embera\Adapters\Service
 {
@@ -24,8 +24,25 @@ class PollEveryWhere extends \Embera\Adapters\Service
     /** inline {@inheritdoc} */
     protected function validateUrl()
     {
+        $this->url->addWWW();
+
         return (preg_match('~polleverywhere\.com/(?:polls|free_text_polls|multiple_choice_polls)/(?:[\w\d]+)/?$~i', $this->url));
     }
+
+    /**
+     * The html code from polleverywhere doesnt work
+    public function fakeResponse()
+    {
+        $this->url->stripQueryString();
+        $this->url->stripLastSlash();
+
+        return array(
+            'type' => 'rich',
+            'provider_name' => 'Poll Everywhere',
+            'provider_url' => 'http://www.polleverywhere.com',
+            'html' => '<script language="javascript" src="' . $this->url . '/web.js?results_count_format=percent" type="text/javascript"></script>'
+        );
+    } */
 }
 
 ?>

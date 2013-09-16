@@ -14,6 +14,7 @@ namespace Embera\Providers;
 
 /**
  * The Qik.com Provider
+ * @link http://qik.com
  */
 class Qik extends \Embera\Adapters\Service
 {

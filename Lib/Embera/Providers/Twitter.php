@@ -14,6 +14,7 @@ namespace Embera\Providers;
 
 /**
  * The twitter.com Provider
+ * @link https://twitter.com
  */
 class Twitter extends \Embera\Adapters\Service
 {

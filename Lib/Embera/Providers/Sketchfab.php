@@ -14,6 +14,7 @@ namespace Embera\Providers;
 
 /**
  * The sketchfab.com Provider
+ * @link http://sketchfab.com
  */
 class Sketchfab extends \Embera\Adapters\Service
 {
@@ -27,6 +28,19 @@ class Sketchfab extends \Embera\Adapters\Service
         $this->url->stripLastSlash();
 
         return (preg_match('~sketchfab\.com/show/(?:[\w\d]+)$~i', $this->url));
+    }
+
+    /** inline {@inheritdoc} */
+    public function fakeResponse()
+    {
+        $url = str_replace('/show/', '/embed/', $this->url);
+
+        return array(
+            'type' => 'rich',
+            'provider_name' => 'Sketchfab',
+            'provider_url' => 'http://sketchfab.com',
+            'html' => '<iframe frameborder="0" width="{width}" height="{height}" webkitallowfullscreen="true" mozallowfullscreen="true" src="' . $url . '?autostart=0&amp;transparent=0&amp;autospin=0&amp;controls=1&amp;watermark=0"></iframe>',
+        );
     }
 }
 

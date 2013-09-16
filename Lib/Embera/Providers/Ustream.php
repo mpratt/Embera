@@ -14,6 +14,7 @@ namespace Embera\Providers;
 
 /**
  * The ustream.tv|com Provider
+ * @link http://ustream.tv
  */
 class Ustream extends \Embera\Adapters\Service
 {

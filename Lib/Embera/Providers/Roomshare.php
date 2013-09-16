@@ -14,6 +14,7 @@ namespace Embera\Providers;
 
 /**
  * The roomshare.jp Provider
+ * @link http://roomshare.jp
  */
 class Roomshare extends \Embera\Adapters\Service
 {

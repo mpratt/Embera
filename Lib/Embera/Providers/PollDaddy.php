@@ -15,6 +15,7 @@ namespace Embera\Providers;
 /**
  * The polldaddy.com Provider
  * @link http://support.polldaddy.com/oembed/
+ * @link http://polldaddy.com
  */
 class PollDaddy extends \Embera\Adapters\Service
 {
@@ -28,6 +29,22 @@ class PollDaddy extends \Embera\Adapters\Service
         $this->url->stripWWW();
 
         return (preg_match('~polldaddy\.com/(?:poll|s|ratings)/(?:[^/]+)/?$~i', $this->url));
+    }
+
+    /** inline {@inheritdoc} */
+    public function fakeResponse()
+    {
+        if (preg_match('~/poll/([\d]+)/?$~i', $this->url, $matches))
+        {
+            return array(
+                'type' => 'rich',
+                'provider_name' => 'Polldaddy',
+                'provider_url' => 'http://polldaddy.com',
+                'html' => '<script type="text/javascript" charset="utf-8" src="http://static.polldaddy.com/p/' . $matches['1'] . '.js"></script>'
+            );
+        }
+
+        return array();
     }
 }
 

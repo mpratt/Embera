@@ -35,22 +35,18 @@ class Viddler extends \Embera\Adapters\Service
             $this->url = new \Embera\Url('http://www.viddler.com/v/' . $matches['1']);
     }
 
-
     /** inline {@inheritdoc} */
     public function fakeResponse()
     {
-        if (preg_match('~/(?:v|embed)/([0-9a-f]{7,12})/?~i', $this->url, $matches))
-        {
-            return array(
-                'type' => 'video',
-                'provider_name' => 'Viddler',
-                'provider_url' => 'http://www.viddler.com',
-                'title' => 'Unknown title',
-                'html' => '<iframe width="{width}" height="{height}" src="http://viddler.com/embed/' . $matches['1'] . '" frameborder="0" allowfullscreen></iframe>',
-            );
-        }
+        preg_match('~/(?:v|embed)/([0-9a-f]{7,12})/?~i', $this->url, $matches);
 
-        return array();
+        return array(
+            'type' => 'video',
+            'provider_name' => 'Viddler',
+            'provider_url' => 'http://www.viddler.com',
+            'title' => 'Unknown title',
+            'html' => '<iframe width="{width}" height="{height}" src="http://viddler.com/embed/' . $matches['1'] . '" frameborder="0" allowfullscreen></iframe>',
+        );
     }
 }
 
