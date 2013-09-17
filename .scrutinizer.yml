@@ -1,0 +1,25 @@
+filter:
+    excluded_paths:
+        - 'vendor/*'
+        - 'Tests/*'
+    paths:
+        - Lib/
+tools:
+    php_cpd:
+        filter:
+            excluded_paths: ['vendor/*', 'Tests/*']
+    php_pdepend:
+        excluded_dirs:
+            1: 'Tests/*'
+    php_mess_detector:
+        filter:
+            excluded_paths: ['vendor/*', 'Tests/*']
+    sensiolabs_security_checker:
+        filter:
+            excluded_paths: ['vendor/*', 'Tests/*']
+    php_code_coverage:
+        filter:
+            excluded_paths: ['vendor/*', 'Tests/*']
+    php_loc:
+        excluded_dirs:
+            - 'Tests/*'
