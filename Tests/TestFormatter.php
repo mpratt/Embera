@@ -57,6 +57,18 @@ class TestFormatter extends PHPUnit_Framework_TestCase
         $this->assertTrue(!empty($last));
     }
 
+    public function testOfflineSupport2()
+    {
+        $urls = array('http://youtu.be/fSUK4WgQ3vk');
+
+        $embera = new \Embera\Embera(array('oembed' => false));
+        $embera = new \Embera\Formatter($embera, true);
+        $embera->setTemplate('<div class="hi">{html}</div>');
+
+        $result = $embera->transform($urls);
+        $this->assertContains('<iframe', $result);
+    }
+
     public function testSupportForDecoratedObjectAPI()
     {
         $urls = array(
@@ -92,6 +104,18 @@ class TestFormatter extends PHPUnit_Framework_TestCase
 
         $this->assertEmpty($embera->setTemplate('{html}', array('url1.com', 'url2.com', 'url3.com')));
         $this->assertEquals($embera->setTemplate('{html}', 'unknown url http://hey.com'), 'unknown url http://hey.com');
+    }
+
+    public function testRemoveEmptyPlaceholders()
+    {
+        $urls = array('http://youtu.be/fSUK4WgQ3vk');
+
+        $embera = new \Embera\Embera();
+        $embera = new \Embera\Formatter($embera);
+        $embera->setTemplate('{unknown_key}');
+
+        $result = $embera->transform($urls);
+        $this->assertEquals($result, '');
     }
 }
 

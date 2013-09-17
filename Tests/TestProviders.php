@@ -13,6 +13,7 @@
 class TestProviders extends PHPUnit_Framework_TestCase
 {
     protected $rounds;
+    protected $urls;
 
     public function testInvalidProviders()
     {
@@ -104,6 +105,9 @@ class TestProviders extends PHPUnit_Framework_TestCase
             $this->assertTrue($result1['embera_using_fake'] == 0, 'Using fake on ' . $url);
             $this->assertTrue(!empty($result1['html']), 'Empty Html on ' . $url);
 
+            $this->assertContains($fakeResponseData['html'], $result1['html'], 'Response is not ' . $fakeResponseData['html']. ' in ' . $url);
+            $this->assertEquals($fakeResponseData['type'], $result1['type'], 'Response type is not ' . $fakeResponseData['type'] . ' on ' . $url);
+
             $oembed = new \Embera\Oembed(false, new \Embera\HttpRequest());
             $test = new $service($url, array('oembed' => false, 'fake' => array(), 'params' => array()), $oembed);
             $result2 = $test->getInfo();
@@ -190,5 +194,7 @@ class TestProviders extends PHPUnit_Framework_TestCase
             $this->assertEquals($test->getUrl(), $expected);
         }
     }
+
+    public function getUrls() { return $this->urls; }
 }
 ?>

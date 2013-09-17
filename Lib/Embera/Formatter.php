@@ -21,6 +21,9 @@ class Formatter
     /** @var object Instance of \Embera\Embera */
     protected $embera;
 
+    /** @var bool Wether or not to allow offline responses */
+    protected $allowOffline;
+
     /** @var array Fetched errors */
     protected $errors = array();
 
@@ -33,7 +36,11 @@ class Formatter
      * @param object $embera Instance of \Embera\Embera
      * @return void
      */
-    public function __construct(\Embera\Embera $embera) { $this->embera = $embera; }
+    public function __construct(\Embera\Embera $embera, $allowOffline = false)
+    {
+        $this->embera = $embera;
+        $this->allowOffline = $allowOffline;
+    }
 
     /**
      * Sets a template with placeholders, that should be
@@ -68,7 +75,7 @@ class Formatter
         {
             foreach ($urls as $url => $data)
             {
-                if ((int) $data['embera_using_fake'] === 1)
+                if (!$this->allowOffline && (int) $data['embera_using_fake'] === 1)
                 {
                     $this->errors[] = 'Using fake oembed response on ' . $url;
                     continue;
@@ -81,9 +88,12 @@ class Formatter
         }
 
         if (is_array($body))
-            return implode('', $providers);
+            $return = implode('', $providers);
+        else
+            $return = str_replace(array_keys($providers), array_values($providers), $body);
 
-        return str_replace(array_keys($providers), array_values($providers), $body);
+        // Remove unchanged placeholders
+        return preg_replace('~{([\w\d\-_]+)}~i', '', $return);
     }
 
     /**
