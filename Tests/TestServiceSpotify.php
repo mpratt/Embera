@@ -18,8 +18,7 @@ class TestServiceSpotify extends TestProviders
 
     public function testProvider()
     {
-        $this->markTestIncomplete('Urls needed to test this service');
-        return ;
+        $this->markTestIncomplete('Urls needed! On the other hand is not possible for me to test this service due to my location.');
 
         $this->validateProvider('Spotify');
     }

@@ -73,6 +73,9 @@ class Oembed
         $json = json_decode($response, true);
         if ($json)
         {
+            if (in_array(array('error', 'errors'), array_keys($json)))
+                throw new \Exception('The response from ' . $url . ' appears to have errors. Raw: ' . print_r($json, true));
+
             $json = array_merge(array(
                 'embera_using_fake' => 0
             ), $json);
