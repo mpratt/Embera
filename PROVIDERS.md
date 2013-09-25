@@ -58,7 +58,6 @@ Sites marked with an `*` allow offline html embedding.
 - [Spotify](http://spotify.com)
 - * [Ted](http://ted.com)
 - [Twitter](https://twitter.com)
-- [Urtak](http://urtak.com)
 - [Ustream](http://ustream.tv)
 - * [Viddler](http://www.viddler.com)
 - [VideoJug](http://www.videojug.com)

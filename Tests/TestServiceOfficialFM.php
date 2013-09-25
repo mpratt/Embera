@@ -19,7 +19,6 @@ class TestServiceOfficialFM extends TestProviders
             'http://official.fm/playlists/cxBp?from=homepage&track_id=5dtD',
             'http://official.fm/playlists/Dztx',
             'http://official.fm/tracks/CLZo',
-            'http://official.fm/tracks/1Z1u',
             'http://official.fm/tracks/2u3X',
             'http://official.fm/tracks/2eUw',
         ),

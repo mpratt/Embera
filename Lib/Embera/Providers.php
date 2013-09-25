@@ -104,7 +104,6 @@ class Providers
         'spoti.fi' => '\Embera\Providers\Spotify',
         'ted.com' => '\Embera\Providers\Ted',
         'twitter.com' => '\Embera\Providers\Twitter',
-        'urtak.com' => '\Embera\Providers\Urtak',
         'ustream.tv' => '\Embera\Providers\Ustream',
         'ustream.com' => '\Embera\Providers\Ustream',
         'viddler.com' => '\Embera\Providers\Viddler',

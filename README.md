@@ -48,7 +48,7 @@ dependencies, you can use this library by creating a composer.json and adding th
 
     {
         "require": {
-            "mpratt/embera": ">=1.0"
+            "mpratt/embera": "~1.0"
         }
     }
 

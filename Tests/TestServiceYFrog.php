@@ -21,7 +21,7 @@ class TestServiceYFrog extends TestProviders
             'http://twitter.yfrog.com/hws60ilj?sa=0',
             'http://yfrog.com/odxklwraj',
             'http://yfrog.com/odxklwraj?sa=0',
-            'http://www.yfrog.com/h835endj',
+            'http://twitter.yfrog.com/h835endj',
             'http://yfrog.us/mryll1j',
             'http://twitter.yfrog.com/kex9kulj?sa=0',
         ),

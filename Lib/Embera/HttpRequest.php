@@ -13,7 +13,8 @@
 namespace Embera;
 
 /**
- * This class is in charge of doing http requests.
+ * This class is in charge of doing http requests. Its a very minimal
+ * wrapper for curl or file_get_contents
  */
 class HttpRequest
 {
@@ -30,7 +31,9 @@ class HttpRequest
     {
         $this->config = array_merge(array(
             'curl' => array(),
-            'fopen' => array()
+            'fopen' => array(),
+            'force_redirects' => false,
+            'prefer_curl' => true,
         ), $config);
     }
 
@@ -44,7 +47,7 @@ class HttpRequest
      */
     public function fetch($url = '')
     {
-        if (function_exists('curl_init'))
+        if (function_exists('curl_init') && $this->config['prefer_curl'])
             return $this->curl($url);
 
         return $this->fileGetContents($url);
@@ -54,38 +57,62 @@ class HttpRequest
      * Uses Curl to fetch data from an url
      *
      * @param string $url
+     * @param bool $forceRedirect
      * @return string
      *
      * @throws Exception when the returned status code is not 200 or no data was found
      */
     protected function curl($url)
     {
-        $defaultOptions = array(
-            CURLOPT_URL => $url,
+        // Not using array_merge here because that function reindexes numeric keys
+        $options = $this->config['curl'] + array(
             CURLOPT_FOLLOWLOCATION => true,
-            CURLOPT_ENCODING => '',
             CURLOPT_USERAGENT => 'Mozilla/5.0 PHP/Embera',
-            CURLOPT_HEADER => false,
-            CURLOPT_RETURNTRANSFER => 1,
+            CURLOPT_ENCODING => '',
         );
 
-        $handler = curl_init();
-        curl_setopt_array($handler, $defaultOptions);
+        $options[CURLOPT_URL] = $url;
+        $options[CURLOPT_HEADER] = true;
+        $options[CURLOPT_RETURNTRANSFER] = 1;
 
-        if (!empty($this->config['curl']))
+        // CURLOPT_FOLLOWLOCATION doesnt play well with open_basedir/safe_mode
+        if ($options[CURLOPT_FOLLOWLOCATION] && (ini_get('safe_mode') || ini_get('open_basedir')))
         {
-            foreach ($this->config['curl'] as $key => $value)
-                curl_setopt($handler, $key, $value);
+            $this->config['curl'][CURLOPT_FOLLOWLOCATION] = false;
+            $this->config['curl'][CURLOPT_TIMEOUT] = 15;
+            $this->config['force_redirects'] = true;
         }
 
-        $data = curl_exec($handler);
+        $handler = curl_init();
+        curl_setopt_array($handler, $options);
+        $response = curl_exec($handler);
+
         $status = curl_getinfo($handler, CURLINFO_HTTP_CODE);
+        $headerSize = curl_getinfo($handler, CURLINFO_HEADER_SIZE);
+
+        $header = substr($response, 0, $headerSize);
+        $body = substr($response, $headerSize);
         curl_close($handler);
 
-        if (empty($data) || !in_array($status, array('200')))
+        if ($this->config['force_redirects'] && in_array($status, array('301', '302')))
+        {
+            if (preg_match('~(?:location|uri): ?([^\n]+)~i', $header, $matches))
+            {
+                $url = trim($matches['1']);
+                if (substr($url, 0, 1) == '/')
+                {
+                    $parsed = parse_url($options[CURLOPT_URL]);
+                    $url = $parsed['scheme'] . '://' . rtrim($parsed['host'], '/') . $url;
+                }
+
+                return $this->curl($url);
+            }
+        }
+
+        if (empty($body) || !in_array($status, array('200')))
             throw new \Exception($status . ': Invalid response for ' . $url);
 
-        return $data;
+        return $body;
     }
 
     /**
@@ -103,10 +130,17 @@ class HttpRequest
 
         $defaultOptions = array(
             'method' => 'GET',
-            'user_agent' => 'Mozilla/5.0 PHP/Embera'
+            'user_agent' => 'Mozilla/5.0 PHP/Embera',
+            'follow_location' => 1,
+            'max_redirects' => 20,
+            'timeout' => 40
         );
 
-        $context = array('http' => array_merge($this->config['fopen'], $defaultOptions));
+        $context = array('http' => array_merge(
+            $defaultOptions,
+            $this->config['fopen']
+        ));
+
         if ($data = file_get_contents($url, false, stream_context_create($context)))
             return $data;
 
