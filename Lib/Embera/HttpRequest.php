@@ -21,6 +21,9 @@ class HttpRequest
     /** @var array Array with custom curl/fopen options */
     protected $config = array();
 
+    /** @var string User Agent String */
+    protected $userAgent = 'Mozilla/5.0 PHP/Embera';
+
     /**
      * Constructor
      *
@@ -41,35 +44,41 @@ class HttpRequest
      * Executes http requests
      *
      * @param string $url
+     * @param array $params Additional parameters for the respective part
      * @return string
      *
      * @throws Exception when an error ocurred or if no way to do a request exists
      */
-    public function fetch($url = '')
+    public function fetch($url, array $params = array())
     {
-        if (function_exists('curl_init') && $this->config['prefer_curl'])
-            return $this->curl($url);
+        $params = array_merge(array(
+            'curl' => array(),
+            'fopen' => array(),
+        ), $params);
 
-        return $this->fileGetContents($url);
+        if (function_exists('curl_init') && $this->config['prefer_curl'])
+            return $this->curl($url, $params['curl']);
+
+        return $this->fileGetContents($url, $params['fopen']);
     }
 
     /**
      * Uses Curl to fetch data from an url
      *
      * @param string $url
-     * @param bool $forceRedirect
+     * @param array $params Additional parameters for the respective part
      * @return string
      *
      * @throws Exception when the returned status code is not 200 or no data was found
      */
-    protected function curl($url)
+    protected function curl($url, array $params = array())
     {
         // Not using array_merge here because that function reindexes numeric keys
         $options = $this->config['curl'] + array(
             CURLOPT_FOLLOWLOCATION => true,
-            CURLOPT_USERAGENT => 'Mozilla/5.0 PHP/Embera',
+            CURLOPT_USERAGENT => $this->userAgent,
             CURLOPT_ENCODING => '',
-        );
+        ) + $params;
 
         $options[CURLOPT_URL] = $url;
         $options[CURLOPT_HEADER] = true;
@@ -119,28 +128,25 @@ class HttpRequest
      * Uses file_get_contents to fetch data from an url
      *
      * @param string $url
+     * @param array $params Additional parameters for the respective part
      * @return string
      *
      * @throws Exception when allow_url_fopen is disabled or when no data was returned
      */
-    protected function fileGetContents($url)
+    protected function fileGetContents($url, array $params = array())
     {
         if (!ini_get('allow_url_fopen'))
             throw new \Exception('Could not execute lookup, allow_url_fopen is disabled');
 
         $defaultOptions = array(
             'method' => 'GET',
-            'user_agent' => 'Mozilla/5.0 PHP/Embera',
+            'user_agent' => $this->userAgent,
             'follow_location' => 1,
             'max_redirects' => 20,
             'timeout' => 40
         );
 
-        $context = array('http' => array_merge(
-            $defaultOptions,
-            $this->config['fopen']
-        ));
-
+        $context = array('http' => array_merge($defaultOptions, $this->config['fopen'], $params));
         if ($data = file_get_contents($url, false, stream_context_create($context)))
             return $data;
 

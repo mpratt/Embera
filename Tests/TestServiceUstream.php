@@ -19,7 +19,6 @@ class TestServiceUstream extends TestProviders
             'http://www.ustream.tv/channel/americatv2oficial',
             'http://www.ustream.tv/usbc',
             'http://www.ustream.tv/creativelive-3',
-            'http://www.ustream.com/channel/nyarukore99/',
             'http://www.ustream.tv/creativeLIVE-rebroadcast',
             'https://www.ustream.tv/creativeLIVE-rebroadcast',
             'http://www.ustream.tv/channel/cbc-tv',

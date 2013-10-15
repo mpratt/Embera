@@ -60,6 +60,7 @@ Sites marked with an `*` allow offline html embedding.
 - [Twitter](https://twitter.com)
 - [Ustream](http://ustream.tv)
 - * [Viddler](http://www.viddler.com)
+- * [VideoFork](http://videofork.com)
 - [VideoJug](http://www.videojug.com)
 - * [Vimeo](http://vimeo.com/)
 - [WordpressTV](http://wordpress.tv)

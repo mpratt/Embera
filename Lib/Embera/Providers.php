@@ -107,6 +107,7 @@ class Providers
         'ustream.tv' => '\Embera\Providers\Ustream',
         'ustream.com' => '\Embera\Providers\Ustream',
         'viddler.com' => '\Embera\Providers\Viddler',
+        'videofork.com' => '\Embera\Providers\VideoFork',
         'videojug.com' => '\Embera\Providers\VideoJug',
         'vimeo.com' => '\Embera\Providers\Vimeo',
         'wordpress.tv' => '\Embera\Providers\WordpressTV',
