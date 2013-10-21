@@ -52,6 +52,7 @@ class Providers
         'sta.sh' => '\Embera\Providers\Deviantart',
         'dipity.com' => '\Embera\Providers\Dipity',
         'dotsub.com' => '\Embera\Providers\DotSub',
+        'edocr.com' => '\Embera\Providers\Edocr',
         'flickr.com' => '\Embera\Providers\Flickr',
         'flic.kr' => '\Embera\Providers\Flickr',
         'funnyordie.com' => '\Embera\Providers\FunnyOrDie',

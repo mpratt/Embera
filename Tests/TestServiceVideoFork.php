@@ -30,6 +30,10 @@ class TestServiceVideoFork extends TestProviders
             'http://videofork.com/forks/new',
             '',
         ),
+        'fake' => array(
+            'type' => 'video',
+            'html' => '<object'
+        )
     );
 
     public function testProvider() { $this->validateProvider('VideoFork'); }
