@@ -30,6 +30,18 @@ class Scribd extends \Embera\Adapters\Service
     }
 
     /** inline {@inheritdoc} */
+    protected function modifyResponse(array $response = array())
+    {
+        if (!empty($response['html']))
+        {
+            $response['html'] = str_replace('#{root_url}', 'http://www.scribd.com/', $response['html']);
+            $response['html'] = preg_replace('~\s+~i', ' ', $response['html']); // Remove double spaces
+        }
+
+        return $response;
+    }
+
+    /** inline {@inheritdoc} */
     public function fakeResponse()
     {
         preg_match('~/doc/([\d]+)/~i', $this->url, $matches);
@@ -38,7 +50,7 @@ class Scribd extends \Embera\Adapters\Service
             'type' => 'rich',
             'provider_name' => 'Scribd',
             'provider_url' => 'http://www.scribd.com',
-            'html' => '<iframe class="scribd_iframe_embed" src="http://www.scribd.com/embeds/' . $matches['1'] . '/content" data-aspect-ratio="" scrolling="no" id="' . $matches['1'] . '" width="100%" height="{height}" frameborder="0"></iframe><script type="text/javascript">(function() { var scribd = document.createElement("script"); scribd.type = "text/javascript"; scribd.async = true; scribd.src = "http://www.scribd.com/javascripts/embed_code/inject.js"; var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(scribd, s); })();</script>',
+            'html' => '<iframe class="scribd_iframe_embed" data-aspect-ratio="" frameborder="0" height="{height}" id="' . $matches['1'] . '" scrolling="no" src="http://www.scribd.com/embeds/' . $matches['1'] . '/content" width="100%"></iframe><script type="text/javascript">(function() { var scribd = document.createElement("script"); scribd.type = "text/javascript"; scribd.async = true; scribd.src = "http://www.scribd.com/javascripts/embed_code/inject.js"; var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(scribd, s); })();</script>',
         );
     }
 }

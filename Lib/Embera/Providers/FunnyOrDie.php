@@ -53,7 +53,7 @@ class FunnyOrDie extends \Embera\Adapters\Service
             'type' => 'video',
             'provider_name' => 'Funny or Die',
             'provider_url' => 'http://www.funnyordie.com',
-            'html' => '<iframe src="http://www.funnyordie.com/embed/' . $matches['1'] . '" width="{width}" height="{height}" frameborder="0"></iframe>',
+            'html' => '<iframe src="http://www.funnyordie.com/embed/' . $matches['1'] . '" width="{width}" height="{height}" frameborder="0" allowfullscreen webkitallowfullscreen mozallowfullscreen></iframe>',
         );
     }
 }

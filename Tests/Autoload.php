@@ -15,7 +15,7 @@ else
 class MockHttpRequest extends \Embera\HttpRequest
 {
     public $response;
-    public function fetch($url = '') { $url = true; return $this->response; }
+    public function fetch($url, array $params = array()) { $url = true; return $this->response; }
 }
 
 /**
