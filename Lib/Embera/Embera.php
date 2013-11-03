@@ -18,7 +18,7 @@ namespace Embera;
 class Embera
 {
     /** @var int Class constant with the current Version of this library */
-    const VERSION = '1.2';
+    const VERSION = '1.3';
 
     /** @var object Instance of \Embera\Oembed */
     protected $oembed;
@@ -61,8 +61,17 @@ class Embera
             'fake' => array(),
         ), $config);
 
-        $this->config['params']['maxwidth'] = max($this->config['params']['width'], $this->config['params']['maxwidth']);
-        $this->config['params']['maxheight'] = max($this->config['params']['height'], $this->config['params']['maxheight']);
+
+        $this->config['params']['maxwidth'] = max(
+            $this->config['params']['width'],
+            $this->config['params']['maxwidth']
+        );
+
+        $this->config['params']['maxheight'] = max(
+            $this->config['params']['height'],
+            $this->config['params']['maxheight']
+        );
+
         unset($this->config['params']['height'], $this->config['params']['width']);
 
         $this->oembed = new \Embera\Oembed($this->config['oembed'], new \Embera\HttpRequest($this->config['http']));
@@ -78,15 +87,14 @@ class Embera
      */
     public function autoEmbed($body = null)
     {
-        if (!is_string($body))
+        if (!is_string($body)) {
             $this->errors[] = 'For auto-embedding purposes, the input must be a string';
-        else if ($data = $this->getUrlInfo($body))
-        {
+        } elseif ($data = $this->getUrlInfo($body)) {
             $table = array();
-            foreach ($data as $url => $service)
-            {
-                if (!empty($service['html']))
+            foreach ($data as $url => $service) {
+                if (!empty($service['html'])) {
                     $table[$url] = $service['html'];
+                }
             }
 
             return str_replace(array_keys($table), array_values($table), $body);
@@ -104,10 +112,8 @@ class Embera
     public function getUrlInfo($body = null)
     {
         $results = array();
-        if ($providers = $this->getProviders($body))
-        {
-            foreach ($providers as $url => $service)
-            {
+        if ($providers = $this->getProviders($body)) {
+            foreach ($providers as $url => $service) {
                 $results[$url] = $service->getInfo();
                 $this->errors = array_merge($this->errors, $service->getErrors());
             }
@@ -127,18 +133,18 @@ class Embera
     protected function getProviders($body = '')
     {
         $regex = ($this->config['use_embed_prefix'] === true ? $this->urlEmbedRegex : $this->urlRegex);
-        if (is_array($body))
-        {
-            $body = array_filter($body, function ($a) use ($regex){
+        if (is_array($body)) {
+
+            $body = array_filter($body, function ($a) use ($regex) {
                 return preg_match($regex, $a);
             });
 
             $services = $this->providers->getAll($body);
-        }
-        else if (preg_match_all($regex, $body, $matches))
+        } elseif (preg_match_all($regex, $body, $matches)) {
             $services = $this->providers->getAll($matches['0']);
-        else
+        } else {
             return array();
+        }
 
         return $this->clean($services);
     }
@@ -151,7 +157,10 @@ class Embera
      * @param array $params Custom parameters that should be sent in the url for this Provider
      * @return void
      */
-    public function addProvider($host, $class, array $params = array()) { $this->providers->addProvider($host, $class, $params); }
+    public function addProvider($host, $class, array $params = array())
+    {
+        $this->providers->addProvider($host, $class, $params);
+    }
 
     /**
      * Strips invalid providers from the list
@@ -161,22 +170,21 @@ class Embera
      */
     protected function clean(array $services = array())
     {
-        if (empty($services))
+        if (empty($services)) {
             return array();
+        }
 
-        if (!empty($this->config['allow']))
-        {
+        if (!empty($this->config['allow'])) {
             $allow = array_map('strtolower', (array) $this->config['allow']);
-            $services = array_filter($services, function($a) use ($allow) {
+            $services = array_filter($services, function ($a) use ($allow) {
                 $serviceName = strtolower(basename(str_replace('\\', '/', get_class($a))));
                 return (in_array($serviceName, $allow));
             });
         }
 
-        if (!empty($services) && !empty($this->config['deny']))
-        {
+        if (!empty($services) && !empty($this->config['deny'])) {
             $deny = array_map('strtolower', (array) $this->config['deny']);
-            $services = array_filter($services, function($a) use ($deny) {
+            $services = array_filter($services, function ($a) use ($deny) {
                 $serviceName = strtolower(basename(str_replace('\\', '/', get_class($a))));
                 return (!in_array($serviceName, $deny));
             });
@@ -190,21 +198,30 @@ class Embera
      *
      * @return string
      */
-    public function getLastError() { return end($this->errors); }
+    public function getLastError()
+    {
+        return end($this->errors);
+    }
 
     /**
      * Returns an array with all the errors
      *
      * @return array
      */
-    public function getErrors() { return $this->errors; }
+    public function getErrors()
+    {
+        return $this->errors;
+    }
 
     /**
      * Checks if there were errors
      *
      * @return bool
      */
-    public function hasErrors() { return (!empty($this->errors)); }
+    public function hasErrors()
+    {
+        return (!empty($this->errors));
+    }
 }
 
 ?>

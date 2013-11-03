@@ -81,7 +81,7 @@ class Formatter
                     continue;
                 }
 
-                $providers[$url] = str_replace(array_map(function ($name){
+                $providers[$url] = str_replace(array_map(function ($name) {
                     return '{' . $name . '}';
                 }, array_keys($data)), array_values($data), $this->template);
             }
@@ -140,5 +140,4 @@ class Formatter
         throw new \InvalidArgumentException('No method ' . $method . ' was found');
     }
 }
-
 ?>

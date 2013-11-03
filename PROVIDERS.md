@@ -20,6 +20,7 @@ Sites marked with an `*` allow offline html embedding.
 - [Deviantart](http://deviantart.com)
 - * [Dipity](http://dipity.com)
 - * [Dotsub](http://dotsub.com)
+- [Edocr](http://edocr.com)
 - [Flickr](http://flickr.com)
 - * [Funny Or Die](http://www.funnyordie.com)
 - [Geograph Channel Islands](http://channel-islands.geographs.org)
