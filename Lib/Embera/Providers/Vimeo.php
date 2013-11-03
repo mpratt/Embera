@@ -48,7 +48,7 @@ class Vimeo extends \Embera\Adapters\Service
                 'provider_name' => 'Vimeo',
                 'provider_url' => 'http://www.vimeo.com',
                 'title' => 'Unknown title',
-                'html' => '<iframe src="http://player.vimeo.com/' . $matches['1'] . '" width="{width}" height="{height}" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>',
+                'html' => '<iframe src="http://player.vimeo.com/' . $matches['1'] . '" width="{width}" height="{height}" frameborder="0" title="" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>',
             );
         }
 
