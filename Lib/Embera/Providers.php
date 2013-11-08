@@ -99,7 +99,7 @@ class Providers
         '*.shoud.io' => '\Embera\Providers\Shoudio',
         'sketchfab.com' => '\Embera\Providers\Sketchfab',
         'slideshare.net' => '\Embera\Providers\SlideShare',
-        'soundcloud.com' => '\Embera\Providers\SoundCloud',
+        '*.soundcloud.com' => '\Embera\Providers\SoundCloud',
         'speakerdeck.com' => '\Embera\Providers\Speakerdeck',
         'open.spotify.com' => '\Embera\Providers\Spotify',
         'spoti.fi' => '\Embera\Providers\Spotify',

@@ -183,6 +183,26 @@ class TestProviders extends PHPUnit_Framework_TestCase
         }
     }
 
+    protected function validateAll($service)
+    {
+        $oembed = new \Embera\Oembed(true, new \Embera\HttpRequest());
+        $service = '\Embera\Providers\\' . $service;
+
+        foreach ($this->urls['valid'] as $url)
+        {
+            $test = new $service($url, array('oembed' => true, 'fake' => array(), 'params' => array()), $oembed);
+            $result = $test->getInfo();
+
+            if (!isset($result['embera_using_fake']))
+            {
+                $this->markTestIncomplete($service . ': Embera_using_fake index not defined on ' . $url . ' - Probably the response took too long - Using url ' . $test->getUrl());
+                return ;
+            }
+
+            $this->assertTrue($result['embera_using_fake'] == 0, $service . ': Using Fake on ' . $url);
+        }
+    }
+
     protected function validateUrlNormalization($service, array $normalizeUrls)
     {
         $oembed = new MockOembed(true, new MockHttpRequest());
