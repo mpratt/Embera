@@ -88,6 +88,7 @@ class Providers
         '*.polldaddy.com' => '\Embera\Providers\PollDaddy',
         'polleverywhere.com' => '\Embera\Providers\PollEveryWhere',
         'qik.com' => '\Embera\Providers\Qik',
+        'rapidengage.com' => '\Embera\Providers\Rapidengage',
         'rdio.com' => '\Embera\Providers\Rdio',
         'rd.io' => '\Embera\Providers\Rdio',
         'revision3.com' => '\Embera\Providers\Revision3',

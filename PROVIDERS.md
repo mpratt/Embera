@@ -45,6 +45,7 @@ Sites marked with an `*` allow offline html embedding.
 - * [PollDaddy](http://polldaddy.com)
 - [PollEveryWhere](http://www.polleverywhere.com)
 - [Qik](http://qik.com)
+- [Rapidengage](https://rapidengage.com/)
 - [Rdio](http://rdio.com)
 - [Revision3](http://revision3.com)
 - [Roomshare](http://roomshare.jp)
