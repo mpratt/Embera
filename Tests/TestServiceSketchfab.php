@@ -18,8 +18,6 @@ class TestServiceSketchfab extends TestProviders
         'valid' => array(
             'https://sketchfab.com/show/lRyoY4ZsPRUMPlSiz03ORxTIXXK',
             'https://sketchfab.com/show/4e6urv5wnV8hxfhD2xUnSrvLNss',
-            'https://sketchfab.com/show/7irY67vcquhR4DCmPAUsSyxZWoC/',
-            'https://www.sketchfab.com/show/7w7pAfrCfjovwykkEeRFLGw5SXS',
             'https://sketchfab.com/show/s0eX1riDqEY6bT0uBtCjxC4V7OA',
             'https://sketchfab.com/show/lwVPifecIahu0rtGqlzZosBPFOC',
             'https://sketchfab.com/show/9lVs96AuFUAjKjwvsMG0Uf7Yy7b',
