@@ -17,9 +17,9 @@ class TestServiceSpeakerdeck extends TestProviders
     protected $urls = array(
         'valid' => array(
             'https://speakerdeck.com/sva_1981/zhi-zhi-ju-tesuto',
-            'https://speakerdeck.com/oklahomaok/the-university-at-hiyoshi-they-are-crazy/',
             'http://www.speakerdeck.com/librarianavenger/librarian-avengers-film-rating-system',
             'http://speakerdeck.com/vinull/quest-for-fun',
+            'https://speakerdeck.com/denniskardys/the-straight-up-how-to-draw-better-workshop',
         ),
         'invalid' => array(
             'https://speakerdeck.com/p/featured',

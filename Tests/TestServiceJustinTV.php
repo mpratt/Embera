@@ -17,7 +17,6 @@ class TestServiceJustinTV extends TestProviders
     protected $urls = array(
         'valid' => array(
             'http://www.justin.tv/skyfire_trains_tv',
-            'http://www.justin.tv/notstr8',
             'http://www.justin.tv/cpnlive/',
             'http://justin.tv/crazy_american',
             'http://www.justin.tv/marksr',

@@ -20,7 +20,7 @@ class TestServiceSoundCloud extends TestProviders
             'https://www.soundcloud.com/lospetitfellas/1150pm/',
             'https://soundcloud.com/lospetitfellas/sets/queridofrankie/',
             'https://soundcloud.com/smodco/babbleon-136',
-            'https://soundcloud.com/smodco/isellcomics-93',
+            'https://m.soundcloud.com/smodco/isellcomics-93',
             'https://soundcloud.com/groups/rap-hiphop/',
             'https://soundcloud.com/groups/house-dj-sets',
             'https://soundcloud.com/tyrantofdeath/injection-remastered-2013/',
@@ -28,7 +28,6 @@ class TestServiceSoundCloud extends TestProviders
             'https://soundcloud.com/whatsonot/what-so-not-touched',
             'https://soundcloud.com/martingarrix/martin-garrix-jay-hardway-19',
             'https://soundcloud.com/guardianscienceweekly/science-weekly-podcast-the-25',
-            'http://m.soundcloud.com/adam-j-fleming/push-the-heavy-door',
             'http://m.soundcloud.com/ricardobufalo/the-beatles-tomorrow-never',
         ),
         'invalid' => array(
