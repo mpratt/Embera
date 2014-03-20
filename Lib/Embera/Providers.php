@@ -34,6 +34,7 @@ class Providers
         'on.aol.com' => '\Embera\Providers\AolOn',
         '5min.com' => '\Embera\Providers\AolOn',
         'alpha.app.net' => '\Embera\Providers\AppNet',
+        'audiosnaps.com' => '\Embera\Providers\AudioSnaps',
         'photos.app.net' => '\Embera\Providers\AppNet',
         'bambuser.com' => '\Embera\Providers\Bambuser',
         '*.blip.tv' => '\Embera\Providers\BlipTV',

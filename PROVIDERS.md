@@ -7,6 +7,7 @@ Sites marked with an `*` allow offline html embedding.
 - [Animoto](http://animoto.com)
 - * [Aol On](http://on.aol.com) (which is also [5min.com](http://5min.com))
 - [Alpha App.NET](https://alpha.app.net)
+- * [AudioSnaps](http://audiosnaps.com/)
 - * [Bambuser](http://bambuser.com)
 - [BlipTV](http://blip.tv)
 - * [Cacoo](http://cacoo.com)
