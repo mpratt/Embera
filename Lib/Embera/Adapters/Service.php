@@ -148,7 +148,7 @@ abstract class Service
     protected function normalizeUrl() {}
 
     /**
-     * Gives the hability to modify the response/fake-response array
+     * Gives the ability to modify the response/fake-response array
      * from an oembed provider.
      *
      * It should be overwritten by the service when needed
