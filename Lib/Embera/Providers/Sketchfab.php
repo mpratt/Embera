@@ -24,10 +24,22 @@ class Sketchfab extends \Embera\Adapters\Service
     /** inline {@inheritdoc} */
     protected function validateUrl()
     {
-        $this->url->stripWWW();
         $this->url->stripLastSlash();
+        return (preg_match('~sketchfab\.com/models/(?:[^/]+)$~i', $this->url));
+    }
 
-        return (preg_match('~sketchfab\.com/show/(?:[\w\d]+)$~i', $this->url));
+    /** inline {@inheritdoc} */
+    protected function normalizeUrl()
+    {
+        $this->url->stripWWW();
+        $this->url->convertToHttps();
+
+        // old urls
+        if (preg_match('~sketchfab\.com/show/([^/]+)/?$~i', $this->url, $matches)) {
+            $this->url = new \Embera\Url('https://sketchfab.com/models/' . $matches[1]);
+        } else if (preg_match('~(/embed/?)$~', $this->url)) {
+            $this->url = new \Embera\Url(preg_replace('~(/embed/?)$~', '', $this->url));
+        }
     }
 
     /** inline {@inheritdoc} */
@@ -39,7 +51,7 @@ class Sketchfab extends \Embera\Adapters\Service
             'type' => 'rich',
             'provider_name' => 'Sketchfab',
             'provider_url' => 'http://sketchfab.com',
-            'html' => '<iframe frameborder="0" width="{width}" height="{height}" webkitallowfullscreen="true" mozallowfullscreen="true" src="' . $url . '?autostart=0&amp;transparent=0&amp;autospin=0&amp;controls=1&amp;watermark=0"></iframe>',
+            'html' => '<iframe width="{width}" height="{height}" frameborder="0" allowFullScreen webkitallowfullscreen mozallowfullscreen src="' . $url . '/embed"></iframe>',
         );
     }
 }

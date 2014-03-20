@@ -82,7 +82,6 @@ class Providers
         'mixcloud.com' => '\Embera\Providers\MixCloud',
         'mobypicture.com' => '\Embera\Providers\MobyPicture',
         'moby.to' => '\Embera\Providers\MobyPicture',
-        'my.opera.com' => '\Embera\Providers\MyOpera',
         'nfb.ca' => '\Embera\Providers\NFB',
         'official.fm' => '\Embera\Providers\OfficialFM',
         '*.polldaddy.com' => '\Embera\Providers\PollDaddy',

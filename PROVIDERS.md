@@ -39,7 +39,6 @@ Sites marked with an `*` allow offline html embedding.
 - [Meetup](http://meetup.com)
 - [MixCloud](http://mixcloud.com)
 - [MobyPicture](http://mobypicture.com)
-- [MyOpera](http://my.opera.com)
 - * [NFB](http://www.nfb.ca)
 - * [OfficialFM](http://official.fm)
 - * [PollDaddy](http://polldaddy.com)
