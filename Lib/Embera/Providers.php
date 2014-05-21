@@ -40,6 +40,7 @@ class Providers
         '*.blip.tv' => '\Embera\Providers\BlipTV',
         'cacoo.com' => '\Embera\Providers\Cacoo',
         'chirb.it' => '\Embera\Providers\Chirbit',
+        'clyp.it' => '\Embera\Providers\Clyp',
         'circuitlab.com' => '\Embera\Providers\CircuitLab',
         'collegehumor.com' => '\Embera\Providers\CollegeHumor',
         'coub.com' => '\Embera\Providers\Coub',

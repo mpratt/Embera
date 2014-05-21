@@ -12,6 +12,7 @@ Sites marked with an `*` allow offline html embedding.
 - [BlipTV](http://blip.tv)
 - * [Cacoo](http://cacoo.com)
 - * [Chirbit](http://chirb.it)
+- [Clyp](http://clyp.it)
 - * [CircuitLab](https://www.circuitlab.com)
 - * [CollegeHumor](http://www.collegehumor.com)
 - * [Coub](http://coub.com)
