@@ -2,6 +2,9 @@
          backupGlobals="false"
          backupStaticAttributes="false"
          syntaxCheck="false"
+         timeoutForSmallTests="5"
+         timeoutForMediumTests="20"
+         timeoutForLargeTests="180"
          bootstrap="Tests/Autoload.php">
     <testsuites>
         <testsuite name="Library Check">

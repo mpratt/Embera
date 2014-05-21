@@ -55,6 +55,8 @@ class TestProviders extends PHPUnit_Framework_TestCase
      *
      * Why? I had so much duplicated code...
      * I know it looks ugly, but, its more convenient.
+     *
+     * @large
      */
     protected function validateProvider($s)
     {
@@ -85,6 +87,7 @@ class TestProviders extends PHPUnit_Framework_TestCase
 
     /**
      * Checks if all valid urls are correctly detected
+     * @medium
      */
     protected function validateDetection($s, array $validUrls, array $invalidUrls)
     {
@@ -102,6 +105,7 @@ class TestProviders extends PHPUnit_Framework_TestCase
 
     /**
      * Validates the response for an array of urls
+     * @large
      */
     protected function validateRealResponse($service, array $validUrls)
     {
@@ -128,6 +132,7 @@ class TestProviders extends PHPUnit_Framework_TestCase
 
     /**
      * Validates that a url on this service is correctly normalized
+     * @medium
      */
     protected function validateUrlNormalization($service, array $normalizeUrls)
     {
@@ -142,6 +147,7 @@ class TestProviders extends PHPUnit_Framework_TestCase
 
     /**
      * Validates a fake response
+     * @large
      */
     protected function validateFakeResponse($service, array $validUrls, array $fakeResponseData)
     {
@@ -190,6 +196,7 @@ class TestProviders extends PHPUnit_Framework_TestCase
 
     /**
      * Validate urls that have a private response
+     * @large
      */
     protected function validatePrivateUrlResponse($service, array $privateUrls)
     {
@@ -204,6 +211,7 @@ class TestProviders extends PHPUnit_Framework_TestCase
 
     /**
      * Validates a response from an invalid url for the current service
+     * @large
      */
     protected function validateWrongUrlResponse($service, array $urls)
     {
