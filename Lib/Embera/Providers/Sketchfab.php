@@ -43,6 +43,16 @@ class Sketchfab extends \Embera\Adapters\Service
     }
 
     /** inline {@inheritdoc} */
+    protected function modifyResponse(array $response = array())
+    {
+        if (!empty($response['html'])) {
+            $response['html'] = preg_replace('~<p(.*)>(.*)</p>~is', '', $response['html']);
+        }
+
+        return $response;
+    }
+
+    /** inline {@inheritdoc} */
     public function fakeResponse()
     {
         $url = str_replace('/show/', '/embed/', $this->url);

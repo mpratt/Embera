@@ -31,19 +31,6 @@ class Animoto extends \Embera\Adapters\Service
     {
         return (preg_match('~/play/(?:[\w\d]+)/?$~i', $this->url));
     }
-
-    /** inline {@inheritdoc} */
-    protected function modifyResponse(array $response = array())
-    {
-        // Overwrite the html response with html5
-        if (!empty($response['html5']))
-        {
-            $response['html'] = preg_replace('~<p>(?:.*)</p>~i', '', $response['html5']);
-            unset($response['html5']);
-        }
-
-        return $response;
-    }
 }
 
 ?>

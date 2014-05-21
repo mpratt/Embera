@@ -12,10 +12,10 @@
 
 class TestProviders extends PHPUnit_Framework_TestCase
 {
-    protected $rounds;
+    /** @var array with urls */
     protected $urls;
 
-    public function testInvalidProviders()
+    public function testEmptyOrInvalidProviders()
     {
         $oembed = new MockOembed(true, new MockHttpRequest());
 
@@ -33,6 +33,16 @@ class TestProviders extends PHPUnit_Framework_TestCase
         $this->assertEmpty($p->getAll($urls));
     }
 
+    protected function getRandomUrls(array $urls = array(), $count = 1)
+    {
+        if ($count >= count($urls)) {
+            return $urls;
+        }
+
+        shuffle($urls);
+        return array_slice($urls, 0, $count);
+    }
+
     /**
      * This is where it gets nasty.
      *
@@ -46,57 +56,112 @@ class TestProviders extends PHPUnit_Framework_TestCase
      * Why? I had so much duplicated code...
      * I know it looks ugly, but, its more convenient.
      */
-    protected function validateProvider($s, $rounds = 2)
+    protected function validateProvider($s)
     {
-        $this->rounds = (getenv('TRAVIS') ? 1 : $rounds);
-
-        if (empty($this->urls))
+        if (empty($this->urls)) {
             throw new Exception('No urls specified for the service ' . $s);
+        }
 
-        $validUrls   = $this->urls['valid'];
-        $invalidUrls = $this->urls['invalid'];
+        // Use all the available urls
+        $rounds = (defined('FULL_TEST') && FULL_TEST ? 1000 : 1);
 
-        $this->validateDetection($s, $validUrls, $invalidUrls);
-        $this->validateRealResponse($s, $validUrls);
+        $this->validateDetection($s, $this->urls['valid'], $this->urls['invalid']);
+        $this->validateRealResponse($s, $this->getRandomUrls($this->urls['valid'], $rounds));
 
-        if (!empty($this->urls['normalize']))
+        if (!empty($this->urls['normalize'])) {
             $this->validateUrlNormalization($s, $this->urls['normalize']);
+        }
 
-        if (!empty($this->urls['fake']))
-            $this->validateFakeResponse($s, $validUrls, $this->urls['fake']);
+        if (!empty($this->urls['fake'])) {
+            $this->validateFakeResponse($s, $this->getRandomUrls($this->urls['valid'], $rounds), $this->urls['fake']);
+        }
 
-        if (!empty($this->urls['private']))
+        if (!empty($this->urls['private'])) {
             $this->validatePrivateUrlResponse($s, $this->urls['private']);
+        }
 
-        $url = $invalidUrls[mt_rand(0, (count($invalidUrls) - 1))];
-        $this->assertTrue($this->validateWrongUrlResponse($s, $url), $s . ': The url ' . $url . ' doesnt seem to be invalid');
+        $this->validateWrongUrlResponse($s, $this->getRandomUrls($this->urls['invalid'], 3));
     }
 
+    /**
+     * Checks if all valid urls are correctly detected
+     */
+    protected function validateDetection($s, array $validUrls, array $invalidUrls)
+    {
+        $oembed = new MockOembed(true, new MockHttpRequest());
+
+        $p = new \Embera\Providers(array(), $oembed);
+        $this->assertCount(count($validUrls), $p->getAll($validUrls), $s . ' The valid Urls dont seem to be detected correctly');
+
+        $p = new \Embera\Providers(array(), $oembed);
+        $this->assertCount(count($validUrls), $p->getAll(array_merge($validUrls, $invalidUrls)), $s . ' There is at least one invalid url recognized as valid');
+
+        $p = new \Embera\Providers(array(), $oembed);
+        $this->assertCount(1, $p->getAll($validUrls[mt_rand(0, (count($validUrls) - 1))]), $s . ' One Correct url seems to be invalid');
+    }
+
+    /**
+     * Validates the response for an array of urls
+     */
+    protected function validateRealResponse($service, array $validUrls)
+    {
+        $oembed = new \Embera\Oembed(true, new \Embera\HttpRequest());
+        $service = '\Embera\Providers\\' . $service;
+
+        foreach ($validUrls as $url) {
+            $test = new $service($url, array(
+                'oembed' => true,
+                'fake' => array(),
+                'params' => array()
+            ), $oembed);
+
+            $result = $test->getInfo();
+
+            if (!isset($result['embera_using_fake'])) {
+                $this->markTestIncomplete($service . ': Embera_using_fake index not defined on ' . $url . ' - Probably the response took too long - Using url ' . $test->getUrl());
+                return ;
+            }
+
+            $this->assertTrue($result['embera_using_fake'] == 0, $service . ': Using Fake on ' . $url);
+        }
+    }
+
+    /**
+     * Validates that a url on this service is correctly normalized
+     */
+    protected function validateUrlNormalization($service, array $normalizeUrls)
+    {
+        $oembed = new MockOembed(true, new MockHttpRequest());
+        $service = '\Embera\Providers\\' . $service;
+
+        foreach ($normalizeUrls as $given => $expected) {
+            $test = new $service($given, array('fake' => array(), 'params' => array()), $oembed);
+            $this->assertEquals($test->getUrl(), $expected);
+        }
+    }
+
+    /**
+     * Validates a fake response
+     */
     protected function validateFakeResponse($service, array $validUrls, array $fakeResponseData)
     {
         $fakeOembed = new MockOembed(true, new MockHttpRequest());
         $service = '\Embera\Providers\\' . $service;
 
-        foreach ($validUrls as $url)
-        {
+        foreach ($validUrls as $url) {
             $test = new $service($url, array('fake' => array(), 'params' => array()), $fakeOembed);
             $response = $test->fakeResponse();
 
             $this->assertTrue((count($response) > 2), 'Invalid Fake Response for ' . $url . ' - Debug: ' . print_r($response, true));
             $this->assertContains($fakeResponseData['html'], $response['html'], 'Response is not ' . $fakeResponseData['html']. ' in ' . $url);
             $this->assertEquals($fakeResponseData['type'], $response['type'], 'Response type is not ' . $fakeResponseData['type'] . ' on ' . $url);
-        }
 
-        for ($i = 0; $i < $this->rounds; $i++)
-        {
-            $url = $validUrls[mt_rand(0, (count($validUrls) - 1))];
+            // Do a real test and comparition
             $oembed = new \Embera\Oembed(true, new \Embera\HttpRequest());
-
             $test = new $service($url, array('oembed' => true, 'fake' => array(), 'params' => array()), $oembed);
             $result1 = $test->getInfo();
 
-            if (!isset($result1['embera_using_fake']))
-            {
+            if (!isset($result1['embera_using_fake'])) {
                 $this->markTestIncomplete($service . ': Embera_using_fake index not defined on ' . $url . ' - Probably the response took too long');
                 return ;
             }
@@ -123,98 +188,41 @@ class TestProviders extends PHPUnit_Framework_TestCase
         }
     }
 
+    /**
+     * Validate urls that have a private response
+     */
     protected function validatePrivateUrlResponse($service, array $privateUrls)
     {
         $oembed = new \Embera\Oembed(true, new \Embera\HttpRequest());
         $service = '\Embera\Providers\\' . $service;
 
-        foreach ($privateUrls as $url)
-        {
+        foreach ($privateUrls as $url) {
             $test = new $service($url, array('fake' => array(), 'params' => array()), $oembed);
             $this->assertEmpty($test->getInfo(), $service . ': Invalid response from a private url ' . print_r($test->getInfo(), true));
         }
     }
 
-    protected function validateDetection($s, array $validUrls, array $invalidUrls)
+    /**
+     * Validates a response from an invalid url for the current service
+     */
+    protected function validateWrongUrlResponse($service, array $urls)
     {
+        $service = '\Embera\Providers\\' . $service;
         $oembed = new MockOembed(true, new MockHttpRequest());
 
-        $p = new \Embera\Providers(array(), $oembed);
-        $this->assertCount(count($validUrls), $p->getAll($validUrls), $s . ' The valid Urls dont seem to be detected correctly');
+        foreach ($urls as $url) {
+            try {
+                new $service($url, array(
+                    'fake' => array(),
+                    'params' => array()
+                ), $oembed);
 
-        $p = new \Embera\Providers(array(), $oembed);
-        $this->assertCount(count($validUrls), $p->getAll(array_merge($validUrls, $invalidUrls)), $s . ' There is at least one invalid url recognized as valid');
-
-        $p = new \Embera\Providers(array(), $oembed);
-        $this->assertCount(1, $p->getAll($validUrls[mt_rand(0, (count($validUrls) - 1))]), $s . ' One Correct url seems to be invalid');
-    }
-
-    protected function validateWrongUrlResponse($service, $url)
-    {
-        try {
-            $oembed = new MockOembed(true, new MockHttpRequest());
-            $service = '\Embera\Providers\\' . $service;
-
-            new $service($url, array('fake' => array(), 'params' => array()), $oembed);
-        } catch (InvalidArgumentException $e) { return true; }
-
-        return false;
-    }
-
-    protected function validateRealResponse($service, array $validUrls)
-    {
-        $oembed = new \Embera\Oembed(true, new \Embera\HttpRequest());
-        $service = '\Embera\Providers\\' . $service;
-
-        for ($i = 0; $i < $this->rounds; $i++)
-        {
-            $url = $validUrls[mt_rand(0, (count($validUrls) - 1))];
-
-            $test = new $service($url, array('oembed' => true, 'fake' => array(), 'params' => array()), $oembed);
-            $result = $test->getInfo();
-
-            if (!isset($result['embera_using_fake']))
-            {
-                $this->markTestIncomplete($service . ': Embera_using_fake index not defined on ' . $url . ' - Probably the response took too long - Using url ' . $test->getUrl());
-                return ;
+                $this->assertTrue(false, $s . ': The url ' . $url . ' doesnt seem to be invalid');
+            } catch (InvalidArgumentException $e) {
+                // just keep the count
+                $this->assertTrue(true);
             }
-
-            $this->assertTrue($result['embera_using_fake'] == 0, $service . ': Using Fake on ' . $url);
         }
     }
-
-    protected function validateAll($service)
-    {
-        $oembed = new \Embera\Oembed(true, new \Embera\HttpRequest());
-        $service = '\Embera\Providers\\' . $service;
-
-        foreach ($this->urls['valid'] as $url)
-        {
-            $test = new $service($url, array('oembed' => true, 'fake' => array(), 'params' => array()), $oembed);
-            $result = $test->getInfo();
-
-            if (!isset($result['embera_using_fake']))
-            {
-                $this->markTestIncomplete($service . ': Embera_using_fake index not defined on ' . $url . ' - Probably the response took too long - Using url ' . $test->getUrl());
-                return ;
-            }
-
-            $this->assertTrue($result['embera_using_fake'] == 0, $service . ': Using Fake on ' . $url);
-        }
-    }
-
-    protected function validateUrlNormalization($service, array $normalizeUrls)
-    {
-        $oembed = new MockOembed(true, new MockHttpRequest());
-        $service = '\Embera\Providers\\' . $service;
-
-        foreach ($normalizeUrls as $given => $expected)
-        {
-            $test = new $service($given, array('fake' => array(), 'params' => array()), $oembed);
-            $this->assertEquals($test->getUrl(), $expected);
-        }
-    }
-
-    public function getUrls() { return $this->urls; }
 }
 ?>

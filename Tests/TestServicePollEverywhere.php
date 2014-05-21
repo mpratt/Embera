@@ -20,7 +20,6 @@ class TestServicePollEverywhere extends TestProviders
             'http://www.polleverywhere.com/free_text_polls/NDk3OTE0ODgy/',
             'http://polleverywhere.com/multiple_choice_polls/LTQxNTU4OTUx',
             'http://www.polleverywhere.com/multiple_choice_polls/LTE5NTcwMzU0MjA/',
-            'http://www.polleverywhere.com/polls/OmAP71g5VGIVXIi'
         ),
         'invalid' => array(
             'https://www.polleverywhere.com/login',
