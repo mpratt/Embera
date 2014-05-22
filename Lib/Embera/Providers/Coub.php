@@ -34,18 +34,15 @@ class Coub extends \Embera\Adapters\Service
     /** inline {@inheritdoc} */
     public function fakeResponse()
     {
-        if (preg_match('~/([\w\d]+)$~i', $this->url, $matches))
-        {
-            return array(
-                'type' => 'video',
-                'provider_name' => 'Coub',
-                'provider_url' => 'http://coub.com',
-                'url' => (string) $this->url,
-                'html' => '<iframe src="http://coub.com/embed/' . $matches['1'] . '" allowfullscreen="true" frameborder="0" width="{width}" height="{height}"></iframe>',
-            );
-        }
+        preg_match('~/([\w\d]+)$~i', $this->url, $matches);
 
-        return array();
+        return array(
+            'type' => 'video',
+            'provider_name' => 'Coub',
+            'provider_url' => 'http://coub.com',
+            'url' => (string) $this->url,
+            'html' => '<iframe src="http://coub.com/embed/' . $matches['1'] . '" allowfullscreen="true" frameborder="0" width="{width}" height="{height}"></iframe>',
+        );
     }
 }
 

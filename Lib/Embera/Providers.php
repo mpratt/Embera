@@ -151,19 +151,19 @@ class Providers
     protected function findServices(array $urls = array())
     {
         $return = array();
-        if (!empty($urls))
-        {
-            foreach (array_unique($urls) as $u)
-            {
+        if (!empty($urls)) {
+
+            foreach (array_unique($urls) as $u) {
+
                 try {
                     $host = $this->getHost($u);
-                    if (isset($this->services[$host]))
-                    {
+                    if (isset($this->services[$host])) {
                         $provider = new \ReflectionClass($this->services[$host]);
                         $return[$u] = $provider->newInstance($u, $this->config, $this->oembed);
 
-                        if (isset($this->customParams[$host]))
+                        if (isset($this->customParams[$host])) {
                             $return[$u]->appendParams($this->customParams[$host]);
+                        }
                     }
                 } catch (\Exception $e) {
                     //echo $e->getMessage() . PHP_EOL;
@@ -200,22 +200,22 @@ class Providers
     protected function getHost($url)
     {
         $data = parse_url($url);
-        if (empty($data['host']))
+        if (empty($data['host'])) {
             throw new \InvalidArgumentException('The Url: ' . $url . ' seems to be invalid');
+        }
 
         $host = preg_replace('~^(?:www|player)\.~i', '', strtolower($data['host']));
-        if (isset($this->services[$host]))
+        if (isset($this->services[$host])) {
             return $host;
-        else if (isset($this->services['*.' . $host]))
+        } else if (isset($this->services['*.' . $host])) {
             return '*.' . $host;
-        else if (!empty($this->wildCardHosts))
-        {
+        } else if (!empty($this->wildCardHosts)) {
             $trans = array('\*' => '(?:.*)');
-            foreach ($this->wildCardHosts as $value)
-            {
+            foreach ($this->wildCardHosts as $value) {
                 $regex = strtr(preg_quote($value, '~'), $trans);
-                if (preg_match('~' . $regex . '~i', $host))
+                if (preg_match('~' . $regex . '~i', $host)) {
                     return $value;
+                }
             }
         }
 
@@ -230,14 +230,10 @@ class Providers
      */
     protected function extractCustomParams(array $params = array())
     {
-        if (!empty($params))
-        {
-            foreach ($params as $name => $values)
-            {
-                foreach ($this->services as $host => $service)
-                {
-                    if (preg_match('~' . $name . '~i', $service))
-                        $this->customParams[$host] = (array) $values;
+        foreach ($params as $name => $values) {
+            foreach ($this->services as $host => $service) {
+                if (preg_match('~' . $name . '~i', $service)) {
+                    $this->customParams[$host] = (array) $values;
                 }
             }
         }
@@ -251,7 +247,7 @@ class Providers
      */
     public function getAll($urls)
     {
-        $this->wildCardHosts = array_filter(array_keys($this->services), function($key){
+        $this->wildCardHosts = array_filter(array_keys($this->services), function($key) {
             return (strpos($key, '*') !== false);
         });
 

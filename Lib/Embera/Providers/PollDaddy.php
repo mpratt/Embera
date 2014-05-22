@@ -16,6 +16,10 @@ namespace Embera\Providers;
  * The polldaddy.com Provider
  * @link http://support.polldaddy.com/oembed/
  * @link http://polldaddy.com
+ *
+ * TODO: This provider should be able to provide fake responses,
+ * but there are cases when it is not possible, so the code is commented
+ * out.
  */
 class PollDaddy extends \Embera\Adapters\Service
 {
@@ -32,6 +36,17 @@ class PollDaddy extends \Embera\Adapters\Service
     }
 
     /** inline {@inheritdoc} */
+    protected function modifyResponse(array $response = array())
+    {
+        if (!empty($response['html'])) {
+            $response['html'] = preg_replace('~<noscript>(.*)</noscript>~is', '', $response['html']);
+        }
+
+        return $response;
+    }
+
+    /** inline {@inheritdoc} */
+    /*
     public function fakeResponse()
     {
         if (preg_match('~/poll/([\d]+)/?$~i', $this->url, $matches))
@@ -45,7 +60,7 @@ class PollDaddy extends \Embera\Adapters\Service
         }
 
         return array();
-    }
+    } */
 }
 
 ?>

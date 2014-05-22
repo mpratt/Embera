@@ -37,18 +37,15 @@ class Youtube extends \Embera\Adapters\Service
     /** inline {@inheritdoc} */
     public function fakeResponse()
     {
-        if (preg_match('~v=([a-z0-9_-]+)~i', $this->url, $matches))
-        {
-            return array(
-                'type' => 'video',
-                'provider_name' => 'Youtube',
-                'provider_url' => 'http://www.youtube.com',
-                'title' => 'Unknown title',
-                'html' => '<iframe width="{width}" height="{height}" src="http://www.youtube.com/embed/' . $matches['1'] . '" frameborder="0" allowfullscreen></iframe>',
-            );
-        }
+        preg_match('~v=([a-z0-9_-]+)~i', $this->url, $matches);
 
-        return array();
+        return array(
+            'type' => 'video',
+            'provider_name' => 'Youtube',
+            'provider_url' => 'http://www.youtube.com',
+            'title' => 'Unknown title',
+            'html' => '<iframe width="{width}" height="{height}" src="http://www.youtube.com/embed/' . $matches['1'] . '" frameborder="0" allowfullscreen></iframe>',
+        );
     }
 }
 

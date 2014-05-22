@@ -42,24 +42,21 @@ class CollegeHumor extends \Embera\Adapters\Service
     /** inline {@inheritdoc} */
     public function fakeResponse()
     {
-        if (preg_match('~/(?:video|embed)/([0-9]{5,10})/?~i', $this->url, $matches))
-        {
-            $vId = $matches['1'];
-            $html = '<object id="ch' . $vId. '" type="application/x-shockwave-flash" data="http://0.static.collegehumor.cvcdn.com/moogaloop/moogaloop.1.0.36.swf?clip_id=' . $vId . '&amp;use_node_id=true&amp;fullscreen=1" width="{width}" height="{height}">';
-            $html .= '<param name="allowfullscreen" value="true"/><param name="wmode" value="transparent"/><param name="allowScriptAccess" value="always"/>';
-            $html .= '<param name="movie" quality="best" value="http://0.static.collegehumor.cvcdn.com/moogaloop/moogaloop.1.0.36.swf?clip_id=' . $vId . '&amp;use_node_id=true&amp;fullscreen=1"/>';
-            $html .= '<embed src="http://0.static.collegehumor.cvcdn.com/moogaloop/moogaloop.1.0.36.swf?clip_id=' . $vId . '&amp;use_node_id=true&amp;fullscreen=1" type="application/x-shockwave-flash" wmode="transparent" width="{width}" height="{height}" allowScriptAccess="always">';
-            $html .= '</embed></object>';
+        preg_match('~/(?:video|embed)/([0-9]{5,10})/?~i', $this->url, $matches);
 
-            return array(
-                'type' => 'video',
-                'provider_name' => 'CollegeHumor',
-                'provider_url' => 'http://www.collegehumor.com',
-                'html' => $html,
-            );
-        }
+        $vId = $matches['1'];
+        $html = '<object id="ch' . $vId. '" type="application/x-shockwave-flash" data="http://0.static.collegehumor.cvcdn.com/moogaloop/moogaloop.1.0.36.swf?clip_id=' . $vId . '&amp;use_node_id=true&amp;fullscreen=1" width="{width}" height="{height}">';
+        $html .= '<param name="allowfullscreen" value="true"/><param name="wmode" value="transparent"/><param name="allowScriptAccess" value="always"/>';
+        $html .= '<param name="movie" quality="best" value="http://0.static.collegehumor.cvcdn.com/moogaloop/moogaloop.1.0.36.swf?clip_id=' . $vId . '&amp;use_node_id=true&amp;fullscreen=1"/>';
+        $html .= '<embed src="http://0.static.collegehumor.cvcdn.com/moogaloop/moogaloop.1.0.36.swf?clip_id=' . $vId . '&amp;use_node_id=true&amp;fullscreen=1" type="application/x-shockwave-flash" wmode="transparent" width="{width}" height="{height}" allowScriptAccess="always">';
+        $html .= '</embed></object>';
 
-        return array();
+        return array(
+            'type' => 'video',
+            'provider_name' => 'CollegeHumor',
+            'provider_url' => 'http://www.collegehumor.com',
+            'html' => $html,
+        );
     }
 }
 

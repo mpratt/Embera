@@ -34,24 +34,22 @@ class CircuitLab extends \Embera\Adapters\Service
     /** inline {@inheritdoc} */
     protected function normalizeUrl()
     {
-        if (preg_match('~circuitlab\.com/c([\w\d]+)/?$~i', $this->url, $matches))
+        if (preg_match('~circuitlab\.com/c([\w\d]+)/?$~i', $this->url, $matches)) {
             $this->url = new \Embera\Url('https://www.circuitlab.com/circuit/' . $matches['1'] . '/');
+        }
     }
 
     /** inline {@inheritdoc} */
     public function fakeResponse()
     {
-        if (preg_match('~circuitlab\.com/circuit/([\w\d]+)/~i', $this->url, $matches))
-        {
-            return array(
-                'type' => 'rich',
-                'provider_name' => 'CircuitLab',
-                'provider_url' => 'https://www.circuitlab.com/',
-                'html' => '<iframe src="https://www.circuitlab.com/circuit/' . $matches['1'] . '/embed_target/?width={width}" scrolling="no" frameborder="0" width="{width}" height="{height}"></iframe>',
-            );
-        }
+        preg_match('~circuitlab\.com/circuit/([\w\d]+)/~i', $this->url, $matches);
 
-        return array();
+        return array(
+            'type' => 'rich',
+            'provider_name' => 'CircuitLab',
+            'provider_url' => 'https://www.circuitlab.com/',
+            'html' => '<iframe src="https://www.circuitlab.com/circuit/' . $matches['1'] . '/embed_target/?width={width}" scrolling="no" frameborder="0" width="{width}" height="{height}"></iframe>',
+        );
     }
 }
 

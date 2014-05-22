@@ -37,18 +37,15 @@ class Chirbit extends \Embera\Adapters\Service
     /** inline {@inheritdoc} */
     public function fakeResponse()
     {
-        if (preg_match('~chirb\.it/([\w\d]+)/?~i', $this->url, $matches))
-        {
-            return array(
-                'type' => 'rich',
-                'provider_name' => 'chirbit',
-                'provider_url' => 'http://www.chirbit.com/',
-                'thumbnail_url' => 'http://chirb.it/chirbit_oembedpic.jpg',
-                'html' => '<iframe height="{height}" frameborder="0" width="{width}" scrolling="NO" src="http://chirb.it/wp/' . $matches['1'] . '">This browser does not show iframe content. Listen to this chirbit here <a href="http://chirb.it/' . $matches['1'] . '">http://chirb.it/' . $matches['1'] . '</a></iframe>',
-            );
-        }
+        preg_match('~chirb\.it/([\w\d]+)/?~i', $this->url, $matches);
 
-        return array();
+        return array(
+            'type' => 'rich',
+            'provider_name' => 'chirbit',
+            'provider_url' => 'http://www.chirbit.com/',
+            'thumbnail_url' => 'http://chirb.it/chirbit_oembedpic.jpg',
+            'html' => '<iframe height="{height}" frameborder="0" width="{width}" scrolling="NO" src="http://chirb.it/wp/' . $matches['1'] . '">This browser does not show iframe content. Listen to this chirbit here <a href="http://chirb.it/' . $matches['1'] . '">http://chirb.it/' . $matches['1'] . '</a></iframe>',
+        );
     }
 
 }

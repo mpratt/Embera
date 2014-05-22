@@ -53,18 +53,15 @@ class AolOn extends \Embera\Adapters\Service
     /** inline {@inheritdoc} */
     public function fakeResponse()
     {
-        if (preg_match('~([\d]+)$~i', $this->url, $matches))
-        {
-            return array(
-                'type' => 'video',
-                'provider_name' => 'on.aol.com',
-                'provider_url' => 'http://on.aol.com',
-                'video_id' => $matches['1'],
-                'html' => '<iframe width="{width}" height="{height}" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen src="http://embed.5min.com/PlayerSeed/?playList=' . $matches['1'] . '&autoStart=true"></iframe>',
-            );
-        }
+        preg_match('~([\d]+)$~i', $this->url, $matches);
 
-        return array();
+        return array(
+            'type' => 'video',
+            'provider_name' => 'on.aol.com',
+            'provider_url' => 'http://on.aol.com',
+            'video_id' => $matches['1'],
+            'html' => '<iframe width="{width}" height="{height}" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen src="http://embed.5min.com/PlayerSeed/?playList=' . $matches['1'] . '&autoStart=true"></iframe>',
+        );
     }
 }
 

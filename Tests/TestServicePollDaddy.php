@@ -36,7 +36,11 @@ class TestServicePollDaddy extends TestProviders
             'http://www.polldaddy.com/poll/6976912/' => 'http://polldaddy.com/poll/6976912/',
             'http://polldaddy.com/poll/6976912/' => 'http://polldaddy.com/poll/6976912/',
             'https://polldaddy.com/poll/7205026/' => 'http://polldaddy.com/poll/7205026/',
-        )
+        ),
+        /*'fake' => array(
+            'type' => 'rich',
+            'html' => '<script'
+        )*/
     );
 
     public function testProvider() { $this->validateProvider('PollDaddy'); }

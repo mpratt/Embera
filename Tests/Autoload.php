@@ -15,7 +15,11 @@ else
 class MockHttpRequest extends \Embera\HttpRequest
 {
     public $response;
-    public function fetch($url, array $params = array()) { $url = true; return $this->response; }
+    public function fetch($url, array $params = array())
+    {
+        $url = true;
+        return $this->response;
+    }
 }
 
 /**
@@ -24,7 +28,10 @@ class MockHttpRequest extends \Embera\HttpRequest
 class CustomService extends \Embera\Adapters\Service
 {
     protected $apiUrl = 'http://my-custom-service.com/oembed.json';
-    public function validateUrl(){ return preg_match('~customservice\.com/([0-9]+)~i', $this->url); }
+    public function validateUrl()
+    {
+        return preg_match('~customservice\.com/([0-9]+)~i', $this->url);
+    }
 }
 
 /**
@@ -33,6 +40,10 @@ class CustomService extends \Embera\Adapters\Service
  */
 class MockOembed extends \Embera\Oembed
 {
-    public function getResourceInfo($apiUrl, $url, array $params = array()) { $apiUrl = $url = $params = true; return array(); }
+    public function getResourceInfo($behaviour, $apiUrl, $url, array $params = array())
+    {
+        $behaviour = $apiUrl = $url = $params = true;
+        return array();
+    }
 }
 ?>

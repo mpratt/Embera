@@ -41,18 +41,15 @@ class Vimeo extends \Embera\Adapters\Service
     /** inline {@inheritdoc} */
     public function fakeResponse()
     {
-        if (preg_match('~/([0-9]{5,12})$~i', $this->url, $matches))
-        {
-            return array(
-                'type' => 'video',
-                'provider_name' => 'Vimeo',
-                'provider_url' => 'http://www.vimeo.com',
-                'title' => 'Unknown title',
-                'html' => '<iframe src="http://player.vimeo.com/' . $matches['1'] . '" width="{width}" height="{height}" frameborder="0" title="" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>',
-            );
-        }
+        preg_match('~/([0-9]{5,12})$~i', $this->url, $matches);
 
-        return array();
+        return array(
+            'type' => 'video',
+            'provider_name' => 'Vimeo',
+            'provider_url' => 'http://www.vimeo.com',
+            'title' => 'Unknown title',
+            'html' => '<iframe src="http://player.vimeo.com/' . $matches['1'] . '" width="{width}" height="{height}" frameborder="0" title="" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>',
+        );
     }
 }
 

@@ -28,15 +28,17 @@ class Bambuser extends \Embera\Adapters\Service
         $this->url->stripLastSlash();
         $this->url->stripWWW();
 
-        return (preg_match('~bambuser\.com/v/(?:[0-9]+)$~i', $this->url) ||
-                preg_match('~bambuser\.com/channel/(?:[^/]+)$~i', $this->url));
+        return (
+            preg_match('~bambuser\.com/v/(?:[0-9]+)$~i', $this->url) || preg_match('~bambuser\.com/channel/(?:[^/]+)$~i', $this->url)
+        );
     }
 
     /** inline {@inheritdoc} */
     public function normalizeUrl()
     {
-        if (preg_match('~bambuser\.com/channel/(?:[^/]+)/broadcast/([0-9]+)~i', $this->url, $matches))
+        if (preg_match('~bambuser\.com/channel/(?:[^/]+)/broadcast/([0-9]+)~i', $this->url, $matches)) {
             $this->url = new \Embera\Url('http://bambuser.com/v/' . $matches['1']);
+        }
     }
 
     /** inline {@inheritdoc} */
@@ -55,8 +57,7 @@ class Bambuser extends \Embera\Adapters\Service
         $html .= '<param name="allowscriptaccess" value="always"></param><param name="wmode" value="opaque"></param>';
         $html .='</object>';
 
-        if (preg_match('~/v/([0-9]+)$~i', $this->url, $matches))
-        {
+        if (preg_match('~/v/([0-9]+)$~i', $this->url, $matches)) {
             return array_merge(
                 $defaults,
                 array('html' => str_replace('{query}', 'vid=' . $matches['1'], $html))

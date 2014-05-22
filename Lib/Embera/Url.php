@@ -45,6 +45,7 @@ class Url
      * If the pattern matches, the url is marked as invalid
      * and is emptied.
      *
+     * @param string $pattern
      * @return void
      */
     public function invalidPattern($pattern)

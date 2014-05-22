@@ -35,29 +35,27 @@ class DailyMotion extends \Embera\Adapters\Service
     /** inline {@inheritdoc} */
     protected function normalizeUrl()
     {
-        if (preg_match('~dailymotion\.com/(?:embed/)?video/([^/]+)/?~i', $this->url, $matches))
+        if (preg_match('~dailymotion\.com/(?:embed/)?video/([^/]+)/?~i', $this->url, $matches)) {
             $this->url = new \Embera\Url('http://www.dailymotion.com/video/' . $matches['1']);
-        else if (preg_match('~dai\.ly/([^/]+)/?~i', $this->url, $matches))
+        } else if (preg_match('~dai\.ly/([^/]+)/?~i', $this->url, $matches)) {
             $this->url = new \Embera\Url('http://www.dailymotion.com/video/' . $matches['1']);
+        }
     }
 
     /** inline {@inheritdoc} */
     public function fakeResponse()
     {
-        if (preg_match('~/video/([^/]+)~i', $this->url, $matches))
-        {
-            @list($videoId, $videoTitle) = explode('_', $matches['1'], 2);
+        preg_match('~/video/([^/]+)~i', $this->url, $matches);
 
-            return array(
-                'type' => 'video',
-                'provider_name' => 'Dailymotion',
-                'provider_url' => 'http://www.dailymotion.com',
-                'title' => (!empty($videoTitle) ? str_replace(array('-', '_'), ' ', $videoTitle) : 'Unknown Title'),
-                'html' => '<iframe src="http://www.dailymotion.com/embed/video/' . $videoId . '" width="{width}" height="{height}" frameborder="0"></iframe>'
-            );
-        }
+        @list($videoId, $videoTitle) = explode('_', $matches['1'], 2);
 
-        return array();
+        return array(
+            'type' => 'video',
+            'provider_name' => 'Dailymotion',
+            'provider_url' => 'http://www.dailymotion.com',
+            'title' => (!empty($videoTitle) ? str_replace(array('-', '_'), ' ', $videoTitle) : 'Unknown Title'),
+            'html' => '<iframe src="http://www.dailymotion.com/embed/video/' . $videoId . '" width="{width}" height="{height}" frameborder="0"></iframe>'
+        );
     }
 }
 
