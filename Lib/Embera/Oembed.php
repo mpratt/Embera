@@ -44,7 +44,7 @@ class Oembed
      *                       Oembed provider.
      * @return array
      */
-    public function getResourceInfo($behaviour = null, $apiUrl, $url, array $params = array())
+    public function getResourceInfo($behaviour, $apiUrl, $url, array $params = array())
     {
         if ($behaviour === false) {
             return array();
