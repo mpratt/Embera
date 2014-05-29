@@ -23,35 +23,32 @@ class Oembed
     /** @var object Instance of \Embera\HttpRequest */
     protected $http;
 
-    /** @var bool Wether or not to use fake responses only */
-    protected $fakeResponseOnly;
-
     /**
      * Construct
      *
-     * @param bool $disableFakeResponse Wether or not to use fake responses only
      * @param object $http Instance of \Embera\HttpRequest
      * @return void
      */
-    public function __construct($disableFakeResponse = true, \Embera\HttpRequest $http)
+    public function __construct(\Embera\HttpRequest $http)
     {
-        $this->fakeResponseOnly = !$disableFakeResponse;
         $this->http = $http;
     }
 
     /**
      * Gets information about a resource
      *
+     * @param bool $behaviour Wether or not to use fake responses only
      * @param string $apiUrl The Url to the Oembed provider
      * @param string $url    The original url, we want information from
      * @param array $params  An associative array with parameters to be sent to the
      *                       Oembed provider.
      * @return array
      */
-    public function getResourceInfo($apiUrl, $url, array $params = array())
+    public function getResourceInfo($behaviour = null, $apiUrl, $url, array $params = array())
     {
-        if ($this->fakeResponseOnly)
+        if ($behaviour === false) {
             return array();
+        }
 
         return $this->lookup($this->constructUrl($apiUrl, array_merge($params, array('url' => $url))));
     }
@@ -71,16 +68,9 @@ class Oembed
     {
         $response = $this->http->fetch($url);
         $json = json_decode($response, true);
-        if ($json)
-        {
-            if (in_array(array('error', 'errors'), array_keys($json)))
-                throw new \Exception('The response from ' . $url . ' appears to have errors. Raw: ' . print_r($json, true));
 
-            $json = array_merge(array(
-                'embera_using_fake' => 0
-            ), $json);
-
-            return $json;
+        if ($json) {
+            return array_merge(array('embera_using_fake' => 0), $json);
         }
 
         return array();
@@ -98,8 +88,7 @@ class Oembed
      */
     protected function constructUrl($apiUrl, array $params = array())
     {
-        $params = array_filter($params);
-        return $apiUrl . ((strpos($apiUrl, '?') === false) ? '?' : '&') . http_build_query($params);
+        return $apiUrl . ((strpos($apiUrl, '?') === false) ? '?' : '&') . http_build_query(array_filter($params));
     }
 }
 

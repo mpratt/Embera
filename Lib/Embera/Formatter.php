@@ -34,6 +34,7 @@ class Formatter
      * Constructor
      *
      * @param object $embera Instance of \Embera\Embera
+     * @param bool $allowOffline Wether or not to allow offline embera
      * @return void
      */
     public function __construct(\Embera\Embera $embera, $allowOffline = false)
@@ -55,8 +56,9 @@ class Formatter
     {
         $this->template = $template;
 
-        if (!is_null($body))
+        if (!is_null($body)) {
             return $this->transform($body);
+        }
 
         return '';
     }
@@ -71,12 +73,9 @@ class Formatter
     public function transform($body = null)
     {
         $providers = array();
-        if ($urls = $this->embera->getUrlInfo($body))
-        {
-            foreach ($urls as $url => $data)
-            {
-                if (!$this->allowOffline && (int) $data['embera_using_fake'] === 1)
-                {
+        if ($urls = $this->embera->getUrlInfo($body)) {
+            foreach ($urls as $url => $data) {
+                if (!$this->allowOffline && (int) $data['embera_using_fake'] === 1) {
                     $this->errors[] = 'Using fake oembed response on ' . $url;
                     continue;
                 }
@@ -87,10 +86,11 @@ class Formatter
             }
         }
 
-        if (is_array($body))
+        if (is_array($body)) {
             $return = implode('', $providers);
-        else
+        } else {
             $return = str_replace(array_keys($providers), array_values($providers), $body);
+        }
 
         // Remove unchanged placeholders
         return preg_replace('~{([\w\d\-_]+)}~i', '', $return);
@@ -112,14 +112,20 @@ class Formatter
      *
      * @return array
      */
-    public function getErrors() { return array_merge($this->embera->getErrors(), $this->errors); }
+    public function getErrors()
+    {
+        return array_merge($this->embera->getErrors(), $this->errors);
+    }
 
     /**
      * Checks if there were errors
      *
      * @return bool
      */
-    public function hasErrors() { return ($this->embera->hasErrors() || !empty($this->errors)); }
+    public function hasErrors()
+    {
+        return ($this->embera->hasErrors() || !empty($this->errors));
+    }
 
     /**
      * Truly decorate the embera object. With this
@@ -134,8 +140,9 @@ class Formatter
      */
     public function __call($method, $args)
     {
-        if (is_callable(array($this->embera, $method)))
+        if (is_callable(array($this->embera, $method))) {
             return call_user_func_array(array($this->embera, $method), $args);
+        }
 
         throw new \InvalidArgumentException('No method ' . $method . ' was found');
     }

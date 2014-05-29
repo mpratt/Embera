@@ -18,7 +18,7 @@ namespace Embera;
 class Embera
 {
     /** @var int Class constant with the current Version of this library */
-    const VERSION = '1.7';
+    const VERSION = '1.8.0';
 
     /** @var object Instance of \Embera\Oembed */
     protected $oembed;
@@ -48,7 +48,18 @@ class Embera
     public function __construct(array $config = array())
     {
         $this->config = array_replace_recursive(array(
-            'oembed' => true,
+            /**
+             * The oembed setting represents the behaviour of the library.
+             * The default value (since version 1.8.0) is null, which means that the
+             * library will first try to get the data from the oembed endpoint and if that fails
+             * it tries to use a fake response.
+             *
+             * When true is given it ONLY tries to get the info from the endpoint directly... It DOES NOT fallback
+             * to fake responses.
+             *
+             * Finally, when false is given it ONLY uses fake responses.
+             */
+            'oembed' => null,
             'use_embed_prefix' => false,
             'params' => array(
                 'width' => 0,
@@ -74,7 +85,7 @@ class Embera
 
         unset($this->config['params']['height'], $this->config['params']['width']);
 
-        $this->oembed = new \Embera\Oembed($this->config['oembed'], new \Embera\HttpRequest($this->config['http']));
+        $this->oembed = new \Embera\Oembed(new \Embera\HttpRequest($this->config['http']));
         $this->providers = new \Embera\Providers($this->config, $this->oembed);
     }
 

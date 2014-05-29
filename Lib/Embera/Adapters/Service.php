@@ -58,8 +58,9 @@ abstract class Service
         $this->url = new \Embera\Url($url);
         $this->normalizeUrl();
 
-        if (!$this->validateUrl())
+        if (!$this->validateUrl()) {
             throw new \InvalidArgumentException('Url ' . $this->url . ' seems to be invalid for the ' . get_class($this) . ' service');
+        }
 
         $this->config = array_replace_recursive(array(
             'params' => array(
@@ -82,13 +83,19 @@ abstract class Service
     {
         try {
 
-            if ($response = $this->oembed->getResourceInfo($this->apiUrl, (string) $this->url, $this->config['params']))
-                return $this->modifyResponse($response);
+            if ($res = $this->oembed->getResourceInfo($this->config['oembed'], $this->apiUrl, (string) $this->url, $this->config['params'])) {
+                return $this->modifyResponse($res);
+            }
 
-        } catch (\Exception $e) { $this->errors[] = $e->getMessage(); }
+        } catch (\Exception $e) {
+            $this->errors[] = $e->getMessage();
+        }
 
-        if ($response = $this->fakeResponse())
-        {
+        /**
+         * Use fakeResponses when the oembed setting is null or false
+         * If the oembed config is true, the user strictly wants real responses
+         */
+        if (!$this->config['oembed'] && $response = $this->fakeResponse()) {
             $fakeResponse = new \Embera\FakeResponse($this->config, $response);
             return $this->modifyResponse($fakeResponse->buildResponse());
         }
@@ -102,28 +109,40 @@ abstract class Service
      * @param array $params
      * @return void
      */
-    public function appendParams(array $params = array()) { $this->config['params'] = array_merge($this->config['params'], $params); }
+    public function appendParams(array $params = array())
+    {
+        $this->config['params'] = array_merge($this->config['params'], $params);
+    }
 
     /**
      * Returns the url
      *
      * @return string
      */
-    public function getUrl() { return (string) $this->url; }
+    public function getUrl()
+    {
+        return (string) $this->url;
+    }
 
     /**
      * Returns an array with all the parameters for the oembed request
      *
      * @return array
      */
-    public function getParams() { return $this->config['params']; }
+    public function getParams()
+    {
+        return $this->config['params'];
+    }
 
     /**
      * Returns an array with found errors
      *
      * @return array
      */
-    public function getErrors() { return $this->errors; }
+    public function getErrors()
+    {
+        return $this->errors;
+    }
 
     /**
      * This method fakes a Oembed response.
@@ -133,8 +152,12 @@ abstract class Service
      * an html embed code based on the url or by other methods.
      *
      * @return array with data that the oembed response should have
+     * @codeCoverageIgnore
      */
-     public function fakeResponse() { return array(); }
+    public function fakeResponse()
+    {
+        return array();
+    }
 
     /**
      * Normalizes a url.
@@ -156,7 +179,10 @@ abstract class Service
      * @param array $response
      * @return array
      */
-    protected function modifyResponse(array $response = array()) { return $response; }
+    protected function modifyResponse(array $response = array())
+    {
+        return $response;
+    }
 }
 
 ?>

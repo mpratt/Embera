@@ -14,8 +14,8 @@ class TestOembed extends PHPUnit_Framework_TestCase
 {
     public function testResourceInfoOembedDisabled()
     {
-        $oembed = new \Embera\Oembed(true, new MockHttpRequest());
-        $return = $oembed->getResourceInfo('dummyurl1', 'dummyurl2');
+        $oembed = new \Embera\Oembed(new MockHttpRequest());
+        $return = $oembed->getResourceInfo(true, 'dummyurl1', 'dummyurl2');
         $this->assertEquals($return, array());
     }
 
@@ -26,8 +26,8 @@ class TestOembed extends PHPUnit_Framework_TestCase
         $http = new MockHttpRequest();
         $http->response = json_encode($value);
 
-        $oembed = new \Embera\Oembed(true, $http);
-        $return = $oembed->getResourceInfo('dummyurl', 'dummy_url2');
+        $oembed = new \Embera\Oembed($http);
+        $return = $oembed->getResourceInfo(true, 'dummyurl', 'dummy_url2');
         unset($return['embera_using_fake']);
 
         $this->assertEquals($return, $value);
@@ -40,14 +40,14 @@ class TestOembed extends PHPUnit_Framework_TestCase
         $http = new MockHttpRequest();
         $http->response = $value;
 
-        $oembed = new \Embera\Oembed(true, $http);
-        $return = $oembed->getResourceInfo('dummyurl', 'dummy_url2');
+        $oembed = new \Embera\Oembed($http);
+        $return = $oembed->getResourceInfo(true, 'dummyurl', 'dummy_url2');
         $this->assertEquals($return, array());
     }
 
     public function testUrlConstruction()
     {
-        $oembed = new \Embera\Oembed(true, new MockHttpRequest());
+        $oembed = new \Embera\Oembed(new MockHttpRequest());
         $reflection = new ReflectionClass('\Embera\Oembed');
         $method = $reflection->getMethod('constructUrl');
         $method->setAccessible(true);

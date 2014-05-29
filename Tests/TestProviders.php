@@ -17,19 +17,19 @@ class TestProviders extends PHPUnit_Framework_TestCase
 
     public function testEmptyOrInvalidProviders()
     {
-        $oembed = new MockOembed(true, new MockHttpRequest());
+        $oembed = new MockOembed(new MockHttpRequest());
 
-        $p = new \Embera\Providers(array(), $oembed);
+        $p = new \Embera\Providers(array('oembed' => true), $oembed);
         $this->assertEmpty($p->getAll(array()));
 
-        $p = new \Embera\Providers(array(), $oembed);
+        $p = new \Embera\Providers(array('oembed' => true), $oembed);
         $this->assertEmpty($p->getAll(null));
 
-        $p = new \Embera\Providers(array(), $oembed);
+        $p = new \Embera\Providers(array('oembed' => true), $oembed);
         $this->assertEmpty($p->getAll('http://www.unknown.com'));
 
         $urls = array('http://www.unknown.com/path/stuf/?hi=1', 'http://www.thewalkingdead.com/stuff/');
-        $p = new \Embera\Providers(array(), $oembed);
+        $p = new \Embera\Providers(array('oembed' => true), $oembed);
         $this->assertEmpty($p->getAll($urls));
     }
 
@@ -91,15 +91,15 @@ class TestProviders extends PHPUnit_Framework_TestCase
      */
     protected function validateDetection($s, array $validUrls, array $invalidUrls)
     {
-        $oembed = new MockOembed(true, new MockHttpRequest());
+        $oembed = new MockOembed(new MockHttpRequest());
 
-        $p = new \Embera\Providers(array(), $oembed);
+        $p = new \Embera\Providers(array('oembed' => true), $oembed);
         $this->assertCount(count($validUrls), $p->getAll($validUrls), $s . ' The valid Urls dont seem to be detected correctly');
 
-        $p = new \Embera\Providers(array(), $oembed);
+        $p = new \Embera\Providers(array('oembed' => true), $oembed);
         $this->assertCount(count($validUrls), $p->getAll(array_merge($validUrls, $invalidUrls)), $s . ' There is at least one invalid url recognized as valid');
 
-        $p = new \Embera\Providers(array(), $oembed);
+        $p = new \Embera\Providers(array('oembed' => true), $oembed);
         $this->assertCount(1, $p->getAll($validUrls[mt_rand(0, (count($validUrls) - 1))]), $s . ' One Correct url seems to be invalid');
     }
 
@@ -109,7 +109,7 @@ class TestProviders extends PHPUnit_Framework_TestCase
      */
     protected function validateRealResponse($service, array $validUrls)
     {
-        $oembed = new \Embera\Oembed(true, new \Embera\HttpRequest());
+        $oembed = new \Embera\Oembed(new \Embera\HttpRequest());
         $service = '\Embera\Providers\\' . $service;
 
         foreach ($validUrls as $url) {
@@ -136,11 +136,11 @@ class TestProviders extends PHPUnit_Framework_TestCase
      */
     protected function validateUrlNormalization($service, array $normalizeUrls)
     {
-        $oembed = new MockOembed(true, new MockHttpRequest());
+        $oembed = new MockOembed(new MockHttpRequest());
         $service = '\Embera\Providers\\' . $service;
 
         foreach ($normalizeUrls as $given => $expected) {
-            $test = new $service($given, array('fake' => array(), 'params' => array()), $oembed);
+            $test = new $service($given, array('oembed' => false, 'fake' => array(), 'params' => array()), $oembed);
             $this->assertEquals($test->getUrl(), $expected);
         }
     }
@@ -151,7 +151,7 @@ class TestProviders extends PHPUnit_Framework_TestCase
      */
     protected function validateFakeResponse($service, array $validUrls, array $fakeResponseData)
     {
-        $fakeOembed = new MockOembed(true, new MockHttpRequest());
+        $fakeOembed = new MockOembed(new MockHttpRequest());
         $service = '\Embera\Providers\\' . $service;
 
         foreach ($validUrls as $url) {
@@ -163,7 +163,7 @@ class TestProviders extends PHPUnit_Framework_TestCase
             $this->assertEquals($fakeResponseData['type'], $response['type'], 'Response type is not ' . $fakeResponseData['type'] . ' on ' . $url);
 
             // Do a real test and comparition
-            $oembed = new \Embera\Oembed(true, new \Embera\HttpRequest());
+            $oembed = new \Embera\Oembed(new \Embera\HttpRequest());
             $test = new $service($url, array('oembed' => true, 'fake' => array(), 'params' => array()), $oembed);
             $result1 = $test->getInfo();
 
@@ -179,7 +179,7 @@ class TestProviders extends PHPUnit_Framework_TestCase
             $this->assertContains($fakeResponseData['html'], $result1['html'], 'Response is not ' . $fakeResponseData['html']. ' in ' . $url);
             $this->assertEquals($fakeResponseData['type'], $result1['type'], 'Response type is not ' . $fakeResponseData['type'] . ' on ' . $url);
 
-            $oembed = new \Embera\Oembed(false, new \Embera\HttpRequest());
+            $oembed = new \Embera\Oembed(new \Embera\HttpRequest());
             $test = new $service($url, array('oembed' => false, 'fake' => array(), 'params' => array()), $oembed);
             $result2 = $test->getInfo();
 
@@ -200,11 +200,11 @@ class TestProviders extends PHPUnit_Framework_TestCase
      */
     protected function validatePrivateUrlResponse($service, array $privateUrls)
     {
-        $oembed = new \Embera\Oembed(true, new \Embera\HttpRequest());
+        $oembed = new \Embera\Oembed(new \Embera\HttpRequest());
         $service = '\Embera\Providers\\' . $service;
 
         foreach ($privateUrls as $url) {
-            $test = new $service($url, array('fake' => array(), 'params' => array()), $oembed);
+            $test = new $service($url, array('oembed' => true, 'fake' => array(), 'params' => array()), $oembed);
             $this->assertEmpty($test->getInfo(), $service . ': Invalid response from a private url ' . print_r($test->getInfo(), true));
         }
     }
@@ -216,11 +216,12 @@ class TestProviders extends PHPUnit_Framework_TestCase
     protected function validateWrongUrlResponse($service, array $urls)
     {
         $service = '\Embera\Providers\\' . $service;
-        $oembed = new MockOembed(true, new MockHttpRequest());
+        $oembed = new MockOembed(new MockHttpRequest());
 
         foreach ($urls as $url) {
             try {
                 new $service($url, array(
+                    'oembed' => true,
                     'fake' => array(),
                     'params' => array()
                 ), $oembed);

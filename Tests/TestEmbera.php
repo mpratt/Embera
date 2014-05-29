@@ -74,7 +74,7 @@ class TestEmbera extends PHPUnit_Framework_TestCase
 
     public function testCustomProvider()
     {
-        $oembed = new MockOembed(true, new MockHttpRequest());
+        $oembed = new MockOembed(new MockHttpRequest());
         $customParams = array('apikey' => 'myapikey');
         $urls = array(
             'http://customservice.com/9879837498',
@@ -84,7 +84,7 @@ class TestEmbera extends PHPUnit_Framework_TestCase
             'http://customservice.com/9879837498/'
         );
 
-        $p = new \Embera\Providers(array(), $oembed);
+        $p = new \Embera\Providers(array('oembed' => true), $oembed);
         $p->addProvider('www.customservice.com', 'CustomService', $customParams);
 
         $this->assertCount(3, $p->getAll($urls));
