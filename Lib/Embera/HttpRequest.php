@@ -73,9 +73,19 @@ class HttpRequest
      */
     protected function curl($url, array $params = array())
     {
+        // CURLOPT_FOLLOWLOCATION doesnt play well with open_basedir/safe_mode
+        if ((ini_get('safe_mode') || ini_get('open_basedir')))
+        {
+            $this->config['curl'][CURLOPT_FOLLOWLOCATION] = false;
+            $this->config['curl'][CURLOPT_TIMEOUT] = 15;
+            $this->config['force_redirects'] = true;
+        }
+        else{
+            $this->config['curl'][CURLOPT_FOLLOWLOCATION] = true;
+        }
+        
         // Not using array_merge here because that function reindexes numeric keys
         $options = $this->config['curl'] + array(
-            CURLOPT_FOLLOWLOCATION => true,
             CURLOPT_USERAGENT => $this->userAgent,
             CURLOPT_ENCODING => '',
         ) + $params;
@@ -84,13 +94,6 @@ class HttpRequest
         $options[CURLOPT_HEADER] = true;
         $options[CURLOPT_RETURNTRANSFER] = 1;
 
-        // CURLOPT_FOLLOWLOCATION doesnt play well with open_basedir/safe_mode
-        if ($options[CURLOPT_FOLLOWLOCATION] && (ini_get('safe_mode') || ini_get('open_basedir')))
-        {
-            $this->config['curl'][CURLOPT_FOLLOWLOCATION] = false;
-            $this->config['curl'][CURLOPT_TIMEOUT] = 15;
-            $this->config['force_redirects'] = true;
-        }
 
         $handler = curl_init();
         curl_setopt_array($handler, $options);
