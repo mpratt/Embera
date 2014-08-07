@@ -61,7 +61,7 @@ class Sketchfab extends \Embera\Adapters\Service
             'type' => 'rich',
             'provider_name' => 'Sketchfab',
             'provider_url' => 'http://sketchfab.com',
-            'html' => '<iframe width="{width}" height="{height}" frameborder="0" allowFullScreen webkitallowfullscreen mozallowfullscreen src="' . $url . '/embed"></iframe>',
+            'html' => '<iframe width="{width}" height="{height}" src="' . $url . '/embed" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" onmousewheel=""></iframe>'
         );
     }
 }

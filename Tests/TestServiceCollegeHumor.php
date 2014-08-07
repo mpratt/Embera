@@ -33,7 +33,7 @@ class TestServiceCollegeHumor extends TestProviders
         ),
         'fake' => array(
             'type' => 'video',
-            'html' => '<embed'
+            'html' => '<iframe'
         )
     );
 
