@@ -226,7 +226,7 @@ class TestProviders extends PHPUnit_Framework_TestCase
                     'params' => array()
                 ), $oembed);
 
-                $this->assertTrue(false, $s . ': The url ' . $url . ' doesnt seem to be invalid');
+                $this->assertTrue(false, $service . ': The url ' . $url . ' doesnt seem to be invalid');
             } catch (InvalidArgumentException $e) {
                 // just keep the count
                 $this->assertTrue(true);
