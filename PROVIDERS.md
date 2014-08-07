@@ -38,7 +38,6 @@ Sites marked with an `*` allow offline html embedding.
 - * [IFTTT](http://ifttt.com)
 - [Instagram](http://instagram.com)
 - * [Jest](http://www.jest.com)
-- [JustinTV](http://www.justin.tv)
 - * [Kickstarter](http://www.kickstarter.com)
 - [Meetup](http://meetup.com)
 - [MixCloud](http://mixcloud.com)
