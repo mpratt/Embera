@@ -16,7 +16,7 @@ class TestServiceDipity extends TestProviders
 {
     protected $urls = array(
         'valid' => array(
-            'http://www.dipity.com/BIRN/Albania-Local-Elections-2011/',
+            //'http://www.dipity.com/BIRN/Albania-Local-Elections-2011/',
             'http://www.dipity.com/StevePro/Skype-from-startup-to-8-5-billion-sale',
             'http://www.dipity.com/ibmzrl/Nanotechnology-at-IBM-Research/',
             'http://dipity.com/StevePro/2010-in-Review/',

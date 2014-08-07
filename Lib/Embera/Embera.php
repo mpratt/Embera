@@ -18,7 +18,7 @@ namespace Embera;
 class Embera
 {
     /** @var int Class constant with the current Version of this library */
-    const VERSION = '1.8.0';
+    const VERSION = '1.8.1';
 
     /** @var object Instance of \Embera\Oembed */
     protected $oembed;
@@ -146,8 +146,8 @@ class Embera
         $regex = ($this->config['use_embed_prefix'] === true ? $this->urlEmbedRegex : $this->urlRegex);
         if (is_array($body)) {
 
-            $body = array_filter($body, function ($a) use ($regex) {
-                return preg_match($regex, $a);
+            $body = array_filter($body, function ($arr) use ($regex) {
+                return preg_match($regex, $arr);
             });
 
             $services = $this->providers->getAll($body);
@@ -187,16 +187,16 @@ class Embera
 
         if (!empty($this->config['allow'])) {
             $allow = array_map('strtolower', (array) $this->config['allow']);
-            $services = array_filter($services, function ($a) use ($allow) {
-                $serviceName = strtolower(basename(str_replace('\\', '/', get_class($a))));
+            $services = array_filter($services, function ($arr) use ($allow) {
+                $serviceName = strtolower(basename(str_replace('\\', '/', get_class($arr))));
                 return (in_array($serviceName, $allow));
             });
         }
 
         if (!empty($services) && !empty($this->config['deny'])) {
             $deny = array_map('strtolower', (array) $this->config['deny']);
-            $services = array_filter($services, function ($a) use ($deny) {
-                $serviceName = strtolower(basename(str_replace('\\', '/', get_class($a))));
+            $services = array_filter($services, function ($arr) use ($deny) {
+                $serviceName = strtolower(basename(str_replace('\\', '/', get_class($arr))));
                 return (!in_array($serviceName, $deny));
             });
         }
