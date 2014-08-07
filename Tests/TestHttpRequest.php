@@ -12,6 +12,10 @@
 
 class TestHttpRequest extends PHPUnit_Framework_TestCase
 {
+    /**
+     * This needs more execution time ..
+     * @large
+     */
     public function testInvalidUrl()
     {
         $this->setExpectedException('Exception');
@@ -20,6 +24,10 @@ class TestHttpRequest extends PHPUnit_Framework_TestCase
         $http->fetch('this is an invalid url');
     }
 
+    /**
+     * This needs more execution time ..
+     * @large
+     */
     public function testInvalidUrl2()
     {
         $this->setExpectedException('Exception');
@@ -34,6 +42,10 @@ class TestHttpRequest extends PHPUnit_Framework_TestCase
         $http->fetch('this is an invalid url');
     }
 
+    /**
+     * This needs more execution time ..
+     * @large
+     */
     public function testFetchCurl()
     {
         $http = new \Embera\HttpRequest();
@@ -92,6 +104,10 @@ class TestHttpRequest extends PHPUnit_Framework_TestCase
         $this->assertEquals('PHP/Morcilla 3', $response['user-agent']);
     }
 
+    /**
+     * This needs more execution time ..
+     * @large
+     */
     public function testFetchFileGetcontents()
     {
         if (!ini_get('allow_url_fopen'))
@@ -125,6 +141,10 @@ class TestHttpRequest extends PHPUnit_Framework_TestCase
         $this->assertEquals('PHP/FGC Morcilla', $response['user-agent']);
     }
 
+    /**
+     * This needs more execution time ..
+     * @large
+     */
     public function testOptionsPrecedence()
     {
         $config = array(

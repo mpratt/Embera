@@ -35,11 +35,10 @@ class VideoFork extends \Embera\Adapters\Service
     /** inline {@inheritdoc} */
     protected function normalizeUrl()
     {
-        if (preg_match('~/(?:play|oembed)/([0-9]+)~i', $this->url, $matches))
-        {
+        if (preg_match('~/(?:play|oembed)/([0-9]+)~i', $this->url, $matches)) {
             // Overwrite the oembed endpoint with a valid one
             $this->apiUrl = 'http://videofork.com/oembed/' . $matches['1'];
-            $this->url = 'http://videofork.com/play/' . $matches['1'];
+            $this->url = new \Embera\Url('http://videofork.com/play/' . $matches['1']);
         }
     }
 

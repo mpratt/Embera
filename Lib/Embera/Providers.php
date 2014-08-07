@@ -21,6 +21,9 @@ class Providers
     /** @var array Configuration Settings */
     protected $config = array();
 
+    /** @var object instance of \Embera\Oembed*/
+    protected $oembed;
+
     /** @var array Custom parameters for each host/provider */
     protected $customParams = array();
 

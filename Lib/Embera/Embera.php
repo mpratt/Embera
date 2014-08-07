@@ -138,7 +138,7 @@ class Embera
      * compares which are allowed and returns an array
      * with the detected providers
      *
-     * @param string|array $body An array or string with Urls
+     * @param null|string|array $body An array or string with Urls
      * @return array
      */
     protected function getProviders($body = '')
