@@ -4,6 +4,7 @@ This is the complete list of supported providers.
 Sites marked with an `*` allow offline html embedding.
 
 - [23hq](http://23hq.com)
+- [AmCharts](http://live.amcharts.com)
 - [Animoto](http://animoto.com)
 - * [Aol On](http://on.aol.com) (which is also [5min.com](http://5min.com))
 - [Alpha App.NET](https://alpha.app.net)
