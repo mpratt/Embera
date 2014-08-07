@@ -13,3 +13,5 @@ tools:
     php_hhvm: true
     php_analyzer: true
     sensiolabs_security_checker: true
+    external_code_coverage:
+        runs: 2    # Scrutinizer will wait for two code coverage submissions
