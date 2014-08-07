@@ -84,11 +84,10 @@ class HttpRequest
         $options[CURLOPT_HEADER] = true;
         $options[CURLOPT_RETURNTRANSFER] = 1;
 
-        // CURLOPT_FOLLOWLOCATION doesnt play well with open_basedir/safe_mode
-        if ($options[CURLOPT_FOLLOWLOCATION] && (ini_get('safe_mode') || ini_get('open_basedir')))
-        {
-            $this->config['curl'][CURLOPT_FOLLOWLOCATION] = false;
-            $this->config['curl'][CURLOPT_TIMEOUT] = 15;
+         // CURLOPT_FOLLOWLOCATION doesnt play well with open_basedir/safe_mode
+        if (ini_get('safe_mode') || ini_get('open_basedir')) {
+            $options[CURLOPT_FOLLOWLOCATION] = false;
+            $options[CURLOPT_TIMEOUT] = 15;
             $this->config['force_redirects'] = true;
         }
 
@@ -114,7 +113,7 @@ class HttpRequest
                     $url = $parsed['scheme'] . '://' . rtrim($parsed['host'], '/') . $url;
                 }
 
-                return $this->curl($url);
+                return $this->curl($url, $options);
             }
         }
 
