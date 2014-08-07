@@ -56,8 +56,9 @@ class HttpRequest
             'fopen' => array(),
         ), $params);
 
-        if (function_exists('curl_init') && $this->config['prefer_curl'])
+        if (function_exists('curl_init') && $this->config['prefer_curl']) {
             return $this->curl($url, $params['curl']);
+        }
 
         return $this->fileGetContents($url, $params['fopen']);
     }
@@ -74,11 +75,11 @@ class HttpRequest
     protected function curl($url, array $params = array())
     {
         // Not using array_merge here because that function reindexes numeric keys
-        $options = $this->config['curl'] + array(
-            CURLOPT_FOLLOWLOCATION => true,
+        $options = $params + $this->config['curl'] + array(
             CURLOPT_USERAGENT => $this->userAgent,
             CURLOPT_ENCODING => '',
-        ) + $params;
+            CURLOPT_FOLLOWLOCATION => true,
+        );
 
         $options[CURLOPT_URL] = $url;
         $options[CURLOPT_HEADER] = true;
@@ -102,13 +103,14 @@ class HttpRequest
         $body = substr($response, $headerSize);
         curl_close($handler);
 
-        if ($this->config['force_redirects'] && in_array($status, array('301', '302')))
-        {
-            if (preg_match('~(?:location|uri): ?([^\n]+)~i', $header, $matches))
-            {
+        if ($this->config['force_redirects'] && in_array($status, array('301', '302'))) {
+
+            if (preg_match('~(?:location|uri): ?([^\n]+)~i', $header, $matches)) {
+
                 $url = trim($matches['1']);
-                if (substr($url, 0, 1) == '/')
-                {
+
+                // Relative redirections
+                if (substr($url, 0, 1) == '/') {
                     $parsed = parse_url($options[CURLOPT_URL]);
                     $url = $parsed['scheme'] . '://' . rtrim($parsed['host'], '/') . $url;
                 }
@@ -117,8 +119,9 @@ class HttpRequest
             }
         }
 
-        if (empty($body) || !in_array($status, array('200')))
+        if (empty($body) || !in_array($status, array('200'))) {
             throw new \Exception($status . ': Invalid response for ' . $url);
+        }
 
         return $body;
     }
@@ -134,8 +137,9 @@ class HttpRequest
      */
     protected function fileGetContents($url, array $params = array())
     {
-        if (!ini_get('allow_url_fopen'))
+        if (!ini_get('allow_url_fopen')) {
             throw new \Exception('Could not execute lookup, allow_url_fopen is disabled');
+        }
 
         $defaultOptions = array(
             'method' => 'GET',
@@ -146,8 +150,9 @@ class HttpRequest
         );
 
         $context = array('http' => array_merge($defaultOptions, $this->config['fopen'], $params));
-        if ($data = file_get_contents($url, false, stream_context_create($context)))
+        if ($data = file_get_contents($url, false, stream_context_create($context))) {
             return $data;
+        }
 
         throw new \Exception('Invalid Server Response from ' . $url);
     }

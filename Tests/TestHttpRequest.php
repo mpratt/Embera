@@ -124,6 +124,26 @@ class TestHttpRequest extends PHPUnit_Framework_TestCase
 
         $this->assertEquals('PHP/FGC Morcilla', $response['user-agent']);
     }
+
+    public function testOptionsPrecedence()
+    {
+        $config = array(
+            'curl' => array(
+                CURLOPT_USERAGENT => 'PHP/Morcilla 1',
+            )
+        );
+
+        $http = new \Embera\HttpRequest($config);
+        $response = $http->fetch('http://httpbin.org/user-agent', array(
+            'curl' => array(
+                CURLOPT_USERAGENT => 'PHP/Morcilla 2',
+            )
+        ));
+
+        $response = json_decode($response, true);
+
+        $this->assertEquals('PHP/Morcilla 2', $response['user-agent']);
+    }
 }
 
 ?>
