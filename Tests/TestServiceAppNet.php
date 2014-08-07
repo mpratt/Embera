@@ -17,7 +17,6 @@ class TestServiceAppNet extends TestProviders
     protected $urls = array(
         'valid' => array(
             'https://alpha.app.net/lesechos/post/9152136',
-            'https://alpha.app.net/vowels/post/8244279/photo/1',
             'https://alpha.app.net/breakingnews/post/9141658/',
             'http://alpha.app.net/popsugar/post/9145139',
             'https://photos.app.net/8244279/1',
