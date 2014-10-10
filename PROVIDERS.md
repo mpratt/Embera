@@ -12,6 +12,7 @@ Sites marked with an `*` allow offline html embedding.
 - * [Bambuser](http://bambuser.com)
 - [BlipTV](http://blip.tv)
 - * [Cacoo](http://cacoo.com)
+- * [ChartBlocks](http://chartblocks.com)
 - * [Chirbit](http://chirb.it)
 - [Clyp](http://clyp.it)
 - * [CircuitLab](https://www.circuitlab.com)

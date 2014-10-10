@@ -17,7 +17,7 @@ namespace Embera\Adapters;
  */
 abstract class Service
 {
-    /** @var object Instance of \Embera\Url */
+    /** @var string|object Instance of \Embera\Url */
     protected $url;
 
     /** @var object Instance of \Embera\Oembed */

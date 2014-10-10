@@ -43,6 +43,7 @@ class Providers
         'bambuser.com' => '\Embera\Providers\Bambuser',
         '*.blip.tv' => '\Embera\Providers\BlipTV',
         'cacoo.com' => '\Embera\Providers\Cacoo',
+        'public.chartblocks.com' => '\Embera\Providers\Chartblocks',
         'chirb.it' => '\Embera\Providers\Chirbit',
         'clyp.it' => '\Embera\Providers\Clyp',
         'circuitlab.com' => '\Embera\Providers\CircuitLab',
