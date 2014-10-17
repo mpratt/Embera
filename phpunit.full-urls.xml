@@ -2,8 +2,8 @@
          backupGlobals="false"
          backupStaticAttributes="false"
          syntaxCheck="false"
-         timeoutForSmallTests="20"
-         timeoutForMediumTests="60"
+         timeoutForSmallTests="200"
+         timeoutForMediumTests="300"
          timeoutForLargeTests="360"
          bootstrap="Tests/Autoload.php">
     <testsuites>

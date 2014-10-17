@@ -32,6 +32,9 @@ class TestServiceAnimoto extends TestProviders
         ),
     );
 
+    /**
+     * @large
+     */
     public function testProvider() { $this->validateProvider('Animoto'); }
 }
 ?>

@@ -20,7 +20,6 @@ class TestServiceDipity extends TestProviders
             'http://www.dipity.com/StevePro/Skype-from-startup-to-8-5-billion-sale',
             'http://www.dipity.com/ibmzrl/Nanotechnology-at-IBM-Research/',
             'http://dipity.com/StevePro/2010-in-Review/',
-            'http://www.dipity.com/timeline/Bryson/',
             'http://www.dipity.com/timeline/Nba-Finals/',
         ),
         'invalid' => array(
