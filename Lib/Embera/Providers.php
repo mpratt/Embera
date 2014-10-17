@@ -83,7 +83,6 @@ class Providers
         'ifttt.com' => '\Embera\Providers\IFTTT',
         'instagram.com' => '\Embera\Providers\Instagram',
         'instagr.am' => '\Embera\Providers\Instagram',
-        'jest.com' => '\Embera\Providers\Jest',
         'kickstarter.com' => '\Embera\Providers\Kickstarter',
         'meetup.com' => '\Embera\Providers\Meetup',
         'meetu.ps' => '\Embera\Providers\Meetup',
