@@ -141,6 +141,10 @@ class HttpRequest
             throw new \Exception('Could not execute lookup, allow_url_fopen is disabled');
         }
 
+        if (!filter_var($url, FILTER_VALIDATE_URL)) {
+            throw new \Exception('Invalid url ' . $url);
+        }
+
         $defaultOptions = array(
             'method' => 'GET',
             'user_agent' => $this->userAgent,

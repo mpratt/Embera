@@ -34,12 +34,13 @@ abstract class Service
 
     /**
      * Validates that the url belongs to this service.
-     * Should be implemented on all children and must
-     * return a boolean.
+     * Should be implemented on all children and should
+     * return a boolean (preg_match returns 0 or 1 that
+     * is why I'm also allowing 'int' as a return type).
      *
      * The current url is made available via $this->url
      *
-     * @return bool
+     * @return bool|int
      */
     abstract protected function validateUrl();
 
