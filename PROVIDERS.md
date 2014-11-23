@@ -58,7 +58,7 @@ Sites marked with an `*` allow offline html embedding.
 - [SlideShare](http://www.slideshare.net)
 - [SoundCloud](http://soundcloud.com)
 - [SpeakerDeck](https://speackerdeck.com)
-- [Spotify](http://spotify.com)
+- * [Spotify](http://spotify.com)
 - * [Ted](http://ted.com)
 - [Twitter](https://twitter.com)
 - [Ustream](http://ustream.tv)

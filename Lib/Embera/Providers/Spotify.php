@@ -51,7 +51,7 @@ class Spotify extends \Embera\Adapters\Service
         }
 
         preg_match('~/(track|album|user)/.+~i', $this->url, $matches);
-        $code = str_replace('/', ':', rtrim($matches['0'], '/'));
+        $code = str_replace('/', ':', rtrim($matches['0'], '/ '));
 
         return array(
             'type' => 'rich',

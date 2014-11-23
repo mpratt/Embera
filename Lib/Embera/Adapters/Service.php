@@ -17,7 +17,10 @@ namespace Embera\Adapters;
  */
 abstract class Service
 {
-    /** @var string|object Instance of \Embera\Url */
+    /**
+     * @var mixed Instance of \Embera\Url
+     * (Marking this as mixed instead of object because scrutinizer complains about type check on preg_match)
+     */
     protected $url;
 
     /** @var object Instance of \Embera\Oembed */
