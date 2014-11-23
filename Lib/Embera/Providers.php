@@ -107,7 +107,7 @@ class Providers
         'slideshare.net' => '\Embera\Providers\SlideShare',
         '*.soundcloud.com' => '\Embera\Providers\SoundCloud',
         'speakerdeck.com' => '\Embera\Providers\Speakerdeck',
-        'open.spotify.com' => '\Embera\Providers\Spotify',
+        '*.spotify.com' => '\Embera\Providers\Spotify',
         'spoti.fi' => '\Embera\Providers\Spotify',
         'ted.com' => '\Embera\Providers\Ted',
         'twitter.com' => '\Embera\Providers\Twitter',

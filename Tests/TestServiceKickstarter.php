@@ -44,6 +44,9 @@ class TestServiceKickstarter extends TestProviders
         )
     );
 
+    /**
+     *@large
+     */
     public function testProvider()
     {
         if (getenv('TRAVIS')) {
