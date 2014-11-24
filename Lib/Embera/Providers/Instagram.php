@@ -32,8 +32,8 @@ class Instagram extends \Embera\Adapters\Service
     /** inline {@inheritdoc} */
     protected function modifyResponse(array $response = array())
     {
-        if (empty($response['html']))
-        {
+        $extension = strtolower(pathinfo(parse_url($response['url'],PHP_URL_PATH),PATHINFO_EXTENSION));
+        if (empty($response['html']) && in_array($extension, array('jpg', 'jpeg', 'png', 'gif'))) {
             $html  = '<a href="' . $response['url'] . '" target="_blank">';
             $html .= '<img class="instagram-oembed" src="' . $response['url'] . '" width="' . $response['width'] . '" height="' . $response['height'] . '" alt="' . htmlspecialchars($response['title'], ENT_QUOTES, 'UTF-8') . '" title="' . htmlspecialchars($response['title'], ENT_QUOTES, 'UTF-8') . '">';
             $html .= '</a>';
