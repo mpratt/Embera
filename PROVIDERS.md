@@ -66,6 +66,7 @@ Sites marked with an `*` allow offline html embedding.
 - * [VideoFork](http://videofork.com)
 - [VideoJug](http://www.videojug.com)
 - * [Vimeo](http://vimeo.com/)
+- * [Vine](http://vine.co/)
 - [WordpressTV](http://wordpress.tv)
 - [yfrog.com](http://yfrog.com)
 - * [Youtube](http://www.youtube.com/)

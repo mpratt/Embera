@@ -124,6 +124,7 @@ class Providers
         'twitter.yfrog.com' => '\Embera\Providers\YFrog',
         'youtube.com' => '\Embera\Providers\Youtube',
         'youtu.be' => '\Embera\Providers\Youtube',
+        'vine.co' => '\Embera\Providers\Vine',
     );
 
     /**
