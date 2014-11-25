@@ -54,7 +54,7 @@ class DailyMotion extends \Embera\Adapters\Service
             'provider_name' => 'Dailymotion',
             'provider_url' => 'http://www.dailymotion.com',
             'title' => (!empty($videoTitle) ? str_replace(array('-', '_'), ' ', $videoTitle) : 'Unknown Title'),
-            'html' => '<iframe src="http://www.dailymotion.com/embed/video/' . $videoId . '" width="{width}" height="{height}" frameborder="0"></iframe>'
+            'html' => '<iframe src="http://www.dailymotion.com/embed/video/' . $videoId . '" width="{width}" height="{height}" frameborder="0" allowfullscreen></iframe>'
         );
     }
 }
