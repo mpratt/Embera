@@ -122,6 +122,7 @@ class Providers
         'yfrog.com' => '\Embera\Providers\YFrog',
         'yfrog.us' => '\Embera\Providers\YFrog',
         'twitter.yfrog.com' => '\Embera\Providers\YFrog',
+        'm.youtube.com' => '\Embera\Providers\Youtube',
         'youtube.com' => '\Embera\Providers\Youtube',
         'youtu.be' => '\Embera\Providers\Youtube',
         'vine.co' => '\Embera\Providers\Vine',
