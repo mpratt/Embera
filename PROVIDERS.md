@@ -38,6 +38,7 @@ Sites marked with an `*` allow offline html embedding.
 - * [IFixIT](http://ifixit.com)
 - * [IFTTT](http://ifttt.com)
 - [Instagram](http://instagram.com)
+- * [Issuu](https://issuu.com) (Offline response available only when the url has the `e` parameter)
 - * [Kickstarter](http://www.kickstarter.com)
 - [Meetup](http://meetup.com)
 - [MixCloud](http://mixcloud.com)
