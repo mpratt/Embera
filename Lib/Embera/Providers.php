@@ -94,6 +94,7 @@ class Providers
         'official.fm' => '\Embera\Providers\OfficialFM',
         '*.polldaddy.com' => '\Embera\Providers\PollDaddy',
         'polleverywhere.com' => '\Embera\Providers\PollEveryWhere',
+        'portfolium.com' => '\Embera\Providers\Portfolium',
         'rapidengage.com' => '\Embera\Providers\Rapidengage',
         'rdio.com' => '\Embera\Providers\Rdio',
         'rd.io' => '\Embera\Providers\Rdio',
