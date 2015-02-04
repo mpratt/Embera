@@ -22,7 +22,10 @@ class TestServiceDailyMotion extends TestProviders
             'http://www.dailymotion.com/video/xzx4m4_balotelli-au-prochain-cri-raciste-je-quitte-le-terrain_sport?from=rss',
             'http://www.dailymotion.com/video/xzse1m_casanova-tout-reste-possible-pour-l-om_sport/stuff/here/',
             'http://www.dailymotion.com/embed/video/xzv0cd/',
-            'http://dai.ly/xzse1m'
+            'http://dai.ly/xzse1m',
+            'http://games.dailymotion.com/video/xq3p3u',
+            'http://games.dailymotion.com/video/x2gfjhs',
+            'http://games.dailymotion.com/live/x15gjhi',
         ),
         'invalid' => array(
             'http://www.dailymotion.com',
@@ -41,6 +44,7 @@ class TestServiceDailyMotion extends TestProviders
             'http://www.dailymotion.com/video/xzse1m_casanova-tout-reste-possible-pour-l-om_sport/stuff/here/' => 'http://www.dailymotion.com/video/xzse1m_casanova-tout-reste-possible-pour-l-om_sport',
             'http://dai.ly/xzv0cd/' => 'http://www.dailymotion.com/video/xzv0cd',
             'http://dai.ly/xzv0cd' => 'http://www.dailymotion.com/video/xzv0cd',
+            'http://games.dailymotion.com/live/xq3p3u' => 'http://www.dailymotion.com/video/xq3p3u',
         ),
         'fake' => array(
             'type' => 'video',

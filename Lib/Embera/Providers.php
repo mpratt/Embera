@@ -52,7 +52,7 @@ class Providers
         'crowdranking.com' => '\Embera\Providers\CrowdRanking',
         'c9ng.com' => '\Embera\Providers\CrowdRanking',
         'dailymile.com' => '\Embera\Providers\DailyMile',
-        'dailymotion.com' => '\Embera\Providers\DailyMotion',
+        '*.dailymotion.com' => '\Embera\Providers\DailyMotion',
         'dai.ly' => '\Embera\Providers\DailyMotion',
         '*.deviantart.com' => '\Embera\Providers\Deviantart',
         'fav.me' => '\Embera\Providers\Deviantart',

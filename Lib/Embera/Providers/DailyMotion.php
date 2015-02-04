@@ -35,7 +35,7 @@ class DailyMotion extends \Embera\Adapters\Service
     /** inline {@inheritdoc} */
     protected function normalizeUrl()
     {
-        if (preg_match('~dailymotion\.com/(?:embed/)?video/([^/]+)/?~i', $this->url, $matches)) {
+        if (preg_match('~dailymotion\.com/(?:embed/)?(?:video|live)/([^/]+)/?~i', $this->url, $matches)) {
             $this->url = new \Embera\Url('http://www.dailymotion.com/video/' . $matches['1']);
         } else if (preg_match('~dai\.ly/([^/]+)/?~i', $this->url, $matches)) {
             $this->url = new \Embera\Url('http://www.dailymotion.com/video/' . $matches['1']);
