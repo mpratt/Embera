@@ -81,6 +81,7 @@ class Providers
         'hulu.com' => '\Embera\Providers\Hulu',
         'ifixit.com' => '\Embera\Providers\IFixIt',
         'ifttt.com' => '\Embera\Providers\IFTTT',
+        'infogr.am' => '\Embera\Providers\Infogram',
         'instagram.com' => '\Embera\Providers\Instagram',
         'instagr.am' => '\Embera\Providers\Instagram',
         'issuu.com' => '\Embera\Providers\Issuu',

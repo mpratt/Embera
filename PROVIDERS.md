@@ -37,6 +37,7 @@ Sites marked with an `*` allow offline html embedding.
 - [Hulu](http://www.hulu.com)
 - * [IFixIT](http://ifixit.com)
 - * [IFTTT](http://ifttt.com)
+- [Infogram](https://infogr.am)
 - [Instagram](http://instagram.com)
 - * [Issuu](https://issuu.com) (Offline response available only when the url has the `e` parameter)
 - * [Kickstarter](http://www.kickstarter.com)
