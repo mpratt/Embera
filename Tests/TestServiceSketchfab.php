@@ -24,6 +24,11 @@ class TestServiceSketchfab extends TestProviders
             'https://sketchfab.com/models/9afc7ce5f32b43a692e8861d6692ec2c',
             'https://sketchfab.com/models/30abb37327074983b43e9e6687126486',
             'https://sketchfab.com/models/e1cbf443e14c494883ac4bfe0321b4a9',
+            'https://sketchfab.com/d3mobile-m_world_league/folders/fbebdc3958ac4acb9734d72fd80ad393',
+            'https://sketchfab.com/freedee/folders/aa34319b1809428d9f8a85249f2d4412',
+            'https://sketchfab.com/incenptive/folders/511829a4256a4e0b87e2396ccc0188d9',
+            'https://sketchfab.com/barker_js/folders/c07b36bc1e764c9b8b347d34d54f57a3',
+            'https://sketchfab.com/makerpoint/folders/bb15a149166e49cdbae2647a6575ec20',
         ),
         'invalid' => array(
             'https://sketchfab.com/browse/',

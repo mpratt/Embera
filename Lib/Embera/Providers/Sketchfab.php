@@ -25,7 +25,11 @@ class Sketchfab extends \Embera\Adapters\Service
     protected function validateUrl()
     {
         $this->url->stripLastSlash();
-        return (preg_match('~sketchfab\.com/models/(?:[^/]+)$~i', $this->url));
+
+        return (
+            preg_match('~sketchfab\.com/models/(?:[^/]+)$~i', $this->url) ||
+            preg_match('~sketchfab\.com/(?:[^/]+)/folders/(?:[^/]+)$~i', $this->url)
+        );
     }
 
     /** inline {@inheritdoc} */
@@ -55,13 +59,17 @@ class Sketchfab extends \Embera\Adapters\Service
     /** inline {@inheritdoc} */
     public function fakeResponse()
     {
-        $url = str_replace('/show/', '/embed/', $this->url);
+        if (preg_match('~sketchfab\.com/(?:[^/]+)/folders/([^/]+)$~i', $this->url, $m)) {
+            $url = 'https://sketchfab.com/playlists/embed?folder=' . $m['1'];
+        } else {
+            $url = str_replace('/show/', '/embed/', $this->url) . '/embed';
+        }
 
         return array(
             'type' => 'rich',
             'provider_name' => 'Sketchfab',
             'provider_url' => 'http://sketchfab.com',
-            'html' => '<iframe width="{width}" height="{height}" src="' . $url . '/embed" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" onmousewheel=""></iframe>'
+            'html' => '<iframe width="{width}" height="{height}" src="' . $url . '" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" onmousewheel=""></iframe>'
         );
     }
 }
