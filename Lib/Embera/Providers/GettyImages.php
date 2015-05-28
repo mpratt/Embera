@@ -24,7 +24,7 @@ namespace Embera\Providers;
 class GettyImages extends \Embera\Adapters\Service
 {
     /** inline {@inheritdoc} */
-    protected $apiUrl = 'http://embed.gettyimages.com/oembed';
+    protected $apiUrl = 'http://embed.gettyimages.com/oembed?caller=embera';
 
     /** inline {@inheritdoc} */
     protected function validateUrl()
