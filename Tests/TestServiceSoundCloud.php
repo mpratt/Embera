@@ -34,7 +34,6 @@ class TestServiceSoundCloud extends TestProviders
             'https://soundcloud.com/explore',
             'https://soundcloud.com/groups',
             'https://soundcloud.com',
-            '',
         ),
     );
 
