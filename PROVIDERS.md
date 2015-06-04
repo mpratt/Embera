@@ -64,6 +64,7 @@ Sites marked with an `*` allow offline html embedding.
 - [SpeakerDeck](https://speackerdeck.com)
 - * [Spotify](http://spotify.com)
 - * [Ted](http://ted.com)
+- [TheySaidSo](https://theysaidso.com)
 - [Twitter](https://twitter.com)
 - [Ustream](http://ustream.tv)
 - * [Viddler](http://www.viddler.com)

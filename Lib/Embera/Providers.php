@@ -115,6 +115,7 @@ class Providers
         '*.spotify.com' => '\Embera\Providers\Spotify',
         'spoti.fi' => '\Embera\Providers\Spotify',
         'ted.com' => '\Embera\Providers\Ted',
+        'theysaidso.com' => '\Embera\Providers\TheySaidSo',
         'twitter.com' => '\Embera\Providers\Twitter',
         'ustream.tv' => '\Embera\Providers\Ustream',
         'ustream.com' => '\Embera\Providers\Ustream',
