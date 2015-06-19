@@ -86,6 +86,7 @@ class Providers
         'instagr.am' => '\Embera\Providers\Instagram',
         'issuu.com' => '\Embera\Providers\Issuu',
         'kickstarter.com' => '\Embera\Providers\Kickstarter',
+        'learningapps.org' => '\Embera\Providers\LearningApps',
         'meetup.com' => '\Embera\Providers\Meetup',
         'meetu.ps' => '\Embera\Providers\Meetup',
         'mixcloud.com' => '\Embera\Providers\MixCloud',
