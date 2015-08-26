@@ -107,6 +107,7 @@ class Providers
         'videos.sapo.pt' => '\Embera\Providers\Sapo',
         'screenr.com' => '\Embera\Providers\Screenr',
         'scribd.com' => '\Embera\Providers\Scribd',
+        'shortnote.jp' => '\Embera\Providers\ShortNote',
         '*.shoudio.com' => '\Embera\Providers\Shoudio',
         '*.shoud.io' => '\Embera\Providers\Shoudio',
         'sketchfab.com' => '\Embera\Providers\Sketchfab',
