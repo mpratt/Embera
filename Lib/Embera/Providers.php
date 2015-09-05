@@ -102,6 +102,7 @@ class Providers
         'rd.io' => '\Embera\Providers\Rdio',
         'releasewire.com' => '\Embera\Providers\ReleaseWire',
         'rwire.com' => '\Embera\Providers\ReleaseWire',
+        'reverbnation.com' => '\Embera\Providers\Reverbnation',
         'revision3.com' => '\Embera\Providers\Revision3',
         'roomshare.jp' => '\Embera\Providers\Roomshare',
         'videos.sapo.pt' => '\Embera\Providers\Sapo',

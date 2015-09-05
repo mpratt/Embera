@@ -53,6 +53,7 @@ Sites marked with an `*` allow offline html embedding.
 - [Rapidengage](https://rapidengage.com/)
 - [Rdio](http://rdio.com)
 - [Release Wire](http://releasewire.com)
+- [Reverbnation](https://www.reverbnation.com)
 - [Revision3](http://revision3.com)
 - [Roomshare](http://roomshare.jp)
 - * [Sapo Videos](http://videos.sapo.pt)
