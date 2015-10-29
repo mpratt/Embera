@@ -10,7 +10,7 @@
 namespace Embera\Providers;
 
 /**
- * The Vimeo.com Provider
+ * The Rutube.ru Provider
  */
 class Rutube extends \Embera\Adapters\Service
 {

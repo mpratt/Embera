@@ -10,7 +10,7 @@
 namespace Embera\Providers;
 
 /**
- * The Vimeo.com Provider
+ * The Yandex.ru Provider
  */
 class Yandex extends \Embera\Adapters\Service
 {
