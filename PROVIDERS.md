@@ -25,6 +25,7 @@ Sites marked with an `*` allow offline html embedding.
 - * [Dipity](http://dipity.com)
 - * [Dotsub](http://dotsub.com)
 - [Edocr](http://edocr.com)
+- [EgliseInfo](http://egliseinfo.catholique.fr)
 - [Flickr](http://flickr.com)
 - * [Funny Or Die](http://www.funnyordie.com)
 - [Geograph Channel Islands](http://channel-islands.geographs.org)

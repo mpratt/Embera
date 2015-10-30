@@ -60,6 +60,7 @@ class Providers
         'dipity.com' => '\Embera\Providers\Dipity',
         'dotsub.com' => '\Embera\Providers\DotSub',
         'edocr.com' => '\Embera\Providers\Edocr',
+        'egliseinfo.catholique.fr' => '\Embera\Providers\EgliseInfo',
         'flickr.com' => '\Embera\Providers\Flickr',
         'flic.kr' => '\Embera\Providers\Flickr',
         'funnyordie.com' => '\Embera\Providers\FunnyOrDie',
