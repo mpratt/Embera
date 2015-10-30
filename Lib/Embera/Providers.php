@@ -112,7 +112,7 @@ class Providers
         '*.shoudio.com' => '\Embera\Providers\Shoudio',
         '*.shoud.io' => '\Embera\Providers\Shoudio',
         'sketchfab.com' => '\Embera\Providers\Sketchfab',
-        'slideshare.net' => '\Embera\Providers\SlideShare',
+        '*.slideshare.net' => '\Embera\Providers\SlideShare',
         '*.soundcloud.com' => '\Embera\Providers\SoundCloud',
         'speakerdeck.com' => '\Embera\Providers\Speakerdeck',
         '*.spotify.com' => '\Embera\Providers\Spotify',

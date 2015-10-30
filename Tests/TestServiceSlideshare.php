@@ -19,7 +19,7 @@ class TestServiceSlideShare extends TestProviders
             'http://www.slideshare.net/shvmdhwn/personal-branding-do-it-yourself',
             'http://slideshare.net/robinhbchan/project-bbx',
             'http://www.slideshare.net/CNTMAN216/5linxbusinessopppresentation/',
-            'http://www.slideshare.net/appsfire/app-score-report-july-2012',
+            'http://es.slideshare.net/appsfire/app-score-report-july-2012',
             'http://www.slideshare.net/RobertGonzalez11/intelligent-onlinemarketingformedical/',
             'http://www.slideshare.net/andreasklinger/startup-metrics-a-love-story',
             'http://www.slideshare.net/FiratDemirel/hyperloop-alpha-elon-musk',
