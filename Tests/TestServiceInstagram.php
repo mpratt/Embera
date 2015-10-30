@@ -17,7 +17,7 @@ class TestServiceInstagram extends TestProviders
     protected $urls = array(
         'valid' => array(
             'http://instagram.com/p/TCg0AoLjoH/#',
-            'http://instagram.com/p/Q8fPYGLjtB',
+            'https://instagram.com/p/Q8fPYGLjtB',
             'http://instagram.com/p/Rqlny2Ljk7/',
             'http://instagr.am/p/TCg0AoLjoH/#',
             'http://instagr.am/p/V8UMy0LjpX',

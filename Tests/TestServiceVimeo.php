@@ -19,7 +19,7 @@ class TestServiceVimeo extends TestProviders
             'http://vimeo.com/channels/staffpicks/66252440',
             'http://vimeo.com/channels/staffpicks/65535198/',
             'http://vimeo.com/groups/shortfilms/videos/66185763',
-            'http://vimeo.com/groups/shortfilms/videos/63313811/',
+            'https://vimeo.com/groups/shortfilms/videos/63313811/',
             'http://vimeo.com/47360546',
             'http://vimeo.com/39892335/',
             'https://player.vimeo.com/video/65297606',
