@@ -25,7 +25,7 @@ class Instagram extends \Embera\Adapters\Service
     protected function validateUrl()
     {
         $this->url->stripQueryString();
-        return (preg_match('~/p/([\w\d]+)/?$~i', $this->url));
+        return (preg_match('~/p/([A-Za-z0-9-_]+)/?$~i', $this->url));
     }
 
     /** inline {@inheritdoc} */
