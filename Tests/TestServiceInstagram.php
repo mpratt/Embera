@@ -21,6 +21,8 @@ class TestServiceInstagram extends TestProviders
             'http://instagram.com/p/Rqlny2Ljk7/',
             'http://instagr.am/p/TCg0AoLjoH/#',
             'http://instagr.am/p/V8UMy0LjpX',
+            'https://instagram.com/p/sdS_ptrDnD/',
+            'https://instagram.com/p/5jY1-grDiq/',
         ),
         'invalid' => array(
             'http://instagram.com/stuff/Rqlny2Ljk7/',
