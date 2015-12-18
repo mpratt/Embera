@@ -33,10 +33,10 @@ class Embera
     protected $errors = array();
 
     /** @var string The pattern used to extract urls from a text */
-    protected $urlRegex = '~\bhttps?://[^\s()<>]+(?:\([\w\d]+\)|([^[:punct:]\s]|/))~i';
+    protected $urlRegex = '~\bhttps?:\/\/[^\s()<>]+(?:\([\w\d]+\)|([^[:punct:]\s]?|\/))~i';
 
     /** @var string The pattern used to extract urls from a text when the embed:// prefix option is enabled */
-    protected $urlEmbedRegex = '~\bembed://[^\s()<>]+(?:\([\w\d]+\)|([^[:punct:]\s]|/))~i';
+    protected $urlEmbedRegex = '~\bembed:\/\/[^\s()<>]+(?:\([\w\d]+\)|([^[:punct:]\s]?|\/))~i';
 
     /**
      * Constructs the object and also instantiates the \Embera\Oembed Object
@@ -107,6 +107,16 @@ class Embera
                     $table[$url] = $service['html'];
                 }
             }
+
+            uksort($table, function ($a, $b) {
+                if (strlen($a) == strlen($b)) {
+                    return 0;
+                } elseif (strlen($a) > strlen($b)) {
+                    return -1;
+                }
+
+                return 1;
+            });
 
             return str_replace(array_keys($table), array_values($table), $body);
         }
