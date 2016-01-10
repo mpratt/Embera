@@ -108,7 +108,7 @@ class Embera
                 }
             }
 
-            return str_replace(array_keys($table), array_values($table), $body);
+            return strtr($body, $table);
         }
 
         return $body;
