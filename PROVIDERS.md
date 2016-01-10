@@ -48,6 +48,7 @@ Sites marked with an `*` allow offline html embedding.
 - [MobyPicture](http://mobypicture.com)
 - * [NFB](http://www.nfb.ca)
 - * [OfficialFM](http://official.fm)
+- * [Oumy](https://www.oumy.com)
 - * [PollDaddy](http://polldaddy.com)
 - [PollEveryWhere](http://www.polleverywhere.com)
 - [Porfolium](https://portfolium.com)
