@@ -50,6 +50,7 @@ Sites marked with an `*` allow offline html embedding.
 - [MixCloud](http://mixcloud.com)
 - [MobyPicture](http://mobypicture.com)
 - * [NFB](http://www.nfb.ca)
+- * [OfficeMix](http://mix.office.com)
 - * [OfficialFM](http://official.fm)
 - * [Oumy](https://www.oumy.com)
 - [Pastery](https://www.pastery.net)

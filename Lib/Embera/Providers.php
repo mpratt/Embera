@@ -97,6 +97,7 @@ class Providers
         'mobypicture.com' => '\Embera\Providers\MobyPicture',
         'moby.to' => '\Embera\Providers\MobyPicture',
         'nfb.ca' => '\Embera\Providers\NFB',
+        'mix.office.com' => '\Embera\Providers\Officemix',
         'official.fm' => '\Embera\Providers\OfficialFM',
         'oumy.com' => '\Embera\Providers\Oumy',
         'pastery.net' => '\Embera\Providers\Pastery',
