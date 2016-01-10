@@ -18,7 +18,7 @@ namespace Embera;
 class Embera
 {
     /** @var int Class constant with the current Version of this library */
-    const VERSION = '1.8.12';
+    const VERSION = '1.8.13';
 
     /** @var object Instance of \Embera\Oembed */
     protected $oembed;
