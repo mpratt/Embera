@@ -98,6 +98,7 @@ class Providers
         'nfb.ca' => '\Embera\Providers\NFB',
         'official.fm' => '\Embera\Providers\OfficialFM',
         'oumy.com' => '\Embera\Providers\Oumy',
+        'pastery.net' => '\Embera\Providers\Pastery',
         '*.polldaddy.com' => '\Embera\Providers\PollDaddy',
         'polleverywhere.com' => '\Embera\Providers\PollEveryWhere',
         'portfolium.com' => '\Embera\Providers\Portfolium',
