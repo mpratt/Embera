@@ -75,6 +75,7 @@ Sites marked with an `*` allow offline html embedding.
 - [TheySaidSo](https://theysaidso.com)
 - [Twitter](https://twitter.com)
 - [Ustream](http://ustream.tv)
+- * [Verse](http://verse.media)
 - * [Viddler](http://www.viddler.com)
 - * [VideoFork](http://videofork.com)
 - [VideoJug](http://www.videojug.com)

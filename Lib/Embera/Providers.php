@@ -127,6 +127,7 @@ class Providers
         'twitter.com' => '\Embera\Providers\Twitter',
         'ustream.tv' => '\Embera\Providers\Ustream',
         'ustream.com' => '\Embera\Providers\Ustream',
+        'verse.media' => '\Embera\Providers\Verse',
         'viddler.com' => '\Embera\Providers\Viddler',
         'videofork.com' => '\Embera\Providers\VideoFork',
         'videojug.com' => '\Embera\Providers\VideoJug',
