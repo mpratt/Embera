@@ -115,6 +115,7 @@ class Providers
         'shortnote.jp' => '\Embera\Providers\ShortNote',
         '*.shoudio.com' => '\Embera\Providers\Shoudio',
         '*.shoud.io' => '\Embera\Providers\Shoudio',
+        '*.silk.co' => '\Embera\Providers\Silk',
         'sketchfab.com' => '\Embera\Providers\Sketchfab',
         '*.slideshare.net' => '\Embera\Providers\SlideShare',
         '*.soundcloud.com' => '\Embera\Providers\SoundCloud',
