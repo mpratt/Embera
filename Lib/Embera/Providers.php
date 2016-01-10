@@ -46,6 +46,7 @@ class Providers
         'public.chartblocks.com' => '\Embera\Providers\Chartblocks',
         'chirb.it' => '\Embera\Providers\Chirbit',
         'clyp.it' => '\Embera\Providers\Clyp',
+        'codepoints.net' => '\Embera\Providers\Codepoints',
         'circuitlab.com' => '\Embera\Providers\CircuitLab',
         'collegehumor.com' => '\Embera\Providers\CollegeHumor',
         'coub.com' => '\Embera\Providers\Coub',

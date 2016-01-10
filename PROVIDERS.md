@@ -15,6 +15,7 @@ Sites marked with an `*` allow offline html embedding.
 - * [ChartBlocks](http://chartblocks.com)
 - * [Chirbit](http://chirb.it)
 - [Clyp](http://clyp.it)
+- * [Codepoints](https://codepoints.net)
 - * [CircuitLab](https://www.circuitlab.com)
 - * [CollegeHumor](http://www.collegehumor.com)
 - * [Coub](http://coub.com)
