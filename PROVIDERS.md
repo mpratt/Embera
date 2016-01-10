@@ -34,6 +34,7 @@ Sites marked with an `*` allow offline html embedding.
 - [Geograph DE](http://geo-en.hlipp.de)
 - [Geograph UK](http://geograph.org.uk)
 - [GettyImages](http://www.gettyimages.com)
+- * [Gfycat](http://gfycat.com)
 - * [Github Gist](https://gist.github.com)
 - [Gmep](http://gmep.org)
 - [HuffDuffer](http://huffduffer.com)

@@ -78,6 +78,7 @@ class Providers
         'channel-islands.geographs.org.je' => '\Embera\Providers\GeographCI',
         'gettyimages.com' => '\Embera\Providers\GettyImages',
         'gty.im' => '\Embera\Providers\GettyImages',
+        'gfycat.com' => '\Embera\Providers\Gfycat',
         'gist.github.com' => '\Embera\Providers\GithubGist',
         'gmep.org' => '\Embera\Providers\Gmep',
         'huffduffer.com' => '\Embera\Providers\Huffduffer',
