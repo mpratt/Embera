@@ -119,6 +119,7 @@ class Providers
         'shortnote.jp' => '\Embera\Providers\ShortNote',
         '*.shoudio.com' => '\Embera\Providers\Shoudio',
         '*.shoud.io' => '\Embera\Providers\Shoudio',
+        'showtheway.io' => '\Embera\Providers\Showtheway',
         '*.silk.co' => '\Embera\Providers\Silk',
         'sketchfab.com' => '\Embera\Providers\Sketchfab',
         '*.slideshare.net' => '\Embera\Providers\SlideShare',

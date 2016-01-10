@@ -69,6 +69,7 @@ Sites marked with an `*` allow offline html embedding.
 - * [ShortNote](https://www.shortnote.jp)
 - * [Rutube](https://rutube.ru)
 - [Shoudio](http://shoudio.com)
+- [ShowTheWay](http://showtheway.io)
 - * [Silk](https://silk.co)
 - * [Sketchfab](http://sketchfab.com)
 - [SlideShare](http://www.slideshare.net)
