@@ -63,6 +63,7 @@ class Providers
         'dotsub.com' => '\Embera\Providers\DotSub',
         'edocr.com' => '\Embera\Providers\Edocr',
         'egliseinfo.catholique.fr' => '\Embera\Providers\EgliseInfo',
+        'facebook.com' => '\Embera\Providers\Facebook',
         'flickr.com' => '\Embera\Providers\Flickr',
         'flic.kr' => '\Embera\Providers\Flickr',
         'funnyordie.com' => '\Embera\Providers\FunnyOrDie',
