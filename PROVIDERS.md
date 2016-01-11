@@ -28,7 +28,7 @@ Sites marked with an `*` allow offline html embedding.
 - * [Dotsub](http://dotsub.com)
 - [Edocr](http://edocr.com)
 - [EgliseInfo](http://egliseinfo.catholique.fr)
-- [Facebook](https://facebook.com)
+- [Facebook](https://facebook.com) (Public Posts)
 - [Flickr](http://flickr.com)
 - * [Funny Or Die](http://www.funnyordie.com)
 - [Geograph Channel Islands](http://channel-islands.geographs.org)
