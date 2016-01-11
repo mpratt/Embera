@@ -30,6 +30,7 @@ Embera supports **60+** sites. Sites marked with an `*` allow offline html embed
 - [Hulu](http://www.hulu.com)
 - * [Kickstarter](http://www.kickstarter.com)
 - [Deviantart](http://deviantart.com)
+- [Facebook](https://facebook.com)
 - * [Scribd](http://www.scribd.com)
 
 **And many many more!** for the full list checkout the [PROVIDERS.md](https://github.com/mpratt/Embera/blob/master/PROVIDERS.md) file.
