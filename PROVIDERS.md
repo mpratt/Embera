@@ -78,6 +78,7 @@ Sites marked with an `*` allow offline html embedding.
 - [SoundCloud](http://soundcloud.com)
 - [SpeakerDeck](https://speackerdeck.com)
 - * [Spotify](http://spotify.com)
+- * [Sway](https://sway.com)
 - * [Ted](http://ted.com)
 - [TheySaidSo](https://theysaidso.com)
 - [Twitter](https://twitter.com)
