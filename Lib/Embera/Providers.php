@@ -166,7 +166,6 @@ class Providers
             'fake' => array()
         ), $config);
 
-        $this->extractCustomParams($this->config['custom_params']);
         $this->oembed = $oembed;
     }
 
@@ -179,23 +178,21 @@ class Providers
     protected function findServices(array $urls = array())
     {
         $return = array();
-        if (!empty($urls)) {
+        $this->extractCustomParams($this->config['custom_params']);
+        foreach (array_unique($urls) as $u) {
 
-            foreach (array_unique($urls) as $u) {
+            try {
+                $host = $this->getHost($u);
+                if (isset($this->services[$host])) {
+                    $provider = new \ReflectionClass($this->services[$host]);
+                    $return[$u] = $provider->newInstance($u, $this->config, $this->oembed);
 
-                try {
-                    $host = $this->getHost($u);
-                    if (isset($this->services[$host])) {
-                        $provider = new \ReflectionClass($this->services[$host]);
-                        $return[$u] = $provider->newInstance($u, $this->config, $this->oembed);
-
-                        if (isset($this->customParams[$host])) {
-                            $return[$u]->appendParams($this->customParams[$host]);
-                        }
+                    if (isset($this->customParams[$host])) {
+                        $return[$u]->appendParams($this->customParams[$host]);
                     }
-                } catch (\Exception $e) {
-                    //echo $e->getMessage() . PHP_EOL;
                 }
+            } catch (\Exception $e) {
+                //echo $e->getMessage() . PHP_EOL;
             }
         }
 
@@ -260,7 +257,7 @@ class Providers
     {
         foreach ($params as $name => $values) {
             foreach ($this->services as $host => $service) {
-                if (preg_match('~' . $name . '~i', $service)) {
+                if (preg_match('~' . preg_quote($name, '~') . '~i', $service)) {
                     $this->customParams[$host] = (array) $values;
                 }
             }

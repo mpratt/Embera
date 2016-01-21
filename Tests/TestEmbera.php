@@ -131,7 +131,8 @@ class TestEmbera extends PHPUnit_Framework_TestCase
         $config = array(
             'custom_params' => array(
                 'Youtube' => array('custom' => 'none'),
-                'vimeO' => array('apikey' => '8987928734234')
+                'vimeO' => array('apikey' => '8987928734234'),
+                'CustomService' => array('align' => 'left')
             )
         );
 
@@ -142,6 +143,7 @@ class TestEmbera extends PHPUnit_Framework_TestCase
         $method->setAccessible(true);
 
         $providers = $method->invoke($embera, array(
+            'http://customservice.com/12345',
             'http://stuff.com/unknown',
             'http://youtu.be/fSUK4WgQ3vk',
             'http://www.youtube.com/watch?v=MpVHQnIvTXo',
