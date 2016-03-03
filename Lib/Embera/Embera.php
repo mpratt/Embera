@@ -18,7 +18,7 @@ namespace Embera;
 class Embera
 {
     /** @var int Class constant with the current Version of this library */
-    const VERSION = '1.8.15';
+    const VERSION = '1.9.0';
 
     /** @var object Instance of \Embera\Oembed */
     protected $oembed;
@@ -109,6 +109,7 @@ class Embera
                 }
             }
 
+            // Determine wether the body looks like HTML or just plain text.
             if (strpos($body, '>') !== false) {
                 $processor = new \Embera\HtmlProcessor($this->config['ignore_tags'], $table);
                 return $processor->process($body);
