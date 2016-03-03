@@ -70,6 +70,7 @@ class Embera
             'custom_params' => array(),
             'http' => array(),
             'fake' => array(),
+            'ignore_tags' => array('pre', 'code', 'a', 'img'),
         ), $config);
 
 
@@ -106,6 +107,11 @@ class Embera
                 if (!empty($service['html'])) {
                     $table[$url] = $service['html'];
                 }
+            }
+
+            if (strpos($body, '>') !== false) {
+                $processor = new \Embera\HtmlProcessor($this->config['ignore_tags'], $table);
+                return $processor->process($body);
             }
 
             return strtr($body, $table);
