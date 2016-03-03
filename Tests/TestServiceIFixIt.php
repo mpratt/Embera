@@ -31,7 +31,7 @@ class TestServiceIFixIt extends TestProviders
         ),
         'fake' => array(
             'type' => 'rich',
-            'html' => '<script'
+            'html' => '<iframe'
         )
     );
 

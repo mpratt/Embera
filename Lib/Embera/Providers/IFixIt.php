@@ -36,7 +36,7 @@ class IFixIt extends \Embera\Adapters\Service
             'type' => 'rich',
             'provider_name' => 'iFixit',
             'provider_url' => 'http://www.ifixit.com',
-            'html' => '<script type="text/javascript" src="http://d1luk0418egahw.cloudfront.net/static/embed/ifixit-embed.3.js?id=' . $matches['1'] . '"></script>',
+            'html' => '<iframe src="https://www.ifixit.com/Guide/Embed/'.$matches[1].'" width="1000" height="730" allowfullscreen frameborder="0"></iframe>\n',
         );
     }
 }
