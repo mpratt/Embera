@@ -224,6 +224,21 @@ There are 3 methods for error checking `bool hasErrors()`, `array getErrors()` a
     print_r($embera->getErrors());
 ```
 
+### Ignoring HTML tags when AutoEmbedding
+By default, Embera doesnt autoEmbed content/urls that are inside `<pre>`, `<a>`, `<code>` and `<img>` tags.
+However if you wanted to ignore other tags, you can specify other tags. Use the `ìgnore_tags` configuration option
+
+```php
+    $config = array(
+        'ignore_tags' => array('a', 'img', 'strong')
+    );
+
+    $embera = new \Embera\Embera();
+    echo $embera->autoEmbed($text);
+```
+
+For reference, you might want to take a look at mthe `HtmlProcessor` class which is in charge of ignoring those tags.
+
 ### Output Formatting
 Using the `\Embera\Formatter` object and the decorator pattern you are able to create templates with placeholders and
 Embera will fill them with the relevant information from the oembed response.
