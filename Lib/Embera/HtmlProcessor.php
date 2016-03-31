@@ -118,7 +118,8 @@ class HtmlProcessor
              * is just going to run once and repeat the cycle only if there are signs that another placeholder is in
              * the content.
              */
-            for ($i=0; $i < count($this->tags); $i++) {
+            $count = count($this->tags) + 1;
+            for ($i=0; $i < $count; $i++) {
                 $content = str_replace(array_keys($this->holder), array_values($this->holder), $content);
                 if (strpos($content, '%{{') === false) {
                     break;
