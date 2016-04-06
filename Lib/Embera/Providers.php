@@ -60,6 +60,7 @@ class Providers
         '*.deviantart.com' => '\Embera\Providers\Deviantart',
         'fav.me' => '\Embera\Providers\Deviantart',
         'sta.sh' => '\Embera\Providers\Deviantart',
+        '*.didacte.com' => '\Embera\Providers\Didacte',
         'dipity.com' => '\Embera\Providers\Dipity',
         'dotsub.com' => '\Embera\Providers\DotSub',
         'edocr.com' => '\Embera\Providers\Edocr',

@@ -25,6 +25,7 @@ Sites marked with an `*` allow offline html embedding.
 - [Daily Mile](http://dailymile.com)
 - * [DailyMotion](http://www.dailymotion.com/)
 - [Deviantart](http://deviantart.com)
+- [Didacte](https://didacte.com)
 - * [Dipity](http://dipity.com)
 - * [Dotsub](http://dotsub.com)
 - [Edocr](http://edocr.com)
