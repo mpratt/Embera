@@ -129,6 +129,7 @@ class Providers
         'speakerdeck.com' => '\Embera\Providers\Speakerdeck',
         '*.spotify.com' => '\Embera\Providers\Spotify',
         'spoti.fi' => '\Embera\Providers\Spotify',
+        'content.streamonecloud.net' => '\Embera\Providers\StreamOneCloud',
         'sway.com' => '\Embera\Providers\Sway',
         'ted.com' => '\Embera\Providers\Ted',
         'theysaidso.com' => '\Embera\Providers\TheySaidSo',
