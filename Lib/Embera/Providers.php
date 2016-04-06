@@ -46,6 +46,7 @@ class Providers
         'cacoo.com' => '\Embera\Providers\Cacoo',
         'public.chartblocks.com' => '\Embera\Providers\Chartblocks',
         'chirb.it' => '\Embera\Providers\Chirbit',
+        'clipland.com' => '\Embera\Providers\Clipland',
         'clyp.it' => '\Embera\Providers\Clyp',
         'codepoints.net' => '\Embera\Providers\Codepoints',
         'circuitlab.com' => '\Embera\Providers\CircuitLab',

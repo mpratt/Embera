@@ -15,6 +15,7 @@ Sites marked with an `*` allow offline html embedding.
 - * [Cacoo](http://cacoo.com)
 - * [ChartBlocks](http://chartblocks.com)
 - * [Chirbit](http://chirb.it)
+- [Clipland](https://clipland.com)
 - [Clyp](http://clyp.it)
 - * [Codepoints](https://codepoints.net)
 - * [CircuitLab](https://www.circuitlab.com)
