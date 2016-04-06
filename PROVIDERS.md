@@ -80,6 +80,7 @@ Sites marked with an `*` allow offline html embedding.
 - [SoundCloud](http://soundcloud.com)
 - [SpeakerDeck](https://speackerdeck.com)
 - * [Spotify](http://spotify.com)
+- [Streamable](https://streamable.com)
 - [StreamOneCloud](https://streamone.nl)
 - * [Sway](https://sway.com)
 - * [Ted](http://ted.com)
