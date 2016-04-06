@@ -18,7 +18,7 @@ namespace Embera\Providers;
 class Vimeo extends \Embera\Adapters\Service
 {
     /** inline {@inheritdoc} */
-    protected $apiUrl = 'http://vimeo.com/api/oembed.json';
+    protected $apiUrl = 'https://vimeo.com/api/oembed.json';
 
     /** inline {@inheritdoc} */
     protected function validateUrl()
