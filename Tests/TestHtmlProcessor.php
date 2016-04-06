@@ -62,6 +62,37 @@ class TestHtmlProcessor extends PHPUnit_Framework_TestCase
         $this->assertEquals($result, implode(', ', $expected));
     }
 
+    public function testDontReplaceNestedContentAdvanced()
+    {
+        $html = '<code>
+                <a href="http://myurl.com" title="">http://myurl.com <img src="http://myurl.com" title=""/></a>
+                <pre class="hey">http://myurl.com</pre> http://myurl.com
+            </code>
+            <code>
+                <pre>
+                    <a href="http://myurl.com" title="">
+                        <img src="http://myurl.com" title="" /> Check Out My Url
+                        <a class="hey" href="http://myurl.com">myurl.com</a>
+                        <a href="http://myurl.com" title="">http://myurl.com <img src="http://myurl.com" title=""/></a>
+                    </a>
+                </pre>
+            </code>
+            <img src="http://myurl.com" title="" />
+            <img src="http://myurl.com" title="">';
+
+        $testData = array(
+            'replaced' => 'http://myurl.com',
+            $html => $html,
+        );
+
+        foreach ($testData as $expected => $data) {
+            $p = new \Embera\HtmlProcessor(array('a', 'pre', 'img', 'code'), array('http://myurl.com' => 'replaced'));
+            $result = $p->process($data);
+
+            $this->assertEquals($result, $expected);
+        }
+    }
+
     public function testFuckedUpHtmlContent()
     {
         $testData = array(
