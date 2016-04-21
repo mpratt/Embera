@@ -24,14 +24,20 @@ class Didacte extends \Embera\Adapters\Service
     /** inline {@inheritdoc} */
     protected function validateUrl()
     {
+        return preg_match('~didacte\.com/a/course/(:?[^ ]+)$~i', $this->url);
+    }
 
-        if (preg_match('~didacte\.com/a/course/(:?[^ ]+)$~i', $this->url) && preg_match('~([^ ]+)\.didacte\.com/a/course/~i', $this->url, $m)) {
-            // We need the subdomain for the oembed endpoint
-            $this->apiUrl = str_replace('{m}', $m['1'], $this->apiUrl);
-            return true;
-        }
-
-        return false;
+    /**
+     * inline {@inheritdoc}
+     *
+     * Im overriding this method because the oembed endpoint
+     * depends on the subdomain of the oembed response.
+     */
+    public function getInfo()
+    {
+        preg_match('~//([^ ]+)\.didacte\.com/a/course/~i', $this->url, $m);
+        $this->apiUrl = str_replace('{m}', $m['1'], $this->apiUrl);
+        return parent::getInfo();
     }
 }
 
