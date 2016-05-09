@@ -74,15 +74,14 @@ class Formatter
     {
         $providers = array();
         if ($urls = $this->embera->getUrlInfo($body)) {
+
             foreach ($urls as $url => $data) {
                 if (!$this->allowOffline && (int) $data['embera_using_fake'] === 1) {
                     $this->errors[] = 'Using fake oembed response on ' . $url;
                     continue;
                 }
 
-                $providers[$url] = str_replace(array_map(function ($name) {
-                    return '{' . $name . '}';
-                }, array_keys($data)), array_values($data), $this->template);
+                $providers[$url] = $this->replace($data, $this->template);
             }
         }
 
@@ -94,6 +93,27 @@ class Formatter
 
         // Remove unchanged placeholders
         return preg_replace('~{([\w\d\-_]+)}~i', '', $return);
+    }
+
+    /**
+     * Replaces the given $data inside the $template
+     *
+     * @param array $data
+     * @param string $template
+     * @param string $prefix
+     * @return string
+     */
+    protected function replace(array $data, $template, $prefix = null)
+    {
+        foreach ($data as $k => $d) {
+            if (is_array($d)) {
+                return $this->replace($d, $template, $k . '.');
+            } else {
+                $template = str_replace('{' . (!empty($prefix) ? $prefix . $k : $k) . '}', $d, $template);
+            }
+        }
+
+        return $template;
     }
 
     /**

@@ -37,6 +37,16 @@ class TestFormatter extends PHPUnit_Framework_TestCase
         $this->assertContains('<div class="hey"><iframe', $result);
     }
 
+    public function testTemplateRecursionKeys()
+    {
+        $embera = new \Embera\Embera();
+        $embera = new \Embera\Formatter($embera);
+        $embera->setTemplate('{raw.html}');
+        $result = $embera->transform('https://www.facebook.com/adam.j.mccann/posts/10156943904420037?pnref=story');
+
+        $this->assertContains('fb-root', $result);
+    }
+
     public function testOfflineSupport()
     {
         $urls = array(
