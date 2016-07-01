@@ -48,16 +48,6 @@ class Youtube extends \Embera\Adapters\Service
             'html' => '<iframe width="{width}" height="{height}" src="//www.youtube.com/embed/' . $matches['1'] . '" frameborder="0" allowfullscreen></iframe>',
         );
     }
-
-    public function modifyResponse($response){
-      if( $this->parameters ){
-        preg_match('~(src="[^\"]+)(")~', $response['html'], $m);
-        if( strpos($m[1], '?')===false )
-          $this->parameters = '?'.substr($this->parameters, 1);
-        $response['html'] = preg_replace('~(src="[^\"]+)(")~', '$1'.$this->parameters.'$2', $response['html']);
-      }
-      return $response;
-    }
 }
 
 ?>

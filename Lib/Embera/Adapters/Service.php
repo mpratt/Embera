@@ -91,7 +91,8 @@ abstract class Service
         try {
 
             if ($res = $this->oembed->getResourceInfo($this->config['oembed'], $this->apiUrl, (string) $this->url, $this->config['params'])) {
-                return $this->modifyResponse($res);
+                $res = $this->modifyResponse($res);
+                return $this->appendParametersToResponse($res);
             }
 
         } catch (\Exception $e) {
@@ -104,7 +105,8 @@ abstract class Service
          */
         if (!$this->config['oembed'] && $response = $this->fakeResponse()) {
             $fakeResponse = new \Embera\FakeResponse($this->config, $response);
-            return $this->modifyResponse($fakeResponse->buildResponse());
+            $res = $this->modifyResponse($fakeResponse->buildResponse());
+            return $this->appendParametersToResponse($res);
         }
 
         return array();
@@ -188,6 +190,26 @@ abstract class Service
      */
     protected function modifyResponse(array $response = array())
     {
+        return $response;
+    }
+
+    /**
+     * Gives the ability to modify the response/fake-response array
+     * from an oembed provider.
+     *
+     * It should be overwritten by the service when needed
+     *
+     * @param array $response
+     * @return array
+     */
+    protected function appendParametersToResponse(array $response = array())
+    {
+        if( $this->parameters ){
+            preg_match('~(src="[^\"]+)(")~', $response['html'], $m);
+            if( strpos($m[1], '?')===false )
+                $this->parameters = '?'.substr($this->parameters, 1);
+            $response['html'] = preg_replace('~(<iframe[^>]+src="[^\"]+)(")~', '$1'.$this->parameters.'$2', $response['html']);
+        }
         return $response;
     }
 }
