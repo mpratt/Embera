@@ -108,7 +108,7 @@ class Embera
             $table = array();
             foreach ($data as $url => $service) {
                 if (!empty($service['html'])) {
-                    $table[$url] = sprintf( $outputWrapper , strtolower( $service['provider_name'] ) , $service['type'] , $service['html'] );
+                    $table[$url] = sprintf( $this->outputWrapper , strtolower( $service['provider_name'] ) , $service['type'] , $service['html'] );
                 }
             }
 
