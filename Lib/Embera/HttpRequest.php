@@ -84,6 +84,7 @@ class HttpRequest
         $options[CURLOPT_URL] = $url;
         $options[CURLOPT_HEADER] = true;
         $options[CURLOPT_RETURNTRANSFER] = 1;
+        $options[CURLOPT_SSL_VERIFYPEER] = false;
 
          // CURLOPT_FOLLOWLOCATION doesnt play well with open_basedir/safe_mode
         if (ini_get('safe_mode') || ini_get('open_basedir')) {
