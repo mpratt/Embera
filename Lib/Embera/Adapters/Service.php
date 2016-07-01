@@ -23,6 +23,9 @@ abstract class Service
      */
     protected $url;
 
+    /** @var mixes Additional Parameters from the Original URL to be appended to the iframe src **/
+    protected $parameters;
+
     /** @var object Instance of \Embera\Oembed */
     protected $oembed = null;
 

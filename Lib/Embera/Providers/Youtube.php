@@ -29,8 +29,9 @@ class Youtube extends \Embera\Adapters\Service
     /** inline {@inheritdoc} */
     protected function normalizeUrl()
     {
-        if (preg_match('~(?:v=|youtu\.be/|youtube\.com/embed/)([a-z0-9_-]+)~i', $this->url, $matches)) {
+        if (preg_match('~(?:v=|youtu\.be/|youtube\.com/embed/)([a-z0-9_-]+)([?&].+)?~i', $this->url, $matches)) {
             $this->url = new \Embera\Url('http://www.youtube.com/watch?v=' . $matches[1]);
+            $this->parameters = ( $matches[2] ? str_replace( '?' , '&' , $matches[2] ) : '' );
         }
     }
 
@@ -46,6 +47,16 @@ class Youtube extends \Embera\Adapters\Service
             'title' => 'Unknown title',
             'html' => '<iframe width="{width}" height="{height}" src="//www.youtube.com/embed/' . $matches['1'] . '" frameborder="0" allowfullscreen></iframe>',
         );
+    }
+
+    public function modifyResponse($response){
+      if( $this->parameters ){
+        preg_match('~(src="[^\"]+)(")~', $response['html'], $m);
+        if( strpos($m[1], '?')===false )
+          $this->parameters = '?'.substr($this->parameters, 1);
+        $response['html'] = preg_replace('~(src="[^\"]+)(")~', '$1'.$this->parameters.'$2', $response['html']);
+      }
+      return $response;
     }
 }
 
