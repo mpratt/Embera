@@ -22,6 +22,7 @@ class TestServiceScribd extends TestProviders
             'http://scribd.com/doc/119667881/Lessons-in-Lingerie/',
             'http://www.scribd.com/doc/115726071/10-Practical-Tools-for-a-Resilient-Local-Economy',
             'http://www.scribd.com/doc/14850258/Research-Motives-of-Vinyl-Use-Author-Robert-Arndt',
+            'https://ru.scribd.com/document/14850258/Research-Motives-of-Vinyl-Use-Author-Robert-Arndt',
         ),
         'invalid' => array(
             'http://www.scribd.com/explore',
@@ -38,4 +39,3 @@ class TestServiceScribd extends TestProviders
 
     public function testProvider() { $this->validateProvider('Scribd'); }
 }
-?>

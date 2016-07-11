@@ -26,7 +26,7 @@ class Scribd extends \Embera\Adapters\Service
     {
         $this->url->stripQueryString();
 
-        return (preg_match('~scribd\.com/doc/(?:[0-9]+)/(?:[^/]+)/?$~i', $this->url));
+        return (preg_match('~scribd\.com/(doc|document)/(?:[0-9]+)/(?:[^/]+)/?$~i', $this->url));
     }
 
     /** inline {@inheritdoc} */
@@ -34,7 +34,7 @@ class Scribd extends \Embera\Adapters\Service
     {
         if (!empty($response['html']))
         {
-            $response['html'] = str_replace('#{root_url}', 'http://www.scribd.com/', $response['html']);
+            $response['html'] = str_replace('#{root_url}', 'https://www.scribd.com/', $response['html']);
             $response['html'] = preg_replace('~\s+~i', ' ', $response['html']); // Remove double spaces
         }
 
@@ -49,10 +49,8 @@ class Scribd extends \Embera\Adapters\Service
         return array(
             'type' => 'rich',
             'provider_name' => 'Scribd',
-            'provider_url' => 'http://www.scribd.com',
-            'html' => '<iframe class="scribd_iframe_embed" data-aspect-ratio="" frameborder="0" height="{height}" id="' . $matches['1'] . '" scrolling="no" src="http://www.scribd.com/embeds/' . $matches['1'] . '/content" width="100%"></iframe><script type="text/javascript">(function() { var scribd = document.createElement("script"); scribd.type = "text/javascript"; scribd.async = true; scribd.src = "http://www.scribd.com/javascripts/embed_code/inject.js"; var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(scribd, s); })();</script>',
+            'provider_url' => 'https://www.scribd.com',
+            'html' => '<iframe class="scribd_iframe_embed" data-aspect-ratio="" frameborder="0" height="{height}" id="' . $matches['1'] . '" scrolling="no" src="https://www.scribd.com/embeds/' . $matches['1'] . '/content" width="100%"></iframe><script type="text/javascript">(function() { var scribd = document.createElement("script"); scribd.type = "text/javascript"; scribd.async = true; scribd.src = "http://www.scribd.com/javascripts/embed_code/inject.js"; var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(scribd, s); })();</script>',
         );
     }
 }
-
-?>
