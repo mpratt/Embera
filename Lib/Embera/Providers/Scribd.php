@@ -44,7 +44,7 @@ class Scribd extends \Embera\Adapters\Service
     /** inline {@inheritdoc} */
     public function fakeResponse()
     {
-        preg_match('~/doc/([\d]+)/~i', $this->url, $matches);
+        preg_match('~/(doc|document)/([\d]+)/~i', $this->url, $matches);
 
         return array(
             'type' => 'rich',
