@@ -32,10 +32,7 @@ class Verse extends \Embera\Adapters\Service
     /** inline {@inheritdoc} */
     public function fakeResponse()
     {
-        $html  = '<div class="verse-player-embed">';
-        $html .= '<style>.verse-player-embed {position: relative; padding-bottom: calc(56.25% + 55px); height: 0; overflow: hidden; max-width: 100%; } .verse-player-embed iframe, .verse-player-embed object, .verse-player-embed embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style>';
-        $html .= '<iframe src="' . $this->url . '" frameborder="0" allowfullscreen ></iframe>';
-        $html .= '</div>';
+        $html = "<iframe src='" . $this->url . "' width='{width}' height='{height}' frameborder='0' webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>";
 
         return array(
             'type' => 'video',
