@@ -27,13 +27,13 @@ class GithubGist extends \Embera\Adapters\Service
         $this->url->stripQueryString();
         $this->url->stripLastSlash();
 
-        return (preg_match('~/(?:[\d]+)$~i', $this->url));
+        return (preg_match('~/(?:[a-z0-9]+)$~i', $this->url));
     }
 
     /** inline {@inheritdoc} */
     protected function normalizeUrl()
     {
-        if (preg_match('~github\.com/(?:[^/]+)/([\d]+)/?~i', $this->url, $matches))
+        if (preg_match('~github\.com/(?:[^/]+)/([a-z0-9]+)/?~i', $this->url, $matches))
             $this->url->overwrite('https://gist.github.com/' . $matches['1']);
     }
 
@@ -41,7 +41,7 @@ class GithubGist extends \Embera\Adapters\Service
     protected function modifyResponse(array $response = array())
     {
         $this->url->discardChanges();
-        if (preg_match('~github\.com/([^/]+)/([\d]+)~i', $this->url, $matches))
+        if (preg_match('~github\.com/([^/]+)/([a-z0-9]+)~i', $this->url, $matches))
             $response['html'] = '<script type="text/javascript" src="https://gist.github.com/' . $matches['1'] . '/' . $matches['2'] . '.js"></script>';
 
         return $response;
@@ -51,7 +51,7 @@ class GithubGist extends \Embera\Adapters\Service
     public function fakeResponse()
     {
         $this->url->discardChanges();
-        if (preg_match('~github\.com/([^/]+)/([\d]+)~i', $this->url, $matches))
+        if (preg_match('~github\.com/([^/]+)/([a-z0-9]+)~i', $this->url, $matches))
         {
             return array(
                 'type' => 'rich',

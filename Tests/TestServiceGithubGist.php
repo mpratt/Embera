@@ -23,7 +23,8 @@ class TestServiceGithubGist extends TestProviders
             'https://gist.github.com/callaght/6547921#file-issueviewcontroller-m',
             'https://gist.github.com/callaght/6547921#file-logonviewcontroller-h',
             'https://gist.github.com/ashaw/6308796',
-            'https://gist.github.com/mpratt/3177700#file-database-txt'
+            'https://gist.github.com/mpratt/3177700#file-database-txt',
+            'https://gist.github.com/deenison/1924c23f27fe27fe7da68375d71c5ae8'
         ),
         'invalid' => array(
             'https://gist.github.com/mpratt',
