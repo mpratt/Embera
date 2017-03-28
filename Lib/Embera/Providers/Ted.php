@@ -24,7 +24,7 @@ class Ted extends \Embera\Adapters\Service
     /** inline {@inheritdoc} */
     protected function validateUrl()
     {
-        return (preg_match('~ted\.com/talks/(?:.*)\.html$~i', $this->url));
+        return (preg_match('~ted\.com/talks/(?:\S*)$~i', $this->url));
     }
 
     /** inline {@inheritdoc} */
@@ -39,5 +39,3 @@ class Ted extends \Embera\Adapters\Service
         );
     }
 }
-
-?>
