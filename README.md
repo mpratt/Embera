@@ -9,7 +9,7 @@ If you are like me, in most cases all you want is to convert a simple Url to a v
 some providers allow you to skip the part about making the request to a Oembed Provider and still get a valid html embed code! Read the `Offline Support`
 section for more information.
 
-On the other hand, there are some oembed providers that dont return html embedable code - Embera detects this and most of the time, it tries to generate
+On the other hand, there are some oembed providers that dont return html embeddable code - Embera detects this and most of the time, it tries to generate
 a valid html code for you to use.
 
 Check out the `Basic Usage` instructions for more information.
@@ -72,7 +72,7 @@ Or if you already have PSR-0 complaint autoloader, you just need to register Emb
 Basic Usage
 ===========
 
-For autoconverting urls into html embedable code, use the `autoEmbed()` method:
+For autoconverting urls into html embeddable code, use the `autoEmbed()` method:
 ```php
     $text = 'Hi, I just saw this video http://www.dailymotion.com/video/xxwxe1_harlem-shake-de-los-simpsons_fun';
     $embera = new \Embera\Embera();
@@ -180,7 +180,7 @@ Take a look at the [PROVIDERS.md](https://github.com/mpratt/Embera/blob/master/P
 
 There is a configuration setting called `oembed` that should be used in order to change the way the library communicates with the oembed endpoint.
 By default the value equals null, which means that Embera will first try to get the data from the oembed endpoint and if that fails it tries to return a
-fake response. This behaviour is useful when there are problems connecting with the oembed provider! This means that you get at least an html embedable code.
+fake response. This behaviour is useful when there are problems connecting with the oembed provider! This means that you get at least an html embeddable code.
 
 When the `oembed` setting equals `true` the library gets the data directly from the oembed provider. If something goes wrong with the request, Embera skips
 the usage of fake responses.
