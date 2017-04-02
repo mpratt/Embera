@@ -67,6 +67,7 @@ Sites marked with an `*` allow offline html embedding.
 - [Reverbnation](https://www.reverbnation.com)
 - [Revision3](http://revision3.com)
 - [Roomshare](http://roomshare.jp)
+- [Rumble](https://rumble.com)
 - * [Sapo Videos](http://videos.sapo.pt)
 - * [Screenr](http://www.screenr.com)
 - * [Scribd](http://www.scribd.com)

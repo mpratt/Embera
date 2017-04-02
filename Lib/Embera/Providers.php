@@ -116,6 +116,7 @@ class Providers
         'reverbnation.com' => '\Embera\Providers\Reverbnation',
         'revision3.com' => '\Embera\Providers\Revision3',
         'roomshare.jp' => '\Embera\Providers\Roomshare',
+        'rumble.com' => '\Embera\Providers\Rumble',
         'rutube.ru' => '\Embera\Providers\Rutube',
         'videos.sapo.pt' => '\Embera\Providers\Sapo',
         'screenr.com' => '\Embera\Providers\Screenr',
