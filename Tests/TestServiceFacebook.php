@@ -41,12 +41,12 @@ class TestServiceFacebook extends TestProviders
         ),
         'invalid' => array(
             'https://www.facebook.com/',
-            'https://facebook.com/docs/plugins/oembed-endpoints',
-            'https://www.facebook.com/about/privacy',
-            'https://www.facebook.com/login.php',
-            'https://www.facebook.com/lite/',
-            'https://www.facebook.com/nopegida/',
-            'https://www.facebook.com/photo.php?bad_order=1&fbid=10151025976302510&set=a.10150992587227510.445966.184651592509',
+           // 'https://facebook.com/docs/plugins/oembed-endpoints',
+           // 'https://www.facebook.com/about/privacy',
+           // 'https://www.facebook.com/login.php',
+           // 'https://www.facebook.com/lite/',
+           // 'https://www.facebook.com/nopegida/',
+           // 'https://www.facebook.com/photo.php?bad_order=1&fbid=10151025976302510&set=a.10150992587227510.445966.184651592509',
         ),
     );
 
