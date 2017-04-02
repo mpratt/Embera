@@ -146,6 +146,7 @@ class Providers
         'videofork.com' => '\Embera\Providers\VideoFork',
         'videojug.com' => '\Embera\Providers\VideoJug',
         'vevo.com' => '\Embera\Providers\Vevo',
+        'vidl.it' => '\Embera\Providers\Vidlit',
         'vimeo.com' => '\Embera\Providers\Vimeo',
         'wordpress.tv' => '\Embera\Providers\WordpressTV',
         'blog.wordpress.tv' => '\Embera\Providers\WordpressTV',
