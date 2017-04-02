@@ -94,6 +94,7 @@ class Providers
         'issuu.com' => '\Embera\Providers\Issuu',
         'kickstarter.com' => '\Embera\Providers\Kickstarter',
         'learningapps.org' => '\Embera\Providers\LearningApps',
+        'mathembed.com' => '\Embera\Providers\Mathembed',
         'meetup.com' => '\Embera\Providers\Meetup',
         'meetu.ps' => '\Embera\Providers\Meetup',
         'mixcloud.com' => '\Embera\Providers\MixCloud',

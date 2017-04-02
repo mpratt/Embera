@@ -49,6 +49,7 @@ Sites marked with an `*` allow offline html embedding.
 - * [Issuu](https://issuu.com) (Offline response available only when the url has the `e` parameter)
 - * [Kickstarter](http://www.kickstarter.com)
 - [LearningApps](http://learningapps.org)
+- [Mathembed](https://mathembed.com)
 - [Meetup](http://meetup.com)
 - [MixCloud](http://mixcloud.com)
 - [MobyPicture](http://mobypicture.com)
