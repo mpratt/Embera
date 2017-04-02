@@ -35,7 +35,7 @@ class Verse extends \Embera\Adapters\Service
         $html = "<iframe src='" . $this->url . "' width='{width}' height='{height}' frameborder='0' webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>";
 
         return array(
-            'type' => 'video',
+            'type' => 'rich',
             'provider_name' => 'Verse',
             'provider_url' => 'http://verse.media',
             'html' => $html,

@@ -26,7 +26,7 @@ class TestServiceVerse extends TestProviders
             'http://verse.media/not/stories/112-connected-to-the-top/reaching-for-the-top/interview-with-sam-elias',
         ),
         'fake' => array(
-            'type' => 'video',
+            'type' => 'rich',
             'html' => '<iframe'
         )
     );
