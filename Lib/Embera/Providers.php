@@ -120,6 +120,7 @@ class Providers
         'rumble.com' => '\Embera\Providers\Rumble',
         'rutube.ru' => '\Embera\Providers\Rutube',
         'videos.sapo.pt' => '\Embera\Providers\Sapo',
+        'screencast.com' => '\Embera\Providers\Screencast',
         'screenr.com' => '\Embera\Providers\Screenr',
         '*.scribd.com' => '\Embera\Providers\Scribd',
         'shortnote.jp' => '\Embera\Providers\ShortNote',

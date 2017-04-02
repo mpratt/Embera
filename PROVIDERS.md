@@ -70,6 +70,7 @@ Sites marked with an `*` allow offline html embedding.
 - [Roomshare](http://roomshare.jp)
 - [Rumble](https://rumble.com)
 - * [Sapo Videos](http://videos.sapo.pt)
+- [Screencast](https://screencast.com)
 - * [Screenr](http://www.screenr.com)
 - * [Scribd](http://www.scribd.com)
 - * [ShortNote](https://www.shortnote.jp)
