@@ -30,6 +30,7 @@ Sites marked with an `*` allow offline html embedding.
 - * [Dipity](http://dipity.com)
 - * [Dotsub](http://dotsub.com)
 - [Edocr](http://edocr.com)
+- [EduMedia](http://edumedia-sciences.com)
 - [EgliseInfo](http://egliseinfo.catholique.fr)
 - [Facebook](https://facebook.com) (Public Posts)
 - [Flickr](http://flickr.com)
