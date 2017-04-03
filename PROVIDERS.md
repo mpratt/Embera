@@ -40,6 +40,7 @@ Sites marked with an `*` allow offline html embedding.
 - * [Gfycat](http://gfycat.com)
 - * [Github Gist](https://gist.github.com)
 - [Gmep](http://gmep.org)
+- [Gyazo](https://gyazo.com)
 - [HuffDuffer](http://huffduffer.com)
 - [Hulu](http://www.hulu.com)
 - * [IFixIT](http://ifixit.com)

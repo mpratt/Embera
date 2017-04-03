@@ -84,6 +84,7 @@ class Providers
         'gfycat.com' => '\Embera\Providers\Gfycat',
         'gist.github.com' => '\Embera\Providers\GithubGist',
         'gmep.org' => '\Embera\Providers\Gmep',
+        'gyazo.com' => '\Embera\Providers\Gyazo',
         'huffduffer.com' => '\Embera\Providers\Huffduffer',
         'hulu.com' => '\Embera\Providers\Hulu',
         'ifixit.com' => '\Embera\Providers\IFixIt',
