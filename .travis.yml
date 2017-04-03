@@ -7,10 +7,12 @@ php:
   - 5.5
   - 5.6
   - 7.0
+  - 7.1
 
 matrix:
   allow_failures:
     - 7.0
+    - 7.1
 
 script: phpunit --coverage-clover=coverage.clover
 
