@@ -14,6 +14,7 @@ namespace Embera\Providers;
 
 /**
  * The Twitch Provider
+ * @link https://github.com/justintv/Twitch-API/blob/master/embed-video.md
  */
 class Twitch extends \Embera\Adapters\Service
 {
