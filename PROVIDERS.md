@@ -87,6 +87,7 @@ Sites marked with an `*` allow offline html embedding.
 - [Soundsgood](http://soundsgood.co)
 - [SpeakerDeck](https://speackerdeck.com)
 - * [Spotify](http://spotify.com)
+- [Spreaker](https://spreaker.com)
 - [Streamable](https://streamable.com)
 - [StreamOneCloud](https://streamone.nl)
 - * [Sway](https://sway.com)
