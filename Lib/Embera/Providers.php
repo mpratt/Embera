@@ -149,6 +149,7 @@ class Providers
         'vevo.com' => '\Embera\Providers\Vevo',
         'vidl.it' => '\Embera\Providers\Vidlit',
         'vimeo.com' => '\Embera\Providers\Vimeo',
+        'wootled.com' => '\Embera\Providers\Wootled',
         'wordpress.tv' => '\Embera\Providers\WordpressTV',
         'blog.wordpress.tv' => '\Embera\Providers\WordpressTV',
         'yfrog.com' => '\Embera\Providers\YFrog',
