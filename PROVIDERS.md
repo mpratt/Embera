@@ -66,6 +66,7 @@ Sites marked with an `*` allow offline html embedding.
 - * [PollDaddy](http://polldaddy.com)
 - [PollEveryWhere](http://www.polleverywhere.com)
 - [Porfolium](https://portfolium.com)
+- [Punters](https://punters.com.au)
 - [Rapidengage](https://rapidengage.com/)
 - [Rdio](http://rdio.com)
 - [Release Wire](http://releasewire.com)

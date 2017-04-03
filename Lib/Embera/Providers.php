@@ -113,6 +113,7 @@ class Providers
         '*.polldaddy.com' => '\Embera\Providers\PollDaddy',
         'polleverywhere.com' => '\Embera\Providers\PollEveryWhere',
         'portfolium.com' => '\Embera\Providers\Portfolium',
+        'punters.com.au' => '\Embera\Providers\Punters',
         'rapidengage.com' => '\Embera\Providers\Rapidengage',
         'rdio.com' => '\Embera\Providers\Rdio',
         'rd.io' => '\Embera\Providers\Rdio',
