@@ -132,6 +132,7 @@ class Providers
         '*.shoud.io' => '\Embera\Providers\Shoudio',
         'showtheway.io' => '\Embera\Providers\Showtheway',
         '*.silk.co' => '\Embera\Providers\Silk',
+        'onsizzle.com' => '\Embera\Providers\Sizzle',
         'sketchfab.com' => '\Embera\Providers\Sketchfab',
         '*.slideshare.net' => '\Embera\Providers\SlideShare',
         '*.soundcloud.com' => '\Embera\Providers\SoundCloud',

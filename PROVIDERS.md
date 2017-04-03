@@ -82,6 +82,7 @@ Sites marked with an `*` allow offline html embedding.
 - [Shoudio](http://shoudio.com)
 - [ShowTheWay](http://showtheway.io)
 - * [Silk](https://silk.co)
+- [Sizzle](https://onsizzle.com)
 - * [Sketchfab](http://sketchfab.com)
 - [SlideShare](http://www.slideshare.net)
 - [SoundCloud](http://soundcloud.com)
