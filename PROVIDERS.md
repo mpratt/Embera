@@ -98,6 +98,7 @@ Sites marked with an `*` allow offline html embedding.
 - [Vidlit](https://vidl.it/)
 - * [Vimeo](http://vimeo.com/)
 - * [Vine](http://vine.co/)
+- [Wizer](http://wizer.me/)
 - [Wootled](http://wootled.com/)
 - [WordpressTV](http://wordpress.tv)
 - [Yandex.Video](http://video.yandex.ru)
