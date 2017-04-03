@@ -89,6 +89,7 @@ Sites marked with an `*` allow offline html embedding.
 - * [Sway](https://sway.com)
 - * [Ted](http://ted.com)
 - [TheySaidSo](https://theysaidso.com)
+- [Twitch](https://twitch.tv)
 - [Twitter](https://twitter.com)
 - [Ustream](http://ustream.tv)
 - * [Verse](http://verse.media)

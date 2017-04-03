@@ -140,6 +140,7 @@ class Providers
         'sway.com' => '\Embera\Providers\Sway',
         'ted.com' => '\Embera\Providers\Ted',
         'theysaidso.com' => '\Embera\Providers\TheySaidSo',
+        '*.twitch.tv' => '\Embera\Providers\Twitch',
         'twitter.com' => '\Embera\Providers\Twitter',
         'ustream.tv' => '\Embera\Providers\Ustream',
         'ustream.com' => '\Embera\Providers\Ustream',
