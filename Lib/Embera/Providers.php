@@ -97,6 +97,7 @@ class Providers
         'instagr.am' => '\Embera\Providers\Instagram',
         'issuu.com' => '\Embera\Providers\Issuu',
         'kickstarter.com' => '\Embera\Providers\Kickstarter',
+        'kidoju.com' => '\Embera\Providers\Kidoju',
         'learningapps.org' => '\Embera\Providers\LearningApps',
         'mathembed.com' => '\Embera\Providers\Mathembed',
         'meetup.com' => '\Embera\Providers\Meetup',

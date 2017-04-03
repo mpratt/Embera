@@ -52,6 +52,7 @@ Sites marked with an `*` allow offline html embedding.
 - [Instagram](http://instagram.com)
 - * [Issuu](https://issuu.com) (Offline response available only when the url has the `e` parameter)
 - * [Kickstarter](http://www.kickstarter.com)
+- [Kidoju](http://www.kidoju.com)
 - [LearningApps](http://learningapps.org)
 - [Mathembed](https://mathembed.com)
 - [Meetup](http://meetup.com)
