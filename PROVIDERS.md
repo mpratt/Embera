@@ -12,6 +12,7 @@ Sites marked with an `*` allow offline html embedding.
 - * [AudioSnaps](http://audiosnaps.com/)
 - * [Bambuser](http://bambuser.com)
 - [BlipTV](http://blip.tv)
+- [BoxOfficeBuz](http://boxofficebuz.com)
 - * [Cacoo](http://cacoo.com)
 - * [ChartBlocks](http://chartblocks.com)
 - * [Chirbit](http://chirb.it)

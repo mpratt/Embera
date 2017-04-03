@@ -43,6 +43,7 @@ class Providers
         'photos.app.net' => '\Embera\Providers\AppNet',
         'bambuser.com' => '\Embera\Providers\Bambuser',
         '*.blip.tv' => '\Embera\Providers\BlipTV',
+        '*.boxofficebuz.com' => '\Embera\Providers\BoxOfficeBuz',
         'cacoo.com' => '\Embera\Providers\Cacoo',
         'public.chartblocks.com' => '\Embera\Providers\Chartblocks',
         'chirb.it' => '\Embera\Providers\Chirbit',
