@@ -204,18 +204,14 @@ class Providers
         $this->extractCustomParams($this->config['custom_params']);
         foreach (array_unique($urls) as $u) {
 
-            try {
-                $host = $this->getHost($u);
-                if (isset($this->services[$host])) {
-                    $provider = new \ReflectionClass($this->services[$host]);
-                    $return[$u] = $provider->newInstance($u, $this->config, $this->oembed);
+            $host = $this->getHost($u);
+            if (isset($this->services[$host])) {
+                $provider = new \ReflectionClass($this->services[$host]);
+                $return[$u] = $provider->newInstance($u, $this->config, $this->oembed);
 
-                    if (isset($this->customParams[$host])) {
-                        $return[$u]->appendParams($this->customParams[$host]);
-                    }
+                if (isset($this->customParams[$host])) {
+                    $return[$u]->appendParams($this->customParams[$host]);
                 }
-            } catch (\Exception $e) {
-                //echo $e->getMessage() . PHP_EOL;
             }
         }
 
