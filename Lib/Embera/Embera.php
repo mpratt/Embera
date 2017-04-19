@@ -38,6 +38,9 @@ class Embera
     /** @var string The pattern used to extract urls from a text when the embed:// prefix option is enabled */
     protected $urlEmbedRegex = '~\bembed://[^\s()<>]+(?:\([\w\d]+\)|([^[:punct:]\s]|/|_))~i';
 
+    /** @var string The pattern used to extract urls from a text when the embed:// prefix option is enabled */
+    protected $outputWrapper = '<div class="embera provider-%s type-%s">%s</div>';
+
     /**
      * Constructs the object and also instantiates the \Embera\Oembed Object
      * and stores it into the $oembed properoty
@@ -105,7 +108,7 @@ class Embera
             $table = array();
             foreach ($data as $url => $service) {
                 if (!empty($service['html'])) {
-                    $table[$url] = $service['html'];
+                    $table[$url] = sprintf( $this->outputWrapper , strtolower( $service['provider_name'] ) , $service['type'] , $service['html'] );
                 }
             }
 
