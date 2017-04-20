@@ -99,13 +99,15 @@ class Embera
      */
     public function autoEmbed($body = null)
     {
+        $https = isset($_SERVER['HTTPS']) ? true : false;
+        
         if (!is_string($body)) {
             $this->errors[] = 'For auto-embedding purposes, the input must be a string';
         } elseif ($data = $this->getUrlInfo($body)) {
             $table = array();
             foreach ($data as $url => $service) {
                 if (!empty($service['html'])) {
-                    $table[$url] = $service['html'];
+                    $table[$url] = $https ? str_replace( 'http://', 'https://', $service['html'] ) : $service['html'];
                 }
             }
 
