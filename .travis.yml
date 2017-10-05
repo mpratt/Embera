@@ -1,21 +1,34 @@
 language: php
 
 php:
-  - hhvm
-  - 5.3
-  - 5.4
   - 5.5
   - 5.6
   - 7.0
   - 7.1
+  - 7.2
 
 matrix:
+  fast_finish: true
   allow_failures:
-    - 7.0
-    - 7.1
+    - php: 7.0
+    - php: 7.1
+    - php: 7.2
+    - php: hhvm
+  include:
+    - php: 5.3
+      dist: precise
+      sudo: required
+    - php: 5.4
+      dist: precise
+      sudo: required
+    - php: 5.6
+      env: COVERAGE=run
 
-script: phpunit --coverage-clover=coverage.clover
+script:
+  - travis_wait bash composer install -o  --no-interaction --no-progress --prefer-dist
+  - if [[ $COVERAGE = run ]]; then ./vendor/bin/simple-phpunit --coverage-clover=coverage.clover ; fi;
+  - if [[ $COVERAGE = '' ]]; then ./vendor/bin/simple-phpunit ; fi;
 
 after_script:
-  - wget https://scrutinizer-ci.com/ocular.phar
-  - php ocular.phar code-coverage:upload --format=php-clover coverage.clover
+  - if [[ $COVERAGE = run ]]; then wget https://scrutinizer-ci.com/ocular.phar ; fi;
+  - if [[ $COVERAGE = run ]]; then php ocular.phar code-coverage:upload --format=php-clover coverage.clover ; fi;
