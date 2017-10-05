@@ -6,9 +6,19 @@ php:
   - 7.1
   - 7.2
   - 7.3
+  - 7.4
+
+cache:
+  directories:
+    - vendor
+    - $HOME/.composer/cache
 
 matrix:
+  fast_finish: true
   allow_failures:
     - 5.6
+    - 7.4
 
-script: phpunit --coverage-clover=coverage.clover
+before_script: composer install -o --no-interaction --no-progress
+
+script: ./vendor/bin/simple-phpunit
