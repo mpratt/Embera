@@ -93,6 +93,7 @@ class Providers
         'ifttt.com' => '\Embera\Providers\IFTTT',
         '*.indacolive.com' => '\Embera\Providers\Indaco',
         'infogr.am' => '\Embera\Providers\Infogram',
+        'infogram.com' => '\Embera\Providers\Infogram',
         'instagram.com' => '\Embera\Providers\Instagram',
         'instagr.am' => '\Embera\Providers\Instagram',
         'issuu.com' => '\Embera\Providers\Issuu',
