@@ -6,12 +6,16 @@ php:
   - 7.0
   - 7.1
   - 7.2
+  - hhvm
+
+cache:
+  directories:
+    - vendor
+    - $HOME/.composer/cache
 
 matrix:
   fast_finish: true
   allow_failures:
-    - php: 7.0
-    - php: 7.1
     - php: 7.2
     - php: hhvm
   include:
@@ -21,14 +25,11 @@ matrix:
     - php: 5.4
       dist: precise
       sudo: required
-    - php: 5.6
-      env: COVERAGE=run
 
 script:
-  - travis_wait bash composer install -o  --no-interaction --no-progress --prefer-dist
-  - if [[ $COVERAGE = run ]]; then ./vendor/bin/simple-phpunit --coverage-clover=coverage.clover ; fi;
-  - if [[ $COVERAGE = '' ]]; then ./vendor/bin/simple-phpunit ; fi;
+  - composer install -o  --no-interaction --no-progress --prefer-dist
+  - ./vendor/bin/simple-phpunit --coverage-clover=coverage.clover
 
 after_script:
-  - if [[ $COVERAGE = run ]]; then wget https://scrutinizer-ci.com/ocular.phar ; fi;
-  - if [[ $COVERAGE = run ]]; then php ocular.phar code-coverage:upload --format=php-clover coverage.clover ; fi;
+  - wget https://scrutinizer-ci.com/ocular.phar
+  - php ocular.phar code-coverage:upload --format=php-clover coverage.clover
