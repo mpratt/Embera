@@ -26,7 +26,7 @@ namespace Embera\Providers;
 class Clyp extends \Embera\Adapters\Service
 {
     /** inline {@inheritdoc} */
-    protected $apiUrl = 'http://api.clyp.it/oembed';
+    protected $apiUrl = 'https://api.clyp.it/oembed';
 
     /** inline {@inheritdoc} */
     protected function validateUrl()

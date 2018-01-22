@@ -31,10 +31,10 @@ class TestServiceBambuser extends TestProviders
             'http://bambuser.com/',
         ),
         'normalize' => array(
-            'http://www.bambuser.com/v/3847370/' => 'http://bambuser.com/v/3847370',
-            'http://www.bambuser.com/v/3847370' => 'http://bambuser.com/v/3847370',
-            'http://bambuser.com/channel/peterpstuttgart/broadcast/3847370' => 'http://bambuser.com/v/3847370',
-            'http://bambuser.com/channel/peterpstuttgart/broadcast/3847370/other/stuff' => 'http://bambuser.com/v/3847370',
+            'https://www.bambuser.com/v/3847370/' => 'https://bambuser.com/v/3847370',
+            'https://www.bambuser.com/v/3847370' => 'https://bambuser.com/v/3847370',
+            'http://bambuser.com/channel/peterpstuttgart/broadcast/3847370' => 'https://bambuser.com/v/3847370',
+            'http://bambuser.com/channel/peterpstuttgart/broadcast/3847370/other/stuff' => 'https://bambuser.com/v/3847370',
         ),
         'fake' => array(
             'type' => 'video',

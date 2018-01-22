@@ -14,7 +14,7 @@ namespace Embera\Providers;
 
 /**
  * The Clipland Provider
- * @link http://clipland.com
+ * @link https://clipland.com
  */
 class Clipland extends \Embera\Adapters\Service
 {

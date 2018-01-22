@@ -18,7 +18,7 @@ namespace Embera\Providers;
 class Vimeo extends \Embera\Adapters\Service
 {
     /** inline {@inheritdoc} */
-    protected $apiUrl = 'https://vimeo.com/api/oembed.json';
+    protected $apiUrl = 'httpss://vimeo.com/api/oembed.json';
 
     /** inline {@inheritdoc} */
     protected function validateUrl()
@@ -35,7 +35,7 @@ class Vimeo extends \Embera\Adapters\Service
         $this->url->stripQueryString();
 
         if (preg_match('~/([0-9]{5,12})/?$~i', $this->url, $matches))
-            $this->url = new \Embera\Url('http://vimeo.com/' . $matches['1']);
+            $this->url = new \Embera\Url('https://vimeo.com/' . $matches['1']);
     }
 
     /** inline {@inheritdoc} */
@@ -46,9 +46,9 @@ class Vimeo extends \Embera\Adapters\Service
         return array(
             'type' => 'video',
             'provider_name' => 'Vimeo',
-            'provider_url' => 'http://www.vimeo.com',
+            'provider_url' => 'https://www.vimeo.com',
             'title' => 'Unknown title',
-            'html' => '<iframe src="http://player.vimeo.com/' . $matches['1'] . '" width="{width}" height="{height}" frameborder="0" title="" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>',
+            'html' => '<iframe src="https://player.vimeo.com/' . $matches['1'] . '" width="{width}" height="{height}" frameborder="0" title="" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>',
         );
     }
 }

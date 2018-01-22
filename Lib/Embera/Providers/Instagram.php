@@ -19,7 +19,7 @@ namespace Embera\Providers;
 class Instagram extends \Embera\Adapters\Service
 {
     /** inline {@inheritdoc} */
-    protected $apiUrl = 'http://api.instagram.com/oembed?format=json';
+    protected $apiUrl = 'https://api.instagram.com/oembed?format=json';
 
     /** inline {@inheritdoc} */
     protected function validateUrl()

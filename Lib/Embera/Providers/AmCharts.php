@@ -14,12 +14,12 @@ namespace Embera\Providers;
 
 /**
  * The AmCharts Live Charts  Provider
- * @link http://live.amcharts.com
+ * @link https://live.amcharts.com
  */
 class AmCharts extends \Embera\Adapters\Service
 {
     /** inline {@inheritdoc} */
-    protected $apiUrl = 'http://live.amcharts.com/oembed/?format=json';
+    protected $apiUrl = 'https://live.amcharts.com/oembed/?format=json';
 
     /** inline {@inheritdoc} */
     protected function validateUrl()
@@ -35,7 +35,7 @@ class AmCharts extends \Embera\Adapters\Service
         $this->url->convertToHttp();
 
         if (preg_match('~amcharts\.com/([^ /]+)(/edit/?)?~i', $this->url, $matches)) {
-            $this->url = new \Embera\Url('http://live.amcharts.com/' . $matches['1'] . '/');
+            $this->url = new \Embera\Url('https://live.amcharts.com/' . $matches['1'] . '/');
         }
     }
 
@@ -43,13 +43,13 @@ class AmCharts extends \Embera\Adapters\Service
     public function fakeResponse()
     {
         preg_match('~amcharts\.com/([^ /]+)~i', $this->url, $matches);
-        $url = 'http://live.amcharts.com/' . $matches['1'];
+        $url = 'https://live.amcharts.com/' . $matches['1'];
 
         return array(
             'type' => 'rich',
             'provider_name' => 'amCharts',
-            'provider_url' => 'http://www.amcharts.com/',
-            'thumbnail_url' => 'http://generated.amcharts.com/' . substr($matches['1'], 0, 2) . '/' . $matches['1'] . '-full.png',
+            'provider_url' => 'https://www.amcharts.com/',
+            'thumbnail_url' => 'https://generated.amcharts.com/' . substr($matches['1'], 0, 2) . '/' . $matches['1'] . '-full.png',
             'thumbnail_width' => 404,
             'thumbnail_height' => 300,
             'canonical' => $url . '/',

@@ -18,13 +18,13 @@ namespace Embera\Providers;
  * @link https://www.gettyimages.com
  *
  * Supports:
- *  http://gty.im/a0200-000024
- *  http://www.gettyimages.com/detail/photo/dog-in-car-royalty-free-image/a0200-000024
+ *  https://gty.im/a0200-000024
+ *  https://www.gettyimages.com/detail/photo/dog-in-car-royalty-free-image/a0200-000024
  */
 class GettyImages extends \Embera\Adapters\Service
 {
     /** inline {@inheritdoc} */
-    protected $apiUrl = 'http://embed.gettyimages.com/oembed?caller=embera';
+    protected $apiUrl = 'https://embed.gettyimages.com/oembed?caller=embera';
 
     /** inline {@inheritdoc} */
     protected function validateUrl()
@@ -41,7 +41,7 @@ class GettyImages extends \Embera\Adapters\Service
         $this->url->stripLastSlash();
 
         if (preg_match('~gettyimages\.com/detail/photo/(?:[^/]+)/([a-z0-9\-]+)$~i', $this->url, $matches)) {
-            $this->url = new \Embera\Url('http://gty.im/' . $matches['1']);
+            $this->url = new \Embera\Url('https://gty.im/' . $matches['1']);
         }
     }
 }

@@ -20,7 +20,7 @@ namespace Embera\Providers;
 class SlideShare extends \Embera\Adapters\Service
 {
     /** inline {@inheritdoc} */
-    protected $apiUrl = 'http://www.slideshare.net/api/oembed/2?format=json';
+    protected $apiUrl = 'https://www.slideshare.net/api/oembed/2?format=json';
 
     /** inline {@inheritdoc} */
     protected function validateUrl()

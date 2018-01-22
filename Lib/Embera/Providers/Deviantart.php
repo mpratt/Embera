@@ -14,13 +14,13 @@ namespace Embera\Providers;
 
 /**
  * The deviantart.com Provider
- * @link http://deviantart.com
- * @link http://www.deviantart.com/developers/oembed
+ * @link https://deviantart.com
+ * @link https://www.deviantart.com/developers/oembed
  */
 class Deviantart extends \Embera\Adapters\Service
 {
     /** inline {@inheritdoc} */
-    protected $apiUrl = 'http://backend.deviantart.com/oembed?format=json';
+    protected $apiUrl = 'https://backend.deviantart.com/oembed?format=json';
 
     /** inline {@inheritdoc} */
     protected function validateUrl()

@@ -14,12 +14,12 @@ namespace Embera\Providers;
 
 /**
  * The chirb.it Provider
- * @link http://chirb.it
+ * @link https://chirb.it
  */
 class Chirbit extends \Embera\Adapters\Service
 {
     /** inline {@inheritdoc} */
-    protected $apiUrl = 'http://chirb.it/oembed.json';
+    protected $apiUrl = 'https://chirb.it/oembed.json';
 
     /** inline {@inheritdoc} */
     protected function validateUrl()
@@ -31,7 +31,7 @@ class Chirbit extends \Embera\Adapters\Service
     protected function normalizeUrl()
     {
         if (preg_match('~chirb\.it/wp/([\w\d]+)/?~i', $this->url, $matches))
-            $this->url = new \Embera\Url('http://chirb.it/' . $matches['1']);
+            $this->url = new \Embera\Url('https://chirb.it/' . $matches['1']);
     }
 
     /** inline {@inheritdoc} */
@@ -42,9 +42,9 @@ class Chirbit extends \Embera\Adapters\Service
         return array(
             'type' => 'rich',
             'provider_name' => 'chirbit',
-            'provider_url' => 'http://www.chirbit.com/',
+            'provider_url' => 'https://www.chirbit.com/',
             'thumbnail_url' => 'http://chirb.it/chirbit_oembedpic.jpg',
-            'html' => '<iframe height="{height}" frameborder="0" width="{width}" scrolling="NO" src="http://chirb.it/wp/' . $matches['1'] . '">This browser does not show iframe content. Listen to this chirbit here <a href="http://chirb.it/' . $matches['1'] . '">http://chirb.it/' . $matches['1'] . '</a></iframe>',
+            'html' => '<iframe height="{height}" frameborder="0" width="{width}" scrolling="NO" src="https://chirb.it/wp/' . $matches['1'] . '">This browser does not show iframe content. Listen to this chirbit here <a href="http://chirb.it/' . $matches['1'] . '">http://chirb.it/' . $matches['1'] . '</a></iframe>',
         );
     }
 

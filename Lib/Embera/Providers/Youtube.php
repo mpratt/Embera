@@ -18,7 +18,7 @@ namespace Embera\Providers;
 class Youtube extends \Embera\Adapters\Service
 {
     /** inline {@inheritdoc} */
-    protected $apiUrl = 'http://www.youtube.com/oembed?format=json';
+    protected $apiUrl = 'https://www.youtube.com/oembed?format=json';
 
     /** inline {@inheritdoc} */
     protected function validateUrl()
@@ -30,7 +30,7 @@ class Youtube extends \Embera\Adapters\Service
     protected function normalizeUrl()
     {
         if (preg_match('~(?:v=|youtu\.be/|youtube\.com/embed/)([a-z0-9_-]+)~i', $this->url, $matches)) {
-            $this->url = new \Embera\Url('http://www.youtube.com/watch?v=' . $matches[1]);
+            $this->url = new \Embera\Url('https://www.youtube.com/watch?v=' . $matches[1]);
         }
     }
 
@@ -42,7 +42,7 @@ class Youtube extends \Embera\Adapters\Service
         return array(
             'type' => 'video',
             'provider_name' => 'Youtube',
-            'provider_url' => 'http://www.youtube.com',
+            'provider_url' => 'https://www.youtube.com',
             'title' => 'Unknown title',
             'html' => '<iframe width="{width}" height="{height}" src="//www.youtube.com/embed/' . $matches['1'] . '" frameborder="0" allowfullscreen></iframe>',
         );

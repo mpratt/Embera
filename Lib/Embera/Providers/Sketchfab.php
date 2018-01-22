@@ -14,7 +14,7 @@ namespace Embera\Providers;
 
 /**
  * The sketchfab.com Provider
- * @link http://sketchfab.com
+ * @link https://sketchfab.com
  */
 class Sketchfab extends \Embera\Adapters\Service
 {
@@ -68,7 +68,7 @@ class Sketchfab extends \Embera\Adapters\Service
         return array(
             'type' => 'rich',
             'provider_name' => 'Sketchfab',
-            'provider_url' => 'http://sketchfab.com',
+            'provider_url' => 'https://sketchfab.com',
             'html' => '<iframe width="{width}" height="{height}" src="' . $url . '" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" onmousewheel=""></iframe>'
         );
     }

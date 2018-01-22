@@ -19,7 +19,7 @@ namespace Embera\Providers;
 class Kickstarter extends \Embera\Adapters\Service
 {
     /** inline {@inheritdoc} */
-    protected $apiUrl = 'http://www.kickstarter.com/services/oembed';
+    protected $apiUrl = 'https://www.kickstarter.com/services/oembed';
 
     /** inline {@inheritdoc} */
     protected function validateUrl()
@@ -37,7 +37,7 @@ class Kickstarter extends \Embera\Adapters\Service
         return array(
             'type' => 'rich',
             'provider_name' => 'Kickstarter',
-            'provider_url' => 'http://www.kickstarter.com',
+            'provider_url' => 'https://www.kickstarter.com',
             'html' => '<iframe frameborder="0" height="{height}" src="' . $this->url . '/widget/video.html" width="{width}"></iframe>',
         );
     }

@@ -24,7 +24,7 @@ namespace Embera\Providers;
 class PollDaddy extends \Embera\Adapters\Service
 {
     /** inline {@inheritdoc} */
-    protected $apiUrl = 'http://polldaddy.com/oembed/?format=json';
+    protected $apiUrl = 'https://polldaddy.com/oembed/?format=json';
 
     /** inline {@inheritdoc} */
     protected function validateUrl()
