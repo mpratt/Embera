@@ -14,13 +14,13 @@ namespace Embera\Providers;
 
 /**
  * The cacoo.com Provider
- * @link http://cacoo.com
+ * @link https://cacoo.com
  * @link https://cacoo.com/lang/en/api_oembed
  */
 class Cacoo extends \Embera\Adapters\Service
 {
     /** inline {@inheritdoc} */
-    protected $apiUrl = 'http://cacoo.com/oembed.json';
+    protected $apiUrl = 'https://cacoo.com/oembed.json';
 
     /** inline {@inheritdoc} */
     protected function validateUrl()
@@ -38,6 +38,8 @@ class Cacoo extends \Embera\Adapters\Service
         if (preg_match('~/diagrams/([\w\d]+)/~i', $this->url, $matches)) {
             $this->url = new \Embera\Url('https://cacoo.com/diagrams/' . $matches['1']);
         }
+
+        $this->url->convertToHttps();
     }
 
     /** inline {@inheritdoc} */
@@ -48,7 +50,7 @@ class Cacoo extends \Embera\Adapters\Service
         return array(
             'type' => 'rich',
             'provider_name' => 'Cacoo',
-            'provider_url' => 'http://cacoo.com',
+            'provider_url' => 'https://cacoo.com',
             'html' => '<iframe src="https://cacoo.com/diagrams/' . $matches['1'] . '/view?w={width}&h={height}" width="{width}" height="{height}" frameborder="0"></iframe>',
             'thumbnail_url' => 'https://cacoo.com/diagrams/' . $matches['1'] . '-w{width}-h{height}.png'
         );

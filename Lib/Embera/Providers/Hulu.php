@@ -19,7 +19,7 @@ namespace Embera\Providers;
 class Hulu extends \Embera\Adapters\Service
 {
     /** inline {@inheritdoc} */
-    protected $apiUrl = 'http://www.hulu.com/api/oembed.json';
+    protected $apiUrl = 'https://www.hulu.com/api/oembed.json';
 
     /** inline {@inheritdoc} */
     protected function validateUrl()
@@ -34,7 +34,9 @@ class Hulu extends \Embera\Adapters\Service
     protected function normalizeUrl()
     {
         if (preg_match('~/watch/([0-9]{4,10})~i', $this->url, $matches))
-            $this->url = new \Embera\Url('http://www.hulu.com/watch/' . $matches['1']);
+            $this->url = new \Embera\Url('https://www.hulu.com/watch/' . $matches['1']);
+
+        $this->url->convertToHttps();
     }
 }
 

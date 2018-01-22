@@ -15,7 +15,7 @@ namespace Embera\Providers;
 class Yandex extends \Embera\Adapters\Service
 {
     /** inline {@inheritdoc} */
-    protected $apiUrl = 'http://video.yandex.ru/oembed.json';
+    protected $apiUrl = 'https://video.yandex.ru/oembed.json';
 
     /** inline {@inheritdoc} */
     protected function validateUrl()
@@ -31,7 +31,7 @@ class Yandex extends \Embera\Adapters\Service
         $this->url->stripQueryString();
 
         if (preg_match('~\/users\/([a-zA-Z0-9\_\.-]+)\/view\/([0-9]+)~i', $this->url, $matches)) {
-            $this->url = new \Embera\Url('http://video.yandex.ru/users/' . $matches['1'] . '/view/' . $matches['2'] . '/');
+            $this->url = new \Embera\Url('https://video.yandex.ru/users/' . $matches['1'] . '/view/' . $matches['2'] . '/');
         }
     }
 }

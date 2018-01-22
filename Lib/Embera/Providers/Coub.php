@@ -14,12 +14,12 @@ namespace Embera\Providers;
 
 /**
  * The coub.com Provider
- * @link http://coub.com
+ * @link https://coub.com
  */
 class Coub extends \Embera\Adapters\Service
 {
     /** inline {@inheritdoc} */
-    protected $apiUrl = 'http://coub.com/api/oembed.json';
+    protected $apiUrl = 'https://coub.com/api/oembed.json';
 
     /** inline {@inheritdoc} */
     protected function validateUrl()
@@ -39,9 +39,9 @@ class Coub extends \Embera\Adapters\Service
         return array(
             'type' => 'video',
             'provider_name' => 'Coub',
-            'provider_url' => 'http://coub.com',
+            'provider_url' => 'https://coub.com',
             'url' => (string) $this->url,
-            'html' => '<iframe src="http://coub.com/embed/' . $matches['1'] . '" allowfullscreen="true" frameborder="0" width="{width}" height="{height}"></iframe>',
+            'html' => '<iframe src="https://coub.com/embed/' . $matches['1'] . '" allowfullscreen="true" frameborder="0" width="{width}" height="{height}"></iframe>',
         );
     }
 }

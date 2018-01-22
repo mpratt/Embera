@@ -18,7 +18,7 @@ namespace Embera\Providers;
 class WordpressTV extends \Embera\Adapters\Service
 {
     /** inline {@inheritdoc} */
-    protected $apiUrl = 'http://public-api.wordpress.com/oembed/1.0/?format=json&for=wpcom-auto-discovery';
+    protected $apiUrl = 'https://public-api.wordpress.com/oembed/1.0/?format=json&for=wpcom-auto-discovery';
 
     /** inline {@inheritdoc} */
     protected function validateUrl()

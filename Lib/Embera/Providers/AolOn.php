@@ -24,7 +24,7 @@ class AolOn extends \Embera\Adapters\Service
     /** inline {@inheritdoc} */
     protected function validateUrl()
     {
-        $this->url->convertToHttp();
+        $this->url->convertToHttps();
         $this->url->stripQueryString();
         $this->url->stripLastSlash();
 

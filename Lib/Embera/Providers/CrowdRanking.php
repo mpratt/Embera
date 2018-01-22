@@ -19,7 +19,7 @@ namespace Embera\Providers;
 class CrowdRanking extends \Embera\Adapters\Service
 {
     /** inline {@inheritdoc} */
-    protected $apiUrl = 'http://crowdranking.com/api/oembed.json';
+    protected $apiUrl = 'https://crowdranking.com/api/oembed.json';
 
     /** inline {@inheritdoc} */
     protected function validateUrl()
@@ -32,7 +32,9 @@ class CrowdRanking extends \Embera\Adapters\Service
     protected function normalizeUrl()
     {
         if (preg_match('~c9ng\.com/r/([^/]+)/?$~i', $this->url, $matches))
-            $this->url = new \Embera\Url('http://crowdranking.com/r/' . $matches['1']);
+            $this->url = new \Embera\Url('https://crowdranking.com/r/' . $matches['1']);
+
+        $this->url->convertToHttps();
     }
 
     /** inline {@inheritdoc} */
@@ -42,7 +44,7 @@ class CrowdRanking extends \Embera\Adapters\Service
         return array(
             'type' => 'rich',
             'provider_name' => 'crowdranking',
-            'provider_url' => 'http://crowdranking.com',
+            'provider_url' => 'https://crowdranking.com',
             'web_page' => (string) $this->url,
             'html' => '<iframe src="' . $url . '.iframe?from=oembed&amp;frontmedia=true&amp;v=1" width="{width}" height="{height}" frameborder="0" scrolling="no" allowtransparency="true" style="border-style:none;width:{width}px;height:{height}px;background:transparent;overflow:hidden;"></iframe>',
         );

@@ -14,8 +14,8 @@ namespace Embera\Providers;
 
 /**
  * The animoto.com Provider
- * @link http://animoto.com
- * @link http://help.animoto.com/entries/109992-oEmbed-API
+ * @link https://animoto.com
+ * @link https://help.animoto.com/entries/109992-oEmbed-API
  *
  * @todo It could be posible to give offline support for this service
  * but the query string inside the iframe src requires a parameter named 'r'
@@ -24,7 +24,7 @@ namespace Embera\Providers;
 class Animoto extends \Embera\Adapters\Service
 {
     /** inline {@inheritdoc} */
-    protected $apiUrl = 'http://animoto.com/oembeds/create?format=json';
+    protected $apiUrl = 'https://animoto.com/oembeds/create?format=json';
 
     /** inline {@inheritdoc} */
     protected function validateUrl()

@@ -19,7 +19,7 @@ namespace Embera\Providers;
 class BlipTV extends \Embera\Adapters\Service
 {
     /** inline {@inheritdoc} */
-    protected $apiUrl = 'http://blip.tv/oembed/';
+    protected $apiUrl = 'https://blip.tv/oembed/';
 
     /** inline {@inheritdoc} */
     protected function validateUrl()
