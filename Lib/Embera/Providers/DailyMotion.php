@@ -40,6 +40,8 @@ class DailyMotion extends \Embera\Adapters\Service
         } else if (preg_match('~dai\.ly/([^/]+)/?~i', $this->url, $matches)) {
             $this->url = new \Embera\Url('https://www.dailymotion.com/video/' . $matches['1']);
         }
+
+        $this->url->convertToHttps();
     }
 
     /** inline {@inheritdoc} */

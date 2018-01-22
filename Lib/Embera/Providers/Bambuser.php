@@ -39,6 +39,8 @@ class Bambuser extends \Embera\Adapters\Service
         if (preg_match('~bambuser\.com/channel/(?:[^/]+)/broadcast/([0-9]+)~i', $this->url, $matches)) {
             $this->url = new \Embera\Url('https://bambuser.com/v/' . $matches['1']);
         }
+
+        $this->url->convertToHttps();
     }
 
     /** inline {@inheritdoc} */

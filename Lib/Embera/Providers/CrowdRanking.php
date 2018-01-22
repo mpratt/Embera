@@ -33,6 +33,8 @@ class CrowdRanking extends \Embera\Adapters\Service
     {
         if (preg_match('~c9ng\.com/r/([^/]+)/?$~i', $this->url, $matches))
             $this->url = new \Embera\Url('https://crowdranking.com/r/' . $matches['1']);
+
+        $this->url->convertToHttps();
     }
 
     /** inline {@inheritdoc} */

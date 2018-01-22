@@ -32,7 +32,7 @@ class AmCharts extends \Embera\Adapters\Service
     protected function normalizeUrl()
     {
         $this->url->stripQueryString();
-        $this->url->convertToHttp();
+        $this->url->convertToHttps();
 
         if (preg_match('~amcharts\.com/([^ /]+)(/edit/?)?~i', $this->url, $matches)) {
             $this->url = new \Embera\Url('https://live.amcharts.com/' . $matches['1'] . '/');

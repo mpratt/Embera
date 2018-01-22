@@ -33,10 +33,10 @@ class TestServiceFlickr extends TestProviders
         ),
         'normalize' => array(
             'http://www.flickr.com/photos/22134962@N03/8738306577/in/explore-2013-05-14' => 'https://www.flickr.com/photos/22134962@N03/8738306577/',
-            'https://flic.kr/p/9gAMbM' => 'https://flic.kr/p/9gAMbM',
+            'http://flic.kr/p/9gAMbM' => 'https://flic.kr/p/9gAMbM',
             'http://www.flickr.com/photos/reddragonflydmc/5427387397/?noise=noise' => 'https://www.flickr.com/photos/reddragonflydmc/5427387397/',
             'http://www.flickr.com/photos/bees/8597283706/in/photostream' => 'https://www.flickr.com/photos/bees/8597283706/',
-            'https://flic.kr/p/9gAMbM/' => 'https://flic.kr/p/9gAMbM/',
+            'http://flic.kr/p/9gAMbM/' => 'https://flic.kr/p/9gAMbM/',
             'http://www.flickr.com/photos/bees/8429256478' => 'https://www.flickr.com/photos/bees/8429256478/',
             'http://www.flickr.com/photos/bees/8429256478/' => 'https://www.flickr.com/photos/bees/8429256478/',
         )

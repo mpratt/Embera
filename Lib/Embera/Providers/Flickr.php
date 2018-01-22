@@ -32,6 +32,8 @@ class Flickr extends \Embera\Adapters\Service
     {
         if (preg_match('~/photos/([^/"\'<>]+)/([0-9]+)/?~i', $this->url, $matches))
             $this->url = new \Embera\Url('https://www.flickr.com/photos/' . $matches['1'] . '/' . $matches['2'] . '/');
+
+        $this->url->convertToHttps();
     }
 
     /** inline {@inheritdoc} */

@@ -36,7 +36,7 @@ class GettyImages extends \Embera\Adapters\Service
     protected function normalizeUrl()
     {
         $this->url->stripWWW();
-        $this->url->convertToHttp();
+        $this->url->convertToHttps();
         $this->url->stripQueryString();
         $this->url->stripLastSlash();
 

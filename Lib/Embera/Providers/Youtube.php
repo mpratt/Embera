@@ -32,6 +32,8 @@ class Youtube extends \Embera\Adapters\Service
         if (preg_match('~(?:v=|youtu\.be/|youtube\.com/embed/)([a-z0-9_-]+)~i', $this->url, $matches)) {
             $this->url = new \Embera\Url('https://www.youtube.com/watch?v=' . $matches[1]);
         }
+
+        $this->url->convertToHttps();
     }
 
     /** inline {@inheritdoc} */

@@ -38,6 +38,8 @@ class Cacoo extends \Embera\Adapters\Service
         if (preg_match('~/diagrams/([\w\d]+)/~i', $this->url, $matches)) {
             $this->url = new \Embera\Url('https://cacoo.com/diagrams/' . $matches['1']);
         }
+
+        $this->url->convertToHttps();
     }
 
     /** inline {@inheritdoc} */

@@ -35,6 +35,8 @@ class Hulu extends \Embera\Adapters\Service
     {
         if (preg_match('~/watch/([0-9]{4,10})~i', $this->url, $matches))
             $this->url = new \Embera\Url('https://www.hulu.com/watch/' . $matches['1']);
+
+        $this->url->convertToHttps();
     }
 }
 
