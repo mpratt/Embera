@@ -170,6 +170,18 @@ class Facebook extends \Embera\Adapters\Service
         }
         return $response;
     }
+    
+    /** inline {@inheritdoc} */
+        public function fakeResponse()
+    {
+        return array(
+            'type' => 'video',
+            'provider_name' => 'Youtube',
+            'provider_url' => 'http://www.youtube.com',
+            'title' => 'Unknown title',
+            'html' => '<iframe class="embera-facebook-iframe" src="https://www.facebook.com/plugins/post.php?href=' . urlencode($this->url) . '&width={width}"&height={height}&show_text=true&appId" width="{width}" height="{height}"" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>'
+        );
+    }
 }
 
 ?>
