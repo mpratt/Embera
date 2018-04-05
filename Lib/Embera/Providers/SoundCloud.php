@@ -29,6 +29,16 @@ class SoundCloud extends \Embera\Adapters\Service
 
         return (preg_match('~soundcloud\.com/(?:[\w\d\-_]+)~i', $this->url));
     }
+
+    /** inline {@inheritdoc} */
+    protected function modifyResponse(array $response = array())
+    {
+        if (!empty($response['html'])) {
+            $response['html'] = str_replace('src=', 'hide_related=\"true\" src=', $response['html']);
+        }
+
+        return $response;
+    }
 }
 
 ?>
