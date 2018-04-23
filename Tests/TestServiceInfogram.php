@@ -22,6 +22,8 @@ class TestServiceInfogram extends TestProviders
             'http://infogr.am/12saeimas-velesanu-rezume?query-string',
             'https://infogr.am/the-2014-creative-jobs-report-fact-sheet/',
             'https://infogr.am/que_font_les_utilisateurs_de_google___en_',
+            'https://infogram.com/que_font_les_utilisateurs_de_google___en_',
+            'https://www.infogram.com/que_font_les_utilisateurs_de_google___en_',
         ),
         'invalid' => array(
             'https://infogr.am/featured',

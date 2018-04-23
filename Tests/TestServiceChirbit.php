@@ -30,9 +30,9 @@ class TestServiceChirbit extends TestProviders
             'http://chirb.it',
         ),
         'normalize' => array(
-            'http://chirb.it/wp/wtJs5e/' => 'http://chirb.it/wtJs5e',
-            'http://chirb.it/wp/wtJs5e/other/stuff' => 'http://chirb.it/wtJs5e',
-            'http://chirb.it/wp/wtJs5e' => 'http://chirb.it/wtJs5e',
+            'http://chirb.it/wp/wtJs5e/' => 'https://chirb.it/wtJs5e',
+            'http://chirb.it/wp/wtJs5e/other/stuff' => 'https://chirb.it/wtJs5e',
+            'http://chirb.it/wp/wtJs5e' => 'https://chirb.it/wtJs5e',
         ),
         'fake' => array(
             'type' => 'rich',

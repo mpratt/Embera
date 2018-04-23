@@ -32,10 +32,10 @@ class TestServiceAmCharts extends TestProviders
             'http://live.amcharts.com/',
         ),
         'normalize' => array(
-            'http://live.amcharts.com/hlOWI' => 'http://live.amcharts.com/hlOWI/',
-            'http://live.amcharts.com/TY1Yj/' => 'http://live.amcharts.com/TY1Yj/',
-            'http://live.amcharts.com/zkyZm/edit/' => 'http://live.amcharts.com/zkyZm/',
-            'http://live.amcharts.com/TY1Yj/edit/stuff' => 'http://live.amcharts.com/TY1Yj/',
+            'http://live.amcharts.com/hlOWI' => 'https://live.amcharts.com/hlOWI/',
+            'http://live.amcharts.com/TY1Yj/' => 'https://live.amcharts.com/TY1Yj/',
+            'http://live.amcharts.com/zkyZm/edit/' => 'https://live.amcharts.com/zkyZm/',
+            'http://live.amcharts.com/TY1Yj/edit/stuff' => 'https://live.amcharts.com/TY1Yj/',
         ),
         'fake' => array(
             'type' => 'rich',

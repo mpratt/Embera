@@ -40,9 +40,9 @@ class Codepoints extends \Embera\Adapters\Service
         return array(
             'type' => 'rich',
             'provider_name' => 'Codepoints.net',
-            'provider_url' => 'http://codepoints.net/',
-            'thumbnail_url' => 'http://codepoints.net/api/v1/glyph/' . $m['1'],
-            'html' => '<iframe src="http://codepoints.net/U+' . $m['1'] . '?embed" style="width: {width}px; height: {height}px; border: 1px solid #444;"></iframe>',
+            'provider_url' => 'https://codepoints.net/',
+            'thumbnail_url' => 'https://codepoints.net/api/v1/glyph/' . $m['1'],
+            'html' => '<iframe src="https://codepoints.net/U+' . $m['1'] . '?embed" style="width: {width}px; height: {height}px; border: 1px solid #444;"></iframe>',
         );
     }
 }

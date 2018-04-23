@@ -31,11 +31,11 @@ class TestServiceHulu extends TestProviders
             'http://www.hulu.com/watch/44ui65/'
         ),
         'normalize' => array(
-            'http://www.hulu.com/watch/20807/late-night-with-conan-obrien-wed-may-21-2008' => 'http://www.hulu.com/watch/20807',
-            'http://www.hulu.com/watch/440265/' => 'http://www.hulu.com/watch/440265',
-            'http://www.hulu.com/watch/416223?playlist_id=1787&asset_scope=movies' => 'http://www.hulu.com/watch/416223',
-            'http://hulu.com/watch/331822/stuff/here' => 'http://www.hulu.com/watch/331822',
-            'http://hulu.com/watch/501126' => 'http://www.hulu.com/watch/501126',
+            'http://www.hulu.com/watch/20807/late-night-with-conan-obrien-wed-may-21-2008' => 'https://www.hulu.com/watch/20807',
+            'http://www.hulu.com/watch/440265/' => 'https://www.hulu.com/watch/440265',
+            'http://www.hulu.com/watch/416223?playlist_id=1787&asset_scope=movies' => 'https://www.hulu.com/watch/416223',
+            'http://hulu.com/watch/331822/stuff/here' => 'https://www.hulu.com/watch/331822',
+            'http://hulu.com/watch/501126' => 'https://www.hulu.com/watch/501126',
         )
     );
 

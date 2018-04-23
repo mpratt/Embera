@@ -19,7 +19,7 @@ namespace Embera\Providers;
 class Scribd extends \Embera\Adapters\Service
 {
     /** inline {@inheritdoc} */
-    protected $apiUrl = 'http://www.scribd.com/services/oembed/?format=json';
+    protected $apiUrl = 'https://www.scribd.com/services/oembed/?format=json';
 
     /** inline {@inheritdoc} */
     protected function validateUrl()

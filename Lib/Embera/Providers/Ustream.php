@@ -19,7 +19,7 @@ namespace Embera\Providers;
 class Ustream extends \Embera\Adapters\Service
 {
     /** inline {@inheritdoc} */
-    protected $apiUrl = 'http://www.ustream.tv/oembed';
+    protected $apiUrl = 'https://www.ustream.tv/oembed';
 
     /** inline {@inheritdoc} */
     protected function validateUrl()

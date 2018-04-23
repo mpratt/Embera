@@ -14,13 +14,13 @@ namespace Embera\Providers;
 
 /**
  * The DailyMotion.com Provider
- * @link http://dailymotion.com
- * @link http://www.dailymotion.com/doc/api/oembed.html
+ * @link https://dailymotion.com
+ * @link https://www.dailymotion.com/doc/api/oembed.html
  */
 class DailyMotion extends \Embera\Adapters\Service
 {
     /** inline {@inheritdoc} */
-    protected $apiUrl = 'http://www.dailymotion.com/services/oembed?format=json';
+    protected $apiUrl = 'https://www.dailymotion.com/services/oembed?format=json';
 
     /** inline {@inheritdoc} */
     protected function validateUrl()
@@ -36,10 +36,12 @@ class DailyMotion extends \Embera\Adapters\Service
     protected function normalizeUrl()
     {
         if (preg_match('~dailymotion\.com/(?:embed/)?(?:video|live)/([^/]+)/?~i', $this->url, $matches)) {
-            $this->url = new \Embera\Url('http://www.dailymotion.com/video/' . $matches['1']);
+            $this->url = new \Embera\Url('https://www.dailymotion.com/video/' . $matches['1']);
         } else if (preg_match('~dai\.ly/([^/]+)/?~i', $this->url, $matches)) {
-            $this->url = new \Embera\Url('http://www.dailymotion.com/video/' . $matches['1']);
+            $this->url = new \Embera\Url('https://www.dailymotion.com/video/' . $matches['1']);
         }
+
+        $this->url->convertToHttps();
     }
 
     /** inline {@inheritdoc} */
@@ -52,9 +54,9 @@ class DailyMotion extends \Embera\Adapters\Service
         return array(
             'type' => 'video',
             'provider_name' => 'Dailymotion',
-            'provider_url' => 'http://www.dailymotion.com',
+            'provider_url' => 'https://www.dailymotion.com',
             'title' => (!empty($videoTitle) ? str_replace(array('-', '_'), ' ', $videoTitle) : 'Unknown Title'),
-            'html' => '<iframe frameborder="0" width="{width}" height="{height}" src="http://www.dailymotion.com/embed/video/' . $videoId . '" allowfullscreen></iframe>'
+            'html' => '<iframe frameborder="0" width="{width}" height="{height}" src="https://www.dailymotion.com/embed/video/' . $videoId . '" allowfullscreen></iframe>'
         );
     }
 }

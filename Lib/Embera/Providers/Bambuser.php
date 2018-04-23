@@ -14,13 +14,13 @@ namespace Embera\Providers;
 
 /**
  * The bambuser.com Provider
- * @link http://bambuser.com
- * @link http://bambuser.com/api/embed_oembed
+ * @link https://bambuser.com
+ * @link https://bambuser.com/api/embed_oembed
  */
 class Bambuser extends \Embera\Adapters\Service
 {
     /** inline {@inheritdoc} */
-    protected $apiUrl = 'http://api.bambuser.com/oembed.json';
+    protected $apiUrl = 'https://api.bambuser.com/oembed.json';
 
     /** inline {@inheritdoc} */
     protected function validateUrl()
@@ -37,8 +37,10 @@ class Bambuser extends \Embera\Adapters\Service
     public function normalizeUrl()
     {
         if (preg_match('~bambuser\.com/channel/(?:[^/]+)/broadcast/([0-9]+)~i', $this->url, $matches)) {
-            $this->url = new \Embera\Url('http://bambuser.com/v/' . $matches['1']);
+            $this->url = new \Embera\Url('https://bambuser.com/v/' . $matches['1']);
         }
+
+        $this->url->convertToHttps();
     }
 
     /** inline {@inheritdoc} */
@@ -47,7 +49,7 @@ class Bambuser extends \Embera\Adapters\Service
         $defaults = array(
             'type' => 'video',
             'provider_name' => 'Bambuser.com',
-            'provider_url' => 'http://bambuser.com',
+            'provider_url' => 'https://bambuser.com',
         );
 
         $html  = '<object id="bplayer" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="{width}" height="{height}">';
