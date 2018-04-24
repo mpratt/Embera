@@ -45,13 +45,23 @@ class TestServiceSoundCloud extends TestProviders
         $service = '\Embera\Providers\SoundCloud' ;
         $test = new $service($this->urls['valid'][0], array('oembed' => true, 'fake' => array(), 'params' => array()), $oembed);
 
-        $response = [
-            'html' => '<iframe width="100%" height="400" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?visual=true&url=https%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F373180994&show_artwork=true"></iframe>'
-        ];
+        $response['html'] ='<iframe width="100%" height="400" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?visual=true&url=https%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F373180994&show_artwork=true"></iframe>';
 
-        $response = $test->modifyResponse($response);
+        $modifyResponse = self::getMethod('modifyResponse');
+
+        $response = $modifyResponse->invokeArgs($test, array($response));
 
         $this->assertEquals('<iframe width="100%" height="400" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?visual=true&url=https%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F373180994&show_artwork=true&hide_related=true"></iframe>', $response['html']);
     }
+
+    protected static function getMethod($name)
+    {
+        $class = new ReflectionClass('\Embera\Providers\SoundCloud');
+        $method = $class->getMethod($name);
+        $method->setAccessible(true);
+
+        return $method;
+    }
+
 }
 ?>
