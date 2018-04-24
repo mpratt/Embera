@@ -34,7 +34,7 @@ class SoundCloud extends \Embera\Adapters\Service
     protected function modifyResponse(array $response = array())
     {
         if (!empty($response['html'])) {
-            $response['html'] = str_replace('src=', 'hide_related="true" src=', $response['html']);
+            $response['html'] = preg_replace('src="(.*)"', 'src="$1&hide_related=true"', $response['html']);
         }
 
         return $response;
