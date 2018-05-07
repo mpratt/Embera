@@ -168,6 +168,7 @@ class Providers
         'yfrog.com' => '\Embera\Providers\YFrog',
         'yfrog.us' => '\Embera\Providers\YFrog',
         'twitter.yfrog.com' => '\Embera\Providers\YFrog',
+        'ultimedia.com' => '\Embera\Providers\Digiteka',
         'video.yandex.ru' => '\Embera\Providers\Yandex',
         'm.youtube.com' => '\Embera\Providers\Youtube',
         'youtube.com' => '\Embera\Providers\Youtube',
