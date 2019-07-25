@@ -1,6 +1,5 @@
 Embera
 ======
-[![Build Status](https://secure.travis-ci.org/mpratt/Embera.png?branch=master)](http://travis-ci.org/mpratt/Embera)
 [![Total Downloads](https://poser.pugx.org/mpratt/embera/downloads.png)](https://packagist.org/packages/mpratt/embera)
 
 Embera is a [Oembed](http://oembed.com/) consumer library written in PHP. Basically what it does is take urls from a text and queries the matching
