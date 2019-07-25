@@ -1,6 +1,7 @@
 Embera
 ======
-[![Build Status](https://secure.travis-ci.org/mpratt/Embera.png?branch=master)](http://travis-ci.org/mpratt/Embera) [![Scrutinizer Quality Score](https://scrutinizer-ci.com/g/mpratt/Embera/badges/quality-score.png?s=6122b04c188cd1d245088484966600f2ccb549fb)](https://scrutinizer-ci.com/g/mpratt/Embera/) [![Code Coverage](https://scrutinizer-ci.com/g/mpratt/Embera/badges/coverage.png?s=4cb389493e1806afc497bc53699538454502ea49)](https://scrutinizer-ci.com/g/mpratt/Embera/) [![Latest Stable Version](https://poser.pugx.org/mpratt/embera/v/stable.png)](https://packagist.org/packages/mpratt/embera) [![Total Downloads](https://poser.pugx.org/mpratt/embera/downloads.png)](https://packagist.org/packages/mpratt/embera)
+[![Build Status](https://secure.travis-ci.org/mpratt/Embera.png?branch=master)](http://travis-ci.org/mpratt/Embera)
+[![Total Downloads](https://poser.pugx.org/mpratt/embera/downloads.png)](https://packagist.org/packages/mpratt/embera)
 
 Embera is a [Oembed](http://oembed.com/) consumer library written in PHP. Basically what it does is take urls from a text and queries the matching
 service for information about the media.
@@ -37,7 +38,7 @@ Embera supports **60+** sites. Sites marked with an `*` allow offline html embed
 
 Requirements
 ============
-- PHP >= 5.3
+- PHP >= 5.6 (probably works on + 5.3)
 - Curl or `allow_url_fopen` must be enabled
 
 Installation
