@@ -25,8 +25,7 @@ class Vimeo extends \Embera\Adapters\Service
     {
         $this->url->stripWWW();
         $this->url->stripLastSlash();
-
-        return (preg_match('~/(?:[0-9]{5,12})$~i', $this->url));
+        return (preg_match('~/(?:[0-9]{5,12})$~i', $this->url) || preg_match('~/(?:[0-9]{5,12}/[\w\d]+)$~i', $this->url));
     }
 
     /** inline {@inheritdoc} */
@@ -48,7 +47,7 @@ class Vimeo extends \Embera\Adapters\Service
             'provider_name' => 'Vimeo',
             'provider_url' => 'http://www.vimeo.com',
             'title' => 'Unknown title',
-            'html' => '<iframe src="http://player.vimeo.com/' . $matches['1'] . '" width="{width}" height="{height}" frameborder="0" title="" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>',
+            'html' => '<iframe src="https://player.vimeo.com/' . $matches['1'] . '" width="{width}" height="{height}" frameborder="0" title="" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>',
         );
     }
 }
