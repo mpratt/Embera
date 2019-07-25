@@ -21,7 +21,7 @@ namespace Embera\Providers;
 class Infogram extends \Embera\Adapters\Service
 {
     /** inline {@inheritdoc} */
-    protected $apiUrl = 'https://infogr.am/oembed/?format=json';
+    protected $apiUrl = 'https://infogram.com/oembed/?format=json';
 
     /** inline {@inheritdoc} */
     protected function validateUrl()
@@ -29,9 +29,9 @@ class Infogram extends \Embera\Adapters\Service
         $this->url->convertToHttps();
         $this->url->stripQueryString();
         $this->url->stripLastSlash();
-        $this->url->invalidPattern('infogr\.am/(?:pricing|register|login|search|terms|privacy|featured|education|brands|organizations)$');
+        $this->url->invalidPattern('(infogr\.am|infogram\.com)/(?:pricing|register|login|search|terms|privacy|featured|education|brands|organizations)$');
 
-        return (preg_match('~infogr\.am/([^/ ]+)$~i', $this->url));
+        return (preg_match('~(infogr\.am|infogram\.com)/([^/ ]+)$~i', $this->url));
     }
 }
 
