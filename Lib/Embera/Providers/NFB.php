@@ -57,7 +57,7 @@ class NFB extends \Embera\Adapters\Service
             'type' => 'video',
             'provider_name' => 'National Film Board of Canda',
             'provider_url' => 'http://www.nfb.ca',
-            'html' => '<iframe src="' . $this->url . '/embed/player" width="{width}" height="{height}" ></iframe>',
+            'html' => '<iframe src="' . $this->url . '/embed/player" width="{width}" height="{height}" frameborder="0" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"></iframe>',
         );
     }
 }
