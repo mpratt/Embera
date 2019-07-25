@@ -26,13 +26,13 @@ class Twitter extends \Embera\Adapters\Service
     {
         $this->url->stripLastSlash();
 
-        return (preg_match('~twitter\.com/(?:[\w\d-_]+)/(?:status|moments)/(?:[0-9]+)~i', $this->url));
+        return (preg_match('~twitter\.com/(?:[\w\d\-_]+)/(?:status|moments)/(?:[0-9]+)~i', $this->url));
     }
 
     /** inline {@inheritdoc} */
     protected function normalizeUrl()
     {
-        if (preg_match('~twitter\.com/(?:\#\!|/)?([\w\d-_]+)/(status|moments)/([0-9]+)~i', $this->url, $matches))
+        if (preg_match('~twitter\.com/(?:\#\!|/)?([\w\d\-_]+)/(status|moments)/([0-9]+)~i', $this->url, $matches))
             $this->url = new \Embera\Url('https://twitter.com/' . $matches['1'] . '/' . $matches['2'] . '/' . $matches['3']);
     }
 }
