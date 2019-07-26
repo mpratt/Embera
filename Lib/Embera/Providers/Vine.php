@@ -45,4 +45,3 @@ class Vine extends \Embera\Adapters\Service
     }
 }
 
-?>

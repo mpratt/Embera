@@ -33,4 +33,3 @@ class AppNet extends \Embera\Adapters\Service
     }
 }
 
-?>

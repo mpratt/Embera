@@ -52,4 +52,3 @@ class CollegeHumor extends \Embera\Adapters\Service
     }
 }
 
-?>

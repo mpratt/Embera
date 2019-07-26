@@ -32,4 +32,3 @@ class Ustream extends \Embera\Adapters\Service
     }
 }
 
-?>

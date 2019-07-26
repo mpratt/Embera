@@ -47,4 +47,3 @@ class Deviantart extends \Embera\Adapters\Service
     }
 }
 
-?>

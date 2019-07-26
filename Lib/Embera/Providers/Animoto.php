@@ -33,4 +33,3 @@ class Animoto extends \Embera\Adapters\Service
     }
 }
 
-?>

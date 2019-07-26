@@ -42,4 +42,3 @@ class Sapo extends \Embera\Adapters\Service
     }
 }
 
-?>

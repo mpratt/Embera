@@ -170,7 +170,7 @@ class Facebook extends \Embera\Adapters\Service
         }
         return $response;
     }
-    
+
     /** inline {@inheritdoc} */
         public function fakeResponse()
     {
@@ -184,4 +184,3 @@ class Facebook extends \Embera\Adapters\Service
     }
 }
 
-?>

@@ -31,4 +31,3 @@ class Roomshare extends \Embera\Adapters\Service
     }
 }
 
-?>

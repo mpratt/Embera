@@ -28,4 +28,3 @@ class EgliseInfo extends \Embera\Adapters\Service
     }
 }
 
-?>

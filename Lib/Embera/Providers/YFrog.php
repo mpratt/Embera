@@ -40,4 +40,3 @@ class YFrog extends \Embera\Adapters\Service
     }
 }
 
-?>

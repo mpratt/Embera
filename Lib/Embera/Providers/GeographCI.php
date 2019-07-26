@@ -30,4 +30,3 @@ class GeographCI extends \Embera\Adapters\Service
     }
 }
 
-?>

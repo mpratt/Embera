@@ -28,4 +28,3 @@ class Vevo extends \Embera\Adapters\Service
     }
 }
 
-?>

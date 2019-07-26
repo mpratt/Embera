@@ -28,4 +28,3 @@ class Pastery extends \Embera\Adapters\Service
     }
 }
 
-?>

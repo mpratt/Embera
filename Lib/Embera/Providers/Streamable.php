@@ -29,4 +29,3 @@ class Streamable extends \Embera\Adapters\Service
     }
 }
 
-?>

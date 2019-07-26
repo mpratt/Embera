@@ -31,4 +31,3 @@ class SoundCloud extends \Embera\Adapters\Service
     }
 }
 
-?>

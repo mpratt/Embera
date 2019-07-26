@@ -28,4 +28,3 @@ class Indaco extends \Embera\Adapters\Service
     }
 }
 
-?>

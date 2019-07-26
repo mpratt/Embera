@@ -38,4 +38,3 @@ class Hulu extends \Embera\Adapters\Service
     }
 }
 
-?>

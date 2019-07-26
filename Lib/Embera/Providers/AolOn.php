@@ -65,4 +65,3 @@ class AolOn extends \Embera\Adapters\Service
     }
 }
 
-?>

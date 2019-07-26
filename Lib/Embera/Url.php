@@ -118,4 +118,3 @@ class Url
     public function convertToHttps() { $this->url = str_ireplace('http://', 'https://', $this->url); }
 }
 
-?>

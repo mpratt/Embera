@@ -47,4 +47,3 @@ class MobyPicture extends \Embera\Adapters\Service
     }
 }
 
-?>

@@ -28,4 +28,3 @@ class Huffduffer extends \Embera\Adapters\Service
     }
 }
 
-?>

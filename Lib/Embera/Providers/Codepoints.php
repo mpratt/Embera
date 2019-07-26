@@ -47,4 +47,3 @@ class Codepoints extends \Embera\Adapters\Service
     }
 }
 
-?>

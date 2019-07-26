@@ -63,4 +63,3 @@ class Spotify extends \Embera\Adapters\Service
     }
 }
 
-?>

@@ -45,4 +45,3 @@ class Instagram extends \Embera\Adapters\Service
     }
 }
 
-?>

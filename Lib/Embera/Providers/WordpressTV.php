@@ -27,4 +27,3 @@ class WordpressTV extends \Embera\Adapters\Service
     }
 }
 
-?>

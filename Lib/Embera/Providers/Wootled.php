@@ -27,4 +27,3 @@ class Wootled extends \Embera\Adapters\Service
     }
 }
 
-?>

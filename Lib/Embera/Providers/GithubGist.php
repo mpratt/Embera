@@ -66,4 +66,3 @@ class GithubGist extends \Embera\Adapters\Service
     }
 }
 
-?>

@@ -28,4 +28,3 @@ class BoxOfficeBuz extends \Embera\Adapters\Service
     }
 }
 
-?>

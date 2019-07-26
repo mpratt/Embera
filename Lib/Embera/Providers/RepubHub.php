@@ -27,4 +27,3 @@ class RepubHub extends \Embera\Adapters\Service
     }
 }
 
-?>

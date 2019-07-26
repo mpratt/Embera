@@ -29,4 +29,3 @@ class LearningApps extends \Embera\Adapters\Service
     }
 }
 
-?>

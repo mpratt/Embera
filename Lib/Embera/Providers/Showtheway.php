@@ -31,4 +31,3 @@ class Showtheway extends \Embera\Adapters\Service
     }
 }
 
-?>

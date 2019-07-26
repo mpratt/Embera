@@ -46,4 +46,3 @@ class ShortNote extends \Embera\Adapters\Service
     }
 }
 
-?>

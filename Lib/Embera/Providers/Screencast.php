@@ -31,4 +31,3 @@ class Screencast extends \Embera\Adapters\Service
     }
 }
 
-?>

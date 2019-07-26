@@ -52,4 +52,3 @@ class DotSub extends \Embera\Adapters\Service
     }
 }
 
-?>

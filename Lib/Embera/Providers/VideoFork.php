@@ -56,4 +56,3 @@ class VideoFork extends \Embera\Adapters\Service
     }
 }
 
-?>

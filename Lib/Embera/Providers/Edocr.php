@@ -33,4 +33,3 @@ class Edocr extends \Embera\Adapters\Service
     }
 }
 
-?>

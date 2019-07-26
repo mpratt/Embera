@@ -58,4 +58,3 @@ class FunnyOrDie extends \Embera\Adapters\Service
     }
 }
 
-?>

@@ -41,4 +41,3 @@ class IFixIt extends \Embera\Adapters\Service
     }
 }
 
-?>

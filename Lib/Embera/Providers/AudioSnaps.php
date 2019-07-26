@@ -50,4 +50,3 @@ class AudioSnaps extends \Embera\Adapters\Service
     }
 }
 
-?>

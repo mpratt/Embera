@@ -53,4 +53,3 @@ class CircuitLab extends \Embera\Adapters\Service
     }
 }
 
-?>

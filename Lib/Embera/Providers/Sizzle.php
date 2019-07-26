@@ -28,4 +28,3 @@ class Sizzle extends \Embera\Adapters\Service
     }
 }
 
-?>

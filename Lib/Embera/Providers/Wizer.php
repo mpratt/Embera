@@ -28,4 +28,3 @@ class Wizer extends \Embera\Adapters\Service
     }
 }
 
-?>

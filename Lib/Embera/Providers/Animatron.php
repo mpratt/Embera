@@ -33,4 +33,3 @@ class Animatron extends \Embera\Adapters\Service
     }
 }
 
-?>

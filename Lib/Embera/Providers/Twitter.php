@@ -37,4 +37,3 @@ class Twitter extends \Embera\Adapters\Service
     }
 }
 
-?>

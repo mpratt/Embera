@@ -46,4 +46,3 @@ class TheySaidSo extends \Embera\Adapters\Service
         return $response;
     }
 }
-?>

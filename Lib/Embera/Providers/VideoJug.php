@@ -29,4 +29,3 @@ class VideoJug extends \Embera\Adapters\Service
     }
 }
 
-?>

@@ -32,4 +32,3 @@ class Meetup extends \Embera\Adapters\Service
     }
 }
 
-?>

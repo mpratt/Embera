@@ -28,4 +28,3 @@ class Spreaker extends \Embera\Adapters\Service
     }
 }
 
-?>

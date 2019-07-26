@@ -32,4 +32,3 @@ class Shoudio extends \Embera\Adapters\Service
     }
 }
 
-?>

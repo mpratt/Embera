@@ -31,4 +31,3 @@ class Rdio extends \Embera\Adapters\Service
     }
 }
 
-?>

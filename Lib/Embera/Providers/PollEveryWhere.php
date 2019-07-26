@@ -45,4 +45,3 @@ class PollEveryWhere extends \Embera\Adapters\Service
     } */
 }
 
-?>

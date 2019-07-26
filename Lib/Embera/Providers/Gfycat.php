@@ -48,4 +48,3 @@ class Gfycat extends \Embera\Adapters\Service
     }
 }
 
-?>

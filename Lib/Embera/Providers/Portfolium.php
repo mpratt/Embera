@@ -32,4 +32,3 @@ class Portfolium extends \Embera\Adapters\Service
     }
 }
 
-?>

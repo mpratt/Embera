@@ -167,4 +167,3 @@ class Formatter
         throw new \InvalidArgumentException('No method ' . $method . ' was found');
     }
 }
-?>

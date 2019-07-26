@@ -29,4 +29,3 @@ class Kidoju extends \Embera\Adapters\Service
     }
 }
 
-?>

@@ -35,4 +35,3 @@ class Infogram extends \Embera\Adapters\Service
     }
 }
 
-?>

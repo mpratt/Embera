@@ -43,4 +43,3 @@ class Kickstarter extends \Embera\Adapters\Service
     }
 }
 
-?>

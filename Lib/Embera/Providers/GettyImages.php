@@ -45,4 +45,3 @@ class GettyImages extends \Embera\Adapters\Service
         }
     }
 }
-?>

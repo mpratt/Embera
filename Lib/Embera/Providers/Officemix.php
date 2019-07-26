@@ -45,4 +45,3 @@ class Officemix extends \Embera\Adapters\Service
     }
 }
 
-?>

@@ -30,4 +30,3 @@ class GeographDe extends \Embera\Adapters\Service
     }
 }
 
-?>

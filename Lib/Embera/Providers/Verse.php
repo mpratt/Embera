@@ -43,4 +43,3 @@ class Verse extends \Embera\Adapters\Service
     }
 }
 
-?>

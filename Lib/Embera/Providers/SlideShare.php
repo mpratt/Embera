@@ -32,4 +32,3 @@ class SlideShare extends \Embera\Adapters\Service
     }
 }
 
-?>

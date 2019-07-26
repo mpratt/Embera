@@ -28,4 +28,3 @@ class Soundsgood extends \Embera\Adapters\Service
     }
 }
 
-?>

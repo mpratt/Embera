@@ -34,4 +34,3 @@ class Rapidengage extends \Embera\Adapters\Service
     }
 }
 
-?>

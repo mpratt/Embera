@@ -30,4 +30,3 @@ class StreamOneCloud extends \Embera\Adapters\Service
     }
 }
 
-?>

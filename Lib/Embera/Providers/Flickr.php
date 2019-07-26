@@ -50,4 +50,3 @@ class Flickr extends \Embera\Adapters\Service
     }
 }
 
-?>

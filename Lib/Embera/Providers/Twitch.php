@@ -29,4 +29,3 @@ class Twitch extends \Embera\Adapters\Service
     }
 }
 
-?>

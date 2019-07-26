@@ -50,4 +50,3 @@ class Dipity extends \Embera\Adapters\Service
     }
 }
 
-?>

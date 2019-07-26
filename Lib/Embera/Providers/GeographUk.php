@@ -30,4 +30,3 @@ class GeographUk extends \Embera\Adapters\Service
     }
 }
 
-?>

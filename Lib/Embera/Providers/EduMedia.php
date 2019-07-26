@@ -28,4 +28,3 @@ class EduMedia extends \Embera\Adapters\Service
     }
 }
 
-?>

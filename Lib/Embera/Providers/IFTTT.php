@@ -44,4 +44,3 @@ class IFTTT extends \Embera\Adapters\Service
     }
 }
 
-?>

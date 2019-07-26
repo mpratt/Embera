@@ -29,4 +29,3 @@ class DailyMile extends \Embera\Adapters\Service
     }
 }
 
-?>

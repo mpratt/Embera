@@ -28,4 +28,3 @@ class BlipTV extends \Embera\Adapters\Service
     }
 }
 
-?>

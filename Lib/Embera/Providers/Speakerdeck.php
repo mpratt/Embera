@@ -28,4 +28,3 @@ class Speakerdeck extends \Embera\Adapters\Service
     }
 }
 
-?>

@@ -19,4 +19,3 @@ if (function_exists('spl_autoload_register'))
     });
 }
 
-?>

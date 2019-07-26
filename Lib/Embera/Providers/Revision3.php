@@ -31,4 +31,3 @@ class Revision3 extends \Embera\Adapters\Service
     }
 }
 
-?>

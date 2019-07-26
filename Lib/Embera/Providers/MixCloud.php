@@ -32,4 +32,3 @@ class MixCloud extends \Embera\Adapters\Service
     }
 }
 
-?>

@@ -41,4 +41,3 @@ class Didacte extends \Embera\Adapters\Service
     }
 }
 
-?>

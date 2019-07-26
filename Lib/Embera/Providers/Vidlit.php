@@ -30,4 +30,3 @@ class Vidlit extends \Embera\Adapters\Service
     }
 }
 
-?>

@@ -32,4 +32,3 @@ class Mathembed extends \Embera\Adapters\Service
     }
 }
 
-?>

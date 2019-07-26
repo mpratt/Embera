@@ -39,4 +39,3 @@ class ReleaseWire extends \Embera\Adapters\Service
     }
 }
 
-?>

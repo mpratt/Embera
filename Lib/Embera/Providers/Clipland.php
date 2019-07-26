@@ -28,4 +28,3 @@ class Clipland extends \Embera\Adapters\Service
     }
 }
 
-?>

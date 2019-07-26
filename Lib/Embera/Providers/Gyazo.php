@@ -29,4 +29,3 @@ class Gyazo extends \Embera\Adapters\Service
     }
 }
 
-?>

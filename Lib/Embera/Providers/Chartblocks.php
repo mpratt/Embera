@@ -43,4 +43,3 @@ class Chartblocks extends \Embera\Adapters\Service
     }
 }
 
-?>

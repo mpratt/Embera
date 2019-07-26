@@ -28,4 +28,3 @@ class Punters extends \Embera\Adapters\Service
     }
 }
 
-?>
