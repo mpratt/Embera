@@ -33,4 +33,3 @@ class TestServiceStreamable extends TestProviders
 
     public function testProvider() { $this->validateProvider('Streamable'); }
 }
-?>

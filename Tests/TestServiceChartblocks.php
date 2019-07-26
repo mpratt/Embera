@@ -37,4 +37,3 @@ class TestServiceChatblocks extends TestProviders
 
     public function testProvider() { $this->validateProvider('Chartblocks'); }
 }
-?>

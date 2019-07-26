@@ -33,4 +33,3 @@ class TestServiceVerse extends TestProviders
 
     public function testProvider() { $this->validateProvider('Verse'); }
 }
-?>

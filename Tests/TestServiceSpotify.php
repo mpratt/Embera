@@ -47,4 +47,3 @@ class TestServiceSpotify extends TestProviders
         $this->validateProvider('Spotify');
     }
 }
-?>

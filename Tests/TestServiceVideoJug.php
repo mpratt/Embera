@@ -33,4 +33,3 @@ class TestServiceVideoJug extends TestProviders
 
     public function testProvider() { $this->validateProvider('VideoJug'); }
 }
-?>

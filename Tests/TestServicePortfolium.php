@@ -36,4 +36,3 @@ class TestServicePortfolium extends TestProviders
         $this->validateProvider('Portfolium');
     }
 }
-?>

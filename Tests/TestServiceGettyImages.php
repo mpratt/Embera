@@ -39,4 +39,3 @@ class TestServiceGettyImages extends TestProviders
 
     public function testProvider() { $this->validateProvider('GettyImages'); }
 }
-?>

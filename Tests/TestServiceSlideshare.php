@@ -36,4 +36,3 @@ class TestServiceSlideShare extends TestProviders
 
     public function testProvider() { $this->validateProvider('SlideShare'); }
 }
-?>

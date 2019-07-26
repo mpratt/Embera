@@ -38,4 +38,3 @@ class TestServiceEdocr extends TestProviders
 
     public function testProvider() { $this->validateProvider('Edocr'); }
 }
-?>

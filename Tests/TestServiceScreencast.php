@@ -27,4 +27,3 @@ class TestServiceScreencast extends TestProviders
 
     public function testProvider() { $this->validateProvider('Screencast'); }
 }
-?>

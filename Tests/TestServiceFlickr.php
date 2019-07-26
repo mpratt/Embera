@@ -44,4 +44,3 @@ class TestServiceFlickr extends TestProviders
 
     public function testProvider() { $this->validateProvider('Flickr'); }
 }
-?>

@@ -40,4 +40,3 @@ class TestServiceVine extends TestProviders
         $this->validateProvider('Vine');
     }
 }
-?>

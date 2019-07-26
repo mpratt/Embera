@@ -38,4 +38,3 @@ class TestServiceInstagram extends TestProviders
 
     public function testProvider() { $this->validateProvider('Instagram'); }
 }
-?>

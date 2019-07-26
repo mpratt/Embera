@@ -39,4 +39,3 @@ class TestServiceCollegeHumor extends TestProviders
 
     public function testProvider() { $this->validateProvider('CollegeHumor'); }
 }
-?>

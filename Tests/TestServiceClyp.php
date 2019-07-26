@@ -31,4 +31,3 @@ class TestServiceClyp extends TestProviders
 
     public function testProvider() { $this->validateProvider('Clyp'); }
 }
-?>

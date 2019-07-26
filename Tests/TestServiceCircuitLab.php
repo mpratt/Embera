@@ -45,4 +45,3 @@ class TestServiceCircuitLab extends TestProviders
 
     public function testProvider() { $this->validateProvider('CircuitLab'); }
 }
-?>

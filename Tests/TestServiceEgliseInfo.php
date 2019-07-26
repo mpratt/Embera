@@ -26,4 +26,3 @@ class TestServiceEgliseInfo extends TestProviders
 
     public function testProvider() { $this->validateProvider('EgliseInfo'); }
 }
-?>

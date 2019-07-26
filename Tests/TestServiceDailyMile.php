@@ -34,4 +34,3 @@ class TestServiceDailyMile extends TestProviders
 
     public function testProvider() { $this->validateProvider('DailyMile'); }
 }
-?>

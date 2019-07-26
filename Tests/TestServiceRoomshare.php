@@ -31,4 +31,3 @@ class TestServiceRoomshare extends TestProviders
 
     public function testProvider() { $this->validateProvider('Roomshare'); }
 }
-?>

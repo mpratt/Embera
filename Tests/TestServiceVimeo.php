@@ -49,4 +49,3 @@ class TestServiceVimeo extends TestProviders
 
     public function testProvider() { $this->validateProvider('Vimeo'); }
 }
-?>

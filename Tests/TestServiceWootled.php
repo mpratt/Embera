@@ -25,4 +25,3 @@ class TestServiceWootled extends TestProviders
 
     public function testProvider() { $this->validateProvider('Wootled'); }
 }
-?>

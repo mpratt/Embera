@@ -32,4 +32,3 @@ class TestServiceHq23 extends TestProviders
 
     public function testProvider() { $this->validateProvider('Hq23'); }
 }
-?>

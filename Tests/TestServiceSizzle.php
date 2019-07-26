@@ -27,4 +27,3 @@ class TestServiceSizzle extends TestProviders
 
     public function testProvider() { $this->validateProvider('Sizzle'); }
 }
-?>

@@ -27,4 +27,3 @@ class TestServiceVidlit extends TestProviders
 
     public function testProvider() { $this->validateProvider('Vidlit'); }
 }
-?>

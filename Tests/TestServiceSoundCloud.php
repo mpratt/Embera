@@ -39,4 +39,3 @@ class TestServiceSoundCloud extends TestProviders
 
     public function testProvider() { $this->validateProvider('SoundCloud'); }
 }
-?>

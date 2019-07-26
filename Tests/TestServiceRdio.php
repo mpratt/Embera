@@ -35,4 +35,3 @@ class TestServiceRdio extends TestProviders
 
     public function testProvider() { $this->validateProvider('Rdio'); }
 }
-?>

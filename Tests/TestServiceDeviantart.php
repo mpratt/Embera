@@ -37,4 +37,3 @@ class TestServiceDeviantart extends TestProviders
 
     public function testProvider() { $this->validateProvider('Deviantart'); }
 }
-?>

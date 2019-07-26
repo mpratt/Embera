@@ -43,4 +43,3 @@ class TestServiceYFrog extends TestProviders
 
     public function testProvider() { $this->validateProvider('YFrog'); }
 }
-?>

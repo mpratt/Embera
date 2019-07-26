@@ -29,4 +29,3 @@ class TestServiceClipland extends TestProviders
 
     public function testProvider() { $this->validateProvider('Clipland'); }
 }
-?>

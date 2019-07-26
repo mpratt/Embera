@@ -52,4 +52,3 @@ class TestServiceFacebook extends TestProviders
 
     public function testProvider() { $this->validateProvider('Facebook'); }
 }
-?>

@@ -35,4 +35,3 @@ class TestServiceShortNote extends TestProviders
 
     public function testProvider() { $this->validateProvider('ShortNote'); }
 }
-?>

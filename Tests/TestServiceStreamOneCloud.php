@@ -28,4 +28,3 @@ class TestServiceStreamOneCloud extends TestProviders
      */
     public function testProvider() { $this->validateProvider('StreamOneCloud'); }
 }
-?>

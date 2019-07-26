@@ -32,4 +32,3 @@ class TestServiceAppNet extends TestProviders
 
     public function testProvider() { $this->validateProvider('AppNet'); }
 }
-?>

@@ -41,4 +41,3 @@ class TestServiceShoudio extends TestProviders
 
     public function testProvider() { $this->validateProvider('Shoudio'); }
 }
-?>

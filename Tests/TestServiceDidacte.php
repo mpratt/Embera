@@ -28,4 +28,3 @@ class TestServiceDidacte extends TestProviders
         $this->validateProvider('Didacte');
     }
 }
-?>

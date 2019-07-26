@@ -34,4 +34,3 @@ class TestServiceHuffDuffer extends TestProviders
 
     public function testProvider() { $this->validateProvider('HuffDuffer'); }
 }
-?>

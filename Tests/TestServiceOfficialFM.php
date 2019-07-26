@@ -43,4 +43,3 @@ class TestServiceOfficialFM extends TestProviders
 
     public function testProvider() { $this->validateProvider('OfficialFM'); }
 }
-?>

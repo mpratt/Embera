@@ -10,7 +10,7 @@
  * file that was distributed with this source code.
  */
 
-class TestHtmlProcessor extends PHPUnit_Framework_TestCase
+class TestHtmlProcessor extends \PHPUnit\Framework\TestCase
 {
     public function testDontReplaceInsideDefaultTags()
     {
@@ -109,5 +109,3 @@ class TestHtmlProcessor extends PHPUnit_Framework_TestCase
         }
     }
 }
-
-?>

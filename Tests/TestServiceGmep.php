@@ -40,4 +40,3 @@ class TestServiceGmep extends TestProviders
 
     public function testProvider() { $this->validateProvider('Gmep'); }
 }
-?>

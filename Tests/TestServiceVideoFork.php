@@ -38,4 +38,3 @@ class TestServiceVideoFork extends TestProviders
 
     public function testProvider() { $this->validateProvider('VideoFork'); }
 }
-?>

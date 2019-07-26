@@ -38,4 +38,3 @@ class TestServiceUstream extends TestProviders
 
     public function testProvider() { $this->validateProvider('Ustream'); }
 }
-?>

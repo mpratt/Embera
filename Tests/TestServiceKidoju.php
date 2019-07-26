@@ -27,4 +27,3 @@ class TestServiceKidoju extends TestProviders
 
     public function testProvider() { $this->validateProvider('Kidoju'); }
 }
-?>

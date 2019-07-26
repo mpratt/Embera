@@ -30,4 +30,3 @@ class TestServiceRapidengage extends TestProviders
 
     public function testProvider() { $this->validateProvider('Rapidengage'); }
 }
-?>

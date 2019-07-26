@@ -21,7 +21,7 @@ class TestServiceSketchfab extends TestProviders
             'https://sketchfab.com/show/s0eX1riDqEY6bT0uBtCjxC4V7OA',
             'https://sketchfab.com/show/lwVPifecIahu0rtGqlzZosBPFOC',
             'https://sketchfab.com/show/9lVs96AuFUAjKjwvsMG0Uf7Yy7b',
-            'https://sketchfab.com/models/9afc7ce5f32b43a692e8861d6692ec2c',
+            'https://sketchfab.com/models/arch-bench-991ee4e66fd946e09e63a2a10a28414f',
             'https://sketchfab.com/models/30abb37327074983b43e9e6687126486',
             'https://sketchfab.com/models/e1cbf443e14c494883ac4bfe0321b4a9',
             'https://sketchfab.com/d3mobile-m_world_league/folders/fbebdc3958ac4acb9734d72fd80ad393',
@@ -57,4 +57,3 @@ class TestServiceSketchfab extends TestProviders
 
     public function testProvider() { $this->validateProvider('Sketchfab'); }
 }
-?>

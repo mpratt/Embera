@@ -33,4 +33,3 @@ class TestServiceSway extends TestProviders
 
     public function testProvider() { $this->validateProvider('Sway'); }
 }
-?>

@@ -36,4 +36,3 @@ class TestServiceOumy extends TestProviders
 
     public function testProvider() { $this->validateProvider('Oumy'); }
 }
-?>

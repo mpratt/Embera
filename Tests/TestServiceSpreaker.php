@@ -28,4 +28,3 @@ class TestServiceSpreaker extends TestProviders
 
     public function testProvider() { $this->validateProvider('Spreaker'); }
 }
-?>

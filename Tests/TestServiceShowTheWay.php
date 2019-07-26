@@ -32,4 +32,3 @@ class TestServiceShowtheway extends TestProviders
      */
     public function testProvider() { $this->validateProvider('Showtheway'); }
 }
-?>

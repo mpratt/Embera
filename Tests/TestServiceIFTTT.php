@@ -35,4 +35,3 @@ class TestServiceIFTTT extends TestProviders
 
     public function testProvider() { $this->validateProvider('IFTTT'); }
 }
-?>

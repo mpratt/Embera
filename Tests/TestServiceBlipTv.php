@@ -35,4 +35,3 @@ class TestServiceBlipTv extends TestProviders
 
     public function testProvider() { $this->validateProvider('BlipTv'); }
 }
-?>

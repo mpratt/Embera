@@ -54,4 +54,3 @@ class TestServiceDailyMotion extends TestProviders
 
     public function testProvider() { $this->validateProvider('DailyMotion'); }
 }
-?>

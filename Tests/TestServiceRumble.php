@@ -32,4 +32,3 @@ class TestServiceRumble extends TestProviders
 
     public function testProvider() { $this->validateProvider('Rumble'); }
 }
-?>

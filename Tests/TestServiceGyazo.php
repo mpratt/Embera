@@ -28,4 +28,3 @@ class TestServiceGyazo extends TestProviders
 
     public function testProvider() { $this->validateProvider('Gyazo'); }
 }
-?>

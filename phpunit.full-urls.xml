@@ -1,7 +1,5 @@
-<phpunit strict="true"
-         backupGlobals="false"
+<phpunit backupGlobals="false"
          backupStaticAttributes="false"
-         syntaxCheck="false"
          timeoutForSmallTests="200"
          timeoutForMediumTests="300"
          timeoutForLargeTests="360"
@@ -11,16 +9,8 @@
             <directory suffix=".php">Tests/</directory>
         </testsuite>
     </testsuites>
-    <filter>
-        <blacklist>
-            <directory suffix=".php">vendor/</directory>
-            <directory suffix=".php">Tests/</directory>
-        </blacklist>
-    </filter>
-    <logging>
-        <log type="coverage-html" target="Tests/Coverage" charset="UTF-8" yui="true" highlight="false" lowUpperBound="35" highLowerBound="70"/>
-    </logging>
+
     <php>
-      <const name="FULL_TEST" value="1"/>
+        <const name="FULL_TEST" value="1"/>
     </php>
 </phpunit>

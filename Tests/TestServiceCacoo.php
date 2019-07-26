@@ -47,4 +47,3 @@ class TestServiceCacoo extends TestProviders
 
     public function testProvider() { $this->validateProvider('Cacoo'); }
 }
-?>

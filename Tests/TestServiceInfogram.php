@@ -34,4 +34,3 @@ class TestServiceInfogram extends TestProviders
 
     public function testProvider() { $this->validateProvider('Infogram'); }
 }
-?>

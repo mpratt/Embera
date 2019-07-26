@@ -24,7 +24,7 @@ class TestServiceYoutube extends TestProviders
             'https://m.youtube.com/watch?v=mghhLqu31cQ',
             'https://m.youtube.com/watch?v=wB3sjAIARIY',
             'http://youtube.com/embed/mghhLqu31cQ',
-            'http://www.youtube.com/embed/mghhLqu31cQ',
+            'https://www.youtube.com/embed/mghhLqu31cQ',
             'http://youtu.be/8aGEb_yUpMs'
         ),
         'invalid' => array(
@@ -36,13 +36,13 @@ class TestServiceYoutube extends TestProviders
             'http://www.youtube.com/?id=ho'
         ),
         'normalize' => array(
-            'http://youtu.be/9bZkp7q19f0/werwer' => 'http://www.youtube.com/watch?v=9bZkp7q19f0',
-            'http://www.youtube.com/watch?v=9bZkp7q19f0' => 'http://www.youtube.com/watch?v=9bZkp7q19f0',
-            'http://youtube.com/watch?v=xVrJ8DxECbg&list=PLwnD0jwK0yymXOCl82nqdTdxe0ykVDcPW&index=1' => 'http://www.youtube.com/watch?v=xVrJ8DxECbg',
-            'http://youtu.be/8aGEb_yUpMs' => 'http://www.youtube.com/watch?v=8aGEb_yUpMs',
-            'http://youtube.com/watch?v=J---aiyznGQ&index=1' => 'http://www.youtube.com/watch?v=J---aiyznGQ',
-            'http://youtube.com/watch?v=mghhLqu31cQ' => 'http://www.youtube.com/watch?v=mghhLqu31cQ',
-            'http://youtube.com/embed/mghhLqu31cQ' => 'http://www.youtube.com/watch?v=mghhLqu31cQ',
+            'http://youtu.be/9bZkp7q19f0/werwer' => 'https://www.youtube.com/watch?v=9bZkp7q19f0',
+            'http://www.youtube.com/watch?v=9bZkp7q19f0' => 'https://www.youtube.com/watch?v=9bZkp7q19f0',
+            'http://youtube.com/watch?v=xVrJ8DxECbg&list=PLwnD0jwK0yymXOCl82nqdTdxe0ykVDcPW&index=1' => 'https://www.youtube.com/watch?v=xVrJ8DxECbg',
+            'http://youtu.be/8aGEb_yUpMs' => 'https://www.youtube.com/watch?v=8aGEb_yUpMs',
+            'http://youtube.com/watch?v=J---aiyznGQ&index=1' => 'https://www.youtube.com/watch?v=J---aiyznGQ',
+            'http://youtube.com/watch?v=mghhLqu31cQ' => 'https://www.youtube.com/watch?v=mghhLqu31cQ',
+            'http://youtube.com/embed/mghhLqu31cQ' => 'https://www.youtube.com/watch?v=mghhLqu31cQ',
         ),
         'fake' => array(
             'type' => 'video',
@@ -52,4 +52,3 @@ class TestServiceYoutube extends TestProviders
 
     public function testProvider() { $this->validateProvider('Youtube'); }
 }
-?>

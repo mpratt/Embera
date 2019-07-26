@@ -49,4 +49,3 @@ class TestServiceGithubGist extends TestProviders
         $this->validateProvider('GithubGist');
     }
 }
-?>

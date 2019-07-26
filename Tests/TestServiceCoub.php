@@ -45,4 +45,3 @@ class TestServiceCoub extends TestProviders
 
     public function testProvider() { $this->validateProvider('Coub'); }
 }
-?>

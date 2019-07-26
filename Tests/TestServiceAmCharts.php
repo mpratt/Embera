@@ -45,4 +45,3 @@ class TestServiceAmCharts extends TestProviders
 
     public function testProvider() { $this->validateProvider('AmCharts'); }
 }
-?>

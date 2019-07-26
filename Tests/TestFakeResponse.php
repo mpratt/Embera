@@ -10,7 +10,7 @@
  * file that was distributed with this source code.
  */
 
-class TestFakeResponse extends PHPUnit_Framework_TestCase
+class TestFakeResponse extends \PHPUnit\Framework\TestCase
 {
     public function testResponse()
     {
@@ -97,5 +97,3 @@ class TestFakeResponse extends PHPUnit_Framework_TestCase
         $this->assertEquals($response['thumb'], 'http://image.com');
     }
 }
-
-?>

@@ -42,4 +42,3 @@ class TestServiceChirbit extends TestProviders
 
     public function testProvider() { $this->validateProvider('Chirbit'); }
 }
-?>

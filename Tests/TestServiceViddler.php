@@ -44,4 +44,3 @@ class TestServiceViddler extends TestProviders
 
     public function testProvider() { $this->validateProvider('Viddler'); }
 }
-?>

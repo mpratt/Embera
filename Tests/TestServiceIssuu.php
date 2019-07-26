@@ -26,4 +26,3 @@ class TestServiceIssuu extends TestProviders
 
     public function testProvider() { $this->validateProvider('Issuu'); }
 }
-?>

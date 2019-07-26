@@ -41,4 +41,3 @@ class TestServiceHulu extends TestProviders
 
     public function testProvider() { $this->validateProvider('Hulu'); }
 }
-?>

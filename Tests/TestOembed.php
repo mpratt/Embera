@@ -10,7 +10,7 @@
  * file that was distributed with this source code.
  */
 
-class TestOembed extends PHPUnit_Framework_TestCase
+class TestOembed extends \PHPUnit\Framework\TestCase
 {
     public function testResourceInfoOembedDisabled()
     {
@@ -71,5 +71,3 @@ class TestOembed extends PHPUnit_Framework_TestCase
                             'http://www.apiurl.com/?');
     }
 }
-
-?>

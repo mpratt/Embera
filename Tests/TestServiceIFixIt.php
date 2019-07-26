@@ -37,4 +37,3 @@ class TestServiceIFixIt extends TestProviders
 
     public function testProvider() { $this->validateProvider('IFixIt'); }
 }
-?>

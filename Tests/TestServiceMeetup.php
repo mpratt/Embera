@@ -37,4 +37,3 @@ class TestServiceMeetup extends TestProviders
      */
     public function testProvider() { $this->validateProvider('Meetup'); }
 }
-?>

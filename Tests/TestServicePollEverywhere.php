@@ -30,4 +30,3 @@ class TestServicePollEverywhere extends TestProviders
 
     public function testProvider() { $this->validateProvider('PollEveryWhere'); }
 }
-?>

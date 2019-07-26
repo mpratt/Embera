@@ -37,4 +37,3 @@ class TestServiceMixCloud extends TestProviders
 
     public function testProvider() { $this->validateProvider('MixCloud'); }
 }
-?>

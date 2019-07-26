@@ -27,4 +27,3 @@ class TestServiceTwitch extends TestProviders
 
     public function testProvider() { $this->validateProvider('Twitch'); }
 }
-?>

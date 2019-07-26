@@ -44,4 +44,3 @@ class TestServiceBambuser extends TestProviders
 
     public function testProvider() { $this->validateProvider('Bambuser'); }
 }
-?>

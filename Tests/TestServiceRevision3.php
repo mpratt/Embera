@@ -42,4 +42,3 @@ class TestServiceRevision3 extends TestProviders
 
     public function testProvider() { $this->validateProvider('Revision3'); }
 }
-?>

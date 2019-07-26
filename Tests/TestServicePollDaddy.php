@@ -45,4 +45,3 @@ class TestServicePollDaddy extends TestProviders
 
     public function testProvider() { $this->validateProvider('PollDaddy'); }
 }
-?>

@@ -34,4 +34,3 @@ class TestServiceOfficemix extends TestProviders
 
     public function testProvider() { $this->validateProvider('Officemix'); }
 }
-?>

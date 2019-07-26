@@ -10,16 +10,16 @@
  * file that was distributed with this source code.
  */
 
-class TestHttpRequest extends PHPUnit_Framework_TestCase
+class TestHttpRequest extends \PHPUnit\Framework\TestCase
 {
     /**
      * This needs more execution time ..
      * @large
+     *
+     * @expectedException Exception
      */
     public function testInvalidUrl()
     {
-        $this->setExpectedException('Exception');
-
         $http = new \Embera\HttpRequest();
         $http->fetch('this is an invalid url');
     }
@@ -27,11 +27,11 @@ class TestHttpRequest extends PHPUnit_Framework_TestCase
     /**
      * This needs more execution time ..
      * @large
+     *
+     * @expectedException Exception
      */
     public function testInvalidUrl2()
     {
-        $this->setExpectedException('Exception');
-
         if (!ini_get('allow_url_fopen'))
         {
             $this->markTestIncomplete('Could not test file_get_contents wrapper, allow_url_fopen is closed');
@@ -49,7 +49,7 @@ class TestHttpRequest extends PHPUnit_Framework_TestCase
     public function testFetchCurl()
     {
         $http = new \Embera\HttpRequest();
-        $response = $http->fetch('http://httpbin.org/user-agent');
+        $response = $http->fetch('https://httpbin.org/user-agent');
         $response = json_decode($response, true);
 
         $this->assertEquals('Mozilla/5.0 PHP/Embera', $response['user-agent']);
@@ -61,7 +61,7 @@ class TestHttpRequest extends PHPUnit_Framework_TestCase
         );
 
         $http = new \Embera\HttpRequest($config);
-        $response = $http->fetch('http://httpbin.org/user-agent');
+        $response = $http->fetch('https://httpbin.org/user-agent');
         $response = json_decode($response, true);
 
         $this->assertEquals('PHP/Morcilla', $response['user-agent']);
@@ -75,12 +75,12 @@ class TestHttpRequest extends PHPUnit_Framework_TestCase
         );
 
         $http = new \Embera\HttpRequest($config);
-        $response = $http->fetch('http://httpbin.org/relative-redirect/2');
+        $response = $http->fetch('https://httpbin.org/relative-redirect/2');
         $response = json_decode($response, true);
 
-        $this->assertEquals('http://httpbin.org/get', $response['url']);
+        $this->assertEquals('https://httpbin.org/get', $response['url']);
 
-        $response = $http->fetch('http://httpbin.org/redirect-to?url=' . urlencode('http://httpbin.org/user-agent'));
+        $response = $http->fetch('https://httpbin.org/redirect-to?url=' . urlencode('https://httpbin.org/user-agent'));
         $response = json_decode($response, true);
 
         $this->assertEquals('PHP/Morcilla 2', $response['user-agent']);
@@ -93,12 +93,12 @@ class TestHttpRequest extends PHPUnit_Framework_TestCase
         );
 
         $http = new \Embera\HttpRequest($config);
-        $response = $http->fetch('http://httpbin.org/relative-redirect/2');
+        $response = $http->fetch('https://httpbin.org/relative-redirect/2');
         $response = json_decode($response, true);
 
-        $this->assertEquals('http://httpbin.org/get', $response['url']);
+        $this->assertEquals('https://httpbin.org/get', $response['url']);
 
-        $response = $http->fetch('http://httpbin.org/redirect-to?url=' . urlencode('http://httpbin.org/user-agent'));
+        $response = $http->fetch('https://httpbin.org/redirect-to?url=' . urlencode('https://httpbin.org/user-agent'));
         $response = json_decode($response, true);
 
         $this->assertEquals('PHP/Morcilla 3', $response['user-agent']);
@@ -124,18 +124,18 @@ class TestHttpRequest extends PHPUnit_Framework_TestCase
         );
 
         $http = new \Embera\HttpRequest($config);
-        $response = $http->fetch('http://httpbin.org/user-agent');
+        $response = $http->fetch('https://httpbin.org/user-agent');
         $response = json_decode($response, true);
 
         $this->assertEquals('PHP/FGC Morcilla', $response['user-agent']);
 
         $http = new \Embera\HttpRequest($config);
-        $response = $http->fetch('http://httpbin.org/relative-redirect/2');
+        $response = $http->fetch('https://httpbin.org/relative-redirect/2');
         $response = json_decode($response, true);
 
-        $this->assertEquals('http://httpbin.org/get', $response['url']);
+        $this->assertEquals('https://httpbin.org/get', $response['url']);
 
-        $response = $http->fetch('http://httpbin.org/redirect-to?url=' . urlencode('http://httpbin.org/user-agent'));
+        $response = $http->fetch('https://httpbin.org/redirect-to?url=' . urlencode('https://httpbin.org/user-agent'));
         $response = json_decode($response, true);
 
         $this->assertEquals('PHP/FGC Morcilla', $response['user-agent']);
@@ -154,7 +154,7 @@ class TestHttpRequest extends PHPUnit_Framework_TestCase
         );
 
         $http = new \Embera\HttpRequest($config);
-        $response = $http->fetch('http://httpbin.org/user-agent', array(
+        $response = $http->fetch('https://httpbin.org/user-agent', array(
             'curl' => array(
                 CURLOPT_USERAGENT => 'PHP/Morcilla 2',
             )
@@ -165,5 +165,3 @@ class TestHttpRequest extends PHPUnit_Framework_TestCase
         $this->assertEquals('PHP/Morcilla 2', $response['user-agent']);
     }
 }
-
-?>

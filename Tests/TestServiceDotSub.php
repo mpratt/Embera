@@ -45,4 +45,3 @@ class TestServiceDotSub extends TestProviders
 
     public function testProvider() { $this->validateProvider('DotSub'); }
 }
-?>

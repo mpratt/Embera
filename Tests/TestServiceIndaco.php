@@ -25,4 +25,3 @@ class TestServiceIndaco extends TestProviders
 
     public function testProvider() { $this->validateProvider('Indaco'); }
 }
-?>

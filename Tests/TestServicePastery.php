@@ -30,4 +30,3 @@ class TestServicePastery extends TestProviders
      */
     public function testProvider() { $this->validateProvider('Pastery'); }
 }
-?>

@@ -40,4 +40,3 @@ class TestServiceSapo extends TestProviders
 
     public function testProvider() { $this->validateProvider('Sapo'); }
 }
-?>

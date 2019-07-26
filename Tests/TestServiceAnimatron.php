@@ -34,4 +34,3 @@ class TestServiceAnimatron extends TestProviders
      */
     public function testProvider() { $this->validateProvider('Animatron'); }
 }
-?>

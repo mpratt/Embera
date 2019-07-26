@@ -27,4 +27,3 @@ class TestServicePunters extends TestProviders
 
     public function testProvider() { $this->validateProvider('Punters'); }
 }
-?>

@@ -36,4 +36,3 @@ class TestServiceTed extends TestProviders
 
     public function testProvider() { $this->validateProvider('Ted'); }
 }
-?>

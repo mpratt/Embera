@@ -10,7 +10,7 @@
  * file that was distributed with this source code.
  */
 
-class TestEmbera extends PHPUnit_Framework_TestCase
+class TestEmbera extends \PHPUnit\Framework\TestCase
 {
     public function testInvalidAutoEmbedInput()
     {
@@ -254,5 +254,3 @@ class TestEmbera extends PHPUnit_Framework_TestCase
     }
 
 }
-
-?>

@@ -27,4 +27,3 @@ class TestServiceMathembed extends TestProviders
 
     public function testProvider() { $this->validateProvider('Mathembed'); }
 }
-?>

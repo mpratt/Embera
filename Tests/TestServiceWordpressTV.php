@@ -32,4 +32,3 @@ class TestServiceWordpressTV extends TestProviders
 
     public function testProvider() { $this->validateProvider('WordpressTV'); }
 }
-?>

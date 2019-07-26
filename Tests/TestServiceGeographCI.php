@@ -33,4 +33,3 @@ class TestServiceGeographCI extends TestProviders
 
     public function testProvider() { $this->validateProvider('GeographCI'); }
 }
-?>

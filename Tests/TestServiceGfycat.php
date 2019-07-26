@@ -39,4 +39,3 @@ class TestServiceGfycat extends TestProviders
 
     public function testProvider() { $this->validateProvider('Gfycat'); }
 }
-?>

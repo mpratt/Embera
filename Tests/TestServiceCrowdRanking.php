@@ -46,4 +46,3 @@ class TestServiceCrowdRanking extends TestProviders
 
     public function testProvider() { $this->validateProvider('CrowdRanking'); }
 }
-?>

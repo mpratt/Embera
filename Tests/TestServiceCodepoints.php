@@ -35,4 +35,3 @@ class TestServiceCodepoints extends TestProviders
 
     public function testProvider() { $this->validateProvider('Codepoints'); }
 }
-?>

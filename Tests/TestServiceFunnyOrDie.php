@@ -46,4 +46,3 @@ class TestServiceFunnyOrDie extends TestProviders
 
     public function testProvider() { $this->validateProvider('FunnyOrDie'); }
 }
-?>

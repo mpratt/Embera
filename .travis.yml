@@ -5,12 +5,8 @@ php:
   - 7.0
   - 7.1
   - 7.2
-<<<<<<< HEAD
   - 7.3
   - 7.4
-=======
-  - hhvm
->>>>>>> Adjust cache & allowed failure
 
 cache:
   directories:
@@ -20,28 +16,9 @@ cache:
 matrix:
   fast_finish: true
   allow_failures:
-<<<<<<< HEAD
-    - 5.6
-    - 7.4
+    - php: 5.6
+    - php: 7.4
 
 before_script: composer install -o --no-interaction --no-progress
 
 script: ./vendor/bin/simple-phpunit
-=======
-    - php: 7.2
-  include:
-    - php: 5.3
-      dist: precise
-      sudo: required
-    - php: 5.4
-      dist: precise
-      sudo: required
-
-script:
-  - composer install -o  --no-interaction --no-progress --prefer-dist
-  - ./vendor/bin/simple-phpunit --coverage-clover=coverage.clover
-
-after_script:
-  - wget https://scrutinizer-ci.com/ocular.phar
-  - php ocular.phar code-coverage:upload --format=php-clover coverage.clover
->>>>>>> Adjust cache & allowed failure

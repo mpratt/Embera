@@ -41,4 +41,3 @@ class TestServiceAudioSnaps extends TestProviders
 
     public function testProvider() { $this->validateProvider('AudioSnaps'); }
 }
-?>

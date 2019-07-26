@@ -38,4 +38,3 @@ class TestServiceReleaseWire extends TestProviders
 
     public function testProvider() { $this->validateProvider('ReleaseWire'); }
 }
-?>

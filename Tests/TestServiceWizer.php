@@ -25,4 +25,3 @@ class TestServiceWizer extends TestProviders
 
     public function testProvider() { $this->validateProvider('Wizer'); }
 }
-?>

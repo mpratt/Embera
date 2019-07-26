@@ -10,7 +10,7 @@
  * file that was distributed with this source code.
  */
 
-class TestUrl extends PHPUnit_Framework_TestCase
+class TestUrl extends \PHPUnit\Framework\TestCase
 {
     public function testInvalidPattern()
     {
@@ -150,5 +150,3 @@ class TestUrl extends PHPUnit_Framework_TestCase
         $this->assertEquals('https://www.hablarmierda.net/path/', (string) $url);
     }
 }
-
-?>

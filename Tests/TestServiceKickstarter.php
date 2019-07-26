@@ -57,4 +57,3 @@ class TestServiceKickstarter extends TestProviders
         $this->validateProvider('Kickstarter');
     }
 }
-?>

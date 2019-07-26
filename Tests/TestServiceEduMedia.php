@@ -27,4 +27,3 @@ class TestServiceEduMedia extends TestProviders
 
     public function testProvider() { $this->validateProvider('EduMedia'); }
 }
-?>

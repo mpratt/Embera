@@ -41,4 +41,3 @@ class TestServiceDipity extends TestProviders
 
     public function testProvider() { $this->validateProvider('Dipity'); }
 }
-?>

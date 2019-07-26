@@ -10,7 +10,7 @@
  * file that was distributed with this source code.
  */
 
-class TestProviders extends PHPUnit_Framework_TestCase
+class TestProviders extends \PHPUnit\Framework\TestCase
 {
     /** @var array with urls */
     protected $urls;
@@ -234,4 +234,3 @@ class TestProviders extends PHPUnit_Framework_TestCase
         }
     }
 }
-?>

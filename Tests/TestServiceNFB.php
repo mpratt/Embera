@@ -42,4 +42,3 @@ class TestServiceNFB extends TestProviders
 
     public function testProvider() { $this->validateProvider('NFB'); }
 }
-?>

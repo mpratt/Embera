@@ -32,4 +32,3 @@ class TestServiceVevo extends TestProviders
         //$this->validateProvider('Vevo');
     }
 }
-?>

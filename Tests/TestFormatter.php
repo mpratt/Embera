@@ -10,7 +10,7 @@
  * file that was distributed with this source code.
  */
 
-class TestFormatter extends PHPUnit_Framework_TestCase
+class TestFormatter extends \PHPUnit\Framework\TestCase
 {
     public function testTemplateArray()
     {
@@ -94,10 +94,11 @@ class TestFormatter extends PHPUnit_Framework_TestCase
         $this->assertContains('<iframe', $result);
     }
 
+    /**
+     * @expectedException InvalidArgumentException
+     */
     public function testSupportForDecoratedObjectAPI2()
     {
-        $this->setExpectedException('InvalidArgumentException');
-
         $embera = new \Embera\Embera(array('oembed' => false));
         $embera = new \Embera\Formatter($embera);
 
@@ -128,5 +129,3 @@ class TestFormatter extends PHPUnit_Framework_TestCase
         $this->assertEquals($result, '');
     }
 }
-
-?>
