@@ -28,8 +28,7 @@ class Ustream extends \Embera\Adapters\Service
         $this->url->invalidPattern('ustream\.(?:com|tv)/(?:explore|howto|upcomming|our-company|services|premium-membership|search)$');
 
         return (preg_match('~ustream\.(?:com|tv)/channel/(?:[\w\d\-_]+)$~i', $this->url) ||
+                preg_match('~ustream\.(?:com|tv)/recorded/(?:[\w\d\-_]+)$~i', $this->url) ||
                 preg_match('~ustream\.(?:com|tv)/(?:[\w\d\-_]+)$~i', $this->url));
     }
 }
-
-?>
