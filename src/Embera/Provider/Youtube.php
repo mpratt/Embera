@@ -35,7 +35,7 @@ class Youtube extends ProviderAdapter implements ProviderInterface
     /** inline {@inheritdoc} */
     public function normalizeUrl(Url $url)
     {
-        if (preg_match('~(?:v=|youtu\.be/|youtube\.com/embed/)([a-z0-9_\-]+)~i', (string) $this->url, $matches)) {
+        if (preg_match('~(?:v=|youtu\.be/|youtube\.com/embed/)([a-z0-9_\-]+)~i', (string) $url, $matches)) {
             $url->overwrite('https://www.youtube.com/watch?v=' . $matches[1]);
         }
 
@@ -47,12 +47,22 @@ class Youtube extends ProviderAdapter implements ProviderInterface
     {
         preg_match('~v=([a-z0-9_\-]+)~i', (string) $this->url, $matches);
 
+        $embedUrl = 'https://www.youtube.com/embed/' . $matches['1'] . '?feature=oembed';
+
+        $attr = [];
+        $attr[] = 'width="{width}"';
+        $attr[] = 'height="{height}"';
+        $attr[] = 'src="' . $embedUrl . '"';
+        $attr[] = 'frameborder="0"';
+        $attr[] = 'allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"';
+        $attr[] = 'allowfullscreen';
+
         return array(
             'type' => 'video',
             'provider_name' => 'Youtube',
             'provider_url' => 'https://www.youtube.com',
             'title' => 'Unknown title',
-            'html' => '<iframe width="{width}" height="{height}" src="//www.youtube.com/embed/' . $matches['1'] . '" frameborder="0" allowfullscreen></iframe>',
+            'html' => '<iframe ' . implode(' ', $attr). '></iframe>',
         );
     }
 

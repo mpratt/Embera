@@ -12,6 +12,7 @@
 
 namespace Embera\Http;
 
+use Embera\Embera;
 use Embera\Provider\ProviderInterface;
 
 /**
@@ -20,7 +21,7 @@ use Embera\Provider\ProviderInterface;
  *
  * TODO: Support xml responses
  */
-class Oembed
+class OembedClient
 {
     /** @var array Configuration settings */
     protected $config = [];
@@ -50,7 +51,7 @@ class Oembed
     public function getResponseFrom(ProviderInterface $provider)
     {
         if ($this->config['fake_responses'] == Embera::ONLY_FAKE_RESPONSES) {
-            $response = $provider->getFakeResponse();
+            $response = $this->processFakeResponse($provider->getFakeResponse());
         } else {
            $response = $this->lookup($provider);
         }
@@ -79,7 +80,7 @@ class Oembed
         }
 
         if ($this->config['fake_responses'] == Embera::ALLOW_FAKE_RESPONSES) {
-            return $provider->getFakeResponse();
+            return $this->processFakeResponse($provider->getFakeResponse());
         }
 
         return [];
@@ -91,13 +92,47 @@ class Oembed
      * need to pass urlencoded parameters, http_build_query already does
      * this for us.
      *
-     * @param string $apiUrl The Url to the Oembed Api
+     * @param string $endpoint The Url to the Oembed endpoint
      * @param array  $params Parameters for the query string
      * @return string
      */
     protected function constructUrl($endpoint, array $params = array())
     {
         return $endpoint . ((strpos($endpoint, '?') === false) ? '?' : '&') . http_build_query(array_filter($params));
+    }
+
+    /**
+     * Builds the fake response.
+     * This replaces placeholders that are present in $config['fake']
+     * into the response array
+     *
+     * @param array $response
+     * @return array
+     */
+    protected function processFakeResponse(array $response)
+    {
+        $defaultValues = [
+            'version' => '1.0',
+            'provider_name' => '',
+            'url' => '',
+            'title' => '',
+            'author_name' => '',
+            'author_url' => '',
+            'cache_age' => 0,
+            'embera_using_fake_response' => 1
+        ];
+
+        if (!empty($response['html'])) {
+            foreach ($this->config as $key => $v) {
+                if (in_array($key, ['maxwidth', 'maxheight'])) {
+                    $key = str_replace('max', '', $key);
+                }
+
+                $response['html'] = str_replace('{' . $key. '}', $v, $response['html']);
+            }
+        }
+
+        return array_merge($defaultValues, $response);
     }
 
 }

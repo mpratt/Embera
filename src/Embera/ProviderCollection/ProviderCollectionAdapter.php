@@ -68,12 +68,17 @@ abstract class ProviderCollectionAdapter implements ProviderCollectionInterface
     public function filter($providerName)
     {
         if (is_callable($providerName)) {
-            $this->providers = array_filter($this->providers, $providerName);;
+            $list = array_filter($this->providers, $providerName);
         } else {
-            $this->providers = array_filter($this->providers, function ($class) use ($providerName) {
+            $list = array_filter($this->providers, function ($class) use ($providerName) {
                 return (strtolower($providerName) == strtolower($class));
             });
         }
+
+        $newCollection = new static($this->config);
+        $newCollection->setProviderList($list);
+
+        return $newCollection;
     }
 
     /** inline {@inheritdoc} */
@@ -89,6 +94,12 @@ abstract class ProviderCollectionAdapter implements ProviderCollectionInterface
         });
 
         return $this->extractProviders(array_unique($urls));
+    }
+
+    /** inline {@inheritdoc} */
+    public function setProviderList(array $list)
+    {
+        $this->providers = $list;
     }
 
     /**
@@ -137,28 +148,23 @@ abstract class ProviderCollectionAdapter implements ProviderCollectionInterface
      *
      * @param string $url
      * @return mixed The provider Object
-     *
-     * @throws InvalidArgumentException when the url is invalid
      */
     protected function getProvider($url)
     {
-        $data = parse_url($url);
-        if (empty($data['host'])) {
-            throw new InvalidArgumentException(sprintf('Invalid Url: %s', $url));
-        }
+        if ($data = parse_url($url)) {
+            $host = preg_replace('~^(?:www|player)\.~i', '', strtolower($data['host']));
+            if (isset($this->providers[$host])) {
+                return $this->initializeProvider($this->providers[$host], $url);
+            } else if (isset($this->providers['*.' . $host])) {
+                return $this->initializeProvider($this->providers['*.' . $host], $url);
+            }
 
-        $host = preg_replace('~^(?:www|player)\.~i', '', strtolower($data['host']));
-        if (isset($this->providers[$host])) {
-            return $this->initializeProvider($this->providers[$host], $url);
-        } else if (isset($this->providers['*.' . $host])) {
-            return $this->initializeProvider($this->providers['*.' . $host], $url);
-        }
-
-        foreach ($this->wildCardHosts as $value) {
-            $regex = strtr(preg_quote($value, '~'), ['\*' => '(?:.*)']);
-            if (preg_match('~' . $regex . '~i', $host)) {
-                $this->providers[$host] = $this->providers[$value];
-                return $this->initializeProvider($this->providers[$value], $url);
+            foreach ($this->wildCardHosts as $value) {
+                $regex = strtr(preg_quote($value, '~'), ['\*' => '(?:.*)']);
+                if (preg_match('~' . $regex . '~i', $host)) {
+                    $this->providers[$host] = $this->providers[$value];
+                    return $this->initializeProvider($this->providers[$value], $url);
+                }
             }
         }
 
@@ -175,7 +181,7 @@ abstract class ProviderCollectionAdapter implements ProviderCollectionInterface
     protected function initializeProvider($class, $url)
     {
         if (strpos($class, '\\') === false) {
-            $class = '\Embera\Providers\\' . $class;
+            $class = 'Embera\Provider\\' . $class;
         }
 
         $reflection = new ReflectionClass($class);

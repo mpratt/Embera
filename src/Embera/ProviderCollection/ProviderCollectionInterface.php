@@ -35,10 +35,11 @@ interface ProviderCollectionInterface
     public function addProvider($host, $class);
 
     /**
-     * Filters a provider from the provider list based on the provider name
+     * Filters a provider from the provider list based on the provider name and returns a new
+     * collection with the given results
      *
      * @param string|callable $providerName The name of the provider or a callable function
-     * @return void
+     * @return object
      */
     public function filter($providerName);
 
@@ -49,4 +50,12 @@ interface ProviderCollectionInterface
      * @return array
      */
     public function findProviders($data);
+
+    /**
+     * Sets the providerList relationship
+     *
+     * @param array $list
+     * @return void
+     */
+    public function setProviderList(array $list);
 }

@@ -101,7 +101,7 @@ class Url
      */
     public function removeQueryString()
     {
-        $this->parts['query'] = $this->parts['fragments'] = false;
+        $this->parts['query'] = $this->parts['fragment'] = false;
     }
 
     /**
@@ -155,5 +155,4 @@ class Url
     {
         $this->parts['scheme'] = 'https';
     }
-
 }

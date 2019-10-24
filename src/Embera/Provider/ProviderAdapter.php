@@ -47,12 +47,12 @@ abstract class ProviderAdapter
     public function getParams()
     {
         $params = [];
-        foreach ($this->allowedParams as $key => $value) {
+        foreach ($this->allowedParams as $key) {
             if (isset($this->config[$key])) {
                 $params[$key] = $this->config[$key];
             }
 
-            $customKey = strtolower(basename(str_replace('\\', '/', get_class($this))) . '_' . $key);
+            $customKey = strtolower($this->getProviderName() . '_' . $key);
             if (isset($this->config[$customKey])) {
                 $params[$key] = $this->config[$customKey];
             }
@@ -61,6 +61,12 @@ abstract class ProviderAdapter
         return array_filter(array_merge($params,[
             'url' => $this->getUrl(),
         ]));
+    }
+
+    /** inline {@inheritdoc} */
+    public function getProviderName()
+    {
+        return basename(str_replace('\\', '/', get_class($this)));
     }
 
     /** inline {@inheritdoc} */

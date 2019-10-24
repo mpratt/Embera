@@ -50,6 +50,13 @@ interface ProviderInterface
     public function getParams();
 
     /**
+     * Returns the name of the current provider
+     *
+     * @return string
+     */
+    public function getProviderName();
+
+    /**
      * Returns the provider Endpoint
      *
      * @return string

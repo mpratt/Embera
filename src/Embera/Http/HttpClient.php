@@ -24,9 +24,6 @@ class HttpClient
     /** @var array Array with custom curl/fopen options */
     protected $config = [];
 
-    /** @var string User Agent String */
-    protected $userAgent = 'Mozilla/5.0 PHP/Embera';
-
     /**
      * Constructor
      *
@@ -35,7 +32,10 @@ class HttpClient
      */
     public function __construct(array $config = [])
     {
-        $this->config = array_merge([], $config);
+        $this->config = array_merge([
+            'use_curl' => true,
+            'user_agent' => 'Mozilla/5.0 PHP/Embera',
+        ], $config);
     }
 
     /**
@@ -53,15 +53,11 @@ class HttpClient
             throw new InvalidArgumentException(sprintf('Invalid url %s', $url));
         }
 
-        if (function_exists('curl_init')) {
-            return $this->curl($url, $params['curl']);
+        if (function_exists('curl_init') && $this->config['use_curl']) {
+            return $this->fetchWithCurl($url);
         }
 
-        if (ini_get('allow_url_fopen')) {
-            return $this->fileGetContents($url, $params['fopen']);
-        }
-
-        throw new Exception('Could not execute http request. No Curl found and allow_url_fopen is disabled.');
+        return $this->fetchWithFileGetContents($url);
     }
 
     /**
@@ -73,11 +69,11 @@ class HttpClient
      *
      * @throws Exception when the returned status code is not 200 or no data was found
      */
-    protected function curl($url, array $params = [])
+    protected function fetchWithCurl($url, array $params = [])
     {
         // Not using array_merge here because that function reindexes numeric keys
         $options = $params + array(
-            CURLOPT_USERAGENT => $this->userAgent,
+            CURLOPT_USERAGENT => $this->config['user_agent'],
             CURLOPT_ENCODING => '',
             CURLOPT_FOLLOWLOCATION => true,
         );
@@ -114,11 +110,15 @@ class HttpClient
      *
      * @throws Exception when allow_url_fopen is disabled or when no data was returned
      */
-    protected function fileGetContents($url, array $params = [])
+    protected function fetchWithFileGetContents($url, array $params = [])
     {
+        if (!ini_get('allow_url_fopen')) {
+            throw new Exception('Could not execute http request - allow_url_fopen is disabled.');
+        }
+
         $params = array_merge([
             'method' => 'GET',
-            'user_agent' => $this->userAgent,
+            'user_agent' => $this->config['user_agent'],
             'follow_location' => 1,
             'max_redirects' => 20,
             'timeout' => 40
