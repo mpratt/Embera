@@ -113,9 +113,12 @@ final class DefaultProviderCollectionTest extends TestCase
         $providers = $collection->findProviders($this->urls);
         $this->assertTrue(count($providers) == 0);
 
-        // Add Youtube
+        // Add Only Youtube
         $collection->addProvider('youtube.com', 'Embera\Provider\Youtube');
         $providers = $collection->findProviders($this->urls);
         $this->assertTrue(count($providers) > 0);
+        foreach ($providers as $p) {
+            $this->assertEquals($p->getProviderName(), 'Youtube');
+        }
     }
 }
