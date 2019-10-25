@@ -51,7 +51,7 @@ class OembedClient
     public function getResponseFrom(ProviderInterface $provider)
     {
         if ($this->config['fake_responses'] == Embera::ONLY_FAKE_RESPONSES) {
-            $response = $this->processFakeResponse($provider->getFakeResponse());
+            $response = $this->processFakeResponse($provider->getProviderName(), $provider->getFakeResponse());
         } else {
            $response = $this->lookup($provider);
         }
@@ -76,11 +76,14 @@ class OembedClient
         $json = json_decode($response, true);
 
         if ($json) {
-            return array_merge($json, ['embera_using_fake_response' => 0]);
+            return array_merge($json, [
+                'embera_using_fake_response' => 0,
+                'embera_provider_name' => $provider->getProviderName(),
+            ]);
         }
 
         if ($this->config['fake_responses'] == Embera::ALLOW_FAKE_RESPONSES) {
-            return $this->processFakeResponse($provider->getFakeResponse());
+            return $this->processFakeResponse($provider->getProviderName(), $provider->getFakeResponse());
         }
 
         return [];
@@ -106,10 +109,11 @@ class OembedClient
      * This replaces placeholders that are present in $config['fake']
      * into the response array
      *
+     * @param string $providerName
      * @param array $response
      * @return array
      */
-    protected function processFakeResponse(array $response)
+    protected function processFakeResponse($providerName, array $response)
     {
         $defaultValues = [
             'version' => '1.0',
@@ -119,7 +123,8 @@ class OembedClient
             'author_name' => '',
             'author_url' => '',
             'cache_age' => 0,
-            'embera_using_fake_response' => 1
+            'embera_using_fake_response' => 1,
+            'embera_provider_name' => $providerName,
         ];
 
         if (!empty($response['html'])) {
