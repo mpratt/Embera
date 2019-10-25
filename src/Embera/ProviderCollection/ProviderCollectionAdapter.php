@@ -152,6 +152,7 @@ abstract class ProviderCollectionAdapter implements ProviderCollectionInterface
     protected function getProvider($url)
     {
         if ($data = parse_url($url)) {
+            $data = array_merge(['host' => ''], $data); // Just in case we didnt find a host
             $host = preg_replace('~^(?:www|player)\.~i', '', strtolower($data['host']));
             if (isset($this->providers[$host])) {
                 return $this->initializeProvider($this->providers[$host], $url);
