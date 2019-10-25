@@ -39,6 +39,9 @@ class Embera
     /** @var array Logged errors */
     protected $errors = [];
 
+    /** @var array Closures to be used on oembed responses */
+    protected $filters = [];
+
     /** @var \Embera\ProviderCollection\ProviderCollectionInterface */
     protected $providerCollection;
 
@@ -83,7 +86,6 @@ class Embera
     public function autoEmbed($text)
     {
         if (is_string($text)) {
-
             $table = [];
             $providers = $this->getUrlData($text);
             foreach ($providers as $url => $response) {
@@ -114,14 +116,44 @@ class Embera
         $return = [];
         foreach ($this->providerCollection->findProviders($urls) as $url => $provider) {
             try {
+
                 $oembedClient = new OembedClient($this->config, new HttpClient($this->config));
-                $return[$url] = $oembedClient->getResponseFrom($provider);
+                $response = $oembedClient->getResponseFrom($provider);
+                $return[$url] = $this->applyFilters($response);
+
             } catch (Exception $e) {
                 $this->errors[] = $e->getMessage();
             }
         }
 
         return array_filter($return);
+    }
+
+    /**
+     * Adds a filter to the oembed response
+     *
+     * @param callable $closure
+     * @return void
+     */
+    public function addFilter(callable $closure)
+    {
+        $this->filters[] = $closure;
+    }
+
+    /**
+     * Applies registered filters/closures
+     * to the oembed response.
+     *
+     * @param array $response
+     * @return array
+     */
+    protected function applyFilters(array $response)
+    {
+        foreach ($this->filters as $closure) {
+            $response = $closure($response);
+        }
+
+        return $response;
     }
 
     /**

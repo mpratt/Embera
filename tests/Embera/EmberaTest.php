@@ -98,4 +98,38 @@ class EmberaTest extends TestCase
         $this->assertTrue(strpos($autoEmbedText, $embedResponse[$urls[1]]['html']) !== false);
     }
 
+    public function testEmberaFilters()
+    {
+        $config = [
+            'fake_responses' => Embera::ONLY_FAKE_RESPONSES,
+            'width' => 400,
+            'height' => 400,
+        ];
+
+        $embera = new Embera($config);
+
+        $url = 'https://youtube.com/watch?v=mghhLqu31cQ';
+        $responseBeforeFilters = $embera->getUrlData($url);
+
+        $embera->addFilter(function ($response) {
+            if (!empty($response['html'])) {
+                $response['html'] = str_replace('iframe', 'dframe', $response['html']);
+            }
+
+            return $response;
+        });
+
+        $embera->addFilter(function ($response) {
+            if (!empty($response['html'])) {
+                $response['html'] = str_replace('dframe', 'xframe', $response['html']);
+            }
+
+            return $response;
+        });
+
+        $responseAfterFilters = $embera->getUrlData($url);
+
+        $this->assertEquals($responseAfterFilters[$url]['html'], str_replace('iframe', 'xframe', $responseBeforeFilters[$url]['html']));
+    }
+
 }
