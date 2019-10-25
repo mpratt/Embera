@@ -59,7 +59,7 @@ class Embera
         $this->config = array_merge([
             'https_only' => false,
             'fake_responses' => self::ALLOW_FAKE_RESPONSES,
-            'ignore_tags' => array('pre', 'code', 'a', 'img'),
+            'ignore_tags' => ['pre', 'code', 'a', 'img'],
             'responsive_embeds' => false,
             'width' => 0,
             'height' => 0,
@@ -112,9 +112,9 @@ class Embera
     public function getUrlData($urls)
     {
         $return = [];
-        $oembedClient = new OembedClient($this->config, new HttpClient($this->config));
-        foreach ($this->providerCollection->findProviders((array) $urls) as $url => $provider) {
+        foreach ($this->providerCollection->findProviders($urls) as $url => $provider) {
             try {
+                $oembedClient = new OembedClient($this->config, new HttpClient($this->config));
                 $return[$url] = $oembedClient->getResponseFrom($provider);
             } catch (Exception $e) {
                 $this->errors[] = $e->getMessage();
