@@ -37,12 +37,7 @@ abstract class ProviderCollectionAdapter implements ProviderCollectionInterface
         'youtu.be' => 'Youtube',
     ];
 
-    /**
-     * Construct
-     *
-     * @param array $config  Associative array with configuration options
-     * @return void
-     */
+    /** Alias for the setConfig method */
     public function __construct(array $config = [])
     {
         $this->setConfig($config);

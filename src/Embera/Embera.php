@@ -12,8 +12,9 @@
 
 namespace Embera;
 
-use Embera\Http\OembedClient;
 use Embera\Http\HttpClient;
+use Embera\Http\OembedClient;
+use Embera\Http\HttpClientInterface;
 use Embera\ProviderCollection\ProviderCollectionInterface;
 use Embera\ProviderCollection\DefaultProviderCollection;
 
@@ -45,20 +46,19 @@ class Embera
     /** @var \Embera\ProviderCollection\ProviderCollectionInterface */
     protected $providerCollection;
 
+    /** @var \Embera\Http\HttpClientInterface */
+    protected $httpClient;
+
     /**
      * Constructor
      *
      * @param array $config
      * @param ProviderCollectionInterface $collection
+     * @param HttpClientInterface $httpClient
      * @return void
      */
-    public function __construct(array $config = [], ProviderCollectionInterface $collection = null)
+    public function __construct(array $config = [], ProviderCollectionInterface $collection = null, HttpClientInterface $httpClient = null)
     {
-        $this->providerCollection = $collection;
-        if (!$collection) {
-            $this->providerCollection = new DefaultProviderCollection();
-        }
-
         $this->config = array_merge([
             'https_only' => false,
             'fake_responses' => self::ALLOW_FAKE_RESPONSES,
@@ -74,7 +74,19 @@ class Embera
         $this->config['maxheight'] = max($this->config['height'], $this->config['maxheight']);
         unset($this->config['height'], $this->config['width']);
 
+        $this->providerCollection = $collection;
+        if (!$collection) {
+            $this->providerCollection = new DefaultProviderCollection($this->config);
+        }
+
+        $this->httpClient = $httpClient;
+        if (!$httpClient) {
+            $this->httpClient = new HttpClient($this->config);
+        }
+
+        // Set the config just in case.
         $this->providerCollection->setConfig($this->config);
+        $this->httpClient->setConfig($this->config);
     }
 
     /**
@@ -117,7 +129,7 @@ class Embera
         foreach ($this->providerCollection->findProviders($urls) as $url => $provider) {
             try {
 
-                $oembedClient = new OembedClient($this->config, new HttpClient($this->config));
+                $oembedClient = new OembedClient($this->config, $this->httpClient);
                 $response = $oembedClient->getResponseFrom($provider);
                 $return[$url] = $this->applyFilters($response);
 

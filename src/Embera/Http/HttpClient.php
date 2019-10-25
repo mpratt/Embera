@@ -19,18 +19,19 @@ use InvalidArgumentException;
  * This class is in charge of doing http requests. Its a very minimal
  * wrapper for curl or file_get_contents
  */
-class HttpClient
+class HttpClient implements HttpClientInterface
 {
     /** @var array Array with custom curl/fopen options */
     protected $config = [];
 
-    /**
-     * Constructor
-     *
-     * @param array $config
-     * @return void
-     */
+    /** Alias for the setConfig method */
     public function __construct(array $config = [])
+    {
+        $this->setConfig($config);
+    }
+
+    /** inline {@inheritdoc} */
+    public function setConfig(array $config = [])
     {
         $this->config = array_merge([
             'use_curl' => true,
@@ -38,15 +39,7 @@ class HttpClient
         ], $config);
     }
 
-    /**
-     * Executes http requests
-     *
-     * @param string $url
-     * @param array $params Additional parameters for the respective part
-     * @return string
-     *
-     * @throws Exception when an error ocurred or if no way to do a request exists
-     */
+    /** inline {@inheritdoc} */
     public function fetch($url, array $params = [])
     {
         if (!filter_var($url, \FILTER_VALIDATE_URL)) {
@@ -131,4 +124,5 @@ class HttpClient
 
         throw new Exception('Invalid Server Response from ' . $url);
     }
+
 }
