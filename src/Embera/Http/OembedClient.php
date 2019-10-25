@@ -124,6 +124,10 @@ class OembedClient
 
         if (!empty($response['html'])) {
             foreach ($this->config as $key => $v) {
+                if (!is_string($v) && !is_numeric($v)) {
+                    continue;
+                }
+
                 if (in_array($key, ['maxwidth', 'maxheight'])) {
                     $key = str_replace('max', '', $key);
                 }
