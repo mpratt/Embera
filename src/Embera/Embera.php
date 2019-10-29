@@ -16,6 +16,7 @@ use Embera\Http\HttpClient;
 use Embera\Http\OembedClient;
 use Embera\Http\HttpClientInterface;
 use Embera\Html\IgnoreTags;
+use Embera\Html\ResponsiveEmbeds;
 use Embera\ProviderCollection\ProviderCollectionInterface;
 use Embera\ProviderCollection\DefaultProviderCollection;
 
@@ -64,7 +65,7 @@ class Embera
             'https_only' => false,
             'fake_responses' => self::ALLOW_FAKE_RESPONSES,
             'ignore_tags' => [ 'pre', 'code', 'a', 'img', 'iframe' ],
-            'responsive_embeds' => false,
+            'responsive' => false,
             'width' => 0,
             'height' => 0,
             'maxheight' => 0,
@@ -138,6 +139,12 @@ class Embera
 
                 $oembedClient = new OembedClient($this->config, $this->httpClient);
                 $response = $oembedClient->getResponseFrom($provider);
+
+                if ($this->config['responsive']) {
+                    $responsive = new ResponsiveEmbeds();
+                    $response = $responsive->transform($response);
+                }
+
                 $return[$url] = $this->applyFilters($response);
 
             } catch (Exception $e) {
