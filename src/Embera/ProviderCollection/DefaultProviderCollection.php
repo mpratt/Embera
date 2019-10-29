@@ -25,6 +25,7 @@ class defaultProviderCollection extends ProviderCollectionAdapter
         $this->registerProvider([
             'TwentyThreeHq',
             'Adways',
+            'Altru',
             'Youtube',
         ]);
     }
