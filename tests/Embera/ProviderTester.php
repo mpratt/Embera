@@ -12,6 +12,8 @@
 
 namespace Embera;
 
+use Embera\Embera;
+use Embera\ProviderCollection\DefaultProviderCollection;
 use Embera\Http\OembedClient;
 use Embera\Http\HttpClient;
 
@@ -71,6 +73,7 @@ class ProviderTester extends TestCase
         }
 
         $this->validateUrlDetection($p, $this->tasks, $config);
+        $this->validateCollectionDetection($p, $this->tasks, $config);
         if (!empty($this->tasks['normalize_urls'])) {
             $this->validateUrlNormalization($p, $this->tasks['normalize_urls'], $config);
         }
@@ -80,6 +83,33 @@ class ProviderTester extends TestCase
         }
 
         $this->validateRealResponse($p, $this->tasks, $rounds, $config);
+    }
+
+    /**
+     * Checks if the main library detects this provider
+     *
+     * @param string $provider Provider Name
+     * @param array $tasks
+     * @param array $config
+     * @return void
+     *
+     * @medium
+     */
+    protected function validateCollectionDetection($providerName, array $tasks, array $config = [])
+    {
+        $config = array_merge([
+            'https_only' => false,
+            'fake_responses' => Embera::ALLOW_FAKE_RESPONSES,
+            'maxwidth' => 430,
+            'maxheight' => 270,
+        ], $config);
+
+        $collection = new DefaultProviderCollection($config);
+        $providers = $collection->findProviders($tasks['valid_urls']);
+
+        foreach ($providers as $p) {
+            $this->assertEquals($p->getProviderName(), $providerName);
+        }
     }
 
     /**
