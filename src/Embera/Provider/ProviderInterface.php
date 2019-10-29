@@ -110,4 +110,11 @@ interface ProviderInterface
      */
     public function normalizeUrl(Url $url);
 
+    /**
+     * Returns an array with hosts that belong to this provider.
+     *
+     * @return array
+     */
+    public static function getHosts();
+
 }

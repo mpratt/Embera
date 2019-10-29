@@ -24,6 +24,9 @@ abstract class ProviderAdapter
     /**  @var Embera\Url */
     protected $url;
 
+    /**  @var Array with hosts where the provider belongs */
+    protected static $hosts = [];
+
     /** @var array Associative array with config/parameters to be sent to the oembed provider */
     protected $config = [];
 
@@ -107,6 +110,12 @@ abstract class ProviderAdapter
     public function normalizeUrl(Url $url)
     {
         return $url;
+    }
+
+    /** inline {@inheritdoc} */
+    public static function getHosts()
+    {
+        return self::$hosts;
     }
 
 }

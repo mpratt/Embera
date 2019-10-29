@@ -24,6 +24,11 @@ class Youtube extends ProviderAdapter implements ProviderInterface
     protected $endpoint = 'https://www.youtube.com/oembed?format=json&scheme=https';
 
     /** inline {@inheritdoc} */
+    protected static $hosts = [
+        'm.youtube.com', 'youtube.com', 'youtu.be',
+    ];
+
+    /** inline {@inheritdoc} */
     protected $httpsSupport = true;
 
     /** inline {@inheritdoc} */

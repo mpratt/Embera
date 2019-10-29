@@ -38,4 +38,13 @@ final class ProviderAdapterTest extends TestCase
         $this->assertEquals($params['maxheight'], $config['maxheight']);
         $this->assertTrue(empty($params['fake_responses']));
     }
+
+    public function testGetProviderHosts()
+    {
+        $hosts = Youtube::getHosts();
+        foreach ($hosts as $h) {
+            $this->assertTrue(stripos($h, 'Youtube') !== false);
+        }
+
+    }
 }
