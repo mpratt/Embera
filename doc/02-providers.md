@@ -11,6 +11,15 @@ This is the complete list of supported oembed providers.
     - Additional Parameters: Unknown
     - Notes: Auto generated Html for single pictures.
 
+### [Adways](https://www.adways.com)
+    - Provider Name: Adways
+    - Url: [adways.com](https://www.adways.com)
+    - Documentation: NO
+    - HTTPS support: YES
+    - Fake Response: YES
+    - Additional Parameters: Unknown
+    - Notes: NONE
+
 ### [Youtube](https://youtube.com)
     - Provider Name: Youtube
     - Url: [youtube.com](https://youtube.com)
