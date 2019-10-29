@@ -115,7 +115,7 @@ abstract class ProviderAdapter
     /** inline {@inheritdoc} */
     public static function getHosts()
     {
-        return self::$hosts;
+        return static::$hosts;
     }
 
 }

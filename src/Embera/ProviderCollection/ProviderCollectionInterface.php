@@ -58,4 +58,14 @@ interface ProviderCollectionInterface
      * @return void
      */
     public function setProviderList(array $list);
+
+
+    /**
+     * Registers a provider into the default
+     *
+     * @param mixed $names
+     * @param bool $prefix
+     * @return void
+     */
+    public function registerProvider($names, $prefix = true);
 }

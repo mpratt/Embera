@@ -31,11 +31,7 @@ abstract class ProviderCollectionAdapter implements ProviderCollectionInterface
     protected $wildCardHosts = [];
 
     /** @var array Massive array with the mapping of host -> provider relation. */
-    protected $providers = [
-        'm.youtube.com' => 'Youtube',
-        'youtube.com' => 'Youtube',
-        'youtu.be' => 'Youtube',
-    ];
+    protected $providers = [];
 
     /** Alias for the setConfig method */
     public function __construct(array $config = [])
@@ -95,6 +91,20 @@ abstract class ProviderCollectionAdapter implements ProviderCollectionInterface
     public function setProviderList(array $list)
     {
         $this->providers = $list;
+    }
+
+    /** inline {@inheritdoc} */
+    public function registerProvider($names, $prefix = true)
+    {
+        foreach ((array) $names as $name) {
+            if ($prefix) {
+                $name = 'Embera\Provider\\' . $name;
+            }
+            $hosts = $name::getHosts();
+            foreach ($hosts as $h) {
+                $this->providers[$h] = $name;
+            }
+        }
     }
 
     /**
@@ -190,4 +200,5 @@ abstract class ProviderCollectionAdapter implements ProviderCollectionInterface
 
         return $provider;
     }
+
 }

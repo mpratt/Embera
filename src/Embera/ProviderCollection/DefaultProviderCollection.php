@@ -13,6 +13,18 @@
 namespace Embera\ProviderCollection;
 
 /**
- * Basically its a wrapper for the ProvidercollectionAdapter.
+ * Basically its a wrapper for the ProvidercollectionAdapter but defines the
+ * default providers supported by the library
  */
-class defaultProviderCollection extends ProviderCollectionAdapter { }
+class defaultProviderCollection extends ProviderCollectionAdapter
+{
+    /** inline {@inheritdoc} */
+    public function __construct(array $config = [])
+    {
+        parent::__construct($config);
+        $this->registerProvider([
+            'TwentyThreeHq',
+            'Youtube',
+        ]);
+    }
+}
