@@ -3,7 +3,7 @@
  * HttpClientTest.php
  *
  * @package Tests
- * @author Michael Pratt <pratt@hablarmierda.net>
+ * @author Michael Pratt <yo@michael-pratt.com>
  * @link   http://www.michael-pratt.com/
  *
  * For the full copyright and license information, please view the LICENSE
@@ -43,8 +43,6 @@ class HttpClientTest extends TestCase
         $response = $http->fetch('https://httpbin.org/redirect-to?url=' . urlencode('https://httpbin.org/user-agent'));
         $response = json_decode($response, true);
         $this->assertEquals($ua, $response['user-agent']);
-
-
     }
 
     /** @large */
