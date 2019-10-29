@@ -43,7 +43,7 @@ final class ProviderAdapterTest extends TestCase
     {
         $hosts = Youtube::getHosts();
         foreach ($hosts as $h) {
-            $this->assertTrue(stripos($h, 'Youtube') !== false);
+            $this->assertTrue(stripos($h, 'youtu') !== false);
         }
 
     }
