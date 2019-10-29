@@ -15,6 +15,7 @@ namespace Embera;
 use Embera\Http\HttpClient;
 use Embera\Http\OembedClient;
 use Embera\Http\HttpClientInterface;
+use Embera\Html\IgnoreTags;
 use Embera\ProviderCollection\ProviderCollectionInterface;
 use Embera\ProviderCollection\DefaultProviderCollection;
 
@@ -107,6 +108,12 @@ class Embera
             }
 
             if (!empty($table)) {
+
+                if (!empty($this->config['ignore_tags']) && strpos($text, '>') !== false) {
+                    $ignoreTags = new IgnoreTags($this->config['ignore_tags']);
+                    return $ignoreTags->replace($text, $table);
+                }
+
                 return strtr($text, $table);
             }
 
