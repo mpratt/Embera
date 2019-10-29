@@ -24,6 +24,7 @@ $ composer require mpratt/embera
 ## Documentation
 
 - [Usage Instructions](doc/01-usage.md)
+- [Supported Providers](doc/02-providers.md)
 
 ## About
 
@@ -38,15 +39,10 @@ Bugs and feature request are tracked on [GitHub](https://github.com/mpratt/Ember
 Michael Pratt - <yo@michael-pratt.com> - <http://www.michael-pratt.com>
 See also the list of [contributors](https://github.com/mpratt/Embera/contributors) which participated in this project.
 
-If you like this library and want to support me, you can do it via paypal.
+If you like this library, it has been useful to you and want to support me, you can do it via paypal.
 
 [![Support via PayPal](https://cdn.rawgit.com/twolfson/paypal-github-button/1.0.0/dist/button.svg)](https://paypal.me/mtpratt)
 
 ### License
 
 Embera is licensed under the MIT License - see the `LICENSE` file for details
-
-### Acknowledgements
-
-This library is heavily inspired by Python's [Logbook](https://logbook.readthedocs.io/en/stable/)
-library, although most concepts have been adjusted to fit to the PHP world.
