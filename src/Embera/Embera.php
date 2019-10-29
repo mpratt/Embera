@@ -62,7 +62,7 @@ class Embera
         $this->config = array_merge([
             'https_only' => false,
             'fake_responses' => self::ALLOW_FAKE_RESPONSES,
-            'ignore_tags' => ['pre', 'code', 'a', 'img'],
+            'ignore_tags' => [ 'pre', 'code', 'a', 'img', 'iframe' ],
             'responsive_embeds' => false,
             'width' => 0,
             'height' => 0,
