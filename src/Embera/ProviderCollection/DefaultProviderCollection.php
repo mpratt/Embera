@@ -26,6 +26,7 @@ class defaultProviderCollection extends ProviderCollectionAdapter
             'TwentyThreeHq',
             'Adways',
             'Altru',
+            'AmCharts',
             'Youtube',
         ]);
     }
