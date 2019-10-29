@@ -56,13 +56,13 @@ class Adways extends ProviderAdapter implements ProviderInterface
         $attr[] = 'frameborder="0"';
         $attr[] = 'webkitallowfullscreen mozallowfullscreen allowfullscreen';
 
-        return array(
+        return [
             'type' => 'rich',
             'provider_name' => 'Adways',
             'provider_url' => 'https://www.adways.com',
             'title' => 'Unknown title',
             'html' => '<iframe ' . implode(' ', $attr). '></iframe>',
-        );
+        ];
     }
 
 }

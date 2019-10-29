@@ -63,13 +63,13 @@ class Youtube extends ProviderAdapter implements ProviderInterface
         $attr[] = 'allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"';
         $attr[] = 'allowfullscreen';
 
-        return array(
+        return [
             'type' => 'video',
             'provider_name' => 'Youtube',
             'provider_url' => 'https://www.youtube.com',
             'title' => 'Unknown title',
             'html' => '<iframe ' . implode(' ', $attr). '></iframe>',
-        );
+        ];
     }
 
 }
