@@ -155,4 +155,5 @@ class Url
     {
         $this->parts['scheme'] = 'https';
     }
+
 }

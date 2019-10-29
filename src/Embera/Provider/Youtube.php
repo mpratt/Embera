@@ -16,6 +16,7 @@ use Embera\Url;
 
 /**
  * youtube.com Provider
+ * @link https://youtube.com
  * @link https://youtube-eng.googleblog.com/2009/10/oembed-support_9.html
  */
 class Youtube extends ProviderAdapter implements ProviderInterface

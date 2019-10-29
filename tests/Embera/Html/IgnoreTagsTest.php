@@ -1,6 +1,6 @@
 <?php
 /**
- * HttpClientTest.php
+ * IgnoreTagsTest.php
  *
  * @package Tests
  * @author Michael Pratt <yo@michael-pratt.com>
@@ -94,6 +94,5 @@ class IgnoreTagsTest extends TestCase
             $this->assertEquals($result, $data);
         }
     }
-}
 
-?>
+}
