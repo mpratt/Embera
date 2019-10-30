@@ -45,8 +45,8 @@ class AmCharts extends ProviderAdapter implements ProviderInterface
     /** inline {@inheritdoc} */
     public function normalizeUrl(Url $url)
     {
-        if (preg_match('~amcharts\.com/([^/]+)(/edit/?)?~i', $url, $matches)) {
-            $url->overwrite('https://live.amcharts.com/' . $matches['1'] . '/');
+        if (preg_match('~amcharts\.com/([^/]+)/edit/?~i', $url, $matches)) {
+            $url->overwrite('https://live.amcharts.com/' . $matches['1']);
         }
 
         $url->convertToHttps();

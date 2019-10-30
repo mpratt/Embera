@@ -30,8 +30,8 @@ final class AmChartsTest extends ProviderTester
             'http://live.amcharts.com/new/edit',
         ),
         'normalize_urls' => array(
-            'http://live.amcharts.com/hlOWI' => 'https://live.amcharts.com/hlOWI/',
-            'http://live.amcharts.com/TY1Yj/edit' => 'https://live.amcharts.com/TY1Yj/',
+            'http://live.amcharts.com/hlOWI' => 'https://live.amcharts.com/hlOWI',
+            'http://live.amcharts.com/TY1Yj/edit' => 'https://live.amcharts.com/TY1Yj',
         ),
         'fake_response' => array(
             'type' => 'rich',
