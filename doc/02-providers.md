@@ -66,6 +66,17 @@ This is the complete list of supported oembed providers.
     - Additional Parameters: Unknown
     - Notes: NONE
 
+### [Audioboom](https://audioboom.com/)
+    - Provider Name: Audioboom
+    - Url: [audioboom.com](https://audioboom.com)
+    - Documentation: NO
+    - HTTPS support: YES
+    - Fake Response: NO
+    - Additional Parameters: Unknown
+    - Notes:
+        - We could add fake responses for post urls but not for channels urls.
+        - The provider already returns responsive embeds.
+
 ### [Youtube](https://youtube.com)
     - Provider Name: Youtube
     - Url: [youtube.com](https://youtube.com)
@@ -74,5 +85,3 @@ This is the complete list of supported oembed providers.
     - Fake Response: YES
     - Additional Parameters: Unknown
     - Notes: NONE
-
-

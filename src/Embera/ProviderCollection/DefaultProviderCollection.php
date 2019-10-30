@@ -30,6 +30,7 @@ class defaultProviderCollection extends ProviderCollectionAdapter
             'Animoto',
             'Apester',
             'Archivos',
+            'Audioboom',
             'Youtube',
         ]);
     }
