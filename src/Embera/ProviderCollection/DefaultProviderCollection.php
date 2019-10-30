@@ -32,6 +32,7 @@ class defaultProviderCollection extends ProviderCollectionAdapter
             'Archivos',
             'Audioboom',
             'AudioClip',
+            'Audiomack',
             'Youtube',
         ]);
     }

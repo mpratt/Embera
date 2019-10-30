@@ -87,6 +87,15 @@ This is the complete list of supported oembed providers.
     - Notes:
         - The provider already returns responsive embeds.
 
+### [Audiomack](https://www.audiomack.com/)
+    - Provider Name: Archivos
+    - Url: [audiomack.com](https://www.audiomack.com)
+    - Documentation: NO
+    - HTTPS support: YES
+    - Fake Response: YES
+    - Additional Parameters: Unknown
+    - Notes: NONE
+
 ### [Youtube](https://youtube.com)
     - Provider Name: Youtube
     - Url: [youtube.com](https://youtube.com)
