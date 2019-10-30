@@ -107,6 +107,7 @@ class ProviderTester extends TestCase
         $collection = new DefaultProviderCollection($config);
         $providers = $collection->findProviders($tasks['valid_urls']);
 
+        $this->assertFalse(empty($providers));
         foreach ($providers as $p) {
             $this->assertEquals($p->getProviderName(), $providerName);
         }
