@@ -49,8 +49,17 @@ This is the complete list of supported oembed providers.
     - Notes: NONE
 
 ### [Apester](https://www.apester.com/)
-    - Provider Name: AmCharts
+    - Provider Name: Apester
     - Url: [apester.com](https://www.apester.com)
+    - Documentation: NO
+    - HTTPS support: YES
+    - Fake Response: YES
+    - Additional Parameters: Unknown
+    - Notes: NONE
+
+### [Archivos](https://www.archivos.digital/)
+    - Provider Name: Archivos
+    - Url: [archivos.digital](https://www.archivos.digital)
     - Documentation: NO
     - HTTPS support: YES
     - Fake Response: YES

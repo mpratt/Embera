@@ -29,6 +29,7 @@ class defaultProviderCollection extends ProviderCollectionAdapter
             'AmCharts',
             'Animoto',
             'Apester',
+            'Archivos',
             'Youtube',
         ]);
     }
