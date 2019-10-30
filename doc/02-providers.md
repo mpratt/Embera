@@ -38,6 +38,16 @@ This is the complete list of supported oembed providers.
     - Additional Parameters: Unknown
     - Notes: NONE
 
+### [Animoto](https://animoto.com/)
+    - Provider Name: Animoto
+    - Url: [animoto.com](https://animoto.com)
+    - Documentation: [YES](https://help.animoto.com/hc/en-us/articles/205538717-oEmbed-API)
+    - HTTPS support: YES
+    - Fake Response: NO
+    - Additional Parameters:
+        - ssl: Returns secured versions of all urls. Can be true or false. Enabled by Default.
+    - Notes: NONE
+
 ### [Youtube](https://youtube.com)
     - Provider Name: Youtube
     - Url: [youtube.com](https://youtube.com)
