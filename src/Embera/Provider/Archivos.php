@@ -25,7 +25,7 @@ class Archivos extends ProviderAdapter implements ProviderInterface
 
     /** inline {@inheritdoc} */
     protected static $hosts = [
-        'app.archivos.digital'
+        '*.archivos.digital'
     ];
 
     /** inline {@inheritdoc} */

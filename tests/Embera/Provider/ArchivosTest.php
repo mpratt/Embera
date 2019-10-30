@@ -29,6 +29,7 @@ final class ArchivosTest extends ProviderTester
         ),
         'invalid_urls' => array(
             'https://www.archivos.digital/app/view/391/other?embed&visibility=public',
+            'https://www.archivos.digital/app/noview/391/other?embed&visibility=public',
         ),
         'normalize_urls' => array(
             'http://www.archivos.digital/app/view/850/web?embed' => 'https://www.archivos.digital/app/view/850/web',
