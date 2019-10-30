@@ -48,6 +48,15 @@ This is the complete list of supported oembed providers.
         - ssl: Returns secured versions of all urls. Can be true or false. Enabled by Default.
     - Notes: NONE
 
+### [Apester](https://www.apester.com/)
+    - Provider Name: AmCharts
+    - Url: [apester.com](https://www.apester.com)
+    - Documentation: NO
+    - HTTPS support: YES
+    - Fake Response: YES
+    - Additional Parameters: Unknown
+    - Notes: NONE
+
 ### [Youtube](https://youtube.com)
     - Provider Name: Youtube
     - Url: [youtube.com](https://youtube.com)

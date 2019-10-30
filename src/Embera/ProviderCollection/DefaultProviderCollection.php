@@ -28,6 +28,7 @@ class defaultProviderCollection extends ProviderCollectionAdapter
             'Altru',
             'AmCharts',
             'Animoto',
+            'Apester',
             'Youtube',
         ]);
     }
