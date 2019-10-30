@@ -77,6 +77,16 @@ This is the complete list of supported oembed providers.
         - We could add fake responses for post urls but not for channels urls.
         - The provider already returns responsive embeds.
 
+### [AudioClip](https://audioclip.naver.com/)
+    - Provider Name: AudioClip
+    - Url: [audioclip.naver.com](https://audioclip.naver.com)
+    - Documentation: NO
+    - HTTPS support: YES
+    - Fake Response: NO
+    - Additional Parameters: Unknown
+    - Notes:
+        - The provider already returns responsive embeds.
+
 ### [Youtube](https://youtube.com)
     - Provider Name: Youtube
     - Url: [youtube.com](https://youtube.com)

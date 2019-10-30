@@ -31,6 +31,7 @@ class defaultProviderCollection extends ProviderCollectionAdapter
             'Apester',
             'Archivos',
             'Audioboom',
+            'AudioClip',
             'Youtube',
         ]);
     }
