@@ -38,6 +38,7 @@ class defaultProviderCollection extends ProviderCollectionAdapter
             'BlackfireIO',
             'Blogcast',
             'Buttondown',
+            'Byzart',
             'Youtube',
         ]);
     }
