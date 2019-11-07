@@ -106,6 +106,14 @@ This is the complete list of supported oembed providers.
         - It seems as it could support fake responses but we dont have enough data to test.
         - The provider already returns responsive embeds.
 
+### [Blackfire.ai](https://blackfire.io/)
+    - Provider Name: BlackfireIO
+    - Documentation: NO
+    - HTTPS support: YES
+    - Fake Response: YES
+    - Additional Parameters: Unknown
+    - Notes: NONE
+
 ### [Youtube](https://youtube.com)
     - Provider Name: Youtube
     - Url: [youtube.com](https://youtube.com)

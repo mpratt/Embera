@@ -35,6 +35,7 @@ class defaultProviderCollection extends ProviderCollectionAdapter
             'Audiomack',
             'Backtracks',
             'BeautifulAI',
+            'BlackfireIO',
             'Youtube',
         ]);
     }
