@@ -123,6 +123,15 @@ This is the complete list of supported oembed providers.
     - Notes:
         - The provider already returns responsive embeds.
 
+### [Buttondown](https://buttondown.host/)
+    - Provider Name: Buttondown
+    - Documentation: NO
+    - HTTPS support: YES
+    - Fake Response: YES
+    - Additional Parameters: Unknown
+    - Notes:
+        - The provider already returns responsive embeds.
+
 ### [Youtube](https://youtube.com)
     - Provider Name: Youtube
     - Url: [youtube.com](https://youtube.com)

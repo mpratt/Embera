@@ -37,6 +37,7 @@ class defaultProviderCollection extends ProviderCollectionAdapter
             'BeautifulAI',
             'BlackfireIO',
             'Blogcast',
+            'Buttondown',
             'Youtube',
         ]);
     }

@@ -19,7 +19,8 @@ class ResponsiveEmbeds
 {
     /** @var array Blacklist of providers that cant use responsive embeds */
     protected $blacklist = [
-        'Audioboom', 'AudioClip', 'Backtracks', 'BeautifulAI', 'Blogcast'
+        'Audioboom', 'AudioClip',
+        'Backtracks', 'BeautifulAI', 'Blogcast', 'Buttondown',
     ];
 
     /**
