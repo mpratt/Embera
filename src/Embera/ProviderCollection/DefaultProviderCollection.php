@@ -33,6 +33,7 @@ class defaultProviderCollection extends ProviderCollectionAdapter
             'Audioboom',
             'AudioClip',
             'Audiomack',
+            'Backtracks',
             'Youtube',
         ]);
     }

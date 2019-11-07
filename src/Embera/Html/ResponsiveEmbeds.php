@@ -18,7 +18,7 @@ namespace Embera\html;
 class ResponsiveEmbeds
 {
     /** @var array Blacklist of providers that cant use responsive embeds */
-    protected $blacklist = [ 'Audioboom', 'AudioClip' ];
+    protected $blacklist = [ 'Audioboom', 'AudioClip', 'Backtracks' ];
 
     /**
      * Attempts to transform the html key of the response

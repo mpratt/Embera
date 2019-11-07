@@ -88,13 +88,24 @@ This is the complete list of supported oembed providers.
         - The provider already returns responsive embeds.
 
 ### [Audiomack](https://www.audiomack.com/)
-    - Provider Name: Archivos
+    - Provider Name: Audiomack
     - Url: [audiomack.com](https://www.audiomack.com)
     - Documentation: NO
     - HTTPS support: YES
     - Fake Response: YES
     - Additional Parameters: Unknown
     - Notes: NONE
+
+### [Backtracks](https://backtracks.fm/)
+    - Provider Name: Backtracks
+    - Url: [backtracks.fm](https://backtracks.fm/)
+    - Documentation: NO
+    - HTTPS support: YES
+    - Fake Response: NO
+    - Additional Parameters: Unknown
+    - Notes:
+        - It seems as it could support fake responses but we dont have enough data to test.
+        - The provider already returns responsive embeds.
 
 ### [Youtube](https://youtube.com)
     - Provider Name: Youtube
