@@ -114,6 +114,15 @@ This is the complete list of supported oembed providers.
     - Additional Parameters: Unknown
     - Notes: NONE
 
+### [Blogcast](https://blogcast.host/)
+    - Provider Name: Blogcast
+    - Documentation: NO
+    - HTTPS support: YES
+    - Fake Response: YES
+    - Additional Parameters: Unknown
+    - Notes:
+        - The provider already returns responsive embeds.
+
 ### [Youtube](https://youtube.com)
     - Provider Name: Youtube
     - Url: [youtube.com](https://youtube.com)
