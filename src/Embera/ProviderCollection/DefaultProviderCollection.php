@@ -34,6 +34,7 @@ class defaultProviderCollection extends ProviderCollectionAdapter
             'AudioClip',
             'Audiomack',
             'Backtracks',
+            'BeautifulAI',
             'Youtube',
         ]);
     }
