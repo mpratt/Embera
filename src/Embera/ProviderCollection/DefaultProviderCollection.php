@@ -47,6 +47,7 @@ class defaultProviderCollection extends ProviderCollectionAdapter
             'CodeHS',
             'CodePen',
             'Codepoints',
+            'CodeSandbox',
             'Youtube',
         ]);
     }
