@@ -44,6 +44,7 @@ class defaultProviderCollection extends ProviderCollectionAdapter
             'Chirbit',
             'CircuitLab',
             'Clyp',
+            'CodeHS',
             'Youtube',
         ]);
     }
