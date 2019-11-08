@@ -43,6 +43,7 @@ class defaultProviderCollection extends ProviderCollectionAdapter
             'ChartBlocks',
             'Chirbit',
             'CircuitLab',
+            'Clyp',
             'Youtube',
         ]);
     }

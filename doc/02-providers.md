@@ -167,12 +167,21 @@ This is the complete list of supported oembed providers.
     - Notes: NONE
 
 ### [CircuitLab](https://circuitlab.com/)
-    - Provider Name: Chirbit
+    - Provider Name: CircuitLab
     - Documentation: NO
     - HTTPS support: YES
     - Fake Response: YES
     - Additional Parameters: Unknown
     - Notes: NONE
+
+### [Clyp](http://clyp.it)
+    - Provider Name: Clyp
+    - Documentation: NO
+    - HTTPS support: YES
+    - Fake Response: NO
+    - Additional Parameters: Unknown
+    - Notes:
+        - It seems as it could support fake responses for single urls but not for playlists
 
 ### [Youtube](https://youtube.com)
     - Provider Name: Youtube
