@@ -150,6 +150,14 @@ This is the complete list of supported oembed providers.
     - Notes:
         - It seems as it could support fake responses but we dont have enough data to test.
 
+### [ChartBlocks](https://chartblocks.com/)
+    - Provider Name: ChartBlocks
+    - Documentation: NO
+    - HTTPS support: YES
+    - Fake Response: YES
+    - Additional Parameters: Unknown
+    - Notes: NONE
+
 ### [Youtube](https://youtube.com)
     - Provider Name: Youtube
     - Url: [youtube.com](https://youtube.com)

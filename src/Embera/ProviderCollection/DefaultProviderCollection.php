@@ -40,6 +40,7 @@ class defaultProviderCollection extends ProviderCollectionAdapter
             'Buttondown',
             'Byzart',
             'Ceros',
+            'ChartBlocks',
             'Youtube',
         ]);
     }
