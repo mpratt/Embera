@@ -45,6 +45,7 @@ class defaultProviderCollection extends ProviderCollectionAdapter
             'CircuitLab',
             'Clyp',
             'CodeHS',
+            'CodePen',
             'Youtube',
         ]);
     }
