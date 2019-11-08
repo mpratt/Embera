@@ -46,6 +46,7 @@ class defaultProviderCollection extends ProviderCollectionAdapter
             'Clyp',
             'CodeHS',
             'CodePen',
+            'Codepoints',
             'Youtube',
         ]);
     }
