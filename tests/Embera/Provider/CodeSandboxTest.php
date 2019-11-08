@@ -30,7 +30,7 @@ final class CodeSandboxTest extends ProviderTester
             'https://codesandbox.io/blog'
         ),
         'normalize_urls' => array(
-            'http://codesandbox.io/s/floating-diamonds-prb9t/?from-embed' => 'https://codesandbox.io/s/floating-diamonds-prb9t',
+            'http://www.codesandbox.io/s/floating-diamonds-prb9t/?from-embed' => 'https://codesandbox.io/s/floating-diamonds-prb9t',
         ),
         'fake_response' => array(
             'type' => 'rich',

@@ -41,6 +41,7 @@ class CodeSandbox extends ProviderAdapter implements ProviderInterface
     public function normalizeUrl(Url $url)
     {
         $url->convertToHttps();
+        $url->removeWWW();
         $url->removeQueryString();
         $url->removeLastSlash();
 
