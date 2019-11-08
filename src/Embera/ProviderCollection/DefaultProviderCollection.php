@@ -49,6 +49,7 @@ class defaultProviderCollection extends ProviderCollectionAdapter
             'Codepoints',
             'CodeSandbox',
             'CollegeHumor',
+            'Commaful',
             'Coub',
             'Youtube',
         ]);

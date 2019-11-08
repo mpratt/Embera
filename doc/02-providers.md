@@ -224,6 +224,14 @@ This is the complete list of supported oembed providers.
     - Additional Parameters: Unknown
     - Notes: NONE
 
+### [Commaful](https://commaful.com/)
+    - Provider Name: Commaful
+    - Documentation: NO
+    - HTTPS support: YES
+    - Fake Response: YES
+    - Additional Parameters: Unknown
+    - Notes: NONE
+
 ### [Coub](https://coub.com/)
     - Provider Name: Coub
     - Documentation: NO
