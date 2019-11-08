@@ -141,6 +141,15 @@ This is the complete list of supported oembed providers.
     - Notes:
         - It seems as it could support fake responses but we dont have enough data to test.
 
+### [Ceros](http://www.ceros.com/)
+    - Provider Name: Ceros
+    - Documentation: NO
+    - HTTPS support: YES
+    - Fake Response: NO
+    - Additional Parameters: Unknown
+    - Notes:
+        - It seems as it could support fake responses but we dont have enough data to test.
+
 ### [Youtube](https://youtube.com)
     - Provider Name: Youtube
     - Url: [youtube.com](https://youtube.com)

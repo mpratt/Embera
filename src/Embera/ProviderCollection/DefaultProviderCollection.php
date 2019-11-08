@@ -39,6 +39,7 @@ class defaultProviderCollection extends ProviderCollectionAdapter
             'Blogcast',
             'Buttondown',
             'Byzart',
+            'Ceros',
             'Youtube',
         ]);
     }

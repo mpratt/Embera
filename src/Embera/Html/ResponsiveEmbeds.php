@@ -21,6 +21,7 @@ class ResponsiveEmbeds
     protected $blacklist = [
         'Audioboom', 'AudioClip',
         'Backtracks', 'BeautifulAI', 'Blogcast', 'Buttondown',
+        'Ceros',
     ];
 
     /**
