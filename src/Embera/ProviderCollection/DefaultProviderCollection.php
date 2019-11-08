@@ -42,6 +42,7 @@ class defaultProviderCollection extends ProviderCollectionAdapter
             'Ceros',
             'ChartBlocks',
             'Chirbit',
+            'CircuitLab',
             'Youtube',
         ]);
     }
