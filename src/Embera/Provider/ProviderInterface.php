@@ -79,6 +79,13 @@ interface ProviderInterface
     public function hasHttpsSupport();
 
     /**
+     * Checks if the provider supports responsive embeds.
+     *
+     * @return bool
+     */
+    public function hasResponsiveSupport();
+
+    /**
      * Gives the ability to modify the response array
      * from the oembed provider.
      *

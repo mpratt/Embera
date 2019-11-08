@@ -17,13 +17,6 @@ namespace Embera\html;
  */
 class ResponsiveEmbeds
 {
-    /** @var array Blacklist of providers that cant use responsive embeds */
-    protected $blacklist = [
-        'Audioboom', 'AudioClip',
-        'Backtracks', 'BeautifulAI', 'Blogcast', 'Buttondown',
-        'Ceros',
-    ];
-
     /**
      * Attempts to transform the html key of the response
      * with a responsive alternative.
@@ -33,12 +26,12 @@ class ResponsiveEmbeds
      */
     public function transform(array $response)
     {
-        if (!empty($response['html']) && isset($response['embera_provider_name']) && isset($response['type']) && !in_array($response['embera_provider_name'], $this->blacklist)) {
+        if (!empty($response['html']) && isset($response['embera_provider_name']) && isset($response['type'])) {
             $response['html_pre_responsive'] = $response['html'];
             $response['html'] = $this->removeWidthHeightAttributes($response['html']);
             $response['html'] = $this->removeWidthHeightStyles($response['html']);
-            $response['html'] = $this->addClasses($response['html'], $response['type']);
-            $response['html'] = $this->wrapInsideDiv($response['html'], $response['type']);
+            $response['html'] = $this->addClasses($response['html'], strtolower($response['type']));
+            $response['html'] = $this->wrapInsideDiv($response['html'], strtolower($response['type']), $response['embera_provider_name']);
         }
 
         return $response;
@@ -76,7 +69,7 @@ class ResponsiveEmbeds
      */
     protected function addClasses($text, $type)
     {
-        $class= 'embera-embed-responsive-item-' . $type;
+        $class= 'embera-embed-responsive-item embera-embed-responsive-item-' . $type;
         if (preg_match('~class="(.+?)"~i', $text)) {
             return preg_replace('~class="(.+?)"~i', 'class="$1 ' . $class . '"', $text);
         }
@@ -95,11 +88,13 @@ class ResponsiveEmbeds
      *
      * @param string $text
      * @param string $type
+     * @param string $providerName
      * @return string
      */
-    protected function wrapInsideDiv($text, $type)
+    protected function wrapInsideDiv($text, $type, $providerName)
     {
-        return '<div class="embera-embed-responsive embera-embed-responsive-' . $type . '">' . $text . '</div>';
+        $providerName = strtolower($providerName);
+        return '<div class="embera-embed-responsive embera-embed-responsive-' . $type . ' embera-embed-responsive-provider-' . $providerName . '">' . $text . '</div>';
     }
 
 }

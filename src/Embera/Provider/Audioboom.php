@@ -32,6 +32,9 @@ class Audioboom extends ProviderAdapter implements ProviderInterface
     protected $httpsSupport = true;
 
     /** inline {@inheritdoc} */
+    protected $responsiveSupport = true;
+
+    /** inline {@inheritdoc} */
     public function validateUrl(Url $url)
     {
         return (bool) (preg_match('~audioboom\.com/(channel|posts)/([^/]+)/?$~i', (string) $url));

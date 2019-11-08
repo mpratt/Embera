@@ -39,6 +39,9 @@ abstract class ProviderAdapter
     /** @var bool Wether the provider supports https */
     protected $httpsSupport = false;
 
+    /** @var bool Wether the provider supports responsive embeds */
+    protected $responsiveSupport = false;
+
     /** inline {@inheritdoc} */
     public function __construct($url, array $config = [])
     {
@@ -92,6 +95,12 @@ abstract class ProviderAdapter
     public function hasHttpsSupport()
     {
         return (bool) $this->httpsSupport;
+    }
+
+    /** inline {@inheritdoc} */
+    public function hasResponsiveSupport()
+    {
+        return (bool) $this->responsiveSupport;
     }
 
     /** inline {@inheritdoc} */

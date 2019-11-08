@@ -32,6 +32,9 @@ class Blogcast extends ProviderAdapter implements ProviderInterface
     protected $httpsSupport = true;
 
     /** inline {@inheritdoc} */
+    protected $responsiveSupport = true;
+
+    /** inline {@inheritdoc} */
     public function validateUrl(Url $url)
     {
         return (bool) (preg_match('~blogcast\.host/(embed|embedly)/([^/]+)$~i', (string) $url));

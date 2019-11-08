@@ -32,6 +32,9 @@ class Ceros extends ProviderAdapter implements ProviderInterface
     protected $httpsSupport = true;
 
     /** inline {@inheritdoc} */
+    protected $responsiveSupport = true;
+
+    /** inline {@inheritdoc} */
     public function validateUrl(Url $url)
     {
         return (bool) (preg_match('~ceros\.com/([^/]+)~i', (string) $url));

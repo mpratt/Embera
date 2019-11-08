@@ -140,7 +140,7 @@ class Embera
                 $oembedClient = new OembedClient($this->config, $this->httpClient);
                 $response = $oembedClient->getResponseFrom($provider);
 
-                if ($this->config['responsive']) {
+                if ($this->config['responsive'] && !$provider->hasResponsiveSupport()) {
                     $responsive = new ResponsiveEmbeds();
                     $response = $responsive->transform($response);
                 }
