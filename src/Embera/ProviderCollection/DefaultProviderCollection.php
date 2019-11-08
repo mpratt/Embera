@@ -48,6 +48,7 @@ class defaultProviderCollection extends ProviderCollectionAdapter
             'CodePen',
             'Codepoints',
             'CodeSandbox',
+            'CollegeHumor',
             'Youtube',
         ]);
     }
