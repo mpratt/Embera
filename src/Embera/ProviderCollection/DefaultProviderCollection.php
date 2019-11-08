@@ -41,6 +41,7 @@ class defaultProviderCollection extends ProviderCollectionAdapter
             'Byzart',
             'Ceros',
             'ChartBlocks',
+            'Chirbit',
             'Youtube',
         ]);
     }
