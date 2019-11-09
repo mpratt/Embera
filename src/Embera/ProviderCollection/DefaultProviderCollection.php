@@ -54,6 +54,7 @@ class defaultProviderCollection extends ProviderCollectionAdapter
             'DailyMotion',
             'Deseretnews',
             'Deviantart',
+            'Didacte',
             'Youtube',
         ]);
     }
