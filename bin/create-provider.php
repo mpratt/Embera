@@ -47,11 +47,21 @@ $translation = [
 echo sprintf('Creating provider file %s in directory %s', $options['provider'] . '.php', $providerDir) . PHP_EOL;
 $data = file_get_contents($templateDir . '/Provider.tpl');
 $data = strtr($data, $translation);
-file_put_contents($providerDir . '/' . $options['provider'] . '.php', $data);
+$fileName = $providerDir . '/' . $options['provider'] . '.php';
+if (file_exists($fileName)) {
+    throw new RuntimeException('ERROR: File ' . $fileName . ' already exists');
+}
+
+file_put_contents($fileName, $data);
 
 echo sprintf('Creating provider file %s in directory %s', $options['provider'] . 'Test.php', $testProviderDir) . PHP_EOL;
 $data = file_get_contents($templateDir . '/ProviderTest.tpl');
 $data = strtr($data, $translation);
-file_put_contents($testProviderDir . '/' . $options['provider'] . 'Test.php', $data);
+$fileName = $providerDir . '/' . $options['provider'] . 'Test.php';
+if (file_exists($fileName)) {
+    throw new RuntimeException('ERROR: File ' . $fileName . ' already exists');
+}
+
+file_put_contents($fileName, $data);
 
 echo 'finished' . PHP_EOL;
