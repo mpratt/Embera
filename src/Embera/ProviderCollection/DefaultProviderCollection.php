@@ -53,6 +53,7 @@ class defaultProviderCollection extends ProviderCollectionAdapter
             'Coub',
             'DailyMotion',
             'Deseretnews',
+            'Deviantart',
             'Youtube',
         ]);
     }
