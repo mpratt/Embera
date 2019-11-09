@@ -52,6 +52,7 @@ class defaultProviderCollection extends ProviderCollectionAdapter
             'Commaful',
             'Coub',
             'DailyMotion',
+            'Deseretnews',
             'Youtube',
         ]);
     }

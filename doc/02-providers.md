@@ -251,6 +251,15 @@ This is the complete list of supported oembed providers.
         - syndication: Your syndication key.
     - Notes: NONE
 
+### [Deseretnews](https://www.deseretnews.com/)
+    - Provider Name: Deseretnews
+    - Documentation: NO
+    - HTTPS support: YES
+    - Fake Response: NO
+    - Additional Parameters: Unknown
+    - Notes:
+        - It seems as it could support fake responses but we dont have enough data to test.
+
 ### [Youtube](https://youtube.com)
     - Provider Name: Youtube
     - Url: [youtube.com](https://youtube.com)
