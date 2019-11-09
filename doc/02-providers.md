@@ -240,6 +240,17 @@ This is the complete list of supported oembed providers.
     - Additional Parameters: Unknown
     - Notes: NONE
 
+### [DailyMotion](https://www.dailymotion.com/)
+    - Provider Name: DailyMotion
+    - Documentation: [YES](https://developer.dailymotion.com/player/#player-oembed)
+    - HTTPS support: YES
+    - Fake Response: YES
+    - Additional Parameters:
+        - callback: When returning JSON, wrap in this function.
+        - autoplay: Automatically start playback of the video. Defaults to false.
+        - syndication: Your syndication key.
+    - Notes: NONE
+
 ### [Youtube](https://youtube.com)
     - Provider Name: Youtube
     - Url: [youtube.com](https://youtube.com)

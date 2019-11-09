@@ -51,6 +51,7 @@ class defaultProviderCollection extends ProviderCollectionAdapter
             'CollegeHumor',
             'Commaful',
             'Coub',
+            'DailyMotion',
             'Youtube',
         ]);
     }
