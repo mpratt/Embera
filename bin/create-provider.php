@@ -57,7 +57,7 @@ file_put_contents($fileName, $data);
 echo sprintf('Creating provider file %s in directory %s', $options['provider'] . 'Test.php', $testProviderDir) . PHP_EOL;
 $data = file_get_contents($templateDir . '/ProviderTest.tpl');
 $data = strtr($data, $translation);
-$fileName = $providerDir . '/' . $options['provider'] . 'Test.php';
+$fileName = $testProviderDir . '/' . $options['provider'] . 'Test.php';
 if (file_exists($fileName)) {
     throw new RuntimeException('ERROR: File ' . $fileName . ' already exists');
 }

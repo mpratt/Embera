@@ -37,7 +37,7 @@ class {provider} extends ProviderAdapter implements ProviderInterface
     /** inline {@inheritdoc} */
     public function validateUrl(Url $url)
     {
-        return (bool) (preg_match('~{host_excaped}/([^/]+)~i', (string) $url));
+        return (bool) (preg_match('~{host_escaped}/([^/]+)~i', (string) $url));
     }
 
     /** inline {@inheritdoc} */
