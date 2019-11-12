@@ -55,6 +55,7 @@ class defaultProviderCollection extends ProviderCollectionAdapter
             'Deseretnews',
             'Deviantart',
             'Didacte',
+            'Digiteka',
             'Youtube',
         ]);
     }
