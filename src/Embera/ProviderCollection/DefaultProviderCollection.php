@@ -58,6 +58,7 @@ class defaultProviderCollection extends ProviderCollectionAdapter
             'Digiteka',
             'DocDroid',
             'DotSUB',
+            'DTube',
             'Youtube',
         ]);
     }
