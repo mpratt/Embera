@@ -285,11 +285,20 @@ This is the complete list of supported oembed providers.
     - Notes: NONE
 
 ### [DocDroid](https://docdroid.net/)
-    - Provider Name: Digiteka
+    - Provider Name: DocDroid
     - Documentation: NO
     - HTTPS support: YES
     - Fake Response: YES
     - Additional Parameters: Unknown
+    - Notes: NONE
+
+### [DotSUB](https://dotsub.com/)
+    - Provider Name: DotSUB
+    - Documentation: [YES](https://dotsub.com/solutions/oEmbed)
+    - HTTPS support: YES
+    - Fake Response: YES
+    - Additional Parameters:
+        - language: The three letter language code for the language you want the player to default to
     - Notes: NONE
 
 ### [Youtube](https://youtube.com)
