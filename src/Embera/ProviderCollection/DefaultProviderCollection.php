@@ -56,6 +56,7 @@ class defaultProviderCollection extends ProviderCollectionAdapter
             'Deviantart',
             'Didacte',
             'Digiteka',
+            'DocDroid',
             'Youtube',
         ]);
     }
