@@ -29,6 +29,9 @@ class DotSUB extends ProviderAdapter implements ProviderInterface
     ];
 
     /** inline {@inheritdoc} */
+    protected $allowedParams = [ 'maxwidth', 'maxheight', 'language' ];
+
+    /** inline {@inheritdoc} */
     protected $httpsSupport = true;
 
     /** inline {@inheritdoc} */
