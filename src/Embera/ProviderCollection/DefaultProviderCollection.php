@@ -61,6 +61,7 @@ class defaultProviderCollection extends ProviderCollectionAdapter
             'DTube',
             'EduMedia',
             'MessesInfo',
+            'Ethfiddle',
             'Youtube',
         ]);
     }
