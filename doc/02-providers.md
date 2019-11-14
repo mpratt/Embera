@@ -310,6 +310,14 @@ This is the complete list of supported oembed providers.
     - Notes:
         - Despite entering valid urls, some deliver a 404 response.
 
+### [EduMedia](https://edumedia-sciences.com)
+    - Provider Name: EduMedia
+    - Documentation: NO
+    - HTTPS support: YES
+    - Fake Response: YES
+    - Additional Parameters: Unknown
+    - Notes: NONE
+
 ### [Youtube](https://youtube.com)
     - Provider Name: Youtube
     - Url: [youtube.com](https://youtube.com)

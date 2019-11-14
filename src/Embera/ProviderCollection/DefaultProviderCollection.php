@@ -59,6 +59,7 @@ class defaultProviderCollection extends ProviderCollectionAdapter
             'DocDroid',
             'DotSUB',
             'DTube',
+            'EduMedia',
             'Youtube',
         ]);
     }
