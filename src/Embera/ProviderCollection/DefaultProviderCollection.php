@@ -60,6 +60,7 @@ class defaultProviderCollection extends ProviderCollectionAdapter
             'DotSUB',
             'DTube',
             'EduMedia',
+            'MessesInfo',
             'Youtube',
         ]);
     }
