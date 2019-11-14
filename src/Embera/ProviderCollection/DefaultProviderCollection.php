@@ -62,6 +62,7 @@ class defaultProviderCollection extends ProviderCollectionAdapter
             'EduMedia',
             'MessesInfo',
             'Ethfiddle',
+            'Eyrie',
             'Youtube',
         ]);
     }
