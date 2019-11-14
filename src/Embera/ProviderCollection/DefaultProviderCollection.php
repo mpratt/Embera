@@ -60,9 +60,10 @@ class defaultProviderCollection extends ProviderCollectionAdapter
             'DotSUB',
             'DTube',
             'EduMedia',
-            'MessesInfo',
             'Ethfiddle',
             'Eyrie',
+            'Facebook',
+            'MessesInfo',
             'Youtube',
         ]);
     }

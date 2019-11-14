@@ -334,6 +334,18 @@ This is the complete list of supported oembed providers.
     - Additional Parameters: Unknown
     - Notes: NONE
 
+### [Facebook](https://facebook.com)
+    - Provider Name: Facebook
+    - Documentation: [YES](https://developers.facebook.com/docs/plugins/oembed-endpoints)
+    - HTTPS support: YES
+    - Fake Response: NO
+    - Additional Parameters:
+        - callback: A JSON callback to be invoked (optional)
+        - omitscript: If set to true, the embed code does not include the script tag (optional)
+    - Notes:
+        - This provider modifies the returned html in order to display an iframe.
+          The original html is stored in the `html_original` key of the response.
+
 ### [MessesInfo](https://messes.info)
     - Provider Name: MessesInfo
     - Documentation: NO
