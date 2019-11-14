@@ -16,7 +16,7 @@ use Embera\Url;
 
 /**
  * {provider} Provider
- * @link 
+ * @link https://{host}
  */
 class {provider} extends ProviderAdapter implements ProviderInterface
 {
@@ -27,6 +27,9 @@ class {provider} extends ProviderAdapter implements ProviderInterface
     protected static $hosts = [
         '{host}'
     ];
+
+    /** inline {@inheritdoc} */
+    protected $allowedParams = [ 'maxwidth', 'maxheight' ];
 
     /** inline {@inheritdoc} */
     protected $httpsSupport = true;
@@ -74,7 +77,7 @@ class {provider} extends ProviderAdapter implements ProviderInterface
         return [
             'type' => '',
             'provider_name' => '{provider}',
-            'provider_url' => '',
+            'provider_url' => 'https://{host}',
             'title' => 'Unknown title',
             'html' => '<iframe ' . implode(' ', $attr). '></iframe>',
         ];
