@@ -379,6 +379,15 @@ This is the complete list of supported oembed providers.
     - Notes:
         - There are many parameters that could be sent but it seems to require an AppId
 
+### [Flickr](https://flickr.com)
+    - Provider Name: Flickr
+    - Documentation: NO
+    - HTTPS support: YES
+    - Fake Response: YES
+    - Additional Parameters: Unknown
+    - Notes:
+        - Added an extra `html_alternate` as a html response.
+
 ### [MessesInfo](https://messes.info)
     - Provider Name: MessesInfo
     - Documentation: NO

@@ -67,6 +67,7 @@ class defaultProviderCollection extends ProviderCollectionAdapter
             'FaithLifeTV',
             'FITE',
             'Flat',
+            'Flickr',
             'MessesInfo',
             'Youtube',
         ]);
