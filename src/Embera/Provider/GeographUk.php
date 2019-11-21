@@ -66,7 +66,7 @@ class GeographUk extends ProviderAdapter implements ProviderInterface
 
         $html = [];
         $html[] = '<a href="' . $response['url'] . '" target="_blank">';
-        $html []= '<img class="geograph" src="' . $response['thumbnail_url'] . '" width="' . $response['thumbnail_width'] . '" height="' . $response['thumbnail_height'] . '" alt="" title="" >';
+        $html[] = '<img class="geograph" src="' . $response['thumbnail_url'] . '" width="' . $response['thumbnail_width'] . '" height="' . $response['thumbnail_height'] . '" alt="" title="" >';
         $html[] = '</a>';
 
         $response['html'] = implode('', $html);
