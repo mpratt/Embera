@@ -407,8 +407,26 @@ This is the complete list of supported oembed providers.
     - Notes:
         - The provider already returns responsive embeds.
 
-### [GeographUk](https://www.geograph.org.uk/)
+### [Geograph UK](https://www.geograph.org.uk/)
     - Provider Name: GeographUk
+    - Documentation: NO
+    - HTTPS support: YES
+    - Fake Response: NO
+    - Additional Parameters: Unknown
+    - Notes:
+        - Auto generated Html for single pictures.
+
+### [Geograph Channel Islands](http://channel-islands.geograph.org/)
+    - Provider Name: GeographCI
+    - Documentation: NO
+    - HTTPS support: YES
+    - Fake Response: NO
+    - Additional Parameters: Unknown
+    - Notes:
+        - Auto generated Html for single pictures.
+
+### [Geograph Germany](http://geo-en.hlipp.de/)
+    - Provider Name: GeographDE
     - Documentation: NO
     - HTTPS support: YES
     - Fake Response: NO

@@ -71,6 +71,8 @@ class defaultProviderCollection extends ProviderCollectionAdapter
             'Flourish',
             'Fontself',
             'GeographUk',
+            'GeographCI',
+            'GeographDE',
             'MessesInfo',
             'Youtube',
         ]);
