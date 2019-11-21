@@ -456,6 +456,16 @@ This is the complete list of supported oembed providers.
     - Notes:
         - The provider already returns responsive embeds.
 
+### [Giphy](http://giphy.com)
+    - Provider Name: Giphy
+    - Documentation: NO
+    - HTTPS support: YES
+    - Fake Response: NO
+    - Additional Parameters: unknown
+    - Notes:
+        - Auto generated Html for single pictures.
+        - [This provider has multiple issues](https://github.com/Giphy/GiphyAPI/issues/182)
+
 ### [MessesInfo](https://messes.info)
     - Provider Name: MessesInfo
     - Documentation: NO
