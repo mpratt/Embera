@@ -181,6 +181,7 @@ class Facebook extends ProviderAdapter implements ProviderInterface
             // Replace the html response
             $response['html'] = str_replace(array_keys($table), array_values($table), $iframe);
         }
+
         return $response;
     }
 

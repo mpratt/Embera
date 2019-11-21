@@ -64,6 +64,7 @@ class defaultProviderCollection extends ProviderCollectionAdapter
             'Eyrie',
             'Facebook',
             'Fader',
+            'FaithLifeTV',
             'MessesInfo',
             'Youtube',
         ]);
