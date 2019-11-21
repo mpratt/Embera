@@ -69,6 +69,7 @@ class defaultProviderCollection extends ProviderCollectionAdapter
             'Flat',
             'Flickr',
             'Flourish',
+            'Fontself',
             'MessesInfo',
             'Youtube',
         ]);

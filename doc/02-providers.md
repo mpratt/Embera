@@ -397,6 +397,15 @@ This is the complete list of supported oembed providers.
     - Notes:
         - The provider already returns responsive embeds.
 
+### [Fontself](https://fontself.com/)
+    - Provider Name: Fontself
+    - Documentation: NO
+    - HTTPS support: YES
+    - Fake Response: YES
+    - Additional Parameters: Unknown
+    - Notes:
+        - The provider already returns responsive embeds.
+
 ### [MessesInfo](https://messes.info)
     - Provider Name: MessesInfo
     - Documentation: NO
