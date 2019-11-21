@@ -63,6 +63,7 @@ class defaultProviderCollection extends ProviderCollectionAdapter
             'Ethfiddle',
             'Eyrie',
             'Facebook',
+            'Fader',
             'MessesInfo',
             'Youtube',
         ]);

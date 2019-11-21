@@ -326,7 +326,7 @@ This is the complete list of supported oembed providers.
     - Additional Parameters: Unknown
     - Notes: NONE
 
-### [Eyrie](https://eyrie.ip)
+### [Eyrie](https://eyrie.io)
     - Provider Name: Eyrie
     - Documentation: NO
     - HTTPS support: YES
@@ -345,6 +345,14 @@ This is the complete list of supported oembed providers.
     - Notes:
         - This provider modifies the returned html in order to display an iframe.
           The original html is stored in the `html_original` key of the response.
+
+### [Fader](https://app.getfader.com)
+    - Provider Name: Fader
+    - Documentation: NO
+    - HTTPS support: YES
+    - Fake Response: YES
+    - Additional Parameters: Unknown
+    - Notes: NONE
 
 ### [MessesInfo](https://messes.info)
     - Provider Name: MessesInfo
