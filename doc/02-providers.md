@@ -434,6 +434,19 @@ This is the complete list of supported oembed providers.
     - Notes:
         - Auto generated Html for single pictures.
 
+### [GettyImages](http://gettyimages.com)
+    - Provider Name: GettyImages
+    - Documentation: [YES](https://developers.gettyimages.com/api/oembed/)
+    - HTTPS support: NO (Thumbnail and image urls are always http.)
+    - Fake Response: NO
+    - Additional Parameters:
+        - caller: Your domain name.
+        - tld: Specifying tld=[valid tld] will link the embed to the Getty Images site affiliated with the tld
+        - caption: Specifying caption=true in the query string will enable the caption feature.
+    - Notes:
+        - Auto generated Html for single pictures.
+        - There are many country specific hostnames. Please look at the file in order to see which are supported.
+
 ### [MessesInfo](https://messes.info)
     - Provider Name: MessesInfo
     - Documentation: NO
