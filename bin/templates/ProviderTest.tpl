@@ -19,18 +19,25 @@ use Embera\ProviderTester;
  */
 final class {provider}Test extends ProviderTester
 {
-    protected $tasks = array(
-        'valid_urls' => array(
-        ),
-        'invalid_urls' => array(
-        ),
-        'normalize_urls' => array(
-        ),
-        'fake_response' => array(
+    protected $tasks = [
+        'valid_urls' => [
+            '',
+            '',
+            '',
+        ],
+        'invalid_urls' => [
+            '',
+            '',
+            '',
+        ],
+        'normalize_urls' => [
+            '' => '',
+        ]
+        'fake_response' => [
             'type' => '',
             'html' => '<iframe'
-        )
-    );
+        ]
+    ];
 
     public function testProvider()
     {
