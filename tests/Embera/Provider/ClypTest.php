@@ -22,7 +22,7 @@ final class ClypTest extends ProviderTester
     protected $tasks = array(
         'valid_urls' => array(
             'http://clyp.it/s43cav2h',
-            'http://clyp.it/playlist/1kmfioze',
+            'https://clyp.it/zl5edmpl',
             'http://clyp.it/xe5rm1ie',
         ),
         'invalid_urls' => array(
