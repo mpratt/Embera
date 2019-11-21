@@ -8,7 +8,8 @@ This is the complete list of supported oembed providers.
     - HTTPS support: NO
     - Fake Response: NO
     - Additional Parameters: Unknown
-    - Notes: Auto generated Html for single pictures.
+    - Notes:
+        - Auto generated Html for single pictures.
 
 ### [Adways](https://www.adways.com)
     - Provider Name: Adways
