@@ -388,6 +388,15 @@ This is the complete list of supported oembed providers.
     - Notes:
         - Added an extra `html_alternate` as a html response.
 
+### [Flourish](https://flourish.studio/)
+    - Provider Name: Flourish
+    - Documentation: NO
+    - HTTPS support: YES
+    - Fake Response: YES
+    - Additional Parameters: Unknown
+    - Notes:
+        - The provider already returns responsive embeds.
+
 ### [MessesInfo](https://messes.info)
     - Provider Name: MessesInfo
     - Documentation: NO

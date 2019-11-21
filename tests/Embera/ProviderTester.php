@@ -107,7 +107,7 @@ class ProviderTester extends TestCase
         $collection = new DefaultProviderCollection($config);
         $providers = $collection->findProviders($tasks['valid_urls']);
 
-        $this->assertFalse(empty($providers));
+        $this->assertFalse(empty($providers), 'Could not detect urls from the main Embera library.');
         foreach ($providers as $p) {
             $this->assertEquals($p->getProviderName(), $providerName);
         }
