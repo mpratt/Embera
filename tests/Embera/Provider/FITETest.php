@@ -23,7 +23,7 @@ final class FITETest extends ProviderTester
         'valid_urls' => array(
             'https://www.fite.tv/watch/roh-wrestling-episode-426/2p4x1/',
             'http://www.fite.tv/watch/fite-tv-test-stream/2kmfd/',
-            'https://www.fite.tv/watch/pyramid-fights-14/2p457',
+            // 'https://www.fite.tv/watch/pyramid-fights-14/2p457',
         ),
         'invalid_urls' => array(
             'https://www.fite.tv/watch/pyramid-fights-14',
