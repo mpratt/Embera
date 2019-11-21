@@ -362,6 +362,14 @@ This is the complete list of supported oembed providers.
     - Additional Parameters: Unknown
     - Notes: NONE
 
+### [FITE](https://fite.tv)
+    - Provider Name: FITE
+    - Documentation: NO
+    - HTTPS support: YES
+    - Fake Response: YES
+    - Additional Parameters: Unknown
+    - Notes: NONE
+
 ### [MessesInfo](https://messes.info)
     - Provider Name: MessesInfo
     - Documentation: NO
