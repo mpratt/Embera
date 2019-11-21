@@ -447,6 +447,15 @@ This is the complete list of supported oembed providers.
         - Auto generated Html for single pictures.
         - There are many country specific hostnames. Please look at the file in order to see which are supported.
 
+### [Gfycat](http://gfycat.com)
+    - Provider Name: Gfycat
+    - Documentation: NO
+    - HTTPS support: YES
+    - Fake Response: YES
+    - Additional Parameters: unknown
+    - Notes:
+        - The provider already returns responsive embeds.
+
 ### [MessesInfo](https://messes.info)
     - Provider Name: MessesInfo
     - Documentation: NO

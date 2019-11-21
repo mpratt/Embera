@@ -74,6 +74,7 @@ class defaultProviderCollection extends ProviderCollectionAdapter
             'GeographCI',
             'GeographDE',
             'GettyImages',
+            'Gfycat',
             'MessesInfo',
             'Youtube',
         ]);
