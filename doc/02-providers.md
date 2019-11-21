@@ -407,6 +407,15 @@ This is the complete list of supported oembed providers.
     - Notes:
         - The provider already returns responsive embeds.
 
+### [GeographUk](https://www.geograph.org.uk/)
+    - Provider Name: GeographUk
+    - Documentation: NO
+    - HTTPS support: YES
+    - Fake Response: NO
+    - Additional Parameters: Unknown
+    - Notes:
+        - Auto generated Html for single pictures.
+
 ### [MessesInfo](https://messes.info)
     - Provider Name: MessesInfo
     - Documentation: NO

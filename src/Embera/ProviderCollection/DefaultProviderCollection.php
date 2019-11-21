@@ -70,6 +70,7 @@ class defaultProviderCollection extends ProviderCollectionAdapter
             'Flickr',
             'Flourish',
             'Fontself',
+            'GeographUk',
             'MessesInfo',
             'Youtube',
         ]);
