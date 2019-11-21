@@ -32,7 +32,7 @@ final class {provider}Test extends ProviderTester
         ],
         'normalize_urls' => [
             '' => '',
-        ]
+        ],
         'fake_response' => [
             'type' => '',
             'html' => '<iframe'
