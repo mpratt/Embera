@@ -370,6 +370,15 @@ This is the complete list of supported oembed providers.
     - Additional Parameters: Unknown
     - Notes: NONE
 
+### [Flat](https://flat.io)
+    - Provider Name: Flat
+    - Documentation: [YES](https://flat.io/developers/docs/embed/oembed.html)
+    - HTTPS support: YES
+    - Fake Response: YES
+    - Additional Parameters: Unknown
+    - Notes:
+        - There are many parameters that could be sent but it seems to require an AppId
+
 ### [MessesInfo](https://messes.info)
     - Provider Name: MessesInfo
     - Documentation: NO
