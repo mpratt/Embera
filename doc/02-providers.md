@@ -416,7 +416,7 @@ This is the complete list of supported oembed providers.
     - Notes:
         - Auto generated Html for single pictures.
 
-### [Geograph Channel Islands](http://channel-islands.geograph.org/)
+### [Geograph Channel Islands](https://channel-islands.geograph.org/)
     - Provider Name: GeographCI
     - Documentation: NO
     - HTTPS support: YES
@@ -425,7 +425,7 @@ This is the complete list of supported oembed providers.
     - Notes:
         - Auto generated Html for single pictures.
 
-### [Geograph Germany](http://geo-en.hlipp.de/)
+### [Geograph Germany](https://geo-en.hlipp.de/)
     - Provider Name: GeographDE
     - Documentation: NO
     - HTTPS support: YES
@@ -434,7 +434,7 @@ This is the complete list of supported oembed providers.
     - Notes:
         - Auto generated Html for single pictures.
 
-### [GettyImages](http://gettyimages.com)
+### [GettyImages](https://gettyimages.com)
     - Provider Name: GettyImages
     - Documentation: [YES](https://developers.gettyimages.com/api/oembed/)
     - HTTPS support: NO (Thumbnail and image urls are always http.)
@@ -447,7 +447,7 @@ This is the complete list of supported oembed providers.
         - Auto generated Html for single pictures.
         - There are many country specific hostnames. Please look at the file in order to see which are supported.
 
-### [Gfycat](http://gfycat.com)
+### [Gfycat](https://gfycat.com)
     - Provider Name: Gfycat
     - Documentation: NO
     - HTTPS support: YES
@@ -466,13 +466,22 @@ This is the complete list of supported oembed providers.
         - Auto generated Html for single pictures.
         - [This provider has multiple issues](https://github.com/Giphy/GiphyAPI/issues/182)
 
-### [GloriaTV](http://gloria.tv)
+### [GloriaTV](https://gloria.tv)
     - Provider Name: GloriaTV
     - Documentation: NO
     - HTTPS support: YES
     - Fake Response: YES
     - Additional Parameters: unknown
     - Notes: NONE
+
+### [Gyazo](https://gyazo.com)
+    - Provider Name: Gyazo
+    - Documentation: [YES](https://gyazo.com/api/docs/image#oembed)
+    - HTTPS support: YES
+    - Fake Response: NO
+    - Additional Parameters: unknown
+    - Notes:
+        - It might be possible to create a fake response, the problem is we cannot determine the extension of the image.
 
 ### [MessesInfo](https://messes.info)
     - Provider Name: MessesInfo
