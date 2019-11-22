@@ -216,12 +216,23 @@ class ProviderTester extends TestCase
                 $fakeResponse['html']
             ));
 
-            $this->assertEquals($tasks['fake_response']['type'], $fakeResponse['type'], sprintf(
-                'Fake Response type is not type %s on %s, %s given',
-                $tasks['fake_response']['type'],
-                $url,
-                $fakeResponse['type']
-            ));
+            $types = $tasks['fake_response']['type'];
+            if (strpos($types, '|') !== false) {
+                $typesArray = explode('|', $types);
+                $this->assertTrue(in_array($fakeResponse['type'], $typesArray), sprintf(
+                    'Fake Response is type %s but we only are allowing %s',
+                    $fakeResponse['type'],
+                    str_replace('|', ' / ', $types),
+                ));
+            } else {
+                $this->assertEquals($types, $fakeResponse['type'], sprintf(
+                    'Fake Response type is not type %s on %s, %s given',
+                    $types,
+                    $url,
+                    $fakeResponse['type']
+                ));
+            }
+
 
             $this->assertEquals(1, $fakeResponse['embera_using_fake_response'], sprintf(
                 'Fake response flag is not correct. Expecting "1", recieved "%s" on url %s',
@@ -247,7 +258,7 @@ class ProviderTester extends TestCase
                 'Real Response doesnt have html data on url %s', $url
             ));
 
-            if (!empty($realResponse['type'])) {
+            if (!empty($realResponse['type']) && strpos($types, '|') === false) {
                 $this->assertEquals(strtolower($realResponse['type']), strtolower($fakeResponse['type']), sprintf(
                     'The real response is type %s and not %s',
                     $realResponse['type'],

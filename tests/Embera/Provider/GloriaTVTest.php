@@ -32,7 +32,7 @@ final class GloriaTVTest extends ProviderTester
             'http://gloria.tv/post/62FT1LmLY8aLDeXYJnrUHbgJY?query=string' => 'https://gloria.tv/post/62FT1LmLY8aLDeXYJnrUHbgJY',
         ],
         'fake_response' => [
-            'type' => 'rich',
+            'type' => 'rich|video',
             'html' => '<iframe'
         ]
     ];
