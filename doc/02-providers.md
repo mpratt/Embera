@@ -483,6 +483,31 @@ This is the complete list of supported oembed providers.
     - Notes:
         - It might be possible to create a fake response, the problem is we cannot determine the extension of the image.
 
+### [Hearthis](https://hearthis.at)
+    - Provider Name: Hearthis
+    - Documentation: NO
+    - HTTPS support: YES
+    - Fake Response: NO
+    - Additional Parameters: unknown
+    - Notes: NONE
+
+### [Huffduffer](https://huffduffer.com)
+    - Provider Name: Huffduffer
+    - Documentation: NO
+    - HTTPS support: YES
+    - Fake Response: NO
+    - Additional Parameters: unknown
+    - Notes: NONE
+
+### [Hulu](https://hulu.com)
+    - Provider Name: Huffduffer
+    - Documentation: NO
+    - HTTPS support: YES
+    - Fake Response: NO
+    - Additional Parameters: unknown
+    - Notes: NONE
+
+
 ### [MessesInfo](https://messes.info)
     - Provider Name: MessesInfo
     - Documentation: NO
