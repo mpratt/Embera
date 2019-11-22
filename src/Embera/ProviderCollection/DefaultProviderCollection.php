@@ -76,6 +76,7 @@ class defaultProviderCollection extends ProviderCollectionAdapter
             'GettyImages',
             'Gfycat',
             'Giphy',
+            'GloriaTV',
             'MessesInfo',
             'Youtube',
         ]);

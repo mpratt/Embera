@@ -466,6 +466,14 @@ This is the complete list of supported oembed providers.
         - Auto generated Html for single pictures.
         - [This provider has multiple issues](https://github.com/Giphy/GiphyAPI/issues/182)
 
+### [GloriaTV](http://gloria.tv)
+    - Provider Name: GloriaTV
+    - Documentation: NO
+    - HTTPS support: YES
+    - Fake Response: YES
+    - Additional Parameters: unknown
+    - Notes: NONE
+
 ### [MessesInfo](https://messes.info)
     - Provider Name: MessesInfo
     - Documentation: NO
