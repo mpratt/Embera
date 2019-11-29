@@ -746,6 +746,43 @@ This is the complete list of supported oembed providers.
     - Additional Parameters: unknown
     - Notes: NONE
 
+### [Mathembed](https://mathembed.com)
+
+    - Provider Name: Mathembed
+    - Documentation: NO
+    - HTTPS support: YES
+    - Fake Response: YES
+    - Additional Parameters: unknown
+    - Notes: NONE
+
+### [Matterport](https://matterport.com)
+
+    - Provider Name: Matterport
+    - Documentation: NO
+    - HTTPS support: YES
+    - Fake Response: YES
+    - Additional Parameters: unknown
+    - Notes: NONE
+
+### [MedienArchivKuenste](https://medienarchiv.zhdk.ch/)
+
+    - Provider Name: MedienArchivKuenste
+    - Documentation: NO
+    - HTTPS support: YES
+    - Fake Response: YES
+    - Additional Parameters: unknown
+    - Notes: NONE
+
+### [Meetup](https://meetup.com/)
+
+    - Provider Name: Meetup
+    - Documentation: NO
+    - HTTPS support: YES
+    - Fake Response: NO
+    - Additional Parameters: unknown
+    - Notes:
+        - The provider already returns responsive embeds.
+
 ### [MessesInfo](https://messes.info)
 
     - Provider Name: MessesInfo
@@ -754,6 +791,35 @@ This is the complete list of supported oembed providers.
     - Fake Response: NO
     - Additional Parameters: Unknown
     - Notes: NONE
+
+### [MixCloud](https://mixcloud.com)
+
+    - Provider Name: MixCloud
+    - Documentation: NO
+    - HTTPS support: YES
+    - Fake Response: NO
+    - Additional Parameters: Unknown
+    - Notes: NONE
+
+### [Modelo.io](https://modelo.io)
+
+    - Provider Name: ModeloIO
+    - Documentation: NO
+    - HTTPS support: YES
+    - Fake Response: NO
+    - Additional Parameters: Unknown
+    - Notes:
+        - I had to put custom parameters in order to get a response from the endpoint.
+
+### [Onsizzle](https://onsizzle.com)
+
+    - Provider Name: Onsizzle
+    - Documentation: NO
+    - HTTPS support: YES
+    - Fake Response: YES
+    - Additional Parameters: unknown
+    - Notes:
+        - Also supports http://me.me
 
 ### [Youtube](https://youtube.com)
 

@@ -100,7 +100,14 @@ class defaultProviderCollection extends ProviderCollectionAdapter
             'LillePod',
             'Livestream',
             'Ludus',
+            'Mathembed',
+            'Matterport',
+            'MedienArchivKuenste',
+            'Meetup',
             'MessesInfo',
+            'MixCloud',
+            'ModeloIO',
+            'OnSizzle',
             'Youtube',
         ]);
     }
