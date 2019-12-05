@@ -1,6 +1,7 @@
 # Supported Sites
 
 This is the complete list of supported oembed providers.
+I try to support the provider list in [oembed.com](https://oembed.com).
 
 ### [23hq](http://23hq.com)
 
@@ -404,6 +405,16 @@ This is the complete list of supported oembed providers.
     - Fake Response: YES
     - Additional Parameters: Unknown
     - Notes: NONE
+
+### [Fitapp](https://fitapp.pro)
+
+    - Provider Name: Fitapp
+    - Documentation: NO
+    - HTTPS support: YES
+    - Fake Response: YES
+    - Additional Parameters: Unknown
+    - Notes:
+        - It also supports mybeweeg.com
 
 ### [FITE](https://fite.tv)
 
@@ -811,6 +822,64 @@ This is the complete list of supported oembed providers.
     - Notes:
         - I had to put custom parameters in order to get a response from the endpoint.
 
+### [MusicboxManiacs](https://musicboxmaniacs.com)
+
+    - Provider Name: MusicboxManiacs
+    - Documentation: NO
+    - HTTPS support: YES
+    - Fake Response: YES
+    - Additional Parameters: Unknown
+    - Notes: NONE
+
+### [Namchey](https://namchey.com)
+
+    - Provider Name: Namchey
+    - Documentation: [YES](https://help.namchey.com/app/oembed)
+    - HTTPS support: YES
+    - Fake Response: YES
+    - Additional Parameters: Unknown
+    - Notes:
+        - The provider already returns responsive embeds.
+
+### [Nanoo](https://nanoo.tv)
+
+    - Provider Name: Nanoo
+    - Documentation: NO
+    - HTTPS support: YES
+    - Fake Response: YES
+    - Additional Parameters: Unknown
+    - Notes: NONE
+
+### [Natural Atlas](https://naturalatlas.com)
+
+    - Provider Name: NaturalAtlas
+    - Documentation: NO
+    - HTTPS support: YES
+    - Fake Response: NO
+    - Additional Parameters: Unknown
+    - Notes:
+        - Might be possible to support fake responses but we need to detect first each category.
+
+### [Nfb.ca](https://nfb.ca)
+
+    - Provider Name: Nfb
+    - Documentation: NO
+    - HTTPS support: YES
+    - Fake Response: NO
+    - Additional Parameters: Unknown
+    - Notes:
+        - Might be possible to support fake responses only on films, not on playlists
+        - The returned oembed html is encoded, the library decodes it as expected.
+
+### [Omniscope](https://omniscope.me)
+
+    - Provider Name: Omniscope
+    - Documentation: NO
+    - HTTPS support: YES
+    - Fake Response: YES
+    - Additional Parameters: Unknown
+    - Notes: NONE
+
 ### [Onsizzle](https://onsizzle.com)
 
     - Provider Name: Onsizzle
@@ -820,6 +889,121 @@ This is the complete list of supported oembed providers.
     - Additional Parameters: unknown
     - Notes:
         - Also supports http://me.me
+
+### [OraTV](https://ora.tv)
+
+    - Provider Name: OraTV
+    - Documentation: NO
+    - HTTPS support: YES
+    - Fake Response: NO
+    - Additional Parameters: unknown
+    - Notes:
+        - Only supports "clip" links, because the endpoint is kinda complicated
+
+### [Orbitvu](https://orbitvu.co)
+
+    - Provider Name: Orbitvu
+    - Documentation: NO
+    - HTTPS support: YES
+    - Fake Response: NO
+    - Additional Parameters: unknown
+    - Notes: NONE
+
+### [Outplayed](https://outplayed.tv)
+
+    - Provider Name: Outplayed
+    - Documentation: NO
+    - HTTPS support: YES
+    - Fake Response: YES
+    - Additional Parameters: unknown
+    - Notes: NONE
+
+### [OverflowIO](https://overflow.io)
+
+    - Provider Name: OverflowIO
+    - Documentation: NO
+    - HTTPS support: YES
+    - Fake Response: YES
+    - Additional Parameters: unknown
+    - Notes: NONE
+
+### [Oz](https://oz.com)
+
+    - Provider Name: Oz
+    - Documentation: NO
+    - HTTPS support: YES
+    - Fake Response: YES
+    - Additional Parameters: unknown
+    - Notes: NONE
+
+### [Pastery](https://pastery.net)
+
+    - Provider Name: Pastery
+    - Documentation: NO
+    - HTTPS support: YES
+    - Fake Response: NO
+    - Additional Parameters: unknown
+    - Notes: NONE
+
+### [Pixdor](https://pixdor.com)
+
+    - Provider Name: Pixdor
+    - Documentation: NO
+    - HTTPS support: YES
+    - Fake Response: NO
+    - Additional Parameters: unknown
+    - Notes:
+        - The provider already returns responsive embeds.
+
+### [Podbean](https://podbean.com)
+
+    - Provider Name: Podbean
+    - Documentation: NO
+    - HTTPS support: YES
+    - Fake Response: NO
+    - Additional Parameters: unknown
+    - Notes:
+        - The provider already returns responsive embeds.
+
+### [PolariShare](https://polarishare.com)
+
+    - Provider Name: PolariShare
+    - Documentation: NO
+    - HTTPS support: YES
+    - Fake Response: NO
+    - Additional Parameters: unknown
+    - Notes:
+        - The provider already returns responsive embeds.
+
+### [Polldaddy](https://polldaddy.com)
+
+    - Provider Name: Polldaddy
+    - Documentation: NO
+    - HTTPS support: YES
+    - Fake Response: NO
+    - Additional Parameters: unknown
+    - Notes:
+        - The provider already returns responsive embeds.
+
+### [Portfolium](https://portfolium.com)
+
+    - Provider Name: Portfolium
+    - Documentation: NO
+    - HTTPS support: YES
+    - Fake Response: NO
+    - Additional Parameters: unknown
+    - Notes:
+        - The provider already returns responsive embeds.
+
+### [Posixion](https://posixion.com)
+
+    - Provider Name: Posixion
+    - Documentation: NO
+    - HTTPS support: YES
+    - Fake Response: YES
+    - Additional Parameters: unknown
+    - Notes:
+        - The provider already returns responsive embeds.
 
 ### [Youtube](https://youtube.com)
 
