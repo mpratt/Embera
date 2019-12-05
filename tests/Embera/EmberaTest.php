@@ -68,7 +68,7 @@ class EmberaTest extends TestCase
         ];
 
         $embera = new Embera($config);
-        $text = $embera->autoEmbed(['Invalid parameter']);
+        $embera->autoEmbed(['Invalid parameter']);
 
         $this->assertTrue($embera->hasErrors());
         $this->assertTrue(!empty($embera->getLastError()));
@@ -128,7 +128,6 @@ class EmberaTest extends TestCase
         });
 
         $responseAfterFilters = $embera->getUrlData($url);
-
         $this->assertEquals($responseAfterFilters[$url]['html'], str_replace('iframe', 'xframe', $responseBeforeFilters[$url]['html']));
     }
 
