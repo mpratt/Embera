@@ -24,7 +24,6 @@ final class DailyMotionTest extends ProviderTester
             'http://www.dailymotion.com/video/xxwxe1_harlem-shake-de-los-simpsons_fun',
             'https://www.dailymotion.com/video/x7nq9ov?playlist=x5v2j4',
             'https://dai.ly/x6g6ed2',
-            'https://www.dailymotion.com/video/x7nr2d0?playlist=x5v2j4',
             'http://games.dailymotion.com/live/x15gjhi',
         ),
         'invalid_urls' => array(

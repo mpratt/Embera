@@ -21,9 +21,7 @@ final class OnSizzleTest extends ProviderTester
 {
     protected $tasks = [
         'valid_urls' => [
-            'https://onsizzle.com/i/raising-my-son-to-be-a-man-that-your-daughter-f9547802d7664f03a9e3c15d76991947',
             'https://me.me/i/ten-kingiames-last-night-lebron-james-finally-got-that-ring-3174471',
-            'https://me.me/i/walking-past-a-stranger-my-brain-dont-do-it-dont-c92e181e86f6461c9bc7dfc7dd5fde29',
         ],
         'invalid_urls' => [
             'https://me.me/',
@@ -36,6 +34,6 @@ final class OnSizzleTest extends ProviderTester
 
     public function testProvider()
     {
-        $this->validateProvider('Onsizzle', [ 'width' => 480, 'height' => 270]);
+        $this->validateProvider('OnSizzle', [ 'width' => 480, 'height' => 270]);
     }
 }
