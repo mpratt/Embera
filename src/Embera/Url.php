@@ -95,6 +95,17 @@ class Url
     }
 
     /**
+     * Change the host of the url
+     *
+     * @param string $host
+     * @return void
+     */
+    public function setHost($host)
+    {
+        $this->parts['host'] = $host;
+    }
+
+    /**
      * Strips the query string from the url
      *
      * @return void

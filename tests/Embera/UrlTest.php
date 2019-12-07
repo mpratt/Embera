@@ -45,6 +45,19 @@ class UrlTest extends TestCase
         $this->assertEquals($originalUrl, (string) $url);
     }
 
+    public function testCanSetHost()
+    {
+        $originalUrl = 'http://www.host.com/path/';
+
+        $url = new Url($originalUrl);
+        $url->setHost('example.com');
+
+        $this->assertEquals('http://example.com/path/', (string) $url);
+
+        $url->discardChanges();
+        $this->assertEquals($originalUrl, (string) $url);
+    }
+
     public function testCanRemoveLastSlash()
     {
         $url = new Url('http://www.host.com/path////');
