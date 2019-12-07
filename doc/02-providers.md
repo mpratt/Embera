@@ -1280,6 +1280,222 @@ I try to support the provider list in [oembed.com](https://oembed.com).
 - Notes:
   - The provider might be able to support fake responses, but I need to test more.
 
+## [Spreaker](https://spreaker.com)
+
+- Provider Name: Spreaker
+- Documentation: NO
+- HTTPS support: YES
+- Fake Response: NO
+- Additional Parameters: unknown
+- Notes: NONE
+
+## [Standford Digital Repository](https://purl.stanford.edu)
+
+- Provider Name: StandfordDigitalRepository
+- Documentation: NO
+- HTTPS support: YES
+- Fake Response: YES
+- Additional Parameters: unknown
+- Notes:
+  - The provider might be able to support fake responses, but I need to test more.
+
+## [Streamable](https://streamable.com)
+
+- Provider Name: Streamable
+- Documentation: NO
+- HTTPS support: YES
+- Fake Response: YES
+- Additional Parameters: unknown
+- Notes: NONE
+
+## [Sutori](https://sutori.com)
+
+- Provider Name: Sutori
+- Documentation: NO
+- HTTPS support: YES
+- Fake Response: YES
+- Additional Parameters: unknown
+- Notes:
+  - The provider might be able to support fake responses, but I need to test more.
+
+## [Sway](https://sway.com)
+
+- Provider Name: Sway
+- Documentation: NO
+- HTTPS support: YES
+- Fake Response: YES
+- Additional Parameters: unknown
+- Notes:
+  - The provider might be able to support fake responses, but I need to test more.
+
+## [Ted](https://ted.com)
+
+- Provider Name: Ted
+- Documentation: NO
+- HTTPS support: YES
+- Fake Response: YES
+- Additional Parameters: unknown
+- Notes: NONE
+
+## [The New York Times](https://nytimes.com)
+
+- Provider Name: TheNewYorkTimes
+- Documentation: NO
+- HTTPS support: YES
+- Fake Response: YES
+- Additional Parameters: unknown
+- Notes:
+  - The provider might be able to support fake responses, but I need to test more.
+
+## [They Said So](https://theysaidso.com)
+
+- Provider Name: TheySaidSo
+- Documentation: NO
+- HTTPS support: YES
+- Fake Response: NO
+- Additional Parameters: unknown
+- Notes:
+  - Auto generated Html for single pictures.
+
+## [Tickcounter](https://tickcounter.com)
+
+- Provider Name: Tickcounter
+- Documentation: NO
+- HTTPS support: YES
+- Fake Response: NO
+- Additional Parameters: unknown
+- Notes: NONE
+
+## [Toornament](https://toornament.com)
+
+- Provider Name: Toornament
+- Documentation: NO
+- HTTPS support: YES
+- Fake Response: YES
+- Additional Parameters: unknown
+- Notes: NONE
+
+## [Tuxx](https://tuxx.be)
+
+- Provider Name: Tuxx
+- Documentation: NO
+- HTTPS support: YES
+- Fake Response: NO
+- Additional Parameters: unknown
+- Notes: NONE
+
+## [Tvcf](https://tvcf.co.kr)
+
+- Provider Name: Tvcf
+- Documentation: NO
+- HTTPS support: YES
+- Fake Response: YES
+- Additional Parameters: unknown
+- Notes: NONE
+
+## [Twitch](https://twitch.tv)
+
+- Provider Name: Twitch
+- Documentation: NO
+- HTTPS support: YES
+- Fake Response: NO
+- Additional Parameters: unknown
+- Notes:
+  - Might be able to support fake responses but I need to test more.
+
+## [Twitter](https://twitter.com)
+
+- Provider Name: Twitter
+- Documentation: [YES](https://developer.twitter.com/en/docs/tweets/post-and-engage/api-reference/get-statuses-oembed)
+- HTTPS support: YES
+- Fake Response: NO
+- Additional Parameters:
+  - hide_media: When set to true,links in a Tweet are not expanded to photo, video, or link previews.
+  - hide_thread: The conversation thread will not be displayed when the requested Tweet is in reply to another Tweet.
+  - omit_script: When set to true, script responsible for loading widgets.js will not be returned.
+  - align: left,right,center,none
+  - related: A comma-separated list of Twitter usernames related to your content.
+  - lang: Render the Tweet in the specified Twitter language supported by embedded Tweets.
+  - theme: light, dark
+  - link_color: Adjust the color of Tweet text links with a hexadecimal color value.
+  - widget_type: Set to video to return a Twitter Video embed for the given Tweet.
+  - dnt: When set to true, the Tweet and its embedded page on your site are not used for personalized suggestions and personalized ads.
+- Notes:
+  - The provider already returns responsive embeds (using the html_responsive key)
+
+## [Typecast](https://typecast.ai)
+
+- Provider Name: Typecast
+- Documentation: NO
+- HTTPS support: YES
+- Fake Response: YES
+- Additional Parameters: unknown
+- Notes: NONE
+
+## [Typlog](https://typlog.io)
+
+- Provider Name: Typlog
+- Documentation: NO
+- HTTPS support: YES
+- Fake Response: NO
+- Additional Parameters: unknown
+- Notes: NONE
+
+## [University of Cambridge Map](https://map.cam.ac.uk)
+
+- Provider Name: UniversityCambridgeMap
+- Documentation: NO
+- HTTPS support: YES
+- Fake Response: NO
+- Additional Parameters: unknown
+- Notes: NONE
+
+## [Universite Pantheon Sorbonne](https://mediatheque.univ-paris1.fr)
+
+- Provider Name: UniversitePantheonSorbonne
+- Documentation: NO
+- HTTPS support: YES
+- Fake Response: YES
+- Additional Parameters: unknown
+- Notes: NONE
+
+## [UstreamTV](https://ustream.tv)
+
+- Provider Name: UstreamTV
+- Documentation: NO
+- HTTPS support: NO
+- Fake Response: NO
+- Additional Parameters: unknown
+- Notes:
+  - support IBM videos.
+
+## [Ustudio](https://ustudio.com)
+
+- Provider Name: Ustudio
+- Documentation: NO
+- HTTPS support: YES
+- Fake Response: YES
+- Additional Parameters: unknown
+- Notes: NONE
+
+## [VeeR VR](https://veer.tv)
+
+- Provider Name: Veer
+- Documentation: NO
+- HTTPS support: YES
+- Fake Response: YES
+- Additional Parameters: unknown
+- Notes: NONE
+
+## [Verse](https://verse.com)
+
+- Provider Name: Verse
+- Documentation: NO
+- HTTPS support: YES
+- Fake Response: YES
+- Additional Parameters: unknown
+- Notes: NONE
+
 ## [Youtube](https://youtube.com)
 
 - Provider Name: Youtube
