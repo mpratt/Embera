@@ -1,7 +1,9 @@
-# Embera - PHP Oembed consumer library [![Build Status](https://travis-ci.org/mpratt/embera.svg?branch=master)](https://travis-ci.org/mpratt/embera)
+# Embera - PHP Oembed consumer library
 
+[![Build Status](https://travis-ci.org/mpratt/embera.svg?branch=master)](https://travis-ci.org/mpratt/embera)
 [![Total Downloads](https://img.shields.io/packagist/dt/mpratt/embera.svg)](https://packagist.org/packages/mpratt/embera)
 [![Latest Stable Version](https://img.shields.io/packagist/v/mpratt/embera.svg)](https://packagist.org/packages/mpratt/embera)
+
 [![Support via PayPal](https://cdn.rawgit.com/twolfson/paypal-github-button/1.0.0/dist/button.svg)](https://paypal.me/mtpratt)
 
 Embera is an Oembed consumer library written in PHP.
