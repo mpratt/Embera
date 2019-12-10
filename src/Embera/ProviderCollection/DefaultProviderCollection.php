@@ -123,6 +123,7 @@ class DefaultProviderCollection extends ProviderCollectionAdapter
             'Oz',
             'Pastery',
             'Pixdor',
+            'Playbuzz',
             'Podbean',
             'PolariShare',
             'Polldaddy',

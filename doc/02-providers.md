@@ -965,6 +965,16 @@ I try to support the provider list in [oembed.com](https://oembed.com).
 - Notes:
   - The provider already returns responsive embeds.
 
+## [Playbuzz](https://playbuzz.com)
+
+- Provider Name: Playbuzz
+- Documentation: NO
+- HTTPS support: YES
+- Fake Response: NO
+- Additional Parameters: unknown
+- Notes:
+  - The provider already returns responsive embeds.
+
 ## [Podbean](https://podbean.com)
 
 - Provider Name: Podbean
