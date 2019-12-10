@@ -1,6 +1,8 @@
-Embera
-======
+# Embera
+
 [![Total Downloads](https://poser.pugx.org/mpratt/embera/downloads.png)](https://packagist.org/packages/mpratt/embera)
+
+**VERSION 1.9.X IS DEPRECATED. PLEASE USE THE NEWER VERSION 2.X.X**
 
 Embera is a [Oembed](http://oembed.com/) consumer library written in PHP. Basically what it does is take urls from a text and queries the matching
 service for information about the media.
@@ -14,36 +16,36 @@ a valid html code for you to use.
 
 Check out the `Basic Usage` instructions for more information.
 
-Supported Sites
-===============
+# Supported Sites
+
 Embera supports **60+** sites. Sites marked with an `*` allow offline html embedding
 
-- * [Youtube](http://www.youtube.com/)
-- * [Vimeo](http://vimeo.com/)
-- * [DailyMotion](http://www.dailymotion.com/)
+- - [Youtube](http://www.youtube.com/)
+- - [Vimeo](http://vimeo.com/)
+- - [DailyMotion](http://www.dailymotion.com/)
 - [Instagram](http://instagram.com)
 - [SoundCloud](http://soundcloud.com)
 - [Twitter](https://twitter.com)
-- * [Ted](http://ted.com)
+- - [Ted](http://ted.com)
 - [Flickr](http://flickr.com)
 - [Revision3](http://revision3.com)
 - [Hulu](http://www.hulu.com)
-- * [Kickstarter](http://www.kickstarter.com)
+- - [Kickstarter](http://www.kickstarter.com)
 - [Deviantart](http://deviantart.com)
 - [Facebook](https://facebook.com) (Public Posts/Videos)
-- * [Scribd](http://www.scribd.com)
+- - [Scribd](http://www.scribd.com)
 
 **And many many more!** for the full list checkout the [PROVIDERS.md](https://github.com/mpratt/Embera/blob/master/PROVIDERS.md) file.
 
-Requirements
-============
+# Requirements
+
 - PHP >= 5.6 (probably works on + 5.3)
 - Curl or `allow_url_fopen` must be enabled
 
-Installation
-============
+# Installation
 
 ### Install with Composer
+
 If you're using [Composer](https://github.com/composer/composer) to manage
 dependencies, you can use this library by creating a composer.json and adding this:
 
@@ -56,6 +58,7 @@ dependencies, you can use this library by creating a composer.json and adding th
 Save it and run `composer.phar install`
 
 ### Standalone Installation (without Composer)
+
 Download the latest release or clone this repository, place the `Lib/Embera` directory on your project. Afterwards, you only need to include
 the Autoload.php file.
 
@@ -65,14 +68,15 @@ the Autoload.php file.
 ```
 
 Or if you already have PSR-0 complaint autoloader, you just need to register Embera
+
 ```php
     $loader->registerNamespace('Embera', 'path/to/Embera');
 ```
 
-Basic Usage
-===========
+# Basic Usage
 
 For autoconverting urls into html embeddable code, use the `autoEmbed()` method:
+
 ```php
     $text = 'Hi, I just saw this video http://www.dailymotion.com/video/xxwxe1_harlem-shake-de-los-simpsons_fun';
     $embera = new \Embera\Embera();
@@ -81,6 +85,7 @@ For autoconverting urls into html embeddable code, use the `autoEmbed()` method:
 ```
 
 The Embera object accepts an array with configuration options, so lets say you want to specify width or height:
+
 ```php
     $config = array(
         'params' => array(
@@ -98,6 +103,7 @@ The Embera object accepts an array with configuration options, so lets say you w
 ```
 
 Do you want to allow embedding only from a few Sites?
+
 ```php
     $config = array(
         'allow' => array('Youtube', 'Vimeo')
@@ -114,6 +120,7 @@ Do you want to allow embedding only from a few Sites?
 ```
 
 Or perhaps you want to deny embedding from sites?
+
 ```php
     $config = array(
         'deny' => array('Youtube', 'Vimeo')
@@ -130,6 +137,7 @@ Or perhaps you want to deny embedding from sites?
 ```
 
 As an alternative you can embed urls only if they start with the embed:// prefix.
+
 ```php
     $config = array(
         'use_embed_prefix' => true
@@ -147,6 +155,7 @@ As an alternative you can embed urls only if they start with the embed:// prefix
 Maybe you are interested on seeing the full oembed response from the urls.
 Use the `getUrlInfo()` method that returns an array with the complete information about
 the media located in the url
+
 ```php
     $embera = new \Embera\Embera();
     print_r($embera->getUrlInfo('http://dailymotion.com/video/xp30q9_bmw-serie3-2012-en-mexico_auto'));
@@ -154,6 +163,7 @@ the media located in the url
 
 You can even feed an array full with urls and inspect the oembed response for
 each one them.
+
 ```php
     $urls = array('http://vimeo.com/groups/shortfilms/videos/66185763',
                   'http://vimeo.com/47360546',
@@ -167,10 +177,10 @@ each one them.
 Remember that some Oembed Providers append more/different information (and others less) this depends heavily from each provider and
 the type of media you are requesting.
 
-Advanced Usage
-==============
+# Advanced Usage
 
 ### Offline Support
+
 One of the key features of Embera is offline support. This feature allows you to get at least the html embed code for some services,
 without having to make a real http request to the oembed provider. What Offline support really means, is that the html embed code is constructed
 from the original url given, this also means that most of the other information such as the title or the author's name, is probably going to be missing.
@@ -205,14 +215,15 @@ to the oembed provider. This library has offline support for a bunch of provider
     /* Since Embera doesnt have Flickr offline support, the url stays the same. */
 ```
 
-
 When using the `getUrlInfo()` method, it is possible to see if the information from the provider came
 directly from the oembed endpoint or if it was generated by the offline feature. If you see in the response,
 the key `embera_using_fake` equal `0`, means that the library got the results from the Oembed provider.
 When it equals `1`, the html embed code was generated by the library.
 
 ### Error Checking
+
 There are 3 methods for error checking `bool hasErrors()`, `array getErrors()` and `string getLastError()`
+
 ```php
     $embera = new \Embera\Embera();
     $result = $embera->autoEmbed($text);
@@ -225,6 +236,7 @@ There are 3 methods for error checking `bool hasErrors()`, `array getErrors()` a
 ```
 
 ### Ignoring HTML tags when AutoEmbedding
+
 By default, Embera doesnt autoEmbed content/urls that are inside `<pre>`, `<a>`, `<code>` and `<img>` tags.
 However if you wanted to ignore other tags, you can specify other tags. Use the `ìgnore_tags` configuration option
 
@@ -240,6 +252,7 @@ However if you wanted to ignore other tags, you can specify other tags. Use the 
 For reference, you might want to take a look at mthe `HtmlProcessor` class which is in charge of ignoring those tags.
 
 ### Output Formatting
+
 Using the `\Embera\Formatter` object and the decorator pattern you are able to create templates with placeholders and
 Embera will fill them with the relevant information from the oembed response.
 
@@ -247,6 +260,7 @@ A placeholder, in this case, is a word enclosed by `{}`, for example `{title}` w
 you the title of the media. You can use any word from the oembed response ({provider_name}, {thumbnail_url}, {html}, {type}, etc).
 
 The `Formatter` object has 2 more methods - `setTemplate()` and `transform()`
+
 ```php
     $embera = new \Embera\Embera();
     $embera = new \Embera\Formatter($embera);
@@ -260,6 +274,7 @@ The `Formatter` object has 2 more methods - `setTemplate()` and `transform()`
 ```
 
 You can also give a string with urls and they will be replaced by the given template
+
 ```php
     $embera = new \Embera\Embera();
     $embera = new \Embera\Formatter($embera);
@@ -272,19 +287,22 @@ You can also give a string with urls and they will be replaced by the given temp
 
 If you like you can use a shorter syntax, just by passing a string or array as a second parameter to the
 `setTemplate` method
+
 ```php
     $embera = new \Embera\Formatter(new \Embera\Embera());
     echo $embera->setTemplate('<div class="oembed">{html}</div>', array('url1.com', 'url2.com', 'url3.com'));
 ```
 
 ### Adding Custom Providers
+
 Lets say you have a **private** Oembed Provider and you want to manage it with `Embera`. Well you can do it, first you have to create
 a new class that extends the `\Embera\Adapters\Service` class. You can use one of the included providers in the /Embera/Providers
 directory to get an idea of what it needs to have.
 
 After that you need to use the `addProvider()` method. This method requires that you specify the host of your service,
-the class you created and __optionally__ you can pass a third parameter, an array with data that should be used on the query string
+the class you created and **optionally** you can pass a third parameter, an array with data that should be used on the query string
 to your Oembed Provider, for example an API key.
+
 ```php
     /**
      * A very basic custom Service
@@ -311,14 +329,16 @@ to your Oembed Provider, for example an API key.
 However, If the provider is public, the best way to deal with it is to open a bug report right here on github so
 I can create a class for the service and everyone benefits from it.
 
-**Important**: __xml__ responses are **not** supported by `Embera` at the moment! Use JSON instead.
+**Important**: **xml** responses are **not** supported by `Embera` at the moment! Use JSON instead.
 
 ### Adding custom query string parameters to a service
+
 Some Oembed providers support custom parameters. For example Twitter allows the `align` parameter, which
 applies alignment styles to the html embed code. Most of the providers have documentation available
 where you can search for possible parameters.
 
 Use the config array:
+
 ```php
     $config = array(
         'custom_params' => array(
@@ -334,8 +354,10 @@ As a general rule, you just have to specify the Name of the service as a key and
 associative array with the parameters.
 
 ### Modifying attributes of fake/offline responses
+
 By default services with offline support have a width of 420px and height of 315px.
 You can modify this attributes via the config array:
+
 ```php
     $config = array(
         'fake' => array(
@@ -348,10 +370,12 @@ You can modify this attributes via the config array:
 ```
 
 ### Passing Options to the HttpRequest Class
+
 The \Embera\HttpRequest class is a simple wrapper for `curl` and `file_get_contents` (when the `allow_url_fopen` directive is
 enabled).
 
 You can pass options for each one of them when needed
+
 ```php
     $config = array(
         'http' => array(
@@ -367,12 +391,12 @@ You can pass options for each one of them when needed
     $embera = new \Embera\Embera($config);
 ```
 
-License
-=======
+# License
+
 **MIT**
 For the full copyright and license information, please view the LICENSE file.
 
-Author
-=====
+# Author
+
 Hi! I'm Michael Pratt and I'm from Colombia!
 My [Personal Website](http://www.michael-pratt.com) is in spanish.
