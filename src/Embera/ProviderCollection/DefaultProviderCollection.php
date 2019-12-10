@@ -16,7 +16,7 @@ namespace Embera\ProviderCollection;
  * Basically its a wrapper for the ProvidercollectionAdapter but defines the
  * default providers supported by the library
  */
-class defaultProviderCollection extends ProviderCollectionAdapter
+class DefaultProviderCollection extends ProviderCollectionAdapter
 {
     /** inline {@inheritdoc} */
     public function __construct(array $config = [])
