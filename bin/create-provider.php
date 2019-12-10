@@ -15,6 +15,10 @@ namespace Embera\bin;
 
 use RuntimeException;
 
+if (php_sapi_name() !== 'cli') {
+    exit;
+}
+
 date_default_timezone_set('UTC');
 require __DIR__.'/../vendor/autoload.php';
 
