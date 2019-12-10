@@ -16,10 +16,10 @@ namespace Embera\Providers;
  * The playbuzz.com Provider
  * @link http://playbuzz.com
  */
-class BlipTV extends \Embera\Adapters\Service
+class Playbuzz extends \Embera\Adapters\Service
 {
     /** inline {@inheritdoc} */
-    protected $apiUrl = 'http://blip.tv/oembed/';
+    protected $apiUrl = 'http://oembed.playbuzz.com/item?format=json';
 
     /** inline {@inheritdoc} */
     protected function validateUrl()
