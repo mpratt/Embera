@@ -100,6 +100,7 @@ abstract class ProviderCollectionAdapter implements ProviderCollectionInterface
             if ($prefix) {
                 $name = 'Embera\Provider\\' . $name;
             }
+
             $hosts = $name::getHosts();
             foreach ($hosts as $h) {
                 $this->providers[$h] = $name;
