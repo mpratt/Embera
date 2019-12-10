@@ -135,7 +135,7 @@ The response data depends on the provider, each of them returns information abou
 media, however this library always tries to provide an embeddable `html` key that can be used to
 embed the information on a html document.
 
-This library has fake responses which is a way of getting the html embeddable code without the
+This library has fake responses / Offline support which is a way of getting the html embeddable code without the
 need of querying the oembed provider. It also has caching support, provider collections, responsive
 embeds and many other features. You can find out more by reading the documentation below.
 
@@ -144,7 +144,7 @@ embeds and many other features. You can find out more by reading the documentati
 - [Usage/Configuration instructions](doc/01-usage.md)
 - [Supported providers](doc/02-providers.md)
 - [Using provider collections](doc/03-provider-collections.md)
-- [Using fake Responses](doc/04-responsive-embeds.md)
+- [Using fake Responses](doc/04-fake-responses.md)
 - [Using responsive embeds](doc/05-responsive-embeds.md)
 - [Enabling cache](doc/06-caching.md)
 - [Advanced Usage](doc/07-advanced-usage.md)
