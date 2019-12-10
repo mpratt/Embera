@@ -149,6 +149,20 @@ embeds and many other features. You can find out more by reading the documentati
 - [Enabling cache](doc/06-caching.md)
 - [Advanced Usage](doc/07-advanced-usage.md)
 
+## Migrating from version >= 1.9.x
+
+The folder structure has changed, the library is now in the `src` folder and
+you can find an autoloader there if you are not using composer.
+
+The configuration array has changed in order to make it simpler.
+Take a look at the [Usage/Configuration instructions](doc/01-usage.md) to update it.
+
+The other major change is that the `inspectUrlInfo()` method is now called `getUrlData()`.
+The `HtmlFormatter` class does not exist anymore since the library allows now other type
+of templating.
+
+Updating should be fairly easy, check the documentation.
+
 ## Submitting bugs and feature requests
 
 Bugs and feature request are tracked on [GitHub](https://github.com/mpratt/Embera/issues)

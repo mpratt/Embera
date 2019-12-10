@@ -1,8 +1,8 @@
 {
     "name": "mpratt/embera",
     "type": "library",
-    "description": "Oembed consumer library. Converts urls into their html embed code. Supports 60+ sites, such as Youtube, Twitter, vimeo, etc.",
-    "keywords": ["Embed", "Oembed", "Auto embed", "Embed Text", "Url Embed", "Youtube",  "Vimeo", "Vine", "Twitter", "Instagram"],
+    "description": "Oembed consumer library. Converts urls into their html embed code. Supports 150+ sites, such as Youtube, Twitter, vimeo, Instagram etc.",
+    "keywords": ["Embed", "Oembed", "Auto embed", "Embed Text", "Url Embed", "Responsive Embeds", "Youtube",  "Vimeo", "Vine", "Twitter", "Instagram"],
     "homepage": "https://github.com/mpratt/Embera",
     "license": "MIT",
     "authors": [
@@ -24,5 +24,8 @@
     },
     "autoload-dev": {
         "psr-4": {"Embera\\": "tests/Embera"}
+    },
+    "scripts": {
+        "test": "phpunit"
     }
 }
