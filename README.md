@@ -10,10 +10,10 @@ It supports **+150** sites, such as Youtube, Twitter, Livestream, Dailymotion, I
 
 ## Installation
 
-Install the latest version with
+Install the latest stable version with:
 
 ```bash
-$ composer require mpratt/embera
+$ composer require mpratt/embera:~2.0
 ```
 
 ## Basic Usage
