@@ -794,6 +794,16 @@ I try to support the provider list in [oembed.com](https://oembed.com).
 - Notes:
   - The provider already returns responsive embeds.
 
+## [MermaidInk](https://mermaid.ink/)
+
+- Provider Name: MermaidInk
+- Documentation: NO
+- HTTPS support: YES
+- Fake Response: NO
+- Additional Parameters: unknown
+- Notes:
+  - Html is created when none is returned
+
 ## [MessesInfo](https://messes.info)
 
 - Provider Name: MessesInfo
@@ -1495,6 +1505,103 @@ I try to support the provider list in [oembed.com](https://oembed.com).
 - Fake Response: YES
 - Additional Parameters: unknown
 - Notes: NONE
+
+## [Vimeo](https://vimeo.com)
+
+- Provider Name: Vimeo
+- Documentation: NO
+- HTTPS support: YES
+- Fake Response: NO
+- Additional Parameters: unknown
+- Notes: NONE
+
+## [Vlipsy](https://vlipsy.com)
+
+- Provider Name: Vlipsy
+- Documentation: NO
+- HTTPS support: YES
+- Fake Response: YES
+- Additional Parameters: unknown
+- Notes: NONE
+
+## [Vlive](https://vlive.tv)
+
+- Provider Name: Vlive
+- Documentation: NO
+- HTTPS support: YES
+- Fake Response: YES
+- Additional Parameters: unknown
+- Notes: NONE
+
+## [VoxSnap](https://voxsnap.com)
+
+- Provider Name: VoxSnap
+- Documentation: NO
+- HTTPS support: YES
+- Fake Response: YES
+- Additional Parameters: unknown
+- Notes: NONE
+
+## [Wistia](https://wistia.com)
+
+- Provider Name: Wistia
+- Documentation: NO
+- HTTPS support: YES
+- Fake Response: NO
+- Additional Parameters: unknown
+- Notes:
+  - Might be able to support fake responses but I dont have enough data to test
+
+## [Wizer](https://wizer.me)
+
+- Provider Name: Wizer
+- Documentation: NO
+- HTTPS support: YES
+- Fake Response: NO
+- Additional Parameters: unknown
+- Notes:
+  - Might be able to support fake responses but I dont have enough data to test
+
+## [Wordpress](https://wordpress.com)
+
+- Provider Name: Wordpress
+- Documentation: NO
+- HTTPS support: YES
+- Fake Response: NO
+- Additional Parameters:
+  - img_size: alternative to maxwidth/maxheight, as [width]x[height], defaults to 440x330px.
+  - as_article: true or false, triggers the non-standard article extension for post/pages
+- Notes:
+  - Wordpress allows other domains, in order to support them you must extend this class and add your domain in the Hosts property.
+
+## [Xpression](https://xpression.jp)
+
+- Provider Name: Xpression
+- Documentation: NO
+- HTTPS support: YES
+- Fake Response: YES
+- Additional Parameters: NONE
+- Notes: NONE
+
+## [Zingsoft](https://app.zingsoft.com)
+
+- Provider Name: Zingsoft
+- Documentation: NO
+- HTTPS support: YES
+- Fake Response: YES
+- Additional Parameters: NONE
+- Notes: NONE
+
+## [ZnipeTV](https://znipe.tv)
+
+- Provider Name: ZnipeTV
+- Documentation: NO
+- HTTPS support: YES
+- Fake Response: NO
+- Additional Parameters: NONE
+- Notes:
+  - The provider already returns responsive embeds.
+  - Might be able to support fake responses but not enough data to test.
 
 ## [Youtube](https://youtube.com)
 
