@@ -25,7 +25,7 @@ class CodeSandbox extends ProviderAdapter implements ProviderInterface
 
     /** inline {@inheritdoc} */
     protected static $hosts = [
-        'codesandbox.io'
+        '*.codesandbox.io'
     ];
 
     /** inline {@inheritdoc} */
