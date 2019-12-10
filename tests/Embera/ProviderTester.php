@@ -221,8 +221,7 @@ class ProviderTester extends TestCase
                 $typesArray = explode('|', $types);
                 $this->assertTrue(in_array($fakeResponse['type'], $typesArray), sprintf(
                     'Fake Response is type %s but we only are allowing %s',
-                    $fakeResponse['type'],
-                    str_replace('|', ' / ', $types),
+                    $fakeResponse['type'], $types
                 ));
             } else {
                 $this->assertEquals($types, $fakeResponse['type'], sprintf(
