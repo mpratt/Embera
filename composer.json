@@ -1,14 +1,14 @@
 {
     "name": "mpratt/embera",
     "type": "library",
-    "description": "Oembed consumer library, that gives information about urls. It helps you replace urls to 60+ sites like youtube or vimeo, with their html embed code.",
-    "keywords": ["Embed", "Oembed", "Auto embed", "Embed Text", "Url Embed", "Youtube",  "Vimeo", "Vine", "Twitter", "Instagram"],
+    "description": "Oembed consumer library. Converts urls into their html embed code. Supports 150+ sites, such as Youtube, Twitter, vimeo, Instagram etc.",
+    "keywords": ["Embed", "Oembed", "Auto embed", "Embed Text", "Url Embed", "Responsive Embeds", "Youtube",  "Vimeo", "Vine", "Twitter", "Instagram"],
     "homepage": "https://github.com/mpratt/Embera",
     "license": "MIT",
     "authors": [
         {
             "name": "Michael Pratt",
-            "email": "pratt@hablarmierda.net",
+            "email": "yo@michael-pratt.com",
             "homepage": "http://www.michael-pratt.com",
             "role": "Author/Developer"
         }
@@ -16,7 +16,16 @@
     "require": {
         "php": ">=5.6"
     },
+    "require-dev": {
+        "phpunit/phpunit": "^8.3"
+    },
     "autoload": {
-        "psr-0": {"Embera": "Lib/"}
+        "psr-4": {"Embera\\": "src/Embera"}
+    },
+    "autoload-dev": {
+        "psr-4": {"Embera\\": "tests/Embera"}
+    },
+    "scripts": {
+        "test": "phpunit"
     }
 }

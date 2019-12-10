@@ -1,7 +1,9 @@
-.DS_Store
-vendor/*
-Docs/*
-Toolkit/*
-Tests/Coverage
-composer.lock
+vendor
 composer.phar
+phpunit.xml
+composer.lock
+.DS_Store
+.php_cs.cache
+.hg
+.phpunit.result.cache
+doc/tmp

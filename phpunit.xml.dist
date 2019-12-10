@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit bootstrap="tests/bootstrap.php" colors="true" beStrictAboutTestsThatDoNotTestAnything="false">
+    <testsuites>
+        <testsuite name="Embera Test Suite">
+            <directory>tests/Embera/</directory>
+        </testsuite>
+    </testsuites>
+
+    <filter>
+        <whitelist>
+            <directory suffix=".php">src/Embera/</directory>
+        </whitelist>
+    </filter>
+
+    <php>
+        <ini name="date.timezone" value="UTC"/>
+        <const name="FULL_TEST" value="false"/>
+    </php>
+</phpunit>
