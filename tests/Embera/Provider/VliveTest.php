@@ -36,7 +36,8 @@ final class VliveTest extends ProviderTester
 
     public function testProvider()
     {
-        if (getenv('TRAVIS')) {
+        $travis = (bool) getenv('ONTRAVIS');
+        if ($travis) {
             $this->markTestIncomplete('Travis doesnt like this provider (Vlive).');
             return ;
         }

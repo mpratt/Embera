@@ -7,6 +7,9 @@ php:
   - 7.2
   - 7.3
 
+env:
+  - ONTRAVIS=1
+
 cache:
   directories:
     - $HOME/.composer/cache
