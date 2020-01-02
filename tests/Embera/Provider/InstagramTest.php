@@ -23,6 +23,7 @@ final class InstagramTest extends ProviderTester
         'valid_urls' => [
             'https://www.instagram.com/p/fA9uwTtkSN/',
             'http://www.instagram.com/p/B5VdXs7A7KG',
+            'https://www.instagram.com/farid_rueda/p/B6badtlCJCw/',
             'http://instagr.am/p/B5JzB9RAH-E/',
         ],
         'invalid_urls' => [
