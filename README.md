@@ -1,12 +1,11 @@
 # Embera
 
 [![Total Downloads](https://img.shields.io/packagist/dt/mpratt/embera.svg)](https://packagist.org/packages/mpratt/embera)
-[![Latest Stable Version](https://img.shields.io/packagist/v/mpratt/embera.svg)](https://packagist.org/packages/mpratt/embera)
 
 [![Support via PayPal](https://cdn.rawgit.com/twolfson/paypal-github-button/1.0.0/dist/button.svg)](https://paypal.me/mtpratt)
 
 **PLEASE UPDATE TO VERSION 2.0.0**
-**VERSION 1.9.X WILL RECIEVE SECURITY UPDATES / MINOR UPDATES BUT ITS NOT GOING TO SUPPORT NEW PROVIDERS.**
+**VERSION 1.9.X WILL RECEIVE SECURITY UPDATES / MINOR UPDATES BUT ITS NOT GOING TO SUPPORT NEW PROVIDERS.**
 
 Embera is a [Oembed](http://oembed.com/) consumer library written in PHP. Basically what it does is take urls from a text and queries the matching
 service for information about the media.
