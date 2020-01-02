@@ -1,8 +1,12 @@
 # Embera
 
-[![Total Downloads](https://poser.pugx.org/mpratt/embera/downloads.png)](https://packagist.org/packages/mpratt/embera)
+[![Total Downloads](https://img.shields.io/packagist/dt/mpratt/embera.svg)](https://packagist.org/packages/mpratt/embera)
+[![Latest Stable Version](https://img.shields.io/packagist/v/mpratt/embera.svg)](https://packagist.org/packages/mpratt/embera)
 
-**VERSION 1.9.X IS DEPRECATED. PLEASE USE THE NEWER VERSION 2.X.X**
+[![Support via PayPal](https://cdn.rawgit.com/twolfson/paypal-github-button/1.0.0/dist/button.svg)](https://paypal.me/mtpratt)
+
+**PLEASE UPDATE TO VERSION 2.0.0**
+**VERSION 1.9.X WILL RECIEVE SECURITY UPDATES / MINOR UPDATES BUT ITS NOT GOING TO SUPPORT NEW PROVIDERS.**
 
 Embera is a [Oembed](http://oembed.com/) consumer library written in PHP. Basically what it does is take urls from a text and queries the matching
 service for information about the media.
@@ -400,3 +404,7 @@ For the full copyright and license information, please view the LICENSE file.
 
 Hi! I'm Michael Pratt and I'm from Colombia!
 My [Personal Website](http://www.michael-pratt.com) is in spanish.
+
+If you like this library, it has been useful to you and want to support me, you can do it via paypal.
+
+[![Support via PayPal](https://cdn.rawgit.com/twolfson/paypal-github-button/1.0.0/dist/button.svg)](https://paypal.me/mtpratt)
