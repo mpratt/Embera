@@ -21,9 +21,9 @@ final class TwitterTest extends ProviderTester
 {
     protected $tasks = [
         'valid_urls' => [
-            'https://twitter.com/pewdiepie/status/1203031916796170240',
-            'https://twitter.com/pewdiepie/status/1200516955817398272',
-            'https://twitter.com/pewdiepie/status/1197857416639066112',
+            'https://twitter.com/ELTIEMPO/status/1212856150288424960',
+            'https://twitter.com/ELTIEMPO/status/1212852339721351168',
+            'https://twitter.com/ELTIEMPO/status/1212848621844074497',
         ],
         'invalid_urls' => [
             'https://twitter.com/',

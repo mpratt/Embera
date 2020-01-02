@@ -21,7 +21,6 @@ final class SmugmugTest extends ProviderTester
 {
     protected $tasks = [
         'valid_urls' => [
-            'https://hyderphoto.smugmug.com/Daily-Photos/Daily-Photos-2019/i-TGghPwM',
             'https://paulbellinger.smugmug.com/Daily/Daily-2012/i-sM5JWTM',
             'https://fotomom.smugmug.com/Daily-Photos/My-Best-Daily-Shots/i-vXRPDn9',
         ],
