@@ -32,7 +32,7 @@ $embera = new Embera();
 
 ## Requirements
 
-- PHP >= 7.0 (It should work on 5.6, but im not supporting it `sadface.gif`)
+- PHP >= 7.0 (It should work on 5.6)
 - Curl or allow_url_fopen should be enabled
 
 ## Basic Usage
