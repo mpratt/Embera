@@ -70,7 +70,7 @@ class HttpClientCache implements HttpClientInterface
                 return $response;
             }
 
-        } catch (Exception $e) {}
+        } catch (\Exception $e) {}
 
         return false;
     }

@@ -36,11 +36,7 @@ class Didacte extends ProviderAdapter implements ProviderInterface
     {
         if (preg_match('~\/\/([^\.]+)\.didacte\.com/a/course/([^/]+)~i', (string) $url, $m)) {
 
-            if (strtolower($m['1']) == 'www') {
-                return false;
-            }
-
-            return true;
+            return !(strtolower($m['1']) == 'www');
         }
 
         return false;

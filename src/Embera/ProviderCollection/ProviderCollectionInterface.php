@@ -49,7 +49,7 @@ interface ProviderCollectionInterface
      * @param array|string $urls  An array with urls or a string with urls
      * @return array
      */
-    public function findProviders($data);
+    public function findProviders($urls);
 
     /**
      * Sets the providerList relationship

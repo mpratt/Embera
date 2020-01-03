@@ -48,12 +48,6 @@ class Vlive extends ProviderAdapter implements ProviderInterface
     }
 
     /** inline {@inheritdoc} */
-    public function modifyResponse(array $response = [])
-    {
-        return $response;
-    }
-
-    /** inline {@inheritdoc} */
     public function getFakeResponse()
     {
         $embedUrl = str_replace('/video/', '/embed/', $this->url);

@@ -24,7 +24,10 @@ class HttpClient implements HttpClientInterface
     /** @var array Array with custom curl/fopen options */
     protected $config = [];
 
-    /** Alias for the setConfig method */
+    /**
+     * Alias for the setConfig method
+     * @param array $config
+     */
     public function __construct(array $config = [])
     {
         $this->setConfig($config);
@@ -82,12 +85,11 @@ class HttpClient implements HttpClientInterface
         $status = curl_getinfo($handler, CURLINFO_HTTP_CODE);
         $headerSize = curl_getinfo($handler, CURLINFO_HEADER_SIZE);
 
-        $header = substr($response, 0, $headerSize);
         $body = substr($response, $headerSize);
         curl_close($handler);
 
 
-        if (empty($body) || !in_array($status, array('200'))) {
+        if (empty($body) || $status != '200') {
             throw new Exception($status . ': Invalid response for ' . $url);
         }
 

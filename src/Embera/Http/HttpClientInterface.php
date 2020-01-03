@@ -33,7 +33,7 @@ interface HttpClientInterface
      * @param array $params Additional parameters for the respective part
      * @return string
      *
-     * @throws Exception when an error ocurred or if no way to do a request exists
+     * @throws \Exception when an error ocurred or if no way to do a request exists
      */
     public function fetch($url, array $params = []);
 

@@ -21,10 +21,10 @@ use Embera\Url;
  */
 abstract class ProviderAdapter
 {
-    /**  @var Embera\Url */
+    /**  @var Url */
     protected $url;
 
-    /**  @var Array with hosts where the provider belongs */
+    /**  @var array with hosts where the provider belongs */
     protected static $hosts = [];
 
     /** @var array Associative array with config/parameters to be sent to the oembed provider */

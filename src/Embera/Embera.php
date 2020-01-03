@@ -48,10 +48,10 @@ class Embera
     /** @var array Closures to be used on oembed responses */
     protected $filters = [];
 
-    /** @var \Embera\ProviderCollection\ProviderCollectionInterface */
+    /** @var ProviderCollectionInterface */
     protected $providerCollection;
 
-    /** @var \Embera\Http\HttpClientInterface */
+    /** @var HttpClientInterface */
     protected $httpClient;
 
     /**
@@ -150,7 +150,7 @@ class Embera
 
                 $return[$url] = $this->applyFilters($response);
 
-            } catch (Exception $e) {
+            } catch (\Exception $e) {
                 $this->errors[] = $e->getMessage();
             }
         }

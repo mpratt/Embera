@@ -63,7 +63,7 @@ class IgnoreTags
     {
         if (stripos($content, '<' . $tag) !== false) {
 
-            if (in_array(strtolower($tag), array('img'))) {
+            if ('img' == strtolower($tag)) {
                 $pattern = '~(<' . preg_quote($tag, '~') . '[^>]+\>)~i';
             } else {
                 $pattern = '~(<' . preg_quote($tag, '~') . '\\b[^>]*?>[\\s\\S]*?<\\/' . preg_quote($tag, '~') . '>)~i';
