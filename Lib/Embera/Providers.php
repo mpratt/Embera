@@ -34,7 +34,6 @@ class Providers
     protected $services = array(
         '23hq.com' => '\Embera\Providers\Hq23',
         'live.amcharts.com' => '\Embera\Providers\AmCharts',
-        'animatron.com' => '\Embera\Providers\Animatron',
         'animoto.com' => '\Embera\Providers\Animoto',
         'on.aol.com' => '\Embera\Providers\AolOn',
         '5min.com' => '\Embera\Providers\AolOn',
