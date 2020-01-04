@@ -46,10 +46,10 @@ interface ProviderCollectionInterface
     /**
      * Returns an array with providers found.
      *
-     * @param array|string $urls  An array with urls or a string with urls
+     * @param array|string $data  An array with urls or a string with urls
      * @return array
      */
-    public function findProviders($urls);
+    public function findProviders($data);
 
     /**
      * Sets the providerList relationship
