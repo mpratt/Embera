@@ -63,7 +63,7 @@ abstract class ProviderCollectionAdapter implements ProviderCollectionInterface
         if (is_callable($providerName)) {
             $list = array_filter($this->providers, $providerName);
         } else {
-            $list = array_filter($this->providers, function ($class) use ($providerName) {
+            $list = array_filter($this->providers, static function ($class) use ($providerName) {
                 return (strtolower($providerName) == strtolower($class));
             });
         }
@@ -82,7 +82,7 @@ abstract class ProviderCollectionAdapter implements ProviderCollectionInterface
             return [];
         }
 
-        $this->wildCardHosts = array_filter(array_keys($this->providers), function($key) {
+        $this->wildCardHosts = array_filter(array_keys($this->providers), static function($key) {
             return (strpos($key, '*') !== false);
         });
 
@@ -121,7 +121,7 @@ abstract class ProviderCollectionAdapter implements ProviderCollectionInterface
         $regex = $this->config['url_extractor_regex'];
 
         if (is_array($data)) {
-            return array_filter($data, function ($arr) use ($regex) {
+            return array_filter($data, static function ($arr) use ($regex) {
                 return preg_match($regex, $arr);
             });
         }

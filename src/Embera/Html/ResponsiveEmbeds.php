@@ -26,7 +26,7 @@ class ResponsiveEmbeds
      */
     public function transform(array $response)
     {
-        if (!empty($response['html']) && isset($response['embera_provider_name']) && isset($response['type'])) {
+        if (!empty($response['html']) && isset($response['embera_provider_name'], $response['type'])) {
             $response['html_pre_responsive'] = $response['html'];
             $response['html'] = $this->removeWidthHeightAttributes($response['html']);
             $response['html'] = $this->removeWidthHeightStyles($response['html']);

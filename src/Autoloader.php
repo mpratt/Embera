@@ -1,5 +1,5 @@
 <?php
-spl_autoload_register(function ($class) {
+spl_autoload_register(static function ($class) {
     if (!preg_match('~Embera~i', $class)) {
         return ;
     }
