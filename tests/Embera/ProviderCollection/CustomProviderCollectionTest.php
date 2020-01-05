@@ -39,7 +39,7 @@ final class CustomProviderCollectionTest extends TestCase
         $providers = $collection->findProviders($this->urls);
 
         foreach ($providers as $p) {
-            $this->assertTrue(in_array($p->getProviderName(), [ 'Youtube', 'Flickr' ]));
+            $this->assertContains($p->getProviderName(), [ 'Youtube', 'Flickr' ]);
         }
 
         $collection = new CustomProviderCollection($this->config);
@@ -48,7 +48,7 @@ final class CustomProviderCollectionTest extends TestCase
         $providers = $collection->findProviders($this->urls);
 
         foreach ($providers as $p) {
-            $this->assertTrue(in_array($p->getProviderName(), [ 'Flickr' ]));
+            $this->assertContains($p->getProviderName(), [ 'Flickr' ]);
         }
     }
 

@@ -12,11 +12,9 @@
 
 namespace Embera;
 
-use Embera\Embera;
-use Embera\ProviderCollection\DefaultProviderCollection;
-use Embera\Http\OembedClient;
 use Embera\Http\HttpClient;
-
+use Embera\Http\OembedClient;
+use Embera\ProviderCollection\DefaultProviderCollection;
 use PHPUnit\Framework\TestCase;
 use ReflectionClass;
 
@@ -69,7 +67,7 @@ class ProviderTester extends TestCase
         $rounds = (defined('FULL_TEST') && FULL_TEST ? 1000 : 1);
 
         if (empty($this->tasks)) {
-            throw new Exception(sprintf('The Provider %s doesnt have tasks', $p));
+            throw new \Exception(sprintf('The Provider %s doesnt have tasks', $p));
         }
 
         $this->validateUrlDetection($p, $this->tasks, $config);
@@ -88,7 +86,7 @@ class ProviderTester extends TestCase
     /**
      * Checks if the main library detects this provider
      *
-     * @param string $provider Provider Name
+     * @param string $providerName Provider Name
      * @param array $tasks
      * @param array $config
      * @return void
@@ -107,7 +105,7 @@ class ProviderTester extends TestCase
         $collection = new DefaultProviderCollection($config);
         $providers = $collection->findProviders($tasks['valid_urls']);
 
-        $this->assertFalse(empty($providers), 'Could not detect urls from the main Embera library.');
+        $this->assertNotEmpty($providers, 'Could not detect urls from the main Embera library.');
         foreach ($providers as $p) {
             $this->assertEquals($p->getProviderName(), $providerName);
         }
@@ -116,7 +114,7 @@ class ProviderTester extends TestCase
     /**
      * Checks if all valid urls are correctly detected
      *
-     * @param string $provider Provider Name
+     * @param string $providerName Provider Name
      * @param array $tasks
      * @param array $config
      * @return void
@@ -156,8 +154,9 @@ class ProviderTester extends TestCase
     /**
      * Validates that a url on this provider is correctly normalized
      *
-     * @param string $provider
+     * @param string $providerName
      * @param array $data
+     * @param array $config
      * @return void
      *
      * @medium
@@ -179,6 +178,7 @@ class ProviderTester extends TestCase
      * @param string $providerName
      * @param array $tasks
      * @param int $rounds
+     * @param array $config
      *
      * @return void
      *
@@ -205,11 +205,11 @@ class ProviderTester extends TestCase
 
             $fakeResponse = $fakeOembedClient->getResponseFrom($provider);
 
-            $this->assertTrue(!empty($fakeResponse['html']), sprintf(
+            $this->assertNotEmpty($fakeResponse['html'], sprintf(
                 'Fake Response doesnt have html data on url %s', $url
             ));
 
-            $this->assertTrue((stripos($fakeResponse['html'], $tasks['fake_response']['html']) !== false), sprintf(
+            $this->assertStringContainsStringIgnoringCase($tasks['fake_response']['html'], $fakeResponse['html'], sprintf(
                 'Could not determine the existance of %s in the url %s. The response was %s',
                 $tasks['fake_response']['html'],
                 $url,
@@ -219,7 +219,7 @@ class ProviderTester extends TestCase
             $types = $tasks['fake_response']['type'];
             if (strpos($types, '|') !== false) {
                 $typesArray = explode('|', $types);
-                $this->assertTrue(in_array($fakeResponse['type'], $typesArray), sprintf(
+                $this->assertContains($fakeResponse['type'], $typesArray, sprintf(
                     'Fake Response is type %s but we only are allowing %s',
                     $fakeResponse['type'], $types
                 ));
@@ -253,7 +253,7 @@ class ProviderTester extends TestCase
                 $realResponse['embera_using_fake_response'], $url
             ));
 
-            $this->assertTrue(!empty($realResponse['html']), sprintf(
+            $this->assertNotEmpty($realResponse['html'], sprintf(
                 'Real Response doesnt have html data on url %s', $url
             ));
 
@@ -280,6 +280,7 @@ class ProviderTester extends TestCase
      * @param string $providerName
      * @param array $tasks
      * @param int $rounds
+     * @param array $config
      *
      * @return void
      *

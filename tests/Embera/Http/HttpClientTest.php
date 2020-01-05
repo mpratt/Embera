@@ -59,7 +59,7 @@ class HttpClientTest extends TestCase
 
     public function testCanDetectInvalidUrl()
     {
-        $this->expectException('InvalidArgumentException');
+        $this->expectException('\InvalidArgumentException');
 
         $http = new HttpClient();
         $http->fetch('this is an invalid url');
@@ -67,7 +67,7 @@ class HttpClientTest extends TestCase
 
     public function testCurlCanDetectInvalidStatusCode()
     {
-        $this->expectException('Exception');
+        $this->expectException('\Exception');
 
         $ua = 'PHP/Embera Test - ' . date('Y-m-d');
         $http = new HttpClient([
@@ -75,6 +75,6 @@ class HttpClientTest extends TestCase
             'user_agent' => $ua,
         ]);
 
-        $response = $http->fetch('https://httpbin.org/status/404');
+        $http->fetch('https://httpbin.org/status/404');
     }
 }

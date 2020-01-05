@@ -36,7 +36,7 @@ final class SlimProviderCollectionTest extends TestCase
         $providers = $collection->findProviders($this->urls);
 
         foreach ($providers as $p) {
-            $this->assertTrue(in_array($p->getProviderName(), [ 'Youtube', 'Kickstarter' ]));
+            $this->assertContains($p->getProviderName(), [ 'Youtube', 'Kickstarter' ]);
         }
     }
 

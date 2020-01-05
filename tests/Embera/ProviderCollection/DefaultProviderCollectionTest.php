@@ -36,7 +36,7 @@ final class DefaultProviderCollectionTest extends TestCase
         $providers = $collection->findProviders($this->urls);
 
         foreach ($providers as $p) {
-            $this->assertTrue(in_array($p->getProviderName(), [ 'Youtube']));
+            $this->assertContains($p->getProviderName(), [ 'Youtube']);
         }
     }
 
@@ -58,7 +58,7 @@ final class DefaultProviderCollectionTest extends TestCase
             'https://www.youtube.com/feed/subscriptions',
         ]);
 
-        $this->assertTrue(empty($providers));
+        $this->assertEmpty($providers);
     }
 
     public function testCanFilterByProviderName()
@@ -76,14 +76,14 @@ final class DefaultProviderCollectionTest extends TestCase
     public function testCanFilterByClosure()
     {
         $collection = new DefaultProviderCollection($this->config);
-        $newCollection = $collection->filter(function ($elem) {
+        $newCollection = $collection->filter(static function ($elem) {
             return (in_array($elem, ['Youtube', 'Vimeo']));
         });
 
         $providers = $newCollection->findProviders($this->urls);
 
         foreach ($providers as $p) {
-            $this->assertTrue(in_array($p->getProviderName(), ['Youtube', 'Vimeo']));
+            $this->assertContains($p->getProviderName(), ['Youtube', 'Vimeo']);
         }
     }
 
@@ -91,7 +91,7 @@ final class DefaultProviderCollectionTest extends TestCase
     {
         $collection = new DefaultProviderCollection($this->config);
         $providers = $collection->findProviders('This is a text without urls.');
-        $this->assertTrue(empty($providers));
+        $this->assertEmpty($providers);
     }
 
     public function testCanDetectUrlsInString()
@@ -106,12 +106,12 @@ final class DefaultProviderCollectionTest extends TestCase
         $collection = new DefaultProviderCollection($this->config);
 
         // Remove all Providers
-        $collection = $collection->filter(function ($elem) {
+        $collection = $collection->filter(static function ($elem) {
             return false;
         });
 
         $providers = $collection->findProviders($this->urls);
-        $this->assertTrue(count($providers) == 0);
+        $this->assertCount(0, $providers);
 
         // Add Only Youtube
         $collection->addProvider('youtube.com', 'Embera\Provider\Youtube');

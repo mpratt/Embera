@@ -36,14 +36,14 @@ final class ProviderAdapterTest extends TestCase
         $this->assertEquals($params['url'], $testUrl);
         $this->assertEquals($params['maxwidth'], $config['youtube_maxwidth']);
         $this->assertEquals($params['maxheight'], $config['maxheight']);
-        $this->assertTrue(empty($params['fake_responses']));
+        $this->assertArrayNotHasKey('fake_responses', $params);
     }
 
     public function testGetProviderHosts()
     {
         $hosts = Youtube::getHosts();
         foreach ($hosts as $h) {
-            $this->assertTrue(stripos($h, 'youtu') !== false);
+            $this->assertStringContainsStringIgnoringCase('youtu', $h);
         }
 
     }
