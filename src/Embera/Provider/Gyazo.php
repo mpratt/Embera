@@ -55,10 +55,6 @@ class Gyazo extends ProviderAdapter implements ProviderInterface
     public function modifyResponse(array $response = [])
     {
         if (empty($response['html']) && !empty($response['url'])) {
-            $html = [];
-            $html[] = '';
-            $html[] = '</a>';
-
             $response['html'] = '<img class="gyazo-oembed" src="' . $response['url'] . '" width="100%" style="width:100%;height:auto;" alt="" title="" >';
         }
 

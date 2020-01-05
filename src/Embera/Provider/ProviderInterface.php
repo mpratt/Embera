@@ -26,7 +26,7 @@ interface ProviderInterface
      * Should be implemented on all children and should
      * return a boolean
      *
-     * @param Embera\Url $url
+     * @param Url $url
      *
      * @return bool|int
      */
@@ -112,8 +112,8 @@ interface ProviderInterface
      * This method should be overwritten by the
      * Provider itself, if needed.
      *
-     * @param Embera\Url $url
-     * @return Embera\Url $url
+     * @param Url $url
+     * @return Url $url
      */
     public function normalizeUrl(Url $url);
 

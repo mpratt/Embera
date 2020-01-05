@@ -13,7 +13,6 @@
 namespace Embera\ProviderCollection;
 
 use ReflectionClass;
-use InvalidArgumentException;
 
 /**
  * This is the adapter which has the main logic for
@@ -33,7 +32,10 @@ abstract class ProviderCollectionAdapter implements ProviderCollectionInterface
     /** @var array Massive array with the mapping of host -> provider relation. */
     protected $providers = [];
 
-    /** Alias for the setConfig method */
+    /**
+     * Alias for the setConfig method
+     * @param array $config
+     */
     public function __construct(array $config = [])
     {
         $this->setConfig($config);
@@ -183,7 +185,7 @@ abstract class ProviderCollectionAdapter implements ProviderCollectionInterface
      *
      * @param string $class The name of the class
      * @param string $url The associated url
-     * @return object
+     * @return object|bool
      */
     protected function initializeProvider($class, $url)
     {

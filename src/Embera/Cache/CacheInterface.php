@@ -12,7 +12,6 @@
 
 namespace Embera\Cache;
 
-use Exception;
 use InvalidArgumentException;
 
 /**

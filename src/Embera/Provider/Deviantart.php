@@ -51,16 +51,13 @@ class Deviantart extends ProviderAdapter implements ProviderInterface
     /** inline {@inheritdoc} */
     public function modifyResponse(array $response = [])
     {
-        if (!empty($response) && empty($response['html'])) {
+        if (!empty($response) && empty($response['html']) && strtolower($response['type']) == 'photo') {
+            $html = [];
+            $html[] = '<a href="' . $response['url'] . '" target="_blank">';
+            $html[] = '<img src="' . $response['thumbnail_url_200h'] . '" width="' . $response['thumbnail_width_200h'] . '" height="' . $response['thumbnail_height_200h'] . '" alt="" title="" .>';
+            $html[] = '</a>';
 
-            if (strtolower($response['type']) == 'photo') {
-                $html = [];
-                $html[] = '<a href="' . $response['url'] . '" target="_blank">';
-                $html[] = '<img src="' . $response['thumbnail_url_200h'] . '" width="' . $response['thumbnail_width_200h'] . '" height="' . $response['thumbnail_height_200h'] . '" alt="" title="" .>';
-                $html[] = '</a>';
-
-                $response['html'] = implode('', $html);
-            }
+            $response['html'] = implode('', $html);
         }
 
         return $response;

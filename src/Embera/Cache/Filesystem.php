@@ -12,8 +12,6 @@
 
 namespace Embera\Cache;
 
-use Exception;
-use InvalidArgumentException;
 use DateTimeInterface;
 
 /**
@@ -71,7 +69,7 @@ class Filesystem extends CacheAdapter implements CacheInterface
     /**
      * Disable this engine
      *
-     * @return void
+     * @return bool
      */
     public function isEnabled()
     {
@@ -166,7 +164,7 @@ class Filesystem extends CacheAdapter implements CacheInterface
      * Calculates the expiration date of a cache item,
      * based on the given $ttl
      *
-     * @param int|DateTime $ttl
+     * @param int|\DateTime $ttl
      * @return int
      */
     protected function calculateExpiration($ttl = null)

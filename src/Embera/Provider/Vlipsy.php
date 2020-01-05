@@ -48,12 +48,6 @@ class Vlipsy extends ProviderAdapter implements ProviderInterface
     }
 
     /** inline {@inheritdoc} */
-    public function modifyResponse(array $response = [])
-    {
-        return $response;
-    }
-
-    /** inline {@inheritdoc} */
     public function getFakeResponse()
     {
         preg_match('~-(.+)$~i', (string) $this->url, $m);

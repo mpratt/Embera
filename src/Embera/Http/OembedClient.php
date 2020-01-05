@@ -13,6 +13,7 @@
 namespace Embera\Http;
 
 use Embera\Embera;
+use Embera\Http;
 use Embera\Provider\ProviderInterface;
 
 /**
@@ -26,14 +27,14 @@ class OembedClient
     /** @var array Configuration settings */
     protected $config = [];
 
-    /** @var Embera\Http\HttpClient */
+    /** @var Http\HttpClient */
     protected $http;
 
     /**
      * Construct
      *
      * @param array $config
-     * @param Embera\Http\HttpClient $http
+     * @param Http\HttpClient $http
      * @return void
      */
     public function __construct($config, HttpClient $http)
@@ -45,7 +46,7 @@ class OembedClient
     /**
      * Gets the response from a given providerObject
      *
-     * @param \Embera\Provider\ProviderInterface $provider
+     * @param ProviderInterface $provider
      * @return array
      */
     public function getResponseFrom(ProviderInterface $provider)
@@ -62,10 +63,10 @@ class OembedClient
     /**
      * Executes a http request to a url created by the $provider
      *
-     * @param \Embera\Provider\ProviderInterface $provider
+     * @param ProviderInterface $provider
      * @return array
      *
-     * @throws Exception From the Http object only if there is no way
+     * @throws \Exception From the Http object only if there is no way
      *                   to perform the request or if the response from
      *                   the server is empty/invalid.
      */
