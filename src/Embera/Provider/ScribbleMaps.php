@@ -65,7 +65,7 @@ class ScribbleMaps extends ProviderAdapter implements ProviderInterface
     {
         // https://www.scribblemaps.com/maps/view/Road_to_Civil_War_Ethan_Culotta/ZIf2eLM_hn
         // <iframe src="ZIf2eLM_hn" width="720" height="550" style="max-width: 100%;" frameborder="0" title="Road to Civil War Ethan Culotta" webkitallowfullscreen mozallowfullscreen allowfullscreen allow="geolocation"></iframe>
-         preg_match('~/([^/]+)$~i', (string) $this->url, $matches);
+         preg_match('~/([^/]+)$~', (string) $this->url, $matches);
 
         $embedUrl = '//widgets.scribblemaps.com/sm/?d&z&l&id=' . $matches['1'];
 

@@ -34,7 +34,7 @@ class Didacte extends ProviderAdapter implements ProviderInterface
     /** inline {@inheritdoc} */
     public function validateUrl(Url $url)
     {
-        if (preg_match('~\/\/([^\.]+)\.didacte\.com/a/course/([^/]+)~i', (string) $url, $m)) {
+        if (preg_match('~//([^.]+)\.didacte\.com/a/course/([^/]+)~i', (string) $url, $m)) {
 
             return !(strtolower($m['1']) == 'www');
         }
@@ -45,7 +45,7 @@ class Didacte extends ProviderAdapter implements ProviderInterface
     /** inline {@inheritdoc} */
     public function getEndpoint()
     {
-        if (preg_match('~\/\/([^\.]+)\.didacte\.com/a/course/([^/]+)~i', (string) $this->url, $m)) {
+        if (preg_match('~//([^.]+)\.didacte\.com/a/course/([^/]+)~i', (string) $this->url, $m)) {
             $this->endpoint = str_replace('{username}', $m['1'], $this->endpoint);
         }
 

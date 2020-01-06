@@ -51,7 +51,7 @@ class Zingsoft extends ProviderAdapter implements ProviderInterface
     public function modifyResponse(array $response = [])
     {
         if (!empty($response['html'])) {
-            $response['html'] = trim(preg_replace('~\s+~i', ' ', preg_replace('~\n~i', ' ', $response['html'])));
+            $response['html'] = trim(preg_replace('~\s+~', ' ', preg_replace('~\n~i', ' ', $response['html'])));
         }
 
         return $response;

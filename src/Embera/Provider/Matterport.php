@@ -34,7 +34,7 @@ class Matterport extends ProviderAdapter implements ProviderInterface
     /** inline {@inheritdoc} */
     public function validateUrl(Url $url)
     {
-        return (bool) (preg_match('~matterport\.com/show\?m\=([^/]+)~i', (string) $url));
+        return (bool) (preg_match('~matterport\.com/show\?m=([^/]+)~i', (string) $url));
     }
 
     /** inline {@inheritdoc} */

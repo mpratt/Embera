@@ -57,7 +57,7 @@ class ResponsiveEmbeds
      */
     protected function removeWidthHeightStyles($text)
     {
-        return preg_replace('~(width|height|max-width|max-height):[0-9\ ]+[a-z]{2};?~i', '',$text);
+        return preg_replace('~(width|height|max-width|max-height):[0-9 ]+[a-z]{2};?~i', '',$text);
     }
 
     /**

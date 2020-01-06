@@ -50,7 +50,7 @@ class Vlipsy extends ProviderAdapter implements ProviderInterface
     /** inline {@inheritdoc} */
     public function getFakeResponse()
     {
-        preg_match('~-(.+)$~i', (string) $this->url, $m);
+        preg_match('~-(.+)$~', (string) $this->url, $m);
 
         $embedUrl = 'https://vlipsy.com/embed/' . $m['1'];
 /* <iframe src="" frameborder="0" width="640" height="360" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> */

@@ -39,7 +39,7 @@ class Meetup extends ProviderAdapter implements ProviderInterface
     {
         return (bool) (
             preg_match('~meetup\.com/(?:.+)~i', (string) $url) ||
-            preg_match('~meetu\.ps/(?:[\w\d]+)/?$~i', (string) $url)
+            preg_match('~meetu\.ps/(?:\w+)/?$~i', (string) $url)
         );
     }
 

@@ -51,7 +51,7 @@ class Veer extends ProviderAdapter implements ProviderInterface
     /** inline {@inheritdoc} */
     public function getFakeResponse()
     {
-        preg_match('~-([0-9]+)$~i', (string) $this->url, $m);
+        preg_match('~-([0-9]+)$~', (string) $this->url, $m);
 
         $embedUrl = 'http://h5.veer.tv/player?vid=' . $m['1'];
 
