@@ -34,7 +34,7 @@ class Quizz extends ProviderAdapter implements ProviderInterface
     /** inline {@inheritdoc} */
     public function validateUrl(Url $url)
     {
-        return (bool) (preg_match('~quizz\.biz/quizz-([^\.]+).html$~i', (string) $url));
+        return (bool) (preg_match('~quizz\.biz/quizz-([^.]+).html$~i', (string) $url));
     }
 
     /** inline {@inheritdoc} */

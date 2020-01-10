@@ -50,7 +50,7 @@ class iFixit extends ProviderAdapter implements ProviderInterface
     /** inline {@inheritdoc} */
     public function getFakeResponse()
     {
-        preg_match('~/(\d{4,20})$~i', (string) $this->url, $matches);
+        preg_match('~/(\d{4,20})$~', (string) $this->url, $matches);
 
         $mode = 'Guide';
         if (stripos($this->url, 'Teardown') !== false) {

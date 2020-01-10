@@ -34,7 +34,7 @@ class EmberaTest extends TestCase
         $data = $embera->getUrlData($urls);
 
         foreach ($data as $d) {
-            $this->assertTrue(!empty($d['provider_name']));
+            $this->assertNotEmpty($d['provider_name']);
         }
     }
 
@@ -55,7 +55,7 @@ class EmberaTest extends TestCase
         $data = $embera->getUrlData($urls);
 
         foreach ($data as $d) {
-            $this->assertTrue($d['embera_using_fake_response'] == 1);
+            $this->assertEquals(1, $d['embera_using_fake_response']);
         }
     }
 
@@ -71,8 +71,8 @@ class EmberaTest extends TestCase
         $embera->autoEmbed(['Invalid parameter']);
 
         $this->assertTrue($embera->hasErrors());
-        $this->assertTrue(!empty($embera->getLastError()));
-        $this->assertTrue(!empty($embera->getErrors()));
+        $this->assertNotEmpty($embera->getLastError());
+        $this->assertNotEmpty($embera->getErrors());
     }
 
     public function testEmberaAutoEmbedText()
@@ -94,8 +94,8 @@ class EmberaTest extends TestCase
         $autoEmbedText = $embera->autoEmbed($text);
         $embedResponse = $embera->getUrlData($urls);
 
-        $this->assertTrue(strpos($autoEmbedText, $embedResponse[$urls[0]]['html']) !== false);
-        $this->assertTrue(strpos($autoEmbedText, $embedResponse[$urls[1]]['html']) !== false);
+        $this->assertStringContainsString($embedResponse[$urls[0]]['html'], $autoEmbedText);
+        $this->assertStringContainsString($embedResponse[$urls[1]]['html'], $autoEmbedText);
     }
 
     public function testEmberaFilters()
@@ -111,7 +111,7 @@ class EmberaTest extends TestCase
         $url = 'https://youtube.com/watch?v=mghhLqu31cQ';
         $responseBeforeFilters = $embera->getUrlData($url);
 
-        $embera->addFilter(function ($response) {
+        $embera->addFilter(static function ($response) {
             if (!empty($response['html'])) {
                 $response['html'] = str_replace('iframe', 'dframe', $response['html']);
             }
@@ -119,7 +119,7 @@ class EmberaTest extends TestCase
             return $response;
         });
 
-        $embera->addFilter(function ($response) {
+        $embera->addFilter(static function ($response) {
             if (!empty($response['html'])) {
                 $response['html'] = str_replace('dframe', 'xframe', $response['html']);
             }

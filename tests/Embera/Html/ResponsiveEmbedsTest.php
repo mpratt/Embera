@@ -13,8 +13,6 @@ namespace Embera\Html;
 
 use PHPUnit\Framework\TestCase;
 
-use Embera\Embera;
-
 class ResponsiveEmbedsTest extends TestCase
 {
     public function testEmptyHtmlResponse()

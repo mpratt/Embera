@@ -41,7 +41,7 @@ class Ludus extends ProviderAdapter implements ProviderInterface
     public function validateUrl(Url $url)
     {
         // a4465cd5-ee82-4534-9755-5e658a7cb198
-        return (bool) (preg_match('~\.ludus\.one/([\w\d]{8})-(([\w\d]{4}-){3})([\w\d]{12})$~i', (string) $url));
+        return (bool) (preg_match('~\.ludus\.one/(\w{8})-((\w{4}-){3})(\w{12})$~i', (string) $url));
     }
 
     /** inline {@inheritdoc} */

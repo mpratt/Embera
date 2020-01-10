@@ -97,34 +97,32 @@ class UrlTest extends TestCase
 
     public function testCanConvertToHttp()
     {
-        $url = new \Embera\Url('http://www.host.net/path/');
+        $url = new Url('http://www.host.net/path/');
         $url->convertToHttp();
         $this->assertEquals('http://www.host.net/path/', (string) $url);
 
-        $url = new \Embera\Url('https://host.net/path/http/stuff');
+        $url = new Url('https://host.net/path/http/stuff');
         $url->convertToHttp();
         $this->assertEquals('http://host.net/path/http/stuff', (string) $url);
     }
 
     public function testCanConvertToHttps()
     {
-        $url = new \Embera\Url('http://www.host.net/path/');
+        $url = new Url('http://www.host.net/path/');
         $url->convertToHttps();
         $this->assertEquals('https://www.host.net/path/', (string) $url);
 
-        $url = new \Embera\Url('https://host.net/path/https/stuff');
+        $url = new Url('https://host.net/path/https/stuff');
         $url->convertToHttps();
         $this->assertEquals('https://host.net/path/https/stuff', (string) $url);
     }
 
     public function testCanUseOtherSchemes()
     {
-        $url = new \Embera\Url('ftp://www.host.com/path/');
+        $url = new Url('ftp://www.host.com/path/');
         $this->assertEquals('https://www.host.com/path/', (string) $url);
 
-        $url = new \Embera\Url('embed://www.host.com/path/');
+        $url = new Url('embed://www.host.com/path/');
         $this->assertEquals('https://www.host.com/path/', (string) $url);
     }
 }
-
-?>

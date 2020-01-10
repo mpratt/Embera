@@ -34,7 +34,7 @@ class Coub extends ProviderAdapter implements ProviderInterface
     /** inline {@inheritdoc} */
     public function validateUrl(Url $url)
     {
-        return (bool) (preg_match('~coub\.com/(?:view|embed)/(?:[\w\d]+)$~i', (string) $url));
+        return (bool) (preg_match('~coub\.com/(?:view|embed)/(?:\w+)$~i', (string) $url));
     }
 
     /** inline {@inheritdoc} */

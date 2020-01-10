@@ -34,7 +34,7 @@ class Infoveave extends ProviderAdapter implements ProviderInterface
     /** inline {@inheritdoc} */
     public function validateUrl(Url $url)
     {
-        return (bool) (preg_match('~infoveave\.net/(?:E|P)/([^/]+)$~i', (string) $url));
+        return (bool) (preg_match('~infoveave\.net/(?:[EP])/([^/]+)$~i', (string) $url));
     }
 
     /** inline {@inheritdoc} */

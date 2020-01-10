@@ -40,7 +40,7 @@ class Mathembed extends ProviderAdapter implements ProviderInterface
     /** inline {@inheritdoc} */
     public function validateUrl(Url $url)
     {
-        return (bool) (preg_match('~mathembed\.com/latex\?inputText\=([^/]+)~i', (string) $url));
+        return (bool) (preg_match('~mathembed\.com/latex\?inputText=([^/]+)~i', (string) $url));
     }
 
     /** inline {@inheritdoc} */

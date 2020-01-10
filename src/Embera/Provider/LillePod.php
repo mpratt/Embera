@@ -34,7 +34,7 @@ class LillePod extends ProviderAdapter implements ProviderInterface
     /** inline {@inheritdoc} */
     public function validateUrl(Url $url)
     {
-        return (bool) (preg_match('~pod\.univ\-lille\.fr/video/([^/]+)/$~i', (string) $url));
+        return (bool) (preg_match('~pod\.univ-lille\.fr/video/([^/]+)/$~i', (string) $url));
     }
 
     /** inline {@inheritdoc} */

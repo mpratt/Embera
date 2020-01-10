@@ -34,7 +34,7 @@ class CircuitLab extends ProviderAdapter implements ProviderInterface
     /** inline {@inheritdoc} */
     public function validateUrl(Url $url)
     {
-        return (bool) (preg_match('~circuitlab\.com/circuit/(?:[\w\d]+)/(?:[^/]+)/$~i', (string) $url));
+        return (bool) (preg_match('~circuitlab\.com/circuit/(?:\w+)/(?:[^/]+)/$~i', (string) $url));
     }
 
     /** inline {@inheritdoc} */
@@ -49,7 +49,7 @@ class CircuitLab extends ProviderAdapter implements ProviderInterface
     /** inline {@inheritdoc} */
     public function getFakeResponse()
     {
-        preg_match('~circuitlab\.com/circuit/([\w\d]+)/~i', $this->url, $matches);
+        preg_match('~circuitlab\.com/circuit/(\w+)/~i', $this->url, $matches);
 
         $embedUrl = 'https://www.circuitlab.com/circuit/' . $matches['1'] . '/embed_target/?width={width}';
 

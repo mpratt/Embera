@@ -51,7 +51,7 @@ class ModeloIO extends ProviderAdapter implements ProviderInterface
     public function modifyResponse(array $response = [])
     {
         if (!empty($response['html'])) {
-            $response['html'] = preg_replace('~<p>(.+)<\/p>~i', '', $response['html']);
+            $response['html'] = preg_replace('~<p>(.+)</p>~i', '', $response['html']);
         }
 
         return $response;

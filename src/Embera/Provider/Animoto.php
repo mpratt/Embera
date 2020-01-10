@@ -35,7 +35,7 @@ class Animoto extends ProviderAdapter implements ProviderInterface
     /** inline {@inheritdoc} */
     public function validateUrl(Url $url)
     {
-        return (bool) (preg_match('~animoto\.com/play/(?:[\w\d]+)/?$~i', (string) $url));
+        return (bool) (preg_match('~animoto\.com/play/(?:\w+)/?$~i', (string) $url));
     }
 
     /** inline {@inheritdoc} */

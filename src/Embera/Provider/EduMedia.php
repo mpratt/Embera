@@ -34,7 +34,7 @@ class EduMedia extends ProviderAdapter implements ProviderInterface
     /** inline {@inheritdoc} */
     public function validateUrl(Url $url)
     {
-        return (bool) (preg_match('~edumedia\-sciences\.com/(?:[a-z]{2})/media/([0-9]+)(?:-(?:[^/]+))?$~i', (string) $url));
+        return (bool) (preg_match('~edumedia-sciences\.com/(?:[a-z]{2})/media/([0-9]+)(?:-(?:[^/]+))?$~i', (string) $url));
     }
 
     /** inline {@inheritdoc} */
@@ -50,7 +50,7 @@ class EduMedia extends ProviderAdapter implements ProviderInterface
     /** inline {@inheritdoc} */
     public function getFakeResponse()
     {
-        preg_match('~edumedia\-sciences\.com/([a-z]{2})/media/([0-9]+)~i', (string) $this->url, $m);
+        preg_match('~edumedia-sciences\.com/([a-z]{2})/media/([0-9]+)~i', (string) $this->url, $m);
 
         $embedUrl = 'https://www.edumedia-sciences.com/' . $m['1']. '/media/frame/' . $m['2'] . '/';
 

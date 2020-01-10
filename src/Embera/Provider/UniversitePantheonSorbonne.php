@@ -34,7 +34,7 @@ class UniversitePantheonSorbonne extends ProviderAdapter implements ProviderInte
     /** inline {@inheritdoc} */
     public function validateUrl(Url $url)
     {
-        return (bool) (preg_match('~mediatheque\.univ\-paris1\.fr/video/([^/]+)/$~i', (string) $url));
+        return (bool) (preg_match('~mediatheque\.univ-paris1\.fr/video/([^/]+)/$~i', (string) $url));
     }
 
     /** inline {@inheritdoc} */

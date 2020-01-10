@@ -34,7 +34,7 @@ class Chirbit extends ProviderAdapter implements ProviderInterface
     /** inline {@inheritdoc} */
     public function validateUrl(Url $url)
     {
-        return (bool) (preg_match('~chirb\.it/(?:[\w\d]+)~i', (string) $url));
+        return (bool) (preg_match('~chirb\.it/(?:\w+)~i', (string) $url));
     }
 
     /** inline {@inheritdoc} */
@@ -49,7 +49,7 @@ class Chirbit extends ProviderAdapter implements ProviderInterface
     /** inline {@inheritdoc} */
     public function getFakeResponse()
     {
-        preg_match('~chirb\.it/([\w\d]+)/?~i', $this->url, $matches);
+        preg_match('~chirb\.it/(\w+)/?~i', $this->url, $matches);
 
         $embedUrl = 'https://chirb.it/' . $matches['1'];
 

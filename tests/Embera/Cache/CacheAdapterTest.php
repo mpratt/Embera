@@ -13,9 +13,6 @@ namespace Embera\Cache;
 
 use PHPUnit\Framework\TestCase;
 
-use DateTime;
-use DateInterval;
-
 class CacheAdapterTest extends TestCase
 {
     public function testSetAndGetMultipleCacheItemsWithFileSystem()

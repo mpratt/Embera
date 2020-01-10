@@ -37,7 +37,7 @@ class Typecast extends ProviderAdapter implements ProviderInterface
     /** inline {@inheritdoc} */
     public function validateUrl(Url $url)
     {
-        return (bool) (preg_match('~typecast\.ai/(s|e)/([^/]+)~i', (string) $url));
+        return (bool) (preg_match('~typecast\.ai/([se])/([^/]+)~i', (string) $url));
     }
 
     /** inline {@inheritdoc} */
