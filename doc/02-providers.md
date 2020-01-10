@@ -98,6 +98,16 @@ I try to support the provider list in [oembed.com](https://oembed.com).
 - Additional Parameters: Unknown
 - Notes: NONE
 
+## [Avocode](https://avocode.com/)
+
+- Provider Name: Avocode
+- Documentation: NO
+- HTTPS support: YES
+- Fake Response: NO
+- Additional Parameters: Unknown
+- Notes:
+  - Generate html tag when none is available
+
 ## [Backtracks](https://backtracks.fm/)
 
 - Provider Name: Backtracks
