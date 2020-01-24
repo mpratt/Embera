@@ -21,13 +21,11 @@ final class BacktracksTest extends ProviderTester
 {
     protected $tasks = array(
         'valid_urls' => array(
-            'https://backtracks.fm/ycombinator/ycombinator/e/4-elon-musk-on-how-to-build-the-future'
+            'https://backtracks.fm/ycombinator/ycombinator/e/4-elon-musk-on-how-to-build-the-future',
+            'https://backtracks.fm/discover/s/the-joe-rogan-experience/6b8581415e041967/e/1411-robert-downey-jr/77d2d79586e78c01?oref=btdatadir',
         ),
         'invalid_urls' => array(
             'https://backtracks.fm/pricing'
-        ),
-        'normalize_urls' => array(
-            'http://backtracks.fm/ycombinator/?stuff=stuff' => 'https://backtracks.fm/ycombinator/',
         ),
     );
 

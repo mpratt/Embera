@@ -37,14 +37,17 @@ class Backtracks extends ProviderAdapter implements ProviderInterface
     /** inline {@inheritdoc} */
     public function validateUrl(Url $url)
     {
-        return (bool) (preg_match('~backtracks\.fm/(?:[^/]+)/(?:[^/]+)/e/(?:[^/]+)/?$~i', (string) $url));
+        return (bool) (
+            preg_match('~backtracks\.fm/(?:[^/]+)/(?:[^/]+)/e/(?:[^/]+)/?$~i', (string) $url) ||
+            preg_match('~backtracks\.fm/(?:[^/]+)/s/(?:[^/]+)/(?:[^/]+)/?$~i', (string) $url) ||
+            preg_match('~backtracks\.fm/(?:[^/]+)/(?:[^/]+)/(?:[^/]+)/(?:[^/]+)/e/(?:[^/]+)/(?:[^/]+)/?$~i', (string) $url)
+        );
     }
 
     /** inline {@inheritdoc} */
     public function normalizeUrl(Url $url)
     {
         $url->convertToHttps();
-        $url->removeQueryString();
         return $url;
     }
 
