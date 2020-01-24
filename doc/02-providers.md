@@ -253,15 +253,6 @@ I try to support the provider list in [oembed.com](https://oembed.com).
 - Additional Parameters: Unknown
 - Notes: NONE
 
-## [CollegeHumor](https://www.collegehumor.com/)
-
-- Provider Name: CollegeHumor
-- Documentation: NO
-- HTTPS support: YES
-- Fake Response: YES
-- Additional Parameters: Unknown
-- Notes: NONE
-
 ## [Commaful](https://commaful.com/)
 
 - Provider Name: Commaful

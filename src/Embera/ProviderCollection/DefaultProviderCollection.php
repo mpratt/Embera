@@ -49,7 +49,6 @@ class DefaultProviderCollection extends ProviderCollectionAdapter
             'CodePen',
             'Codepoints',
             'CodeSandbox',
-            'CollegeHumor',
             'Commaful',
             'Coub',
             'DailyMotion',
