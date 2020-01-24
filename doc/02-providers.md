@@ -595,6 +595,16 @@ I try to support the provider list in [oembed.com](https://oembed.com).
 - Additional Parameters: unknown
 - Notes: NONE
 
+## [iHeatRadio](https://iheart.com)
+
+- Provider Name: IHeartRadio
+- Documentation: NO
+- HTTPS support: YES
+- Fake Response: NO
+- Additional Parameters: unknown
+- Notes: NONE
+-
+
 ## [Infogram](https://infogr.am)
 
 - Provider Name: Infogram
