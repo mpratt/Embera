@@ -407,6 +407,15 @@ I try to support the provider list in [oembed.com](https://oembed.com).
 - Additional Parameters: Unknown
 - Notes: NONE
 
+## [Firework](https://fireworktv.com)
+
+- Provider Name: Firework
+- Documentation: NO
+- HTTPS support: YES
+- Fake Response: YES
+- Additional Parameters: Unknown
+- Notes: NONE
+
 ## [Fitapp](https://fitapp.pro)
 
 - Provider Name: Fitapp
