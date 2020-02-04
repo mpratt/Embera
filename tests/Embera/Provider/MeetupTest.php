@@ -21,11 +21,9 @@ final class MeetupTest extends ProviderTester
 {
     protected $tasks = [
         'valid_urls' => [
-            'http://www.meetup.com/PHPColMeetup/events/126690622/',
-            'http://www.meetup.com/PHPColMeetup/photos/',
-            'http://meetup.com/PHPColMeetup/events/calendar/?scroll=true',
-            'http://www.meetup.com/PHPColMeetup/events/calendar/',
-            'http://www.meetup.com/PHPColMeetup/',
+            'https://www.meetup.com/AgilesColombia/photos/',
+            'https://meetup.com/AgilesColombia/events/calendar/',
+            'https://www.meetup.com/AgilesColombia/events/268265336/',
         ],
         'invalid_urls' => [
             'http://www.meetup.com/',

@@ -22,7 +22,6 @@ final class CodeSandboxTest extends ProviderTester
     protected $tasks = array(
         'valid_urls' => array(
             'https://codesandbox.io/embed/musing-kare-4fblz',
-            'https://codesandbox.io/s/floating-diamonds-prb9t?from-embed',
             'http://www.codesandbox.io/s/psycho-meme-gen-hm4qo/'
         ),
         'invalid_urls' => array(

@@ -21,7 +21,6 @@ final class UstreamTVTest extends ProviderTester
 {
     protected $tasks = [
         'valid_urls' => [
-            'https://video.ibm.com/recorded/124485202',
             'http://www.ustream.tv/channel/americatv2oficial',
             'https://video.ibm.com/recorded/124641798',
         ],
