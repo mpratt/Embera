@@ -21,7 +21,7 @@ use Embera\Url;
 class Quizz extends ProviderAdapter implements ProviderInterface
 {
     /** inline {@inheritdoc} */
-    protected $endpoint = 'https://www.quizz.biz/api/oembed?format=json';
+    protected $endpoint = 'https://www.quizz.biz/api/oembed';
 
     /** inline {@inheritdoc} */
     protected static $hosts = [
