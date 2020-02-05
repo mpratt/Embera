@@ -49,6 +49,11 @@ final class DailyMotionTest extends ProviderTester
 
     public function testProvider()
     {
+        $travis = (bool) getenv('ONTRAVIS');
+        if ($travis) {
+            $this->markTestIncomplete('Disabling this provider since it seems to have problems with the endpoint (DailyMotion).');
+        }
+
         $this->validateProvider('DailyMotion', [ 'width' => 480, 'height' => 270]);
     }
 }

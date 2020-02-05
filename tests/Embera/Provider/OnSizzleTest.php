@@ -34,6 +34,11 @@ final class OnSizzleTest extends ProviderTester
 
     public function testProvider()
     {
+        $travis = (bool) getenv('ONTRAVIS');
+        if ($travis) {
+            $this->markTestIncomplete('Disabling this provider since it seems to have problems with the endpoint (OnSizzle).');
+        }
+
         $this->validateProvider('OnSizzle', [ 'width' => 480, 'height' => 270]);
     }
 }
