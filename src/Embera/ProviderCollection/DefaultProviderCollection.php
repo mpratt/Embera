@@ -105,6 +105,7 @@ class DefaultProviderCollection extends ProviderCollectionAdapter
             'Ludus',
             'Mathembed',
             'Matterport',
+            'MediaLab',
             'MedienArchivKuenste',
             'MermaidInk',
             'Meetup',

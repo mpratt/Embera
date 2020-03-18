@@ -795,6 +795,16 @@ I try to support the provider list in [oembed.com](https://oembed.com).
 - Additional Parameters: unknown
 - Notes: NONE
 
+## [MediaLab](https://medialab.co)
+
+- Provider Name: MediaLab
+- Documentation: NO
+- HTTPS support: YES
+- Fake Response: NO
+- Additional Parameters: unknown
+- Notes:
+  - Might be able to use fake responses but I need more data in order to test
+
 ## [MedienArchivKuenste](https://medienarchiv.zhdk.ch/)
 
 - Provider Name: MedienArchivKuenste
@@ -1272,13 +1282,13 @@ I try to support the provider list in [oembed.com](https://oembed.com).
 - Additional Parameters: unknown
 - Notes:
   Songlink rebranded to Odesli and it now supports muliple hosts such as:
-  - https://song.link/*
-  - https://album.link/*
-  - https://artist.link/*
-  - https://playlist.link/*
-  - https://pods.link/*
-  - https://mylink.page/*
-  - https://odesli.co/*-
+  - https://song.link
+  - https://album.link
+  - https://artist.link
+  - https://playlist.link
+  - https://pods.link
+  - https://mylink.page
+  - https://odesli.co
 
 ## [SoundCloud](https://soundcloud.com)
 
