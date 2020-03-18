@@ -184,6 +184,7 @@ class DefaultProviderCollection extends ProviderCollectionAdapter
             'Veer',
             'Verse',
             'Vimeo',
+            'Viously',
             'Vlipsy',
             'Vlive',
             'VoxSnap',

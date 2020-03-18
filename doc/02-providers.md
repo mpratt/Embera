@@ -1564,6 +1564,15 @@ I try to support the provider list in [oembed.com](https://oembed.com).
 - Additional Parameters: unknown
 - Notes: NONE
 
+## [Viously](https://viously.com)
+
+- Provider Name: Viously
+- Documentation: NO
+- HTTPS support: YES
+- Fake Response: NO
+- Additional Parameters: unknown
+- Notes: NONE
+
 ## [Vlipsy](https://vlipsy.com)
 
 - Provider Name: Vlipsy
