@@ -21,7 +21,6 @@ final class TwitchTest extends ProviderTester
 {
     protected $tasks = [
         'valid_urls' => [
-            'https://www.twitch.tv/sypherpk/clip/TangibleOptimisticSamosaMrDestructoid?filter=clips&range=7d&sort=time',
             'https://www.twitch.tv/videos/518050359',
             'https://www.twitch.tv/videos/517959979',
         ],
