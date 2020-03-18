@@ -191,9 +191,10 @@ class DefaultProviderCollection extends ProviderCollectionAdapter
             'Wizer',
             'Wordpress',
             'Xpression',
+            'Youtube',
             'Zingsoft',
             'ZnipeTV',
-            'Youtube',
+            'Zoomable',
         ]);
     }
 }

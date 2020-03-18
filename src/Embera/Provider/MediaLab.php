@@ -62,5 +62,4 @@ class MediaLab extends ProviderAdapter implements ProviderInterface
 
         return $url;
     }
-
 }
