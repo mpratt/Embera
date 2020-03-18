@@ -1066,15 +1066,6 @@ I try to support the provider list in [oembed.com](https://oembed.com).
 - Notes:
   - The provider already returns responsive embeds.
 
-## [Quizz](https://quizz.biz)
-
-- Provider Name: Quizz
-- Documentation: [YES](https://www.quizz.biz/aide-oembed.php)
-- HTTPS support: YES
-- Fake Response: NO
-- Additional Parameters: unknown
-- Notes: NONE
-
 ## [Reddit](https://reddit.com)
 
 - Provider Name: Reddit
