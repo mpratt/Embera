@@ -39,6 +39,11 @@ final class DTubeTest extends ProviderTester
 
     public function testProvider()
     {
+        $travis = (bool) getenv('ONTRAVIS');
+        if ($travis) {
+            $this->markTestIncomplete('Disabling testing because provider seems to have stop providing oembed capabilities (DTube). If it continues to fail it will be deleted.');
+        }
+
         $this->validateProvider('DTube', [ 'width' => 480, 'height' => 270]);
     }
 }
