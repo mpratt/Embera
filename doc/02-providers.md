@@ -804,6 +804,7 @@ I try to support the provider list in [oembed.com](https://oembed.com).
 - Additional Parameters: unknown
 - Notes:
   - Might be able to use fake responses but I need more data in order to test
+  - The provider already returns responsive embeds.
 
 ## [MedienArchivKuenste](https://medienarchiv.zhdk.ch/)
 
