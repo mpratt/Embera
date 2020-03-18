@@ -25,7 +25,7 @@ class Firework extends ProviderAdapter implements ProviderInterface
 
     /** inline {@inheritdoc} */
     protected static $hosts = [
-        'fireworktv.com'
+        '*.fireworktv.com'
     ];
 
     /** inline {@inheritdoc} */
@@ -37,7 +37,7 @@ class Firework extends ProviderAdapter implements ProviderInterface
     /** inline {@inheritdoc} */
     public function validateUrl(Url $url)
     {
-        return (bool) (preg_match('~fireworktv\.com/embed/([^/]+)/v/([^/]+)~i', (string) $url));
+        return (bool) (preg_match('~fireworktv\.com/embed/([^/]+)/(v|videos)/([^/]+)~i', (string) $url));
     }
 
     /** inline {@inheritdoc} */

@@ -21,9 +21,7 @@ final class FireworkTest extends ProviderTester
 {
     protected $tasks = [
         'valid_urls' => [
-            'https://fireworktv.com/embed/RoPdno/v/gX8PaV',
-            'https://fireworktv.com/embed/RoPdno/v/gX8G86',
-            'https://fireworktv.com/embed/RoPdno/v/oWYOPx',
+            'https://fireworktv.com/embed/jgK08v/videos/5x362b'
         ],
         'invalid_urls' => [
             'https://fireworktv.com',
@@ -33,10 +31,9 @@ final class FireworkTest extends ProviderTester
 
     public function testProvider()
     {
-
         $travis = (bool) getenv('ONTRAVIS');
         if ($travis) {
-            $this->markTestIncomplete('Disabling this provider since it seems to have problems with the endpoint (Firework).');
+            $this->markTestIncomplete('Disabling testing because provider seems to have stop providing oembed capabilities (Firework). If it continues to fail it will be deleted.');
         }
 
         $this->validateProvider('Firework', [ 'width' => 480, 'height' => 270]);
