@@ -192,7 +192,6 @@ class DefaultProviderCollection extends ProviderCollectionAdapter
             'Wistia',
             'Wizer',
             'Wordpress',
-            'Xpression',
             'Youtube',
             'Zingsoft',
             'ZnipeTV',

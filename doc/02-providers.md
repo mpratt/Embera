@@ -1642,15 +1642,6 @@ I try to support the provider list in [oembed.com](https://oembed.com).
 - Notes:
   - Wordpress allows other domains, in order to support them you must extend this class and add your domain in the Hosts property.
 
-## [Xpression](https://xpression.jp)
-
-- Provider Name: Xpression
-- Documentation: NO
-- HTTPS support: YES
-- Fake Response: YES
-- Additional Parameters: NONE
-- Notes: NONE
-
 ## [Youtube](https://youtube.com)
 
 - Provider Name: Youtube
