@@ -25,7 +25,13 @@ class SongLink extends ProviderAdapter implements ProviderInterface
 
     /** inline {@inheritdoc} */
     protected static $hosts = [
-        'song.link'
+        'song.link',
+        'album.link',
+        'artist.link',
+        'playlist.link',
+        'pods.link',
+        'mylink.page',
+        'odesli.co',
     ];
 
     /** inline {@inheritdoc} */
@@ -34,7 +40,7 @@ class SongLink extends ProviderAdapter implements ProviderInterface
     /** inline {@inheritdoc} */
     public function validateUrl(Url $url)
     {
-        return (bool) (preg_match('~song\.link/(([^/]+)/)?i/([^/]+)~i', (string) $url));
+        return (bool) (preg_match('~((song|album|artist|playlist|pods)\.link|mylink\.page|odesli\.co)/([^/]+)~i', (string) $url));
     }
 
     /** inline {@inheritdoc} */

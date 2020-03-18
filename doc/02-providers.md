@@ -1270,7 +1270,15 @@ I try to support the provider list in [oembed.com](https://oembed.com).
 - HTTPS support: YES
 - Fake Response: YES
 - Additional Parameters: unknown
-- Notes: NONE
+- Notes:
+  Songlink rebranded to Odesli and it now supports muliple hosts such as:
+  - https://song.link/*
+  - https://album.link/*
+  - https://artist.link/*
+  - https://playlist.link/*
+  - https://pods.link/*
+  - https://mylink.page/*
+  - https://odesli.co/*-
 
 ## [SoundCloud](https://soundcloud.com)
 
