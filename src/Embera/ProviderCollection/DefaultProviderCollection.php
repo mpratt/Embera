@@ -124,6 +124,7 @@ class DefaultProviderCollection extends ProviderCollectionAdapter
             'Outplayed',
             'OverflowIO',
             'Oz',
+            'Padlet',
             'Pastery',
             'Pixdor',
             'Playbuzz',

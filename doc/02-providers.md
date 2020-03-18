@@ -977,6 +977,16 @@ I try to support the provider list in [oembed.com](https://oembed.com).
 - Additional Parameters: unknown
 - Notes: NONE
 
+## [Padlet](https://padlet.com)
+
+- Provider Name: Padlet
+- Documentation: NO
+- HTTPS support: YES
+- Fake Response: YES
+- Additional Parameters: unknown
+- Notes:
+  - The provider already returns responsive embeds.
+
 ## [Pastery](https://pastery.net)
 
 - Provider Name: Pastery
