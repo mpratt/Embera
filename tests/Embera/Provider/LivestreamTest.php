@@ -21,7 +21,6 @@ final class LivestreamTest extends ProviderTester
 {
     protected $tasks = [
         'valid_urls' => [
-            'https://livestream.com/accounts/23787498/DODDGRADUATION',
             'http://www.livestream.com/livestream/3camkit',
             'https://livestream.com/accounts/16936513/live',
         ],
