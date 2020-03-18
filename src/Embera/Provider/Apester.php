@@ -48,19 +48,20 @@ class Apester extends ProviderAdapter implements ProviderInterface
     /** inline {@inheritdoc} */
     public function getFakeResponse()
     {
-        $embedUrl = (string) $this->url . '?oembed=true';
+        $embedUrl = (string) $this->url . '?oembed=true&maxWidth={width}&maxHeight={height}';
 
         $attr = [];
         $attr[] = 'src="' . $embedUrl . '"';
         $attr[] = 'width="{width}"';
         $attr[] = 'height="{height}"';
 
+
         return [
             'type' => 'rich',
             'provider_name' => 'Apester',
             'provider_url' => 'https://www.apester.com/',
             'title' => 'Unknown title',
-            'html' => '<iframe ' . implode(' ', $attr). ' />',
+            'html' => '<div style="width: {width}; height: {height}"><iframe ' . implode(' ', $attr). ' /></div>',
         ];
     }
 
