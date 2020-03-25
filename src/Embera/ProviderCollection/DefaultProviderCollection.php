@@ -133,6 +133,7 @@ class DefaultProviderCollection extends ProviderCollectionAdapter
             'Polldaddy',
             'Portfolium',
             'Posixion',
+            'RadioPublic',
             'Reddit',
             'ReleaseWire',
             'Replit',
