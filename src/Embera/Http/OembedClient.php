@@ -37,7 +37,7 @@ class OembedClient
      * @param Http\HttpClient $http
      * @return void
      */
-    public function __construct($config, HttpClient $http)
+    public function __construct($config, HttpClientInterface $http)
     {
         $this->config = $config;
         $this->http = $http;
