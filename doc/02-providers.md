@@ -339,16 +339,6 @@ I try to support the provider list in [oembed.com](https://oembed.com).
   - language: The three letter language code for the language you want the player to default to
 - Notes: NONE
 
-## [DTube](https://d.tube)
-
-- Provider Name: DTube
-- Documentation: NO
-- HTTPS support: YES
-- Fake Response: YES
-- Additional Parameters: Unknown
-- Notes:
-  - Despite entering valid urls, some deliver a 404 response.
-
 ## [EduMedia](https://edumedia-sciences.com)
 
 - Provider Name: EduMedia

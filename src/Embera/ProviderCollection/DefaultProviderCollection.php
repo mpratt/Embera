@@ -58,7 +58,6 @@ class DefaultProviderCollection extends ProviderCollectionAdapter
             'Digiteka',
             'DocDroid',
             'DotSUB',
-            'DTube',
             'EduMedia',
             'Ethfiddle',
             'Eyrie',
