@@ -21,7 +21,6 @@ final class OzTest extends ProviderTester
 {
     protected $tasks = [
         'valid_urls' => [
-            'https://www.oz.com/gnarr/video/fc9a8540-6fd5-4dd8-a0d9-daca43bbfb2e',
             'https://www.oz.com/musicreach/video/db012194-5e95-40bf-a810-c2cc84a7bf7f?query=string',
             'https://www.oz.com/drsports/video/802a1be3-37d9-4723-a388-5b9eebb5f79c',
         ],
