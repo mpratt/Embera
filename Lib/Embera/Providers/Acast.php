@@ -19,5 +19,3 @@ class Acast extends \Embera\Adapters\Service
         return (preg_match('/^https:\/\/embed.acast.com/', $this->url));
     }
 }
-
-?>

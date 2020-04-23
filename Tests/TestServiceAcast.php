@@ -14,6 +14,7 @@ class TestServiceAcast extends TestProviders
         )
     );
 
-    public function testProvider() { $this->validateProvider('Acast'); }
+    public function testProvider() {
+        $this->validateProvider('Acast');
+    }
 }
-?>
