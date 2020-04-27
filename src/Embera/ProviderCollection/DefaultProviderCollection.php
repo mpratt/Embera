@@ -189,6 +189,7 @@ class DefaultProviderCollection extends ProviderCollectionAdapter
             'VoxSnap',
             'Wistia',
             'Wizer',
+            'Wokwi',
             'Wordpress',
             'Youtube',
             'Zingsoft',

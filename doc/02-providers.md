@@ -1614,6 +1614,15 @@ I try to support the provider list in [oembed.com](https://oembed.com).
 - Notes:
   - Wordpress allows other domains, in order to support them you must extend this class and add your domain in the Hosts property.
 
+## [Wokwi](https://wokwi.com)
+
+- Provider Name: Wokwi
+- Documentation: NO
+- HTTPS support: YES
+- Fake Response: NO
+- Additional Parameters: Unknown
+- Notes: NONE
+
 ## [Youtube](https://youtube.com)
 
 - Provider Name: Youtube
