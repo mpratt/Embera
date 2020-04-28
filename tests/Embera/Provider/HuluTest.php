@@ -34,7 +34,7 @@ final class HuluTest extends ProviderTester
 
     public function testProvider()
     {
-        $travis = (bool) getenv('ONTRAVIS');
+        $travis = (bool) getenv('TRAVIS');
         if ($travis) {
             $this->markTestIncomplete('Disabling this provider since it seems to have problems with the endpoint (OnSizzle).');
         }

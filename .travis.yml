@@ -1,24 +1,16 @@
+dist: xenial
+os: linux
 language: php
-
-sudo: false
-dist: trusty
 
 php:
   - 7.2
   - 7.3
   - 7.4
 
-env:
-  - ONTRAVIS=1
-
 cache:
   directories:
-    - $HOME/.composer/cache
+    - $HOME/.composer/cache/files
 
-matrix:
-    fast_finish: true
-
-before_script:
-  - composer install
+before_script: composer install
 
 script: composer test
