@@ -31,7 +31,7 @@ final class TwitchTest extends ProviderTester
 
     public function testProvider()
     {
-        $travis = (bool) getenv('ONTRAVIS');
+        $travis = (bool) getenv('TRAVIS');
         if ($travis) {
             $this->markTestIncomplete('Disabling testing because provider seems to always return a 204 error code (Twitch). If it continues to fail it will be deleted.');
         }
