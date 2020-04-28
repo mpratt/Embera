@@ -21,7 +21,6 @@ final class SoundsgoodTest extends ProviderTester
 {
     protected $tasks = [
         'valid_urls' => [
-            'https://play.soundsgood.co/playlist/chill-new-songwriters-2019-indie-rock-folk-and-soul',
             'https://play.soundsgood.co/playlist/if-12-2019',
             'https://play.soundsgood.co/playlist/19-avril-2015',
         ],
