@@ -1388,16 +1388,6 @@ I try to support the provider list in [oembed.com](https://oembed.com).
 - Notes:
   - The provider might be able to support fake responses, but I need to test more.
 
-## [They Said So](https://theysaidso.com)
-
-- Provider Name: TheySaidSo
-- Documentation: NO
-- HTTPS support: YES
-- Fake Response: NO
-- Additional Parameters: unknown
-- Notes:
-  - Auto generated Html for single pictures.
-
 ## [Tickcounter](https://tickcounter.com)
 
 - Provider Name: Tickcounter

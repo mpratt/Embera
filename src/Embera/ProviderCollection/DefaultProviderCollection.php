@@ -167,7 +167,6 @@ class DefaultProviderCollection extends ProviderCollectionAdapter
             'Sway',
             'Ted',
             'TheNewYorkTimes',
-            'TheySaidSo',
             'Tickcounter',
             'Toornament',
             'Tuxx',
