@@ -186,6 +186,7 @@ class DefaultProviderCollection extends ProviderCollectionAdapter
             'Viously',
             'Vlipsy',
             'Vlive',
+            'WaveVideo',
             'VoxSnap',
             'Wistia',
             'Wizer',

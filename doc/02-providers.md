@@ -1582,6 +1582,15 @@ I try to support the provider list in [oembed.com](https://oembed.com).
 - Additional Parameters: unknown
 - Notes: NONE
 
+## [WaveVideo](https://wave.video)
+
+- Provider Name: WaveVideo
+- Documentation: NO
+- HTTPS support: YES
+- Fake Response: YES
+- Additional Parameters: unknown
+- Notes: NONE
+
 ## [Wistia](https://wistia.com)
 
 - Provider Name: Wistia
