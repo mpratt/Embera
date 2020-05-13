@@ -22,7 +22,8 @@ final class AltruTest extends ProviderTester
     protected $tasks = array(
         'valid_urls' => array(
             'https://app.altrulabs.com/talentbrand/feed?answer_id=2059&data=stuff',
-            'https://app.altrulabs.com/talentbrand/feed/?answer_id=2058'
+            'https://app.altrulabs.com/talentbrand/feed/?answer_id=2058',
+            'https://app.altrulabs.com/player/41329'
         ),
         'invalid_urls' => array(
             'https://app.altrulabs.com/talentbrand/feed?data=stuff',
