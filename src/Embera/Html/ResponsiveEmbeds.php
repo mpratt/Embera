@@ -10,7 +10,7 @@
  * file that was distributed with this source code.
  */
 
-namespace Embera\html;
+namespace Embera\Html;
 
 /**
  * Class Responsable of converting html into responsive html.

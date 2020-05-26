@@ -10,7 +10,7 @@
  * file that was distributed with this source code.
  */
 
-namespace Embera\html;
+namespace Embera\Html;
 
 /**
  * This Class is in charge of replacing content, ignoring specific
