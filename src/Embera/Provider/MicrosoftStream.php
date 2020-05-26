@@ -35,9 +35,6 @@ class MicrosoftStream extends ProviderAdapter implements ProviderInterface
     protected $httpsSupport = true;
 
     /** inline {@inheritdoc} */
-    protected $responsiveSupport = false;
-
-    /** inline {@inheritdoc} */
     public function validateUrl(Url $url)
     {
         return (bool) (preg_match('~microsoftstream\.com/(video|channel)/([^/]+)~i', (string) $url));

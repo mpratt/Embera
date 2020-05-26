@@ -36,7 +36,7 @@ final class HuluTest extends ProviderTester
     {
         $travis = (bool) getenv('TRAVIS');
         if ($travis) {
-            $this->markTestIncomplete('Disabling this provider since it seems to have problems with the endpoint (OnSizzle).');
+            $this->markTestIncomplete('Disabling this provider since it seems to have problems with the endpoint (Hulu).');
         }
 
         $this->validateProvider('Hulu', [ 'width' => 480, 'height' => 270]);
