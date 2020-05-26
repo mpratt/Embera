@@ -34,7 +34,10 @@ class Audiomack extends ProviderAdapter implements ProviderInterface
     /** inline {@inheritdoc} */
     public function validateUrl(Url $url)
     {
-        return (bool) (preg_match('~audiomack\.com/(?:song|album|playlist)/(?:[^/]+)/(?:[^/]+)/?$~i', (string) $url));
+        return (bool) (
+            preg_match('~audiomack\.com/(?:song|album|playlist)/(?:[^/]+)/(?:[^/]+)/?$~i', (string) $url) ||
+            preg_match('~audiomack\.com/(?:[^/]+)/(?:song|album|playlist)/(?:[^/]+)/?$~i', (string) $url)
+        );
     }
 
     /** inline {@inheritdoc} */
