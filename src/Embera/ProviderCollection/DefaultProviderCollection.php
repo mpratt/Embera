@@ -108,6 +108,7 @@ class DefaultProviderCollection extends ProviderCollectionAdapter
             'MermaidInk',
             'Meetup',
             'MessesInfo',
+            'MicrosoftStream',
             'MixCloud',
             'ModeloIO',
             'MusicboxManiacs',

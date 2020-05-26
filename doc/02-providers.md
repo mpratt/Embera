@@ -816,6 +816,18 @@ I try to support the provider list in [oembed.com](https://oembed.com).
 - Notes:
   - Html is created when none is returned
 
+## [MicrosoftStream](https://web.microsoftstream.com/)
+
+- Provider Name: MicrosoftStream
+- Documentation: [YES](https://docs.microsoft.com/en-us/stream/embed-video-oembed)
+- HTTPS support: YES
+- Fake Response: NO
+- Additional Parameters:
+  - autoplay
+  - preload
+  - st
+- Notes: NONE
+
 ## [MessesInfo](https://messes.info)
 
 - Provider Name: MessesInfo
