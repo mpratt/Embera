@@ -140,6 +140,7 @@ class DefaultProviderCollection extends ProviderCollectionAdapter
             'Roomshare',
             'RoosterTeeth',
             'Rumble',
+            'RunKit',
             'SapoVideos',
             'ScreenNine',
             'Screencast',

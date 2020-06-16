@@ -1126,6 +1126,15 @@ I try to support the provider list in [oembed.com](https://oembed.com).
 - Additional Parameters: unknown
 - Notes: NONE
 
+## [RunKit](https://runkit.com)
+
+- Provider Name: RunKit
+- Documentation: [YES](https://runkit.com/docs/embed#oembed)
+- HTTPS support: YES
+- Fake Response: NO
+- Additional Parameters: unknown
+- Notes: NONE
+
 ## [Sapo Videos](https://videos.sapo.pt)
 
 - Provider Name: SapoVideos
