@@ -1548,6 +1548,16 @@ I try to support the provider list in [oembed.com](https://oembed.com).
 - Additional Parameters: unknown
 - Notes: NONE
 
+## [Vidyard](https://vidyard.com)
+
+- Provider Name: Vidyard
+- Documentation: [YES](https://developer.vidyard.com/apidoc/oembed/show_v1_1.html)
+- HTTPS support: YES
+- Fake Response: NO
+- Additional Parameters: unknown
+- Notes:
+  - Apparently has mobile response support
+
 ## [Vimeo](https://vimeo.com)
 
 - Provider Name: Vimeo

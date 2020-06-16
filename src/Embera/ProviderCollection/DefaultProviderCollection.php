@@ -183,6 +183,7 @@ class DefaultProviderCollection extends ProviderCollectionAdapter
             'Ustudio',
             'Veer',
             'Verse',
+            'Vidyard',
             'Vimeo',
             'Viously',
             'Vlipsy',
