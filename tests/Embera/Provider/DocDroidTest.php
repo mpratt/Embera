@@ -22,6 +22,7 @@ final class DocDroidTest extends ProviderTester
     protected $tasks = array(
         'valid_urls' => array(
             'https://www.docdroid.net/hptvUCe/example-document.docx.html',
+            'https://www.docdroid.com/hptvUCe/example-document.docx.html',
             'https://docdro.id/hptvUCe'
         ),
         'invalid_urls' => array(

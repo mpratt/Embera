@@ -216,6 +216,15 @@ I try to support the provider list in [oembed.com](https://oembed.com).
 - Notes:
   - It seems as it could support fake responses for single urls but not for playlists
 
+## [Coco Corp / I Love Coco](http://ilovecoco.video/)
+
+- Provider Name: CocoCorp
+- Documentation: NO
+- HTTPS support: YES
+- Fake Response: NO
+- Additional Parameters: Unknown
+- Notes: NONE
+
 ## [CodeHS](http://www.codehs.com/)
 
 - Provider Name: CodeHS
@@ -1680,6 +1689,15 @@ I try to support the provider list in [oembed.com](https://oembed.com).
 - Documentation: [YES](https://youtube-eng.googleblog.com/2009/10/oembed-support_9.html)
 - HTTPS support: YES
 - Fake Response: YES
+- Additional Parameters: Unknown
+- Notes: NONE
+
+## [Zeplin](https://zeplin.io)
+
+- Provider Name: Zeplin
+- Documentation: NO
+- HTTPS support: YES
+- Fake Response: NO
 - Additional Parameters: Unknown
 - Notes: NONE
 

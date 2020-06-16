@@ -25,7 +25,7 @@ class DocDroid extends ProviderAdapter implements ProviderInterface
 
     /** inline {@inheritdoc} */
     protected static $hosts = [
-        'docdroid.net', 'docdro.id'
+        'docdroid.net', 'docdro.id', 'docdroid.com',
     ];
 
     /** inline {@inheritdoc} */
@@ -37,7 +37,7 @@ class DocDroid extends ProviderAdapter implements ProviderInterface
     /** inline {@inheritdoc} */
     public function validateUrl(Url $url)
     {
-        return (bool) (preg_match('~docdroid\.net/([^/]+)/([^/]+)$~i', (string) $url));
+        return (bool) (preg_match('~docdroid\.(net|com)/([^/]+)/([^/]+)$~i', (string) $url));
     }
 
     /** inline {@inheritdoc} */
