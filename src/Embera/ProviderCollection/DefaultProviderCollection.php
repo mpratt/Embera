@@ -170,6 +170,7 @@ class DefaultProviderCollection extends ProviderCollectionAdapter
             'Ted',
             'TheNewYorkTimes',
             'Tickcounter',
+            'TikTok',
             'Toornament',
             'Tuxx',
             'Tvcf',

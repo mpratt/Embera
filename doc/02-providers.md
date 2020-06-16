@@ -1418,6 +1418,16 @@ I try to support the provider list in [oembed.com](https://oembed.com).
 - Additional Parameters: unknown
 - Notes: NONE
 
+## [TikTok](https://tiktok.com)
+
+- Provider Name: TikTok
+- Documentation: [YES](https://developers.tiktok.com/doc/Embed)
+- HTTPS support: YES
+- Fake Response: NO
+- Additional Parameters: unknown
+- Notes:
+  - Supports respnsive html
+
 ## [Toornament](https://toornament.com)
 
 - Provider Name: Toornament
