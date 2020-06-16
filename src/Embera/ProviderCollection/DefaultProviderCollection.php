@@ -59,6 +59,7 @@ class DefaultProviderCollection extends ProviderCollectionAdapter
             'DocDroid',
             'DotSUB',
             'EduMedia',
+            'Embedery',
             'Ethfiddle',
             'Eyrie',
             'Facebook',

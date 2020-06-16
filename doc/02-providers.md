@@ -348,6 +348,16 @@ I try to support the provider list in [oembed.com](https://oembed.com).
 - Additional Parameters: Unknown
 - Notes: NONE
 
+## [Embedery](https://embedery.com)
+
+- Provider Name: Embedery
+- Documentation: NO
+- HTTPS support: YES
+- Fake Response: NO
+- Additional Parameters: Unknown
+- Notes:
+  - The provider already returns responsive embeds.
+
 ## [Ethfiddle](https://ethfiddle.com)
 
 - Provider Name: Ethfiddle
