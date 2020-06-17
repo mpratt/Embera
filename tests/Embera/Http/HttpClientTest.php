@@ -34,7 +34,7 @@ class HttpClientTest extends TestCase
 
         $response = $http->fetch('https://httpbin.org/relative-redirect/2');
         $response = json_decode($response, true);
-        $this->assertEquals('https://httpbin.org/get', $response['url']);
+        $this->assertEquals('https://httpbin.org/get', str_replace('http://', 'https://', $response['url']));
 
         $response = $http->fetch('https://httpbin.org/redirect-to?url=' . urlencode('https://httpbin.org/user-agent'));
         $response = json_decode($response, true);
