@@ -568,6 +568,15 @@ I try to support the provider list in [oembed.com](https://oembed.com).
 - Additional Parameters: unknown
 - Notes: NONE
 
+# [HiHaHo](https://studio.hihaho.com)
+
+- Provider Name: HiHaHo
+- Documentation: NO
+- HTTPS support: YES
+- Fake Response: NO
+- Additional Parameters: unknown
+- Notes: NONE
+
 ## [Huffduffer](https://huffduffer.com)
 
 - Provider Name: Huffduffer
