@@ -37,6 +37,11 @@ final class KitTest extends ProviderTester
 
     public function testProvider()
     {
+        $travis = (bool) getenv('TRAVIS');
+        if ($travis) {
+            $this->markTestIncomplete('Disabling this provider since it seems to have problems with the endpoint (Kit).');
+        }
+
         $this->validateProvider('Kit', [ 'width' => 480, 'height' => 270]);
     }
 }
