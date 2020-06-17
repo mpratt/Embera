@@ -1332,15 +1332,6 @@ I try to support the provider list in [oembed.com](https://oembed.com).
 - Notes:
   - The provider already returns responsive embeds.
 
-## [Soundsgood](https://soundsgood.co)
-
-- Provider Name: Soundsgood
-- Documentation: NO
-- HTTPS support: YES
-- Fake Response: NO
-- Additional Parameters: unknown
-- Notes: NONE
-
 ## [SpeakerDeck](https://speakerdeck.com)
 
 - Provider Name: SpeakerDeck

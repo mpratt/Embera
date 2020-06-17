@@ -161,7 +161,6 @@ class DefaultProviderCollection extends ProviderCollectionAdapter
             'SocialExplorer',
             'SongLink',
             'SoundCloud',
-            'Soundsgood',
             'SpeakerDeck',
             'Spotful',
             'Spotify',
