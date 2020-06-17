@@ -23,7 +23,6 @@ final class VlipsyTest extends ProviderTester
         'valid_urls' => [
             'https://vlipsy.com/vlip/jumanji-the-next-level-wink-boB7Llfc',
             'https://vlipsy.com/vlip/joker-stairs-dancing-scene-2DydQVDx',
-            'https://vlipsy.com/vlip/internet-baby-vibing-tHClAyt4',
         ],
         'invalid_urls' => [
             'https://vlipsy.com/',
