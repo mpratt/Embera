@@ -1661,6 +1661,15 @@ I try to support the provider list in [oembed.com](https://oembed.com).
 - Notes:
   - Might be able to support fake responses but I dont have enough data to test
 
+## [Wokwi](https://wokwi.com)
+
+- Provider Name: Wokwi
+- Documentation: NO
+- HTTPS support: YES
+- Fake Response: NO
+- Additional Parameters: Unknown
+- Notes: NONE
+
 ## [Wordpress](https://wordpress.com)
 
 - Provider Name: Wordpress
@@ -1673,10 +1682,10 @@ I try to support the provider list in [oembed.com](https://oembed.com).
 - Notes:
   - Wordpress allows other domains, in order to support them you must extend this class and add your domain in the Hosts property.
 
-## [Wokwi](https://wokwi.com)
+## [Wordwall](https://wordwall.net)
 
-- Provider Name: Wokwi
-- Documentation: NO
+- Provider Name: Wordwall
+- Documentation: [YES](https://wordwall.net/about/oembed)
 - HTTPS support: YES
 - Fake Response: NO
 - Additional Parameters: Unknown
