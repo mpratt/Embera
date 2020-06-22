@@ -56,7 +56,6 @@ class Kit extends ProviderAdapter implements ProviderInterface
         preg_match('~v=([a-z0-9_\-]+)~i', (string) $this->url, $matches);
 
         $embedUrl = '//embed.kit.co/embed?url=' . $this->url;
-        // <iframe src=""  scrolling="no"></iframe>
 
         $attr = [];
         $attr[] = 'src="' . $embedUrl . '"';
@@ -71,5 +70,4 @@ class Kit extends ProviderAdapter implements ProviderInterface
             'html' => '<iframe ' . implode(' ', $attr). '></iframe>',
         ];
     }
-
 }
