@@ -128,6 +128,7 @@ class DefaultProviderCollection extends ProviderCollectionAdapter
             'Oz',
             'Padlet',
             'Pastery',
+            'Pinpoll',
             'Pixdor',
             'Playbuzz',
             'Podbean',

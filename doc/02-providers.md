@@ -612,7 +612,6 @@ I try to support the provider list in [oembed.com](https://oembed.com).
 - Fake Response: NO
 - Additional Parameters: unknown
 - Notes: NONE
--
 
 ## [Infogram](https://infogr.am)
 
@@ -1016,6 +1015,16 @@ I try to support the provider list in [oembed.com](https://oembed.com).
 - Fake Response: NO
 - Additional Parameters: unknown
 - Notes: NONE
+
+## [Pinpoll](https://www.pinpoll.com/products/tools)
+
+- Provider Name: Pinpoll
+- Documentation: NO
+- HTTPS support: YES
+- Fake Response: NO
+- Additional Parameters: unknown
+- Notes:
+  - The provider already returns responsive embeds.
 
 ## [Pixdor](https://pixdor.com)
 
