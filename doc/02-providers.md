@@ -280,6 +280,17 @@ I try to support the provider list in [oembed.com](https://oembed.com).
 - Additional Parameters: Unknown
 - Notes: NONE
 
+## [Datawrapper](https://www.datawrapper.de/)
+
+- Provider Name: Datawrapper
+- Documentation: [YES](https://developer.datawrapper.de/reference#getoembed)
+- HTTPS support: YES
+- Fake Response: NO
+- Additional Parameters:
+  - iframe: Force Iframe only embeds
+- Notes:
+  - The provider already returns responsive embeds.
+
 ## [DailyMotion](https://www.dailymotion.com/)
 
 - Provider Name: DailyMotion
