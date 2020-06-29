@@ -6,15 +6,20 @@ class TestServiceAcast extends TestProviders
 {
     protected $urls = array(
         'valid' => array(
-            'https://embed.acast.com/minute-papillon/coronavirus-denouvellesfakenews',
-            'https://embed.acast.com/minute-papillon/3-0-final-france-bresil-de-ping-pong',
+            'https://embed.acast.com/emotions/f8c555da-c6d5-4d51-9e48-8b0a6a7d44dd',
+            'https://play.acast.com/s/minute-papillon/7cb8e73d-0292-4e19-a361-db546f2ca5ec',
         ),
         'invalid' => array(
-            'https://play.acast.com/s/minute-papillon/7cb8e73d-0292-4e19-a361-db546f2ca5ec',
+            'https://player.acast.com/minute-papillon/7cb8e73d-0292-4e19-a361-db546f2ca5ec',
+        ),
+        'fake' => array(
+            'type' => 'rich',
+            'html' => '<iframe'
         )
     );
 
-    public function testProvider() {
+    public function testProvider()
+    {
         $this->validateProvider('Acast');
     }
 }
