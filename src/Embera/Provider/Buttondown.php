@@ -58,7 +58,7 @@ class Buttondown extends ProviderAdapter implements ProviderInterface
 
         $attr = [];
         $attr[] = 'scrolling="no"';
-        $attr[] = 'style="width:100%!important;height:200px;border: 1px #ccc solid !important;"';
+        $attr[] = 'style="width:100%!important;height:200px;position:relative;"';
         $attr[] = 'src="' . $embedUrl . '"';
 
         return [
