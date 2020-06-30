@@ -47,6 +47,7 @@ class Providers
         '*.soundcloud.com' => '\Embera\Providers\SoundCloud',
         '*.spotify.com' => '\Embera\Providers\Spotify',
         '*.twitch.tv' => '\Embera\Providers\Twitch',
+        '*.viously.com' => '\Embera\Providers\Viously',
         '*.wizer.me' => '\Embera\Providers\Wizer',
         '23hq.com' => '\Embera\Providers\Hq23',
         '5min.com' => '\Embera\Providers\AolOn',
