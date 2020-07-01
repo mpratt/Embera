@@ -179,6 +179,16 @@ I try to support the provider list in [oembed.com](https://oembed.com).
 - Notes:
   - It seems as it could support fake responses but we dont have enough data to test.
 
+## [Chainflix](http://chainflix.net/)
+
+- Provider Name: Chainflix
+- Documentation: NO
+- HTTPS support: YES
+- Fake Response: NO
+- Additional Parameters: Unknown
+- Notes:
+  - It seems as it could support fake responses.
+
 ## [ChartBlocks](https://chartblocks.com/)
 
 - Provider Name: ChartBlocks

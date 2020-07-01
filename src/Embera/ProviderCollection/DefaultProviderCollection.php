@@ -41,6 +41,7 @@ class DefaultProviderCollection extends ProviderCollectionAdapter
             'Buttondown',
             'Byzart',
             'Ceros',
+            'Chainflix',
             'ChartBlocks',
             'Chirbit',
             'CircuitLab',
