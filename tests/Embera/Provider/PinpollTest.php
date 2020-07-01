@@ -22,8 +22,6 @@ final class PinpollTest extends ProviderTester
     protected $tasks = [
         'valid_urls' => [
             'https://tools.pinpoll.com/embed/1',
-            'https://tools.pinpoll.com/answer/5',
-            'https://tools.pinpoll.com/collection/2',
         ],
         'invalid_urls' => [
             'https://tools.pinpoll.com/collection/2/other/path',
