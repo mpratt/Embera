@@ -33,6 +33,11 @@ final class KitchenbowlTest extends ProviderTester
 
     public function testProvider()
     {
+        $travis = (bool) getenv('TRAVIS');
+        if ($travis) {
+            $this->markTestIncomplete('Disabling this provider since it seems to have problems with the endpoint at the moment (Kitchenbowl).');
+        }
+
         $this->validateProvider('Kitchenbowl', [ 'width' => 480, 'height' => 270]);
     }
 }
