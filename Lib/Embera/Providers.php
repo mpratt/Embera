@@ -32,6 +32,7 @@ class Providers
 
     /** @var array Massive array with the mapping of host -> provider class relation. */
     protected $services = array(
+        '*.acast.com' => '\Embera\Providers\Acast',
         '*.blip.tv' => '\Embera\Providers\BlipTV',
         '*.boxofficebuz.com' => '\Embera\Providers\BoxOfficeBuz',
         '*.dailymotion.com' => '\Embera\Providers\DailyMotion',
@@ -51,7 +52,6 @@ class Providers
         '*.wizer.me' => '\Embera\Providers\Wizer',
         '23hq.com' => '\Embera\Providers\Hq23',
         '5min.com' => '\Embera\Providers\AolOn',
-        'embed.acast.com' => '\Embera\Providers\Acast',
         'alpha.app.net' => '\Embera\Providers\AppNet',
         'animatron.com' => '\Embera\Providers\Animatron',
         'animoto.com' => '\Embera\Providers\Animoto',
