@@ -12,21 +12,15 @@ class Viously extends \Embera\Adapters\Service
     protected $apiUrl = 'https://www.viously.com/oembed';
 
     /** inline {@inheritdoc} */
-    protected function normalizeUrl()
-    {
-        $this->url = str_replace('20minutes', 'amp', $this->url);
-    }
-
-    /** inline {@inheritdoc} */
     protected function validateUrl()
     {
-        return (preg_match('~viously\.com\/amp\/[\w-_]+~i', $this->url));
+        return (preg_match('~viously\.com/[\w-_]+/[\w-_]+$~i', $this->url));
     }
 
     /** inline {@inheritdoc} */
     public function fakeResponse()
     {
-        preg_match('~[^\/]+$~i', $this->url, $matches);
+        preg_match('~[^/]+$~i', $this->url, $matches);
 
         $id = $matches[0];
 
