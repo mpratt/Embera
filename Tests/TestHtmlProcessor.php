@@ -16,10 +16,10 @@ class TestHtmlProcessor extends PHPUnit_Framework_TestCase
     {
         $expected = array(
             '<a href="http://youtu.be/fSUK4WgQ3vk" title="">http://youtu.be/fSUK4WgQ3vk</a>',
-            '<iframe width="420" height="315" src="//www.youtube.com/embed/fSUK4WgQ3vk" frameborder="0" allowfullscreen></iframe>',
+            '<iframe width="420" height="315" src="//www.youtube.com/embed/fSUK4WgQ3vk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',
             '<a href="http://youtu.be/fSUK4WgQ3vk">other link</a>',
             '<img src="http://youtu.be/fSUK4WgQ3vk" alt="" />',
-            '<iframe width="420" height="315" src="//www.youtube.com/embed/fSUK4WgQ3vk" frameborder="0" allowfullscreen></iframe>',
+            '<iframe width="420" height="315" src="//www.youtube.com/embed/fSUK4WgQ3vk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',
             '<img src="http://youtu.be/fSUK4WgQ3vk" title="">',
             '<pre>My   House http://youtu.be/fSUK4WgQ3vk   </pre>',
             '<code>http://youtu.be/fSUK4WgQ3vk</code>',

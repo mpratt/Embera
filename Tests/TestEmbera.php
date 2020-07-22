@@ -220,9 +220,9 @@ class TestEmbera extends PHPUnit_Framework_TestCase
     public function testReplaceOrderOnAutoEmbed()
     {
         $expected = array(
-            '<iframe width="420" height="315" src="//www.youtube.com/embed/fSUK4WgQ3vk" frameborder="0" allowfullscreen></iframe>',
-            '<iframe width="420" height="315" src="//www.youtube.com/embed/fSUK4WgQ3vkIII" frameborder="0" allowfullscreen></iframe>',
-            '<iframe width="420" height="315" src="//www.youtube.com/embed/fSUK4WgQ3vkII" frameborder="0" allowfullscreen></iframe>'
+            '<iframe width="420" height="315" src="//www.youtube.com/embed/fSUK4WgQ3vk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',
+            '<iframe width="420" height="315" src="//www.youtube.com/embed/fSUK4WgQ3vkIII" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',
+            '<iframe width="420" height="315" src="//www.youtube.com/embed/fSUK4WgQ3vkII" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
         );
 
         $urls = array(
@@ -240,7 +240,7 @@ class TestEmbera extends PHPUnit_Framework_TestCase
     public function testReplaceInsideQuotations()
     {
         $expected = array(
-            '"<iframe width="420" height="315" src="//www.youtube.com/embed/fSUK4WgQ3vk" frameborder="0" allowfullscreen></iframe>"',
+            '"<iframe width="420" height="315" src="//www.youtube.com/embed/fSUK4WgQ3vk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>"',
         );
 
         $urls = array(

@@ -66,6 +66,9 @@ class TestHttpRequest extends PHPUnit_Framework_TestCase
 
         $this->assertEquals('PHP/Morcilla', $response['user-agent']);
 
+        // For an unknown reason, the httpbin api for redirections doesn't respond anymore, so we skip following tests
+        $this->markTestIncomplete('Redirect API from httpbin is not available anymore');
+
         $config = array(
             'curl' => array(
                 CURLOPT_FOLLOWLOCATION => 0,
@@ -128,6 +131,9 @@ class TestHttpRequest extends PHPUnit_Framework_TestCase
         $response = json_decode($response, true);
 
         $this->assertEquals('PHP/FGC Morcilla', $response['user-agent']);
+
+        // For an unknown reason, the httpbin api for redirections doesn't respond anymore, so we skip following tests
+        $this->markTestIncomplete('Redirect API from httpbin is not available anymore');
 
         $http = new \Embera\HttpRequest($config);
         $response = $http->fetch('http://httpbin.org/relative-redirect/2');
