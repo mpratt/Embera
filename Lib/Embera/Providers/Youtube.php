@@ -46,7 +46,7 @@ class Youtube extends \Embera\Adapters\Service
             'provider_name' => 'Youtube',
             'provider_url' => 'https://www.youtube.com',
             'title' => 'Unknown title',
-            'html' => '<iframe width="{width}" height="{height}" src="//www.youtube.com/embed/' . $matches['1'] . '" frameborder="0" allowfullscreen></iframe>',
+            'html' => '<iframe width="{width}" height="{height}" src="//www.youtube.com/embed/' . $matches['1'] . '" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',
         );
     }
 }

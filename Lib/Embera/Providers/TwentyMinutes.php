@@ -1,0 +1,39 @@
+<?php
+
+namespace Embera\Providers;
+
+/**
+ * The 20minutes Provider
+ * @link https://splash.20minutes.fr
+ */
+class TwentyMinutes extends \Embera\Adapters\Service
+{
+    /** inline {@inheritdoc} */
+    protected $apiUrl = 'https://splash.20minutes.fr/oembed';
+
+    /** inline {@inheritdoc} */
+    protected function validateUrl()
+    {
+        return (preg_match('~membre\.20minutes\.fr/newsletters/[\w-_]+~i', $this->url));
+    }
+
+    /** inline {@inheritdoc} */
+    public function fakeResponse()
+    {
+        return array(
+            'version' => '1',
+            'type' => 'rich',
+            'title' => '20 Minutes',
+            'author_name' => '20 Minutes',
+            'author_url' => 'https://www.20minutes.fr',
+            'provider_name' => '20 Minutes',
+            'provider_url' => 'https://www.20minutes.fr',
+            'thumbnail_url' => 'https://static.20mn.fr/logos/20minutes-blue.png',
+            'thumbnail_width' => '512',
+            'thumbnail_height' => '512',
+            'width' => '100',
+            'height' => '500',
+            'html' => sprintf('<iframe width=\"100\" height=\"500\" src=\"%s\" frameborder=\"0\" ></iframe>', $this->url),
+        );
+    }
+}

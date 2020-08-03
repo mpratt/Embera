@@ -113,6 +113,7 @@ class Providers
         'mathembed.com' => '\Embera\Providers\Mathembed',
         'meetu.ps' => '\Embera\Providers\Meetup',
         'meetup.com' => '\Embera\Providers\Meetup',
+        'membre.20minutes.fr' => '\Embera\Providers\TwentyMinutes',
         'mix.office.com' => '\Embera\Providers\Officemix',
         'mixcloud.com' => '\Embera\Providers\MixCloud',
         'moby.to' => '\Embera\Providers\MobyPicture',

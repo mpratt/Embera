@@ -51,14 +51,13 @@ class Spotify extends \Embera\Adapters\Service
         }
 
         preg_match('~/(track|album|user)/.+~i', $this->url, $matches);
-        $code = str_replace('/', ':', rtrim($matches['0'], '/ '));
 
         return array(
             'type' => 'rich',
             'provider_name' => 'Spotify',
             'provider_url' => 'https://www.spotify.com',
             'title' => 'Unknown title',
-            'html' => '<iframe src="https://embed.spotify.com/?uri=spotify' . $code . '" width="{width}" height="{height}" frameborder="0" allowtransparency="true"></iframe>',
+            'html' => '<iframe width="{width}" height="{height}" allowtransparency="true" frameborder="0" allow="encrypted-media" title="{title}" src="https://open.spotify.com/embed' . $matches[0] . '"></iframe>',
         );
     }
 }

@@ -33,7 +33,7 @@ class Viously extends \Embera\Adapters\Service
             'height' => '282',
             'author_name' => '20MINUTES',
             'author_url' => 'https://www.viously.com/20minutes',
-            'html' => sprintf('<div class=\"vsly-player\" data-height=\"9\" data-iframe=\"%s\" data-img=\"\" data-width=\"16\" id=\"%s"></div>', $this->url, $id)
+            'html' => sprintf('<div class=\"vsly-player\" data-height=\"9\" data-iframe=\"%s\" data-img=\"\" data-width=\"16\" id=\"%s"></div><script async id="xieg6Sie" src="https://getviously.com/js"></script>', $this->url, $id),
         );
     }
 }
