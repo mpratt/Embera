@@ -29,6 +29,9 @@ class Instagram extends ProviderAdapter implements ProviderInterface
     ];
 
     /** inline {@inheritdoc} */
+    protected $allowedParams = [ 'maxwidth', 'maxheight', 'callback', 'omitscript', 'breaking_change' ];
+    
+    /** inline {@inheritdoc} */
     protected $httpsSupport = true;
 
     /** inline {@inheritdoc} */
