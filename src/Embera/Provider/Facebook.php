@@ -31,7 +31,7 @@ class Facebook extends ProviderAdapter implements ProviderInterface
     ];
 
     /** inline {@inheritdoc} */
-    protected $allowedParams = [ 'maxwidth', 'maxheight', 'callback', 'omitscript', 'breaking_change' ];
+    protected $allowedParams = [ 'maxwidth', 'maxheight', 'callback', 'omitscript', 'breaking_change', 'access_token' ];
 
     /** inline {@inheritdoc} */
     protected $httpsSupport = true;
