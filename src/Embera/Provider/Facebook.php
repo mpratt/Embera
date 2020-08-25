@@ -20,8 +20,10 @@ use Embera\Url;
  */
 class Facebook extends ProviderAdapter implements ProviderInterface
 {
+    protected $legacyEndpoint = 'https://apps.facebook.com/plugins/{type}/oembed.json';
+    
     /** inline {@inheritdoc} */
-    protected $endpoint = 'https://apps.facebook.com/plugins/{type}/oembed.json';
+    protected $endpoint = 'https://graph.facebook.com/v8.0/oembed_{type}';
 
     /** inline {@inheritdoc} */
     protected static $hosts = [
@@ -29,7 +31,7 @@ class Facebook extends ProviderAdapter implements ProviderInterface
     ];
 
     /** inline {@inheritdoc} */
-    protected $allowedParams = [ 'maxwidth', 'maxheight', 'callback', 'omitscript' ];
+    protected $allowedParams = [ 'maxwidth', 'maxheight', 'callback', 'omitscript', 'breaking_change', 'access_token', 'fields' ];
 
     /** inline {@inheritdoc} */
     protected $httpsSupport = true;
@@ -126,16 +128,27 @@ class Facebook extends ProviderAdapter implements ProviderInterface
     /** inline {@inheritdoc} */
     public function getEndpoint()
     {
+        if (isset($this->config['access_token'])) {
+            if ($this->urlMatchesPattern($this->url, $this->videoPatterns)) {
+                $type = 'videos';
+            } elseif ($this->urlMatchesPattern($this->url, $this->postPatterns)) {
+                $type = 'post';
+            } else {
+                $type = 'page';
+            }
 
-        if ($this->urlMatchesPattern($this->url, $this->videoPatterns)) {
-            $type = 'video';
-        } elseif ($this->urlMatchesPattern($this->url, $this->postPatterns)) {
-            $type = 'post';
+            return str_replace('{type}', $type, $this->endpoint);            
         } else {
-            $type = 'page';
-        }
+            if ($this->urlMatchesPattern($this->url, $this->videoPatterns)) {
+                $type = 'video';
+            } elseif ($this->urlMatchesPattern($this->url, $this->postPatterns)) {
+                $type = 'post';
+            } else {
+                $type = 'page';
+            }
 
-        return str_replace('{type}', $type, $this->endpoint);
+            return str_replace('{type}', $type, $this->legacyEndpoint);
+        }
     }
 
     /** inline {@inheritdoc} */
