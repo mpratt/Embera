@@ -21,8 +21,6 @@ final class PortfoliumTest extends ProviderTester
 {
     protected $tasks = [
         'valid_urls' => [
-            'http://portfolium.com/entry/american-ninja-warrior-2011',
-            'https://portfolium.com/entry/asu-gsv-summit-2018-portfolium-presentation',
             'https://portfolium.com/entry/collision-conference-2016',
         ],
         'invalid_urls' => [

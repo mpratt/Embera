@@ -29,8 +29,7 @@ final class YoutubeTest extends ProviderTester
             'https://m.youtube.com/watch?v=mghhLqu31cQ',
             'https://m.youtube.com/watch?v=wB3sjAIARIY',
             'http://youtube.com/embed/mghhLqu31cQ',
-            'http://www.youtube.com/embed/mghhLqu31cQ',
-            'http://youtu.be/8aGEb_yUpMs'
+            'http://youtu.be/mghhLqu31cQ',
         ),
         'invalid_urls' => array(
             'http://youtube.com/watch?list=hi',

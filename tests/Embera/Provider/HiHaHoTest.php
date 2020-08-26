@@ -21,7 +21,7 @@ final class HiHaHoTest extends ProviderTester
 {
     protected $tasks = [
         'valid_urls' => [
-            'https://player.hihaho.com/embed/448f6b34-7c12-48f5-952f-23316f93ec5c'
+            'https://player.hihaho.com/embed/c86a7ddf-eeb1-421a-b279-ff84c6b30d59',
         ],
         'invalid_urls' => [
             'https://player.hihaho.com',
@@ -30,6 +30,11 @@ final class HiHaHoTest extends ProviderTester
 
     public function testProvider()
     {
+        $travis = (bool) getenv('TRAVIS');
+        if ($travis) {
+            $this->markTestIncomplete('Disabling this provider since it seems to have problems with the endpoint (HiHaHo).');
+        }
+
         $this->validateProvider('HiHaHo', [ 'width' => 480, 'height' => 270]);
     }
 }

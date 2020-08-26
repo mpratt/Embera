@@ -22,7 +22,6 @@ final class MatterportTest extends ProviderTester
     protected $tasks = [
         'valid_urls' => [
             'https://my.matterport.com/show?m=uFiBguoZ7dP',
-            'https://my.matterport.com/show?m=zcNa6JG3omn',
             'https://my.matterport.com/show/?m=UYd9izhXdMr',
         ],
         'invalid_urls' => [

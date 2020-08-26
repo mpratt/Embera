@@ -23,7 +23,6 @@ final class IssuuTest extends ProviderTester
         'valid_urls' => [
             'https://issuu.com/coventrysociety/docs/13---april-2012',
             'https://issuu.com/somosbelcorp/docs/esika.colombia.c06.2019',
-            'https://issuu.com/moncheribridals/docs/219colettenoprice',
         ],
         'invalid_urls' => [
             'https://issuu.com/moncheribridals/',
