@@ -121,6 +121,7 @@ class DefaultProviderCollection extends ProviderCollectionAdapter
             'Nanoo',
             'NaturalAtlas',
             'Nfb',
+            'NoPaste',
             'Omniscope',
             'OnSizzle',
             'OraTV',

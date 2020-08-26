@@ -953,6 +953,17 @@ I try to support the provider list in [oembed.com](https://oembed.com).
   - Might be possible to support fake responses only on films, not on playlists
   - The returned oembed html is encoded, the library decodes it as expected.
 
+## [NoPaste](https://nopaste.ml)
+
+- Provider Name: NoPaste
+- Documentation: NO
+- HTTPS support: YES
+- Fake Response: NO
+- Additional Parameters: Unknown
+- Notes:
+  - Might be possible to support fake responses only on films, not on playlists
+  - The returned oembed html is encoded, the library decodes it as expected.
+
 ## [Omniscope](https://omniscope.me)
 
 - Provider Name: Omniscope
