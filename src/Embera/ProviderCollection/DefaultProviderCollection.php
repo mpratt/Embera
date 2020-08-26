@@ -140,6 +140,7 @@ class DefaultProviderCollection extends ProviderCollectionAdapter
             'Portfolium',
             'Posixion',
             'RadioPublic',
+            'Rcvis',
             'Reddit',
             'ReleaseWire',
             'Replit',

@@ -1128,6 +1128,15 @@ I try to support the provider list in [oembed.com](https://oembed.com).
 - Notes:
   - The provider already returns responsive embeds.
 
+## [Rcvis](https://rcvis.com)
+
+- Provider Name: Rcvis
+- Documentation: NO
+- HTTPS support: YES
+- Fake Response: NO
+- Additional Parameters: unknown
+- Notes: None
+
 ## [Reddit](https://reddit.com)
 
 - Provider Name: Reddit
