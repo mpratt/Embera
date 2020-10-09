@@ -20,6 +20,13 @@ class TwentyMinutes extends \Embera\Adapters\Service
     /** inline {@inheritdoc} */
     public function fakeResponse()
     {
+        preg_match('~newsletters\/([\w_-]+)~i', $this->url, $section);
+        preg_match('~&maxwidth=([\d]+)~i', $this->url, $maxWidth);
+        preg_match('~&maxHeight=([\d]+)~i', $this->url, $maxHeight);
+
+        $width = isset($maxWidth[1]) ? $maxWidth[1] : '600';
+        $height = isset($maxHeight[1]) ? $maxHeight[1] : '400';
+
         return array(
             'version' => '1',
             'type' => 'rich',
@@ -31,9 +38,10 @@ class TwentyMinutes extends \Embera\Adapters\Service
             'thumbnail_url' => 'https://static.20mn.fr/logos/20minutes-blue.png',
             'thumbnail_width' => '512',
             'thumbnail_height' => '512',
-            'width' => '100',
-            'height' => '500',
-            'html' => sprintf('<iframe width=\"100\" height=\"500\" src=\"%s\" frameborder=\"0\" ></iframe>', $this->url),
+            'width' => $width,
+            'height' => $height,
+            'html' => sprintf('<iframe width=\"%s\" height=\"%s\" src=\"%s\" frameborder=\"0\" ></iframe>', $width, $height, $this->url),
+            'newsletterHtml' => sprintf('<div id="mbrs-newsletter-embed" class="mbrs" data-section="%s"></div>', $section[1]),
         );
     }
 }

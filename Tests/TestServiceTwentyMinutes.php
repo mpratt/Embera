@@ -7,6 +7,7 @@ class TestServiceTwentyMinutes extends TestProviders
     protected $urls = array(
         'valid' => array(
             'https://membre.20minutes.fr/newsletters/solutions',
+            'https://membre.20minutes.fr/newsletters/solutions&maxwidth=500&maxHeight=100',
         ),
         'invalid' => array(
             'https://www.20minutes.fr/newsletters/solutions',
@@ -14,7 +15,8 @@ class TestServiceTwentyMinutes extends TestProviders
         ),
         'fake' => array(
             'type' => 'rich',
-            'html' => '<iframe'
+            'html' => '<iframe',
+            'newsletterHtml' => '<div',
         )
     );
 
