@@ -14,6 +14,5 @@
 
     <php>
         <ini name="date.timezone" value="UTC"/>
-        <const name="FULL_TEST" value="false"/>
     </php>
 </phpunit>

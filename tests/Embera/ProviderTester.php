@@ -63,8 +63,12 @@ class ProviderTester extends TestCase
      */
     protected function validateProvider($p, array $config = [])
     {
-        // Use all available valid urls?
-        $rounds = (defined('FULL_TEST') && FULL_TEST ? 1000 : 1);
+        $rounds = 1000;
+        $validateRealResponse = true;
+        if ((bool) getenv('TRAVIS')) {
+            $rounds = 1;
+            $validateRealResponse = false;
+        }
 
         if (empty($this->tasks)) {
             throw new \Exception(sprintf('The Provider %s doesnt have tasks', $p));
@@ -80,7 +84,9 @@ class ProviderTester extends TestCase
             $this->validateFakeResponse($p, $this->tasks, $rounds, $config);
         }
 
-        $this->validateRealResponse($p, $this->tasks, $rounds, $config);
+        if ($validateRealResponse) {
+            $this->validateRealResponse($p, $this->tasks, $rounds, $config);
+        }
     }
 
     /**
