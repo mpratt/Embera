@@ -76,6 +76,7 @@ class ProviderTester extends TestCase
 
         $this->validateUrlDetection($p, $this->tasks, $config);
         $this->validateCollectionDetection($p, $this->tasks, $config);
+
         if (!empty($this->tasks['normalize_urls'])) {
             $this->validateUrlNormalization($p, $this->tasks['normalize_urls'], $config);
         }

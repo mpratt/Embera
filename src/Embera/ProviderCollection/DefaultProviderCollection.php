@@ -181,7 +181,6 @@ class DefaultProviderCollection extends ProviderCollectionAdapter
             'Toornament',
             'Tuxx',
             'Tvcf',
-            'Twitch',
             'Twitter',
             'Typecast',
             'Typlog',

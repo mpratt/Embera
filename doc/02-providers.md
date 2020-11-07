@@ -1524,16 +1524,6 @@ I try to support the provider list in [oembed.com](https://oembed.com).
 - Additional Parameters: unknown
 - Notes: NONE
 
-## [Twitch](https://twitch.tv)
-
-- Provider Name: Twitch
-- Documentation: NO
-- HTTPS support: YES
-- Fake Response: NO
-- Additional Parameters: unknown
-- Notes:
-  - Might be able to support fake responses but I need to test more.
-
 ## [Twitter](https://twitter.com)
 
 - Provider Name: Twitter
