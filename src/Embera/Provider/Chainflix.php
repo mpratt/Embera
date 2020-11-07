@@ -21,7 +21,7 @@ use Embera\Url;
 class Chainflix extends ProviderAdapter implements ProviderInterface
 {
     /** inline {@inheritdoc} */
-    protected $endpoint = 'https://beta.chainflix.net/video/oembed?format=json';
+    protected $endpoint = 'https://www.chainflix.net/video/oembed?format=json';
 
     /** inline {@inheritdoc} */
     protected static $hosts = [
@@ -34,12 +34,13 @@ class Chainflix extends ProviderAdapter implements ProviderInterface
     /** inline {@inheritdoc} */
     public function validateUrl(Url $url)
     {
-        return (bool) (preg_match('~chainflix\.net/video(/embed/?)?([^/]+)~i', (string) $url));
+        return (bool) (preg_match('~chainflix\.net/video(/embed/?)?\?contentId([^/]+)~i', (string) $url));
     }
 
     /** inline {@inheritdoc} */
     public function normalizeUrl(Url $url)
     {
+        $url->setHost('chainflix.net');
         $url->convertToHttps();
         $url->removeLastSlash();
         return $url;

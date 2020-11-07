@@ -21,7 +21,7 @@ final class ChainflixTest extends ProviderTester
 {
     protected $tasks = [
         'valid_urls' => [
-            'https://beta.chainflix.net/video?contentId=17132'
+            'https://www.chainflix.net/video?contentId=24778'
         ],
         'invalid_urls' => [
             'https://chainflix.net/',
