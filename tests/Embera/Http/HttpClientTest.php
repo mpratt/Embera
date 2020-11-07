@@ -31,15 +31,6 @@ class HttpClientTest extends TestCase
         $response = $http->fetch('https://httpbin.org/user-agent');
         $response = json_decode($response, true);
         $this->assertEquals($ua, $response['user-agent']);
-
-        $travis = (bool) getenv('TRAVIS');
-        if ($travis) {
-            $this->markTestIncomplete('Disabling this part of the test because httpbin is returning 404s on redirects right now (HttpClient).');
-        }
-
-        $response = $http->fetch('https://httpbin.org/redirect-to?url=' . urlencode('https://httpbin.org/user-agent'));
-        $response = json_decode($response, true);
-        $this->assertEquals($ua, $response['user-agent']);
     }
 
     /** @large */
