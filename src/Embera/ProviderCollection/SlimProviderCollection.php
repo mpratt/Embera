@@ -33,7 +33,6 @@ class SlimProviderCollection extends ProviderCollectionAdapter
             'GettyImages',
             'Gfycat',
             'Giphy',
-            'Hulu',
             'Instagram',
             'Kickstarter',
             'Livestream',

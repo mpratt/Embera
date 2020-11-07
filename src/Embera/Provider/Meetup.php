@@ -51,5 +51,4 @@ class Meetup extends ProviderAdapter implements ProviderInterface
 
         return $url;
     }
-
 }

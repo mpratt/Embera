@@ -85,7 +85,6 @@ class DefaultProviderCollection extends ProviderCollectionAdapter
             'Hearthis',
             'HiHaHo',
             'Huffduffer',
-            'Hulu',
             'iFixit',
             'IHeartRadio',
             'Infogram',
