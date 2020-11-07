@@ -130,7 +130,7 @@ class Facebook extends ProviderAdapter implements ProviderInterface
     {
         if (isset($this->config['access_token'])) {
             if ($this->urlMatchesPattern($this->url, $this->videoPatterns)) {
-                $type = 'videos';
+                $type = 'video';
             } elseif ($this->urlMatchesPattern($this->url, $this->postPatterns)) {
                 $type = 'post';
             } else {
