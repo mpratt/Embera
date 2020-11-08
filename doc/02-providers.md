@@ -1401,6 +1401,14 @@ I try to support the provider list in [oembed.com](https://oembed.com).
 - Additional Parameters: unknown
 - Notes: NONE
 
+## [Subscribi](https://subscribi.io)
+
+- Provider Name: Subscribi
+- Documentation: NO
+- HTTPS support: YES
+- Additional Parameters: unknown
+- Notes: NONE
+
 ## [Sutori](https://sutori.com)
 
 - Provider Name: Sutori
