@@ -46,5 +46,9 @@ final class ProviderAdapterTest extends TestCase
             $this->assertStringContainsStringIgnoringCase('youtu', $h);
         }
 
+        Youtube::addHost('myhost.com');
+        $hosts = Youtube::getHosts();
+        $this->assertTrue((count($hosts) > 1), 'Error registering new host to provider');
+        $this->assertContains('myhost.com', $hosts, 'Could not find newly registered host in provider');
     }
 }
