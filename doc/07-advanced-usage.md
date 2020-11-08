@@ -14,8 +14,8 @@ prefix. For example, to pass parameters to the Twitter provider:
 ```php
 
 $config = [
- 'Twitter_align' => 'center',
- 'Twitter_hide_media' => 1
+ 'twitter_align' => 'center',
+ 'twitter_hide_media' => 1
 ];
 
 $embera = new Embera($config);

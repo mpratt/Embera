@@ -51,6 +51,7 @@ final class FacebookTest extends ProviderTester
 
     public function testProvider()
     {
-        $this->validateProvider('Facebook', [ 'width' => 480, 'height' => 270]);
+        $this->markTestSkipped('Facebook requires an access token in order to be tested. Skipping test');
+        //$this->validateProvider('Facebook', [ 'width' => 480, 'height' => 270]);
     }
 }
