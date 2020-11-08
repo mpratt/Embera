@@ -127,4 +127,10 @@ abstract class ProviderAdapter
         return static::$hosts;
     }
 
+    /** inline {@inheritdoc} */
+    public static function addHost($host)
+    {
+        static::$hosts[] = $host;
+    }
+
 }
