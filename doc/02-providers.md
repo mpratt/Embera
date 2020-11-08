@@ -1687,6 +1687,15 @@ I try to support the provider list in [oembed.com](https://oembed.com).
 - Additional Parameters: unknown
 - Notes: NONE
 
+## [WolframCloud](https://wolframcloud.com)
+
+- Provider Name: WolframCloud
+- Documentation: NO
+- HTTPS support: YES
+- Fake Response: NO
+- Additional Parameters: unknown
+- Notes: NONE
+
 ## [Wistia](https://wistia.com)
 
 - Provider Name: Wistia

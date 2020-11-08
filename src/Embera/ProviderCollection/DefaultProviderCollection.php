@@ -197,6 +197,7 @@ class DefaultProviderCollection extends ProviderCollectionAdapter
             'Vlipsy',
             'Vlive',
             'WaveVideo',
+            'WolframCloud',
             'VoxSnap',
             'Wistia',
             'Wizer',
