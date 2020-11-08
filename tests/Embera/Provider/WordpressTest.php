@@ -24,15 +24,16 @@ final class WordpressTest extends ProviderTester
             'http://en.blog.wordpress.com/2011/07/12/new-theme-matala/',
             'http://wp.me/p6MX0-47g',
             'http://wp.me/a6MX0-461',
+            'https://rarasaur.com/2020/08/01/g2-how-to-heal/'
         ],
         'invalid_urls' => [
-            'http://wordpress.com/',
-            'http://wp.me/',
+            '/',
         ],
     ];
 
     public function testProvider()
     {
+        Wordpress::addHost('rarasaur.com');
         $this->validateProvider('Wordpress', [ 'width' => 480, 'height' => 270]);
     }
 }

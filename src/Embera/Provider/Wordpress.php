@@ -21,7 +21,7 @@ use Embera\Url;
 class Wordpress extends ProviderAdapter implements ProviderInterface
 {
     /** inline {@inheritdoc} */
-    protected $endpoint = 'https://public-api.wordpress.com/oembed/1.0/?format=json&for=embera';
+    protected $endpoint = 'http://public-api.wordpress.com/oembed/?format=json&for=embera';
 
     /** inline {@inheritdoc} */
     protected static $hosts = [
@@ -40,7 +40,8 @@ class Wordpress extends ProviderAdapter implements ProviderInterface
     /** inline {@inheritdoc} */
     public function validateUrl(Url $url)
     {
-        return (bool) (preg_match('~\.(com|me|net|org)/([^/]+)~i', (string) $url));
+        // this needs to be as generic as ever...
+        return (bool) (preg_match('~/([^/]+)~i', (string) $url));
     }
 
     /** inline {@inheritdoc} */
