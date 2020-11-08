@@ -20,8 +20,6 @@ use Embera\Url;
  */
 class Instagram extends ProviderAdapter implements ProviderInterface
 {
-    protected $legacyEndpoint = 'https://api.instagram.com/oembed/?format=json';
-
     /** inline {@inheritdoc} */
     protected $endpoint = 'https://graph.facebook.com/v8.0/instagram_oembed';
 
@@ -32,7 +30,7 @@ class Instagram extends ProviderAdapter implements ProviderInterface
 
     /** inline {@inheritdoc} */
     protected $allowedParams = [ 'maxwidth', 'maxheight', 'callback', 'omitscript', 'breaking_change', 'access_token', 'fields' ];
-    
+
     /** inline {@inheritdoc} */
     protected $httpsSupport = true;
 
@@ -48,16 +46,6 @@ class Instagram extends ProviderAdapter implements ProviderInterface
         );
     }
 
-    /** inline {@inheritdoc} */
-    public function getEndpoint()
-    {
-        if (isset($this->config['access_token'])) {
-            return $this->endpoint;
-        } else {
-            return $this->legacyEndpoint;
-        }
-    }
-    
     /** inline {@inheritdoc} */
     public function normalizeUrl(Url $url)
     {

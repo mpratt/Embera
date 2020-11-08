@@ -20,8 +20,6 @@ use Embera\Url;
  */
 class Facebook extends ProviderAdapter implements ProviderInterface
 {
-    protected $legacyEndpoint = 'https://apps.facebook.com/plugins/{type}/oembed.json';
-    
     /** inline {@inheritdoc} */
     protected $endpoint = 'https://graph.facebook.com/v8.0/oembed_{type}';
 
@@ -128,27 +126,15 @@ class Facebook extends ProviderAdapter implements ProviderInterface
     /** inline {@inheritdoc} */
     public function getEndpoint()
     {
-        if (isset($this->config['access_token'])) {
-            if ($this->urlMatchesPattern($this->url, $this->videoPatterns)) {
-                $type = 'video';
-            } elseif ($this->urlMatchesPattern($this->url, $this->postPatterns)) {
-                $type = 'post';
-            } else {
-                $type = 'page';
-            }
-
-            return str_replace('{type}', $type, $this->endpoint);            
+        if ($this->urlMatchesPattern($this->url, $this->videoPatterns)) {
+            $type = 'video';
+        } elseif ($this->urlMatchesPattern($this->url, $this->postPatterns)) {
+            $type = 'post';
         } else {
-            if ($this->urlMatchesPattern($this->url, $this->videoPatterns)) {
-                $type = 'video';
-            } elseif ($this->urlMatchesPattern($this->url, $this->postPatterns)) {
-                $type = 'post';
-            } else {
-                $type = 'page';
-            }
-
-            return str_replace('{type}', $type, $this->legacyEndpoint);
+            $type = 'page';
         }
+
+        return str_replace('{type}', $type, $this->endpoint);
     }
 
     /** inline {@inheritdoc} */
