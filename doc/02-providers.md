@@ -22,6 +22,15 @@ I try to support the provider list in [oembed.com](https://oembed.com).
 - Additional Parameters: Unknown
 - Notes: NONE
 
+## [ActBlue](https://secure.actblue.com)
+
+- Provider Name: ActBlue
+- Documentation: NO
+- HTTPS support: YES
+- Fake Response: NO
+- Additional Parameters: Unknown
+- Notes: NONE
+
 ## [Altru](https://www.altrulabs.com/)
 
 - Provider Name: Altru
