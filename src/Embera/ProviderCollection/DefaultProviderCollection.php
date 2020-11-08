@@ -103,7 +103,6 @@ class DefaultProviderCollection extends ProviderCollectionAdapter
             'LillePod',
             'Livestream',
             'Ludus',
-            'Mathembed',
             'Matterport',
             'MediaLab',
             'MedienArchivKuenste',

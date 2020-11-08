@@ -777,15 +777,6 @@ I try to support the provider list in [oembed.com](https://oembed.com).
 - Additional Parameters: unknown
 - Notes: NONE
 
-## [Mathembed](https://mathembed.com)
-
-- Provider Name: Mathembed
-- Documentation: NO
-- HTTPS support: YES
-- Fake Response: YES
-- Additional Parameters: unknown
-- Notes: NONE
-
 ## [Matterport](https://matterport.com)
 
 - Provider Name: Matterport
