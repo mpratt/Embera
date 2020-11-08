@@ -486,16 +486,6 @@ I try to support the provider list in [oembed.com](https://oembed.com).
 - Notes:
   - The provider already returns responsive embeds.
 
-## [Fontself](https://fontself.com/)
-
-- Provider Name: Fontself
-- Documentation: NO
-- HTTPS support: YES
-- Fake Response: YES
-- Additional Parameters: Unknown
-- Notes:
-  - The provider already returns responsive embeds.
-
 ## [Geograph UK](https://www.geograph.org.uk/)
 
 - Provider Name: GeographUk

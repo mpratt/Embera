@@ -73,7 +73,6 @@ class DefaultProviderCollection extends ProviderCollectionAdapter
             'Flat',
             'Flickr',
             'Flourish',
-            'Fontself',
             'GeographUk',
             'GeographCI',
             'GeographDE',
