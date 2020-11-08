@@ -145,6 +145,7 @@ class DefaultProviderCollection extends ProviderCollectionAdapter
             'RoosterTeeth',
             'Rumble',
             'RunKit',
+            'Saooti',
             'SapoVideos',
             'ScreenNine',
             'Screencast',

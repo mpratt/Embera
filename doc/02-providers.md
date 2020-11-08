@@ -1175,6 +1175,15 @@ I try to support the provider list in [oembed.com](https://oembed.com).
 - Additional Parameters: unknown
 - Notes: NONE
 
+## [Saooti](https://octopus.saooti.com)
+
+- Provider Name: Saooti
+- Documentation: NO
+- HTTPS support: YES
+- Fake Response: NO
+- Additional Parameters: unknown
+- Notes: NONE
+
 ## [Sapo Videos](https://videos.sapo.pt)
 
 - Provider Name: SapoVideos
