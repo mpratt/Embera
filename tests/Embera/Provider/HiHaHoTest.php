@@ -21,7 +21,7 @@ final class HiHaHoTest extends ProviderTester
 {
     protected $tasks = [
         'valid_urls' => [
-            'https://player.hihaho.com/embed/c86a7ddf-eeb1-421a-b279-ff84c6b30d59',
+            'https://player.hihaho.com/7B37C4FE-AA48-4397-AFFD-C2629260ACD9',
         ],
         'invalid_urls' => [
             'https://player.hihaho.com',
