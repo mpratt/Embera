@@ -777,6 +777,15 @@ I try to support the provider list in [oembed.com](https://oembed.com).
 - Additional Parameters: unknown
 - Notes: NONE
 
+## [Lumiere](https://lumiere.is)
+
+- Provider Name: Lumiere
+- Documentation: NO
+- HTTPS support: YES
+- Fake Response: NO
+- Additional Parameters: unknown
+- Notes: NONE
+
 ## [Matterport](https://matterport.com)
 
 - Provider Name: Matterport
