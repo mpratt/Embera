@@ -730,16 +730,6 @@ I try to support the provider list in [oembed.com](https://oembed.com).
 - Notes:
   - The provider already returns responsive embeds.
 
-## [Kitchenbowl](https://kitchenbowl.com)
-
-- Provider Name: Kitchenbowl
-- Documentation: NO
-- HTTPS support: YES
-- Fake Response: NO
-- Additional Parameters: unknown
-- Notes:
-  - The provider already returns responsive embeds.
-
 ## [Knacki](https://knaci.info)
 
 - Provider Name: Knacki
