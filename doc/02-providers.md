@@ -1604,6 +1604,15 @@ I try to support the provider list in [oembed.com](https://oembed.com).
 - Additional Parameters: unknown
 - Notes: NONE
 
+## [Uppy](https://app.uppy.jp)
+
+- Provider Name: Uppy
+- Documentation: NO
+- HTTPS support: YES
+- Fake Response: NO
+- Additional Parameters: unknown
+- Notes: NONE
+
 ## [UstreamTV](https://ustream.tv)
 
 - Provider Name: UstreamTV
