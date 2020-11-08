@@ -22,8 +22,7 @@ final class JovianTest extends ProviderTester
     protected $tasks = [
         'valid_urls' => [
             'https://jovian.ml/aakashns/01-pytorch-basics',
-            'https://jovian.ml/aakashns/04-feedforward-nn',
-            'https://jovian.ml/sonaksh/demo/v/1/files/demo.ipynb',
+            'https://jovian.ai/aakashns/01-pytorch-basics',
         ],
         'invalid_urls' => [
             'https://jovian.ml/',

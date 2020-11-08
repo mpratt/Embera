@@ -25,7 +25,7 @@ class Jovian extends ProviderAdapter implements ProviderInterface
 
     /** inline {@inheritdoc} */
     protected static $hosts = [
-        'jovian.ml'
+        'jovian.ml', 'jovian.ai'
     ];
 
     /** inline {@inheritdoc} */
@@ -37,7 +37,7 @@ class Jovian extends ProviderAdapter implements ProviderInterface
     /** inline {@inheritdoc} */
     public function validateUrl(Url $url)
     {
-        return (bool) (preg_match('~jovian\.ml/([^/]+)/([^/]+)~i', (string) $url));
+        return (bool) (preg_match('~jovian\.(ml|ai)/([^/]+)/([^/]+)~i', (string) $url));
     }
 
     /** inline {@inheritdoc} */
