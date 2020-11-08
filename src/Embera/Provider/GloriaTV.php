@@ -58,6 +58,7 @@ class GloriaTV extends ProviderAdapter implements ProviderInterface
         $attr[] = 'height="{height}"';
         $attr[] = 'frameborder="0"';
         $attr[] = 'scrolling="no"';
+        $attr[] = 'allow="accelerometer;autoplay;encrypted-media;gyroscope;picture-in-picture"';
         $attr[] = 'allowfullscreen';
 
         return [
