@@ -99,6 +99,7 @@ class DefaultProviderCollection extends ProviderCollectionAdapter
             'Kidoju',
             'KirimEmail',
             'Kit',
+            'Kmdr',
             'Knacki',
             'LearningApps',
             'LillePod',

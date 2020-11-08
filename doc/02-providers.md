@@ -739,6 +739,15 @@ I try to support the provider list in [oembed.com](https://oembed.com).
 - Notes:
   - The provider already returns responsive embeds.
 
+## [Kmdr](https://kmdr.sh)
+
+- Provider Name: Kmdr
+- Documentation: NO
+- HTTPS support: YES
+- Fake Response: NO
+- Additional Parameters: unknown
+- Notes: NONE
+
 ## [Knacki](https://knaci.info)
 
 - Provider Name: Knacki
