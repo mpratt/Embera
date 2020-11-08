@@ -1468,6 +1468,15 @@ I try to support the provider list in [oembed.com](https://oembed.com).
 - Additional Parameters: unknown
 - Notes: NONE
 
+## [Tumblr](https://tumblr.com)
+
+- Provider Name: Tumblr
+- Documentation: NO
+- HTTPS support: YES
+- Fake Response: NO
+- Additional Parameters: unknown
+- Notes: NONE
+
 ## [Tuxx](https://tuxx.be)
 
 - Provider Name: Tuxx

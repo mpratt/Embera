@@ -45,6 +45,7 @@ class SlimProviderCollection extends ProviderCollectionAdapter
             'SpeakerDeck',
             'Spotify',
             'Ted',
+            'Tumblr',
             'Twitter',
             'Vimeo',
             'Wordpress',

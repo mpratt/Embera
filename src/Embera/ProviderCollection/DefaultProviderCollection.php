@@ -175,6 +175,7 @@ class DefaultProviderCollection extends ProviderCollectionAdapter
             'Tickcounter',
             'TikTok',
             'Toornament',
+            'Tumblr',
             'Tuxx',
             'Tvcf',
             'Twitter',
