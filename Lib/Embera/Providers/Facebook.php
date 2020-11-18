@@ -128,11 +128,11 @@ class Facebook extends \Embera\Adapters\Service
     public function getInfo()
     {
         if ($this->urlMatchesPattern($this->videoPatterns)) {
-            $this->apiUrl = 'https://www.facebook.com/plugins/video/oembed.json/';
+            $this->apiUrl = 'https://graph.facebook.com/v8.0/oembed_video';
         } elseif ($this->urlMatchesPattern($this->postPatterns)) {
-            $this->apiUrl = 'https://www.facebook.com/plugins/post/oembed.json/';
+            $this->apiUrl = 'https://graph.facebook.com/v8.0/oembed_post';
         } else {
-            $this->apiUrl = 'https://www.facebook.com/plugins/page/oembed.json/';
+            $this->apiUrl = 'https://graph.facebook.com/v8.0/oembed_page';
         }
 
         return parent::getInfo();
