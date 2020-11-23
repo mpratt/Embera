@@ -126,6 +126,7 @@ class Providers
         'pastery.net' => '\Embera\Providers\Pastery',
         'photos.app.net' => '\Embera\Providers\AppNet',
         'play.soundsgood.co' => '\Embera\Providers\Soundsgood',
+        'podcasts.20minutes.fr' => '\Embera\Providers\Podinstall',
         'polleverywhere.com' => '\Embera\Providers\PollEveryWhere',
         'portfolium.com' => '\Embera\Providers\Portfolium',
         'public.chartblocks.com' => '\Embera\Providers\Chartblocks',
