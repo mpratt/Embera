@@ -21,7 +21,6 @@ final class RumbleTest extends ProviderTester
 {
     protected $tasks = [
         'valid_urls' => [
-            'https://rumble.com/v8j6jj-dont-accuse-me-of-hating-trump-pelosi-to-reporter.html',
             'https://rumble.com/v8ind9-hopping-to-go-outside.html',
             'https://rumble.com/v8intx-he-thinks-hes-grown.html',
         ],
