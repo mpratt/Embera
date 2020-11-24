@@ -171,6 +171,7 @@ class DefaultProviderCollection extends ProviderCollectionAdapter
             'StandfordDigitalRepository',
             'Streamable',
             'Subscribi',
+            'Sudomemo',
             'Sutori',
             'Sway',
             'Ted',

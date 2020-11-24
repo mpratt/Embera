@@ -1425,6 +1425,14 @@ I try to support the provider list in [oembed.com](https://oembed.com).
 - Additional Parameters: unknown
 - Notes: NONE
 
+## [Sudomemo](https://sudomemo.net)
+
+- Provider Name: Sudomemo
+- Documentation: NO
+- HTTPS support: YES
+- Additional Parameters: unknown
+- Notes: NONE
+
 ## [Sutori](https://sutori.com)
 
 - Provider Name: Sutori
