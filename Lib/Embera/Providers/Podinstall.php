@@ -9,7 +9,7 @@ namespace Embera\Providers;
 class Podinstall extends \Embera\Adapters\Service
 {
     /** inline {@inheritdoc} */
-    protected $apiUrl = '';
+    protected $apiUrl = 'https://podcasts.podinstall.com/oembed';
 
     /** inline {@inheritdoc} */
     protected function validateUrl()
