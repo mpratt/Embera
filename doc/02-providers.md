@@ -766,6 +766,15 @@ I try to support the provider list in [oembed.com](https://oembed.com).
 - Additional Parameters: unknown
 - Notes: NONE
 
+## [Loom](https://www.loom.com)
+
+- Provider Name: Loom
+- Documentation: NO
+- HTTPS support: YES
+- Fake Response: YES
+- Additional Parameters: unknown
+- Notes: NONE
+
 ## [Ludus](https://ludus.one)
 
 - Provider Name: Ludus
