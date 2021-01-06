@@ -102,6 +102,7 @@ class DefaultProviderCollection extends ProviderCollectionAdapter
             'LearningApps',
             'LillePod',
             'Livestream',
+            'Loom',
             'Ludus',
             'Lumiere',
             'Matterport',
