@@ -59,6 +59,15 @@ I try to support the provider list in [oembed.com](https://oembed.com).
   - ssl: Returns secured versions of all urls. Can be true or false. Enabled by Default.
 - Notes: NONE
 
+## [AnnieMusic](https://anniemusic.aoo/)
+
+- Provider Name: AnnieMusic
+- Documentation: NO
+- HTTPS support: YES
+- Fake Response: NO
+- Additional Parameters: Unknown
+- Notes: NONE
+
 ## [Apester](https://www.apester.com/)
 
 - Provider Name: Apester

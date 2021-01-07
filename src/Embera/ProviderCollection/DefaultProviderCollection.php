@@ -29,6 +29,7 @@ class DefaultProviderCollection extends ProviderCollectionAdapter
             'Altru',
             'AmCharts',
             'Animoto',
+            'AnnieMusic',
             'Apester',
             'Archivos',
             'Audioboom',
