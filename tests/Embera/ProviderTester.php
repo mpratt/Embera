@@ -239,7 +239,6 @@ class ProviderTester extends TestCase
                 ));
             }
 
-
             $this->assertEquals(1, $fakeResponse['embera_using_fake_response'], sprintf(
                 'Fake response flag is not correct. Expecting "1", recieved "%s" on url %s',
                 $fakeResponse['embera_using_fake_response'], $url
