@@ -16,7 +16,7 @@ use Embera\Url;
 
 /**
  * Polldaddy Provider
- * @link https://*.polldaddy.com
+ * Crowdsignal
  */
 class Polldaddy extends ProviderAdapter implements ProviderInterface
 {
@@ -25,7 +25,8 @@ class Polldaddy extends ProviderAdapter implements ProviderInterface
 
     /** inline {@inheritdoc} */
     protected static $hosts = [
-        '*.polldaddy.com'
+        '*.poll.fm',
+        '*.survey.fm',
     ];
 
     /** inline {@inheritdoc} */
@@ -37,7 +38,10 @@ class Polldaddy extends ProviderAdapter implements ProviderInterface
     /** inline {@inheritdoc} */
     public function validateUrl(Url $url)
     {
-        return (bool) (preg_match('~polldaddy\.com/(?:poll|s|ratings)/(?:[^/]+)/?$~i', (string) $url));
+        return (bool) (
+            preg_match('~polldaddy\.com/(?:poll|s|ratings)/(?:[^/]+)/?$~i', (string) $url) ||
+            preg_match('~(?:poll|survey)\.fm/([^/]+)~i', (string) $url)
+        );
     }
 
     /** inline {@inheritdoc} */

@@ -21,9 +21,8 @@ final class PolldaddyTest extends ProviderTester
 {
     protected $tasks = [
         'valid_urls' => [
-            'http://theguy1979.polldaddy.com/s/growing-up-biracial-in-america-being-of-mixed-race-descent-in-2013',
-            'http://polldaddy.com/poll/7012505/',
-            'http://polldaddy.com/s/ADF2AB9E60258D2A/',
+            'https://taripardoly.survey.fm/pph-badan',
+            'https://poll.fm/6088289',
         ],
         'invalid_urls' => [
             'https://polldaddy.com/',
