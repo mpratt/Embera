@@ -77,6 +77,7 @@ class DefaultProviderCollection extends ProviderCollectionAdapter
             'GeographUk',
             'GeographCI',
             'GeographDE',
+            'GetShow',
             'GettyImages',
             'Gfycat',
             'Giphy',

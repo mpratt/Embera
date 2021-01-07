@@ -524,6 +524,15 @@ I try to support the provider list in [oembed.com](https://oembed.com).
 - Notes:
   - Auto generated Html for single pictures.
 
+## [GetShow](https://getshow.io)
+
+- Provider Name: GetShow
+- Documentation: [YES](https://getshow.io/support/oembed)
+- HTTPS support: NO
+- Fake Response: NO
+- Additional Parameters: Unknown
+- Notes: NONE
+
 ## [GettyImages](https://gettyimages.com)
 
 - Provider Name: GettyImages
