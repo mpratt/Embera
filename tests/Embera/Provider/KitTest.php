@@ -21,9 +21,7 @@ final class KitTest extends ProviderTester
 {
     protected $tasks = [
         'valid_urls' => [
-            'https://kit.com/YARNutopia/nintendo-nes-controller-pixel-blanket-crochet-supplies-kit',
-            'http://www.kit.com/MKBHD/video-gear',
-            'https://kit.co/CaseyNeistat/minimal-resource-filmmaking-gear',
+            'https://kit.co/MKBHD/my-setup',
         ],
         'invalid_urls' => [
             'https://kit.co/',

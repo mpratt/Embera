@@ -16,12 +16,12 @@ use Embera\Url;
 
 /**
  * Kit Provider
- * @link https://kit.com
+ * @link https://kit.co
  */
 class Kit extends ProviderAdapter implements ProviderInterface
 {
     /** inline {@inheritdoc} */
-    protected $endpoint = 'https://embed.kit.com/oembed?format=json';
+    protected $endpoint = 'https://embed.kit.co/oembed?format=json';
 
     /** inline {@inheritdoc} */
     protected static $hosts = [

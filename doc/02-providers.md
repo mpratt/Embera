@@ -709,7 +709,7 @@ I try to support the provider list in [oembed.com](https://oembed.com).
 - Notes:
   - The provider already returns responsive embeds.
 
-## [Kit](https://kit.com)
+## [Kit](https://kit.co)
 
 - Provider Name: Kit
 - Documentation: NO
@@ -1076,7 +1076,7 @@ I try to support the provider list in [oembed.com](https://oembed.com).
 - Notes:
   - The provider already returns responsive embeds.
 
-## [Polldaddy](https://polldaddy.com)
+## [Polldaddy / Crowdsignal](https://polldaddy.com)
 
 - Provider Name: Polldaddy
 - Documentation: NO

@@ -21,9 +21,9 @@ final class IHeartRadioTest extends ProviderTester
 {
     protected $tasks = [
         'valid_urls' => [
-            'https://www.iheart.com/podcast/269-the-joe-rogan-experience-27959911/',
-            'https://www.iheart.com/podcast/269-the-joe-rogan-experience-27959911/episode/1418-don-gavin-56257993/',
-            'https://iheart.com/podcast/105-stuff-you-should-know-26940277/episode/barefoot-running-the-best-podcast-episode-56230477/',
+            'https://www.iheart.com/podcast/the-breakfast-club-24992238/',
+            'https://www.iheart.com/podcast/the-breakfast-club-24992238/episode/whats-the-flex-75922628/',
+            'https://www.iheart.com/podcast/the-breakfast-club-24992238/episode/pandemic-should-nots-75831309/',
         ],
         'invalid_urls' => [
             'https://www.iheart.com/',

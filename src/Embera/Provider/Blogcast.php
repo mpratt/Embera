@@ -21,11 +21,12 @@ use Embera\Url;
 class Blogcast extends ProviderAdapter implements ProviderInterface
 {
     /** inline {@inheritdoc} */
-    protected $endpoint = 'https://blogcast.host/oembed?format=json';
+    protected $endpoint = 'https://app.blogcast.host/oembed?format=json';
 
     /** inline {@inheritdoc} */
     protected static $hosts = [
-        'blogcast.host'
+        'blogcast.host',
+        'app.blogcast.host'
     ];
 
     /** inline {@inheritdoc} */
