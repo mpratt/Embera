@@ -1083,7 +1083,7 @@ I try to support the provider list in [oembed.com](https://oembed.com).
 - Notes:
   - The provider already returns responsive embeds.
 
-## [Playbuzz](https://playbuzz.com)
+## [Playbuzz](https://playbuzz.com) | [Ex.Co](https://ex.co)
 
 - Provider Name: Playbuzz
 - Documentation: NO

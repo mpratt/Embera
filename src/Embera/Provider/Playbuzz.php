@@ -21,11 +21,11 @@ use Embera\Url;
 class Playbuzz extends ProviderAdapter implements ProviderInterface
 {
     /** inline {@inheritdoc} */
-    protected $endpoint = 'http://oembed.playbuzz.com/item?format=json';
+    protected $endpoint = 'https://oembed.ex.co/item?format=json';
 
     /** inline {@inheritdoc} */
     protected static $hosts = [
-        'playbuzz.com'
+        'playbuzz.com', 'app.ex.co'
     ];
 
     /** inline {@inheritdoc} */
@@ -37,7 +37,10 @@ class Playbuzz extends ProviderAdapter implements ProviderInterface
     /** inline {@inheritdoc} */
     public function validateUrl(Url $url)
     {
-        return (bool) (preg_match('~playbuzz\.com/([^/]+)/([^/]+)~i', (string) $url));
+        return (bool) (
+            preg_match('~playbuzz\.com/([^/]+)/([^/]+)~i', (string) $url) ||
+            preg_match('~app\.ex\.co/stories/([^/]+)/([^/]+)~i', (string) $url)
+        );
     }
 
     /** inline {@inheritdoc} */

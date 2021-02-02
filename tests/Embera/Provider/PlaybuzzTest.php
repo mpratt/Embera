@@ -23,9 +23,12 @@ final class PlaybuzzTest extends ProviderTester
         'valid_urls' => [
             'https://www.playbuzz.com/craigkelly10/which-james-dean-character-are-you',
             'https://www.playbuzz.com/item/8fb2343f-fa5d-48d4-8723-f8b5d51cc1a9',
+            'https://app.ex.co/stories/item/8fb2343f-fa5d-48d4-8723-f8b5d51cc1a9',
+            'https://app.ex.co/stories/paolagarcia10/remembering-september-11th-flash-back-to-images-we-will-never-forget'
         ],
         'invalid_urls' => [
             'https://www.playbuzz.com/',
+            'https://app.ex.co'
         ],
     ];
 
