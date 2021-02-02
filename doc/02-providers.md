@@ -577,6 +577,15 @@ I try to support the provider list in [oembed.com](https://oembed.com).
 - Additional Parameters: unknown
 - Notes: NONE
 
+## [Grain](https://grain.co)
+
+- Provider Name: Grain
+- Documentation: NO
+- HTTPS support: YES
+- Fake Response: NO
+- Additional Parameters: unknown
+- Notes: NONE
+
 ## [Gyazo](https://gyazo.com)
 
 - Provider Name: Gyazo

@@ -82,6 +82,7 @@ class DefaultProviderCollection extends ProviderCollectionAdapter
             'Gfycat',
             'Giphy',
             'GloriaTV',
+            'Grain',
             'Gyazo',
             'Hearthis',
             'HiHaHo',
