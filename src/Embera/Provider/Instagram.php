@@ -21,7 +21,7 @@ use Embera\Url;
 class Instagram extends ProviderAdapter implements ProviderInterface
 {
     /** inline {@inheritdoc} */
-    protected $endpoint = 'https://graph.facebook.com/v8.0/instagram_oembed';
+    protected $endpoint = 'https://graph.facebook.com/v9.0/instagram_oembed';
 
     /** inline {@inheritdoc} */
     protected static $hosts = [
