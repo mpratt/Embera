@@ -35,7 +35,7 @@ class Facebook extends ProviderAdapter implements ProviderInterface
     protected $httpsSupport = true;
 
     /** inline {@inheritdoc} */
-    protected $responsiveSupport = false;
+    protected $responsiveSupport = true;
 
     /** Patterns that match posts urls */
     protected $postPatterns = [
@@ -143,45 +143,4 @@ class Facebook extends ProviderAdapter implements ProviderInterface
         $url->convertToHttps();
         return $url;
     }
-
-    /** inline {@inheritdoc} */
-    public function modifyResponse(array $response = [])
-    {
-        if (!empty($response['html'])) {
-
-            // Backup the real response
-            $response['html_original'] = $response['html'];
-            $embedUrl = 'https://www.facebook.com/plugins/post.php?href={url}&width={width}&height={height}&show_text=true&appId';
-
-            $attr = [];
-            $attr[] = 'class="embera-facebook-iframe-{md5}"';
-            $attr[] = 'src="' . $embedUrl . '"';
-            $attr[] = 'width="{width}"';
-            $attr[] = 'height="{height}"';
-            $attr[] = 'style="border:none;overflow:hidden"';
-            $attr[] = 'scrolling="no"';
-            $attr[] = 'frameborder="0"';
-            $attr[] = 'allowTransparency="true"';
-
-            $iframe = '<iframe ' . implode(' ', $attr) . '></iframe>';
-            if (!empty($response['height'])) {
-                $height = $response['height'];
-            } else {
-                $height = min(680, (int) ($response['width'] + 100));
-            }
-
-            $table = array(
-                '{url}' => rawurlencode($this->url),
-                '{md5}' => substr(md5($this->url), 0, 5),
-                '{width}' => $response['width'],
-                '{height}' => $height,
-            );
-
-            // Replace the html response
-            $response['html'] = str_replace(array_keys($table), array_values($table), $iframe);
-        }
-
-        return $response;
-    }
-
 }
