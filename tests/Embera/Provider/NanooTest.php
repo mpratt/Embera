@@ -21,9 +21,7 @@ final class NanooTest extends ProviderTester
 {
     protected $tasks = [
         'valid_urls' => [
-            'https://www.nanoo.tv/link/v/ndomfytP',
             'https://nanoo.pro/link/v/kpqsGpPV',
-            'http://www.nanoo.tv/link/v/BPdhsABr',
         ],
         'invalid_urls' => [
             'https://www.nanoo.tv/',
