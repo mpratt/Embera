@@ -23,7 +23,6 @@ final class ScribdTest extends ProviderTester
         'valid_urls' => [
             'https://www.scribd.com/document/293634945/Fire-Fuels-and-Streams-The-Effects-and-Effectiveness-of-Riparian-Treatments',
             'https://www.scribd.com/doc/110799637/Synthesis-of-Knowledge-Effects-of-Fire-and-Thinning-Treatments-on-Understory-Vegetation-in-Dry-U-S-Forests',
-            'https://www.scribd.com/document/345372585/Data-Hiding-in-Audio-Video-using-Anti-Forensics-Technique-for-Authentication',
         ],
         'invalid_urls' => [
             'https://www.scribd.com/',
