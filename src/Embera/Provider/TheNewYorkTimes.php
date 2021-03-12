@@ -48,16 +48,6 @@ class TheNewYorkTimes extends ProviderAdapter implements ProviderInterface
     }
 
     /** inline {@inheritdoc} */
-    public function modifyResponse(array $response = [])
-    {
-        if (!empty($response['html'])) {
-            $response['html'] = preg_replace('~title="(.+)"~i', 'title=""', $response['html']);
-        }
-
-        return $response;
-    }
-
-    /** inline {@inheritdoc} */
     public function getFakeResponse()
     {
         $embedUrl = 'https://www.nytimes.com/svc/oembed/html/?url=' . urlencode($this->url);
