@@ -577,6 +577,15 @@ I try to support the provider list in [oembed.com](https://oembed.com).
 - Additional Parameters: unknown
 - Notes: NONE
 
+## [Gong](https://app.gong.io)
+
+- Provider Name: Gong
+- Documentation: NO
+- HTTPS support: YES
+- Fake Response: NO
+- Additional Parameters: unknown
+- Notes: NONE
+
 ## [Grain](https://grain.co)
 
 - Provider Name: Grain
@@ -608,6 +617,15 @@ I try to support the provider list in [oembed.com](https://oembed.com).
 # [HiHaHo](https://studio.hihaho.com)
 
 - Provider Name: HiHaHo
+- Documentation: NO
+- HTTPS support: YES
+- Fake Response: NO
+- Additional Parameters: unknown
+- Notes: NONE
+
+# [HippoVideo](https://hippovideo.io)
+
+- Provider Name: HippoVideo
 - Documentation: NO
 - HTTPS support: YES
 - Fake Response: NO
@@ -889,6 +907,15 @@ I try to support the provider list in [oembed.com](https://oembed.com).
   - autoplay
   - preload
   - st
+- Notes: NONE
+
+## [Minerva](https://minervaknows.com/)
+
+- Provider Name: Minerva
+- Documentation: NO
+- HTTPS support: YES
+- Fake Response: NO
+- Additional Parameters: Unknown
 - Notes: NONE
 
 ## [MessesInfo](https://messes.info)
