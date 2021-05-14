@@ -27,7 +27,7 @@ class SproutVideo extends ProviderAdapter implements ProviderInterface
 
     /** inline {@inheritdoc} */
     protected static $hosts = [
-        'sproutvideo.com', '*.vids.io'
+        'sproutvideo.com', '.vids.io'
     ];
 
     /** inline {@inheritdoc} */
