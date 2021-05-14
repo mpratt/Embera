@@ -16,7 +16,11 @@ use Embera\Url;
 
 /**
  * Archivos Provider
+ * ARCHIVOS lets you experience your stories in a whole new way, transforming
+ * them into interactive visual experiences
+ *
  * @link https://www.archivos.digital
+ *
  */
 class Archivos extends ProviderAdapter implements ProviderInterface
 {

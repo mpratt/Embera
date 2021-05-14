@@ -16,7 +16,10 @@ use Embera\Url;
 
 /**
  * Podbean Provider
- * @link https://*.podbean.com
+ * Starting a podcast exactly the way you want. With Podbean, you get the whole package - reliable...
+ *
+ * @link https://podbean.com
+ *
  */
 class Podbean extends ProviderAdapter implements ProviderInterface
 {

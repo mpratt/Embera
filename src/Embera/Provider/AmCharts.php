@@ -16,7 +16,11 @@ use Embera\Url;
 
 /**
  * AmCharts Provider
+ * AmCharts live editor: create, configure, tweak, edit data, export, import, save,
+ * share in a single interface, the user-friendly way.
+ *
  * @link https://live.amcharts.com/
+ *
  */
 class AmCharts extends ProviderAdapter implements ProviderInterface
 {

@@ -16,7 +16,10 @@ use Embera\Url;
 
 /**
  * Sway Provider
- * @link https://sway.office.com
+ * Create and share interactive reports, presentations, personal stories, and more. Sway is an eas...
+ *
+ * @link https://sway.com
+ *
  */
 class Sway extends ProviderAdapter implements ProviderInterface
 {

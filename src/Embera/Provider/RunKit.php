@@ -16,8 +16,10 @@ use Embera\Url;
 
 /**
  * RunKit Provider
+ * RunKit notebooks are interactive javascript playgrounds connected to a complete node environmen...
+ *
  * @link https://runkit.com
- * @link https://runkit.com/docs/embed#oembed
+ * @see https://runkit.com/docs/embed#oembed
  */
 class RunKit extends ProviderAdapter implements ProviderInterface
 {

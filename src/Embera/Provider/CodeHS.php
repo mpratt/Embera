@@ -16,6 +16,8 @@ use Embera\Url;
 
 /**
  * CodeHS Provider
+ * The Top Coding Education Platform for Schools
+ *
  * @link https://codehs.com
  */
 class CodeHS extends ProviderAdapter implements ProviderInterface

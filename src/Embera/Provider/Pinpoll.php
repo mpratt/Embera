@@ -16,7 +16,10 @@ use Embera\Url;
 
 /**
  * Pinpoll Provider
- * @link https://tools.pinpoll.com
+ * Pinpoll Tools - Create Polls, Quizzes & Forms
+ *
+ * @link https://www.pinpoll.com/products/tools
+ *
  */
 class Pinpoll extends ProviderAdapter implements ProviderInterface
 {

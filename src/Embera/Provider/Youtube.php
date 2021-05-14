@@ -15,9 +15,11 @@ namespace Embera\Provider;
 use Embera\Url;
 
 /**
- * youtube.com Provider
+ * Youtube Provider
+ * Disfruta los videos y la música que te encantan, sube contenido original y compártelo con tus...
+ *
  * @link https://youtube.com
- * @link https://youtube-eng.googleblog.com/2009/10/oembed-support_9.html
+ * @see https://youtube-eng.googleblog.com/2009/10/oembed-support_9.html
  */
 class Youtube extends ProviderAdapter implements ProviderInterface
 {

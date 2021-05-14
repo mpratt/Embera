@@ -16,7 +16,10 @@ use Embera\Url;
 
 /**
  * WaveVideo Provider
- * @link https://*.wave.video
+ * Make your own videos and host them with Wave.video. Build your entire video funnel. Sign up now...
+ *
+ * @link https://wave.video
+ *
  */
 class WaveVideo extends ProviderAdapter implements ProviderInterface
 {

@@ -16,7 +16,10 @@ use Embera\Url;
 
 /**
  * VoxSnap Provider
- * @link https://article.voxsnap.com
+ * Let your content be heard! Create audio blogs, podcasts, Amazon Alexa or Google Home content, a...
+ *
+ * @link https://voxsnap.com
+ *
  */
 class VoxSnap extends ProviderAdapter implements ProviderInterface
 {

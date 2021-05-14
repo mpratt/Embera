@@ -16,7 +16,10 @@ use Embera\Url;
 
 /**
  * LearningApps Provider
+ * LearningApps.org - interaktive und multimediale Lernbausteine
+ *
  * @link https://learningapps.org
+ *
  */
 class LearningApps extends ProviderAdapter implements ProviderInterface
 {

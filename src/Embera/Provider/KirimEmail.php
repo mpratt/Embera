@@ -16,7 +16,10 @@ use Embera\Url;
 
 /**
  * KirimEmail Provider
+ * Dapatkan lebih banyak traffic dan penjualan untuk bisnis Anda dengan layanan email marketing, a...
+ *
  * @link https://kirim.email
+ *
  */
 class KirimEmail extends ProviderAdapter implements ProviderInterface
 {

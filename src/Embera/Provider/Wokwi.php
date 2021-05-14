@@ -16,7 +16,10 @@ use Embera\Url;
 
 /**
  * Wokwi Provider
+ * Simulate Uno, Mega, FastLED, LCD1602, OLED, Potentiometer and learn from Arduino code examples
+ *
  * @link https://wokwi.com
+ *
  */
 class Wokwi extends ProviderAdapter implements ProviderInterface
 {

@@ -16,8 +16,10 @@ use Embera\Url;
 
 /**
  * Inoreader Provider
+ * One place to keep up with all your information sources. With Inoreader, content comes to you, t...
+ *
  * @link https://inoreader.com
- * @link https://www.inoreader.com/developers/oembed
+ * @see https://www.inoreader.com/developers/oembed
  */
 class Inoreader extends ProviderAdapter implements ProviderInterface
 {

@@ -16,7 +16,10 @@ use Embera\Url;
 
 /**
  * Byzart Provider
+ * The Byzart project aims to enhance Byzantine and Post-Byzantine archaeological and artistic heritage on Europeana.
+ *
  * @link https://cmc.byzart.eu
+ *
  */
 class Byzart extends ProviderAdapter implements ProviderInterface
 {

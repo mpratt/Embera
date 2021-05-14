@@ -16,7 +16,10 @@ use Embera\Url;
 
 /**
  * Giphy Provider
- * @link https://giphy.com
+ * GIPHY is your top source for the best &amp; newest GIFs &amp; Animated Stickers online. Find ev...
+ *
+ * @link http://giphy.com
+ *
  */
 class Giphy extends ProviderAdapter implements ProviderInterface
 {

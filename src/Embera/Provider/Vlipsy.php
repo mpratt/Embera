@@ -16,7 +16,10 @@ use Embera\Url;
 
 /**
  * Vlipsy Provider
+ * {{meta.description}}
+ *
  * @link https://vlipsy.com
+ *
  */
 class Vlipsy extends ProviderAdapter implements ProviderInterface
 {

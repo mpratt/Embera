@@ -16,7 +16,10 @@ use Embera\Url;
 
 /**
  * Veer Provider
+ * No description.
+ *
  * @link https://veer.tv
+ *
  */
 class Veer extends ProviderAdapter implements ProviderInterface
 {

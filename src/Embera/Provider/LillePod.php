@@ -16,7 +16,10 @@ use Embera\Url;
 
 /**
  * LillePod Provider
+ * Ajouter une vidéo     Utiliser pod pour... La vidéo est un média de choix quand il s'agit de...
+ *
  * @link https://pod.univ-lille.fr
+ *
  */
 class LillePod extends ProviderAdapter implements ProviderInterface
 {

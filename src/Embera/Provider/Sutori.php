@@ -16,7 +16,10 @@ use Embera\Url;
 
 /**
  * Sutori Provider
+ * Presentations for the classroom in a unique timeline format. On Sutori, teachers and students c...
+ *
  * @link https://sutori.com
+ *
  */
 class Sutori extends ProviderAdapter implements ProviderInterface
 {

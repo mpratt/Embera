@@ -16,7 +16,10 @@ use Embera\Url;
 
 /**
  * Saooti Provider
+ * La solution SAOOTI pour produire, héberger, distribuer et monétiser vos contenus audio.
+ *
  * @link https://octopus.saooti.com
+ *
  */
 class Saooti extends ProviderAdapter implements ProviderInterface
 {

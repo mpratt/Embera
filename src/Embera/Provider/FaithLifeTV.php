@@ -16,6 +16,8 @@ use Embera\Url;
 
 /**
  * FaithLifeTV Provider
+ * Enjoy thousands of hours of Christian movies, shows, and biblical teaching on Faithlife TV.
+ *
  * @link https://faithlifetv.com
  */
 class FaithLifeTV extends ProviderAdapter implements ProviderInterface

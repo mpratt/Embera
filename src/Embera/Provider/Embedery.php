@@ -16,6 +16,8 @@ use Embera\Url;
 
 /**
  * Embedery Provider
+ * Engage your visitors. Effectively engage your visitors in the right way
+ *
  * @link https://embedery.com
  */
 class Embedery extends ProviderAdapter implements ProviderInterface

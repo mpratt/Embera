@@ -16,7 +16,10 @@ use Embera\Url;
 
 /**
  * Jovian Provider
+ * Learn data science &amp; machine learning. Participate in live online courses. Build real-world...
+ *
  * @link https://jovian.ml
+ * @see https://jovian-py.readthedocs.io/en/latest/jvn/oembed.html
  */
 class Jovian extends ProviderAdapter implements ProviderInterface
 {

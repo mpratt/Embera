@@ -16,7 +16,10 @@ use Embera\Url;
 
 /**
  * Tickcounter Provider
+ * No description.
+ *
  * @link https://tickcounter.com
+ *
  */
 class Tickcounter extends ProviderAdapter implements ProviderInterface
 {

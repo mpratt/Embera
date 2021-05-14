@@ -16,7 +16,9 @@ use Embera\Url;
 
 /**
  * CocoCorp Provider
- * @link https://*.ilovecoco.video
+ * Coco Corp - Interactive Video
+ *
+ * @link https://ilovecoco.video
  */
 class CocoCorp extends ProviderAdapter implements ProviderInterface
 {

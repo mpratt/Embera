@@ -16,7 +16,10 @@ use Embera\Url;
 
 /**
  * Matterport Provider
+ * Our 3D cameras and virtual tour software platform help you digitize your building, automatical...
+ *
  * @link https://matterport.com
+ *
  */
 class Matterport extends ProviderAdapter implements ProviderInterface
 {

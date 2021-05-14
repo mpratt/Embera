@@ -16,7 +16,10 @@ use Embera\Url;
 
 /**
  * TikTok Provider
+ * TikTok - trends start here. On a device or on the web, viewers can watch and discover millions ...
+ *
  * @link https://tiktok.com
+ * @see https://developers.tiktok.com/doc/Embed
  */
 class TikTok extends ProviderAdapter implements ProviderInterface
 {

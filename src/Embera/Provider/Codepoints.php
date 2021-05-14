@@ -16,6 +16,10 @@ use Embera\Url;
 
 /**
  * Codepoints Provider
+ * Codepoints.net is dedicated to all the characters, that are defined in
+ * the Unicode Standard. Theoretically, these should be all characters ever
+ * used.
+ *
  * @link https://codepoints.net
  */
 class Codepoints extends ProviderAdapter implements ProviderInterface

@@ -16,7 +16,10 @@ use Embera\Url;
 
 /**
  * SoundCloud Provider
+ * SoundCloud is a music and podcast streaming platform that lets you listen to millions of songs ...
+ *
  * @link https://soundcloud.com
+ *
  */
 class SoundCloud extends ProviderAdapter implements ProviderInterface
 {

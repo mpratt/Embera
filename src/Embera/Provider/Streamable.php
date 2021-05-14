@@ -16,7 +16,10 @@ use Embera\Url;
 
 /**
  * Streamable Provider
+ * Upload your video in seconds on Streamable. We accept a variety of video formats including MP4,...
+ *
  * @link https://streamable.com
+ *
  */
 class Streamable extends ProviderAdapter implements ProviderInterface
 {

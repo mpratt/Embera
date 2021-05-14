@@ -16,7 +16,10 @@ use Embera\Url;
 
 /**
  * Infogram Provider
+ * Infogram is an easy to use infographic and chart maker. Create and share beautiful infographics...
+ *
  * @link https://infogr.am
+ *
  */
 class Infogram extends ProviderAdapter implements ProviderInterface
 {

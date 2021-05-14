@@ -16,8 +16,11 @@ use Embera\Url;
 
 /**
  * Animoto Provider
+ * Create professional videos for work and life
+ *
  * @link https://animoto.com/
- * @link https://help.animoto.com/hc/en-us/articles/205538717-oEmbed-API
+ * @see https://help.animoto.com/hc/en-us/articles/205538717-oembed-api
+ *
  */
 class Animoto extends ProviderAdapter implements ProviderInterface
 {

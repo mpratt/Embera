@@ -16,7 +16,10 @@ use Embera\Url;
 
 /**
  * Portfolium Provider
+ * Create an ePortfolio where you can curate your achievements, projects, and competencies and use...
+ *
  * @link https://portfolium.com
+ *
  */
 class Portfolium extends ProviderAdapter implements ProviderInterface
 {

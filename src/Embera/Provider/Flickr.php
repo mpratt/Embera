@@ -16,6 +16,9 @@ use Embera\Url;
 
 /**
  * Flickr Provider
+ * Home to tens of billions of photos and 2 million groups
+ * Added an extra `html_alternate` as a html response.
+ *
  * @link https://flickr.com
  */
 class Flickr extends ProviderAdapter implements ProviderInterface

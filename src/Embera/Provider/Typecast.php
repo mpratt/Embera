@@ -16,7 +16,10 @@ use Embera\Url;
 
 /**
  * Typecast Provider
- * @link https://play.typecast.ai
+ * 인공지능 성우를 활용해서 다양하고 개성 있는 음성 콘텐츠를 제작하는...
+ *
+ * @link https://typecast.ai
+ *
  */
 class Typecast extends ProviderAdapter implements ProviderInterface
 {

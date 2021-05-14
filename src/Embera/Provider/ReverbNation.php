@@ -16,7 +16,10 @@ use Embera\Url;
 
 /**
  * ReverbNation Provider
+ * ReverbNation helps Artists grow lasting careers by introducing them to music industry partners,...
+ *
  * @link https://reverbnation.com
+ *
  */
 class ReverbNation extends ProviderAdapter implements ProviderInterface
 {

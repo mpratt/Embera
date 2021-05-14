@@ -16,6 +16,8 @@ use Embera\Url;
 
 /**
  * Fader Provider
+ * No Description
+ *
  * @link https://app.getfader.com
  */
 class Fader extends ProviderAdapter implements ProviderInterface

@@ -16,7 +16,10 @@ use Embera\Url;
 
 /**
  * MedienArchivKuenste Provider
- * @link https://medienarchiv.zhdk.ch
+ * No description.
+ *
+ * @link https://medienarchiv.zhdk.ch/
+ *
  */
 class MedienArchivKuenste extends ProviderAdapter implements ProviderInterface
 {

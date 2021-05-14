@@ -16,7 +16,11 @@ use Embera\Url;
 
 /**
  * CodeSandbox Provider
+ * Create, share, and get feedback with collaborative
+ * sandboxes for rapid web development.
+ *
  * @link https://codesandbox.io
+ *
  */
 class CodeSandbox extends ProviderAdapter implements ProviderInterface
 {

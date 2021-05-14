@@ -16,7 +16,10 @@ use Embera\Url;
 
 /**
  * MusicboxManiacs Provider
+ * It's all about music boxes. Online music box melody editor, music box melody gallery and a lot ...
+ *
  * @link https://musicboxmaniacs.com
+ *
  */
 class MusicboxManiacs extends ProviderAdapter implements ProviderInterface
 {

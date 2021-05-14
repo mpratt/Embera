@@ -16,7 +16,10 @@ use Embera\Url;
 
 /**
  * GloriaTV Provider
+ * No description.
+ *
  * @link https://gloria.tv
+ *
  */
 class GloriaTV extends ProviderAdapter implements ProviderInterface
 {

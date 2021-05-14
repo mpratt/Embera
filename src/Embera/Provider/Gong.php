@@ -16,7 +16,10 @@ use Embera\Url;
 
 /**
  * Gong Provider
+ * No description.
+ *
  * @link https://app.gong.io
+ *
  */
 class Gong extends ProviderAdapter implements ProviderInterface
 {

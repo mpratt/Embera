@@ -16,7 +16,10 @@ use Embera\Url;
 
 /**
  * Commaful Provider
+ * Read and share fanfiction, stories, poetry, and comics in our unique picturebook format!
+ *
  * @link https://commaful.com
+ *
  */
 class Commaful extends ProviderAdapter implements ProviderInterface
 {

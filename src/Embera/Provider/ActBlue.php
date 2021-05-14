@@ -16,7 +16,10 @@ use Embera\Url;
 
 /**
  * ActBlue Provider
- * @link https://*.actblue.com
+ * Flexible & free fundraising tools to harness the power of the grassroots
+ *
+ * @link https://secure.actblue.com/
+ *
  */
 class ActBlue extends ProviderAdapter implements ProviderInterface
 {

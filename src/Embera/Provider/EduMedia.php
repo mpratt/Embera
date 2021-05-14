@@ -16,6 +16,8 @@ use Embera\Url;
 
 /**
  * EduMedia Provider
+ * HTML5 interactive simulations, videos and quizz in physics, chemistry, biology, earth science and math.
+ *
  * @link https://www.edumedia-sciences.com
  */
 class EduMedia extends ProviderAdapter implements ProviderInterface

@@ -16,7 +16,10 @@ use Embera\Url;
 
 /**
  * PolariShare Provider
+ * Sharing knowledge in new ways
+ *
  * @link https://polarishare.com
+ *
  */
 class PolariShare extends ProviderAdapter implements ProviderInterface
 {

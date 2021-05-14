@@ -16,7 +16,10 @@ use Embera\Url;
 
 /**
  * Kidoju Provider
+ * No description.
+ *
  * @link https://kidoju.com
+ *
  */
 class Kidoju extends ProviderAdapter implements ProviderInterface
 {

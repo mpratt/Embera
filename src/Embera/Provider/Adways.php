@@ -16,7 +16,10 @@ use Embera\Url;
 
 /**
  * adways.com Provider
- * @link
+ * Adways Studio and Media make the digital video advertisement better.
+ *
+ * @link https://www.adways.com/
+ *
  */
 class Adways extends ProviderAdapter implements ProviderInterface
 {

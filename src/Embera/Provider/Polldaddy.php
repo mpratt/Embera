@@ -16,7 +16,10 @@ use Embera\Url;
 
 /**
  * Polldaddy Provider
- * Crowdsignal
+ * Create flexible surveys, polls, quizzes and ratings with Crowdsignal.
+ *
+ * @link https://polldaddy.com
+ *
  */
 class Polldaddy extends ProviderAdapter implements ProviderInterface
 {

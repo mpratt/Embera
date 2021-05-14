@@ -16,7 +16,10 @@ use Embera\Url;
 
 /**
  * Screencast Provider
+ * Free online storage and sharing with Screencast.com. 2 GB of storage and 2 GB of bandwidth per ...
+ *
  * @link https://screencast.com
+ *
  */
 class Screencast extends ProviderAdapter implements ProviderInterface
 {

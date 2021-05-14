@@ -16,7 +16,10 @@ use Embera\Url;
 
 /**
  * Ludus Provider
- * @link https://app.ludus.one
+ * Ludus is an advanced presentation tool for creative professionals. It&#x27;s like Sketch and Ke...
+ *
+ * @link https://ludus.one
+ *
  */
 class Ludus extends ProviderAdapter implements ProviderInterface
 {

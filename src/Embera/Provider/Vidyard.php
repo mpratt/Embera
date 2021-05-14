@@ -16,7 +16,10 @@ use Embera\Url;
 
 /**
  * Vidyard Provider
- * @link https://*.vidyard.com
+ * Vidyard is an online video platform for business which allows you to increase leads, accelerate...
+ *
+ * @link https://vidyard.com
+ * @see https://developer.vidyard.com/apidoc/oembed/show_v1_1.html
  */
 class Vidyard extends ProviderAdapter implements ProviderInterface
 {

@@ -16,6 +16,9 @@ use Embera\Url;
 
 /**
  * Ethfiddle Provider
+ * Share Solidity code snippets with friends, or check out cool
+ * code snippets from around the web.
+ *
  * @link https://ethfiddle.com
  */
 class Ethfiddle extends ProviderAdapter implements ProviderInterface

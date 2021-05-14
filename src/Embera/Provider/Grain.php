@@ -16,7 +16,10 @@ use Embera\Url;
 
 /**
  * Grain Provider
+ * Grain allows you to create short video highlight clips of Zoom recordings, transcribe calls, an...
+ *
  * @link https://grain.co
+ *
  */
 class Grain extends ProviderAdapter implements ProviderInterface
 {

@@ -16,7 +16,10 @@ use Embera\Url;
 
 /**
  * Oz Provider
+ * No description.
+ *
  * @link https://oz.com
+ *
  */
 class Oz extends ProviderAdapter implements ProviderInterface
 {

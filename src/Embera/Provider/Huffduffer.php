@@ -16,7 +16,10 @@ use Embera\Url;
 
 /**
  * Huffduffer Provider
+ * Create your own podcast: find links to audio files on the Web; huffduff the links (add them to ...
+ *
  * @link https://huffduffer.com
+ *
  */
 class Huffduffer extends ProviderAdapter implements ProviderInterface
 {

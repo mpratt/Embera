@@ -16,7 +16,10 @@ use Embera\Url;
 
 /**
  * SpeakerDeck Provider
+ * No description.
+ *
  * @link https://speakerdeck.com
+ *
  */
 class SpeakerDeck extends ProviderAdapter implements ProviderInterface
 {

@@ -16,7 +16,10 @@ use Embera\Url;
 
 /**
  * Tuxx Provider
+ * Info for efficiency
+ *
  * @link https://tuxx.be
+ *
  */
 class Tuxx extends ProviderAdapter implements ProviderInterface
 {

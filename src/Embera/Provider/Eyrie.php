@@ -16,6 +16,8 @@ use Embera\Url;
 
 /**
  * Eyrie Provider
+ * Schematics and Layouts In the Cloud.
+ *
  * @link https://eyrie.io
  */
 class Eyrie extends ProviderAdapter implements ProviderInterface

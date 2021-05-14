@@ -16,8 +16,10 @@ use Embera\Url;
 
 /**
  * Gyazo Provider
+ * No description.
+ *
  * @link https://gyazo.com
- * @link https://gyazo.com/api/docs/image#oembed
+ * @see https://gyazo.com/api/docs/image#oembed
  */
 class Gyazo extends ProviderAdapter implements ProviderInterface
 {

@@ -16,7 +16,10 @@ use Embera\Url;
 
 /**
  * Sudomemo Provider
+ * Sudomemo: Share your Flipnotes with the world! For Nintendo DSi and 3DS.
+ *
  * @link https://sudomemo.net
+ *
  */
 class Sudomemo extends ProviderAdapter implements ProviderInterface
 {

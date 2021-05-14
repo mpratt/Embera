@@ -15,8 +15,11 @@ namespace Embera\Provider;
 use Embera\Url;
 
 /**
- * Knacki.info Provider
- * @link https://jdr.knacki.info
+ * Knacki Provider
+ * No description.
+ *
+ * @link https://knaci.info
+ *
  */
 class Knacki extends ProviderAdapter implements ProviderInterface
 {
