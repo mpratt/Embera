@@ -126,6 +126,7 @@ I try to support all the providers listed on [oembed.com](https://oembed.com).
 - [Polldaddy](providers/Polldaddy.md)
 - [Portfolium](providers/Portfolium.md)
 - [Posixion](providers/Posixion.md)
+- [Prezi](providers/Prezi.md)
 - [RadioPublic](providers/RadioPublic.md)
 - [Rcvis](providers/Rcvis.md)
 - [Reddit](providers/Reddit.md)
