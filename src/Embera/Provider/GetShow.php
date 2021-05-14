@@ -16,7 +16,10 @@ use Embera\Url;
 
 /**
  * GetShow Provider
- * @link https://*.getshow.io
+ * Show offers a full suite of platforms for Video first Marketing(VFM) marketing. It helps market...
+ *
+ * @link https://getshow.io
+ * @see https://getshow.io/support/oembed
  */
 class GetShow extends ProviderAdapter implements ProviderInterface
 {

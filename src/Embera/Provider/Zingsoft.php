@@ -16,7 +16,10 @@ use Embera\Url;
 
 /**
  * Zingsoft Provider
- * @link https://*.zingsoft
+ * Log in or Sign up to receive access to purchasing, custom web IDE, premium demos and support fo...
+ *
+ * @link https://app.zingsoft.com
+ *
  */
 class Zingsoft extends ProviderAdapter implements ProviderInterface
 {

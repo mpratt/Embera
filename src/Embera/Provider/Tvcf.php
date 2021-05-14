@@ -16,7 +16,10 @@ use Embera\Url;
 
 /**
  * Tvcf Provider
- * @link https://*.tvcf.co.kr
+ * No description.
+ *
+ * @link https://tvcf.co.kr
+ *
  */
 class Tvcf extends ProviderAdapter implements ProviderInterface
 {

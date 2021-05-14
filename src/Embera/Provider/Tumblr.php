@@ -15,8 +15,11 @@ namespace Embera\Provider;
 use Embera\Url;
 
 /**
- * Tumbl Provider
- * @link https://*.tumblr.com
+ * Tumblr Provider
+ * Tumblr is a place to express yourself, discover yourself, and bond over the stuff you love. It&...
+ *
+ * @link https://tumblr.com
+ *
  */
 class Tumblr extends ProviderAdapter implements ProviderInterface
 {

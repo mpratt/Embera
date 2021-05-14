@@ -16,7 +16,10 @@ use Embera\Url;
 
 /**
  * Spotify Provider
- * @link https://play.spotify.com
+ * En Spotify, puedes encontrar toda la música que necesitas.
+ *
+ * @link https://spotify.com
+ *
  */
 class Spotify extends ProviderAdapter implements ProviderInterface
 {

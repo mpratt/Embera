@@ -16,7 +16,10 @@ use Embera\Url;
 
 /**
  * AudioClip Provider
+ * I hear joy, audio clip! Meet special audio content for you.
+ *
  * @link https://audioclip.naver.com
+ *
  */
 class AudioClip extends ProviderAdapter implements ProviderInterface
 {

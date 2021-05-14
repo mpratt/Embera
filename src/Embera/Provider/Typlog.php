@@ -16,7 +16,10 @@ use Embera\Url;
 
 /**
  * Typlog Provider
- * @link https://*.typlog.io
+ * No description.
+ *
+ * @link https://typlog.io
+ *
  */
 class Typlog extends ProviderAdapter implements ProviderInterface
 {

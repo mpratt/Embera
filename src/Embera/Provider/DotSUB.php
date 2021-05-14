@@ -16,7 +16,10 @@ use Embera\Url;
 
 /**
  * DotSUB Provider
- * @link
+ * Dotsub is in the business of captioning and translating videos and so much more
+ *
+ * @link https://dotsub.com
+ * @see https://dotsub.com/solutions/oEmbed
  */
 class DotSUB extends ProviderAdapter implements ProviderInterface
 {

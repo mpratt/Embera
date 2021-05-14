@@ -16,7 +16,10 @@ use Embera\Url;
 
 /**
  * Wizer Provider
- * @link https://*.wizer.me
+ * Amaze your students with smarter worksheets. Wizer.me is a platform where teachers build beauti...
+ *
+ * @link https://wizer.me
+ *
  */
 class Wizer extends ProviderAdapter implements ProviderInterface
 {

@@ -16,8 +16,10 @@ use Embera\Url;
 
 /**
  * dailymotion.com Provider
+ * The latest news, sports, music and entertainment videos on Dailymotion.
+ *
  * @link https://dailymotion.com
- * @link https://developer.dailymotion.com/player/#player-oembed
+ * @see https://developer.dailymotion.com/player/#player-oembed
  */
 class DailyMotion extends ProviderAdapter implements ProviderInterface
 {

@@ -16,7 +16,10 @@ use Embera\Url;
 
 /**
  * Rcvis Provider
+ * Ranked-Choice Voting visualizations: interactive charts, graphs, tables, and wikipedia exports ...
+ *
  * @link https://rcvis.com
+ *
  */
 class Rcvis extends ProviderAdapter implements ProviderInterface
 {

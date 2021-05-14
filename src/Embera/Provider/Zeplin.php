@@ -16,7 +16,10 @@ use Embera\Url;
 
 /**
  * Zeplin Provider
- * @link https://app.zeplin.io
+ * A structured workspace to publish designs, where the entire team can collaborate to ship beauti...
+ *
+ * @link https://zeplin.io
+ *
  */
 class Zeplin extends ProviderAdapter implements ProviderInterface
 {

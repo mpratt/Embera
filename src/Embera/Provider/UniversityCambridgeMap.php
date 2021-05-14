@@ -16,7 +16,10 @@ use Embera\Url;
 
 /**
  * UniversityCambridgeMap Provider
+ * University of Cambridge map and directory
+ *
  * @link https://map.cam.ac.uk
+ *
  */
 class UniversityCambridgeMap extends ProviderAdapter implements ProviderInterface
 {

@@ -16,7 +16,11 @@ use Embera\Url;
 
 /**
  * Apester Provider
+ * Unleash the real potential of your content marketing, collect leads and turn any piece of
+ * content interactive, with Apester stories, quizzes, polls, video, personality tests and more.
+ *
  * @link https://www.apester.com
+ *
  */
 class Apester extends ProviderAdapter implements ProviderInterface
 {

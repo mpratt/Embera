@@ -16,6 +16,9 @@ use Embera\Url;
 
 /**
  * Coub Provider
+ * Coub is YouTube for video loops. You can take any video,
+ * trim the best part, combine with other videos, add soundtrack.
+ *
  * @link https://coub.com
  */
 class Coub extends ProviderAdapter implements ProviderInterface

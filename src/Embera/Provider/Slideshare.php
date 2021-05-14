@@ -16,7 +16,10 @@ use Embera\Url;
 
 /**
  * Slideshare Provider
+ * Discover, Share, and Present presentations and infographics with the world’s largest professi...
+ *
  * @link https://slideshare.net
+ *
  */
 class Slideshare extends ProviderAdapter implements ProviderInterface
 {

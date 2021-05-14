@@ -16,7 +16,10 @@ use Embera\Url;
 
 /**
  * Sketchfab Provider
+ * With a community of over one million creators, we are the world’s largest platform to publish...
+ *
  * @link https://sketchfab.com
+ *
  */
 class Sketchfab extends ProviderAdapter implements ProviderInterface
 {

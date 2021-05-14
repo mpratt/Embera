@@ -16,7 +16,10 @@ use Embera\Url;
 
 /**
  * Nfb Provider
+ * Watch quality Canadian documentary, animation and fiction films online
+ *
  * @link https://nfb.ca
+ *
  */
 class Nfb extends ProviderAdapter implements ProviderInterface
 {

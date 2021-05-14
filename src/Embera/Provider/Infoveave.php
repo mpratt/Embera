@@ -16,7 +16,10 @@ use Embera\Url;
 
 /**
  * Infoveave Provider
+ * Infoveave - Visual Analytics Studio
+ *
  * @link https://infoveave.net
+ *
  */
 class Infoveave extends ProviderAdapter implements ProviderInterface
 {

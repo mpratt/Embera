@@ -16,7 +16,10 @@ use Embera\Url;
 
 /**
  * ReleaseWire Provider
+ * ReleaseWire’s press release distribution, targeting, marketing, online media contact manageme...
+ *
  * @link https://releasewire.com
+ *
  */
 class ReleaseWire extends ProviderAdapter implements ProviderInterface
 {

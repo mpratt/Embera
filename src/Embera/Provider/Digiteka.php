@@ -16,7 +16,10 @@ use Embera\Url;
 
 /**
  * Digiteka Provider
- * @link
+ * The Digiteka Smart Video Player automatically displays
+ * contextually relevant video on every article
+ *
+ * @link https://digiteka.com/
  */
 class Digiteka extends ProviderAdapter implements ProviderInterface
 {

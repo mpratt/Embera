@@ -16,7 +16,10 @@ use Embera\Url;
 
 /**
  * NoPaste Provider
+ * NoPaste is a client-side paste service which works with no database, and no back-end code. The ...
+ *
  * @link https://nopaste.ml
+ *
  */
 class NoPaste extends ProviderAdapter implements ProviderInterface
 {

@@ -16,7 +16,10 @@ use Embera\Url;
 
 /**
  * Roomshare Provider
- * @link https://rommshare.jp
+ * ルームシェアジャパン 無料ルームシェア・シェアハウス募集サイト。
+ *
+ * @link https://roomshare.jp
+ *
  */
 class Roomshare extends ProviderAdapter implements ProviderInterface
 {

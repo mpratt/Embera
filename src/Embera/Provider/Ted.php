@@ -16,7 +16,10 @@ use Embera\Url;
 
 /**
  * Ted Provider
+ * TED Talks are influential videos from expert speakers on education, business, science, tech and...
+ *
  * @link https://ted.com
+ *
  */
 class Ted extends ProviderAdapter implements ProviderInterface
 {

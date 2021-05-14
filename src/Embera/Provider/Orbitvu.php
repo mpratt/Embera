@@ -16,7 +16,10 @@ use Embera\Url;
 
 /**
  * Orbitvu Provider
+ * Upload photos from any device to the cloud and get 360 degree presentations. Easy to share and ...
+ *
  * @link https://orbitvu.co
+ *
  */
 class Orbitvu extends ProviderAdapter implements ProviderInterface
 {

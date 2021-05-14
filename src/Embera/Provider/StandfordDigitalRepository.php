@@ -16,7 +16,10 @@ use Embera\Url;
 
 /**
  * StandfordDigitalRepository Provider
+ * No description.
+ *
  * @link https://purl.stanford.edu
+ *
  */
 class StandfordDigitalRepository extends ProviderAdapter implements ProviderInterface
 {

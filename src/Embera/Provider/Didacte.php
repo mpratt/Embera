@@ -16,6 +16,8 @@ use Embera\Url;
 
 /**
  * Didacte Provider
+ * Your Own Training Platform.
+ *
  * @link https://didacte.com
  */
 class Didacte extends ProviderAdapter implements ProviderInterface

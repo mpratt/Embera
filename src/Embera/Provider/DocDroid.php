@@ -16,6 +16,8 @@ use Embera\Url;
 
 /**
  * DocDroid Provider
+ * DocDroid: Upload & Share PDF - Upload your documents in any format.
+ *
  * @link https://docdroid.net
  */
 class DocDroid extends ProviderAdapter implements ProviderInterface

@@ -16,7 +16,10 @@ use Embera\Url;
 
 /**
  * Spotful Provider
+ * No description.
+ *
  * @link https://bespotful.com
+ *
  */
 class Spotful extends ProviderAdapter implements ProviderInterface
 {

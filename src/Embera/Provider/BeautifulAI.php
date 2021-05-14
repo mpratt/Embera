@@ -16,7 +16,12 @@ use Embera\Url;
 
 /**
  * BeautifulAI Provider
+ * It’s an expert deck designer. Make your business look brilliant, keep your team forever on brand,
+ * and save hours on pitches you’re actually proud of.
+ *
  * @link https://beautiful.ai
+ * @todo It seems as it could support fake responses but we dont have enough data to test.
+ *
  */
 class BeautifulAI extends ProviderAdapter implements ProviderInterface
 {
@@ -47,5 +52,4 @@ class BeautifulAI extends ProviderAdapter implements ProviderInterface
         $url->removeQueryString();
         return $url;
     }
-
 }

@@ -16,7 +16,10 @@ use Embera\Url;
 
 /**
  * Datawrapper Provider
- * @link https://datawrapper.dwcdn.net
+ * Enrich your stories with charts, maps, and tables.
+ *
+ * @link https://datawrapper.de
+ * @see https://developer.datawrapper.de/reference#getoembed
  */
 class Datawrapper extends ProviderAdapter implements ProviderInterface
 {

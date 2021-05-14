@@ -16,8 +16,12 @@ use Embera\Url;
 
 /**
  * Deviantart Provider
+ * DeviantArt is where art and community thrive.
+ * Explore over 350 million pieces of art while connecting
+ * to fellow artists and art enthusiasts.
+ *
  * @link https://deviantart.com
- * @link https://www.deviantart.com/developers/oembed
+ * @see https://www.deviantart.com/developers/oembed
  */
 class Deviantart extends ProviderAdapter implements ProviderInterface
 {

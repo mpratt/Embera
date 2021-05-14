@@ -16,7 +16,10 @@ use Embera\Url;
 
 /**
  * Chirbit Provider
+ * Chirbit is all you need to share your audio on social media or your own website.
+ *
  * @link https://www.chirbit.com
+ *
  */
 class Chirbit extends ProviderAdapter implements ProviderInterface
 {

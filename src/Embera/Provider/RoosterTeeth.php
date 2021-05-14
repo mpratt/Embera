@@ -16,7 +16,11 @@ use Embera\Url;
 
 /**
  * RoosterTeeth Provider
+ * Season 7 Episode 76 - Go to http:betterhelp.comfunhausgta to get 10% off your first month!
+Tha...
+ *
  * @link https://roosterteeth.com
+ *
  */
 class RoosterTeeth extends ProviderAdapter implements ProviderInterface
 {

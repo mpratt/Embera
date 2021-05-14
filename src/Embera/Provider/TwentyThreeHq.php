@@ -16,7 +16,13 @@ use Embera\Url;
 
 /**
  * 23hq.com Provider
- * @link  http://www.23hq.com
+ *
+ * 23 is easy photo sharing. Share private or public with photo albums, tags, storage,
+ * slideshow, photoblog, subscriptions, send photos and much more
+ * This provider generates html tags for single pictures.
+ *
+ * @link http://www.23hq.com
+ *
  */
 class TwentyThreeHq extends ProviderAdapter implements ProviderInterface
 {

@@ -16,7 +16,10 @@ use Embera\Url;
 
 /**
  * Flourish Provider
- * @link https://app.flourish.studio
+ * Engage your audience Create agency-quality data graphics and
+ * animated stories that bring your data to life.
+ *
+ * @link https://flourish.studio
  */
 class Flourish extends ProviderAdapter implements ProviderInterface
 {

@@ -16,7 +16,10 @@ use Embera\Url;
 
 /**
  * WolframCloud Provider
- * @link https://*.wolframcloud.com
+ * Cloud access to the Wolfram Language.
+ *
+ * @link https://wolframcloud.com
+ *
  */
 class WolframCloud extends ProviderAdapter implements ProviderInterface
 {

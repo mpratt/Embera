@@ -16,8 +16,10 @@ use Embera\Url;
 
 /**
  * UstreamTV Provider
+ * End to end video platform for media &amp;amp; enterprises. Live streaming, video hosting, trans...
+ *
  * @link https://ustream.tv
- * @link https://video.ibm.com
+ *
  */
 class UstreamTV extends ProviderAdapter implements ProviderInterface
 {

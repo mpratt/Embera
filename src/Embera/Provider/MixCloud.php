@@ -16,7 +16,10 @@ use Embera\Url;
 
 /**
  * MixCloud Provider
+ * No description.
+ *
  * @link https://mixcloud.com
+ *
  */
 class MixCloud extends ProviderAdapter implements ProviderInterface
 {

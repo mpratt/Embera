@@ -16,6 +16,8 @@ use Embera\Url;
 
 /**
  * CodePen Provider
+ * CodePen is a social development environment for front-end designers and developers
+ *
  * @link https://codepen.io
  */
 class CodePen extends ProviderAdapter implements ProviderInterface

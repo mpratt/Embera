@@ -16,7 +16,10 @@ use Embera\Url;
 
 /**
  * Minerva Provider
- * @link https://*.minervaknows.com
+ * Minerva is the easiest way to capture and share clickable instructions for anything on the inte...
+ *
+ * @link https://minervaknows.com/
+ *
  */
 class Minerva extends ProviderAdapter implements ProviderInterface
 {

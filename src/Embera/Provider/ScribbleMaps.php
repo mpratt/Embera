@@ -16,7 +16,10 @@ use Embera\Url;
 
 /**
  * ScribbleMaps Provider
+ * Easily Create, Analyze, and Share Maps. Share with friends, embed maps on websites, and create ...
+ *
  * @link https://scribblemaps.com
+ *
  */
 class ScribbleMaps extends ProviderAdapter implements ProviderInterface
 {

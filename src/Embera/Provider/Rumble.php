@@ -16,7 +16,10 @@ use Embera\Url;
 
 /**
  * Rumble Provider
+ * Rumble is your rights management video platform. Host, distribute and monetize all your profess...
+ *
  * @link https://rumble.com
+ *
  */
 class Rumble extends ProviderAdapter implements ProviderInterface
 {

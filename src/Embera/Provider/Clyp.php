@@ -16,6 +16,8 @@ use Embera\Url;
 
 /**
  * Clyp Provider
+ * Upload high-quality audio, collaborate or get feedback, and easily share anywhere.
+ *
  * @link https://clyp.it
  */
 class Clyp extends ProviderAdapter implements ProviderInterface

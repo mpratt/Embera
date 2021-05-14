@@ -16,7 +16,10 @@ use Embera\Url;
 
 /**
  * Hearthis Provider
+ * Stream your mixes, tracks and sounds on hearthis.at - lossless audio streaming and unlimited up...
+ *
  * @link https://hearthis.at
+ *
  */
 class Hearthis extends ProviderAdapter implements ProviderInterface
 {

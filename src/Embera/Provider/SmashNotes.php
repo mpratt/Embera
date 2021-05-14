@@ -16,7 +16,10 @@ use Embera\Url;
 
 /**
  * SmashNotes Provider
+ * Smash Notes is podcast summaries you can learn from. Can coffee kill you? What&#39;s the meanin...
+ *
  * @link https://smashnotes.com
+ *
  */
 class SmashNotes extends ProviderAdapter implements ProviderInterface
 {

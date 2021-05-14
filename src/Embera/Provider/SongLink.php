@@ -16,7 +16,10 @@ use Embera\Url;
 
 /**
  * SongLink Provider
+ * Automated, on-demand smart links for songs, albums, podcasts and more. For artists, for fans, f...
+ *
  * @link https://song.link
+ *
  */
 class SongLink extends ProviderAdapter implements ProviderInterface
 {

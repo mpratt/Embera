@@ -15,8 +15,11 @@ namespace Embera\Provider;
 use Embera\Url;
 
 /**
- * Issuu.php Provider
+ * Issuu Provider
+ * Issuu is the digital publishing platform chosen by millions to convert content into high-qualit...
+ *
  * @link https://issuu.com
+ *
  */
 class Issuu extends ProviderAdapter implements ProviderInterface
 {

@@ -16,7 +16,10 @@ use Embera\Url;
 
 /**
  * Kickstarter Provider
+ * No description.
+ *
  * @link https://kickstarter.com
+ *
  */
 class Kickstarter extends ProviderAdapter implements ProviderInterface
 {

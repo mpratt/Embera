@@ -16,7 +16,10 @@ use Embera\Url;
 
 /**
  * Toornament Provider
+ * Toornament.com is the eSports platform for tournaments organizers, their participants and their...
+ *
  * @link https://toornament.com
+ *
  */
 class Toornament extends ProviderAdapter implements ProviderInterface
 {

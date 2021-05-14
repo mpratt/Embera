@@ -16,7 +16,10 @@ use Embera\Url;
 
 /**
  * Uppy Provider
+ * No description.
+ *
  * @link https://app.uppy.jp
+ *
  */
 class Uppy extends ProviderAdapter implements ProviderInterface
 {

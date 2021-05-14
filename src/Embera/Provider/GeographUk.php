@@ -16,7 +16,10 @@ use Embera\Url;
 
 /**
  * GeographUk Provider
- * @link https://www.geograph.org.uk
+ * Geograph Britain and Ireland is a web-based project to collect and reference geographically rep...
+ *
+ * @link https://www.geograph.org.uk/
+ *
  */
 class GeographUk extends ProviderAdapter implements ProviderInterface
 {

@@ -16,7 +16,10 @@ use Embera\Url;
 
 /**
  * Nanoo Provider
+ * 
+ *
  * @link https://nanoo.tv
+ *
  */
 class Nanoo extends ProviderAdapter implements ProviderInterface
 {

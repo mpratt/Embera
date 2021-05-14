@@ -16,7 +16,10 @@ use Embera\Url;
 
 /**
  * ZnipeTV Provider
- * @link https://*.znipe.tv
+ * Znipe’s Digital Pass offers premium esports entertainment, streaming world class tournaments,...
+ *
+ * @link https://znipe.tv
+ *
  */
 class ZnipeTV extends ProviderAdapter implements ProviderInterface
 {
