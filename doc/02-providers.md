@@ -35,6 +35,7 @@ I try to support all the providers listed on [oembed.com](https://oembed.com).
 - [Commaful](providers/Commaful.md)
 - [Coub](providers/Coub.md)
 - [Cueup](providers/Cueup.md)
+- [Curated](providers/Curated.md)
 - [Datawrapper](providers/Datawrapper.md)
 - [DailyMotion](providers/DailyMotion.md)
 - [Deseretnews](providers/Deseretnews.md)
