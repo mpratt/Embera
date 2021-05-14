@@ -128,6 +128,7 @@ class DefaultProviderCollection extends ProviderCollectionAdapter
             'Nfb',
             'NoPaste',
             'Omniscope',
+            'OmnyStudio',
             'OnSizzle',
             'OraTV',
             'Orbitvu',

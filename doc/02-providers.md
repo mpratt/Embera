@@ -108,6 +108,7 @@ I try to support all the providers listed on [oembed.com](https://oembed.com).
 - [Nfb](providers/Nfb.md)
 - [NoPaste](providers/NoPaste.md)
 - [Omniscope](providers/Omniscope.md)
+- [OmnyStudio](providers/OmnyStudio.md)
 - [OnSizzle](providers/OnSizzle.md)
 - [OraTV](providers/OraTV.md)
 - [Orbitvu](providers/Orbitvu.md)
