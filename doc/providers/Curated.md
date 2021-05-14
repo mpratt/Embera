@@ -1,18 +1,18 @@
-# [SproutVideo](https://sproutvideo.com)
+# [Curated](https://curated.co)
 
-SproutVideo Provider
-The best live and on-demand video hosting platform for
-business.
+Curated Provider
+Grow your audience by collecting and sharing truly
+engaging content. START CURATING
 
 ## Implementation Details
 
 - Provider
-Name: SproutVideo
+Name: Curated
 - Documentation: NONE
 - HTTPS support: YES
 - Fake Response: NO
 - Oembed Params: maxwidth , maxheight
-- Supported Hosts: sproutvideo.com , .vids.io
+- Supported Hosts: *.curated.co
 - Responsive response: NO
 - Collections: DefaultProviderCollection
 

@@ -55,6 +55,7 @@ class DefaultProviderCollection extends ProviderCollectionAdapter
             'Commaful',
             'Coub',
             'Cueup',
+            'Curated',
             'Datawrapper',
             'DailyMotion',
             'Deseretnews',
