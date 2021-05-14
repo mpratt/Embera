@@ -21,7 +21,7 @@ final class BeautifulAITest extends ProviderTester
 {
     protected $tasks = array(
         'valid_urls' => array(
-            'https://www.beautiful.ai/deck/-L7QETWHKx_3vn8eIswg/Sample-Presentation'
+            'https://www.beautiful.ai/deck/-M8MozZAPJNoQPqyjdaY/Startup-Pitch-DeckSeries-A-Template'
         ),
         'invalid_urls' => array(
             'https://www.beautiful.ai/player/-L7QETWHKx_3vn8eIswg/Sample-Presentation'
@@ -33,6 +33,7 @@ final class BeautifulAITest extends ProviderTester
 
     public function testProvider()
     {
-        $this->validateProvider('BeautifulAI', [ 'width' => 480, 'height' => 270]);
+        $this->markTestSkipped('BeautifulAI has made all requests private. We need a public url to test');
+        // $this->validateProvider('BeautifulAI', [ 'width' => 480, 'height' => 270]);
     }
 }

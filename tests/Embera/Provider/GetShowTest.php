@@ -31,6 +31,7 @@ final class GetShowTest extends ProviderTester
 
     public function testProvider()
     {
-        $this->validateProvider('GetShow', [ 'width' => 480, 'height' => 270]);
+        $this->markTestIncomplete('Getshow is returning 500 on the endpoint. Waiting until it is fixed or Im removing it.');
+        //$this->validateProvider('GetShow', [ 'width' => 480, 'height' => 270]);
     }
 }

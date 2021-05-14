@@ -21,10 +21,10 @@ final class LumiereTest extends ProviderTester
 {
     protected $tasks = [
         'valid_urls' => [
-            'https://dev.p.lumiere.is/v/9qcQHJEf-o',
+            'https://p.lumiere.is/v/TQ41w_jVk2'
         ],
         'invalid_urls' => [
-            'https://dev.p.lumiere.is',
+            'https://p.lumiere.is',
         ],
     ];
 

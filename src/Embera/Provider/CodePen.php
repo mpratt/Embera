@@ -56,7 +56,7 @@ class CodePen extends ProviderAdapter implements ProviderInterface
     {
         preg_match('~codepen\.io/([^/]+)/pen/([^/]+)~i', (string) $this->url, $matches);
 
-        $embedUrl = 'https://codepen.io/' . $matches['1']. '/embed/preview/' . $matches['2'] . '?height=300&amp;slug-hash=' . $matches['2'] . '&amp;default-tabs=html,result&amp;host=https://codepen.io';
+        $embedUrl = 'https://codepen.io/' . $matches['1']. '/embed/preview/' . $matches['2'] . '?default-tabs=html%2Cresult&amp;height=300&amp;host=https%3A%2F%2Fcodepen.io&amp;slug-hash=' . $matches['2'];
 
         $attr = [];
         $attr[] = 'id="cp_embed_' . $matches['2'] . '"';

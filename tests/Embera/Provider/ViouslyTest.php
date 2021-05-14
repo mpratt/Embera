@@ -22,7 +22,6 @@ final class ViouslyTest extends ProviderTester
     protected $tasks = [
         'valid_urls' => [
             'https://www.viously.com/positivr/gw2jTFu7Lsr',
-            'https://www.viously.com/video-fr/p-LdALOtB4U',
         ],
         'invalid_urls' => [
             'https://www.viously.com/',

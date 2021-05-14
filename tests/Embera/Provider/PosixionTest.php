@@ -21,8 +21,6 @@ final class PosixionTest extends ProviderTester
 {
     protected $tasks = [
         'valid_urls' => [
-            'https://posixion.com/question/4RCLJsjMPT4yHd7QM',
-            'https://posixion.com/question/Is-it-too-late-to-tackle-the-climate-crisis',
             'https://posixion.com/question/Sollten-wir-posiXion-weiter-pushen',
         ],
         'invalid_urls' => [
@@ -38,6 +36,7 @@ final class PosixionTest extends ProviderTester
 
     public function testProvider()
     {
-        $this->validateProvider('Posixion', [ 'width' => 480, 'height' => 270]);
+        $this->markTestIncomplete('Posixion seems to be down. Flagging this as deprecated, soon to be removed');
+        //$this->validateProvider('Posixion', [ 'width' => 480, 'height' => 270]);
     }
 }
