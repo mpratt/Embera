@@ -16,7 +16,10 @@ use Embera\Url;
 
 /**
  * Kmdr Provider
- * @link https://app.kmdr.sh
+ * Transform code-blocks in the browser to explain syntax
+ *
+ * @link https://kmdr.sh
+ *
  */
 class Kmdr extends ProviderAdapter implements ProviderInterface
 {

@@ -16,7 +16,10 @@ use Embera\Url;
 
 /**
  * SocialExplorer Provider
+ * Social Explorer provides easy access to demographic information about the United States. We pro...
+ *
  * @link https://socialexplorer.com
+ *
  */
 class SocialExplorer extends ProviderAdapter implements ProviderInterface
 {

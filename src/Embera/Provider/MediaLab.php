@@ -16,7 +16,10 @@ use Embera\Url;
 
 /**
  * MediaLab Provider
+ * View, distribute and store professional content with MediaLab. Specialized in Digital Media Man...
+ *
  * @link https://medialab.co
+ *
  */
 class MediaLab extends ProviderAdapter implements ProviderInterface
 {

@@ -16,7 +16,10 @@ use Embera\Url;
 
 /**
  * SendToNews Provider
- * @link https://*.sendtonews.com
+ * A Turnkey Online Video Platform at no cost to you. Get digital video content, technology and mo...
+ *
+ * @link https://sendtonews.com
+ *
  */
 class SendToNews extends ProviderAdapter implements ProviderInterface
 {

@@ -14,7 +14,10 @@ namespace Embera\Provider;
 
 /**
  * GeographCI Provider
- * @link https://geograph.org.gg
+ * No description.
+ *
+ * @link https://channel-islands.geograph.org/
+ *
  */
 class GeographCI extends GeographUk
 {

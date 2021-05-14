@@ -16,7 +16,10 @@ use Embera\Url;
 
 /**
  * MessesInfo Provider
- * @link http://messes.info
+ * 
+ *
+ * @link https://messes.info
+ *
  */
 class MessesInfo extends ProviderAdapter implements ProviderInterface
 {

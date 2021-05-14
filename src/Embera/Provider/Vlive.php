@@ -16,7 +16,10 @@ use Embera\Url;
 
 /**
  * Vlive Provider
+ * V LIVE, The community where stars and fans connect
+ *
  * @link https://vlive.tv
+ *
  */
 class Vlive extends ProviderAdapter implements ProviderInterface
 {

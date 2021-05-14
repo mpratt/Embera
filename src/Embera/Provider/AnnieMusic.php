@@ -16,7 +16,10 @@ use Embera\Url;
 
 /**
  * AnnieMusic Provider
+ * Annie helps you share your favorite songs and playlists between music platforms.
+ *
  * @link https://anniemusic.app
+ *
  */
 class AnnieMusic extends ProviderAdapter implements ProviderInterface
 {

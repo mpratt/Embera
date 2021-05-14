@@ -16,7 +16,10 @@ use Embera\Url;
 
 /**
  * Viously Provider
+ * Nous réconcilions les marques et la publicité digitale autour de notre technologie.
+ *
  * @link https://viously.com
+ *
  */
 class Viously extends ProviderAdapter implements ProviderInterface
 {

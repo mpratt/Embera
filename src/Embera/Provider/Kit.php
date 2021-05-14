@@ -16,7 +16,10 @@ use Embera\Url;
 
 /**
  * Kit Provider
+ * {{SEO.description}}
+ *
  * @link https://kit.co
+ *
  */
 class Kit extends ProviderAdapter implements ProviderInterface
 {

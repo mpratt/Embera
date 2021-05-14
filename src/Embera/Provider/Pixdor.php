@@ -16,7 +16,10 @@ use Embera\Url;
 
 /**
  * Pixdor Provider
- * @link https://store.pixdor.com
+ * No description.
+ *
+ * @link https://pixdor.com
+ *
  */
 class Pixdor extends ProviderAdapter implements ProviderInterface
 {

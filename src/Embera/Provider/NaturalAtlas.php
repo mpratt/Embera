@@ -16,7 +16,10 @@ use Embera\Url;
 
 /**
  * NaturalAtlas Provider
+ * Explore the outdoors on Natural Atlas – campgrounds, trails, waterfalls, hot springs, and mor...
+ *
  * @link https://naturalatlas.com
+ *
  */
 class NaturalAtlas extends ProviderAdapter implements ProviderInterface
 {

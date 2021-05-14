@@ -16,7 +16,10 @@ use Embera\Url;
 
 /**
  * CircuitLab Provider
+ * Build and simulate circuits right in your browser.
+ *
  * @link https://www.circuitlab.com
+ *
  */
 class CircuitLab extends ProviderAdapter implements ProviderInterface
 {

@@ -16,7 +16,10 @@ use Embera\Url;
 
 /**
  * Shoudio Provider
+ * Showcasing the Shoudio Apps, one at the time. We make audio apps. Audioguides, Audiowalks, GPS ...
+ *
  * @link https://shoudio.com
+ *
  */
 class Shoudio extends ProviderAdapter implements ProviderInterface
 {

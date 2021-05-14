@@ -16,7 +16,10 @@ use Embera\Url;
 
 /**
  * Reddit Provider
+ * Reddit is a network of communities based on people&#x27;s interests. Find communities you&#x27;...
+ *
  * @link https://reddit.com
+ *
  */
 class Reddit extends ProviderAdapter implements ProviderInterface
 {

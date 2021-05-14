@@ -16,7 +16,10 @@ use Embera\Url;
 
 /**
  * Pastery Provider
+ * Pastery is the sweetest pastebin in the world. Pastery is a secure website where you can store ...
+ *
  * @link https://pastery.net
+ *
  */
 class Pastery extends ProviderAdapter implements ProviderInterface
 {

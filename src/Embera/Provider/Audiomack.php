@@ -16,7 +16,11 @@ use Embera\Url;
 
 /**
  * Audiomack Provider
+ * Audiomack is a youth-driven, artist-first music streaming platform that allows creators
+ * to share unlimited music and podcast content for free.
+ *
  * @link https://www.audiomack.com
+ *
  */
 class Audiomack extends ProviderAdapter implements ProviderInterface
 {

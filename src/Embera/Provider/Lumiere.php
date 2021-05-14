@@ -16,7 +16,10 @@ use Embera\Url;
 
 /**
  * Lumiere Provider
- * @link https://*.lumiere.is
+ * No description.
+ *
+ * @link https://lumiere.is
+ *
  */
 class Lumiere extends ProviderAdapter implements ProviderInterface
 {

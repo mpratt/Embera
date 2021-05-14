@@ -16,7 +16,10 @@ use Embera\Url;
 
 /**
  * Gfycat Provider
+ * Gfycat is the top destination for GIFs and videos. Create your own GIF or browse the best gamin...
+ *
  * @link https://gfycat.com
+ *
  */
 class Gfycat extends ProviderAdapter implements ProviderInterface
 {

@@ -16,7 +16,10 @@ use Embera\Url;
 
 /**
  * Facebook Provider
+ * Connect with friends and the world around you on Facebook.
+ *
  * @link https://facebook.com
+ * @see https://developers.facebook.com/docs/plugins/oembed-endpoints
  */
 class Facebook extends ProviderAdapter implements ProviderInterface
 {

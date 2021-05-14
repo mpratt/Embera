@@ -15,8 +15,10 @@ use Embera\Url;
 
 /**
  * Wordwall Provider
- * @link https://wordwall.net/
- * @link https://wordwall.net/about/oembed
+ * Need a fresh teaching resource that fits your class and teaching style? Create a customized pac...
+ *
+ * @link https://wordwall.net
+ * @see https://wordwall.net/about/oembed
  */
 class Wordwall extends ProviderAdapter implements ProviderInterface
 {

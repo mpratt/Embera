@@ -16,7 +16,10 @@ use Embera\Url;
 
 /**
  * SapoVideos Provider
+ * Golos, trailers, vídeos para rir, notícias, programas de TV e muito mais. Os vídeos que inte...
+ *
  * @link https://videos.sapo.pt
+ *
  */
 class SapoVideos extends ProviderAdapter implements ProviderInterface
 {

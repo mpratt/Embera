@@ -16,7 +16,10 @@ use Embera\Url;
 
 /**
  * TourHero Provider
+ * TourHero helps you plan and book unforgettable travel experiences. Fully customized trips that ...
+ *
  * @link https://tourhero.com
+ *
  */
 class TourHero extends ProviderAdapter implements ProviderInterface
 {

@@ -16,7 +16,9 @@ use Embera\Url;
 
 /**
  * altrulabs.com Provider
- * @link https://altrulabs.com
+ *
+ * @link https://app.altrulabs.com
+ *
  */
 class Altru extends ProviderAdapter implements ProviderInterface
 {

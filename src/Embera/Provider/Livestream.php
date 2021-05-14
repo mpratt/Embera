@@ -16,7 +16,10 @@ use Embera\Url;
 
 /**
  * Livestream Provider
+ * Live stream to any audience, no matter the scale. We make it easy to stream your virtual events...
+ *
  * @link https://livestream.com
+ *
  */
 class Livestream extends ProviderAdapter implements ProviderInterface
 {

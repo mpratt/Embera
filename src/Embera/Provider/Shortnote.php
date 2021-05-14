@@ -16,7 +16,10 @@ use Embera\Url;
 
 /**
  * Shortnote Provider
+ * ShortNote（ショートノート）は、エッセイ投稿サービスです。無料です�...
+ *
  * @link https://shortnote.jp
+ *
  */
 class Shortnote extends ProviderAdapter implements ProviderInterface
 {

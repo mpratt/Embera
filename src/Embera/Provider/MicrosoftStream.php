@@ -16,7 +16,10 @@ use Embera\Url;
 
 /**
  * MicrosoftStream Provider
- * @link https://*.microsoftstream.com
+ * No description.
+ *
+ * @link https://web.microsoftstream.com/
+ * @see https://docs.microsoft.com/en-us/stream/embed-video-oembed
  */
 class MicrosoftStream extends ProviderAdapter implements ProviderInterface
 {

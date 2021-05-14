@@ -14,7 +14,10 @@ namespace Embera\Provider;
 
 /**
  * GeographDE Provider
- * @link https://geo-en.hlipp.de
+ * Geograph is a web based project to collect and reference geographically representative images o...
+ *
+ * @link https://geo-en.hlipp.de/
+ *
  */
 class GeographDE extends GeographUk
 {

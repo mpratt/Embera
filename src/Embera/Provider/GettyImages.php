@@ -16,8 +16,10 @@ use Embera\Url;
 
 /**
  * GettyImages Provider
- * @link https://gty.im
- * @link https://developers.gettyimages.com/api/oembed/
+ * Encuentra la imagen libre de derechos perfecta para tu próximo proyecto en el mejor catálogo ...
+ *
+ * @link https://gettyimages.com
+ * @see https://developers.gettyimages.com/api/oembed/
  */
 class GettyImages extends ProviderAdapter implements ProviderInterface
 {

@@ -16,7 +16,10 @@ use Embera\Url;
 
 /**
  * Replit Provider
+ * Replit is a simple yet powerful online IDE, Editor, Compiler, Interpreter, and REPL. Code, comp...
+ *
  * @link https://repl.it
+ * @see https://docs.repl.it/repls/embed
  */
 class Replit extends ProviderAdapter implements ProviderInterface
 {

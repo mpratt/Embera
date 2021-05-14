@@ -16,7 +16,10 @@ use Embera\Url;
 
 /**
  * Zoomable Provider
- * @link https://*.zoomable.ca
+ * Create Zoomable Image Instantly! Upload now or create from your desktop.
+ *
+ * @link https://zoomable.ca
+ *
  */
 class Zoomable extends ProviderAdapter implements ProviderInterface
 {

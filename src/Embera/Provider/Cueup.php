@@ -16,6 +16,8 @@ use Embera\Url;
 
 /**
  * Cueup Provider
+ * Cueup is the easiest way for you to book a great DJ for your event.
+ *
  * @link https://cueup.io
  */
 class Cueup extends ProviderAdapter implements ProviderInterface

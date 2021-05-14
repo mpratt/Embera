@@ -16,7 +16,13 @@ use Embera\Url;
 
 /**
  * Avocode Provider
- * @link https://*.avocode.com
+ * Avocode helps you to centralize design collaboration, version control, prototyping, feedback, and developer hand-off.
+ * Work on any design file, with anyone, on any platform. Sign up for a free trial today.
+ *
+ * This provider generates an html tag when none is available.
+ *
+ * @link https://avocode.com
+ *
  */
 class Avocode extends ProviderAdapter implements ProviderInterface
 {

@@ -16,7 +16,10 @@ use Embera\Url;
 
 /**
  * Instagram Provider
+ * Create an account or log in to Instagram - A simple, fun &amp; creative way to capture, edit &a...
+ *
  * @link https://instagram.com
+ * @see https://www.instagram.com/developer/embedding/#oembed
  */
 class Instagram extends ProviderAdapter implements ProviderInterface
 {

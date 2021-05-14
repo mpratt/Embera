@@ -16,7 +16,11 @@ use Embera\Url;
 
 /**
  * Blogcast Provider
+ * Generate realistic voice overs for blogs, videos, podcasts and
+ * more using AI text-to-speech technology. No microphone required!
+ *
  * @link https://blogcast.host
+ *
  */
 class Blogcast extends ProviderAdapter implements ProviderInterface
 {

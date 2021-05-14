@@ -16,7 +16,10 @@ use Embera\Url;
 
 /**
  * OraTV Provider
+ * No description.
+ *
  * @link https://ora.tv
+ *
  */
 class OraTV extends ProviderAdapter implements ProviderInterface
 {

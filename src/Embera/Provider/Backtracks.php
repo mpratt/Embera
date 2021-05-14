@@ -16,7 +16,12 @@ use Embera\Url;
 
 /**
  * Backtracks Provider
+ * Backtracks is the world's most advanced podcast analytics and advertising platform.
+ * Know and grow your audience and revenue.
+ *
  * @link https://backtracks.fm
+ * @todo It seems as it could support fake responses but we dont have enough data to test.
+ *
  */
 class Backtracks extends ProviderAdapter implements ProviderInterface
 {

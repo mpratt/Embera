@@ -16,6 +16,8 @@ use Embera\Url;
 
 /**
  * Fitapp Provider
+ * More than 10000 personal trainers and 1000 gyms are on FITAPP.pro
+ *
  * @link https://fitapp.pro
  */
 class Fitapp extends ProviderAdapter implements ProviderInterface

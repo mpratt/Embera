@@ -16,7 +16,10 @@ use Embera\Url;
 
 /**
  * MermaidInk Provider
- * @link https://mermaid.ink
+ * No description.
+ *
+ * @link https://mermaid.ink/
+ *
  */
 class MermaidInk extends ProviderAdapter implements ProviderInterface
 {

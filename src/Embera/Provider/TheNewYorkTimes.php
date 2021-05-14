@@ -16,7 +16,10 @@ use Embera\Url;
 
 /**
  * TheNewYorkTimes Provider
+ * Live news, investigations, opinion, photos and video by the journalists of The New York Times f...
+ *
  * @link https://nytimes.com
+ *
  */
 class TheNewYorkTimes extends ProviderAdapter implements ProviderInterface
 {

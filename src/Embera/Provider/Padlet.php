@@ -16,7 +16,10 @@ use Embera\Url;
 
 /**
  * Padlet Provider
+ * No description.
+ *
  * @link https://padlet.com
+ *
  */
 class Padlet extends ProviderAdapter implements ProviderInterface
 {

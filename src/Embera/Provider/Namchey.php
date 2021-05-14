@@ -16,8 +16,10 @@ use Embera\Url;
 
 /**
  * Namchey Provider
+ * Share your travel experience in visual form that would be easier for others to know how the exp...
+ *
  * @link https://namchey.com
- * @link https://help.namchey.com/app/oembed
+ * @see https://help.namchey.com/app/oembed
  */
 class Namchey extends ProviderAdapter implements ProviderInterface
 {

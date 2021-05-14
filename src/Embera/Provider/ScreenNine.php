@@ -16,8 +16,10 @@ use Embera\Url;
 
 /**
  * ScreenNine Provider
+ * No description.
+ *
  * @link https://screen9.tv
- * @link https://screen9.zendesk.com/hc/en-us/articles/216335038-Publish-with-oEmbed
+ * @see https://screen9.zendesk.com/hc/en-us/articles/216335038-Publish-with-oEmbed
  */
 class ScreenNine extends ProviderAdapter implements ProviderInterface
 {

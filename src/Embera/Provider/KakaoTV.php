@@ -16,7 +16,10 @@ use Embera\Url;
 
 /**
  * KakaoTV Provider
+ * 톡에서 보는 오리지널 콘텐츠! 지금 카톡에서 카카오TV 채널을 추가해 �...
+ *
  * @link https://tv.kakao.com
+ *
  */
 class KakaoTV extends ProviderAdapter implements ProviderInterface
 {

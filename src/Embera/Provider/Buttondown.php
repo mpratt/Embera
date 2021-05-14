@@ -16,7 +16,10 @@ use Embera\Url;
 
 /**
  * Buttondown Provider
+ * Buttondown is a small, elegant tool for producing newsletters.
+ *
  * @link https://buttondown.email
+ *
  */
 class Buttondown extends ProviderAdapter implements ProviderInterface
 {

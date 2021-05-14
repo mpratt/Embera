@@ -16,7 +16,10 @@ use Embera\Url;
 
 /**
  * Posixion Provider
+ * No description.
+ *
  * @link https://posixion.com
+ *
  */
 class Posixion extends ProviderAdapter implements ProviderInterface
 {

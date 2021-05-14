@@ -16,8 +16,11 @@ namespace Embera\Provider;
 use Embera\Url;
 
 /**
- * loom.com Provider
+ * Loom Provider
+ * Record and share video messages of your screen, cam, or both. Faster than typing an email or me...
+ *
  * @link https://www.loom.com
+ *
  */
 class Loom extends ProviderAdapter implements ProviderInterface
 {

@@ -16,7 +16,10 @@ use Embera\Url;
 
 /**
  * iFixit Provider
- * @link https://ifixit.com
+ * No description.
+ *
+ * @link https://ifixt.com
+ *
  */
 class iFixit extends ProviderAdapter implements ProviderInterface
 {

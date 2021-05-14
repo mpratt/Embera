@@ -16,6 +16,8 @@ use Embera\Url;
 
 /**
  * Deseretnews Provider
+ * In-depth news, analysis and opinion covering Utah and the nation.
+ *
  * @link https://deseretnews.com
  */
 class Deseretnews extends ProviderAdapter implements ProviderInterface

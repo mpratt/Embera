@@ -16,6 +16,8 @@ use Embera\Url;
 
 /**
  * FITE Provider
+ * Stream all the action to your big-screen TV!
+ *
  * @link https://fite.tv
  */
 class FITE extends ProviderAdapter implements ProviderInterface

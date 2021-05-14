@@ -16,7 +16,10 @@ use Embera\Url;
 
 /**
  * Verse Provider
+ * Create immersive interactive content with your videos.
+ *
  * @link https://verse.com
+ *
  */
 class Verse extends ProviderAdapter implements ProviderInterface
 {

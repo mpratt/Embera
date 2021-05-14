@@ -16,7 +16,10 @@ use Embera\Url;
 
 /**
  * Ustudio Provider
- * @link https://*.ustudio.com
+ * Deliver corporate audio and video content securely to distant teams around the world on any dev...
+ *
+ * @link https://ustudio.com
+ *
  */
 class Ustudio extends ProviderAdapter implements ProviderInterface
 {

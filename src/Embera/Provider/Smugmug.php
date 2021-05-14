@@ -16,8 +16,10 @@ use Embera\Url;
 
 /**
  * Smugmug Provider
- * @link https://*.smugmug.com
- * @link https://api.smugmug.com/services/oembed
+ * Whether you want a photo website that sells prints, secure client galleries or just need unlimi...
+ *
+ * @link https://smugmug.com
+ * @see https://api.smugmug.com/services/oembed
  */
 class Smugmug extends ProviderAdapter implements ProviderInterface
 {

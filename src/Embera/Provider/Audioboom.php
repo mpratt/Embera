@@ -16,7 +16,11 @@ use Embera\Url;
 
 /**
  * Audioboom Provider
+ * Host, distribute and monetize your podcast with Audioboom.
+ *
  * @link https://audioboom.com
+ * @todo We could add fake responses for post urls but not for channels urls.
+ *
  */
 class Audioboom extends ProviderAdapter implements ProviderInterface
 {

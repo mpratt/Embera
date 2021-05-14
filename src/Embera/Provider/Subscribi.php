@@ -16,7 +16,10 @@ use Embera\Url;
 
 /**
  * Subscribi Provider
+ * subscribi.io
+ *
  * @link https://subscribi.io
+ *
  */
 class Subscribi extends ProviderAdapter implements ProviderInterface
 {

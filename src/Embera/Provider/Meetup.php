@@ -16,7 +16,10 @@ use Embera\Url;
 
 /**
  * Meetup Provider
- * @link https://meetup.com
+ * Find Meetup events so you can do more of what matters to you. Or create your own group and meet...
+ *
+ * @link https://meetup.com/
+ *
  */
 class Meetup extends ProviderAdapter implements ProviderInterface
 {

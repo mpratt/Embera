@@ -16,7 +16,10 @@ use Embera\Url;
 
 /**
  * Omniscope Provider
+ * No description.
+ *
  * @link https://omniscope.me
+ *
  */
 class Omniscope extends ProviderAdapter implements ProviderInterface
 {

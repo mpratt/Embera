@@ -16,7 +16,11 @@ use Embera\Url;
 
 /**
  * BlackfireIO Provider
+ * Blackfire empowers all developers and IT/Ops to continuously verify and improve their app’s
+ * performance, throughout its lifecycle, by getting the right information at the right moment.
+ *
  * @link https://blackfire.io
+ *
  */
 class BlackfireIO extends ProviderAdapter implements ProviderInterface
 {

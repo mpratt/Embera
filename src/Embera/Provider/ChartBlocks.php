@@ -16,7 +16,10 @@ use Embera\Url;
 
 /**
  * ChartBlocks Provider
+ * The world's easiest chart builder app. Design and share a chart in minutes.
+ *
  * @link https://www.chartblocks.com
+ *
  */
 class ChartBlocks extends ProviderAdapter implements ProviderInterface
 {

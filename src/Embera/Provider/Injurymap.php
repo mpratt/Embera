@@ -16,7 +16,10 @@ use Embera\Url;
 
 /**
  * Injurymap Provider
+ * Injurymap is an exercise app that helps you recover from muscle and joint pain. The app adjusts...
+ *
  * @link https://injurymap.com
+ *
  */
 class Injurymap extends ProviderAdapter implements ProviderInterface
 {

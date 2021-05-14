@@ -16,7 +16,10 @@ use Embera\Url;
 
 /**
  * Scribd Provider
+ * The world's largest digital library. Read unlimited books and audiobooks. Access millions of do...
+ *
  * @link https://scribd.com
+ *
  */
 class Scribd extends ProviderAdapter implements ProviderInterface
 {

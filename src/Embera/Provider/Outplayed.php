@@ -16,7 +16,10 @@ use Embera\Url;
 
 /**
  * Outplayed Provider
+ * No description.
+ *
  * @link https://outplayed.tv
+ *
  */
 class Outplayed extends ProviderAdapter implements ProviderInterface
 {

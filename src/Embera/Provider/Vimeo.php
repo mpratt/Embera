@@ -16,7 +16,10 @@ use Embera\Url;
 
 /**
  * Vimeo Provider
+ * Unlock the power of video and join over 200M professionals, teams, and organizations who use Vi...
+ *
  * @link https://vimeo.com
+ *
  */
 class Vimeo extends ProviderAdapter implements ProviderInterface
 {

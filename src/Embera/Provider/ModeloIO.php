@@ -16,7 +16,10 @@ use Embera\Url;
 
 /**
  * ModeloIO Provider
+ * Collaborate with colleagues, share & markup design assets, & build interactive presentations wi...
+ *
  * @link https://modelo.io
+ *
  */
 class ModeloIO extends ProviderAdapter implements ProviderInterface
 {
