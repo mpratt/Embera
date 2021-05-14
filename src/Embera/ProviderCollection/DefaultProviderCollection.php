@@ -110,6 +110,7 @@ class DefaultProviderCollection extends ProviderCollectionAdapter
             'LillePod',
             'Livestream',
             'Loom',
+            'LottieFiles',
             'Ludus',
             'Lumiere',
             'Matterport',
