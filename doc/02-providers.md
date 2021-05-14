@@ -160,6 +160,7 @@ I try to support all the providers listed on [oembed.com](https://oembed.com).
 - [Spotful](providers/Spotful.md)
 - [Spotify](providers/Spotify.md)
 - [Spreaker](providers/Spreaker.md)
+- [SproutVideo](providers/SproutVideo.md)
 - [StandfordDigitalRepository](providers/StandfordDigitalRepository.md)
 - [Streamable](providers/Streamable.md)
 - [Subscribi](providers/Subscribi.md)

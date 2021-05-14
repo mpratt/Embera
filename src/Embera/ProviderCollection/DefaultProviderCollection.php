@@ -180,6 +180,7 @@ class DefaultProviderCollection extends ProviderCollectionAdapter
             'Spotful',
             'Spotify',
             'Spreaker',
+            'SproutVideo',
             'StandfordDigitalRepository',
             'Streamable',
             'Subscribi',
