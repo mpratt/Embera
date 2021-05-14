@@ -58,6 +58,7 @@ I try to support all the providers listed on [oembed.com](https://oembed.com).
 - [FITE](providers/FITE.md)
 - [Flickr](providers/Flickr.md)
 - [Flourish](providers/Flourish.md)
+- [Framer](providers/Framer.md)
 - [GeographUk](providers/GeographUk.md)
 - [GeographCI](providers/GeographCI.md)
 - [GeographDE](providers/GeographDE.md)

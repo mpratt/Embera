@@ -78,6 +78,7 @@ class DefaultProviderCollection extends ProviderCollectionAdapter
             'FITE',
             'Flickr',
             'Flourish',
+            'Framer',
             'GeographUk',
             'GeographCI',
             'GeographDE',
