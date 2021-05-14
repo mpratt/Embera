@@ -27,6 +27,7 @@ class DefaultProviderCollection extends ProviderCollectionAdapter
             'ActBlue',
             'Adways',
             'Altru',
+            'Altium',
             'AmCharts',
             'Animoto',
             'AnnieMusic',

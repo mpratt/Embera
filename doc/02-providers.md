@@ -7,6 +7,7 @@ I try to support all the providers listed on [oembed.com](https://oembed.com).
 - [ActBlue](providers/ActBlue.md)
 - [Adways](providers/Adways.md)
 - [Altru](providers/Altru.md)
+- [Altium](providers/Altium.md)
 - [AmCharts](providers/AmCharts.md)
 - [Animoto](providers/Animoto.md)
 - [AnnieMusic](providers/AnnieMusic.md)
