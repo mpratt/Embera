@@ -67,6 +67,7 @@ class DefaultProviderCollection extends ProviderCollectionAdapter
             'DotSUB',
             'EduMedia',
             'Embedery',
+            'EnystreMusic',
             'Ethfiddle',
             'Eyrie',
             'Facebook',

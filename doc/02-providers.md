@@ -47,6 +47,7 @@ I try to support all the providers listed on [oembed.com](https://oembed.com).
 - [DotSUB](providers/DotSUB.md)
 - [EduMedia](providers/EduMedia.md)
 - [Embedery](providers/Embedery.md)
+- [EnystreMusic](providers/EnystreMusic.md)
 - [Ethfiddle](providers/Ethfiddle.md)
 - [Eyrie](providers/Eyrie.md)
 - [Facebook](providers/Facebook.md)
