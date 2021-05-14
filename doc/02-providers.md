@@ -179,6 +179,7 @@ I try to support all the providers listed on [oembed.com](https://oembed.com).
 - [Typlog](providers/Typlog.md)
 - [UniversitePantheonSorbonne](providers/UniversitePantheonSorbonne.md)
 - [UniversityCambridgeMap](providers/UniversityCambridgeMap.md)
+- [UpecPod](providers/UpecPod.md)
 - [Uppy](providers/Uppy.md)
 - [UstreamTV](providers/UstreamTV.md)
 - [Ustudio](providers/Ustudio.md)
