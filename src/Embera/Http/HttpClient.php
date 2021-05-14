@@ -38,7 +38,7 @@ class HttpClient implements HttpClientInterface
     {
         $this->config = array_merge([
             'use_curl' => true,
-            'user_agent' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36 PHP/Embera',
+            'user_agent' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36',
         ], $config);
     }
 
@@ -74,6 +74,7 @@ class HttpClient implements HttpClientInterface
             CURLOPT_FOLLOWLOCATION => true,
             CURLOPT_SSL_VERIFYHOST => 0,
             CURLOPT_SSL_VERIFYPEER => 0,
+            CURLINFO_HEADER_OUT => true,
         );
 
         $options[CURLOPT_URL] = $url;
@@ -82,14 +83,15 @@ class HttpClient implements HttpClientInterface
 
         $handler = curl_init();
         curl_setopt_array($handler, $options);
+
         $response = curl_exec($handler);
 
         $status = curl_getinfo($handler, CURLINFO_HTTP_CODE);
         $headerSize = curl_getinfo($handler, CURLINFO_HEADER_SIZE);
+        $headerOut = curl_getinfo($handler, CURLINFO_HEADER_OUT);
 
         $body = substr($response, $headerSize);
         curl_close($handler);
-
 
         if (empty($body) || $status != '200') {
             throw new Exception($status . ': Invalid response for ' . $url);
