@@ -76,6 +76,7 @@ I try to support all the providers listed on [oembed.com](https://oembed.com).
 - [Injurymap](providers/Injurymap.md)
 - [Inoreader](providers/Inoreader.md)
 - [Instagram](providers/Instagram.md)
+- [InsticatorContentEngagementUnit](providers/InsticatorContentEngagementUnit.md)
 - [Issuu](providers/Issuu.md)
 - [Jovian](providers/Jovian.md)
 - [KakaoTV](providers/KakaoTV.md)
