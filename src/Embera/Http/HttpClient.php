@@ -38,7 +38,7 @@ class HttpClient implements HttpClientInterface
     {
         $this->config = array_merge([
             'use_curl' => true,
-            'user_agent' => 'Mozilla/5.0 PHP/Embera',
+            'user_agent' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36 PHP/Embera',
         ], $config);
     }
 
@@ -72,6 +72,8 @@ class HttpClient implements HttpClientInterface
             CURLOPT_USERAGENT => $this->config['user_agent'],
             CURLOPT_ENCODING => '',
             CURLOPT_FOLLOWLOCATION => true,
+            CURLOPT_SSL_VERIFYHOST => 0,
+            CURLOPT_SSL_VERIFYPEER => 0,
         );
 
         $options[CURLOPT_URL] = $url;
