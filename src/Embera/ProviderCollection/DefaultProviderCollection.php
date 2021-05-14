@@ -40,6 +40,7 @@ class DefaultProviderCollection extends ProviderCollectionAdapter
             'BeautifulAI',
             'BlackfireIO',
             'Blogcast',
+            'Bopp',
             'Buttondown',
             'Byzart',
             'Ceros',

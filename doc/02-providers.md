@@ -20,6 +20,7 @@ I try to support all the providers listed on [oembed.com](https://oembed.com).
 - [BeautifulAI](providers/BeautifulAI.md)
 - [BlackfireIO](providers/BlackfireIO.md)
 - [Blogcast](providers/Blogcast.md)
+- [Bopp](providers/Bopp.md)
 - [Buttondown](providers/Buttondown.md)
 - [Byzart](providers/Byzart.md)
 - [Ceros](providers/Ceros.md)
