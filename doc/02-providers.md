@@ -71,6 +71,7 @@ I try to support all the providers listed on [oembed.com](https://oembed.com).
 - [HippoVideo](providers/HippoVideo.md)
 - [Huffduffer](providers/Huffduffer.md)
 - [iFixit](providers/iFixit.md)
+- [Idomoo](providers/Idomoo.md)
 - [IHeartRadio](providers/IHeartRadio.md)
 - [Infogram](providers/Infogram.md)
 - [Infoveave](providers/Infoveave.md)
