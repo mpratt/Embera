@@ -41,7 +41,7 @@ class Giphy extends ProviderAdapter implements ProviderInterface
     public function validateUrl(Url $url)
     {
         return (bool) (
-            preg_match('~giphy\.com/(gifs|stickers)/([^/]+)~i', (string) $url) ||
+            preg_match('~giphy\.com/(gifs|stickers|clips)/([^/]+)~i', (string) $url) ||
             preg_match('~giphy\.com/media/([^/]+)/giphy.gif$~i', (string) $url) ||
             preg_match('~gph\.is/g/([^/]+)$~i', (string) $url)
         );
