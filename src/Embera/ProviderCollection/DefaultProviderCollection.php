@@ -96,6 +96,7 @@ class DefaultProviderCollection extends ProviderCollectionAdapter
             'Injurymap',
             'Inoreader',
             'Instagram',
+            'InsticatorContentEngagementUnit',
             'Issuu',
             'Jovian',
             'KakaoTV',
