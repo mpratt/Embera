@@ -90,6 +90,7 @@ I try to support all the providers listed on [oembed.com](https://oembed.com).
 - [LillePod](providers/LillePod.md)
 - [Livestream](providers/Livestream.md)
 - [Loom](providers/Loom.md)
+- [LottieFiles](providers/LottieFiles.md)
 - [Ludus](providers/Ludus.md)
 - [Lumiere](providers/Lumiere.md)
 - [Matterport](providers/Matterport.md)
