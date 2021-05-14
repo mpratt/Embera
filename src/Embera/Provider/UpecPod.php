@@ -1,6 +1,6 @@
 <?php
 /**
- * Prezi.php
+ * UpecPod.php
  *
  * @package Embera
  * @author Michael Pratt <yo@michael-pratt.com>
@@ -15,17 +15,20 @@ namespace Embera\Provider;
 use Embera\Url;
 
 /**
- * Prezi Provider
- * @link https://prezi.com
+ * UpecPod Provider
+ * No Description
+ *
+ * @link https://pod.u-pec.fr
+ *
  */
-class Prezi extends ProviderAdapter implements ProviderInterface
+class UpecPod extends ProviderAdapter implements ProviderInterface
 {
     /** inline {@inheritdoc} */
-    protected $endpoint = 'https://prezi.com/v/oembed/?format=json';
+    protected $endpoint = 'https://pod.u-pec.fr/oembed?format=json';
 
     /** inline {@inheritdoc} */
     protected static $hosts = [
-        'prezi.com'
+        'pod.u-pec.fr'
     ];
 
     /** inline {@inheritdoc} */
@@ -40,7 +43,7 @@ class Prezi extends ProviderAdapter implements ProviderInterface
     /** inline {@inheritdoc} */
     public function validateUrl(Url $url)
     {
-        return (bool) (preg_match('~prezi\.com/v/([^/]+)~i', (string) $url));
+        return (bool) (preg_match('~pod\.u\-pec\.fr/video/([^/]+)~i', (string) $url));
     }
 
     /** inline {@inheritdoc} */
@@ -51,4 +54,5 @@ class Prezi extends ProviderAdapter implements ProviderInterface
 
         return $url;
     }
+
 }

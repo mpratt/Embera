@@ -199,6 +199,7 @@ class DefaultProviderCollection extends ProviderCollectionAdapter
             'Typlog',
             'UniversitePantheonSorbonne',
             'UniversityCambridgeMap',
+            'UpecPod',
             'Uppy',
             'UstreamTV',
             'Ustudio',
