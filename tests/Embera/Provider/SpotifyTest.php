@@ -21,11 +21,11 @@ final class SpotifyTest extends ProviderTester
 {
     protected $tasks = [
         'valid_urls' => [
-            'https://play.spotify.com/album/4FCuyUjOkT28PnFo6A6vkf/4K4sc36DCTp9YJNVu5zV09',
-            'https://play.spotify.com/track/0Wm3w3YiMe7YiS8erpKbOl',
+            'https://open.spotify.com/album/4FCuyUjOkT28PnFo6A6vkf/4K4sc36DCTp9YJNVu5zV09',
+            'https://open.spotify.com/track/0Wm3w3YiMe7YiS8erpKbOl',
         ],
         'invalid_urls' => [
-            'https://play.spotify.com/stuff/3zIzQMHvOlw3ukDhRKR2jO',
+            'https://open.spotify.com/stuff/3zIzQMHvOlw3ukDhRKR2jO',
         ],
     ];
 

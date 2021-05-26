@@ -24,11 +24,11 @@ use Embera\Url;
 class Spotify extends ProviderAdapter implements ProviderInterface
 {
     /** inline {@inheritdoc} */
-    protected $endpoint = 'https://embed.spotify.com/oembed?format=json';
+    protected $endpoint = 'https://open.spotify.com/oembed?format=json';
 
     /** inline {@inheritdoc} */
     protected static $hosts = [
-        '*.spotify.com'
+        'open.spotify.com'
     ];
 
     /** inline {@inheritdoc} */
