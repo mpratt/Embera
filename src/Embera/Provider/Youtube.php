@@ -37,7 +37,10 @@ class Youtube extends ProviderAdapter implements ProviderInterface
     /** inline {@inheritdoc} */
     public function validateUrl(Url $url)
     {
-        return (bool) (preg_match('~v=(?:[a-z0-9_\-]+)~i', (string) $url));
+        return (bool) (
+            preg_match('~v=(?:[a-z0-9_\-]+)~i', (string) $url) ||
+            preg_match('~/playlist(.+)list=(?:[a-z0-9_\-]+)~i', (string) $url)
+        );
     }
 
     /** inline {@inheritdoc} */
@@ -53,16 +56,20 @@ class Youtube extends ProviderAdapter implements ProviderInterface
     /** inline {@inheritdoc} */
     public function getFakeResponse()
     {
-        preg_match('~v=([a-z0-9_\-]+)~i', (string) $this->url, $matches);
-
-        $embedUrl = 'https://www.youtube.com/embed/' . $matches['1'] . '?feature=oembed';
+        if (preg_match('~v=([a-z0-9_\-]+)~i', (string) $this->url, $matches)) {
+            $embedUrl = 'https://www.youtube.com/embed/' . $matches['1'] . '?feature=oembed';
+        } else if (preg_match('~/playlist(.+)list=([a-z0-9_\-]+)~i', (string) $this->url, $matches)) {
+            $embedUrl = 'https://www.youtube.com/embed/videoseries?list=' . $matches['1'];
+        } else {
+            return array();
+        }
 
         $attr = [];
         $attr[] = 'width="{width}"';
         $attr[] = 'height="{height}"';
         $attr[] = 'src="' . $embedUrl . '"';
         $attr[] = 'frameborder="0"';
-        $attr[] = 'allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"';
+        $attr[] = 'allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"';
         $attr[] = 'allowfullscreen';
 
         return [
