@@ -12,7 +12,7 @@ Name: Spotify
 - HTTPS support: YES
 - Fake Response: NO
 - Oembed Params: maxwidth , maxheight
-- Supported Hosts: *.spotify.com
+- Supported Hosts: open.spotify.com
 - Responsive response: NO
 - Collections: DefaultProviderCollection , SlimProviderCollection
 

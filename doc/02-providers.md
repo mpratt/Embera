@@ -93,6 +93,7 @@ I try to support all the providers listed on [oembed.com](https://oembed.com).
 - [Kmdr](providers/Kmdr.md)
 - [Knacki](providers/Knacki.md)
 - [LearningApps](providers/LearningApps.md)
+- [Libsyn](providers/Libsyn.md)
 - [LillePod](providers/LillePod.md)
 - [Livestream](providers/Livestream.md)
 - [Loom](providers/Loom.md)

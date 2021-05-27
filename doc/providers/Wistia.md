@@ -13,7 +13,7 @@ Name: Wistia
 - Fake Response: NO
 - Oembed Params: maxwidth , maxheight
 - Supported Hosts: *.wistia.com
-- Responsive response: NO
+- Responsive response: YES
 - Collections: DefaultProviderCollection
 
 

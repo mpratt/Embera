@@ -113,6 +113,7 @@ class DefaultProviderCollection extends ProviderCollectionAdapter
             'Kmdr',
             'Knacki',
             'LearningApps',
+            'Libsyn',
             'LillePod',
             'Livestream',
             'Loom',
