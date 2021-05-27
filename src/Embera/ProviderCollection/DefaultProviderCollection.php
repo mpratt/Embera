@@ -151,7 +151,6 @@ class DefaultProviderCollection extends ProviderCollectionAdapter
             'PolariShare',
             'Polldaddy',
             'Portfolium',
-            'Posixion',
             'Prezi',
             'RadioPublic',
             'Rcvis',
