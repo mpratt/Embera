@@ -95,7 +95,6 @@ class DefaultProviderCollection extends ProviderCollectionAdapter
             'HippoVideo',
             'Huffduffer',
             'iFixit',
-            'Idomoo',
             'IHeartRadio',
             'Infogram',
             'Infoveave',
