@@ -135,7 +135,6 @@ class DefaultProviderCollection extends ProviderCollectionAdapter
             'NaturalAtlas',
             'Nfb',
             'NoPaste',
-            'Omniscope',
             'OmnyStudio',
             'OnSizzle',
             'OraTV',
