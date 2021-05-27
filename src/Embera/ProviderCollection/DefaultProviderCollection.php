@@ -173,7 +173,6 @@ class DefaultProviderCollection extends ProviderCollectionAdapter
             'Shortnote',
             'Shoudio',
             'ShowTheWay',
-            'Simplecast',
             'Sketchfab',
             'Slideshare',
             'SmashNotes',
