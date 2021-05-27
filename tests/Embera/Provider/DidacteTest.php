@@ -21,7 +21,6 @@ final class DidacteTest extends ProviderTester
 {
     protected $tasks = array(
         'valid_urls' => array(
-            'https://easycpdlearning.didacte.com/a/course/5033/description',
             'https://ressources.didacte.com/a/course/1329/description',
             'https://finchp.didacte.com/a/course/363',
         ),
