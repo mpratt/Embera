@@ -16,6 +16,7 @@ use Embera\Url;
 
 /**
  * {provider} Provider
+ *
  * @link https://{host}
  */
 class {provider} extends ProviderAdapter implements ProviderInterface
