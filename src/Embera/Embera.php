@@ -10,7 +10,7 @@
  * file that was distributed with this source code.
  */
 
-namespace Embera
+namespace Embera;
 
 use Embera\Http\HttpClient;
 use Embera\Http\OembedClient;
