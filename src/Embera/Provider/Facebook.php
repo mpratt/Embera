@@ -24,7 +24,7 @@ use Embera\Url;
 class Facebook extends ProviderAdapter implements ProviderInterface
 {
     /** inline {@inheritdoc} */
-    protected $endpoint = 'https://graph.facebook.com/v9.0/oembed_{type}';
+    protected $endpoint = 'https://graph.facebook.com/v10.0/oembed_{type}';
 
     /** inline {@inheritdoc} */
     protected static $hosts = [
