@@ -125,6 +125,7 @@ I try to support all the providers listed on [oembed.com](https://oembed.com).
 - [Padlet](providers/Padlet.md)
 - [Pastery](providers/Pastery.md)
 - [Pinpoll](providers/Pinpoll.md)
+- [Pitchhub](providers/Pitchhub.md)
 - [Pixdor](providers/Pixdor.md)
 - [Playbuzz](providers/Playbuzz.md)
 - [Podbean](providers/Podbean.md)

@@ -6,11 +6,13 @@ Your Own Training Platform.
 ## Implementation Details
 
 - Provider
-  Name: Didacte
+Name: Didacte
 - Documentation: NONE
 - HTTPS support: YES
 - Fake Response: NO
 - Oembed Params: maxwidth , maxheight
-- Supported Hosts: \*.didacte.com
+- Supported Hosts: *.didacte.com
 - Responsive response: NO
 - Collections: DefaultProviderCollection
+
+
