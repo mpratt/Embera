@@ -145,6 +145,7 @@ class DefaultProviderCollection extends ProviderCollectionAdapter
             'Padlet',
             'Pastery',
             'Pinpoll',
+            'Pinterest',
             'Pitchhub',
             'Pixdor',
             'Playbuzz',
