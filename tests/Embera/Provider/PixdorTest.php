@@ -36,6 +36,11 @@ final class PixdorTest extends ProviderTester
 
     public function testProvider()
     {
+        $travis = (bool) getenv('TRAVIS');
+        if ($travis) {
+            $this->markTestIncomplete('Disabling this provider since it seems to have problems with the endpoint (Pixdor).');
+        }
+
         $this->validateProvider('Pixdor', [ 'width' => 480, 'height' => 270]);
     }
 }
