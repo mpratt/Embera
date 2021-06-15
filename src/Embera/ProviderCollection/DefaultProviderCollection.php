@@ -134,6 +134,7 @@ class DefaultProviderCollection extends ProviderCollectionAdapter
             'Nanoo',
             'NaturalAtlas',
             'Nfb',
+            'NFTndx',
             'NoPaste',
             'OmnyStudio',
             'OnSizzle',
