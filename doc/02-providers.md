@@ -70,6 +70,7 @@ I try to support all the providers listed on [oembed.com](https://oembed.com).
 - [Gong](providers/Gong.md)
 - [Grain](providers/Grain.md)
 - [Gyazo](providers/Gyazo.md)
+- [Hash](providers/Hash.md)
 - [Hearthis](providers/Hearthis.md)
 - [HiHaHo](providers/HiHaHo.md)
 - [HippoVideo](providers/HippoVideo.md)
