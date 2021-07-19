@@ -90,6 +90,7 @@ class DefaultProviderCollection extends ProviderCollectionAdapter
             'Gong',
             'Grain',
             'Gyazo',
+            'Hash',
             'Hearthis',
             'HiHaHo',
             'HippoVideo',
