@@ -36,6 +36,7 @@ final class ReplitTest extends ProviderTester
 
     public function testProvider()
     {
-        $this->validateProvider('Replit', [ 'width' => 480, 'height' => 270]);
+        $this->markTestSkipped('Replit no longer supports Anonymous repls ');
+        //$this->validateProvider('Replit', [ 'width' => 480, 'height' => 270]);
     }
 }

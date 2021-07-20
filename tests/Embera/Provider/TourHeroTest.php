@@ -30,6 +30,7 @@ final class TourHeroTest extends ProviderTester
 
     public function testProvider()
     {
-        $this->validateProvider('TourHero', [ 'width' => 480, 'height' => 270]);
+        $this->markTestIncomplete('Tour Hero Seems to have deprecated their endpoint. Waiting, then deleting if the issue continues.');
+        //$this->validateProvider('TourHero', [ 'width' => 480, 'height' => 270]);
     }
 }

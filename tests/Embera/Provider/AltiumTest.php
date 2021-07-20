@@ -30,7 +30,7 @@ final class AltiumTest extends ProviderTester
 
     public function testProvider()
     {
-        $this->markTestIncomplete('Altium is returning 404 on the endpoint. Waiting until it is fixed or Im removing it.');
-        //$this->validateProvider('Altium', [ 'width' => 480, 'height' => 270]);
+        $this->markTestSkipped('Altium no longer supports Anonymous urls');
+        /* $this->validateProvider('Altium', [ 'width' => 480, 'height' => 270]); */
     }
 }

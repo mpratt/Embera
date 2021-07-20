@@ -54,5 +54,4 @@ class Uppy extends ProviderAdapter implements ProviderInterface
 
         return $url;
     }
-
 }
