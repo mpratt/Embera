@@ -104,7 +104,6 @@ I try to support all the providers listed on [oembed.com](https://oembed.com).
 - [MediaLab](providers/MediaLab.md)
 - [MedienArchivKuenste](providers/MedienArchivKuenste.md)
 - [MermaidInk](providers/MermaidInk.md)
-- [Meetup](providers/Meetup.md)
 - [MessesInfo](providers/MessesInfo.md)
 - [MicrosoftStream](providers/MicrosoftStream.md)
 - [Minerva](providers/Minerva.md)
