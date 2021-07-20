@@ -19,6 +19,7 @@ use Embera\Url;
  * Cherche parmi notre catalogue les paroles des chansons chrétiennes du monde entier.
  *
  * @link https://music.enystre.com
+ * @see https://www.notion.so/oEmbed-ad1360b80d9c459b85e026cf99761c70
  * @todo Might support fake responses
  */
 class EnystreMusic extends ProviderAdapter implements ProviderInterface
