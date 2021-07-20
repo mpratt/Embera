@@ -135,6 +135,7 @@ I try to support all the providers listed on [oembed.com](https://oembed.com).
 - [PolariShare](providers/PolariShare.md)
 - [Polldaddy](providers/Polldaddy.md)
 - [Portfolium](providers/Portfolium.md)
+- [Present](providers/Present.md)
 - [Prezi](providers/Prezi.md)
 - [RadioPublic](providers/RadioPublic.md)
 - [Rcvis](providers/Rcvis.md)
