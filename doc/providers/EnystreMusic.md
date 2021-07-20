@@ -8,7 +8,7 @@ chansons chrétiennes du monde entier.
 
 - Provider
 Name: EnystreMusic
-- Documentation: NONE
+- Documentation: [https://www.notion.so/oEmbed-ad1360b80d9c459b85e026cf99761c70](https://www.notion.so/oEmbed-ad1360b80d9c459b85e026cf99761c70)
 - HTTPS support: YES
 - Fake Response: NO
 - Oembed Params: maxwidth , maxheight

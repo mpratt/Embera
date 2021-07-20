@@ -16,6 +16,7 @@ I try to support all the providers listed on [oembed.com](https://oembed.com).
 - [Audioboom](providers/Audioboom.md)
 - [AudioClip](providers/AudioClip.md)
 - [Audiomack](providers/Audiomack.md)
+- [Audiomeans](providers/Audiomeans.md)
 - [Avocode](providers/Avocode.md)
 - [Backtracks](providers/Backtracks.md)
 - [BeautifulAI](providers/BeautifulAI.md)

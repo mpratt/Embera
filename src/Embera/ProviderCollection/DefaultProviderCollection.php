@@ -36,6 +36,7 @@ class DefaultProviderCollection extends ProviderCollectionAdapter
             'Audioboom',
             'AudioClip',
             'Audiomack',
+            'Audiomeans',
             'Avocode',
             'Backtracks',
             'BeautifulAI',
