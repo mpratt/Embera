@@ -17,6 +17,8 @@ use Embera\Url;
 /**
  * Instagram Provider
  * Create an account or log in to Instagram - A simple, fun &amp; creative way to capture, edit &a...
+ * This Provider Requires the use of an access_token provided by Instagram.
+ * Example: `$embera = new Embera([ 'instagram_access_token' => 'yourtokenforinstagram' ]);`
  *
  * @link https://instagram.com
  * @see https://www.instagram.com/developer/embedding/#oembed

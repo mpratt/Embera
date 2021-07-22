@@ -2,7 +2,10 @@
 
 Facebook Provider
 Connect with friends and the world around you on
-Facebook.
+Facebook. This Provider
+Requires the use of an access_token provided by
+Facebook. Example: `$embera = new Embera([ 'facebook_access_token' =>
+'yourtokenforfacebook' ]);`
 
 ## Implementation Details
 
