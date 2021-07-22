@@ -137,6 +137,7 @@ I try to support all the providers listed on [oembed.com](https://oembed.com).
 - [Present](providers/Present.md)
 - [Prezi](providers/Prezi.md)
 - [RadioPublic](providers/RadioPublic.md)
+- [Raindrop](providers/Raindrop.md)
 - [Rcvis](providers/Rcvis.md)
 - [Reddit](providers/Reddit.md)
 - [ReleaseWire](providers/ReleaseWire.md)

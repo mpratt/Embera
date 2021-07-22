@@ -155,6 +155,7 @@ class DefaultProviderCollection extends ProviderCollectionAdapter
             'Present',
             'Prezi',
             'RadioPublic',
+            'Raindrop',
             'Rcvis',
             'Reddit',
             'ReleaseWire',
