@@ -23,6 +23,7 @@ final class SpotifyTest extends ProviderTester
         'valid_urls' => [
             'https://open.spotify.com/album/4FCuyUjOkT28PnFo6A6vkf/4K4sc36DCTp9YJNVu5zV09',
             'https://open.spotify.com/track/0Wm3w3YiMe7YiS8erpKbOl',
+            'https://open.spotify.com/show/3wBfqov60qDZbEVjPHo0a8?si=2ee16a763fd44148',
         ],
         'invalid_urls' => [
             'https://open.spotify.com/stuff/3zIzQMHvOlw3ukDhRKR2jO',
