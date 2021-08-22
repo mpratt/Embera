@@ -37,8 +37,11 @@ class KakaoTV extends ProviderAdapter implements ProviderInterface
     /** inline {@inheritdoc} */
     public function validateUrl(Url $url)
     {
-        return (bool) (preg_match('~tv\.kakao\.com/channel/(?:[vl])/(?:[^/]+)$~i', (string) $url) ||
-            preg_match('~tv\.kakao\.com/channel/([^/]+)/(live|clip)link/([^/]+)$~i', (string) $url));
+        return (bool) (
+            preg_match('~tv\.kakao\.com/channel/(?:[vl])/(?:[^/]+)$~i', (string) $url) ||
+            preg_match('~tv\.kakao\.com/channel/([^/]+)/(live|clip)link/([^/]+)$~i', (string) $url) ||
+            preg_match('~tv\.kakao\.com/m/channel/(?:[vl])/(?:[^/]+)$~i', (string) $url)
+        );
     }
 
     /** inline {@inheritdoc} */
