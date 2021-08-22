@@ -73,6 +73,9 @@ class Embera
             'height' => 0,
             'maxheight' => 0,
             'maxwidth' => 0,
+            'referer' => '',
+            'curl_params' => [],
+            'file_get_contents_params' => [],
         ], $config);
 
         $this->config['maxwidth'] = max($this->config['width'], $this->config['maxwidth']);

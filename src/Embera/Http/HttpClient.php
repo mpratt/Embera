@@ -39,6 +39,9 @@ class HttpClient implements HttpClientInterface
         $this->config = array_merge([
             'use_curl' => true,
             'user_agent' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36',
+            'referer' => '',
+            'curl_params' => [],
+            'file_get_contents_params' => []
         ], $config);
     }
 
@@ -50,10 +53,10 @@ class HttpClient implements HttpClientInterface
         }
 
         if (function_exists('curl_init') && $this->config['use_curl']) {
-            return $this->fetchWithCurl($url);
+            return $this->fetchWithCurl($url, $this->config['curl_params']);
         }
 
-        return $this->fetchWithFileGetContents($url);
+        return $this->fetchWithFileGetContents($url, $this->config['file_get_contents_params']);
     }
 
     /**
@@ -77,6 +80,10 @@ class HttpClient implements HttpClientInterface
             CURLINFO_HEADER_OUT => true,
         );
 
+        if (!empty($this->config['referer'])) {
+            $options[CURLOPT_REFERER] = $this->config['referer'];
+        }
+
         $options[CURLOPT_URL] = $url;
         $options[CURLOPT_HEADER] = true;
         $options[CURLOPT_RETURNTRANSFER] = 1;
@@ -88,7 +95,7 @@ class HttpClient implements HttpClientInterface
 
         $status = curl_getinfo($handler, CURLINFO_HTTP_CODE);
         $headerSize = curl_getinfo($handler, CURLINFO_HEADER_SIZE);
-        $headerOut = curl_getinfo($handler, CURLINFO_HEADER_OUT);
+        //$headerOut = curl_getinfo($handler, CURLINFO_HEADER_OUT);
 
         $body = substr($response, $headerSize);
         curl_close($handler);
@@ -122,6 +129,15 @@ class HttpClient implements HttpClientInterface
             'max_redirects' => 20,
             'timeout' => 40
         ], $params);
+
+        if (!empty($this->config['referer'])) {
+            $referer = 'Referer: ' . $this->config['referer'] . "\r\n";
+            if (!empty($params['header'])) {
+                $params['header'] = [ $referer ];
+            } else {
+                $params['header'][] = $referer;
+            }
+        }
 
         $context = array('http' => $params);
         if ($data = file_get_contents($url, false, stream_context_create($context))) {
