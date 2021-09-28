@@ -42,6 +42,7 @@ class Vimeo extends ProviderAdapter implements ProviderInterface
             preg_match('~vimeo\.com/channels/(?:[^/]+)/(?:[^/]+)~i', (string) $url) ||
             preg_match('~vimeo\.com/groups/(?:[^/]+)/videos/(?:[^/]+)~i', (string) $url) ||
             preg_match('~vimeo\.com/ondemand/(?:[^/]+)/(?:[^/]+)~i', (string) $url) ||
+            preg_match('~vimeo\.com/(?:[0-9]{5,})/(?:[0-9a-z]+)$~i', (string) $url) ||
             preg_match('~vimeo\.com/video/(?:[^/]+)~i', (string) $url)
         );
     }
