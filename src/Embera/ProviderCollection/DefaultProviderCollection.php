@@ -96,6 +96,7 @@ class DefaultProviderCollection extends ProviderCollectionAdapter
             'Huffduffer',
             'iFixit',
             'IHeartRadio',
+            'Imgur',
             'Infogram',
             'Infoveave',
             'Injurymap',

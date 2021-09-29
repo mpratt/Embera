@@ -77,6 +77,7 @@ I try to support all the providers listed on [oembed.com](https://oembed.com).
 - [Huffduffer](providers/Huffduffer.md)
 - [iFixit](providers/iFixit.md)
 - [IHeartRadio](providers/IHeartRadio.md)
+- [Imgur](providers/Imgur.md)
 - [Infogram](providers/Infogram.md)
 - [Infoveave](providers/Infoveave.md)
 - [Injurymap](providers/Injurymap.md)
