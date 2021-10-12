@@ -51,6 +51,7 @@ I try to support all the providers listed on [oembed.com](https://oembed.com).
 - [Embedery](providers/Embedery.md)
 - [EnystreMusic](providers/EnystreMusic.md)
 - [Ethfiddle](providers/Ethfiddle.md)
+- [EventLive](providers/EventLive.md)
 - [Eyrie](providers/Eyrie.md)
 - [Facebook](providers/Facebook.md)
 - [Fader](providers/Fader.md)

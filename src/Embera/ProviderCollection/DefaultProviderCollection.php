@@ -70,6 +70,7 @@ class DefaultProviderCollection extends ProviderCollectionAdapter
             'Embedery',
             'EnystreMusic',
             'Ethfiddle',
+            'EventLive',
             'Eyrie',
             'Facebook',
             'Fader',
