@@ -11,7 +11,7 @@ Name: Chroco
 - Fake Response: YES
 - Oembed Params: maxwidth , maxheight
 - Supported Hosts: chroco.ooo
-- Responsive response: NO
+- Responsive response: YES
 - Collections: DefaultProviderCollection
 
 
