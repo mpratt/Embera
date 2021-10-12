@@ -46,6 +46,7 @@ class DefaultProviderCollection extends ProviderCollectionAdapter
             'Ceros',
             'ChartBlocks',
             'Chirbit',
+            'Chroco',
             'CircuitLab',
             'Clyp',
             'CocoCorp',

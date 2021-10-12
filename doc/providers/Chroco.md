@@ -1,17 +1,17 @@
-# [Waltrack](https://https://waltrack.net)
+# [Chroco](https://chroco.ooo)
 
-Waltrack Provider
+Chroco Provider
 
 ## Implementation Details
 
 - Provider
-Name: Waltrack
+Name: Chroco
 - Documentation: NONE
 - HTTPS support: YES
-- Fake Response: NO
+- Fake Response: YES
 - Oembed Params: maxwidth , maxheight
-- Supported Hosts: waltrack.net
-- Responsive response: YES
+- Supported Hosts: chroco.ooo
+- Responsive response: NO
 - Collections: DefaultProviderCollection
 
 

@@ -27,6 +27,7 @@ I try to support all the providers listed on [oembed.com](https://oembed.com).
 - [Ceros](providers/Ceros.md)
 - [ChartBlocks](providers/ChartBlocks.md)
 - [Chirbit](providers/Chirbit.md)
+- [Chroco](providers/Chroco.md)
 - [CircuitLab](providers/CircuitLab.md)
 - [Clyp](providers/Clyp.md)
 - [CocoCorp](providers/CocoCorp.md)
