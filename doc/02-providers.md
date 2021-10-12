@@ -184,6 +184,7 @@ I try to support all the providers listed on [oembed.com](https://oembed.com).
 - [TikTok](providers/TikTok.md)
 - [Toornament](providers/Toornament.md)
 - [TourHero](providers/TourHero.md)
+- [TrinityAudio](providers/TrinityAudio.md)
 - [Tumblr](providers/Tumblr.md)
 - [Tuxx](providers/Tuxx.md)
 - [Tvcf](providers/Tvcf.md)
