@@ -27,7 +27,6 @@ final class YoutubeTest extends ProviderTester
             'http://youtube.com/watch?v=xVrJ8DxECbg&list=PLwnD0jwK0yymXOCl82nqdTdxe0ykVDcPW',
             'http://www.youtube.com/watch?v=WtPiGYsllos&index=1',
             'https://m.youtube.com/watch?v=mghhLqu31cQ',
-            'https://m.youtube.com/watch?v=wB3sjAIARIY',
             'http://youtube.com/embed/mghhLqu31cQ',
             'http://youtu.be/mghhLqu31cQ',
             'http://www.youtube.com/playlist?list=PLSL0f2Dh_snCsLgQ3J319RYQyctRlfJFc',
