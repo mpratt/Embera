@@ -21,7 +21,7 @@ final class RaindropTest extends ProviderTester
 {
     protected $tasks = [
         'valid_urls' => [
-            'https://raindrop.io/exentrich/design-66',
+            'https://raindrop.io/exentrich/japan-trip-10555866'
         ],
         'invalid_urls' => [
             'https://raindrop.io/',
