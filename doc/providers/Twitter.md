@@ -7,7 +7,7 @@ No description.
 
 - Provider
 Name: Twitter
-- Documentation: [https://developer.twitter.com/en/docs/tweets/post-and-engage/api-reference/get-statuses-oembed](https://developer.twitter.com/en/docs/tweets/post-and-engage/api-reference/get-statuses-oembed)
+- Documentation: [https://developer.twitter.com/en/docs/twitter-for-websites/oembed-api](https://developer.twitter.com/en/docs/twitter-for-websites/oembed-api)
 - HTTPS support: YES
 - Fake Response: NO
 - Oembed Params: maxwidth , maxheight , hide_media , hide_thread , omit_script , align , related , lang , theme , link_color , widget_type , dnt

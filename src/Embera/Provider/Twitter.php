@@ -19,7 +19,7 @@ use Embera\Url;
  * No description.
  *
  * @link https://twitter.com
- * @see https://developer.twitter.com/en/docs/tweets/post-and-engage/api-reference/get-statuses-oembed
+ * @see https://developer.twitter.com/en/docs/twitter-for-websites/oembed-api
  */
 class Twitter extends ProviderAdapter implements ProviderInterface
 {
