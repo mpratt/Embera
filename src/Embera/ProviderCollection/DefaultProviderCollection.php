@@ -220,6 +220,7 @@ class DefaultProviderCollection extends ProviderCollectionAdapter
             'Vlipsy',
             'Vlive',
             'WaveVideo',
+            'Waltrack',
             'WolframCloud',
             'VoxSnap',
             'Wistia',
