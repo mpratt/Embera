@@ -36,7 +36,7 @@ class Chroco extends ProviderAdapter implements ProviderInterface
     protected $httpsSupport = true;
 
     /** inline {@inheritdoc} */
-    protected $responsiveSupport = false;
+    protected $responsiveSupport = true;
 
     /** inline {@inheritdoc} */
     public function validateUrl(Url $url)
