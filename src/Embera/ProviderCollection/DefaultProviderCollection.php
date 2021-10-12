@@ -191,6 +191,7 @@ class DefaultProviderCollection extends ProviderCollectionAdapter
             'SproutVideo',
             'StandfordDigitalRepository',
             'Streamable',
+            'Streamio',
             'Subscribi',
             'Sudomemo',
             'Sutori',

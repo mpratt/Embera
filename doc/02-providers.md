@@ -173,6 +173,7 @@ I try to support all the providers listed on [oembed.com](https://oembed.com).
 - [SproutVideo](providers/SproutVideo.md)
 - [StandfordDigitalRepository](providers/StandfordDigitalRepository.md)
 - [Streamable](providers/Streamable.md)
+- [Streamio](providers/Streamio.md)
 - [Subscribi](providers/Subscribi.md)
 - [Sudomemo](providers/Sudomemo.md)
 - [Sutori](providers/Sutori.md)
