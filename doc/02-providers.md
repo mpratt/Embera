@@ -189,6 +189,7 @@ I try to support all the providers listed on [oembed.com](https://oembed.com).
 - [Twitter](providers/Twitter.md)
 - [Typecast](providers/Typecast.md)
 - [Typlog](providers/Typlog.md)
+- [UAPod](providers/UAPod.md)
 - [UniversitePantheonSorbonne](providers/UniversitePantheonSorbonne.md)
 - [UniversityCambridgeMap](providers/UniversityCambridgeMap.md)
 - [UpecPod](providers/UpecPod.md)

@@ -207,6 +207,7 @@ class DefaultProviderCollection extends ProviderCollectionAdapter
             'Twitter',
             'Typecast',
             'Typlog',
+            'UAPod',
             'UniversitePantheonSorbonne',
             'UniversityCambridgeMap',
             'UpecPod',
