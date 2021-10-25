@@ -34,8 +34,6 @@ final class CodeHSTest extends ProviderTester
 
     public function testProvider()
     {
-
-        $this->markTestIncomplete('CodeHS is returning 403 on the endpoint. Waiting until it is fixed or Im removing it.');
-        //$this->validateProvider('CodeHS', [ 'width' => 480, 'height' => 270]);
+        $this->validateProvider('CodeHS', [ 'width' => 480, 'height' => 270]);
     }
 }
