@@ -46,8 +46,8 @@ class Instagram extends ProviderAdapter implements ProviderInterface
     public function validateUrl(Url $url)
     {
         return (bool) (
-            preg_match('~(instagram\.com|instagr\.am)/(?:p|tv)/([^/]+)/?$~i', (string) $url) ||
-            preg_match('~(instagram\.com|instagr\.am)/([^/]+)/(?:p|tv)/([^/]+)/?$~i', (string) $url)
+            preg_match('~(instagram\.com|instagr\.am)/(?:p|tv|reel)/([^/]+)/?$~i', (string) $url) ||
+            preg_match('~(instagram\.com|instagr\.am)/([^/]+)/(?:p|tv|reel)/([^/]+)/?$~i', (string) $url)
         );
     }
 
