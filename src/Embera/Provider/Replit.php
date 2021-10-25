@@ -24,11 +24,12 @@ use Embera\Url;
 class Replit extends ProviderAdapter implements ProviderInterface
 {
     /** inline {@inheritdoc} */
-    protected $endpoint = 'https://repl.it/data/oembed/?format=json';
+    protected $endpoint = 'https://replit.com/data/oembed/?format=json';
 
     /** inline {@inheritdoc} */
     protected static $hosts = [
-        'repl.it'
+        'repl.it',
+        'replit.com'
     ];
 
     /** inline {@inheritdoc} */
@@ -37,7 +38,7 @@ class Replit extends ProviderAdapter implements ProviderInterface
     /** inline {@inheritdoc} */
     public function validateUrl(Url $url)
     {
-        return (bool) (preg_match('~repl\.it/([^/]+)/([^/]+)$~i', (string) $url));
+        return (bool) (preg_match('~(repl\.it|replit\.com)/([^/]+)/([^/]+)$~i', (string) $url));
     }
 
     /** inline {@inheritdoc} */
@@ -65,7 +66,7 @@ class Replit extends ProviderAdapter implements ProviderInterface
         return [
             'type' => 'rich',
             'provider_name' => 'Replit',
-            'provider_url' => 'https://repl.it',
+            'provider_url' => 'https://replit.com',
             'title' => 'Unknown title',
             'html' => '<iframe ' . implode(' ', $attr). '></iframe>',
         ];
