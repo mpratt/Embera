@@ -13,6 +13,12 @@
             "role": "Author/Developer"
         }
     ],
+    "funding": [
+        {
+            "type": "paypal",
+            "url": "https://paypal.me/mtpratt"
+        }
+    ],
     "require": {
         "php": ">=5.6",
         "ext-json": "*"
@@ -31,6 +37,7 @@
         "psr-4": {"Embera\\": "tests/Embera"}
     },
     "scripts": {
-        "test": "phpunit"
+        "test": "phpunit",
+        "analyse": "phpstan analyse Lib --level=4 --no-progress"
     }
 }
