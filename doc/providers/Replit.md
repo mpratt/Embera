@@ -12,7 +12,7 @@ Name: Replit
 - HTTPS support: YES
 - Fake Response: YES
 - Oembed Params: maxwidth , maxheight
-- Supported Hosts: repl.it
+- Supported Hosts: repl.it , replit.com
 - Responsive response: NO
 - Collections: DefaultProviderCollection
 
