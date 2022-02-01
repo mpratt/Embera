@@ -21,9 +21,7 @@ final class LillePodTest extends ProviderTester
 {
     protected $tasks = [
         'valid_urls' => [
-            'https://pod.univ-lille.fr/video/7056-weo-annonce-sth-2019/',
-            'https://pod.univ-lille.fr/video/7033-match-de-foot-etudiants-professeurs-faculte-de-pharmacie-annees-60/',
-            'https://pod.univ-lille.fr/video/7029-ue-culture-numerique-scenario-dusage-presentation-sous-canva/',
+            'https://pod.univ-lille.fr/video/24647-blacks-vets-episode-2-the-job-interview-channel-4mp4/'
         ],
         'invalid_urls' => [
             'https://pod.univ-lille.fr/',
