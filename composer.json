@@ -18,10 +18,11 @@
         "ext-json": "*"
     },
     "require-dev": {
-        "phpunit/phpunit": "^9.0"
+        "phpunit/phpunit": "^9.0",
+        "phpstan/phpstan": "^1.4"
     },
     "suggest": {
-        "ext-curl": "Allow to fetch data using curl instead of using file_get_contents"
+        "ext-curl": "Fetch data using curl instead of using file_get_contents"
     },
     "autoload": {
         "psr-4": {"Embera\\": "src/Embera"}
