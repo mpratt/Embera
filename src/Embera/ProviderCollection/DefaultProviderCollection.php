@@ -200,6 +200,7 @@ class DefaultProviderCollection extends ProviderCollectionAdapter
             'Ustudio',
             'Veer',
             'Verse',
+            'VidMount',
             'Videfit',
             'Vidyard',
             'Vimeo',
