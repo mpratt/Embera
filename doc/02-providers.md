@@ -37,6 +37,7 @@ I try to support all the providers listed on [oembed.com](https://oembed.com).
 - [CodeSandbox](providers/CodeSandbox.md)
 - [Commaful](providers/Commaful.md)
 - [Coub](providers/Coub.md)
+- [Crumbs](providers/Crumbs.md)
 - [Cueup](providers/Cueup.md)
 - [Curated](providers/Curated.md)
 - [Datawrapper](providers/Datawrapper.md)

@@ -55,6 +55,7 @@ class DefaultProviderCollection extends ProviderCollectionAdapter
             'CodeSandbox',
             'Commaful',
             'Coub',
+            'Crumbs',
             'Cueup',
             'Curated',
             'Datawrapper',
