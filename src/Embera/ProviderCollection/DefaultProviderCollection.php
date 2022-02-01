@@ -90,6 +90,7 @@ class DefaultProviderCollection extends ProviderCollectionAdapter
             'Giphy',
             'GloriaTV',
             'Gong',
+            'Gmetri',
             'Grain',
             'Gyazo',
             'Hash',
