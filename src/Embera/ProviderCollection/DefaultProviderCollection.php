@@ -134,6 +134,7 @@ class DefaultProviderCollection extends ProviderCollectionAdapter
             'Nfb',
             'NFTndx',
             'NoPaste',
+            'Odysee',
             'OmnyStudio',
             'OnSizzle',
             'OraTV',
