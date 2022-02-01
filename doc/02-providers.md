@@ -174,6 +174,7 @@ I try to support all the providers listed on [oembed.com](https://oembed.com).
 - [Sudomemo](providers/Sudomemo.md)
 - [Sutori](providers/Sutori.md)
 - [Sway](providers/Sway.md)
+- [Synthesia](providers/Synthesia.md)
 - [Ted](providers/Ted.md)
 - [TheNewYorkTimes](providers/TheNewYorkTimes.md)
 - [Tickcounter](providers/Tickcounter.md)
