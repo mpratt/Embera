@@ -156,6 +156,7 @@ I try to support all the providers listed on [oembed.com](https://oembed.com).
 - [Sketchfab](providers/Sketchfab.md)
 - [Slideshare](providers/Slideshare.md)
 - [SmashNotes](providers/SmashNotes.md)
+- [Smrthi](providers/Smrthi.md)
 - [Smugmug](providers/Smugmug.md)
 - [SocialExplorer](providers/SocialExplorer.md)
 - [SongLink](providers/SongLink.md)
