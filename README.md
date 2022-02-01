@@ -1,7 +1,9 @@
 # Embera - PHP Oembed consumer library
 
-[![Build Status](https://api.travis-ci.com/mpratt/embera.svg?branch=master)](https://travis-ci.com/mpratt/embera)
-[![Total Downloads](https://img.shields.io/packagist/dt/mpratt/embera.svg)](https://packagist.org/packages/mpratt/embera)
+
+[![Build Status](https://github.com/mpratt/Embera/actions/workflows/tests.yml/badge.svg?branch=master)](https://github.com/mpratt/Embera/actions)
+[![Total Downloads](https://img.shields.io/packagist/dt/mpratt/embera.svg)](https://packagist.org/packages/mpratt/embrea)
+[![Monthly Downloads](https://img.shields.io/packagist/dm/mpratt/embera)](https://packagist.org/packages/mpratt/embera)
 [![Latest Stable Version](https://img.shields.io/packagist/v/mpratt/embera.svg)](https://packagist.org/packages/mpratt/embera)
 
 [![Support via PayPal](https://cdn.rawgit.com/twolfson/paypal-github-button/1.0.0/dist/button.svg)](https://paypal.me/mtpratt)
