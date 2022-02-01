@@ -45,6 +45,7 @@ class DefaultProviderCollection extends ProviderCollectionAdapter
             'Blogcast','Buttondown',
             'Byzart',
             'Ceros',
+            'Chainflix',
             'ChartBlocks',
             'Chirbit',
             'Chroco',

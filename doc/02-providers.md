@@ -26,6 +26,7 @@ I try to support all the providers listed on [oembed.com](https://oembed.com).
 - [Buttondown](providers/Buttondown.md)
 - [Byzart](providers/Byzart.md)
 - [Ceros](providers/Ceros.md)
+- [Chainflix](providers/Chainflix.md)
 - [ChartBlocks](providers/ChartBlocks.md)
 - [Chirbit](providers/Chirbit.md)
 - [Chroco](providers/Chroco.md)
