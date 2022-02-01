@@ -193,6 +193,7 @@ I try to support all the providers listed on [oembed.com](https://oembed.com).
 - [Ustudio](providers/Ustudio.md)
 - [Veer](providers/Veer.md)
 - [Verse](providers/Verse.md)
+- [Videfit](providers/Videfit.md)
 - [Vidyard](providers/Vidyard.md)
 - [Vimeo](providers/Vimeo.md)
 - [Viously](providers/Viously.md)
