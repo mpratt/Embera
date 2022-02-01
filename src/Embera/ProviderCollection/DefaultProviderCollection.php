@@ -58,6 +58,7 @@ class DefaultProviderCollection extends ProviderCollectionAdapter
             'Curated',
             'Datawrapper',
             'DailyMotion',
+            'Dalexni',
             'Deseretnews',
             'Deviantart',
             'Didacte',
