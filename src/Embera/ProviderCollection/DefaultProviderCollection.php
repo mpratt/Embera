@@ -26,6 +26,7 @@ class DefaultProviderCollection extends ProviderCollectionAdapter
             'TwentyThreeHq',
             'ActBlue',
             'Adways',
+            'Afreecatv',
             'Altru',
             'Altium',
             'AmCharts',

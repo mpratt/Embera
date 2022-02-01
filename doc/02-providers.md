@@ -6,6 +6,7 @@ I try to support all the providers listed on [oembed.com](https://oembed.com).
 - [TwentyThreeHq](providers/TwentyThreeHq.md)
 - [ActBlue](providers/ActBlue.md)
 - [Adways](providers/Adways.md)
+- [Afreecatv](providers/Afreecatv.md)
 - [Altru](providers/Altru.md)
 - [Altium](providers/Altium.md)
 - [AmCharts](providers/AmCharts.md)
