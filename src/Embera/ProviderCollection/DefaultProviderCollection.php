@@ -108,6 +108,7 @@ class DefaultProviderCollection extends ProviderCollectionAdapter
             'KakaoTV',
             'Kickstarter','KirimEmail',
             'Kit',
+            'Kooapp',
             'Kmdr',
             'Knacki',
             'LearningApps',

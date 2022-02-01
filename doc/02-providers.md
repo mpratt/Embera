@@ -93,6 +93,7 @@ I try to support all the providers listed on [oembed.com](https://oembed.com).
 - [Kidoju](providers/Kidoju.md)
 - [KirimEmail](providers/KirimEmail.md)
 - [Kit](providers/Kit.md)
+- [Kooapp](providers/Kooapp.md)
 - [Kmdr](providers/Kmdr.md)
 - [Knacki](providers/Knacki.md)
 - [LearningApps](providers/LearningApps.md)
