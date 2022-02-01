@@ -24,7 +24,7 @@ use Embera\Url;
 class Wordpress extends ProviderAdapter implements ProviderInterface
 {
     /** inline {@inheritdoc} */
-    protected $endpoint = 'http://public-api.wordpress.com/oembed/?format=json&for=embera';
+    protected $endpoint = 'https://public-api.wordpress.com/oembed/?format=json&for=embera';
 
     /** inline {@inheritdoc} */
     protected static $hosts = [
