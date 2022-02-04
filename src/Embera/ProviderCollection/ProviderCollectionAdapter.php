@@ -100,7 +100,7 @@ abstract class ProviderCollectionAdapter implements ProviderCollectionInterface
     {
         foreach ((array) $names as $name) {
             if ($prefix) {
-                $name = self::getProviderClassFqn($name);
+                $name = $this->getProviderClassFqn($name);
             }
 
             $hosts = $name::getHosts();
@@ -190,7 +190,7 @@ abstract class ProviderCollectionAdapter implements ProviderCollectionInterface
     protected function initializeProvider($class, $url)
     {
         if (strpos($class, '\\') === false) {
-            $class = self::getProviderClassFqn($class);
+            $class = $this->getProviderClassFqn($class);
         }
 
         $reflection = new ReflectionClass($class);
@@ -203,20 +203,22 @@ abstract class ProviderCollectionAdapter implements ProviderCollectionInterface
 
         return $provider;
     }
-    
+
     /**
      * Get the full qualified class name for a given provider name. E.g. `YouTube` => `Embera\Provider\YouTube`
      *
      * @param string $name
      * @return string
      */
-    public static function getProviderClassFqn($name)
+    protected function getProviderClassFqn($name)
     {
         $providerFqn = explode('\\', __NAMESPACE__);
         array_pop($providerFqn);
+
         $providerFqn[] = 'Provider';
         $providerFqn[] = $name;
-        return join('\\', $providerFqn);
+
+        return implode('\\', $providerFqn);
     }
 
 }
