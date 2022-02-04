@@ -38,6 +38,6 @@
     },
     "scripts": {
         "test": "phpunit",
-        "analyse": "phpstan analyse Lib --level=4 --no-progress"
+        "analyse": "phpstan analyse src --level=4 --no-progress"
     }
 }
