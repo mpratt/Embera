@@ -100,7 +100,7 @@ class Embera
     /**
      * Embeds known/available services into the given text.
      *
-     * @param string $text
+     * @param mixed $text
      * @return string
      */
     public function autoEmbed($text)

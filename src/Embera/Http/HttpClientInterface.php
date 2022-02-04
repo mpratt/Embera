@@ -31,7 +31,7 @@ interface HttpClientInterface
      *
      * @param string $url
      * @param array $params Additional parameters for the respective part
-     * @return string
+     * @return string|bool
      *
      * @throws \Exception when an error ocurred or if no way to do a request exists
      */
