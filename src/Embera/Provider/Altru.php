@@ -52,6 +52,7 @@ class Altru extends ProviderAdapter implements ProviderInterface
     /** inline {@inheritdoc} */
     public function getFakeResponse()
     {
+        $embedUrl = '';
         if (preg_match('~answer_id=([0-9]+)~i', (string) $this->url, $matches)) {
             $embedUrl = 'https://api.altrulabs.com/api/v1/social/embed_player/' . $matches['1'];
         } else if (preg_match('~/player/([0-9]+)~i', (string) $this->url, $matches)) {
