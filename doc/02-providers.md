@@ -41,6 +41,7 @@ I try to support all the providers listed on [oembed.com](https://oembed.com).
 - [Crumbs](providers/Crumbs.md)
 - [Cueup](providers/Cueup.md)
 - [Curated](providers/Curated.md)
+- [Dadan](providers/Dadan.md)
 - [Datawrapper](providers/Datawrapper.md)
 - [DailyMotion](providers/DailyMotion.md)
 - [Dalexni](providers/Dalexni.md)

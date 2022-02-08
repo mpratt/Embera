@@ -59,6 +59,7 @@ class DefaultProviderCollection extends ProviderCollectionAdapter
             'Crumbs',
             'Cueup',
             'Curated',
+            'Dadan',
             'Datawrapper',
             'DailyMotion',
             'Dalexni',
