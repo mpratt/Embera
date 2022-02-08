@@ -38,7 +38,7 @@ jobs:
       run: php --version
 
     - name: Execute tests via PHPUnit
-      run: composer test
+      run: composer test-github
 
     - name: Execute Code Analysis via PHP Stan
       run: composer analyse

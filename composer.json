@@ -37,7 +37,8 @@
         "psr-4": {"Embera\\": "tests/Embera"}
     },
     "scripts": {
-        "test": "phpunit -v -c phpunit-github.xml",
+        "test": "phpunit -v",
+        "test-github": "phpunit -v -c phpunit-github.xml",
         "analyse": "phpstan analyse src --level=5 --no-progress"
     }
 }
