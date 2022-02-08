@@ -65,7 +65,7 @@ class ProviderTester extends TestCase
     {
         $rounds = 1000;
         $validateRealResponse = true;
-        if ((bool) getenv('TRAVIS')) {
+        if (defined('GITHUBTESTS')) {
             $rounds = 1;
             $validateRealResponse = false;
         }

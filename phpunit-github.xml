@@ -14,6 +14,6 @@
 
     <php>
         <ini name="date.timezone" value="UTC"/>
-        <const name="GITHUB" value="1"/>
+        <const name="GITHUBTESTS" value="1"/>
     </php>
 </phpunit>
