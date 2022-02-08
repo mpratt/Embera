@@ -27,14 +27,14 @@ class OembedClient
     /** @var array Configuration settings */
     protected $config = [];
 
-    /** @var Http\HttpClient */
+    /** @var Http\HttpClientInterface */
     protected $http;
 
     /**
      * Construct
      *
      * @param array $config
-     * @param Http\HttpClient $http
+     * @param HttpClientInterface $http
      * @return void
      */
     public function __construct($config, HttpClientInterface $http)
