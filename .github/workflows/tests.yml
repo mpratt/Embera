@@ -39,6 +39,3 @@ jobs:
 
     - name: Execute tests via PHPUnit
       run: composer test-github
-
-    - name: Execute Code Analysis via PHP Stan
-      run: composer analyse

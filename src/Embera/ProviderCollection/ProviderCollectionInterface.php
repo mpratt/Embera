@@ -19,6 +19,15 @@ interface ProviderCollectionInterface
 {
     /**
      * Sets the configuration array for this object
+     * Basically an alias for the setConfig method.
+     *
+     * @param array $config  Associative array with configuration options
+     * @return void
+     */
+ //   public function __construct(array $config = []);
+
+    /**
+     * Sets the configuration array for this object
      *
      * @param array $config  Associative array with configuration options
      * @return void

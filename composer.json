@@ -39,6 +39,6 @@
     "scripts": {
         "test": "phpunit -v",
         "test-github": "phpunit -v -c phpunit-github.xml",
-        "analyse": "phpstan analyse src --level=5 --no-progress"
+        "analyse": "phpstan analyse src --level=4 --no-progress"
     }
 }
