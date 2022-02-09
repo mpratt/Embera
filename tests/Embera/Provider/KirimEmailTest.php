@@ -35,7 +35,7 @@ final class KirimEmailTest extends ProviderTester
 
     public function testProvider()
     {
-        if (defined('GITHUBTEST')) {
+        if (defined('GITHUBTESTS')) {
             $this->markTestIncomplete('Provider KirimEmail doesnt play well when testing on github. Test Locally please.');
         } else {
             $this->validateProvider('KirimEmail', [ 'width' => 480, 'height' => 270]);
