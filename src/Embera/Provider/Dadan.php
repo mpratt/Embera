@@ -26,7 +26,8 @@ class Dadan extends ProviderAdapter implements ProviderInterface
 
     /** inline {@inheritdoc} */
     protected static $hosts = [
-        'app.dadan.io'
+        'app.dadan.io',
+        'stage.dadan.io'
     ];
 
     /** inline {@inheritdoc} */
