@@ -21,7 +21,7 @@ final class GmetriTest extends ProviderTester
 {
     protected $tasks = [
         'valid_urls' => [
-            'https://view.gmetri.com/v5/game/safehands_v2',
+            'https://game.gmetri.com/safehands_v2',
         ],
         'invalid_urls' => [
             'https://view.gmetri.com',

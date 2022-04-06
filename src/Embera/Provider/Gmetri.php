@@ -22,11 +22,11 @@ use Embera\Url;
 class Gmetri extends ProviderAdapter implements ProviderInterface
 {
     /** inline {@inheritdoc} */
-    protected $endpoint = 'https://z5-viewer-socket.in.gmetri.com/oembed/?format=json';
+    protected $endpoint = 'https://embed.gmetri.com/oembed/?format=json';
 
     /** inline {@inheritdoc} */
     protected static $hosts = [
-        'view.gmetri.com'
+        '*.gmetri.com'
     ];
 
     /** inline {@inheritdoc} */
@@ -53,5 +53,4 @@ class Gmetri extends ProviderAdapter implements ProviderInterface
 
         return $url;
     }
-
 }
