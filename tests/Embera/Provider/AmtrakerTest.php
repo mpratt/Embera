@@ -21,7 +21,7 @@ final class AmtrakerTest extends ProviderTester
 {
     protected $tasks = [
         'valid_urls' => [
-            'https://amtraker.com/view.html?train=123456',
+            'https://amtraker.com/trains/9999',
         ],
         'invalid_urls' => [
             'https://amtraker.com',

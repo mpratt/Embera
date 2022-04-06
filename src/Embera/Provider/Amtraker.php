@@ -23,14 +23,12 @@ use Embera\Url;
 class Amtraker extends ProviderAdapter implements ProviderInterface
 {
     /** inline {@inheritdoc} */
-    protected $endpoint = 'https://api.amtrak.cc/v2/oembed?format=json';
+    protected $endpoint = 'https://api.amtraker.com/v2/oembed?format=json';
 
     /** inline {@inheritdoc} */
     protected static $hosts = [
-        '*.amtraker.com',
-        'whereismytrain.us',
-        'whereismyfuckingtrain.com',
-        'amtrak.cc',
+        'amtraker.com',
+        'beta.amtraker.com'
     ];
 
     /** inline {@inheritdoc} */
@@ -45,7 +43,7 @@ class Amtraker extends ProviderAdapter implements ProviderInterface
     /** inline {@inheritdoc} */
     public function validateUrl(Url $url)
     {
-        return (bool) (preg_match('~/view\.html\?([^/]+)~i', (string) $url));
+        return (bool) (preg_match('~amtraker\.com/trains/([^/]+)~i', (string) $url));
     }
 
     /** inline {@inheritdoc} */
@@ -53,7 +51,6 @@ class Amtraker extends ProviderAdapter implements ProviderInterface
     {
         $url->convertToHttps();
         $url->removeLastSlash();
-
         return $url;
     }
 }
