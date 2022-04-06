@@ -87,6 +87,7 @@ I try to support all the providers listed on [oembed.com](https://oembed.com).
 - [iFixit](providers/iFixit.md)
 - [IHeartRadio](providers/IHeartRadio.md)
 - [Imgur](providers/Imgur.md)
+- [Incredible](providers/Incredible.md)
 - [Infogram](providers/Infogram.md)
 - [Infoveave](providers/Infoveave.md)
 - [Injurymap](providers/Injurymap.md)
