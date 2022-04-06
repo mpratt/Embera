@@ -21,8 +21,7 @@ final class OverflowIOTest extends ProviderTester
 {
     protected $tasks = [
         'valid_urls' => [
-            'https://overflow.io/s/9ST7SX/?node=fbbd1128',
-            'https://overflow.io/s/Z6NGTY/?node=a9045880',
+            'https://overflow.io/s/W2U581Q9?node=ea0b2b6b'
         ],
         'invalid_urls' => [
             'https://overflow.io/',

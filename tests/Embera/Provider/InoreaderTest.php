@@ -35,6 +35,7 @@ final class InoreaderTest extends ProviderTester
 
     public function testProvider()
     {
-        $this->validateProvider('Inoreader', [ 'width' => 480, 'height' => 270]);
+        $this->markTestSkipped('Skipping Inoreader since there are no public urls and it seems as the endpoint is offline. If this continues, the provider is going to be deleted');
+        //$this->validateProvider('Inoreader', [ 'width' => 480, 'height' => 270]);
     }
 }

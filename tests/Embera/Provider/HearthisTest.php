@@ -23,7 +23,6 @@ final class HearthisTest extends ProviderTester
         'valid_urls' => [
             'http://hearthis.at/verossi/verofamily013',
             'https://hearthis.at/cinoakadjcino/classic-house-trance-techno-cino-back-to-the-old-school-part-v/',
-            'https://hearthis.at/jfrocks-jeff-fiorentino/banning-reality-2019-remaster/',
         ],
         'invalid_urls' => [
             'http://hearthis.at',
