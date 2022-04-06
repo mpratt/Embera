@@ -21,7 +21,7 @@ final class GrainTest extends ProviderTester
 {
     protected $tasks = [
         'valid_urls' => [
-            'https://grain.co/highlight/tZUKIxcZAPaqa0Gzkgw1glKRfBPjcVo5',
+            'https://grain.co/share/highlight/tZUKIxcZAPaqa0Gzkgw1glKRfBPjcVo5',
         ],
         'invalid_urls' => [
             'https://grain.co/',

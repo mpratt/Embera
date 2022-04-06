@@ -24,11 +24,11 @@ use Embera\Url;
 class Grain extends ProviderAdapter implements ProviderInterface
 {
     /** inline {@inheritdoc} */
-    protected $endpoint = 'http://api.grain.co/_/api/oembed?format=json';
+    protected $endpoint = 'http://api.grain.com/_/api/oembed?format=json';
 
     /** inline {@inheritdoc} */
     protected static $hosts = [
-        'grain.co'
+        'grain.com', 'grain.co'
     ];
 
     /** inline {@inheritdoc} */
@@ -43,7 +43,7 @@ class Grain extends ProviderAdapter implements ProviderInterface
     /** inline {@inheritdoc} */
     public function validateUrl(Url $url)
     {
-        return (bool) (preg_match('~grain\.co/highlight/([^/]+)~i', (string) $url));
+        return (bool) (preg_match('~grain\.com?/share/([^/]+)~i', (string) $url));
     }
 
     /** inline {@inheritdoc} */
