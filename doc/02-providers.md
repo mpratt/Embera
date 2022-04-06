@@ -211,6 +211,7 @@ I try to support all the providers listed on [oembed.com](https://oembed.com).
 - [Vlipsy](providers/Vlipsy.md)
 - [Vlive](providers/Vlive.md)
 - [WaveVideo](providers/WaveVideo.md)
+- [Wecandeo](providers/Wecandeo.md)
 - [Waltrack](providers/Waltrack.md)
 - [WolframCloud](providers/WolframCloud.md)
 - [VoxSnap](providers/VoxSnap.md)

@@ -10,7 +10,7 @@ Name: Dadan
 - HTTPS support: YES
 - Fake Response: NO
 - Oembed Params: maxwidth , maxheight
-- Supported Hosts: app.dadan.io
+- Supported Hosts: app.dadan.io , stage.dadan.io
 - Responsive response: NO
 - Collections: DefaultProviderCollection
 

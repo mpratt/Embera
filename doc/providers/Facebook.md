@@ -14,7 +14,7 @@ Name: Facebook
 - Documentation: [https://developers.facebook.com/docs/plugins/oembed-endpoints](https://developers.facebook.com/docs/plugins/oembed-endpoints)
 - HTTPS support: YES
 - Fake Response: NO
-- Oembed Params: maxwidth , maxheight , callback , omitscript , breaking_change , access_token , fields
+- Oembed Params: maxwidth , maxheight , callback , omitscript , breaking_change , access_token , fields , locale
 - Supported Hosts: facebook.com
 - Responsive response: YES
 - Collections: DefaultProviderCollection , SlimProviderCollection

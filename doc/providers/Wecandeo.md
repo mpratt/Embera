@@ -1,16 +1,16 @@
-# [Gmetri](https://gmetri.com)
+# [Wecandeo](https://play.wecandeo.com)
 
-Gmetri Provider
+Wecandeo Provider
 
 ## Implementation Details
 
 - Provider
-Name: Gmetri
+Name: Wecandeo
 - Documentation: NONE
 - HTTPS support: YES
 - Fake Response: NO
 - Oembed Params: maxwidth , maxheight
-- Supported Hosts: *.gmetri.com
+- Supported Hosts: play.wecandeo.com
 - Responsive response: NO
 - Collections: DefaultProviderCollection
 

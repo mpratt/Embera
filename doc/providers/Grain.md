@@ -12,7 +12,7 @@ Name: Grain
 - HTTPS support: YES
 - Fake Response: NO
 - Oembed Params: maxwidth , maxheight
-- Supported Hosts: grain.co
+- Supported Hosts: grain.com , grain.co
 - Responsive response: NO
 - Collections: DefaultProviderCollection
 

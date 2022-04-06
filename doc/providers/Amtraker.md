@@ -10,7 +10,7 @@ Name: Amtraker
 - HTTPS support: YES
 - Fake Response: NO
 - Oembed Params: maxwidth , maxheight
-- Supported Hosts: *.amtraker.com , whereismytrain.us , whereismyfuckingtrain.com , amtrak.cc
+- Supported Hosts: amtraker.com , beta.amtraker.com
 - Responsive response: NO
 - Collections: DefaultProviderCollection
 
