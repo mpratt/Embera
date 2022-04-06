@@ -132,6 +132,7 @@ I try to support all the providers listed on [oembed.com](https://oembed.com).
 - [Outplayed](providers/Outplayed.md)
 - [OverflowIO](providers/OverflowIO.md)
 - [Padlet](providers/Padlet.md)
+- [Pandavideo](providers/Pandavideo.md)
 - [Pastery](providers/Pastery.md)
 - [Pinpoll](providers/Pinpoll.md)
 - [Pinterest](providers/Pinterest.md)

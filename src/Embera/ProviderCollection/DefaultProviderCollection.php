@@ -146,6 +146,7 @@ class DefaultProviderCollection extends ProviderCollectionAdapter
             'Orbitvu',
             'Outplayed',
             'OverflowIO','Padlet',
+            'Pandavideo',
             'Pastery',
             'Pinpoll',
             'Pinterest',
