@@ -39,6 +39,7 @@ class Youtube extends ProviderAdapter implements ProviderInterface
     {
         return (bool) (
             preg_match('~v=(?:[a-z0-9_\-]+)~i', (string) $url) ||
+            preg_match('~/shorts/(?:[a-z0-9_\-]+)~i', (string) $url) ||
             preg_match('~/playlist(.+)list=(?:[a-z0-9_\-]+)~i', (string) $url)
         );
     }
@@ -56,7 +57,7 @@ class Youtube extends ProviderAdapter implements ProviderInterface
     /** inline {@inheritdoc} */
     public function getFakeResponse()
     {
-        if (preg_match('~v=([a-z0-9_\-]+)~i', (string) $this->url, $matches)) {
+        if (preg_match('~v=([a-z0-9_\-]+)~i', (string) $this->url, $matches) || preg_match('~/shorts/([^/]+)~i', (string) $this->url, $matches)) {
             $embedUrl = 'https://www.youtube.com/embed/' . $matches['1'] . '?feature=oembed';
         } else if (preg_match('~/playlist(.+)list=([a-z0-9_\-]+)~i', (string) $this->url, $matches)) {
             $embedUrl = 'https://www.youtube.com/embed/videoseries?list=' . $matches['1'];
