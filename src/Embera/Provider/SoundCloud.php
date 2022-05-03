@@ -28,7 +28,8 @@ class SoundCloud extends ProviderAdapter implements ProviderInterface
 
     /** inline {@inheritdoc} */
     protected static $hosts = [
-        'soundcloud.com'
+        'soundcloud.com',
+        'api.soundcloud.com'
     ];
 
     /** inline {@inheritdoc} */
