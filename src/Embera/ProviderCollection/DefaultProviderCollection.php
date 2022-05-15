@@ -125,6 +125,7 @@ class DefaultProviderCollection extends ProviderCollectionAdapter
             'Libsyn',
             'LillePod',
             'Livestream',
+            'LocalVoicesNetwork',
             'Loom',
             'LottieFiles',
             'Ludus',

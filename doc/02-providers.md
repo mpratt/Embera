@@ -107,6 +107,7 @@ I try to support all the providers listed on [oembed.com](https://oembed.com).
 - [Libsyn](providers/Libsyn.md)
 - [LillePod](providers/LillePod.md)
 - [Livestream](providers/Livestream.md)
+- [LocalVoicesNetwork](providers/LocalVoicesNetwork.md)
 - [Loom](providers/Loom.md)
 - [LottieFiles](providers/LottieFiles.md)
 - [Ludus](providers/Ludus.md)
