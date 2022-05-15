@@ -2,7 +2,7 @@
 
 
 [![Build Status](https://github.com/mpratt/Embera/actions/workflows/tests.yml/badge.svg?branch=master)](https://github.com/mpratt/Embera/actions)
-[![Total Downloads](https://img.shields.io/packagist/dt/mpratt/embera.svg)](https://packagist.org/packages/mpratt/embrea)
+[![Total Downloads](https://img.shields.io/packagist/dt/mpratt/embera.svg)](https://packagist.org/packages/mpratt/embera)
 [![Monthly Downloads](https://img.shields.io/packagist/dm/mpratt/embera)](https://packagist.org/packages/mpratt/embera)
 [![Latest Stable Version](https://img.shields.io/packagist/v/mpratt/embera.svg)](https://packagist.org/packages/mpratt/embera)
 
