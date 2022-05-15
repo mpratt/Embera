@@ -55,6 +55,7 @@ I try to support all the providers listed on [oembed.com](https://oembed.com).
 - [Digiteka](providers/Digiteka.md)
 - [DocDroid](providers/DocDroid.md)
 - [DotSUB](providers/DotSUB.md)
+- [DreamBroker](providers/DreamBroker.md)
 - [EduMedia](providers/EduMedia.md)
 - [Embedery](providers/Embedery.md)
 - [EnystreMusic](providers/EnystreMusic.md)
