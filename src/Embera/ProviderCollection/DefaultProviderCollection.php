@@ -232,6 +232,7 @@ class DefaultProviderCollection extends ProviderCollectionAdapter
             'Viously',
             'Vlipsy',
             'Vlive',
+            'VouchFor',
             'WaveVideo',
             'Wecandeo',
             'Waltrack',

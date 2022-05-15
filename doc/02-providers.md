@@ -213,6 +213,7 @@ I try to support all the providers listed on [oembed.com](https://oembed.com).
 - [Viously](providers/Viously.md)
 - [Vlipsy](providers/Vlipsy.md)
 - [Vlive](providers/Vlive.md)
+- [VouchFor](providers/VouchFor.md)
 - [WaveVideo](providers/WaveVideo.md)
 - [Wecandeo](providers/Wecandeo.md)
 - [Waltrack](providers/Waltrack.md)
