@@ -25,6 +25,7 @@ class DefaultProviderCollection extends ProviderCollectionAdapter
         $this->registerProvider([
             'TwentyThreeHq',
             'ActBlue',
+            'Adilo',
             'Adways',
             'Afreecatv',
             'Altru',
