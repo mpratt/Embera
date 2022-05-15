@@ -12,7 +12,7 @@ Name: SoundCloud
 - HTTPS support: YES
 - Fake Response: NO
 - Oembed Params: maxwidth , maxheight
-- Supported Hosts: soundcloud.com
+- Supported Hosts: soundcloud.com , api.soundcloud.com
 - Responsive response: YES
 - Collections: DefaultProviderCollection , SlimProviderCollection
 
