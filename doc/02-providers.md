@@ -27,6 +27,7 @@ I try to support all the providers listed on [oembed.com](https://oembed.com).
 - [Blogcast](providers/Blogcast.md)
 - [Bookingmood](providers/Bookingmood.md)
 - [Buttondown](providers/Buttondown.md)
+- [Bumper](providers/Bumper.md)
 - [Byzart](providers/Byzart.md)
 - [Ceros](providers/Ceros.md)
 - [Chainflix](providers/Chainflix.md)

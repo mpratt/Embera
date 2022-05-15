@@ -47,6 +47,7 @@ class DefaultProviderCollection extends ProviderCollectionAdapter
             'Blogcast',
             'Bookingmood',
             'Buttondown',
+            'Bumper',
             'Byzart',
             'Ceros',
             'Chainflix',
