@@ -186,6 +186,7 @@ class DefaultProviderCollection extends ProviderCollectionAdapter
             'Sketchfab',
             'Slideshare',
             'SmashNotes',
+            'Smeme',
             'Smrthi',
             'Smugmug',
             'SocialExplorer',
