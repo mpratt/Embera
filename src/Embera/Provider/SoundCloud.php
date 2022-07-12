@@ -51,7 +51,6 @@ class SoundCloud extends ProviderAdapter implements ProviderInterface
     public function normalizeUrl(Url $url)
     {
         $url->convertToHttps();
-        $url->removeQueryString();
         $url->removeLastSlash();
 
         return $url;
