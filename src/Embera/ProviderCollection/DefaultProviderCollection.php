@@ -110,6 +110,7 @@ class DefaultProviderCollection extends ProviderCollectionAdapter
             'Huffduffer',
             'iFixit',
             'IHeartRadio',
+            'IMenuPro',
             'Imgur',
             'Incredible',
             'Infogram',
