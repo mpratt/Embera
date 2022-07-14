@@ -85,6 +85,7 @@ I try to support all the providers listed on [oembed.com](https://oembed.com).
 - [Gyazo](providers/Gyazo.md)
 - [Hash](providers/Hash.md)
 - [Hearthis](providers/Hearthis.md)
+- [Heyzine](providers/Heyzine.md)
 - [HiHaHo](providers/HiHaHo.md)
 - [HippoVideo](providers/HippoVideo.md)
 - [Huffduffer](providers/Huffduffer.md)

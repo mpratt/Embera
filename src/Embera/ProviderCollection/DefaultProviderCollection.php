@@ -104,6 +104,7 @@ class DefaultProviderCollection extends ProviderCollectionAdapter
             'Gyazo',
             'Hash',
             'Hearthis',
+            'Heyzine',
             'HiHaHo',
             'HippoVideo',
             'Huffduffer',
