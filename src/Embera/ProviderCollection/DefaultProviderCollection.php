@@ -168,6 +168,7 @@ class DefaultProviderCollection extends ProviderCollectionAdapter
             'Pinterest',
             'Pitchhub',
             'Playbuzz',
+            'Plusdocs',
             'Podbean',
             'Polldaddy',
             'Portfolium',

@@ -149,6 +149,7 @@ I try to support all the providers listed on [oembed.com](https://oembed.com).
 - [Pinterest](providers/Pinterest.md)
 - [Pitchhub](providers/Pitchhub.md)
 - [Playbuzz](providers/Playbuzz.md)
+- [Plusdocs](providers/Plusdocs.md)
 - [Podbean](providers/Podbean.md)
 - [Polldaddy](providers/Polldaddy.md)
 - [Portfolium](providers/Portfolium.md)
