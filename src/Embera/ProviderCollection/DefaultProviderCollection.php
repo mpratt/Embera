@@ -193,6 +193,7 @@ class DefaultProviderCollection extends ProviderCollectionAdapter
             'Shoudio',
             'ShowTheWay',
             'Sketchfab',
+            'SlateApp',
             'Slideshare',
             'SmashNotes',
             'Smeme',

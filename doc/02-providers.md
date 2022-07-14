@@ -174,6 +174,7 @@ I try to support all the providers listed on [oembed.com](https://oembed.com).
 - [Shoudio](providers/Shoudio.md)
 - [ShowTheWay](providers/ShowTheWay.md)
 - [Sketchfab](providers/Sketchfab.md)
+- [SlateApp](providers/SlateApp.md)
 - [Slideshare](providers/Slideshare.md)
 - [SmashNotes](providers/SmashNotes.md)
 - [Smeme](providers/Smeme.md)
