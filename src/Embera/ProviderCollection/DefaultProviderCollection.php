@@ -162,6 +162,7 @@ class DefaultProviderCollection extends ProviderCollectionAdapter
             'Padlet',
             'Pandavideo',
             'Pastery',
+            'Picturelfy',
             'Pinpoll',
             'Pinterest',
             'Pitchhub',
