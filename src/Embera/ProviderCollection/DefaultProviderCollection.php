@@ -144,6 +144,7 @@ class DefaultProviderCollection extends ProviderCollectionAdapter
             'MessesInfo',
             'MicrosoftStream',
             'MixCloud',
+            'Minesweeper',
             'MusicboxManiacs',
             'Namchey',
             'Nanoo',
