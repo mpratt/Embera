@@ -27,7 +27,7 @@ use Embera\ProviderCollection\DefaultProviderCollection;
 class Embera
 {
     /** @var string Current Library Version */
-    const VERSION = '2.0.26';
+    const VERSION = '2.0.27';
 
     /**
      * Constants describing how the library is
