@@ -30,6 +30,7 @@ final class ZnipeTVTest extends ProviderTester
 
     public function testProvider()
     {
-        $this->validateProvider('ZnipeTV', [ 'width' => 480, 'height' => 270]);
+        $this->markTestSkipped('No urls to test. Deleting if not fixed 2022-07-14');
+        //$this->validateProvider('ZnipeTV', [ 'width' => 480, 'height' => 270]);
     }
 }

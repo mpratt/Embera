@@ -21,7 +21,7 @@ final class CueupTest extends ProviderTester
 {
     protected $tasks = [
         'valid_urls' => [
-            'https://cueup.io/user/weddingdjsax/sounds/soundcloud-1071797938_hey-judes-(jimmy-sax-black)',
+            'https://cueup.io/user/team-salut/sounds/soundcloud-1253056768_400percent'
         ],
         'invalid_urls' => [
             'https://cueup.io/',

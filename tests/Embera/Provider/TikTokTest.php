@@ -21,8 +21,8 @@ final class TikTokTest extends ProviderTester
 {
     protected $tasks = [
         'valid_urls' => [
+            'https://www.tiktok.com/@ingrodolfohernandez/video/7098012357821091078',
             'https://www.tiktok.com/@charlidamelio/video/6837936517164436742',
-            'https://tiktok.com/@juanpazurita/video/6828965457890954502?lang=en',
         ],
         'invalid_urls' => [
             'https://tiktok.com/@juanpazurita',

@@ -21,8 +21,6 @@ final class AmChartsTest extends ProviderTester
 {
     protected $tasks = array(
         'valid_urls' => array(
-            'http://live.amcharts.com/hlOWI',
-            'http://live.amcharts.com/TY1Yj/',
             'http://live.amcharts.com/zkyZm/edit/',
         ),
         'invalid_urls' => array(
@@ -41,6 +39,7 @@ final class AmChartsTest extends ProviderTester
 
     public function testProvider()
     {
-        $this->validateProvider('AmCharts', [ 'width' => 480, 'height' => 270]);
+        $this->markTestSkipped('Amcharts seems to be down. 2022-07-14: Deleting if not fixed');
+        //$this->validateProvider('AmCharts', [ 'width' => 480, 'height' => 270]);
     }
 }

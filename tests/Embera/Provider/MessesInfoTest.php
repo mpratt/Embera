@@ -35,6 +35,7 @@ final class MessesInfoTest extends ProviderTester
 
     public function testProvider()
     {
-        $this->validateProvider('MessesInfo', [ 'width' => 480, 'height' => 270]);
+        $this->markTestSkipped('Oembed seems to be down. Deleting if not fixed. 2022-07-14');
+        //$this->validateProvider('MessesInfo', [ 'width' => 480, 'height' => 270]);
     }
 }
