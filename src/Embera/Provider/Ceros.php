@@ -25,7 +25,7 @@ use Embera\Url;
 class Ceros extends ProviderAdapter implements ProviderInterface
 {
     /** inline {@inheritdoc} */
-    protected $endpoint = 'http://view.ceros.com/oembed';
+    protected $endpoint = 'https://view.ceros.com/oembed';
 
     /** inline {@inheritdoc} */
     protected static $hosts = [
