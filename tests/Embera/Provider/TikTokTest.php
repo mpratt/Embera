@@ -23,9 +23,9 @@ final class TikTokTest extends ProviderTester
         'valid_urls' => [
             'https://www.tiktok.com/@ingrodolfohernandez/video/7098012357821091078',
             'https://www.tiktok.com/@charlidamelio/video/6837936517164436742',
+            'https://www.tiktok.com/@juanpazurita',
         ],
         'invalid_urls' => [
-            'https://tiktok.com/@juanpazurita',
             'https://www.tiktok.com/',
         ],
     ];
