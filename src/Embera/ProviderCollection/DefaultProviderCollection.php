@@ -223,6 +223,7 @@ class DefaultProviderCollection extends ProviderCollectionAdapter
             'Tumblr',
             'Tuxx',
             'Tvcf',
+            'Twinmotion',
             'Twitter',
             'Typecast',
             'UAPod',

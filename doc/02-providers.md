@@ -204,6 +204,7 @@ I try to support all the providers listed on [oembed.com](https://oembed.com).
 - [Tumblr](providers/Tumblr.md)
 - [Tuxx](providers/Tuxx.md)
 - [Tvcf](providers/Tvcf.md)
+- [Twinmotion](providers/Twinmotion.md)
 - [Twitter](providers/Twitter.md)
 - [Typecast](providers/Typecast.md)
 - [UAPod](providers/UAPod.md)
