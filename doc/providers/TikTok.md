@@ -8,7 +8,7 @@ viewers can watch and discover millions ...
 
 - Provider
 Name: TikTok
-- Documentation: [https://developers.tiktok.com/doc/Embed](https://developers.tiktok.com/doc/Embed)
+- Documentation: [https://developers.tiktok.com/doc/](https://developers.tiktok.com/doc/)
 - HTTPS support: YES
 - Fake Response: NO
 - Oembed Params: maxwidth , maxheight
