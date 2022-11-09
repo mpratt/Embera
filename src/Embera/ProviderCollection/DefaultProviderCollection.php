@@ -75,7 +75,6 @@ class DefaultProviderCollection extends ProviderCollectionAdapter
             'Digiteka',
             'DocDroid',
             'Docswell',
-            'DotSUB',
             'DreamBroker',
             'EduMedia',
             'Embedery',
