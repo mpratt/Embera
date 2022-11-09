@@ -183,7 +183,6 @@ class DefaultProviderCollection extends ProviderCollectionAdapter
             'ReleaseWire',
             'Replit',
             'ReverbNation',
-            'Roomshare',
             'RoosterTeeth',
             'Rumble',
             'RunKit',
