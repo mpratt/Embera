@@ -126,6 +126,7 @@ class DefaultProviderCollection extends ProviderCollectionAdapter
             'Kickstarter',
             'KirimEmail',
             'Kit',
+            'Kurozora',
             'Kooapp',
             'Kmdr',
             'Knacki',

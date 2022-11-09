@@ -107,6 +107,7 @@ I try to support all the providers listed on [oembed.com](https://oembed.com).
 - [Kickstarter](providers/Kickstarter.md)
 - [KirimEmail](providers/KirimEmail.md)
 - [Kit](providers/Kit.md)
+- [Kurozora](providers/Kurozora.md)
 - [Kooapp](providers/Kooapp.md)
 - [Kmdr](providers/Kmdr.md)
 - [Knacki](providers/Knacki.md)
