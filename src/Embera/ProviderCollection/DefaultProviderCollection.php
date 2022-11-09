@@ -131,7 +131,6 @@ class DefaultProviderCollection extends ProviderCollectionAdapter
             'Knacki',
             'LearningApps',
             'Libsyn',
-            'LillePod',
             'Lineplace',
             'Livestream',
             'LocalVoicesNetwork',
