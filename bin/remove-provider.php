@@ -72,7 +72,7 @@ foreach ($collections as $c) {
     $data = file_get_contents($collectionFile);
     if (preg_match('~\'' . preg_quote($options['provider'], '~') . '\',~i', $data, $matches)) {
         echo sprintf('Removing from collection %s', $collectionFile) . PHP_EOL;
-        $data = preg_replace('~\s*' . preg_quote($matches['0'], '~') . '\s*~i', '', $data);
+        $data = preg_replace('~\s*' . preg_quote($matches['0'], '~') . '\s*~i', PHP_EOL . str_repeat(' ', 12), $data);
         file_put_contents($collectionFile, $data);
     }
 }
