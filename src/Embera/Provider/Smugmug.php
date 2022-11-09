@@ -53,7 +53,7 @@ class Smugmug extends ProviderAdapter implements ProviderInterface
     /** inline {@inheritdoc} */
     public function modifyResponse(array $response = [])
     {
-        if (empty($response['html']) && $response['type'] == 'photo') {
+        if (empty($response['html']) && isset($response['type']) && $response['type'] == 'photo') {
             $html = [];
             $html[] = '<div class="smugmug-html">';
             $html[] = '<a href="' . $response['gallery_url'] . '" title="">';

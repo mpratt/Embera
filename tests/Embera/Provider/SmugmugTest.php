@@ -32,6 +32,7 @@ final class SmugmugTest extends ProviderTester
 
     public function testProvider()
     {
-        $this->validateProvider('Smugmug', [ 'width' => 480, 'height' => 270]);
+        $this->markTestIncomplete('Smugmug: Endpoint is returning invalid json. Deleting if continues. (2022-11-09)');
+        //$this->validateProvider('Smugmug', [ 'width' => 480, 'height' => 270]);
     }
 }
