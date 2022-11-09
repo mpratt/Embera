@@ -229,7 +229,6 @@ class DefaultProviderCollection extends ProviderCollectionAdapter
             'Tvcf',
             'Twinmotion',
             'Twitter',
-            'Typecast',
             'UAPod',
             'UniversitePantheonSorbonne',
             'UniversityCambridgeMap',
