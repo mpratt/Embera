@@ -21,7 +21,6 @@ final class TickcounterTest extends ProviderTester
 {
     protected $tasks = [
         'valid_urls' => [
-            'https://www.tickcounter.com/countdown/413523/countdown-to-brexit',
             'https://www.tickcounter.com/countdown/900310/days-until-christmas-2019',
         ],
         'invalid_urls' => [
