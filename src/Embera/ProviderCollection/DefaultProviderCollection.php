@@ -113,7 +113,6 @@ class DefaultProviderCollection extends ProviderCollectionAdapter
             'IHeartRadio',
             'IMenuPro',
             'Imgur',
-            'Incredible',
             'Infogram',
             'Infoveave',
             'Injurymap',
