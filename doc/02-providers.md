@@ -188,6 +188,7 @@ I try to support all the providers listed on [oembed.com](https://oembed.com).
 - [SoundCloud](providers/SoundCloud.md)
 - [SpeakerDeck](providers/SpeakerDeck.md)
 - [Spotify](providers/Spotify.md)
+- [Spotlightr](providers/Spotlightr.md)
 - [Spreaker](providers/Spreaker.md)
 - [SproutVideo](providers/SproutVideo.md)
 - [StandfordDigitalRepository](providers/StandfordDigitalRepository.md)

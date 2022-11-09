@@ -207,6 +207,7 @@ class DefaultProviderCollection extends ProviderCollectionAdapter
             'SoundCloud',
             'SpeakerDeck',
             'Spotify',
+            'Spotlightr',
             'Spreaker',
             'SproutVideo',
             'StandfordDigitalRepository',
