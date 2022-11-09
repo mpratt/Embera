@@ -38,7 +38,7 @@ class HttpClient implements HttpClientInterface
     {
         $this->config = array_merge([
             'use_curl' => true,
-            'user_agent' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36',
+            'user_agent' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36',
             'referer' => '',
             'curl_params' => [],
             'file_get_contents_params' => []
