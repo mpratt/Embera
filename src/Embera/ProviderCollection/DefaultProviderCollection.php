@@ -146,6 +146,7 @@ class DefaultProviderCollection extends ProviderCollectionAdapter
             'MermaidInk',
             'MessesInfo',
             'MicrosoftStream',
+            'Miro',
             'MixCloud',
             'Minesweeper',
             'MusicboxManiacs',

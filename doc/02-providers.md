@@ -127,6 +127,7 @@ I try to support all the providers listed on [oembed.com](https://oembed.com).
 - [MermaidInk](providers/MermaidInk.md)
 - [MessesInfo](providers/MessesInfo.md)
 - [MicrosoftStream](providers/MicrosoftStream.md)
+- [Miro](providers/Miro.md)
 - [MixCloud](providers/MixCloud.md)
 - [Minesweeper](providers/Minesweeper.md)
 - [MusicboxManiacs](providers/MusicboxManiacs.md)
