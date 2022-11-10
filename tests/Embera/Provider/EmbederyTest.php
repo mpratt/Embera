@@ -30,6 +30,7 @@ final class EmbederyTest extends ProviderTester
 
     public function testProvider()
     {
-        $this->validateProvider('Embedery', [ 'width' => 480, 'height' => 270]);
+        $this->markTestSkipped('Embedery: We dont have public urls to test. (2022-11-09)');
+        //$this->validateProvider('Embedery', [ 'width' => 480, 'height' => 270]);
     }
 }

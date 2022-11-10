@@ -21,8 +21,6 @@ final class ScribbleMapsTest extends ProviderTester
 {
     protected $tasks = [
         'valid_urls' => [
-            'https://www.scribblemaps.com/maps/view/Road_to_Civil_War_Ethan_Culotta/ZIf2eLM_hn',
-            'https://www.scribblemaps.com/maps/view/south_seattle_h4hskc/southseattle',
             'https://www.scribblemaps.com/maps/view/129_Chippen_Lane_Chippendale_Sydney_NSW_2008/M66pPT9JNu',
         ],
         'invalid_urls' => [
@@ -36,6 +34,7 @@ final class ScribbleMapsTest extends ProviderTester
 
     public function testProvider()
     {
-        $this->validateProvider('ScribbleMaps', [ 'width' => 480, 'height' => 270]);
+        $this->markTestIncomplete('ScribbleMaps: Endpoint is down. Deleting if continues. (2022-11-10)');
+        //$this->validateProvider('ScribbleMaps', [ 'width' => 480, 'height' => 270]);
     }
 }

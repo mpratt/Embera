@@ -30,6 +30,7 @@ final class WaltrackTest extends ProviderTester
 
     public function testProvider()
     {
-        $this->validateProvider('Waltrack', [ 'width' => 480, 'height' => 270]);
+        $this->markTestIncomplete('Walltrack: Site seems to be down at the moment. Deleting if continues. (2022-11-09)');
+        //$this->validateProvider('Waltrack', [ 'width' => 480, 'height' => 270]);
     }
 }

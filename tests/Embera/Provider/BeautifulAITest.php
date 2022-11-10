@@ -33,7 +33,7 @@ final class BeautifulAITest extends ProviderTester
 
     public function testProvider()
     {
-        $this->markTestSkipped('BeautifulAI has made all requests private. We need a public url to test');
+       $this->markTestSkipped('BeautifulAI now requires the url to be public in order to be embeded via Oembed. In order to test we need a public URL');
         // $this->validateProvider('BeautifulAI', [ 'width' => 480, 'height' => 270]);
     }
 }

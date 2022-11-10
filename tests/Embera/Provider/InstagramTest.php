@@ -34,7 +34,7 @@ final class InstagramTest extends ProviderTester
 
     public function testProvider()
     {
-        $this->markTestSkipped('Facebook requires an access token in order to be tested. Skipping test');
+        $this->markTestSkipped('Instagram requires an access token in order to be tested. Skipping test');
         // $this->validateProvider('Instagram', [ 'width' => 480, 'height' => 270]);
     }
 }

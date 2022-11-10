@@ -30,7 +30,7 @@ final class DalexniTest extends ProviderTester
 
     public function testProvider()
     {
-        $this->markTestIncomplete('We dont have a valid/public url to test');
+        $this->markTestSkipped('Dalexni: We dont have a valid/public url to test');
         // $this->validateProvider('Dalexni', [ 'width' => 480, 'height' => 270]);
     }
 }
