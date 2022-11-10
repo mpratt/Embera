@@ -36,7 +36,6 @@ final class KnackiTest extends ProviderTester
 
     public function testProvider()
     {
-        $this->markTestIncomplete('2022-07-19 Flagging as non-responsive endpoint. Delete on 2022-09-19 if the issue continues');
-        //$this->validateProvider('Knacki', [ 'width' => 480, 'height' => 270]);
+        $this->validateProvider('Knacki', [ 'width' => 480, 'height' => 270]);
     }
 }

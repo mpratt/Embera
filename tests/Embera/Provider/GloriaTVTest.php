@@ -21,7 +21,7 @@ final class GloriaTVTest extends ProviderTester
 {
     protected $tasks = [
         'valid_urls' => [
-            'http://www.gloria.tv/post/nLYByXzwST3E26Wx1k7ZCwwP8?query=string',
+            //'http://www.gloria.tv/post/nLYByXzwST3E26Wx1k7ZCwwP8?query=string',
             'https://gloria.tv/post/62FT1LmLY8aLDeXYJnrUHbgJY',
         ],
         'invalid_urls' => [
@@ -39,7 +39,6 @@ final class GloriaTVTest extends ProviderTester
 
     public function testProvider()
     {
-        $this->markTestIncomplete('Oembed service seems to be deprecated. Deleting if not fixed. 2022-07-14');
-        //$this->validateProvider('GloriaTV', [ 'width' => 480, 'height' => 270]);
+        $this->validateProvider('GloriaTV', [ 'width' => 480, 'height' => 270]);
     }
 }
