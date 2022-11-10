@@ -125,7 +125,6 @@ class DefaultProviderCollection extends ProviderCollectionAdapter
             'Kit',
             'Kurozora',
             'Kooapp',
-            'Kmdr',
             'Knacki',
             'LearningApps',
             'Libsyn',
