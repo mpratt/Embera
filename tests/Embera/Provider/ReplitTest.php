@@ -21,8 +21,7 @@ final class ReplitTest extends ProviderTester
 {
     protected $tasks = [
         'valid_urls' => [
-            'https://repl.it/repls/GloriousMotherlyButton',
-            'https://repl.it/repls/HurtfulTrimDimension',
+            'https://replit.com/@stewieoO/ClosePitifulConstant',
         ],
         'invalid_urls' => [
             'http://repl.it/',
@@ -36,7 +35,6 @@ final class ReplitTest extends ProviderTester
 
     public function testProvider()
     {
-        $this->markTestSkipped('Replit no longer supports Anonymous repls ');
-        //$this->validateProvider('Replit', [ 'width' => 480, 'height' => 270]);
+        $this->validateProvider('Replit', [ 'width' => 480, 'height' => 270]);
     }
 }
