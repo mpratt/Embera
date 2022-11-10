@@ -254,7 +254,6 @@ class DefaultProviderCollection extends ProviderCollectionAdapter
             'Youtube',
             'Zeplin',
             'Zingsoft',
-            'ZnipeTV',
             'Zoomable',
         ]);
     }
