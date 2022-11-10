@@ -21,7 +21,8 @@ final class AnimotoTest extends ProviderTester
 {
     protected $tasks = array(
         'valid_urls' => array(
-            'https://www.animoto.com/play/tH6T0044UCwFiALmCxbjgA',
+            'https://animoto.com/play/54cLVM1s5pppzO1i7mDC9A',
+            'https://animoto.com/play/Dcodnn5QyccUt1YbY117XA',
         ),
         'invalid_urls' => array(
             'http://animoto.com/features',
@@ -35,7 +36,6 @@ final class AnimotoTest extends ProviderTester
 
     public function testProvider()
     {
-        $this->markTestSkipped('We no longer have public urls for animoto available to test. Endpoint seems fine.');
-        //$this->validateProvider('Animoto', [ 'width' => 480, 'height' => 270]);
+        $this->validateProvider('Animoto', [ 'width' => 480, 'height' => 270]);
     }
 }
