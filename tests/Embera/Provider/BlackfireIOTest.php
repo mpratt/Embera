@@ -21,9 +21,7 @@ final class BlackfireIOTest extends ProviderTester
 {
     protected $tasks = array(
         'valid_urls' => array(
-            'https://blackfire.io/profiles/3c02f4b3-9f3f-481c-a6a3-847b0b5a4507/graph?settings%5Bdimension%5D=wt&settings%5Bdisplay%5D=landscape&settings%5BtabPane%5D=nodes&selected=&callname=main()',
-            'https://blackfire.io/profiles/a03c95c9-fafe-459e-a36a-e69edb2ed25d/graph?settings%5Bdimension%5D=wt&settings%5Bdisplay%5D=landscape&settings%5BtabPane%5D=nodes&selected=twentyfifteen_entry_meta&callname=main()',
-            'https://www.blackfire.io/profiles/2ca1084f-ce66-4073-b2b8-4a82ed7e4c76/embed?settings%5Bdimension%5D=wt&settings%5Bdisplay%5D=landscape&settings%5BtabPane%5D=nodes&selected=&callname=main()'
+            'https://blackfire.io/profiles/eef432f9-51f0-474b-891f-0b892b263668/graph?settings%5Bdimension%5D=wt&settings%5Bdisplay%5D=landscape&settings%5BtabPane%5D=nodes&selected=&callname=main()&constraintDoc='
         ),
         'invalid_urls' => array(
             'https://blackfire.io/profiles/2ca1084f-ce66-4073-b2b8-4a82ed7e4c76/other',
@@ -40,7 +38,6 @@ final class BlackfireIOTest extends ProviderTester
 
     public function testProvider()
     {
-        $this->markTestSkipped('BlackfireIO seems to have changed the urls for oembed. HAvent found anything about the changes. Deleting if not fixed. 2022-07-14');
-        //$this->validateProvider('BlackfireIO', [ 'width' => 480, 'height' => 270]);
+        $this->validateProvider('BlackfireIO', [ 'width' => 480, 'height' => 270]);
     }
 }
