@@ -21,7 +21,7 @@ final class MediaLabTest extends ProviderTester
 {
     protected $tasks = [
         'valid_urls' => [
-            'https://demo.medialab.co/share/watch/veE0Y/7274437b1142fb4a64c80fac2ad895195339665397b26e17a769e2faad27c13c/',
+            'https://sqmgym.medialab.app/share/watch/BXgEe/2e01cc5523b1ef516cfa0c8084477b4ee2e8e3d3945111025b6a2e5fed584f60/',
         ],
         'invalid_urls' => [
             'https://demo.medialab.co/'
