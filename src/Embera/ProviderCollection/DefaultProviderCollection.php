@@ -246,6 +246,7 @@ class DefaultProviderCollection extends ProviderCollectionAdapter
             'Waltrack',
             'WolframCloud',
             'VoxSnap',
+            'Whimsical',
             'Wistia',
             'Wizer',
             'Wokwi',
