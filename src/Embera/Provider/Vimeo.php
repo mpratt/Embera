@@ -30,6 +30,14 @@ class Vimeo extends ProviderAdapter implements ProviderInterface
     protected static $hosts = [
         'vimeo.com'
     ];
+    
+    /** inline {@inheritdoc} */
+    protected $allowedParams = [
+        'autopause', 'autopip', 'autoplay', 'background', 'byline', 'color',
+        'controls', 'dnt', 'keyboard', 'loop', 'muted', 'pip', 'playsinline',
+        'portrait', 'quality', 'responsive', 'speed', 'texttrack', 'title',
+        'transparent',
+    ];
 
     /** inline {@inheritdoc} */
     protected $httpsSupport = true;
