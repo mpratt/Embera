@@ -125,6 +125,7 @@ I try to support all the providers listed on [oembed.com](https://oembed.com).
 - [MicrosoftStream](providers/MicrosoftStream.md)
 - [Miro](providers/Miro.md)
 - [MixCloud](providers/MixCloud.md)
+- [Mixpanel](providers/Mixpanel.md)
 - [Minesweeper](providers/Minesweeper.md)
 - [MusicboxManiacs](providers/MusicboxManiacs.md)
 - [Namchey](providers/Namchey.md)
