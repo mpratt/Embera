@@ -43,6 +43,7 @@ class DefaultProviderCollection extends ProviderCollectionAdapter
             'Avocode',
             'Backtracks',
             'BeautifulAI',
+            'BeamsFm',
             'BlackfireIO',
             'Blogcast',
             'Bookingmood',

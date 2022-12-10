@@ -23,6 +23,7 @@ I try to support all the providers listed on [oembed.com](https://oembed.com).
 - [Avocode](providers/Avocode.md)
 - [Backtracks](providers/Backtracks.md)
 - [BeautifulAI](providers/BeautifulAI.md)
+- [BeamsFm](providers/BeamsFm.md)
 - [BlackfireIO](providers/BlackfireIO.md)
 - [Blogcast](providers/Blogcast.md)
 - [Bookingmood](providers/Bookingmood.md)
