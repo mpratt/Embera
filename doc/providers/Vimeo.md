@@ -11,7 +11,7 @@ Name: Vimeo
 - Documentation: NONE
 - HTTPS support: YES
 - Fake Response: NO
-- Oembed Params: maxwidth , maxheight
+- Oembed Params: autopause , autopip , autoplay , background , byline , color , controls , dnt , keyboard , loop , muted , pip , playsinline , portrait , quality , responsive , speed , texttrack , title , transparent
 - Supported Hosts: vimeo.com
 - Responsive response: NO
 - Collections: DefaultProviderCollection , SlimProviderCollection
