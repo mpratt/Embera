@@ -34,10 +34,7 @@ final class VlipsyTest extends ProviderTester
 
     public function testProvider()
     {
-        if ((bool) getenv('TRAVIS')) {
-            $this->markTestSkipped('Vlipsy - Returns timeout while testing but implementation is OK and has support for fake responses.');
-        } else {
-            $this->validateProvider('Vlipsy', [ 'width' => 480, 'height' => 270]);
-        }
+        $this->markTestIncomplete('Vlipsy: Api endpoint is down. Site seems to be down too. Deleting if this continues (2022-12-15)');
+        //$this->validateProvider('Vlipsy', [ 'width' => 480, 'height' => 270]);
     }
 }
