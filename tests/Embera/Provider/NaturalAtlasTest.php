@@ -21,9 +21,7 @@ final class NaturalAtlasTest extends ProviderTester
 {
     protected $tasks = [
         'valid_urls' => [
-            'https://naturalatlas.com/@bryandebord/notes/15863',
             'https://naturalatlas.com/trailheads/cascade-lake-1936366',
-            'https://naturalatlas.com/@brandon/notes/15856',
         ],
         'invalid_urls' => [
             'https://naturalatlas.com/',

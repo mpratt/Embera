@@ -40,6 +40,7 @@ final class ChirbitTest extends ProviderTester
 
     public function testProvider()
     {
-        $this->validateProvider('Chirbit', [ 'width' => 480, 'height' => 270]);
+        $this->markTestIncomplete('Chirbit seems endpoint is having trouble. Deleting if this continues (2023-01-20)');
+        //$this->validateProvider('Chirbit', [ 'width' => 480, 'height' => 270]);
     }
 }
