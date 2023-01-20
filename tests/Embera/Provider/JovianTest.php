@@ -23,6 +23,7 @@ final class JovianTest extends ProviderTester
         'valid_urls' => [
             'https://jovian.ml/aakashns/01-pytorch-basics',
             'https://jovian.ai/aakashns/01-pytorch-basics',
+            'https://jovian.com/aakashns/01-pytorch-basics',
         ],
         'invalid_urls' => [
             'https://jovian.ml/',
