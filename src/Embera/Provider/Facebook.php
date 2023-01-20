@@ -97,6 +97,11 @@ class Facebook extends ProviderAdapter implements ProviderInterface
          * https://www.facebook.com/video.php?v={video-id}
          */
         '~facebook\.com/video\.php\?(?:id|v)=(?:[^ ]+)~i',
+        
+         /**
+        * https://www.facebook.com/watch?v={video-id}
+         */
+        '~facebook\.com/watch\?v=(?:[^ ]+)~i',
     ];
 
     /** Patterns that match page urls */
