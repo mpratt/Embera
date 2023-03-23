@@ -12,7 +12,7 @@ Name: Jovian
 - HTTPS support: YES
 - Fake Response: NO
 - Oembed Params: maxwidth , maxheight
-- Supported Hosts: jovian.ml , jovian.ai
+- Supported Hosts: jovian.ml , jovian.ai , jovian.com
 - Responsive response: NO
 - Collections: DefaultProviderCollection
 
