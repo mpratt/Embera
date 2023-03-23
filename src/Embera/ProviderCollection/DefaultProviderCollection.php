@@ -256,6 +256,7 @@ class DefaultProviderCollection extends ProviderCollectionAdapter
             'Wordpress',
             'Wordwall',
             'Youtube',
+            'Yumpu',
             'Zeplin',
             'Zingsoft',
             'Zoomable',

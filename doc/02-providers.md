@@ -237,6 +237,7 @@ I try to support all the providers listed on [oembed.com](https://oembed.com).
 - [Wordpress](providers/Wordpress.md)
 - [Wordwall](providers/Wordwall.md)
 - [Youtube](providers/Youtube.md)
+- [Yumpu](providers/Yumpu.md)
 - [Zeplin](providers/Zeplin.md)
 - [Zingsoft](providers/Zingsoft.md)
 - [Zoomable](providers/Zoomable.md)
