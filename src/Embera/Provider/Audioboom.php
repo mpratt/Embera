@@ -25,7 +25,7 @@ use Embera\Url;
 class Audioboom extends ProviderAdapter implements ProviderInterface
 {
     /** inline {@inheritdoc} */
-    protected $endpoint = 'https://audioboom.com/publishing/oembed/v4.json';
+    protected $endpoint = 'https://audioboom.com/publishing/oembed.json';
 
     /** inline {@inheritdoc} */
     protected static $hosts = [

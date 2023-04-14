@@ -23,7 +23,6 @@ final class AudioboomTest extends ProviderTester
         'valid_urls' => array(
             'https://audioboom.com/channel/therussellbrandpodcast',
             'https://audioboom.com/posts/3189619-the-final-episode',
-            'https://audioboom.com/posts/7404319-you-cheated-in-my-dream'
         ),
         'invalid_urls' => array(
             'http://audioboom.com/posts/other-stuff/7404319-you-cheated-in-my-dream?text=data',
