@@ -37,6 +37,7 @@ class DefaultProviderCollection extends ProviderCollectionAdapter
             'Apester',
             'Archivos',
             'Audioboom',
+            'Audiocom',
             'AudioClip',
             'Audiomack',
             'Audiomeans',

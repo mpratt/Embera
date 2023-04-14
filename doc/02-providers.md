@@ -17,6 +17,7 @@ I try to support all the providers listed on [oembed.com](https://oembed.com).
 - [Apester](providers/Apester.md)
 - [Archivos](providers/Archivos.md)
 - [Audioboom](providers/Audioboom.md)
+- [Audiocom](providers/Audiocom.md)
 - [AudioClip](providers/AudioClip.md)
 - [Audiomack](providers/Audiomack.md)
 - [Audiomeans](providers/Audiomeans.md)
