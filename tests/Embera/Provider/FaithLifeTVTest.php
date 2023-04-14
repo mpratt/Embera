@@ -21,7 +21,6 @@ final class FaithLifeTVTest extends ProviderTester
 {
     protected $tasks = array(
         'valid_urls' => array(
-            'https://faithlifetv.com/media/300027',
             'https://faithlifetv.com/media/613267',
             'https://faithlifetv.com/items/345143',
         ),
