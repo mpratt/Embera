@@ -23,7 +23,7 @@ use Embera\Url;
 class CodePen extends ProviderAdapter implements ProviderInterface
 {
     /** inline {@inheritdoc} */
-    protected $endpoint = 'http://codepen.io/api/oembed?format=json';
+    protected $endpoint = 'https://codepen.io/api/oembed?format=json';
 
     /** inline {@inheritdoc} */
     protected static $hosts = [
