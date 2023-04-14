@@ -51,6 +51,7 @@ class DefaultProviderCollection extends ProviderCollectionAdapter
             'Buttondown',
             'Bumper',
             'Byzart',
+            'Canva',
             'Ceros',
             'Chainflix',
             'ChartBlocks',
