@@ -104,6 +104,7 @@ class DefaultProviderCollection extends ProviderCollectionAdapter
             'Gong',
             'Gmetri',
             'Grain',
+            'Gumlet',
             'Gyazo',
             'Hash',
             'Hearthis',

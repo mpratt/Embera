@@ -85,6 +85,7 @@ I try to support all the providers listed on [oembed.com](https://oembed.com).
 - [Gong](providers/Gong.md)
 - [Gmetri](providers/Gmetri.md)
 - [Grain](providers/Grain.md)
+- [Gumlet](providers/Gumlet.md)
 - [Gyazo](providers/Gyazo.md)
 - [Hash](providers/Hash.md)
 - [Hearthis](providers/Hearthis.md)
