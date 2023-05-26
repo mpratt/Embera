@@ -143,6 +143,7 @@ I try to support all the providers listed on [oembed.com](https://oembed.com).
 - [OnSizzle](providers/OnSizzle.md)
 - [OraTV](providers/OraTV.md)
 - [Orbitvu](providers/Orbitvu.md)
+- [Origits](providers/Origits.md)
 - [Outplayed](providers/Outplayed.md)
 - [OverflowIO](providers/OverflowIO.md)
 - [Padlet](providers/Padlet.md)

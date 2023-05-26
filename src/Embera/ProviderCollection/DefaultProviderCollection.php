@@ -162,6 +162,7 @@ class DefaultProviderCollection extends ProviderCollectionAdapter
             'OnSizzle',
             'OraTV',
             'Orbitvu',
+            'Origits',
             'Outplayed',
             'OverflowIO',
             'Padlet',
