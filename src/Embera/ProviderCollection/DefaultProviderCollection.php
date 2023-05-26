@@ -121,6 +121,7 @@ class DefaultProviderCollection extends ProviderCollectionAdapter
             'Instagram',
             'InsticatorContentEngagementUnit',
             'Issuu',
+            'ItemisCreate',
             'Jovian',
             'KakaoTV',
             'Kickstarter',
