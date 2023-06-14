@@ -37,7 +37,7 @@ class Tickcounter extends ProviderAdapter implements ProviderInterface
     /** inline {@inheritdoc} */
     public function validateUrl(Url $url)
     {
-        return (bool) (preg_match('~tickcounter\.com/(countdown|countup|ticker|worldclock)/([^/]+)~i', (string) $url));
+        return (bool) (preg_match('~tickcounter\.com/(countdown|countup|ticker|worldclock|widget|clock)/([^/]+)~i', (string) $url));
     }
 
     /** inline {@inheritdoc} */
