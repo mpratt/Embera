@@ -36,6 +36,7 @@ class DefaultProviderCollection extends ProviderCollectionAdapter
             'AnnieMusic',
             'Apester',
             'Archivos',
+            'Assemblrworld',
             'Audioboom',
             'Audiocom',
             'AudioClip',
