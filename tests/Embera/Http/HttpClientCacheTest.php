@@ -18,6 +18,10 @@ class HttpClientCacheTest extends TestCase
 {
     public function testHttpRequestHit()
     {
+        if (defined('GITHUBTESTS')) {
+            $this->markTestSkipped('Skipping because of Github Actions');
+        }
+
         $cache = new Filesystem(sys_get_temp_dir(), mt_rand(1, 5));
         $cache->clear();
 
@@ -50,6 +54,10 @@ class HttpClientCacheTest extends TestCase
 
     public function testHttpRequestFailed()
     {
+        if (defined('GITHUBTESTS')) {
+            $this->markTestSkipped('Skipping because of Github Actions');
+        }
+
         $cache = new Filesystem(sys_get_temp_dir(), mt_rand(1, 5));
         $cache->clear();
 
