@@ -41,7 +41,7 @@ class Docswell extends ProviderAdapter implements ProviderInterface
     /** inline {@inheritdoc} */
     public function validateUrl(Url $url)
     {
-        return (bool) (preg_match('~docswell\.com/([^/]+)/([^/]+)~i', (string) $url));
+        return (bool) (preg_match('~docswell\.com/s/([^/]+)/([^/]+)~i', (string) $url));
     }
 
     /** inline {@inheritdoc} */
