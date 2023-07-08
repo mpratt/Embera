@@ -81,7 +81,6 @@ class DefaultProviderCollection extends ProviderCollectionAdapter
             'DreamBroker',
             'EduMedia',
             'Embedery',
-            'EnystreMusic',
             'Ethfiddle',
             'EventLive',
             'Everviz',
