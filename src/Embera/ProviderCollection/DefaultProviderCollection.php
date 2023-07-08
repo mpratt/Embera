@@ -229,6 +229,7 @@ class DefaultProviderCollection extends ProviderCollectionAdapter
             'Tickcounter',
             'TikTok',
             'Toornament',
+            'TonicAudio',
             'TrinityAudio',
             'Tumblr',
             'Tuxx',

@@ -210,6 +210,7 @@ I try to support all the providers listed on [oembed.com](https://oembed.com).
 - [Tickcounter](providers/Tickcounter.md)
 - [TikTok](providers/TikTok.md)
 - [Toornament](providers/Toornament.md)
+- [TonicAudio](providers/TonicAudio.md)
 - [TrinityAudio](providers/TrinityAudio.md)
 - [Tumblr](providers/Tumblr.md)
 - [Tuxx](providers/Tuxx.md)
