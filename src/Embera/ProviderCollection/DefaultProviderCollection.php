@@ -153,7 +153,6 @@ class DefaultProviderCollection extends ProviderCollectionAdapter
             'NDLA',
             'Nfb',
             'NFTndx',
-            'NoPaste',
             'Odysee',
             'OmnyStudio',
             'OnSizzle',
