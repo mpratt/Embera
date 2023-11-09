@@ -68,10 +68,7 @@ class Tickcounter extends ProviderAdapter implements ProviderInterface
 
         $attr = [];
         $attr[] = 'src="' . $embedUrl . '"';
-        $attr[] = 'width="{width}"';
-        $attr[] = 'height="{height}"';
-        $attr[] = 'frameborder="0"';
-        $attr[] = 'scrolling="no"';
+        $attr[] = 'style="top:0; left:0; width:100%; height:100%; position:absolute; border:0; overflow:hidden';
         $attr[] = 'title=""';
 
         return [
@@ -79,7 +76,7 @@ class Tickcounter extends ProviderAdapter implements ProviderInterface
             'provider_name' => 'Tickcounter',
             'provider_url' => 'https://tickcounter.com',
             'title' => 'Unknown title',
-            'html' => '<iframe ' . implode(' ', $attr). '></iframe>',
+            'html' => '<div style="left:0; width:500px; height:125px; position:relative; padding-bottom:0; margin:0 auto"><iframe ' . implode(' ', $attr). '></iframe></div>',
         ];
     }
 
