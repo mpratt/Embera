@@ -36,7 +36,7 @@ final class KickstarterTest extends ProviderTester
 
     public function testProvider()
     {
-        $this->markTestIncomplete('Kickstarter is not working at the moment the crawler is not passing the cloudflare challenge. Deleting if this continues (2923-02-13).');
+        $this->markTestSkipped('Kickstarter is not working at the moment the crawler is not passing the cloudflare challenge. Deleting if this continues (2023-02-13).');
         // $this->validateProvider('Kickstarter', [ 'width' => 480, 'height' => 270]);
     }
 }

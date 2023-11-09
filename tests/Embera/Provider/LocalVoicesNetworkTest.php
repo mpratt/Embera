@@ -31,7 +31,7 @@ final class LocalVoicesNetworkTest extends ProviderTester
 
     public function testProvider()
     {
-        $this->markTestIncomplete('LocalVoicesNetwork is returning errors on correct urls. Deleting if continues (2023-11-08)');
+        $this->markTestSkipped('LocalVoicesNetwork is returning errors on correct urls. Deleting if continues (2023-11-08)');
         // $this->validateProvider('LocalVoicesNetwork', [ 'width' => 480, 'height' => 270]);
     }
 }
