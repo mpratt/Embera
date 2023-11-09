@@ -36,7 +36,7 @@ class Wistia extends ProviderAdapter implements ProviderInterface
 
     /** inline {@inheritdoc} */
     protected $responsiveSupport = true;
-    
+
     /** inline {@inheritdoc} */
     public function validateUrl(Url $url)
     {

@@ -28,7 +28,8 @@ class Twitter extends ProviderAdapter implements ProviderInterface
 
     /** inline {@inheritdoc} */
     protected static $hosts = [
-        'twitter.com'
+        'twitter.com',
+        'x.com'
     ];
 
     /** inline {@inheritdoc} */
@@ -56,6 +57,7 @@ class Twitter extends ProviderAdapter implements ProviderInterface
         $url->removeQueryString();
         $url->removeLastSlash();
 
+        $url->setHost('twitter.com');
         return $url;
     }
 
