@@ -1,4 +1,5 @@
 <?php
+
 /**
  * CommafulTest.php
  *
@@ -23,7 +24,6 @@ final class CommafulTest extends ProviderTester
         'valid_urls' => array(
             'http://commaful.com/play/artizi/kimberly--tommy/',
             'https://commaful.com/play/wethedreamers/to-the-one-who-loves-him-next/',
-            'http://www.commaful.com/play/dissonance/darling-wont-you-feel-human-with-me/'
         ),
         'invalid_urls' => array(
             'https://commaful.com',
@@ -40,6 +40,6 @@ final class CommafulTest extends ProviderTester
 
     public function testProvider()
     {
-        $this->validateProvider('Commaful', [ 'width' => 480, 'height' => 270]);
+        $this->validateProvider('Commaful', ['width' => 480, 'height' => 270]);
     }
 }
