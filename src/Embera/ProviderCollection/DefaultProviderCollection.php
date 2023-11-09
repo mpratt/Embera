@@ -42,7 +42,6 @@ class DefaultProviderCollection extends ProviderCollectionAdapter
             'AudioClip',
             'Audiomack',
             'Audiomeans',
-            'Avocode',
             'Backtracks',
             'BeautifulAI',
             'BeamsFm',
