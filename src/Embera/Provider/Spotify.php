@@ -19,6 +19,7 @@ use Embera\Url;
  * En Spotify, puedes encontrar toda la música que necesitas.
  *
  * @link https://spotify.com
+ * @see  https://developer.spotify.com/documentation/embeds/reference/oembed
  *
  */
 class Spotify extends ProviderAdapter implements ProviderInterface
