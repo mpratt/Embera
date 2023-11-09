@@ -31,7 +31,6 @@ final class OraTVTest extends ProviderTester
 
     public function testProvider()
     {
-        $this->markTestIncomplete('OraTV seems endpoint is having trouble. Deleting if this continues (2022-11-20)');
-        //$this->validateProvider('OraTV', [ 'width' => 480, 'height' => 270]);
+        $this->validateProvider('OraTV', [ 'width' => 480, 'height' => 270]);
     }
 }
