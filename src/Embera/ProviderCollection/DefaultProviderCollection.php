@@ -31,7 +31,6 @@ class DefaultProviderCollection extends ProviderCollectionAdapter
             'Afreecatv',
             'Altru',
             'Altium',
-            'AmCharts',
             'Animoto',
             'AnnieMusic',
             'Apester',
