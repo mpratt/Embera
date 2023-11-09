@@ -234,7 +234,6 @@ class DefaultProviderCollection extends ProviderCollectionAdapter
             'UpecPod',
             'UstreamTV',
             'Ustudio',
-            'Veer',
             'Verse',
             'VidMount',
             'Videfit',
