@@ -21,7 +21,7 @@ final class OrigitsTest extends ProviderTester
 {
     protected $tasks = [
         'valid_urls' => [
-            'https://origits.com/v/2ca6a37b-1036579d',
+            'https://origits.com/v/53310948',
         ],
         'invalid_urls' => [
             'https://origits.com/',
@@ -30,6 +30,10 @@ final class OrigitsTest extends ProviderTester
 
     public function testProvider()
     {
+        if (defined('GITHUBTESTS')) {
+            $this->markTestSkipped('Origits requires to upload a video and then test it since the urls expire easily');
+        }
+
         $this->validateProvider('Origits', [ 'width' => 480, 'height' => 270]);
     }
 }
