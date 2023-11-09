@@ -181,6 +181,7 @@ I try to support all the providers listed on [oembed.com](https://oembed.com).
 - [Spotlightr](providers/Spotlightr.md)
 - [Spreaker](providers/Spreaker.md)
 - [SproutVideo](providers/SproutVideo.md)
+- [Spyke](providers/Spyke.md)
 - [StandfordDigitalRepository](providers/StandfordDigitalRepository.md)
 - [Streamable](providers/Streamable.md)
 - [Streamio](providers/Streamio.md)

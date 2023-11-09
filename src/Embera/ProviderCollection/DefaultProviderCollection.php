@@ -200,6 +200,7 @@ class DefaultProviderCollection extends ProviderCollectionAdapter
             'Spotlightr',
             'Spreaker',
             'SproutVideo',
+            'Spyke',
             'StandfordDigitalRepository',
             'Streamable',
             'Streamio',
