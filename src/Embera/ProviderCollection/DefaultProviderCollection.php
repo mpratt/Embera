@@ -73,6 +73,7 @@ class DefaultProviderCollection extends ProviderCollectionAdapter
             'DocDroid',
             'Docswell',
             'DreamBroker',
+            'EchoesHQ',
             'Embedery',
             'Ethfiddle',
             'EventLive',
