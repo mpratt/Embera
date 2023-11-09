@@ -150,7 +150,6 @@ class DefaultProviderCollection extends ProviderCollectionAdapter
             'NFTndx',
             'Odysee',
             'OmnyStudio',
-            'OnSizzle',
             'OraTV',
             'Orbitvu',
             'Origits',
