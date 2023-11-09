@@ -30,6 +30,7 @@ final class TrinityAudioTest extends ProviderTester
 
     public function testProvider()
     {
-        $this->validateProvider('TrinityAudio', [ 'width' => 480, 'height' => 270]);
+        $this->markTestSkipped('We need public urls to test TrinityAudio');
+        //$this->validateProvider('TrinityAudio', [ 'width' => 480, 'height' => 270]);
     }
 }
