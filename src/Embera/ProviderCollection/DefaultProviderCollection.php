@@ -155,7 +155,6 @@ class DefaultProviderCollection extends ProviderCollectionAdapter
             'Origits',
             'Outplayed',
             'OverflowIO',
-            'Padlet',
             'Pandavideo',
             'Pastery',
             'Picturelfy',
