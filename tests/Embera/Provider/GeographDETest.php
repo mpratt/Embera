@@ -22,8 +22,6 @@ final class GeographDETest extends ProviderTester
     protected $tasks = [
         'valid_urls' => [
             'http://geo.hlipp.de/photo/35233',
-            'http://geo.hlipp.de/photo/30213',
-            'http://germany.geograph.org/photo/40426',
             'http://germany.geograph.org/photo/36058',
         ],
         'invalid_urls' => [
@@ -34,7 +32,6 @@ final class GeographDETest extends ProviderTester
 
     public function testProvider()
     {
-        $this->markTestIncomplete('GeograpDE seems endpoint is having trouble. Deleting if this continues (2022-11-20)');
-        //$this->validateProvider('GeographDE', [ 'width' => 480, 'height' => 270]);
+        $this->validateProvider('GeographDE', [ 'width' => 480, 'height' => 270]);
     }
 }
