@@ -212,7 +212,6 @@ class DefaultProviderCollection extends ProviderCollectionAdapter
             'StandfordDigitalRepository',
             'Streamable',
             'Streamio',
-            'Subscribi',
             'Sudomemo',
             'Sutori',
             'Sway',
