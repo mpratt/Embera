@@ -27,9 +27,7 @@ class Assemblrworld extends ProviderAdapter implements ProviderInterface
     /** inline {@inheritdoc} */
     protected static $hosts = [
         '*.assemblrworld.com',
-        'studio.assemblrworld.com',
-        'staging.d1o2otincy91d.amplifyapp.com',
-        'assemblr.world',
+        '*.assemblr.world',
     ];
 
     /** inline {@inheritdoc} */
