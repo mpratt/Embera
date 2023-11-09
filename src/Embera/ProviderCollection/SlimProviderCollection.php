@@ -25,7 +25,6 @@ class SlimProviderCollection extends ProviderCollectionAdapter
     {
         parent::__construct($config);
         $this->registerProvider([
-            'CodePen',
             'DailyMotion',
             'Deviantart',
             'Facebook',

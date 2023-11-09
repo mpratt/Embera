@@ -56,7 +56,6 @@ class DefaultProviderCollection extends ProviderCollectionAdapter
             'Chroco',
             'CircuitLab',
             'Clyp','CodeHS',
-            'CodePen',
             'Codepoints',
             'CodeSandbox',
             'Commaful',
