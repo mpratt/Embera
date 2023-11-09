@@ -49,7 +49,6 @@ class DefaultProviderCollection extends ProviderCollectionAdapter
             'Bookingmood',
             'Buttondown',
             'Bumper',
-            'Byzart',
             'Canva',
             'Ceros',
             'Chainflix',
