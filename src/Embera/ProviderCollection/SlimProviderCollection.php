@@ -31,7 +31,6 @@ class SlimProviderCollection extends ProviderCollectionAdapter
             'Facebook',
             'Flickr',
             'GettyImages',
-            'Gfycat',
             'Giphy',
             'Instagram',
             'Imgur',

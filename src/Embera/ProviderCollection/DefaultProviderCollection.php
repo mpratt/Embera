@@ -96,7 +96,6 @@ class DefaultProviderCollection extends ProviderCollectionAdapter
             'GeographDE',
             'GetShow',
             'GettyImages',
-            'Gfycat',
             'Giphy',
             'GloriaTV',
             'Gong',
