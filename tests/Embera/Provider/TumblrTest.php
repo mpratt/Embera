@@ -31,7 +31,6 @@ final class TumblrTest extends ProviderTester
 
     public function testProvider()
     {
-        $this->markTestSkipped('Tumblr: It seems tumblr is not responding on tests but the consumption seems correct');
-        //$this->validateProvider('Tumblr', [ 'width' => 480, 'height' => 270]);
+        $this->validateProvider('Tumblr', [ 'width' => 480, 'height' => 270]);
     }
 }
