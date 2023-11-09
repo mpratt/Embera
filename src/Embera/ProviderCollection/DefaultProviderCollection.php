@@ -146,7 +146,6 @@ class DefaultProviderCollection extends ProviderCollectionAdapter
             'Miro',
             'MixCloud',
             'Mixpanel',
-            'Minesweeper',
             'MusicboxManiacs',
             'Namchey',
             'Nanoo',
