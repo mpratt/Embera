@@ -34,7 +34,6 @@ final class ScribbleMapsTest extends ProviderTester
 
     public function testProvider()
     {
-        $this->markTestIncomplete('ScribbleMaps: Endpoint is down. Deleting if continues. (2022-11-10)');
-        //$this->validateProvider('ScribbleMaps', [ 'width' => 480, 'height' => 270]);
+        $this->validateProvider('ScribbleMaps', [ 'width' => 480, 'height' => 270]);
     }
 }
