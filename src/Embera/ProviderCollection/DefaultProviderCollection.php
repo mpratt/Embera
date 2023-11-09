@@ -42,6 +42,7 @@ class DefaultProviderCollection extends ProviderCollectionAdapter
             'Audiomack',
             'Audiomeans',
             'BeautifulAI',
+            'Behance',
             'BeamsFm',
             'BlackfireIO',
             'Blogcast',
