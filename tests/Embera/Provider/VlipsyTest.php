@@ -34,7 +34,6 @@ final class VlipsyTest extends ProviderTester
 
     public function testProvider()
     {
-        $this->markTestIncomplete('Vlipsy: Api endpoint is down. Site seems to be down too. Deleting if this continues (2022-12-15)');
-        //$this->validateProvider('Vlipsy', [ 'width' => 480, 'height' => 270]);
+        $this->validateProvider('Vlipsy', [ 'width' => 480, 'height' => 270]);
     }
 }
