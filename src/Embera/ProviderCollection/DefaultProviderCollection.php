@@ -74,7 +74,6 @@ class DefaultProviderCollection extends ProviderCollectionAdapter
             'DocDroid',
             'Docswell',
             'DreamBroker',
-            'EduMedia',
             'Embedery',
             'Ethfiddle',
             'EventLive',
