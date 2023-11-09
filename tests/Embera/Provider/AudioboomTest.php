@@ -21,8 +21,7 @@ final class AudioboomTest extends ProviderTester
 {
     protected $tasks = array(
         'valid_urls' => array(
-            'https://audioboom.com/channel/therussellbrandpodcast',
-            'https://audioboom.com/posts/3189619-the-final-episode',
+            'https://audioboom.com/posts/8396369-the-world-s-biggest-therapist-with-travis-mills',
         ),
         'invalid_urls' => array(
             'http://audioboom.com/posts/other-stuff/7404319-you-cheated-in-my-dream?text=data',
