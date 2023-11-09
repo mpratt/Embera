@@ -8,7 +8,7 @@ necesitas.
 
 - Provider
 Name: Spotify
-- Documentation: NONE
+- Documentation: [ https://developer.spotify.com/documentation/embeds/reference/oembed]( https://developer.spotify.com/documentation/embeds/reference/oembed)
 - HTTPS support: YES
 - Fake Response: NO
 - Oembed Params: maxwidth , maxheight
