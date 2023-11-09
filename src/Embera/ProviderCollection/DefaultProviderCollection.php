@@ -235,7 +235,6 @@ class DefaultProviderCollection extends ProviderCollectionAdapter
             'VouchFor',
             'WaveVideo',
             'Wecandeo',
-            'Waltrack',
             'WolframCloud',
             'VoxSnap',
             'Whimsical',
