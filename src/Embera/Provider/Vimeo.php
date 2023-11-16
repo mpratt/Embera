@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Vimeo.php
  *
@@ -30,7 +31,7 @@ class Vimeo extends ProviderAdapter implements ProviderInterface
     protected static $hosts = [
         'vimeo.com'
     ];
-    
+
     /** inline {@inheritdoc} */
     protected $allowedParams = [
         'autopause', 'autopip', 'autoplay', 'background', 'byline', 'color',
@@ -45,9 +46,9 @@ class Vimeo extends ProviderAdapter implements ProviderInterface
     /** inline {@inheritdoc} */
     public function validateUrl(Url $url)
     {
-        return (bool) (
-            preg_match('~vimeo\.com/(?:[0-9]{5,})$~i', (string) $url) ||
+        return (bool) (preg_match('~vimeo\.com/(?:[0-9]{5,})$~i', (string) $url) ||
             preg_match('~vimeo\.com/channels/(?:[^/]+)/(?:[^/]+)~i', (string) $url) ||
+            preg_match('~vimeo\.com/event/(?:[^/]+)/(?:[^/]+)~i', (string) $url) ||
             preg_match('~vimeo\.com/groups/(?:[^/]+)/videos/(?:[^/]+)~i', (string) $url) ||
             preg_match('~vimeo\.com/ondemand/(?:[^/]+)/(?:[^/]+)~i', (string) $url) ||
             preg_match('~vimeo\.com/(?:[0-9]{5,})/(?:[0-9a-z]+)$~i', (string) $url) ||
@@ -62,34 +63,33 @@ class Vimeo extends ProviderAdapter implements ProviderInterface
         $url->removeQueryString();
         $url->removeLastSlash();
 
-		if (preg_match('~(?:vimeo\.com/|player\.vimeo\.com/video/)(\d+)~i', (string) $url, $matches)) {
-			$url->overwrite('https://player.vimeo.com/video/' . $matches[1]);
-		}
+        if (preg_match('~(?:vimeo\.com/|player\.vimeo\.com/video/)(\d+)~i', (string) $url, $matches)) {
+            $url->overwrite('https://player.vimeo.com/video/' . $matches[1]);
+        }
 
         return $url;
     }
 
-	/** inline {@inheritdoc} */
-	public function getFakeResponse()
-	{
+    /** inline {@inheritdoc} */
+    public function getFakeResponse()
+    {
         preg_match('/(?:https?:\/\/)?(?:www\.)?(?:vimeo\.com\/(?:video\/)?)?([0-9]+)(?:[a-zA-Z0-9_-]+)?/', (string) $this->url, $matches);
         $embedUrl = 'https://player.vimeo.com/video/' . $matches['1'];
 
-		$attr = [];
-		$attr[] = 'src="' . $embedUrl . '"';
-		$attr[] = 'width="{width}"';
-		$attr[] = 'height="{height}"';
-		$attr[] = 'frameborder="0"';
-		$attr[] = 'allow="autoplay; fullscreen; picture-in-picture"';
-		$attr[] = 'allowfullscreen';
+        $attr = [];
+        $attr[] = 'src="' . $embedUrl . '"';
+        $attr[] = 'width="{width}"';
+        $attr[] = 'height="{height}"';
+        $attr[] = 'frameborder="0"';
+        $attr[] = 'allow="autoplay; fullscreen; picture-in-picture"';
+        $attr[] = 'allowfullscreen';
 
-		return [
-			'type' => 'video',
-			'provider_name' => 'Vimeo',
-			'provider_url' => 'https://vimeo.com',
-			'title' => 'Unknown title',
-			'html' => '<iframe ' . implode(' ', $attr). '></iframe>',
-		];
-	}
-
+        return [
+            'type' => 'video',
+            'provider_name' => 'Vimeo',
+            'provider_url' => 'https://vimeo.com',
+            'title' => 'Unknown title',
+            'html' => '<iframe ' . implode(' ', $attr) . '></iframe>',
+        ];
+    }
 }
