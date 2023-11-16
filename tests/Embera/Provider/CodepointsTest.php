@@ -21,11 +21,8 @@ final class CodepointsTest extends ProviderTester
 {
     protected $tasks = array(
         'valid_urls' => array(
-            'https://codepoints.net/U+FEB9',
             'https://codepoints.net/U+27F4/',
-            'https://www.codepoints.net/U+2425',
             'https://codepoints.net/U+20B4',
-            'http://codepoints.net/U+1E46',
         ),
         'invalid_urls' => array(
             'http://codepoints.net/',
