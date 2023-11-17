@@ -35,19 +35,18 @@ class Rumble extends ProviderAdapter implements ProviderInterface
     protected $httpsSupport = true;
 
     /** inline {@inheritdoc} */
-    protected $responsiveSupport = false;
+    protected $responsiveSupport = true;
 
     /** inline {@inheritdoc} */
     public function validateUrl(Url $url)
     {
-        return (bool) (preg_match('~rumble\.com/([^/]+)\.html$~i', (string) $url));
+        return (bool) (preg_match('~rumble\.com/embed/([^/]+)~i', (string) $url));
     }
 
     /** inline {@inheritdoc} */
     public function normalizeUrl(Url $url)
     {
         $url->convertToHttps();
-        $url->removeQueryString();
         $url->removeLastSlash();
 
         return $url;
