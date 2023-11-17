@@ -23,10 +23,10 @@ final class RumbleTest extends ProviderTester
         'valid_urls' => [
             'https://rumble.com/v8ind9-hopping-to-go-outside.html',
             'https://rumble.com/v8intx-he-thinks-hes-grown.html',
+            'https://rumble.com/embed/v3tm912/?pub=4',
         ],
         'invalid_urls' => [
             'https://rumble.com/',
-            'https://rumble.com/folder/v8intx-he-thinks-hes-grown.html',
         ],
         'fake_response' => [
             'type' => 'video',

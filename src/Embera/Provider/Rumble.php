@@ -40,7 +40,10 @@ class Rumble extends ProviderAdapter implements ProviderInterface
     /** inline {@inheritdoc} */
     public function validateUrl(Url $url)
     {
-        return (bool) (preg_match('~rumble\.com/embed/([^/]+)~i', (string) $url));
+        return (bool) (
+            preg_match('~rumble\.com/([^/]+)\.html~i', (string) $url) ||
+            preg_match('~rumble\.com/embed/([^/]+)~i', (string) $url)
+        );
     }
 
     /** inline {@inheritdoc} */
