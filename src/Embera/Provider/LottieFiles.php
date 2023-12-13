@@ -28,7 +28,8 @@ class LottieFiles extends ProviderAdapter implements ProviderInterface
 
     /** inline {@inheritdoc} */
     protected static $hosts = [
-        '*.lottiefiles.com'
+        '*.lottiefiles.com',
+        '*.lottie.host'
     ];
 
     /** inline {@inheritdoc} */
@@ -43,7 +44,7 @@ class LottieFiles extends ProviderAdapter implements ProviderInterface
     /** inline {@inheritdoc} */
     public function validateUrl(Url $url)
     {
-        return (bool) (preg_match('~lottiefiles\.com/([0-9]+)\-~i', (string) $url));
+        return (bool) (preg_match('~(lottiefiles\.com|lottie\.host)/([0-9]+)\-~i', (string) $url));
     }
 
     /** inline {@inheritdoc} */
