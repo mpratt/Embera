@@ -63,7 +63,7 @@ class Vimeo extends ProviderAdapter implements ProviderInterface
         $url->removeQueryString();
         $url->removeLastSlash();
 
-        if (preg_match('~(?:vimeo\.com/|player\.vimeo\.com/video/)(\d+)~i', (string) $url, $matches)) {
+        if (preg_match('~(?:vimeo\.com/|player\.vimeo\.com/video/)(\d+)/?$~i', (string) $url, $matches)) {
             $url->overwrite('https://player.vimeo.com/video/' . $matches[1]);
         }
 
