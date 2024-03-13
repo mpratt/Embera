@@ -222,6 +222,7 @@ I try to support all the providers listed on [oembed.com](https://oembed.com).
 - [VouchFor](providers/VouchFor.md)
 - [WaveVideo](providers/WaveVideo.md)
 - [Wecandeo](providers/Wecandeo.md)
+- [Web3IsGoingJustGreat](providers/Web3IsGoingJustGreat.md)
 - [WolframCloud](providers/WolframCloud.md)
 - [VoxSnap](providers/VoxSnap.md)
 - [Whimsical](providers/Whimsical.md)

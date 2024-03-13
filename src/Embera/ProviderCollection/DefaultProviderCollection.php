@@ -242,6 +242,7 @@ class DefaultProviderCollection extends ProviderCollectionAdapter
             'VouchFor',
             'WaveVideo',
             'Wecandeo',
+            'Web3IsGoingJustGreat',
             'WolframCloud',
             'VoxSnap',
             'Whimsical',
