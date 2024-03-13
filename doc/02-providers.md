@@ -195,6 +195,7 @@ I try to support all the providers listed on [oembed.com](https://oembed.com).
 - [Synthesia](providers/Synthesia.md)
 - [Ted](providers/Ted.md)
 - [TheNewYorkTimes](providers/TheNewYorkTimes.md)
+- [ThreeQ](providers/ThreeQ.md)
 - [Tickcounter](providers/Tickcounter.md)
 - [TikTok](providers/TikTok.md)
 - [Toornament](providers/Toornament.md)

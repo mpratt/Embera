@@ -215,6 +215,7 @@ class DefaultProviderCollection extends ProviderCollectionAdapter
             'Synthesia',
             'Ted',
             'TheNewYorkTimes',
+            'ThreeQ',
             'Tickcounter',
             'TikTok',
             'Toornament',
