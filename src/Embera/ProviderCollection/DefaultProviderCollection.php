@@ -175,6 +175,7 @@ class DefaultProviderCollection extends ProviderCollectionAdapter
             'Rcvis',
             'Reddit',
             'ReleaseWire',
+            'Render',
             'Replit',
             'ReverbNation',
             'RoosterTeeth',

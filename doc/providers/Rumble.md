@@ -13,7 +13,7 @@ Name: Rumble
 - Fake Response: YES
 - Oembed Params: maxwidth , maxheight
 - Supported Hosts: rumble.com
-- Responsive response: NO
+- Responsive response: YES
 - Collections: DefaultProviderCollection
 
 

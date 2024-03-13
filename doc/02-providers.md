@@ -156,6 +156,7 @@ I try to support all the providers listed on [oembed.com](https://oembed.com).
 - [Rcvis](providers/Rcvis.md)
 - [Reddit](providers/Reddit.md)
 - [ReleaseWire](providers/ReleaseWire.md)
+- [Render](providers/Render.md)
 - [Replit](providers/Replit.md)
 - [ReverbNation](providers/ReverbNation.md)
 - [RoosterTeeth](providers/RoosterTeeth.md)

@@ -12,7 +12,7 @@ Name: LottieFiles
 - HTTPS support: YES
 - Fake Response: NO
 - Oembed Params: maxwidth , maxheight
-- Supported Hosts: *.lottiefiles.com
+- Supported Hosts: *.lottiefiles.com , *.lottie.host
 - Responsive response: NO
 - Collections: DefaultProviderCollection
 
