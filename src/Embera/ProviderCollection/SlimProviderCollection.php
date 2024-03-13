@@ -28,6 +28,7 @@ class SlimProviderCollection extends ProviderCollectionAdapter
             'DailyMotion',
             'Deviantart',
             'Facebook',
+            'Figma',
             'Flickr',
             'GettyImages',
             'Giphy',

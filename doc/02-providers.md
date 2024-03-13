@@ -64,6 +64,7 @@ I try to support all the providers listed on [oembed.com](https://oembed.com).
 - [Facebook](providers/Facebook.md)
 - [Fader](providers/Fader.md)
 - [FaithLifeTV](providers/FaithLifeTV.md)
+- [Figma](providers/Figma.md)
 - [Fitapp](providers/Fitapp.md)
 - [FITE](providers/FITE.md)
 - [Flickr](providers/Flickr.md)

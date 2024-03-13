@@ -84,6 +84,7 @@ class DefaultProviderCollection extends ProviderCollectionAdapter
             'Facebook',
             'Fader',
             'FaithLifeTV',
+            'Figma',
             'Fitapp',
             'FITE',
             'Flickr',
