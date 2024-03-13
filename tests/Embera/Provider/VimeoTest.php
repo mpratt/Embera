@@ -29,17 +29,18 @@ final class VimeoTest extends ProviderTester
             'https://vimeo.com/',
             'https://vimeo.com/video',
         ],
-		'normalize_urls' => [
+        'normalize_urls' => [
             'http://vimeo.com/groups/shortfilms/videos/66185763' => 'https://vimeo.com/groups/shortfilms/videos/66185763',
+            'https://vimeo.com/919781633/aaaaaaaaaa' => 'https://vimeo.com/919781633/aaaaaaaaaa',
         ],
         'fake_response' => [
             'type' => 'video',
             'html' => '<iframe'
-		]
+        ]
     ];
 
     public function testProvider()
     {
-        $this->validateProvider('Vimeo', [ 'width' => 480, 'height' => 270]);
+        $this->validateProvider('Vimeo', ['width' => 480, 'height' => 270]);
     }
 }
