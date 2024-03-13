@@ -39,7 +39,7 @@ class Spotify extends ProviderAdapter implements ProviderInterface
     public function validateUrl(Url $url)
     {
         return (bool) (
-            preg_match('~spotify\.com/(?:track|album|playlist|show|episode)/(?:[^/]+)(?:/[^/]*)?$~i', (string) $url) ||
+            preg_match('~spotify\.com/(?:intl-[a-z]{2}/|)(?:track|album|playlist|show|episode|artist)/(?:[^/]+)(?:/[^/]*)?$~i', (string) $url) ||
             preg_match('~spotify\.com/user/(?:[^/]+)/playlist/(?:[^/]+)/?$~i', (string) $url)
             // preg_match('~spoti\.fi/(?:[^/]+)$~i', (string) $url)
         );
