@@ -30,6 +30,7 @@ final class ItemisCreateTest extends ProviderTester
 
     public function testProvider()
     {
+        $this->markTestSkipped('The ItemisCreate Provider has been disabled as it seems to be down.');
         $this->validateProvider('ItemisCreate', [ 'width' => 480, 'height' => 270]);
     }
 }

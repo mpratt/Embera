@@ -46,6 +46,7 @@ final class CoubTest extends ProviderTester
 
     public function testProvider()
     {
-        $this->validateProvider('Coub', [ 'width' => 480, 'height' => 270]);
+        $this->markTestSkipped('Coub is not working at the moment (2024-03-12)');
+        //$this->validateProvider('Coub', [ 'width' => 480, 'height' => 270]);
     }
 }

@@ -21,7 +21,7 @@ final class AudioboomTest extends ProviderTester
 {
     protected $tasks = array(
         'valid_urls' => array(
-            'https://audioboom.com/posts/8396369-the-world-s-biggest-therapist-with-travis-mills',
+            'https://audioboom.com/posts/8387868-talking-sh-t-about-your-zodiac-sign-with-larray-pt-2',
         ),
         'invalid_urls' => array(
             'http://audioboom.com/posts/other-stuff/7404319-you-cheated-in-my-dream?text=data',

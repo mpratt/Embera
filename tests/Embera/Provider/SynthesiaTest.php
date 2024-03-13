@@ -30,6 +30,7 @@ final class SynthesiaTest extends ProviderTester
 
     public function testProvider()
     {
-        $this->validateProvider('Synthesia', [ 'width' => 480, 'height' => 270]);
+        $this->markTestSkipped('The Synthesia Provider requires that we have a private video.');
+        //$this->validateProvider('Synthesia', [ 'width' => 480, 'height' => 270]);
     }
 }

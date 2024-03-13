@@ -38,6 +38,7 @@ final class InjurymapTest extends ProviderTester
 
     public function testProvider()
     {
-        $this->validateProvider('Injurymap', [ 'width' => 480, 'height' => 270]);
+        $this->markTestSkipped('The Injurymap Provider has been disabled as it seems they are now charging for their services.');
+        // $this->validateProvider('Injurymap', [ 'width' => 480, 'height' => 270]);
     }
 }

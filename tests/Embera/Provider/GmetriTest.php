@@ -30,6 +30,7 @@ final class GmetriTest extends ProviderTester
 
     public function testProvider()
     {
-        $this->validateProvider('Gmetri', [ 'width' => 480, 'height' => 270]);
+        $this->markTestSkipped('The Gmetri Provider has been disabled as it seems to have changed their business.');
+        //$this->validateProvider('Gmetri', [ 'width' => 480, 'height' => 270]);
     }
 }

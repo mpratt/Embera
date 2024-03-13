@@ -21,8 +21,7 @@ final class OutplayedTest extends ProviderTester
 {
     protected $tasks = [
         'valid_urls' => [
-            'https://outplayed.tv/media/qmjXn/',
-            'https://outplayed.tv/media/xgwQw/lol-xerath-assist',
+            'https://outplayed.tv/media/0koveN'
         ],
         'invalid_urls' => [
             'https://outplayed.tv/',
@@ -36,6 +35,7 @@ final class OutplayedTest extends ProviderTester
 
     public function testProvider()
     {
-        $this->validateProvider('Outplayed', [ 'width' => 480, 'height' => 270]);
+        $this->markTestSkipped('The Outplayed Provider has been disabled as it seems they have stopped providing an oembed endpoint.');
+        //$this->validateProvider('Outplayed', [ 'width' => 480, 'height' => 270]);
     }
 }

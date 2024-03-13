@@ -30,6 +30,7 @@ final class BeamsFmTest extends ProviderTester
 
     public function testProvider()
     {
-        $this->validateProvider('BeamsFm', [ 'width' => 480, 'height' => 270]);
+        $this->markTestSkipped('The Beams.fm Provider has been disabled as it seems to have changed their business.');
+        //$this->validateProvider('BeamsFm', [ 'width' => 480, 'height' => 270]);
     }
 }
