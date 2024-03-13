@@ -87,6 +87,7 @@ class DefaultProviderCollection extends ProviderCollectionAdapter
             'FITE',
             'Flickr',
             'Flourish',
+            'FlowHubOrg',
             'Framer',
             'Fooday',
             'GeographUk',
