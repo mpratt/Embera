@@ -131,6 +131,7 @@ I try to support all the providers listed on [oembed.com](https://oembed.com).
 - [Nanoo](providers/Nanoo.md)
 - [NaturalAtlas](providers/NaturalAtlas.md)
 - [NDLA](providers/NDLA.md)
+- [NeetoRecord](providers/NeetoRecord.md)
 - [Nfb](providers/Nfb.md)
 - [NFTndx](providers/NFTndx.md)
 - [Odysee](providers/Odysee.md)

@@ -151,6 +151,7 @@ class DefaultProviderCollection extends ProviderCollectionAdapter
             'Nanoo',
             'NaturalAtlas',
             'NDLA',
+            'NeetoRecord',
             'Nfb',
             'NFTndx',
             'Odysee',
