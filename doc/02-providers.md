@@ -170,6 +170,7 @@ I try to support all the providers listed on [oembed.com](https://oembed.com).
 - [ScribbleMaps](providers/ScribbleMaps.md)
 - [Scribd](providers/Scribd.md)
 - [SendToNews](providers/SendToNews.md)
+- [Shopshare](providers/Shopshare.md)
 - [Shoudio](providers/Shoudio.md)
 - [ShowTheWay](providers/ShowTheWay.md)
 - [Sketchfab](providers/Sketchfab.md)
