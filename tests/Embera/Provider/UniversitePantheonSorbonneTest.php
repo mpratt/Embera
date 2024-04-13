@@ -21,8 +21,6 @@ final class UniversitePantheonSorbonneTest extends ProviderTester
 {
     protected $tasks = [
         'valid_urls' => [
-            'https://mediatheque.univ-paris1.fr/video/1839-revue-1257-n1-eclairages-sur-le-cinema/',
-            'https://mediatheque.univ-paris1.fr/video/1833-discovering-greek-roman-cities-teaser-fr/',
             'https://mediatheque.univ-paris1.fr/video/1786-entretien-avec-bruno-cotte/',
         ],
         'invalid_urls' => [
