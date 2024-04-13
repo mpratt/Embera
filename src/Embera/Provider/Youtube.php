@@ -70,8 +70,10 @@ class Youtube extends ProviderAdapter implements ProviderInterface
         $attr[] = 'height="{height}"';
         $attr[] = 'src="' . $embedUrl . '"';
         $attr[] = 'frameborder="0"';
-        $attr[] = 'allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"';
+        $attr[] = 'allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"';
+        $attr[] = 'referrerpolicy="strict-origin-when-cross-origin"';
         $attr[] = 'allowfullscreen';
+        $attr[] = 'title=""';
 
         return [
             'type' => 'video',
