@@ -46,6 +46,7 @@ class DefaultProviderCollection extends ProviderCollectionAdapter
             'BeamsFm',
             'BlackfireIO',
             'Blogcast',
+            'BlueskySocial',
             'Bookingmood',
             'Buttondown',
             'Bumper',

@@ -26,6 +26,7 @@ I try to support all the providers listed on [oembed.com](https://oembed.com).
 - [BeamsFm](providers/BeamsFm.md)
 - [BlackfireIO](providers/BlackfireIO.md)
 - [Blogcast](providers/Blogcast.md)
+- [BlueskySocial](providers/BlueskySocial.md)
 - [Bookingmood](providers/Bookingmood.md)
 - [Buttondown](providers/Buttondown.md)
 - [Bumper](providers/Bumper.md)
