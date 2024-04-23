@@ -224,6 +224,7 @@ class DefaultProviderCollection extends ProviderCollectionAdapter
             'TikTok',
             'Toornament',
             'TonicAudio',
+            'Trackspace',
             'TrinityAudio',
             'Tumblr',
             'Tuxx',
