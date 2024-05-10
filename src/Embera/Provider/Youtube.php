@@ -40,7 +40,8 @@ class Youtube extends ProviderAdapter implements ProviderInterface
         return (bool) (
             preg_match('~v=(?:[a-z0-9_\-]+)~i', (string) $url) ||
             preg_match('~/shorts/(?:[a-z0-9_\-]+)~i', (string) $url) ||
-            preg_match('~/playlist(.+)list=(?:[a-z0-9_\-]+)~i', (string) $url)
+            preg_match('~/playlist(.+)list=(?:[a-z0-9_\-]+)~i', (string) $url) ||
+            preg_match('~/live/(?:[a-z0-9_\-]+)~i', (string) $url)
         );
     }
 
