@@ -114,6 +114,7 @@ class DefaultProviderCollection extends ProviderCollectionAdapter
             'HippoVideo',
             'Hopvue',
             'Huffduffer',
+            'Ideamapper',
             'iFixit',
             'IHeartRadio',
             'Imgur',
