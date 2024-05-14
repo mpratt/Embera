@@ -91,6 +91,7 @@ I try to support all the providers listed on [oembed.com](https://oembed.com).
 - [Heyzine](providers/Heyzine.md)
 - [HiHaHo](providers/HiHaHo.md)
 - [HippoVideo](providers/HippoVideo.md)
+- [Hopvue](providers/Hopvue.md)
 - [Huffduffer](providers/Huffduffer.md)
 - [iFixit](providers/iFixit.md)
 - [IHeartRadio](providers/IHeartRadio.md)

@@ -111,6 +111,7 @@ class DefaultProviderCollection extends ProviderCollectionAdapter
             'Heyzine',
             'HiHaHo',
             'HippoVideo',
+            'Hopvue',
             'Huffduffer',
             'iFixit',
             'IHeartRadio',
