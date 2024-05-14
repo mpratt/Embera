@@ -53,6 +53,7 @@ class DefaultProviderCollection extends ProviderCollectionAdapter
             'Bumper',
             'Canva',
             'Ceros',
+            'Celero',
             'Chainflix',
             'ChartBlocks',
             'Chroco',
