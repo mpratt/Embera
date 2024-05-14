@@ -1,17 +1,17 @@
-# [Odysee](https://odysee.com)
+# [Biqnetwork](https://cloud.biqapp.com)
 
-Odysee Provider
+Biqnetwork Provider
 
 ## Implementation Details
 
 - Provider
-Name: Odysee
+Name: Biqnetwork
 - Documentation: NONE
 - HTTPS support: YES
 - Fake Response: NO
 - Oembed Params: maxwidth , maxheight
-- Supported Hosts: odysee.com
-- Responsive response: YES
+- Supported Hosts: cloud.biqapp.com
+- Responsive response: NO
 - Collections: DefaultProviderCollection
 
 
