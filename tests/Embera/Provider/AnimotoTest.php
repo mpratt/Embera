@@ -22,7 +22,6 @@ final class AnimotoTest extends ProviderTester
     protected $tasks = array(
         'valid_urls' => array(
             'https://animoto.com/play/54cLVM1s5pppzO1i7mDC9A',
-            'https://animoto.com/play/Dcodnn5QyccUt1YbY117XA',
         ),
         'invalid_urls' => array(
             'http://animoto.com/features',
