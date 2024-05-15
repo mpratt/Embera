@@ -21,7 +21,7 @@ final class AudiocomTest extends ProviderTester
 {
     protected $tasks = [
         'valid_urls' => [
-            'https://audio.com/ron-fraser/westering-home',
+            'https://audio.com/audio-com/audio/luce-mawdsley',
         ],
         'invalid_urls' => [
             'https://audio.com',

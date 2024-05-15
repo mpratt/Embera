@@ -21,7 +21,6 @@ final class KnackiTest extends ProviderTester
 {
     protected $tasks = [
         'valid_urls' => [
-            //'https://jdr.knacki.info/meuh/woop',
             'https://jdr.knacki.info/meuh/doigt?query=string',
         ],
         'invalid_urls' => [
@@ -36,6 +35,7 @@ final class KnackiTest extends ProviderTester
 
     public function testProvider()
     {
-        $this->validateProvider('Knacki', [ 'width' => 480, 'height' => 270]);
+        $this->markTestSkipped('Knacki is having problems with their SSL keys.');
+        //$this->validateProvider('Knacki', [ 'width' => 480, 'height' => 270]);
     }
 }

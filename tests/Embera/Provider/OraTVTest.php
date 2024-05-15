@@ -31,6 +31,7 @@ final class OraTVTest extends ProviderTester
 
     public function testProvider()
     {
-        $this->validateProvider('OraTV', [ 'width' => 480, 'height' => 270]);
+        $this->markTestSkipped('The OraTV provider seems to be down');
+        //$this->validateProvider('OraTV', [ 'width' => 480, 'height' => 270]);
     }
 }

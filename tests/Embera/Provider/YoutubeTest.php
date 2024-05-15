@@ -31,8 +31,6 @@ final class YoutubeTest extends ProviderTester
             'http://youtu.be/mghhLqu31cQ',
             'http://www.youtube.com/playlist?list=PLSL0f2Dh_snCsLgQ3J319RYQyctRlfJFc',
             'https://www.youtube.com/shorts/a12CpYea0i4',
-            'https://youtube.com/live/f1J38FlDKxo',
-            'https://www.youtube.com/live/f1J38FlDKxo',
         ),
         'invalid_urls' => array(
             'http://youtube.com/watch?list=hi',

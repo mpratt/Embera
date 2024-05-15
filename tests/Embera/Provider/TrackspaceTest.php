@@ -31,6 +31,7 @@ final class TrackspaceTest extends ProviderTester
 
     public function testProvider()
     {
-        $this->validateProvider('Trackspace', [ 'width' => 480, 'height' => 270]);
+        $this->markTestSkipped('Trackspace seems to be down. Skipping tests for now.');
+        //$this->validateProvider('Trackspace', [ 'width' => 480, 'height' => 270]);
     }
 }

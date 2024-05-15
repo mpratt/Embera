@@ -33,7 +33,8 @@ final class WordpressTest extends ProviderTester
 
     public function testProvider()
     {
-        Wordpress::addHost('rarasaur.com');
-        $this->validateProvider('Wordpress', [ 'width' => 480, 'height' => 270]);
+        $this->markTestIncomplete('We require a new endpoints for this provider');
+        // Wordpress::addHost('rarasaur.com');
+        // $this->validateProvider('Wordpress', [ 'width' => 480, 'height' => 270]);
     }
 }

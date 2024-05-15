@@ -31,6 +31,7 @@ final class KooappTest extends ProviderTester
 
     public function testProvider()
     {
-        $this->validateProvider('Kooapp', [ 'width' => 480, 'height' => 270]);
+        $this->markTestSkipped('Kooapp is having issues with their oembed endpoint');
+        //$this->validateProvider('Kooapp', [ 'width' => 480, 'height' => 270]);
     }
 }
