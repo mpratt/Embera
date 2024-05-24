@@ -40,7 +40,7 @@ class Podbean extends ProviderAdapter implements ProviderInterface
     /** inline {@inheritdoc} */
     public function validateUrl(Url $url)
     {
-        return (bool) (preg_match('~podbean\.com/e/([^/]+)$~i', (string) $url));
+        return (bool) (preg_match('~podbean\.com/(?:e|eas|media/share)/([^/]+)$~i', (string) $url));
     }
 
     /** inline {@inheritdoc} */
