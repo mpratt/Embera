@@ -75,6 +75,7 @@ I try to support all the providers listed on [oembed.com](https://oembed.com).
 - [FlowHubOrg](providers/FlowHubOrg.md)
 - [Framer](providers/Framer.md)
 - [Fooday](providers/Fooday.md)
+- [Genially](providers/Genially.md)
 - [GeographUk](providers/GeographUk.md)
 - [GeographCI](providers/GeographCI.md)
 - [GeographDE](providers/GeographDE.md)
