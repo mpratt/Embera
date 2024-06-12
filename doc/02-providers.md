@@ -102,6 +102,7 @@ I try to support all the providers listed on [oembed.com](https://oembed.com).
 - [Infogram](providers/Infogram.md)
 - [Infoveave](providers/Infoveave.md)
 - [Injurymap](providers/Injurymap.md)
+- [InsightTimer](providers/InsightTimer.md)
 - [Instagram](providers/Instagram.md)
 - [InsticatorContentEngagementUnit](providers/InsticatorContentEngagementUnit.md)
 - [Issuu](providers/Issuu.md)

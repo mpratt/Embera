@@ -122,6 +122,7 @@ class DefaultProviderCollection extends ProviderCollectionAdapter
             'Infogram',
             'Infoveave',
             'Injurymap',
+            'InsightTimer',
             'Instagram',
             'InsticatorContentEngagementUnit',
             'Issuu',
