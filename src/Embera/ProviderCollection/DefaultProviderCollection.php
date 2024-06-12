@@ -95,6 +95,7 @@ class DefaultProviderCollection extends ProviderCollectionAdapter
             'FlowHubOrg',
             'Framer',
             'Fooday',
+            'Genially',
             'GeographUk',
             'GeographCI',
             'GeographDE',
