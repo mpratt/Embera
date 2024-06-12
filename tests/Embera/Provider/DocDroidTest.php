@@ -21,8 +21,6 @@ final class DocDroidTest extends ProviderTester
 {
     protected $tasks = array(
         'valid_urls' => array(
-            'https://www.docdroid.net/hptvUCe/example-document.docx.html',
-            'https://www.docdroid.com/hptvUCe/example-document.docx.html',
             'https://docdro.id/hptvUCe'
         ),
         'invalid_urls' => array(
@@ -40,6 +38,7 @@ final class DocDroidTest extends ProviderTester
 
     public function testProvider()
     {
-        $this->validateProvider('DocDroid', [ 'width' => 480, 'height' => 270]);
+        $this->markTestIncomplete('We need a sample url but document uploads are only available for subscribers. (DocDroid)');
+        // $this->validateProvider('DocDroid', [ 'width' => 480, 'height' => 270]);
     }
 }
