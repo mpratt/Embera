@@ -26,7 +26,7 @@ class Gumlet extends ProviderAdapter implements ProviderInterface
 
     /** inline {@inheritdoc} */
     protected static $hosts = [
-        'gumlet.com', '*.gumlet.io',
+        'gumlet.com', '*.gumlet.io', 'gumlet.tv'
     ];
 
     /** inline {@inheritdoc} */
@@ -41,7 +41,7 @@ class Gumlet extends ProviderAdapter implements ProviderInterface
     /** inline {@inheritdoc} */
     public function validateUrl(Url $url)
     {
-        return (bool) (preg_match('~gumlet\.(com|io)/(watch|embed)/([^/]+)~i', (string) $url));
+        return (bool) (preg_match('~gumlet\.(com|io|tv)/(watch|embed)/([^/]+)~i', (string) $url));
     }
 
     /** inline {@inheritdoc} */
