@@ -30,6 +30,7 @@ final class PikassoTest extends ProviderTester
 
     public function testProvider()
     {
-        $this->validateProvider('Pikasso', [ 'width' => 480, 'height' => 270]);
+        $this->markTestSkipped('Pikasso seems to be down. Deleting if this continues for a long time. (2024-06-13)');
+        //$this->validateProvider('Pikasso', [ 'width' => 480, 'height' => 270]);
     }
 }

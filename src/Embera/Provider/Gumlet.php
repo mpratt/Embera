@@ -22,7 +22,7 @@ use Embera\Url;
 class Gumlet extends ProviderAdapter implements ProviderInterface
 {
     /** inline {@inheritdoc} */
-    protected $endpoint = 'https://api.gumlet.com/v1/oembed?format=json';
+    protected $endpoint = 'https://api.gumlet.com/v1/oembed';
 
     /** inline {@inheritdoc} */
     protected static $hosts = [

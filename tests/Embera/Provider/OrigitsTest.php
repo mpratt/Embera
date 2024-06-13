@@ -30,10 +30,7 @@ final class OrigitsTest extends ProviderTester
 
     public function testProvider()
     {
-        if (defined('GITHUBTESTS')) {
-            $this->markTestSkipped('Origits requires to upload a video and then test it since the urls expire easily');
-        }
-
-        $this->validateProvider('Origits', [ 'width' => 480, 'height' => 270]);
+        $this->markTestSkipped('Origits requires to upload a video and then test it since the urls expire easily');
+        // $this->validateProvider('Origits', [ 'width' => 480, 'height' => 270]);
     }
 }
