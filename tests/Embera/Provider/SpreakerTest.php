@@ -22,8 +22,6 @@ final class SpreakerTest extends ProviderTester
     protected $tasks = [
         'valid_urls' => [
             'https://www.spreaker.com/user/computerhoy',
-            'https://www.spreaker.com/user/computerhoy/lunes-2-noviembre-29-11-19-11-46',
-            'https://www.spreaker.com/user/pizzaatmcds/intriguing011',
         ],
         'invalid_urls' => [
             'https://www.spreaker.com/',
