@@ -30,6 +30,7 @@ final class ViostreamTest extends ProviderTester
 
     public function testProvider()
     {
-        $this->validateProvider('Viostream', [ 'width' => 480, 'height' => 270]);
+        $this->markTestSkipped('The Viostream provider is not returning oembed data.');
+        //$this->validateProvider('Viostream', [ 'width' => 480, 'height' => 270]);
     }
 }
