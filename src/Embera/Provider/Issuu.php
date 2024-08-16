@@ -56,12 +56,21 @@ class Issuu extends ProviderAdapter implements ProviderInterface
     /** inline {@inheritdoc} */
     public function getFakeResponse()
     {
+        preg_match('~issuu\.com/([^/]+)/docs/([^/]+)$~i', $this->url, $matches);
+
+        $attrs = [
+            'src="https://e.issuu.com/embed.html?u=' . $matches['1'] . '&d=' . $matches['2'] . '"',
+            'style="border:none; width: {width}; height: {height};"',
+            'allow="clipboard-write,allow-top-navigation,allow-top-navigation-by-user-activation,allow-downloads,allow-scripts,allow-same-origin,allow-popups,allow-modals,allow-popups-to-escape-sandbox,allow-forms"',
+            'allowfullscreen="true"',
+        ];
+
         return [
             'type' => 'rich',
             'provider_name' => 'Issuu',
             'provider_url' => 'https://issuu.com',
             'title' => 'Unknown title',
-            'html' => '<div data-url="' . $this->url . '" style="width: {width}px; height: {height}px;" class="issuuembed"></div><script type="text/javascript" src="//e.issuu.com/embed.js" async="true"></script>',
+            'html' => '<iframe ' . implode(' ', $attrs) . '></iframe>',
         ];
     }
 

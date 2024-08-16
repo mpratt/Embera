@@ -31,7 +31,7 @@ final class IssuuTest extends ProviderTester
         ],
         'fake_response' => [
             'type' => 'rich',
-            'html' => '<div'
+            'html' => '<iframe'
         ]
     ];
 
