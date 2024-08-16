@@ -21,8 +21,7 @@ final class ShopshareTest extends ProviderTester
 {
     protected $tasks = [
         'valid_urls' => [
-            'https://shopshare.tv/shopcast/U2hvcGNhc3Q6NzExNA==',
-            'https://shopshare.tv/shopboard/TG9va2Jvb2s6ODQwOQ==',
+            'https://jzimmerstyle.shopshare.tv/shopcast/U2hvcGNhc3Q6OTc4NA==/'
         ],
         'invalid_urls' => [
             'https://shopshare.tv',

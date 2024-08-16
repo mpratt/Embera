@@ -26,7 +26,7 @@ class Shopshare extends ProviderAdapter implements ProviderInterface
 
     /** inline {@inheritdoc} */
     protected static $hosts = [
-        'shopshare.tv'
+        '*.shopshare.tv'
     ];
 
     /** inline {@inheritdoc} */
