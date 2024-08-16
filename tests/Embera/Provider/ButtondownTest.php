@@ -21,8 +21,7 @@ final class ButtondownTest extends ProviderTester
 {
     protected $tasks = array(
         'valid_urls' => array(
-            'https://buttondown.email/rhcpsessions?as_embed=true',
-            'https://www.buttondown.email/jmduke',
+            'https://buttondown.com/applied-cartography'
         ),
         'invalid_urls' => array(
             'https://buttondown.email/multiple/paths',

@@ -12,7 +12,7 @@ Name: Buttondown
 - HTTPS support: YES
 - Fake Response: YES
 - Oembed Params: maxwidth , maxheight
-- Supported Hosts: buttondown.email
+- Supported Hosts: buttondown.email , buttondown.com
 - Responsive response: YES
 - Collections: DefaultProviderCollection
 
