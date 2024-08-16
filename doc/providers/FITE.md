@@ -11,7 +11,7 @@ Name: FITE
 - HTTPS support: YES
 - Fake Response: YES
 - Oembed Params: maxwidth , maxheight
-- Supported Hosts: fite.tv
+- Supported Hosts: fite.tv , triller.tv , trillertv.com
 - Responsive response: NO
 - Collections: DefaultProviderCollection
 

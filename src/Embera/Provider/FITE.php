@@ -27,7 +27,9 @@ class FITE extends ProviderAdapter implements ProviderInterface
 
     /** inline {@inheritdoc} */
     protected static $hosts = [
-        'fite.tv'
+        'fite.tv',
+        'triller.tv',
+        'trillertv.com'
     ];
 
     /** inline {@inheritdoc} */
@@ -36,7 +38,7 @@ class FITE extends ProviderAdapter implements ProviderInterface
     /** inline {@inheritdoc} */
     public function validateUrl(Url $url)
     {
-        return (bool) (preg_match('~fite\.tv/watch/(?:[^/]+)/([^/]+)/?~i', (string) $url));
+        return (bool) (preg_match('~(trillertv|triller|fite)\.(tv|com)/watch/(?:[^/]+)/([^/]+)/?~i', (string) $url));
     }
 
     /** inline {@inheritdoc} */
@@ -51,7 +53,7 @@ class FITE extends ProviderAdapter implements ProviderInterface
     /** inline {@inheritdoc} */
     public function getFakeResponse()
     {
-        preg_match('~fite\.tv/watch/(?:[^/]+)/([^/]+)/?~i', (string) $this->url, $matches);
+        preg_match('~(trillertv|triller|fite)\.(tv|com)/watch/(?:[^/]+)/([^/]+)/?~i', (string) $this->url, $matches);
 
         $html = '<div style="height: 270px; width: 480px;" data-id="' . $matches['1'] . '" class="kdv-embed" data-type="v" data-ap="true"></div> <script src="https://www.fite.tv/embed.1.js"></script';
 
