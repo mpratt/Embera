@@ -1,16 +1,16 @@
-# [Gumlet](https://gumlet.com)
+# [ItabtechInfosys](https://samay.itabtechinfosys.com)
 
-Gumlet Provider
+ItabtechInfosys Provider
 
 ## Implementation Details
 
 - Provider
-Name: Gumlet
+Name: ItabtechInfosys
 - Documentation: NONE
 - HTTPS support: YES
 - Fake Response: NO
 - Oembed Params: maxwidth , maxheight
-- Supported Hosts: gumlet.com , *.gumlet.io , gumlet.tv
+- Supported Hosts: samay.itabtechinfosys.com
 - Responsive response: NO
 - Collections: DefaultProviderCollection
 

@@ -107,6 +107,7 @@ I try to support all the providers listed on [oembed.com](https://oembed.com).
 - [Instagram](providers/Instagram.md)
 - [InsticatorContentEngagementUnit](providers/InsticatorContentEngagementUnit.md)
 - [Issuu](providers/Issuu.md)
+- [ItabtechInfosys](providers/ItabtechInfosys.md)
 - [ItemisCreate](providers/ItemisCreate.md)
 - [Jovian](providers/Jovian.md)
 - [KakaoTV](providers/KakaoTV.md)
