@@ -136,6 +136,7 @@ I try to support all the providers listed on [oembed.com](https://oembed.com).
 - [MixCloud](providers/MixCloud.md)
 - [Mixpanel](providers/Mixpanel.md)
 - [MusicboxManiacs](providers/MusicboxManiacs.md)
+- [MySQLVisualExplain](providers/MySQLVisualExplain.md)
 - [Namchey](providers/Namchey.md)
 - [Nanoo](providers/Nanoo.md)
 - [Naro](providers/Naro.md)

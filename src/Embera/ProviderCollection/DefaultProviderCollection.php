@@ -156,6 +156,7 @@ class DefaultProviderCollection extends ProviderCollectionAdapter
             'MixCloud',
             'Mixpanel',
             'MusicboxManiacs',
+            'MySQLVisualExplain',
             'Namchey',
             'Nanoo',
             'Naro',
