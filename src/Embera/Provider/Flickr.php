@@ -39,7 +39,7 @@ class Flickr extends ProviderAdapter implements ProviderInterface
     {
         return (bool) (
             preg_match('~/photos/(?:[^/]+)/(?:[0-9]+)/?~i', (string) $url) ||
-            preg_match('~flic\.kr/p/(?:[^/]+)~i', (string) $url)
+            preg_match('~flic\.kr/(?:[^/]{1})/(?:[^/]+)~i', (string) $url)
         );
     }
 
