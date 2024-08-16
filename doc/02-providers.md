@@ -138,6 +138,7 @@ I try to support all the providers listed on [oembed.com](https://oembed.com).
 - [MusicboxManiacs](providers/MusicboxManiacs.md)
 - [Namchey](providers/Namchey.md)
 - [Nanoo](providers/Nanoo.md)
+- [Naro](providers/Naro.md)
 - [NaturalAtlas](providers/NaturalAtlas.md)
 - [NDLA](providers/NDLA.md)
 - [NeetoRecord](providers/NeetoRecord.md)

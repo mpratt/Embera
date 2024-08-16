@@ -158,6 +158,7 @@ class DefaultProviderCollection extends ProviderCollectionAdapter
             'MusicboxManiacs',
             'Namchey',
             'Nanoo',
+            'Naro',
             'NaturalAtlas',
             'NDLA',
             'NeetoRecord',
