@@ -26,7 +26,8 @@ class Acast extends ProviderAdapter implements ProviderInterface
 
     /** inline {@inheritdoc} */
     protected static $hosts = [
-        'play.acast.com'
+        'play.acast.com',
+        'shows.acast.com'
     ];
 
     /** inline {@inheritdoc} */

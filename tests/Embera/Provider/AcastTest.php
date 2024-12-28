@@ -22,6 +22,7 @@ final class AcastTest extends ProviderTester
     protected $tasks = [
         'valid_urls' => [
             'https://play.acast.com/s/go-off-sis/keepthatsameenergyfeat.kekepalmer',
+            'https://shows.acast.com/the-4000-holes-podcast-1/episodes/the-round-table-show-the-2024-christmas-special'
         ],
         'invalid_urls' => [
             'https://play.acast.com/go-off-sis/keepthatsameenergyfeat.kekepalmer',
