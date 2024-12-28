@@ -42,7 +42,7 @@ class Acast extends ProviderAdapter implements ProviderInterface
     /** inline {@inheritdoc} */
     public function validateUrl(Url $url)
     {
-        return (bool) (preg_match('~acast\.com/s/([^/]+)~i', (string) $url));
+        return (bool) (preg_match('~acast\.com/s/([^/]+)~i', (string) $url)) || (preg_match('~shows.acast\.com/([^/]+)~i', (string) $url));
     }
 
     /** inline {@inheritdoc} */
