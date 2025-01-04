@@ -10,7 +10,7 @@ Name: Mixpanel
 - HTTPS support: YES
 - Fake Response: NO
 - Oembed Params: maxwidth , maxheight
-- Supported Hosts: mixpanel.com
+- Supported Hosts: *.mixpanel.com
 - Responsive response: YES
 - Collections: DefaultProviderCollection
 
