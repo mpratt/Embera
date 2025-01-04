@@ -241,6 +241,7 @@ I try to support all the providers listed on [oembed.com](https://oembed.com).
 - [Viously](providers/Viously.md)
 - [Viostream](providers/Viostream.md)
 - [Vlipsy](providers/Vlipsy.md)
+- [Vizdom](providers/Vizdom.md)
 - [VouchFor](providers/VouchFor.md)
 - [WaveVideo](providers/WaveVideo.md)
 - [Wecandeo](providers/Wecandeo.md)
