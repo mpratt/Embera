@@ -162,6 +162,7 @@ class DefaultProviderCollection extends ProviderCollectionAdapter
             'Naro',
             'NaturalAtlas',
             'NDLA',
+            'Nebula',
             'NeetoRecord',
             'Nfb',
             'NFTndx',
