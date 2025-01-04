@@ -201,6 +201,7 @@ class DefaultProviderCollection extends ProviderCollectionAdapter
             'Rumble',
             'RunKit',
             'SapoVideos',
+            'Sbedit',
             'ScreenNine',
             'Screencast',
             'ScribbleMaps',
