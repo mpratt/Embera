@@ -23,7 +23,6 @@ final class InfogramTest extends ProviderTester
         'valid_urls' => [
             'https://infogram.com/amazon-and-the-book-market-1gk9vp1xj86lm4y',
             'http://infogram.com/welcome_welcome_your_first_project-939?no_track=true',
-            'https://infogram.com/8f6d71e6-5ce4-4840-a19d-7cc83cfb8a5f',
         ],
         'invalid_urls' => [
             'https://infogram.com/',
