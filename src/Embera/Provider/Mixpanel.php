@@ -26,7 +26,7 @@ class Mixpanel extends ProviderAdapter implements ProviderInterface
 
     /** inline {@inheritdoc} */
     protected static $hosts = [
-        'mixpanel.com'
+        '*.mixpanel.com'
     ];
 
     /** inline {@inheritdoc} */
