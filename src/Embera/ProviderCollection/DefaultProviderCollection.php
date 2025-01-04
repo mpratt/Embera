@@ -211,7 +211,6 @@ class DefaultProviderCollection extends ProviderCollectionAdapter
             'SlateApp',
             'Slideshare',
             'SmashNotes',
-            'Smeme',
             'Smugmug',
             'SocialExplorer',
             'SongLink',
