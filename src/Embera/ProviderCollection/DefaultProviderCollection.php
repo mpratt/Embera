@@ -151,7 +151,6 @@ class DefaultProviderCollection extends ProviderCollectionAdapter
             'Mediastream',
             'MedienArchivKuenste',
             'MermaidInk',
-            'MicrosoftStream',
             'Miro',
             'MixCloud',
             'Mixpanel',
