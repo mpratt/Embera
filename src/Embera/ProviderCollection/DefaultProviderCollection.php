@@ -85,7 +85,6 @@ class DefaultProviderCollection extends ProviderCollectionAdapter
             'Ethfiddle',
             'EventLive',
             'Everviz',
-            'Eyrie',
             'Facebook',
             'Fader',
             'FaithLifeTV',
