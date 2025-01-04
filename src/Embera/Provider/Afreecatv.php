@@ -26,7 +26,7 @@ class Afreecatv extends ProviderAdapter implements ProviderInterface
 
     /** inline {@inheritdoc} */
     protected static $hosts = [
-        '*.afree.ca', '*.afreecatv.com'
+        '*.afree.ca', '*.afreecatv.com', '*.sooplive.co.kr'
     ];
 
     /** inline {@inheritdoc} */
@@ -41,7 +41,7 @@ class Afreecatv extends ProviderAdapter implements ProviderInterface
     /** inline {@inheritdoc} */
     public function validateUrl(Url $url)
     {
-        return (bool) (preg_match('~(afree\.ca|afreecatv\.com)/(ST|PLAYER/STATION|player)/([^/]+)~i', (string) $url));
+        return (bool) (preg_match('~(afree\.ca|afreecatv\.com|sooplive\.co\.kr)/(ST|PLAYER/STATION|player)/([^/]+)~i', (string) $url));
     }
 
     /** inline {@inheritdoc} */
