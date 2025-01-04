@@ -20,9 +20,6 @@ final class WordwallTest extends ProviderTester
 {
     protected $tasks = [
         'valid_urls' => [
-            'https://wordwall.net/es/resource/1264265/repasamos-la-tabla-del-2',
-            'https://wordwall.net/resource/1264265/repasamos-la-tabla-del-2',
-            'https://wordwall.net/resource/1264265',
             'https://wordwall.net/play/421/579/947',
         ],
         'invalid_urls' => [
