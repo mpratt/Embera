@@ -23,7 +23,6 @@ class DefaultProviderCollection extends ProviderCollectionAdapter
     {
         parent::__construct($config);
         $this->registerProvider([
-            'TwentyThreeHq',
             'Acast',
             'ActBlue',
             'Adilo',
