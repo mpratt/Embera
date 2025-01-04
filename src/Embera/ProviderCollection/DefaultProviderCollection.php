@@ -205,7 +205,6 @@ class DefaultProviderCollection extends ProviderCollectionAdapter
             'ScribbleMaps',
             'Scribd',
             'SendToNews',
-            'Shopshare',
             'Shoudio',
             'ShowTheWay',
             'Sketchfab',
