@@ -96,6 +96,7 @@ class DefaultProviderCollection extends ProviderCollectionAdapter
             'Flourish',
             'FlowHubOrg',
             'Framer',
+            'Framatube',
             'Fooday',
             'Genially',
             'GeographUk',
