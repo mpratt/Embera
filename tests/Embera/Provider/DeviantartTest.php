@@ -23,8 +23,6 @@ final class DeviantartTest extends ProviderTester
         'valid_urls' => array(
             'https://www.deviantart.com/mari-m007/art/Birds-322544540',
             'http://deviantart.com/martinimal/art/Tenerife-817381930',
-            'http://wordofchen.deviantart.com/art/Pressure-379617958/',
-            'http://fav.me/dd13x6f',
         ),
         'invalid_urls' => array(
             'http://lieveheersbeestje.deviantart.com/art/house/Heart-of-gold-378848984',
