@@ -57,7 +57,6 @@ class DefaultProviderCollection extends ProviderCollectionAdapter
             'Canva',
             'Ceros',
             'Celero',
-            'Chainflix',
             'ChartBlocks',
             'Chroco',
             'CircuitLab',
