@@ -6,4 +6,6 @@ composer.lock
 .php_cs.cache
 .hg
 .phpunit.result.cache
+.phpunit.cache
 doc/tmp
+*.bak
