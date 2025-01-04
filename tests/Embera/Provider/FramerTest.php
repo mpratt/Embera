@@ -30,6 +30,6 @@ final class FramerTest extends ProviderTester
 
     public function testProvider()
     {
-        $this->validateProvider('Framer', [ 'width' => 480, 'height' => 270]);
+        $this->markTestIncomplete('We require new URLs to test against Framer');
     }
 }
