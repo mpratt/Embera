@@ -158,7 +158,6 @@ class DefaultProviderCollection extends ProviderCollectionAdapter
             'MySQLVisualExplain',
             'Namchey',
             'Nanoo',
-            'Naro',
             'NaturalAtlas',
             'NDLA',
             'Nebula',
