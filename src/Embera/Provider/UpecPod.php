@@ -24,7 +24,7 @@ use Embera\Url;
 class UpecPod extends ProviderAdapter implements ProviderInterface
 {
     /** inline {@inheritdoc} */
-    protected $endpoint = 'https://pod.u-pec.fr/oembed?format=json';
+    protected $endpoint = 'https://pod.u-pec.fr/video/oembed?format=json';
 
     /** inline {@inheritdoc} */
     protected static $hosts = [
