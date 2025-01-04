@@ -175,6 +175,7 @@ class DefaultProviderCollection extends ProviderCollectionAdapter
             'OverflowIO',
             'Pandavideo',
             'Pastery',
+            'PeerTubeTV',
             'Piggy',
             'Pikasso',
             'Pinpoll',

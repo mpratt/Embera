@@ -155,6 +155,7 @@ I try to support all the providers listed on [oembed.com](https://oembed.com).
 - [OverflowIO](providers/OverflowIO.md)
 - [Pandavideo](providers/Pandavideo.md)
 - [Pastery](providers/Pastery.md)
+- [PeerTubeTV](providers/PeerTubeTV.md)
 - [Piggy](providers/Piggy.md)
 - [Pikasso](providers/Pikasso.md)
 - [Pinpoll](providers/Pinpoll.md)
