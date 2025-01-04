@@ -38,8 +38,8 @@
         "psr-4": {"Embera\\": "tests/Embera"}
     },
     "scripts": {
-        "test": [ "Composer\\Config::disableProcessTimeout", "phpunit -v" ],
-        "test-github": "phpunit -v -c phpunit-github.xml",
+        "test": [ "Composer\\Config::disableProcessTimeout", "phpunit" ],
+        "test-github": "phpunit -c phpunit-github.xml",
         "analyse": "phpstan analyse src --level=4 --no-progress"
     }
 }
