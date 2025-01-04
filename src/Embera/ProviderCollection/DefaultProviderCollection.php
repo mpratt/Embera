@@ -203,6 +203,7 @@ class DefaultProviderCollection extends ProviderCollectionAdapter
             'RunKit',
             'SapoVideos',
             'Sbedit',
+            'Scenes',
             'ScreenNine',
             'Screencast',
             'ScribbleMaps',

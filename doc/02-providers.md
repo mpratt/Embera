@@ -183,6 +183,7 @@ I try to support all the providers listed on [oembed.com](https://oembed.com).
 - [RunKit](providers/RunKit.md)
 - [SapoVideos](providers/SapoVideos.md)
 - [Sbedit](providers/Sbedit.md)
+- [Scenes](providers/Scenes.md)
 - [ScreenNine](providers/ScreenNine.md)
 - [Screencast](providers/Screencast.md)
 - [ScribbleMaps](providers/ScribbleMaps.md)
