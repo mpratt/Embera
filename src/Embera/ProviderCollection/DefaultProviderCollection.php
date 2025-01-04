@@ -243,7 +243,6 @@ class DefaultProviderCollection extends ProviderCollectionAdapter
             'Twitter',
             'UAPod',
             'UniversitePantheonSorbonne',
-            'UniversityCambridgeMap',
             'UpecPod',
             'UstreamTV',
             'Ustudio',
