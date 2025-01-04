@@ -25,6 +25,7 @@ I try to support all the providers listed on [oembed.com](https://oembed.com).
 - [Behance](providers/Behance.md)
 - [BeamsFm](providers/BeamsFm.md)
 - [Biqnetwork](providers/Biqnetwork.md)
+- [Bitchute](providers/Bitchute.md)
 - [BlackfireIO](providers/BlackfireIO.md)
 - [Blogcast](providers/Blogcast.md)
 - [BlueskySocial](providers/BlueskySocial.md)
