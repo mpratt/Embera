@@ -10,7 +10,7 @@ Name: Acast
 - HTTPS support: YES
 - Fake Response: NO
 - Oembed Params: maxwidth , maxheight
-- Supported Hosts: play.acast.com
+- Supported Hosts: play.acast.com , shows.acast.com
 - Responsive response: YES
 - Collections: DefaultProviderCollection
 

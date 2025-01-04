@@ -10,7 +10,7 @@ Name: Shopshare
 - HTTPS support: YES
 - Fake Response: NO
 - Oembed Params: maxwidth , maxheight
-- Supported Hosts: shopshare.tv
+- Supported Hosts: *.shopshare.tv
 - Responsive response: NO
 - Collections: DefaultProviderCollection
 
