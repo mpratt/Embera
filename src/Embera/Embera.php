@@ -62,7 +62,7 @@ class Embera
      * @param HttpClientInterface $httpClient
      * @return void
      */
-    public function __construct(array $config = [], ProviderCollectionInterface $collection = null, HttpClientInterface $httpClient = null)
+    public function __construct(array $config = [], ?ProviderCollectionInterface $collection = null, ?HttpClientInterface $httpClient = null)
     {
         $this->config = array_merge([
             'https_only' => false,
