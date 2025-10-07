@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Youtube.php
  *
@@ -28,7 +29,9 @@ class Youtube extends ProviderAdapter implements ProviderInterface
 
     /** inline {@inheritdoc} */
     protected static $hosts = [
-        'm.youtube.com', 'youtube.com', 'youtu.be',
+        'm.youtube.com',
+        'youtube.com',
+        'youtu.be',
     ];
 
     /** inline {@inheritdoc} */
@@ -40,6 +43,7 @@ class Youtube extends ProviderAdapter implements ProviderInterface
         return (bool) (
             preg_match('~v=(?:[a-z0-9_\-]+)~i', (string) $url) ||
             preg_match('~/shorts/(?:[a-z0-9_\-]+)~i', (string) $url) ||
+            preg_match('~/clip/(?:[a-z0-9_\-]+)~i', (string) $url) ||
             preg_match('~/playlist(.+)list=(?:[a-z0-9_\-]+)~i', (string) $url) ||
             preg_match('~/live/(?:[a-z0-9_\-]+)~i', (string) $url)
         );
@@ -81,8 +85,7 @@ class Youtube extends ProviderAdapter implements ProviderInterface
             'provider_name' => 'Youtube',
             'provider_url' => 'https://www.youtube.com',
             'title' => 'Unknown title',
-            'html' => '<iframe ' . implode(' ', $attr). '></iframe>',
+            'html' => '<iframe ' . implode(' ', $attr) . '></iframe>',
         ];
     }
-
 }
