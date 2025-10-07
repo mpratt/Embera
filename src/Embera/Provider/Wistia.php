@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Wistia.php
  *
@@ -41,7 +42,7 @@ class Wistia extends ProviderAdapter implements ProviderInterface
     public function validateUrl(Url $url)
     {
         return (bool) (
-            preg_match('~wistia\.com/embed/(iframe|playlists)/([^/]+)~i', (string) $url) ||
+            preg_match('~wistia\.com/embed/(iframe|playlists|medias)/([^/]+)~i', (string) $url) ||
             preg_match('~wistia\.com/medias/([^/]+)~i', (string) $url)
         );
     }
@@ -55,5 +56,4 @@ class Wistia extends ProviderAdapter implements ProviderInterface
 
         return $url;
     }
-
 }
