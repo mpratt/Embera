@@ -164,6 +164,7 @@ class DefaultProviderCollection extends ProviderCollectionAdapter
             'Jovian',
             'Juntos',
             'KakaoTV',
+            'KeystonePractice',
             'Kickstarter',
             'KirimEmail',
             'Kit',
