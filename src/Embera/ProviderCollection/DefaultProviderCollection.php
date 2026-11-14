@@ -215,6 +215,7 @@ class DefaultProviderCollection extends ProviderCollectionAdapter
             'OraTV',
             'Orbitvu',
             'Origits',
+            'OriznWidgets',
             'Outplayed',
             'OverflowIO',
             'Pandavideo',

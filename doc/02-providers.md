@@ -195,6 +195,7 @@ I try to support all the providers listed on [oembed.com](https://oembed.com).
 - [OraTV](providers/OraTV.md)
 - [Orbitvu](providers/Orbitvu.md)
 - [Origits](providers/Origits.md)
+- [OriznWidgets](providers/OriznWidgets.md)
 - [Outplayed](providers/Outplayed.md)
 - [OverflowIO](providers/OverflowIO.md)
 - [Pandavideo](providers/Pandavideo.md)
