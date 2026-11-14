@@ -56,6 +56,7 @@ I try to support all the providers listed on [oembed.com](https://oembed.com).
 - [CodeHS](providers/CodeHS.md)
 - [Codepoints](providers/Codepoints.md)
 - [CodeSandbox](providers/CodeSandbox.md)
+- [ColoringMonster](providers/ColoringMonster.md)
 - [Commaful](providers/Commaful.md)
 - [Coub](providers/Coub.md)
 - [Crumbs](providers/Crumbs.md)

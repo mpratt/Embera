@@ -76,6 +76,7 @@ class DefaultProviderCollection extends ProviderCollectionAdapter
             'CodeHS',
             'Codepoints',
             'CodeSandbox',
+            'ColoringMonster',
             'Commaful',
             'Coub',
             'Crumbs',
