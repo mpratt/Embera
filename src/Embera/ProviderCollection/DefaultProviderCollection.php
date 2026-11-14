@@ -122,6 +122,7 @@ class DefaultProviderCollection extends ProviderCollectionAdapter
             'Frequencing',
             'Fritube',
             'Genially',
+            'GenToon',
             'GeographUk',
             'GeographCI',
             'GetShow',

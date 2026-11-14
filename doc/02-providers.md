@@ -102,6 +102,7 @@ I try to support all the providers listed on [oembed.com](https://oembed.com).
 - [Frequencing](providers/Frequencing.md)
 - [Fritube](providers/Fritube.md)
 - [Genially](providers/Genially.md)
+- [GenToon](providers/GenToon.md)
 - [GeographUk](providers/GeographUk.md)
 - [GeographCI](providers/GeographCI.md)
 - [GetShow](providers/GetShow.md)
