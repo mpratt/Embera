@@ -55,6 +55,7 @@ class DefaultProviderCollection extends ProviderCollectionAdapter
             'Bookingmood',
             'BoxOfficeBuz',
             'Brightcove',
+            'BudgetPixel',
             'Buttondown',
             'Bumper',
             'Bunny',

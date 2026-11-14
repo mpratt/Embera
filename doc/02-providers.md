@@ -35,6 +35,7 @@ I try to support all the providers listed on [oembed.com](https://oembed.com).
 - [Bookingmood](providers/Bookingmood.md)
 - [BoxOfficeBuz](providers/BoxOfficeBuz.md)
 - [Brightcove](providers/Brightcove.md)
+- [BudgetPixel](providers/BudgetPixel.md)
 - [Buttondown](providers/Buttondown.md)
 - [Bumper](providers/Bumper.md)
 - [Bunny](providers/Bunny.md)
