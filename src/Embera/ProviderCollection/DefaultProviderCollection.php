@@ -70,6 +70,7 @@ class DefaultProviderCollection extends ProviderCollectionAdapter
             'ChartBlocks',
             'Chroco',
             'CircuitLab',
+            'Clipform',
             'Clyp',
             'CodeHS',
             'Codepoints',
