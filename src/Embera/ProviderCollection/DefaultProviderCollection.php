@@ -232,6 +232,7 @@ class DefaultProviderCollection extends ProviderCollectionAdapter
             'Playbuzz',
             'Plusdocs',
             'Podbean',
+            'PodcastPizza',
             'Polldaddy',
             'Portfolium',
             'Prezi',
