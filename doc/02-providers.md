@@ -172,6 +172,7 @@ I try to support all the providers listed on [oembed.com](https://oembed.com).
 - [MediaLab](providers/MediaLab.md)
 - [Mediastream](providers/Mediastream.md)
 - [MedienArchivKuenste](providers/MedienArchivKuenste.md)
+- [MemeStack](providers/MemeStack.md)
 - [MermaidInk](providers/MermaidInk.md)
 - [Miro](providers/Miro.md)
 - [MixCloud](providers/MixCloud.md)
