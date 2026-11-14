@@ -12,7 +12,7 @@ Name: Sudomemo
 - HTTPS support: YES
 - Fake Response: NO
 - Oembed Params: maxwidth , maxheight
-- Supported Hosts: sudomemo.net , flipnot.es
+- Supported Hosts: sudomemo.net , archive.sudomemo.net , flipnot.es
 - Responsive response: NO
 - Collections: DefaultProviderCollection
 

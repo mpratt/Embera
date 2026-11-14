@@ -28,7 +28,7 @@ class Sudomemo extends ProviderAdapter implements ProviderInterface
 
     /** inline {@inheritdoc} */
     protected static $hosts = [
-        'sudomemo.net', 'flipnot.es'
+        'sudomemo.net', 'archive.sudomemo.net', 'flipnot.es'
     ];
 
     /** inline {@inheritdoc} */

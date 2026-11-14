@@ -23,6 +23,7 @@ final class SudomemoTest extends ProviderTester
         'valid_urls' => [
             'https://www.sudomemo.net/watch/75D7C9_135509C9F1AA8_000',
             'https://flipnot.es/8UYNV9',
+            'https://archive.sudomemo.net/watch/mbwciwgtrf0ehxvtoarwvozbwngc',
         ],
         'invalid_urls' => [
             'https://www.sudomemo.net',
