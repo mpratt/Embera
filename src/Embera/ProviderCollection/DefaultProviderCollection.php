@@ -263,6 +263,7 @@ class DefaultProviderCollection extends ProviderCollectionAdapter
             'SendToNews',
             'Shoudio',
             'ShowTheWay',
+            'Sketch',
             'Sketchfab',
             'SlateApp',
             'Slideshare',

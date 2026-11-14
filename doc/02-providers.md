@@ -243,6 +243,7 @@ I try to support all the providers listed on [oembed.com](https://oembed.com).
 - [SendToNews](providers/SendToNews.md)
 - [Shoudio](providers/Shoudio.md)
 - [ShowTheWay](providers/ShowTheWay.md)
+- [Sketch](providers/Sketch.md)
 - [Sketchfab](providers/Sketchfab.md)
 - [SlateApp](providers/SlateApp.md)
 - [Slideshare](providers/Slideshare.md)
