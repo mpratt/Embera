@@ -28,7 +28,8 @@ class MedienArchivKuenste extends ProviderAdapter implements ProviderInterface
 
     /** inline {@inheritdoc} */
     protected static $hosts = [
-        'medienarchiv.zhdk.ch'
+        'medienarchiv.zhdk.ch',
+        'zhdk.medienarchiv.ch'
     ];
 
     /** inline {@inheritdoc} */
@@ -37,7 +38,7 @@ class MedienArchivKuenste extends ProviderAdapter implements ProviderInterface
     /** inline {@inheritdoc} */
     public function validateUrl(Url $url)
     {
-        return (bool) (preg_match('~medienarchiv\.zhdk\.ch/entries/([^/]+)$~i', (string) $url));
+        return (bool) (preg_match('~(medienarchiv\.zhdk\.ch|zhdk\.medienarchiv\.ch)/entries/([^/]+)$~i', (string) $url));
     }
 
     /** inline {@inheritdoc} */

@@ -11,7 +11,7 @@ Name: MedienArchivKuenste
 - HTTPS support: YES
 - Fake Response: YES
 - Oembed Params: maxwidth , maxheight
-- Supported Hosts: medienarchiv.zhdk.ch
+- Supported Hosts: medienarchiv.zhdk.ch , zhdk.medienarchiv.ch
 - Responsive response: NO
 - Collections: DefaultProviderCollection
 
