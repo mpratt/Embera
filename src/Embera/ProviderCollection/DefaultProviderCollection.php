@@ -136,6 +136,7 @@ class DefaultProviderCollection extends ProviderCollectionAdapter
             'GoodForJob',
             'Grain',
             'Gumlet',
+            'GW2Fashions',
             'Gyazo',
             'Hash',
             'Hearthis',

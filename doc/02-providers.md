@@ -116,6 +116,7 @@ I try to support all the providers listed on [oembed.com](https://oembed.com).
 - [GoodForJob](providers/GoodForJob.md)
 - [Grain](providers/Grain.md)
 - [Gumlet](providers/Gumlet.md)
+- [GW2Fashions](providers/GW2Fashions.md)
 - [Gyazo](providers/Gyazo.md)
 - [Hash](providers/Hash.md)
 - [Hearthis](providers/Hearthis.md)
