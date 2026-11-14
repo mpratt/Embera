@@ -51,6 +51,7 @@ class DefaultProviderCollection extends ProviderCollectionAdapter
             'BlackfireIO',
             'Blogcast',
             'BlueskySocial',
+            'BondByIsin',
             'Bookingmood',
             'Buttondown',
             'Bumper',
