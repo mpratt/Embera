@@ -10,7 +10,7 @@ Name: Afreecatv
 - HTTPS support: YES
 - Fake Response: NO
 - Oembed Params: maxwidth , maxheight , width , height
-- Supported Hosts: *.afree.ca , *.afreecatv.com , *.sooplive.co.kr
+- Supported Hosts: *.afree.ca , *.afreecatv.com , *.sooplive.co.kr , *.sooplive.com
 - Responsive response: NO
 - Collections: DefaultProviderCollection
 

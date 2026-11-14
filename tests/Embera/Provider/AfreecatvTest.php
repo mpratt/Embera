@@ -22,7 +22,9 @@ final class AfreecatvTest extends ProviderTester
     protected $tasks = [
         'valid_urls' => [
             'https://vod.afreecatv.com/player/71021072',
-            'https://vod.sooplive.co.kr/player/71021072'
+            'https://vod.sooplive.co.kr/player/71021072',
+            'https://vod.sooplive.com/player/71021072',
+            'https://play.sooplive.com/afstar1/237663862',
         ],
         'invalid_urls' => [
             'https://vod.afreecatv.com/',
