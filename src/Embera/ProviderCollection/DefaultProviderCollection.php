@@ -54,6 +54,7 @@ class DefaultProviderCollection extends ProviderCollectionAdapter
             'BondByIsin',
             'Bookingmood',
             'BoxOfficeBuz',
+            'Brightcove',
             'Buttondown',
             'Bumper',
             'Bunny',
