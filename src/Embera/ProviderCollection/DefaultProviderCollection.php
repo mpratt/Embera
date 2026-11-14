@@ -128,6 +128,7 @@ class DefaultProviderCollection extends ProviderCollectionAdapter
             'GeometryViewer',
             'GetShow',
             'GettyImages',
+            'GigNGo',
             'Giphy',
             'GloriaTV',
             'Gong',

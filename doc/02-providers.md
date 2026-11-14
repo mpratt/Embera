@@ -108,6 +108,7 @@ I try to support all the providers listed on [oembed.com](https://oembed.com).
 - [GeometryViewer](providers/GeometryViewer.md)
 - [GetShow](providers/GetShow.md)
 - [GettyImages](providers/GettyImages.md)
+- [GigNGo](providers/GigNGo.md)
 - [Giphy](providers/Giphy.md)
 - [GloriaTV](providers/GloriaTV.md)
 - [Gong](providers/Gong.md)
