@@ -98,6 +98,7 @@ class DefaultProviderCollection extends ProviderCollectionAdapter
             'DreamBroker',
             'EchoesHQ',
             'ElevenLabs',
+            'Embases',
             'Embedery',
             'Ethfiddle',
             'EventLive',
