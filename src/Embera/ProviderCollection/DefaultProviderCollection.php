@@ -320,6 +320,7 @@ class DefaultProviderCollection extends ProviderCollectionAdapter
             'Verse',
             'VerseDB',
             'Videobot',
+            'VidLink',
             'VidMount',
             'Videfit',
             'Vidyard',

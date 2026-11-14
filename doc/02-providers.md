@@ -300,6 +300,7 @@ I try to support all the providers listed on [oembed.com](https://oembed.com).
 - [Verse](providers/Verse.md)
 - [VerseDB](providers/VerseDB.md)
 - [Videobot](providers/Videobot.md)
+- [VidLink](providers/VidLink.md)
 - [VidMount](providers/VidMount.md)
 - [Videfit](providers/Videfit.md)
 - [Vidyard](providers/Vidyard.md)
