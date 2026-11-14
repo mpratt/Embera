@@ -51,6 +51,7 @@ I try to support all the providers listed on [oembed.com](https://oembed.com).
 - [Chroco](providers/Chroco.md)
 - [CircuitLab](providers/CircuitLab.md)
 - [Clipform](providers/Clipform.md)
+- [Clueso](providers/Clueso.md)
 - [Clyp](providers/Clyp.md)
 - [CodeHS](providers/CodeHS.md)
 - [Codepoints](providers/Codepoints.md)

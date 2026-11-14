@@ -71,6 +71,7 @@ class DefaultProviderCollection extends ProviderCollectionAdapter
             'Chroco',
             'CircuitLab',
             'Clipform',
+            'Clueso',
             'Clyp',
             'CodeHS',
             'Codepoints',
