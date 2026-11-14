@@ -22,6 +22,7 @@ I try to support all the providers listed on [oembed.com](https://oembed.com).
 - [AudioClip](providers/AudioClip.md)
 - [Audiomack](providers/Audiomack.md)
 - [Audiomeans](providers/Audiomeans.md)
+- [AudioSFX](providers/AudioSFX.md)
 - [BeautifulAI](providers/BeautifulAI.md)
 - [Behance](providers/Behance.md)
 - [BeamsFm](providers/BeamsFm.md)
