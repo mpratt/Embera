@@ -62,6 +62,7 @@ class DefaultProviderCollection extends ProviderCollectionAdapter
             'CalGet',
             'Canva',
             'Carbon',
+            'CarbonVoice',
             'Ceros',
             'Celero',
             'ChartBlocks',

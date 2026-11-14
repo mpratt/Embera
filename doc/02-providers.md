@@ -42,6 +42,7 @@ I try to support all the providers listed on [oembed.com](https://oembed.com).
 - [CalGet](providers/CalGet.md)
 - [Canva](providers/Canva.md)
 - [Carbon](providers/Carbon.md)
+- [CarbonVoice](providers/CarbonVoice.md)
 - [Ceros](providers/Ceros.md)
 - [Celero](providers/Celero.md)
 - [ChartBlocks](providers/ChartBlocks.md)
