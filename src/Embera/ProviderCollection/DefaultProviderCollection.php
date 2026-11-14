@@ -180,6 +180,7 @@ class DefaultProviderCollection extends ProviderCollectionAdapter
             'Lineplace',
             'LiveCodes',
             'Livestream',
+            'Livid',
             'LocalVoicesNetwork',
             'Loom',
             'LottieFiles',

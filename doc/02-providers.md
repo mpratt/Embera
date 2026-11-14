@@ -160,6 +160,7 @@ I try to support all the providers listed on [oembed.com](https://oembed.com).
 - [Lineplace](providers/Lineplace.md)
 - [LiveCodes](providers/LiveCodes.md)
 - [Livestream](providers/Livestream.md)
+- [Livid](providers/Livid.md)
 - [LocalVoicesNetwork](providers/LocalVoicesNetwork.md)
 - [Loom](providers/Loom.md)
 - [LottieFiles](providers/LottieFiles.md)
