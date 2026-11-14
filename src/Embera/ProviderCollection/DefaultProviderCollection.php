@@ -87,6 +87,7 @@ class DefaultProviderCollection extends ProviderCollectionAdapter
             'DailyMotion',
             'Dalexni',
             'DCalculators',
+            'Debatr',
             'Deseretnews',
             'Deviantart',
             'Didacte',
