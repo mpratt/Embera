@@ -331,6 +331,7 @@ class DefaultProviderCollection extends ProviderCollectionAdapter
             'Vlipsy',
             'Vizdom',
             'VouchFor',
+            'WatchPeopleFight',
             'WaveVideo',
             'Wecandeo',
             'Webcrumbs',
