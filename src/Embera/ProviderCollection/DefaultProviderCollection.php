@@ -223,6 +223,7 @@ class DefaultProviderCollection extends ProviderCollectionAdapter
             'Parta',
             'Pastery',
             'PeerTubeTV',
+            'PicJury',
             'Piggy',
             'Pikasso',
             'Pinpoll',
