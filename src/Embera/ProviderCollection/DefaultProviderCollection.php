@@ -318,6 +318,7 @@ class DefaultProviderCollection extends ProviderCollectionAdapter
             'Ustudio',
             'Vectree',
             'Verse',
+            'VerseDB',
             'VidMount',
             'Videfit',
             'Vidyard',

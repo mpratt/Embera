@@ -298,6 +298,7 @@ I try to support all the providers listed on [oembed.com](https://oembed.com).
 - [Ustudio](providers/Ustudio.md)
 - [Vectree](providers/Vectree.md)
 - [Verse](providers/Verse.md)
+- [VerseDB](providers/VerseDB.md)
 - [VidMount](providers/VidMount.md)
 - [Videfit](providers/Videfit.md)
 - [Vidyard](providers/Vidyard.md)
