@@ -205,6 +205,7 @@ class DefaultProviderCollection extends ProviderCollectionAdapter
             'NaturalAtlas',
             'NDLA',
             'Nebula',
+            'NeedleCloud',
             'NeetoRecord',
             'Nfb',
             'NFTndx',

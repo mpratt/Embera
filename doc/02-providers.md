@@ -185,6 +185,7 @@ I try to support all the providers listed on [oembed.com](https://oembed.com).
 - [NaturalAtlas](providers/NaturalAtlas.md)
 - [NDLA](providers/NDLA.md)
 - [Nebula](providers/Nebula.md)
+- [NeedleCloud](providers/NeedleCloud.md)
 - [NeetoRecord](providers/NeetoRecord.md)
 - [Nfb](providers/Nfb.md)
 - [NFTndx](providers/NFTndx.md)
