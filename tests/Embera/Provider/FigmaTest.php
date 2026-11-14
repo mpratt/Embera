@@ -22,6 +22,7 @@ final class FigmaTest extends ProviderTester
     protected $tasks = [
         'valid_urls' => [
             'https://www.figma.com/file/2oGA2ADNXOYWnlBI47UN3R/Safe-Return-(Community)',
+            'https://www.figma.com/design/2oGA2ADNXOYWnlBI47UN3R/Safe-Return-(Community)',
         ],
         'invalid_urls' => [
             'https://www.figma.com',

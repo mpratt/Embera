@@ -41,7 +41,7 @@ class Figma extends ProviderAdapter implements ProviderInterface
     /** inline {@inheritdoc} */
     public function validateUrl(Url $url)
     {
-        return (bool) (preg_match('~figma\.com/file/([^/]+)~i', (string) $url));
+        return (bool) (preg_match('~figma\.com/(file|design|board|slides|buzz|site|make)/([^/]+)~i', (string) $url));
     }
 
     /** inline {@inheritdoc} */
