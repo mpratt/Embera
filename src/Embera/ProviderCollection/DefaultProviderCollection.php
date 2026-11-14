@@ -59,6 +59,7 @@ class DefaultProviderCollection extends ProviderCollectionAdapter
             'Buttondown',
             'Bumper',
             'Bunny',
+            'CalGet',
             'Canva',
             'Ceros',
             'Celero',

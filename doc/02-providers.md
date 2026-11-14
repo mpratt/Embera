@@ -39,6 +39,7 @@ I try to support all the providers listed on [oembed.com](https://oembed.com).
 - [Buttondown](providers/Buttondown.md)
 - [Bumper](providers/Bumper.md)
 - [Bunny](providers/Bunny.md)
+- [CalGet](providers/CalGet.md)
 - [Canva](providers/Canva.md)
 - [Ceros](providers/Ceros.md)
 - [Celero](providers/Celero.md)
