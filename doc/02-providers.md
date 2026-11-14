@@ -94,6 +94,7 @@ I try to support all the providers listed on [oembed.com](https://oembed.com).
 - [Flourish](providers/Flourish.md)
 - [FlowHubOrg](providers/FlowHubOrg.md)
 - [Fomr](providers/Fomr.md)
+- [FormData](providers/FormData.md)
 - [Framer](providers/Framer.md)
 - [Framatube](providers/Framatube.md)
 - [Fooday](providers/Fooday.md)

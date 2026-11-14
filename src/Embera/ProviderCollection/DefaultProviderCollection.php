@@ -114,6 +114,7 @@ class DefaultProviderCollection extends ProviderCollectionAdapter
             'Flourish',
             'FlowHubOrg',
             'Fomr',
+            'FormData',
             'Framer',
             'Framatube',
             'Fooday',
