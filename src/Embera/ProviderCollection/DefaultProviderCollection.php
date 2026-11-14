@@ -63,6 +63,7 @@ class DefaultProviderCollection extends ProviderCollectionAdapter
             'Canva',
             'Carbon',
             'CarbonVoice',
+            'Castle',
             'Ceros',
             'Celero',
             'ChartBlocks',
