@@ -113,6 +113,7 @@ I try to support all the providers listed on [oembed.com](https://oembed.com).
 - [GloriaTV](providers/GloriaTV.md)
 - [Gong](providers/Gong.md)
 - [Gmetri](providers/Gmetri.md)
+- [GoodForJob](providers/GoodForJob.md)
 - [Grain](providers/Grain.md)
 - [Gumlet](providers/Gumlet.md)
 - [Gyazo](providers/Gyazo.md)

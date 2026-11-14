@@ -133,6 +133,7 @@ class DefaultProviderCollection extends ProviderCollectionAdapter
             'GloriaTV',
             'Gong',
             'Gmetri',
+            'GoodForJob',
             'Grain',
             'Gumlet',
             'Gyazo',
