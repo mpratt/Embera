@@ -277,6 +277,7 @@ I try to support all the providers listed on [oembed.com](https://oembed.com).
 - [ThreeSpeak](providers/ThreeSpeak.md)
 - [Tickcounter](providers/Tickcounter.md)
 - [TikTok](providers/TikTok.md)
+- [TixFox](providers/TixFox.md)
 - [Toornament](providers/Toornament.md)
 - [TonicAudio](providers/TonicAudio.md)
 - [Trackspace](providers/Trackspace.md)

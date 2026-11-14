@@ -297,6 +297,7 @@ class DefaultProviderCollection extends ProviderCollectionAdapter
             'ThreeSpeak',
             'Tickcounter',
             'TikTok',
+            'TixFox',
             'Toornament',
             'TonicAudio',
             'Trackspace',
