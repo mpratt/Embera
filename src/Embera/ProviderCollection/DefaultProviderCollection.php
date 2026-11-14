@@ -53,6 +53,7 @@ class DefaultProviderCollection extends ProviderCollectionAdapter
             'BlueskySocial',
             'BondByIsin',
             'Bookingmood',
+            'BoxOfficeBuz',
             'Buttondown',
             'Bumper',
             'Bunny',
