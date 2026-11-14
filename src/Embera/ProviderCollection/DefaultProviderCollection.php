@@ -299,6 +299,7 @@ class DefaultProviderCollection extends ProviderCollectionAdapter
             'TikTok',
             'TixFox',
             'Tksn',
+            'TLexDR',
             'Toornament',
             'TonicAudio',
             'Trackspace',

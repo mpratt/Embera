@@ -279,6 +279,7 @@ I try to support all the providers listed on [oembed.com](https://oembed.com).
 - [TikTok](providers/TikTok.md)
 - [TixFox](providers/TixFox.md)
 - [Tksn](providers/Tksn.md)
+- [TLexDR](providers/TLexDR.md)
 - [Toornament](providers/Toornament.md)
 - [TonicAudio](providers/TonicAudio.md)
 - [Trackspace](providers/Trackspace.md)
