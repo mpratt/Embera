@@ -120,6 +120,7 @@ class DefaultProviderCollection extends ProviderCollectionAdapter
             'Fooday',
             'FrameRate',
             'Frequencing',
+            'Fritube',
             'Genially',
             'GeographUk',
             'GeographCI',
