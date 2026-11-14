@@ -174,6 +174,7 @@ class DefaultProviderCollection extends ProviderCollectionAdapter
             'Knacki',
             'LandOfAssets',
             'Laude',
+            'LeagueMakerApp',
             'LearningApps',
             'Libsyn',
             'Lineplace',
