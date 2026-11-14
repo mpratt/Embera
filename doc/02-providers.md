@@ -230,6 +230,7 @@ I try to support all the providers listed on [oembed.com](https://oembed.com).
 - [RoosterTeeth](providers/RoosterTeeth.md)
 - [Rumble](providers/Rumble.md)
 - [RunKit](providers/RunKit.md)
+- [Sagenverse](providers/Sagenverse.md)
 - [SapoVideos](providers/SapoVideos.md)
 - [Sbedit](providers/Sbedit.md)
 - [Scenes](providers/Scenes.md)

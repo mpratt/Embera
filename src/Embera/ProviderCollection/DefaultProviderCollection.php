@@ -250,6 +250,7 @@ class DefaultProviderCollection extends ProviderCollectionAdapter
             'RoosterTeeth',
             'Rumble',
             'RunKit',
+            'Sagenverse',
             'SapoVideos',
             'Sbedit',
             'Scenes',
