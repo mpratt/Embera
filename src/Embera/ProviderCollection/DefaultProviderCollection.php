@@ -88,6 +88,7 @@ class DefaultProviderCollection extends ProviderCollectionAdapter
             'Dalexni',
             'DCalculators',
             'Debatr',
+            'Demofly',
             'Deseretnews',
             'Deviantart',
             'Didacte',
