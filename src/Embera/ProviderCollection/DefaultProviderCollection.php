@@ -337,6 +337,7 @@ class DefaultProviderCollection extends ProviderCollectionAdapter
             'Webcrumbs',
             'Web3IsGoingJustGreat',
             'Wewtalk',
+            'Whyp',
             'WolframCloud',
             'VoxSnap',
             'Whimsical',

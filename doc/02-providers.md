@@ -317,6 +317,7 @@ I try to support all the providers listed on [oembed.com](https://oembed.com).
 - [Webcrumbs](providers/Webcrumbs.md)
 - [Web3IsGoingJustGreat](providers/Web3IsGoingJustGreat.md)
 - [Wewtalk](providers/Wewtalk.md)
+- [Whyp](providers/Whyp.md)
 - [WolframCloud](providers/WolframCloud.md)
 - [VoxSnap](providers/VoxSnap.md)
 - [Whimsical](providers/Whimsical.md)
