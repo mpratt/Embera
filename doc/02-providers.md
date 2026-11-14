@@ -296,6 +296,7 @@ I try to support all the providers listed on [oembed.com](https://oembed.com).
 - [UPoll](providers/UPoll.md)
 - [UstreamTV](providers/UstreamTV.md)
 - [Ustudio](providers/Ustudio.md)
+- [Vectree](providers/Vectree.md)
 - [Verse](providers/Verse.md)
 - [VidMount](providers/VidMount.md)
 - [Videfit](providers/Videfit.md)

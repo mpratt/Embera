@@ -316,6 +316,7 @@ class DefaultProviderCollection extends ProviderCollectionAdapter
             'UPoll',
             'UstreamTV',
             'Ustudio',
+            'Vectree',
             'Verse',
             'VidMount',
             'Videfit',
