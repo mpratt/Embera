@@ -219,6 +219,7 @@ class DefaultProviderCollection extends ProviderCollectionAdapter
             'Outplayed',
             'OverflowIO',
             'Pandavideo',
+            'Parler',
             'Pastery',
             'PeerTubeTV',
             'Piggy',
