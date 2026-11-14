@@ -270,6 +270,7 @@ I try to support all the providers listed on [oembed.com](https://oembed.com).
 - [Synthesia](providers/Synthesia.md)
 - [TechPostCast](providers/TechPostCast.md)
 - [Ted](providers/Ted.md)
+- [Tegula](providers/Tegula.md)
 - [TheNewYorkTimes](providers/TheNewYorkTimes.md)
 - [ThreeQ](providers/ThreeQ.md)
 - [Tickcounter](providers/Tickcounter.md)

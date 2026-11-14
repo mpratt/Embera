@@ -290,6 +290,7 @@ class DefaultProviderCollection extends ProviderCollectionAdapter
             'Synthesia',
             'TechPostCast',
             'Ted',
+            'Tegula',
             'TheNewYorkTimes',
             'ThreeQ',
             'Tickcounter',
