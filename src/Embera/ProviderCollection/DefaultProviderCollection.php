@@ -305,6 +305,7 @@ class DefaultProviderCollection extends ProviderCollectionAdapter
             'Trackspace',
             'TrinityAudio',
             'Tumblr',
+            'Tuvelia',
             'Tuxx',
             'Tvcf',
             'Twinmotion',

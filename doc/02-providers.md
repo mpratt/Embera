@@ -285,6 +285,7 @@ I try to support all the providers listed on [oembed.com](https://oembed.com).
 - [Trackspace](providers/Trackspace.md)
 - [TrinityAudio](providers/TrinityAudio.md)
 - [Tumblr](providers/Tumblr.md)
+- [Tuvelia](providers/Tuvelia.md)
 - [Tuxx](providers/Tuxx.md)
 - [Tvcf](providers/Tvcf.md)
 - [Twinmotion](providers/Twinmotion.md)
