@@ -83,6 +83,7 @@ I try to support all the providers listed on [oembed.com](https://oembed.com).
 - [Ethfiddle](providers/Ethfiddle.md)
 - [EventLive](providers/EventLive.md)
 - [Everviz](providers/Everviz.md)
+- [EveryPage](providers/EveryPage.md)
 - [Facebook](providers/Facebook.md)
 - [Fader](providers/Fader.md)
 - [FaithLifeTV](providers/FaithLifeTV.md)
