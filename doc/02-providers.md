@@ -99,6 +99,7 @@ I try to support all the providers listed on [oembed.com](https://oembed.com).
 - [Framatube](providers/Framatube.md)
 - [Fooday](providers/Fooday.md)
 - [FrameRate](providers/FrameRate.md)
+- [Frequencing](providers/Frequencing.md)
 - [Genially](providers/Genially.md)
 - [GeographUk](providers/GeographUk.md)
 - [GeographCI](providers/GeographCI.md)
