@@ -11,7 +11,7 @@ Name: Kurozora
 - Fake Response: NO
 - Oembed Params: maxwidth , maxheight
 - Supported Hosts: kurozora.app
-- Responsive response: NO
+- Responsive response: YES
 - Collections: DefaultProviderCollection
 
 
