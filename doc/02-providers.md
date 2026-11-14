@@ -174,6 +174,7 @@ I try to support all the providers listed on [oembed.com](https://oembed.com).
 - [MedienArchivKuenste](providers/MedienArchivKuenste.md)
 - [MemeStack](providers/MemeStack.md)
 - [MermaidInk](providers/MermaidInk.md)
+- [Mirame360](providers/Mirame360.md)
 - [Miro](providers/Miro.md)
 - [MixCloud](providers/MixCloud.md)
 - [Mixpanel](providers/Mixpanel.md)

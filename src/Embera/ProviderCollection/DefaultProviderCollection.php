@@ -194,6 +194,7 @@ class DefaultProviderCollection extends ProviderCollectionAdapter
             'MedienArchivKuenste',
             'MemeStack',
             'MermaidInk',
+            'Mirame360',
             'Miro',
             'MixCloud',
             'Mixpanel',
