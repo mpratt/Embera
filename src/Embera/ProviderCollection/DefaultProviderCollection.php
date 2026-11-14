@@ -252,6 +252,7 @@ class DefaultProviderCollection extends ProviderCollectionAdapter
             'RunKit',
             'Sagenverse',
             'SapoVideos',
+            'Satcat',
             'Sbedit',
             'Scenes',
             'ScreenNine',

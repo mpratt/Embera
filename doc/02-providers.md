@@ -232,6 +232,7 @@ I try to support all the providers listed on [oembed.com](https://oembed.com).
 - [RunKit](providers/RunKit.md)
 - [Sagenverse](providers/Sagenverse.md)
 - [SapoVideos](providers/SapoVideos.md)
+- [Satcat](providers/Satcat.md)
 - [Sbedit](providers/Sbedit.md)
 - [Scenes](providers/Scenes.md)
 - [ScreenNine](providers/ScreenNine.md)
