@@ -158,6 +158,7 @@ I try to support all the providers listed on [oembed.com](https://oembed.com).
 - [LearningApps](providers/LearningApps.md)
 - [Libsyn](providers/Libsyn.md)
 - [Lineplace](providers/Lineplace.md)
+- [LiveCodes](providers/LiveCodes.md)
 - [Livestream](providers/Livestream.md)
 - [LocalVoicesNetwork](providers/LocalVoicesNetwork.md)
 - [Loom](providers/Loom.md)
