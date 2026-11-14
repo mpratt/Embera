@@ -200,6 +200,7 @@ I try to support all the providers listed on [oembed.com](https://oembed.com).
 - [OverflowIO](providers/OverflowIO.md)
 - [Pandavideo](providers/Pandavideo.md)
 - [Parler](providers/Parler.md)
+- [Parta](providers/Parta.md)
 - [Pastery](providers/Pastery.md)
 - [PeerTubeTV](providers/PeerTubeTV.md)
 - [Piggy](providers/Piggy.md)
