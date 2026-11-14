@@ -166,6 +166,7 @@ I try to support all the providers listed on [oembed.com](https://oembed.com).
 - [LottieFiles](providers/LottieFiles.md)
 - [Ludus](providers/Ludus.md)
 - [Lumiere](providers/Lumiere.md)
+- [MarbellaWire](providers/MarbellaWire.md)
 - [Matterport](providers/Matterport.md)
 - [MediaLab](providers/MediaLab.md)
 - [Mediastream](providers/Mediastream.md)

@@ -186,6 +186,7 @@ class DefaultProviderCollection extends ProviderCollectionAdapter
             'LottieFiles',
             'Ludus',
             'Lumiere',
+            'MarbellaWire',
             'Matterport',
             'MediaLab',
             'Mediastream',
