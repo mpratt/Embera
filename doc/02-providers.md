@@ -127,6 +127,7 @@ I try to support all the providers listed on [oembed.com](https://oembed.com).
 - [Hivo](providers/Hivo.md)
 - [Hopvue](providers/Hopvue.md)
 - [Huffduffer](providers/Huffduffer.md)
+- [IcosaGallery](providers/IcosaGallery.md)
 - [Ideamapper](providers/Ideamapper.md)
 - [iFixit](providers/iFixit.md)
 - [IHeartRadio](providers/IHeartRadio.md)
