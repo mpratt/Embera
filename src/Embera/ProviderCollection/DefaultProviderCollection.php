@@ -173,6 +173,7 @@ class DefaultProviderCollection extends ProviderCollectionAdapter
             'Kooapp',
             'Knacki',
             'LandOfAssets',
+            'Laude',
             'LearningApps',
             'Libsyn',
             'Lineplace',

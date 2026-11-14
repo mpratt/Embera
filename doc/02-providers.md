@@ -153,6 +153,7 @@ I try to support all the providers listed on [oembed.com](https://oembed.com).
 - [Kooapp](providers/Kooapp.md)
 - [Knacki](providers/Knacki.md)
 - [LandOfAssets](providers/LandOfAssets.md)
+- [Laude](providers/Laude.md)
 - [LearningApps](providers/LearningApps.md)
 - [Libsyn](providers/Libsyn.md)
 - [Lineplace](providers/Lineplace.md)
