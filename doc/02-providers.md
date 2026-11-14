@@ -44,6 +44,7 @@ I try to support all the providers listed on [oembed.com](https://oembed.com).
 - [Carbon](providers/Carbon.md)
 - [CarbonVoice](providers/CarbonVoice.md)
 - [Castle](providers/Castle.md)
+- [Castmake](providers/Castmake.md)
 - [Ceros](providers/Ceros.md)
 - [Celero](providers/Celero.md)
 - [ChartBlocks](providers/ChartBlocks.md)

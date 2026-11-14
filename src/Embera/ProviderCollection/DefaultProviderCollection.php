@@ -64,6 +64,7 @@ class DefaultProviderCollection extends ProviderCollectionAdapter
             'Carbon',
             'CarbonVoice',
             'Castle',
+            'Castmake',
             'Ceros',
             'Celero',
             'ChartBlocks',
