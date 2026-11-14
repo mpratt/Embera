@@ -299,6 +299,7 @@ I try to support all the providers listed on [oembed.com](https://oembed.com).
 - [Vectree](providers/Vectree.md)
 - [Verse](providers/Verse.md)
 - [VerseDB](providers/VerseDB.md)
+- [Videobot](providers/Videobot.md)
 - [VidMount](providers/VidMount.md)
 - [Videfit](providers/Videfit.md)
 - [Vidyard](providers/Vidyard.md)

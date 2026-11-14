@@ -319,6 +319,7 @@ class DefaultProviderCollection extends ProviderCollectionAdapter
             'Vectree',
             'Verse',
             'VerseDB',
+            'Videobot',
             'VidMount',
             'Videfit',
             'Vidyard',
