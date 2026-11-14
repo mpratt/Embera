@@ -265,6 +265,7 @@ class DefaultProviderCollection extends ProviderCollectionAdapter
             'ShowTheWay',
             'Sketch',
             'Sketchfab',
+            'Skhema',
             'SlateApp',
             'Slideshare',
             'SmashNotes',

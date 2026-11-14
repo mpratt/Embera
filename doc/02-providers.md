@@ -245,6 +245,7 @@ I try to support all the providers listed on [oembed.com](https://oembed.com).
 - [ShowTheWay](providers/ShowTheWay.md)
 - [Sketch](providers/Sketch.md)
 - [Sketchfab](providers/Sketchfab.md)
+- [Skhema](providers/Skhema.md)
 - [SlateApp](providers/SlateApp.md)
 - [Slideshare](providers/Slideshare.md)
 - [SmashNotes](providers/SmashNotes.md)
