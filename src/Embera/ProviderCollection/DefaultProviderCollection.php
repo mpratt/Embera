@@ -209,6 +209,7 @@ class DefaultProviderCollection extends ProviderCollectionAdapter
             'NeetoRecord',
             'Nfb',
             'NFTndx',
+            'NorthwestFalls',
             'Odysee',
             'OmnyStudio',
             'OraTV',
