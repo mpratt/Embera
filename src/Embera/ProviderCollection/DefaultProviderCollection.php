@@ -294,6 +294,7 @@ class DefaultProviderCollection extends ProviderCollectionAdapter
             'TheNewYorkTimes',
             'ThePrototype',
             'ThreeQ',
+            'ThreeSpeak',
             'Tickcounter',
             'TikTok',
             'Toornament',

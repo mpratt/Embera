@@ -274,6 +274,7 @@ I try to support all the providers listed on [oembed.com](https://oembed.com).
 - [TheNewYorkTimes](providers/TheNewYorkTimes.md)
 - [ThePrototype](providers/ThePrototype.md)
 - [ThreeQ](providers/ThreeQ.md)
+- [ThreeSpeak](providers/ThreeSpeak.md)
 - [Tickcounter](providers/Tickcounter.md)
 - [TikTok](providers/TikTok.md)
 - [Toornament](providers/Toornament.md)
