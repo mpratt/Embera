@@ -24,6 +24,7 @@ final class RumbleTest extends ProviderTester
             'https://rumble.com/v8ind9-hopping-to-go-outside.html',
             'https://rumble.com/v8intx-he-thinks-hes-grown.html',
             'https://rumble.com/embed/v3tm912/?pub=4',
+            'https://rumble.com/shorts/v5d871x',
         ],
         'invalid_urls' => [
             'https://rumble.com/',

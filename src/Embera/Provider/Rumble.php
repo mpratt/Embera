@@ -42,7 +42,7 @@ class Rumble extends ProviderAdapter implements ProviderInterface
     {
         return (bool) (
             preg_match('~rumble\.com/([^/]+)\.html~i', (string) $url) ||
-            preg_match('~rumble\.com/embed/([^/]+)~i', (string) $url)
+            preg_match('~rumble\.com/(embed|shorts)/([^/]+)~i', (string) $url)
         );
     }
 
@@ -68,7 +68,7 @@ class Rumble extends ProviderAdapter implements ProviderInterface
     /** inline {@inheritdoc} */
     public function getFakeResponse()
     {
-        preg_match('~rumble\.com/([^\-]+)~i', (string) $this->url, $matches);
+        preg_match('~rumble\.com/(?:shorts/)?([^\-]+)~i', (string) $this->url, $matches);
 
         $embedUrl = 'https://rumble.com/embed/' . $matches['1'] . '/';
 
