@@ -268,6 +268,7 @@ I try to support all the providers listed on [oembed.com](https://oembed.com).
 - [Sway](providers/Sway.md)
 - [SynthCamp](providers/SynthCamp.md)
 - [Synthesia](providers/Synthesia.md)
+- [TechPostCast](providers/TechPostCast.md)
 - [Ted](providers/Ted.md)
 - [TheNewYorkTimes](providers/TheNewYorkTimes.md)
 - [ThreeQ](providers/ThreeQ.md)

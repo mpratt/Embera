@@ -288,6 +288,7 @@ class DefaultProviderCollection extends ProviderCollectionAdapter
             'Sway',
             'SynthCamp',
             'Synthesia',
+            'TechPostCast',
             'Ted',
             'TheNewYorkTimes',
             'ThreeQ',
