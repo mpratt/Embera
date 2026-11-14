@@ -66,6 +66,7 @@ I try to support all the providers listed on [oembed.com](https://oembed.com).
 - [Datawrapper](providers/Datawrapper.md)
 - [DailyMotion](providers/DailyMotion.md)
 - [Dalexni](providers/Dalexni.md)
+- [DCalculators](providers/DCalculators.md)
 - [Deseretnews](providers/Deseretnews.md)
 - [Deviantart](providers/Deviantart.md)
 - [Didacte](providers/Didacte.md)
