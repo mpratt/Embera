@@ -347,6 +347,7 @@ class DefaultProviderCollection extends ProviderCollectionAdapter
             'Wordpress',
             'Wordwall',
             'WorldEventTrading',
+            'YouPickBest',
             'Youtube',
             'Yumpu',
             'Zeplin',

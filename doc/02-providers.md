@@ -327,6 +327,7 @@ I try to support all the providers listed on [oembed.com](https://oembed.com).
 - [Wordpress](providers/Wordpress.md)
 - [Wordwall](providers/Wordwall.md)
 - [WorldEventTrading](providers/WorldEventTrading.md)
+- [YouPickBest](providers/YouPickBest.md)
 - [Youtube](providers/Youtube.md)
 - [Yumpu](providers/Yumpu.md)
 - [Zeplin](providers/Zeplin.md)
