@@ -253,6 +253,7 @@ class DefaultProviderCollection extends ProviderCollectionAdapter
             'Sagenverse',
             'SapoVideos',
             'Satcat',
+            'SatoVideoPlayer',
             'Sbedit',
             'Scenes',
             'ScreenNine',
