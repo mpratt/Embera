@@ -187,6 +187,7 @@ class DefaultProviderCollection extends ProviderCollectionAdapter
             'Ludus',
             'Lumiere',
             'MarbellaWire',
+            'Marimo',
             'Matterport',
             'MediaLab',
             'Mediastream',
