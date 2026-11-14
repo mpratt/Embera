@@ -125,6 +125,7 @@ class DefaultProviderCollection extends ProviderCollectionAdapter
             'GenToon',
             'GeographUk',
             'GeographCI',
+            'GeometryViewer',
             'GetShow',
             'GettyImages',
             'Giphy',

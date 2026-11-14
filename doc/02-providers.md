@@ -105,6 +105,7 @@ I try to support all the providers listed on [oembed.com](https://oembed.com).
 - [GenToon](providers/GenToon.md)
 - [GeographUk](providers/GeographUk.md)
 - [GeographCI](providers/GeographCI.md)
+- [GeometryViewer](providers/GeometryViewer.md)
 - [GetShow](providers/GetShow.md)
 - [GettyImages](providers/GettyImages.md)
 - [Giphy](providers/Giphy.md)
