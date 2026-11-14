@@ -97,6 +97,7 @@ class DefaultProviderCollection extends ProviderCollectionAdapter
             'Docswell',
             'DreamBroker',
             'EchoesHQ',
+            'ElevenLabs',
             'Embedery',
             'Ethfiddle',
             'EventLive',

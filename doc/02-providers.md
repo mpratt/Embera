@@ -77,6 +77,7 @@ I try to support all the providers listed on [oembed.com](https://oembed.com).
 - [Docswell](providers/Docswell.md)
 - [DreamBroker](providers/DreamBroker.md)
 - [EchoesHQ](providers/EchoesHQ.md)
+- [ElevenLabs](providers/ElevenLabs.md)
 - [Embedery](providers/Embedery.md)
 - [Ethfiddle](providers/Ethfiddle.md)
 - [EventLive](providers/EventLive.md)
