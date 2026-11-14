@@ -118,6 +118,7 @@ class DefaultProviderCollection extends ProviderCollectionAdapter
             'Framer',
             'Framatube',
             'Fooday',
+            'FrameRate',
             'Genially',
             'GeographUk',
             'GeographCI',
