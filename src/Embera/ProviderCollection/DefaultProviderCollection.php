@@ -162,6 +162,7 @@ class DefaultProviderCollection extends ProviderCollectionAdapter
             'ItabtechInfosys',
             'ItemisCreate',
             'Jovian',
+            'Juntos',
             'KakaoTV',
             'Kickstarter',
             'KirimEmail',

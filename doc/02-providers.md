@@ -142,6 +142,7 @@ I try to support all the providers listed on [oembed.com](https://oembed.com).
 - [ItabtechInfosys](providers/ItabtechInfosys.md)
 - [ItemisCreate](providers/ItemisCreate.md)
 - [Jovian](providers/Jovian.md)
+- [Juntos](providers/Juntos.md)
 - [KakaoTV](providers/KakaoTV.md)
 - [Kickstarter](providers/Kickstarter.md)
 - [KirimEmail](providers/KirimEmail.md)
