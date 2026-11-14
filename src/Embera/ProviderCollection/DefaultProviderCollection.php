@@ -236,6 +236,7 @@ class DefaultProviderCollection extends ProviderCollectionAdapter
             'Polldaddy',
             'Portfolium',
             'Prezi',
+            'Puzzel',
             'Quartr',
             'QTpi',
             'RadioPublic',
