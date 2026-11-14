@@ -113,6 +113,7 @@ class DefaultProviderCollection extends ProviderCollectionAdapter
             'Flickr',
             'Flourish',
             'FlowHubOrg',
+            'Fomr',
             'Framer',
             'Framatube',
             'Fooday',

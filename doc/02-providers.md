@@ -93,6 +93,7 @@ I try to support all the providers listed on [oembed.com](https://oembed.com).
 - [Flickr](providers/Flickr.md)
 - [Flourish](providers/Flourish.md)
 - [FlowHubOrg](providers/FlowHubOrg.md)
+- [Fomr](providers/Fomr.md)
 - [Framer](providers/Framer.md)
 - [Framatube](providers/Framatube.md)
 - [Fooday](providers/Fooday.md)
