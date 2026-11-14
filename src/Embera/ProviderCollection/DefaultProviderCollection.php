@@ -313,6 +313,7 @@ class DefaultProviderCollection extends ProviderCollectionAdapter
             'UAPod',
             'UniversitePantheonSorbonne',
             'UpecPod',
+            'UPoll',
             'UstreamTV',
             'Ustudio',
             'Verse',

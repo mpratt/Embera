@@ -293,6 +293,7 @@ I try to support all the providers listed on [oembed.com](https://oembed.com).
 - [UAPod](providers/UAPod.md)
 - [UniversitePantheonSorbonne](providers/UniversitePantheonSorbonne.md)
 - [UpecPod](providers/UpecPod.md)
+- [UPoll](providers/UPoll.md)
 - [UstreamTV](providers/UstreamTV.md)
 - [Ustudio](providers/Ustudio.md)
 - [Verse](providers/Verse.md)
