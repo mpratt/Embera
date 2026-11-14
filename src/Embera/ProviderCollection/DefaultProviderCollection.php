@@ -282,6 +282,7 @@ class DefaultProviderCollection extends ProviderCollectionAdapter
             'StandfordDigitalRepository',
             'Streamable',
             'Streamio',
+            'StreetArtCities',
             'Sudomemo',
             'Sutori',
             'Sway',

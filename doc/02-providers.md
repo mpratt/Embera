@@ -262,6 +262,7 @@ I try to support all the providers listed on [oembed.com](https://oembed.com).
 - [StandfordDigitalRepository](providers/StandfordDigitalRepository.md)
 - [Streamable](providers/Streamable.md)
 - [Streamio](providers/Streamio.md)
+- [StreetArtCities](providers/StreetArtCities.md)
 - [Sudomemo](providers/Sudomemo.md)
 - [Sutori](providers/Sutori.md)
 - [Sway](providers/Sway.md)
