@@ -144,6 +144,7 @@ class DefaultProviderCollection extends ProviderCollectionAdapter
             'Heyzine',
             'HiHaHo',
             'HippoVideo',
+            'Hivo',
             'Hopvue',
             'Huffduffer',
             'Ideamapper',
