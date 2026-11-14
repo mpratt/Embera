@@ -139,6 +139,7 @@ class DefaultProviderCollection extends ProviderCollectionAdapter
             'GW2Fashions',
             'Gyazo',
             'Hash',
+            'HDRShow',
             'Hearthis',
             'Heyzine',
             'HiHaHo',
