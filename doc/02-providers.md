@@ -14,6 +14,7 @@ I try to support all the providers listed on [oembed.com](https://oembed.com).
 - [Animoto](providers/Animoto.md)
 - [AnnieMusic](providers/AnnieMusic.md)
 - [Apester](providers/Apester.md)
+- [AppForceStudio](providers/AppForceStudio.md)
 - [Archivos](providers/Archivos.md)
 - [Assemblrworld](providers/Assemblrworld.md)
 - [Audioboom](providers/Audioboom.md)

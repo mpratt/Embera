@@ -34,6 +34,7 @@ class DefaultProviderCollection extends ProviderCollectionAdapter
             'Animoto',
             'AnnieMusic',
             'Apester',
+            'AppForceStudio',
             'Archivos',
             'Assemblrworld',
             'Audioboom',
