@@ -61,6 +61,7 @@ class DefaultProviderCollection extends ProviderCollectionAdapter
             'Bunny',
             'CalGet',
             'Canva',
+            'Carbon',
             'Ceros',
             'Celero',
             'ChartBlocks',
