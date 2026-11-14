@@ -28,7 +28,8 @@ class Ted extends ProviderAdapter implements ProviderInterface
 
     /** inline {@inheritdoc} */
     protected static $hosts = [
-        'ted.com'
+        'ted.com',
+        'embed.ted.com'
     ];
 
     /** inline {@inheritdoc} */
@@ -57,12 +58,15 @@ class Ted extends ProviderAdapter implements ProviderInterface
         $this->url->setHost('embed.ted.com');
 
         $attr = [];
-        $attr[] = 'src="' . (string) $this->url . '"';
+        $attr[] = 'src="' . preg_replace('~\.html$~i', '', (string) $this->url) . '"';
         $attr[] = 'width="{width}"';
         $attr[] = 'height="{height}"';
+        $attr[] = 'title=""';
         $attr[] = 'frameborder="0"';
-        $attr[] = 'scrolling="no"';
-        $attr[] = 'webkitAllowFullScreen mozallowfullscreen allowFullScreen';
+        $attr[] = 'allow="autoplay; fullscreen; encrypted-media; picture-in-picture"';
+        $attr[] = 'referrerpolicy="strict-origin-when-cross-origin"';
+        $attr[] = 'loading="lazy"';
+        $attr[] = 'allowfullscreen';
 
         return [
             'type' => 'video',

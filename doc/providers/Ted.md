@@ -12,7 +12,7 @@ Name: Ted
 - HTTPS support: YES
 - Fake Response: YES
 - Oembed Params: maxwidth , maxheight
-- Supported Hosts: ted.com
+- Supported Hosts: ted.com , embed.ted.com
 - Responsive response: NO
 - Collections: DefaultProviderCollection , SlimProviderCollection
 

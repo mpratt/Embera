@@ -26,6 +26,7 @@ final class TedTest extends ProviderTester
             'http://www.ted.com/talks/jon_ronson_strange_answers_to_the_psychopath_test.html',
             'http://www.ted.com/talks/lang/da/jill_bolte_taylor_s_powerful_stroke_of_insight.html',
             'http://www.ted.com/talks/lang/fa/jill_bolte_taylor_s_powerful_stroke_of_insight.html',
+            'https://embed.ted.com/talks/jill_bolte_taylor_s_powerful_stroke_of_insight',
         ],
         'invalid_urls' => [
             'http://www.ted.com/',
