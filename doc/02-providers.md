@@ -272,6 +272,7 @@ I try to support all the providers listed on [oembed.com](https://oembed.com).
 - [Ted](providers/Ted.md)
 - [Tegula](providers/Tegula.md)
 - [TheNewYorkTimes](providers/TheNewYorkTimes.md)
+- [ThePrototype](providers/ThePrototype.md)
 - [ThreeQ](providers/ThreeQ.md)
 - [Tickcounter](providers/Tickcounter.md)
 - [TikTok](providers/TikTok.md)

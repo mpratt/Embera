@@ -292,6 +292,7 @@ class DefaultProviderCollection extends ProviderCollectionAdapter
             'Ted',
             'Tegula',
             'TheNewYorkTimes',
+            'ThePrototype',
             'ThreeQ',
             'Tickcounter',
             'TikTok',
