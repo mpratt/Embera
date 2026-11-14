@@ -286,6 +286,7 @@ class DefaultProviderCollection extends ProviderCollectionAdapter
             'Sudomemo',
             'Sutori',
             'Sway',
+            'SynthCamp',
             'Synthesia',
             'Ted',
             'TheNewYorkTimes',
