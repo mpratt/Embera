@@ -242,6 +242,7 @@ class DefaultProviderCollection extends ProviderCollectionAdapter
             'RadioPublic',
             'Rcvis',
             'Reddit',
+            'RedlofMedien',
             'ReleaseWire',
             'Render',
             'Replit',

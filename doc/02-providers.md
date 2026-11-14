@@ -222,6 +222,7 @@ I try to support all the providers listed on [oembed.com](https://oembed.com).
 - [RadioPublic](providers/RadioPublic.md)
 - [Rcvis](providers/Rcvis.md)
 - [Reddit](providers/Reddit.md)
+- [RedlofMedien](providers/RedlofMedien.md)
 - [ReleaseWire](providers/ReleaseWire.md)
 - [Render](providers/Render.md)
 - [Replit](providers/Replit.md)
