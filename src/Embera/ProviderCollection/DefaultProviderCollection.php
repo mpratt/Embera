@@ -327,6 +327,7 @@ class DefaultProviderCollection extends ProviderCollectionAdapter
             'Vimeo',
             'Viously',
             'Viostream',
+            'Vizzlo',
             'Vlipsy',
             'Vizdom',
             'VouchFor',

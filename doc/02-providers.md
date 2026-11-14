@@ -307,6 +307,7 @@ I try to support all the providers listed on [oembed.com](https://oembed.com).
 - [Vimeo](providers/Vimeo.md)
 - [Viously](providers/Viously.md)
 - [Viostream](providers/Viostream.md)
+- [Vizzlo](providers/Vizzlo.md)
 - [Vlipsy](providers/Vlipsy.md)
 - [Vizdom](providers/Vizdom.md)
 - [VouchFor](providers/VouchFor.md)
