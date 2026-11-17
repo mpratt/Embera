@@ -11,7 +11,6 @@ I try to support all the providers listed on [oembed.com](https://oembed.com).
 - [Altru](providers/Altru.md)
 - [Altium](providers/Altium.md)
 - [Amtraker](providers/Amtraker.md)
-- [AnnieMusic](providers/AnnieMusic.md)
 - [Apester](providers/Apester.md)
 - [AppForceStudio](providers/AppForceStudio.md)
 - [Archivos](providers/Archivos.md)

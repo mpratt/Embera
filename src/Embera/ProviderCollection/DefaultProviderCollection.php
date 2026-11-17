@@ -31,7 +31,6 @@ class DefaultProviderCollection extends ProviderCollectionAdapter
             'Altru',
             'Altium',
             'Amtraker',
-            'AnnieMusic',
             'Apester',
             'AppForceStudio',
             'Archivos',
