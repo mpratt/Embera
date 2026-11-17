@@ -98,7 +98,6 @@ class HttpClient implements HttpClientInterface
         //$headerOut = curl_getinfo($handler, CURLINFO_HEADER_OUT);
 
         $body = substr($response, $headerSize);
-        curl_close($handler);
 
         if (empty($body) || $status != '200') {
             throw new Exception($status . ': Invalid response for ' . $url);
