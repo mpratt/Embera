@@ -121,7 +121,6 @@ I try to support all the providers listed on [oembed.com](https://oembed.com).
 - [IHeartRadio](providers/IHeartRadio.md)
 - [Imgur](providers/Imgur.md)
 - [Infogram](providers/Infogram.md)
-- [Infoveave](providers/Infoveave.md)
 - [Injurymap](providers/Injurymap.md)
 - [InsightTimer](providers/InsightTimer.md)
 - [Instagram](providers/Instagram.md)

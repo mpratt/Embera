@@ -141,7 +141,6 @@ class DefaultProviderCollection extends ProviderCollectionAdapter
             'IHeartRadio',
             'Imgur',
             'Infogram',
-            'Infoveave',
             'Injurymap',
             'InsightTimer',
             'Instagram',
