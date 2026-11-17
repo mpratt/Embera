@@ -152,6 +152,7 @@ embeds and many other features. You can find out more by reading the documentati
 - [Using responsive embeds](doc/05-responsive-embeds.md)
 - [Enabling cache](doc/06-caching.md)
 - [Advanced Usage](doc/07-advanced-usage.md)
+- [Removed providers](doc/08-removed-providers.md)
 
 ## Migrating from version >= 1.9.x
 
