@@ -21,7 +21,7 @@ final class GettyImagesTest extends ProviderTester
 {
     protected $tasks = [
         'valid_urls' => [
-            'https://www.gettyimages.com/detail/foto/portrait-of-29-year-old-african-american-man-imagen-libre-de-derechos/1181947734?query=string',
+            'http://gettyimages.com/detail/74917285',
             'http://gettyimages.com/detail/1155368500',
             'https://www.gettyimages.com/detail/foto/young-cheerleader-girl-with-pom-poms-jumping-imagen-libre-de-derechos/843256296?uiloc=thumbnail_similar_images_adp',
         ],
