@@ -223,7 +223,6 @@ class DefaultProviderCollection extends ProviderCollectionAdapter
             'RedlofMedien',
             'ReleaseWire',
             'Render',
-            'Replit',
             'ReverbNation',
             'RoosterTeeth',
             'Rumble',
