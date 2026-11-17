@@ -185,7 +185,6 @@ I try to support all the providers listed on [oembed.com](https://oembed.com).
 - [Parler](providers/Parler.md)
 - [Parta](providers/Parta.md)
 - [Pastery](providers/Pastery.md)
-- [PeerTubeTV](providers/PeerTubeTV.md)
 - [PicJury](providers/PicJury.md)
 - [Piggy](providers/Piggy.md)
 - [Pikasso](providers/Pikasso.md)
