@@ -121,7 +121,6 @@ class DefaultProviderCollection extends ProviderCollectionAdapter
             'GettyImages',
             'GigNGo',
             'Giphy',
-            'GloriaTV',
             'Gong',
             'Gmetri',
             'GoodForJob',
