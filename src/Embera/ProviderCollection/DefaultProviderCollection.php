@@ -128,7 +128,6 @@ class DefaultProviderCollection extends ProviderCollectionAdapter
             'Gumlet',
             'GW2Fashions',
             'Gyazo',
-            'Hash',
             'HDRShow',
             'Hearthis',
             'Heyzine',

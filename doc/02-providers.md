@@ -108,7 +108,6 @@ I try to support all the providers listed on [oembed.com](https://oembed.com).
 - [Gumlet](providers/Gumlet.md)
 - [GW2Fashions](providers/GW2Fashions.md)
 - [Gyazo](providers/Gyazo.md)
-- [Hash](providers/Hash.md)
 - [HDRShow](providers/HDRShow.md)
 - [Hearthis](providers/Hearthis.md)
 - [Heyzine](providers/Heyzine.md)
