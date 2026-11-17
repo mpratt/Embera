@@ -210,7 +210,6 @@ class DefaultProviderCollection extends ProviderCollectionAdapter
             'Pinpoll',
             'Pinterest',
             'Pitchhub',
-            'Playbuzz',
             'Plusdocs',
             'Podbean',
             'PodcastPizza',
