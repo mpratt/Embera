@@ -172,7 +172,6 @@ I try to support all the providers listed on [oembed.com](https://oembed.com).
 - [NeedleCloud](providers/NeedleCloud.md)
 - [NeetoRecord](providers/NeetoRecord.md)
 - [Nfb](providers/Nfb.md)
-- [NFTndx](providers/NFTndx.md)
 - [NorthwestFalls](providers/NorthwestFalls.md)
 - [Odysee](providers/Odysee.md)
 - [OmnyStudio](providers/OmnyStudio.md)

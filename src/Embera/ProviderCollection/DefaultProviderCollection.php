@@ -192,7 +192,6 @@ class DefaultProviderCollection extends ProviderCollectionAdapter
             'NeedleCloud',
             'NeetoRecord',
             'Nfb',
-            'NFTndx',
             'NorthwestFalls',
             'Odysee',
             'OmnyStudio',
