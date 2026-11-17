@@ -153,7 +153,6 @@ class DefaultProviderCollection extends ProviderCollectionAdapter
             'KeystonePractice',
             'Kickstarter',
             'KirimEmail',
-            'Kit',
             'Kommodo',
             'Kurozora',
             'Kooapp',

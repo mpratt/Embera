@@ -133,7 +133,6 @@ I try to support all the providers listed on [oembed.com](https://oembed.com).
 - [KeystonePractice](providers/KeystonePractice.md)
 - [Kickstarter](providers/Kickstarter.md)
 - [KirimEmail](providers/KirimEmail.md)
-- [Kit](providers/Kit.md)
 - [Kommodo](providers/Kommodo.md)
 - [Kurozora](providers/Kurozora.md)
 - [Kooapp](providers/Kooapp.md)
