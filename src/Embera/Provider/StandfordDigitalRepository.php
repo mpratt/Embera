@@ -60,13 +60,14 @@ class StandfordDigitalRepository extends ProviderAdapter implements ProviderInte
 
         $attr = [];
         $attr[] = 'src="' . $embedUrl . '"';
-        $attr[] = 'height="{height}"';
-        $attr[] = 'width="100%"';
+        $attr[] = 'style="height: 31.25rem; width: 100%;"';
+        $attr[] = 'title=""';
         $attr[] = 'frameborder="0"';
         $attr[] = 'marginwidth="0"';
         $attr[] = 'marginheight="0"';
         $attr[] = 'scrolling="no"';
-        $attr[] = 'allowfullscreen';
+        $attr[] = 'allowfullscreen="allowfullscreen"';
+        $attr[] = 'allow="clipboard-write"';
 
         return [
             'type' => 'rich',
