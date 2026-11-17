@@ -38,7 +38,8 @@ final class YoutubeTest extends ProviderTester
             'http://www.youtu.be.com/watch?lol=no',
             'http://www.youtube.com/hi#ho',
             'http://youtube.com/',
-            'http://www.youtube.com/?id=ho'
+            'http://www.youtube.com/?id=ho',
+            'https://www.youtube.com/clip/Ugkxks3oBWmZpYaSabQULM_8xSZnBw0VEFuF',
         ),
         'normalize_urls' => array(
             'http://youtu.be/9bZkp7q19f0/werwer' => 'https://www.youtube.com/watch?v=9bZkp7q19f0',
