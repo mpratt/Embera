@@ -97,7 +97,6 @@ class DefaultProviderCollection extends ProviderCollectionAdapter
             'Everviz',
             'EveryPage',
             'Facebook',
-            'Fader',
             'FaithLifeTV',
             'Figma',
             'Fitapp',

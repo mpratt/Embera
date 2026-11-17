@@ -77,7 +77,6 @@ I try to support all the providers listed on [oembed.com](https://oembed.com).
 - [Everviz](providers/Everviz.md)
 - [EveryPage](providers/EveryPage.md)
 - [Facebook](providers/Facebook.md)
-- [Fader](providers/Fader.md)
 - [FaithLifeTV](providers/FaithLifeTV.md)
 - [Figma](providers/Figma.md)
 - [Fitapp](providers/Fitapp.md)
