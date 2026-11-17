@@ -203,7 +203,6 @@ I try to support all the providers listed on [oembed.com](https://oembed.com).
 - [RedlofMedien](providers/RedlofMedien.md)
 - [ReleaseWire](providers/ReleaseWire.md)
 - [Render](providers/Render.md)
-- [ReverbNation](providers/ReverbNation.md)
 - [RoosterTeeth](providers/RoosterTeeth.md)
 - [Rumble](providers/Rumble.md)
 - [RunKit](providers/RunKit.md)
