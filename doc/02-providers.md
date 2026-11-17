@@ -13,7 +13,6 @@ I try to support all the providers listed on [oembed.com](https://oembed.com).
 - [Amtraker](providers/Amtraker.md)
 - [Apester](providers/Apester.md)
 - [AppForceStudio](providers/AppForceStudio.md)
-- [Archivos](providers/Archivos.md)
 - [Assemblrworld](providers/Assemblrworld.md)
 - [Audioboom](providers/Audioboom.md)
 - [Audiocom](providers/Audiocom.md)

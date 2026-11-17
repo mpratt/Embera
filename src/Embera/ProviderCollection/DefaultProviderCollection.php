@@ -33,7 +33,6 @@ class DefaultProviderCollection extends ProviderCollectionAdapter
             'Amtraker',
             'Apester',
             'AppForceStudio',
-            'Archivos',
             'Assemblrworld',
             'Audioboom',
             'Audiocom',
