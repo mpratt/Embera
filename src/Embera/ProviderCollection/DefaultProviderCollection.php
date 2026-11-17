@@ -35,6 +35,7 @@ class DefaultProviderCollection extends ProviderCollectionAdapter
             'AppForceStudio',
             'ApplePodcasts',
             'Assemblrworld',
+            'AtlantisDataSolutions',
             'Audioboom',
             'Audiocom',
             'Audiomack',

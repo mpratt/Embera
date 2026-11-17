@@ -15,6 +15,7 @@ I try to support all the providers listed on [oembed.com](https://oembed.com).
 - [AppForceStudio](providers/AppForceStudio.md)
 - [ApplePodcasts](providers/ApplePodcasts.md)
 - [Assemblrworld](providers/Assemblrworld.md)
+- [AtlantisDataSolutions](providers/AtlantisDataSolutions.md)
 - [Audioboom](providers/Audioboom.md)
 - [Audiocom](providers/Audiocom.md)
 - [Audiomack](providers/Audiomack.md)
