@@ -287,7 +287,6 @@ I try to support all the providers listed on [oembed.com](https://oembed.com).
 - [WatchPeopleFight](providers/WatchPeopleFight.md)
 - [WaveVideo](providers/WaveVideo.md)
 - [Wecandeo](providers/Wecandeo.md)
-- [Webcrumbs](providers/Webcrumbs.md)
 - [Web3IsGoingJustGreat](providers/Web3IsGoingJustGreat.md)
 - [Wewtalk](providers/Wewtalk.md)
 - [Whyp](providers/Whyp.md)

@@ -307,7 +307,6 @@ class DefaultProviderCollection extends ProviderCollectionAdapter
             'WatchPeopleFight',
             'WaveVideo',
             'Wecandeo',
-            'Webcrumbs',
             'Web3IsGoingJustGreat',
             'Wewtalk',
             'Whyp',
