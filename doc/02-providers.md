@@ -197,7 +197,6 @@ I try to support all the providers listed on [oembed.com](https://oembed.com).
 - [Portfolium](providers/Portfolium.md)
 - [Prezi](providers/Prezi.md)
 - [Puzzel](providers/Puzzel.md)
-- [Quartr](providers/Quartr.md)
 - [QTpi](providers/QTpi.md)
 - [RadioPublic](providers/RadioPublic.md)
 - [Rcvis](providers/Rcvis.md)

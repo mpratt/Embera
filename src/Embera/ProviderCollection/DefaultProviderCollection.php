@@ -217,7 +217,6 @@ class DefaultProviderCollection extends ProviderCollectionAdapter
             'Portfolium',
             'Prezi',
             'Puzzel',
-            'Quartr',
             'QTpi',
             'RadioPublic',
             'Rcvis',
