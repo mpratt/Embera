@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Dadan.php
  *
@@ -31,7 +32,7 @@ class Dadan extends ProviderAdapter implements ProviderInterface
     ];
 
     /** inline {@inheritdoc} */
-    protected $allowedParams = [ 'maxwidth', 'maxheight' ];
+    protected $allowedParams = ['maxwidth', 'maxheight'];
 
     /** inline {@inheritdoc} */
     protected $httpsSupport = true;
@@ -54,5 +55,4 @@ class Dadan extends ProviderAdapter implements ProviderInterface
 
         return $url;
     }
-
 }
