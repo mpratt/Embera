@@ -21,9 +21,9 @@ final class SketchfabTest extends ProviderTester
 {
     protected $tasks = [
         'valid_urls' => [
+            'https://sketchfab.com/3d-models/loring-tweet-power-line-9a48434e545f44d08801c8ce2a72e41b',
             'https://sketchfab.com/3d-models/man-in-the-metro-15365e67e2d44e6f8da6a5574d1841df',
             'https://sketchfab.com/3d-models/hamilton-beach-home-motor-247275b3335a4d7b8eb327858ea67149',
-            'https://sketchfab.com/3d-models/railway-oil-tank-vr1-a7a4516517b946a6bb1da7e72d836d45?ref=store_landing',
         ],
         'invalid_urls' => [
             'https://sketchfab.com/3d-models/',
