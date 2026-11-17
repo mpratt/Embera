@@ -131,4 +131,45 @@ class EmberaTest extends TestCase
         $this->assertEquals($responseAfterFilters[$url]['html'], str_replace('iframe', 'xframe', $responseBeforeFilters[$url]['html']));
     }
 
+    public function testEmberaLazyLoadingIsDisabledByDefault()
+    {
+        $embera = new Embera([
+            'fake_responses' => Embera::ONLY_FAKE_RESPONSES,
+        ]);
+
+        $url = 'https://youtube.com/watch?v=mghhLqu31cQ';
+        $response = $embera->getUrlData($url);
+
+        $this->assertStringNotContainsString('loading=', $response[$url]['html']);
+    }
+
+    public function testEmberaLazyLoading()
+    {
+        $embera = new Embera([
+            'fake_responses' => Embera::ONLY_FAKE_RESPONSES,
+            'lazy_loading' => true,
+        ]);
+
+        $url = 'https://youtube.com/watch?v=mghhLqu31cQ';
+        $response = $embera->getUrlData($url);
+        $this->assertStringContainsString('<iframe loading="lazy"', $response[$url]['html']);
+
+        $text = $embera->autoEmbed('Look at this video ' . $url);
+        $this->assertStringContainsString('<iframe loading="lazy"', $text);
+    }
+
+    public function testEmberaLazyLoadingWithResponsiveEmbeds()
+    {
+        $embera = new Embera([
+            'fake_responses' => Embera::ONLY_FAKE_RESPONSES,
+            'lazy_loading' => true,
+            'responsive' => true,
+        ]);
+
+        $url = 'https://youtube.com/watch?v=mghhLqu31cQ';
+        $response = $embera->getUrlData($url);
+
+        $this->assertStringContainsString('embera-embed-responsive', $response[$url]['html']);
+        $this->assertSame(1, substr_count($response[$url]['html'], 'loading="lazy"'));
+    }
 }

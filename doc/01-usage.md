@@ -33,6 +33,7 @@ You can pass an array with the following keys into the `Embera` object:
 | fake_responses     | Embera::ALLOW_FAKE_RESPONSES / Embera::DISABLE_FAKE_RESPONSES / Embera::ONLY_FAKE_RESPONSES - More Information in [fake responses documentation](04-fake-responses.md)      |
 | ignore_tags        | Array with tags that should be ignored when detecting urls from a text. So that for example Embera doesnt replace urls inside an `iframe` or `img` tag.                     |
 | responsive         | true/false - Wether we modify the html response in order to get responsive html. - More Information in the [responsive data documentation](05-responsive-embeds.md). (BETA) |
+| lazy_loading       | true/false - Adds the native `loading="lazy"` attribute to iframes and images, so browsers load them when they are about to be visible. Disabled by default.                |
 | maxwidth / width   | Set the maximun width of the embeded resource                                                                                                                               |
 | maxheight / height | Set the maximun height of the embeded resource                                                                                                                              |
 

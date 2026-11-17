@@ -16,6 +16,7 @@ use Embera\Http\HttpClient;
 use Embera\Http\OembedClient;
 use Embera\Http\HttpClientInterface;
 use Embera\Html\IgnoreTags;
+use Embera\Html\LazyLoading;
 use Embera\Html\ResponsiveEmbeds;
 use Embera\ProviderCollection\ProviderCollectionInterface;
 use Embera\ProviderCollection\DefaultProviderCollection;
@@ -69,6 +70,7 @@ class Embera
             'fake_responses' => self::ALLOW_FAKE_RESPONSES,
             'ignore_tags' => [ 'pre', 'code', 'a', 'img', 'iframe', 'oembed' ],
             'responsive' => false,
+            'lazy_loading' => false,
             'width' => 0,
             'height' => 0,
             'maxheight' => 0,
@@ -149,6 +151,11 @@ class Embera
                 if ($this->config['responsive'] && !$provider->hasResponsiveSupport()) {
                     $responsive = new ResponsiveEmbeds();
                     $response = $responsive->transform($response);
+                }
+
+                if ($this->config['lazy_loading']) {
+                    $lazyLoading = new LazyLoading();
+                    $response = $lazyLoading->transform($response);
                 }
 
                 $return[$url] = $this->applyFilters($response);
