@@ -11,7 +11,7 @@ not be able to find the class.
 
 All classes live in the `Embera\Provider` namespace.
 
-## Unreleased
+## 2.0.43
 
 | Provider | Removed on | Reason |
 |----------|------------|--------|
