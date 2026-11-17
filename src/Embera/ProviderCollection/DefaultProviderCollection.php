@@ -148,7 +148,6 @@ class DefaultProviderCollection extends ProviderCollectionAdapter
             'Issuu',
             'ItabtechInfosys',
             'ItemisCreate',
-            'Jovian',
             'Juntos',
             'KakaoTV',
             'KeystonePractice',
