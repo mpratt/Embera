@@ -34,7 +34,7 @@ $embera = new Embera();
 
 ## Requirements
 
-- PHP >= 7.0 (It should work on 5.6)
+- PHP >= 7.1
 - Curl or allow_url_fopen should be enabled
 
 ## Basic Usage
