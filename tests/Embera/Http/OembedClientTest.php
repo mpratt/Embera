@@ -30,7 +30,9 @@ class OembedClientTest extends TestCase
 
         $reflection = new ReflectionClass($oembed);
         $method = $reflection->getMethod('constructUrl');
-        $method->setAccessible(true);
+        if (PHP_VERSION_ID < 80100) {
+            $method->setAccessible(true);
+        }
 
         $result = $method->invoke($oembed, 'http://host.com/path/', ['value' => '1', 'value2' => '3', 'format' => 'json']);
         $this->assertEquals($result, 'http://host.com/path/?value=1&value2=3&format=json');
