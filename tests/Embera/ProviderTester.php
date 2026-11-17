@@ -82,7 +82,7 @@ class ProviderTester extends TestCase
         }
 
         if (!empty($this->tasks['fake_response'])) {
-            $this->validateFakeResponse($p, $this->tasks, $rounds, $config);
+            $this->validateFakeResponse($p, $this->tasks, $rounds, $config, $validateRealResponse);
         }
 
         if ($validateRealResponse) {
@@ -186,12 +186,13 @@ class ProviderTester extends TestCase
      * @param array $tasks
      * @param int $rounds
      * @param array $config
+     * @param bool $compareWithRealResponse
      *
      * @return void
      *
      * @large
      */
-    protected function validateFakeResponse($providerName, array $tasks, $rounds, array $config = [])
+    protected function validateFakeResponse($providerName, array $tasks, $rounds, array $config = [], $compareWithRealResponse = true)
     {
         // Percentage accepted for fake response similarity
         $similarMinimumThreshold = 80;
@@ -243,6 +244,10 @@ class ProviderTester extends TestCase
                 'Fake response flag is not correct. Expecting "1", recieved "%s" on url %s',
                 $fakeResponse['embera_using_fake_response'], $url
             ));
+
+            if (!$compareWithRealResponse) {
+                continue;
+            }
 
             $realResponse = $realOembedClient->getResponseFrom($provider);
             if (!isset($realResponse['embera_using_fake_response'])) {
