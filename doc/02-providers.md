@@ -213,7 +213,6 @@ I try to support all the providers listed on [oembed.com](https://oembed.com).
 - [Sbedit](providers/Sbedit.md)
 - [Scenes](providers/Scenes.md)
 - [ScreenNine](providers/ScreenNine.md)
-- [Screencast](providers/Screencast.md)
 - [ScribbleMaps](providers/ScribbleMaps.md)
 - [Scribd](providers/Scribd.md)
 - [SendToNews](providers/SendToNews.md)

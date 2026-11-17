@@ -233,7 +233,6 @@ class DefaultProviderCollection extends ProviderCollectionAdapter
             'Sbedit',
             'Scenes',
             'ScreenNine',
-            'Screencast',
             'ScribbleMaps',
             'Scribd',
             'SendToNews',
