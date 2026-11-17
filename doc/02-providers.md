@@ -292,7 +292,6 @@ I try to support all the providers listed on [oembed.com](https://oembed.com).
 - [Wewtalk](providers/Wewtalk.md)
 - [Whyp](providers/Whyp.md)
 - [WolframCloud](providers/WolframCloud.md)
-- [VoxSnap](providers/VoxSnap.md)
 - [Whimsical](providers/Whimsical.md)
 - [Wistia](providers/Wistia.md)
 - [Wizer](providers/Wizer.md)

@@ -312,7 +312,6 @@ class DefaultProviderCollection extends ProviderCollectionAdapter
             'Wewtalk',
             'Whyp',
             'WolframCloud',
-            'VoxSnap',
             'Whimsical',
             'Wistia',
             'Wizer',
