@@ -131,6 +131,7 @@ I try to support all the providers listed on [oembed.com](https://oembed.com).
 - [Issuu](providers/Issuu.md)
 - [ItabtechInfosys](providers/ItabtechInfosys.md)
 - [ItemisCreate](providers/ItemisCreate.md)
+- [Jawafdehi](providers/Jawafdehi.md)
 - [Juntos](providers/Juntos.md)
 - [KakaoTV](providers/KakaoTV.md)
 - [KeystonePractice](providers/KeystonePractice.md)
