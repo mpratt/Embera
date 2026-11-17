@@ -42,7 +42,6 @@ I try to support all the providers listed on [oembed.com](https://oembed.com).
 - [Ceros](providers/Ceros.md)
 - [Celero](providers/Celero.md)
 - [ChartBlocks](providers/ChartBlocks.md)
-- [Chroco](providers/Chroco.md)
 - [CircuitLab](providers/CircuitLab.md)
 - [Clipform](providers/Clipform.md)
 - [Clueso](providers/Clueso.md)

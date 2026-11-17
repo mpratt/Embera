@@ -62,7 +62,6 @@ class DefaultProviderCollection extends ProviderCollectionAdapter
             'Ceros',
             'Celero',
             'ChartBlocks',
-            'Chroco',
             'CircuitLab',
             'Clipform',
             'Clueso',
