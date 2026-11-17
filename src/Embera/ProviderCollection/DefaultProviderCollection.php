@@ -243,7 +243,6 @@ class DefaultProviderCollection extends ProviderCollectionAdapter
             'Skhema',
             'SlateApp',
             'Slideshare',
-            'SmashNotes',
             'Smugmug',
             'SocialExplorer',
             'SongLink',

@@ -223,7 +223,6 @@ I try to support all the providers listed on [oembed.com](https://oembed.com).
 - [Skhema](providers/Skhema.md)
 - [SlateApp](providers/SlateApp.md)
 - [Slideshare](providers/Slideshare.md)
-- [SmashNotes](providers/SmashNotes.md)
 - [Smugmug](providers/Smugmug.md)
 - [SocialExplorer](providers/SocialExplorer.md)
 - [SongLink](providers/SongLink.md)
