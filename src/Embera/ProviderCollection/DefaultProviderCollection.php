@@ -178,7 +178,6 @@ class DefaultProviderCollection extends ProviderCollectionAdapter
             'Mediastream',
             'MedienArchivKuenste',
             'MemeStack',
-            'MermaidInk',
             'Mirame360',
             'Miro',
             'MixCloud',
