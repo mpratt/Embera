@@ -42,7 +42,6 @@ class DefaultProviderCollection extends ProviderCollectionAdapter
             'BeautifulAI',
             'Behance',
             'BeamsFm',
-            'Biqnetwork',
             'Bitchute',
             'BlackfireIO',
             'Blogcast',
