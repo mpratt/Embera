@@ -120,6 +120,7 @@ I try to support all the providers listed on [oembed.com](https://oembed.com).
 - [IcosaGallery](providers/IcosaGallery.md)
 - [Ideamapper](providers/Ideamapper.md)
 - [iFixit](providers/iFixit.md)
+- [Ignite](providers/Ignite.md)
 - [IHeartRadio](providers/IHeartRadio.md)
 - [Imgur](providers/Imgur.md)
 - [Infogram](providers/Infogram.md)

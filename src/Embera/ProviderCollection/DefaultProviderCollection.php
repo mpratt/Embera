@@ -140,6 +140,7 @@ class DefaultProviderCollection extends ProviderCollectionAdapter
             'IcosaGallery',
             'Ideamapper',
             'iFixit',
+            'Ignite',
             'IHeartRadio',
             'Imgur',
             'Infogram',
