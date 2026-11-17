@@ -36,7 +36,6 @@ class DefaultProviderCollection extends ProviderCollectionAdapter
             'Assemblrworld',
             'Audioboom',
             'Audiocom',
-            'AudioClip',
             'Audiomack',
             'Audiomeans',
             'AudioSFX',

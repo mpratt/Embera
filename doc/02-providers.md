@@ -16,7 +16,6 @@ I try to support all the providers listed on [oembed.com](https://oembed.com).
 - [Assemblrworld](providers/Assemblrworld.md)
 - [Audioboom](providers/Audioboom.md)
 - [Audiocom](providers/Audiocom.md)
-- [AudioClip](providers/AudioClip.md)
 - [Audiomack](providers/Audiomack.md)
 - [Audiomeans](providers/Audiomeans.md)
 - [AudioSFX](providers/AudioSFX.md)
