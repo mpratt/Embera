@@ -171,6 +171,7 @@ class DefaultProviderCollection extends ProviderCollectionAdapter
             'Livestream',
             'Livid',
             'LocalVoicesNetwork',
+            'LongPlay',
             'Loom',
             'LottieFiles',
             'Ludus',

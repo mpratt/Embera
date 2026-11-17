@@ -151,6 +151,7 @@ I try to support all the providers listed on [oembed.com](https://oembed.com).
 - [Livestream](providers/Livestream.md)
 - [Livid](providers/Livid.md)
 - [LocalVoicesNetwork](providers/LocalVoicesNetwork.md)
+- [LongPlay](providers/LongPlay.md)
 - [Loom](providers/Loom.md)
 - [LottieFiles](providers/LottieFiles.md)
 - [Ludus](providers/Ludus.md)
