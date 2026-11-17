@@ -218,7 +218,6 @@ class DefaultProviderCollection extends ProviderCollectionAdapter
             'Prezi',
             'Puzzel',
             'QTpi',
-            'RadioPublic',
             'Rcvis',
             'Reddit',
             'RedlofMedien',
