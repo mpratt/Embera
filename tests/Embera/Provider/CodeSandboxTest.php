@@ -39,6 +39,10 @@ final class CodeSandboxTest extends ProviderTester
 
     public function testProvider()
     {
-        $this->validateProvider('CodeSandbox', [ 'width' => 480, 'height' => 270]);
+        if (defined('GITHUBTESTS')) {
+            $this->markTestSkipped('Provider CodeSandbox endpoint is returning 403 (2026-11-17). Test locally please.');
+        } else {
+            $this->validateProvider('CodeSandbox', [ 'width' => 480, 'height' => 270]);
+        }
     }
 }

@@ -40,6 +40,10 @@ final class ChartBlocksTest extends ProviderTester
 
     public function testProvider()
     {
-        $this->validateProvider('ChartBlocks', [ 'width' => 480, 'height' => 270]);
+        if (defined('GITHUBTESTS')) {
+            $this->markTestSkipped('Provider ChartBlocks endpoint is returning 403 (2026-11-17). Test locally please.');
+        } else {
+            $this->validateProvider('ChartBlocks', [ 'width' => 480, 'height' => 270]);
+        }
     }
 }

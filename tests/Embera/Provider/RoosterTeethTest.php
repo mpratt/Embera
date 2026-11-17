@@ -37,6 +37,10 @@ final class RoosterTeethTest extends ProviderTester
 
     public function testProvider()
     {
-        $this->validateProvider('RoosterTeeth', [ 'width' => 480, 'height' => 270]);
+        if (defined('GITHUBTESTS')) {
+            $this->markTestSkipped('Provider RoosterTeeth endpoint is returning 429 (2026-11-17). Test locally please.');
+        } else {
+            $this->validateProvider('RoosterTeeth', [ 'width' => 480, 'height' => 270]);
+        }
     }
 }

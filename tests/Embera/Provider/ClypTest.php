@@ -37,6 +37,10 @@ final class ClypTest extends ProviderTester
 
     public function testProvider()
     {
-        $this->validateProvider('Clyp', [ 'width' => 480, 'height' => 270]);
+        if (defined('GITHUBTESTS')) {
+            $this->markTestSkipped('Provider Clyp endpoint is returning 401 (2026-11-17). Test locally please.');
+        } else {
+            $this->validateProvider('Clyp', [ 'width' => 480, 'height' => 270]);
+        }
     }
 }

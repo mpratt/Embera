@@ -34,6 +34,10 @@ final class DidacteTest extends ProviderTester
 
     public function testProvider()
     {
-        $this->validateProvider('Didacte', [ 'width' => 480, 'height' => 270]);
+        if (defined('GITHUBTESTS')) {
+            $this->markTestSkipped('Provider Didacte endpoint is returning 403 (2026-11-17). Test locally please.');
+        } else {
+            $this->validateProvider('Didacte', [ 'width' => 480, 'height' => 270]);
+        }
     }
 }

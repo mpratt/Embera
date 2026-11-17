@@ -31,6 +31,10 @@ final class ScenesTest extends ProviderTester
 
     public function testProvider()
     {
-        $this->validateProvider('Scenes', [ 'width' => 480, 'height' => 270]);
+        if (defined('GITHUBTESTS')) {
+            $this->markTestSkipped('Provider Scenes endpoint is returning 500 (2026-11-17). Test locally please.');
+        } else {
+            $this->validateProvider('Scenes', [ 'width' => 480, 'height' => 270]);
+        }
     }
 }

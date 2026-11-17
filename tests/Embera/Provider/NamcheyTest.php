@@ -38,6 +38,10 @@ final class NamcheyTest extends ProviderTester
 
     public function testProvider()
     {
-        $this->validateProvider('Namchey', [ 'width' => 480, 'height' => 270]);
+        if (defined('GITHUBTESTS')) {
+            $this->markTestSkipped('Provider Namchey endpoint is returning 404 (2026-11-17). Test locally please.');
+        } else {
+            $this->validateProvider('Namchey', [ 'width' => 480, 'height' => 270]);
+        }
     }
 }

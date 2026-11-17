@@ -30,6 +30,10 @@ final class FoodayTest extends ProviderTester
 
     public function testProvider()
     {
-        $this->validateProvider('Fooday', [ 'width' => 480, 'height' => 270]);
+        if (defined('GITHUBTESTS')) {
+            $this->markTestSkipped('Provider Fooday endpoint is returning 502 (2026-11-17). Test locally please.');
+        } else {
+            $this->validateProvider('Fooday', [ 'width' => 480, 'height' => 270]);
+        }
     }
 }

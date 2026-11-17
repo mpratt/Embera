@@ -30,6 +30,10 @@ final class YumpuTest extends ProviderTester
 
     public function testProvider()
     {
-        $this->validateProvider('Yumpu', [ 'width' => 480, 'height' => 270]);
+        if (defined('GITHUBTESTS')) {
+            $this->markTestSkipped('Provider Yumpu endpoint is returning 403 (2026-11-17). Test locally please.');
+        } else {
+            $this->validateProvider('Yumpu', [ 'width' => 480, 'height' => 270]);
+        }
     }
 }

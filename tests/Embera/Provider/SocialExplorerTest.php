@@ -34,6 +34,10 @@ final class SocialExplorerTest extends ProviderTester
 
     public function testProvider()
     {
-        $this->validateProvider('SocialExplorer', [ 'width' => 480, 'height' => 270]);
+        if (defined('GITHUBTESTS')) {
+            $this->markTestSkipped('Provider SocialExplorer endpoint is returning 406 (2026-11-17). Test locally please.');
+        } else {
+            $this->validateProvider('SocialExplorer', [ 'width' => 480, 'height' => 270]);
+        }
     }
 }

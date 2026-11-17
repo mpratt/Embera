@@ -32,6 +32,10 @@ final class RunKitTest extends ProviderTester
 
     public function testProvider()
     {
-        $this->validateProvider('RunKit', [ 'width' => 480, 'height' => 270]);
+        if (defined('GITHUBTESTS')) {
+            $this->markTestSkipped('Provider RunKit endpoint is returning 503 (2026-11-17). Test locally please.');
+        } else {
+            $this->validateProvider('RunKit', [ 'width' => 480, 'height' => 270]);
+        }
     }
 }
