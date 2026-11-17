@@ -38,6 +38,10 @@ final class MedienArchivKuensteTest extends ProviderTester
 
     public function testProvider()
     {
-        $this->validateProvider('MedienArchivKuenste', [ 'width' => 480, 'height' => 270]);
+        if (defined('GITHUBTESTS')) {
+            $this->markTestSkipped('Provider MedienArchivKuenste endpoint is returning 403 to some clients (2026-11-17). Test locally please.');
+        } else {
+            $this->validateProvider('MedienArchivKuenste', [ 'width' => 480, 'height' => 270]);
+        }
     }
 }
