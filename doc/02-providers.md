@@ -24,7 +24,6 @@ I try to support all the providers listed on [oembed.com](https://oembed.com).
 - [BeamsFm](providers/BeamsFm.md)
 - [Bitchute](providers/Bitchute.md)
 - [BlackfireIO](providers/BlackfireIO.md)
-- [Blogcast](providers/Blogcast.md)
 - [BlueskySocial](providers/BlueskySocial.md)
 - [BondByIsin](providers/BondByIsin.md)
 - [Bookingmood](providers/Bookingmood.md)
