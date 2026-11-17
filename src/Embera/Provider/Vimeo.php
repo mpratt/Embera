@@ -81,7 +81,9 @@ class Vimeo extends ProviderAdapter implements ProviderInterface
         $attr[] = 'width="{width}"';
         $attr[] = 'height="{height}"';
         $attr[] = 'frameborder="0"';
-        $attr[] = 'allow="autoplay; fullscreen; picture-in-picture; clipboard-write"';
+        $attr[] = 'allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"';
+        $attr[] = 'referrerpolicy="strict-origin-when-cross-origin"';
+        $attr[] = 'title=""';
 
         return [
             'type' => 'video',
