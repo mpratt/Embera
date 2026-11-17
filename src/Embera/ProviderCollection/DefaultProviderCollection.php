@@ -206,7 +206,6 @@ class DefaultProviderCollection extends ProviderCollectionAdapter
             'Parta',
             'Pastery',
             'PicJury',
-            'Piggy',
             'Pikasso',
             'Pinpoll',
             'Pinterest',
