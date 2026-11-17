@@ -21,7 +21,7 @@ final class StreamioTest extends ProviderTester
 {
     protected $tasks = [
         'valid_urls' => [
-            'https://23m.io/yDa7W',
+            'https://23m.io/HkJfp',
             'https://s3m.io/rCNma',
         ],
         'invalid_urls' => [
